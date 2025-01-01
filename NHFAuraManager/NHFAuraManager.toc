@@ -1,0 +1,32 @@
+## Interface: 110000
+## Title: NHF Aura Manager
+## Notes: Manages Auras
+## Author: Exality
+## SavedVariables: AuraManagerData
+## Version: @project-version@
+## Dependencies: WeakAuras
+
+# Core Functionality
+Util.lua 
+Init.lua
+Core.lua
+Storage/WeakAuras.lua
+Data.lua
+Comm.lua
+
+Frames/Inputs/EditBox.lua
+Frames/Inputs/Toggle.lua
+Frames/Inputs/Button.lua
+Frames/Inputs/ToggleButton.lua
+Frames/CheckerRow.lua
+Frames/Window.lua
+Frames/ScrollFrame.lua
+Frames/WADisplay.lua
+
+WeakAuras.lua
+
+VersionChecker.lua
+Manager.lua
+VersionModifier.lua
+
+Cmd.lua
