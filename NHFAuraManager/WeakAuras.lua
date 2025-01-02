@@ -71,6 +71,9 @@ WA.TraverseAuras = function(self, waData, returnTable, isNested)
     if (waData.controlledChildren) then
         for _, id in pairs(waData.controlledChildren) do
             local data = WeakAuras.GetData(id)
+            if (not data.uid) then
+                data.uid = WeakAuras.GenerateUniqueID()
+            end
             if (data.regionType == 'group' or data.regionType == 'dynamicgroup') then
                 isNested = true
             end
@@ -87,12 +90,14 @@ WA.Import = function(self, data, callback)
         print('WeakAuras not installed/enabled')
         return
     end
-    print('importing')
     WeakAuras.Import(data, nil, callback)
 end
 
 WA.GetShareTable = function(self, id)
     local baseWa = WeakAuras.GetData(id)
+    if (not baseWa.uid) then
+        baseWa.uid = WeakAuras.GenerateUniqueID()
+    end
     local shareTable = {
         d = baseWa,
         c = nil,

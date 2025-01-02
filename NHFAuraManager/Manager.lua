@@ -80,7 +80,6 @@ manager.PopulateDisplays = function(self, container)
             waDisplay:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -10)
             waDisplay:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -10)
         else
-            AM.utils.debugWithDevTools(container)
             waDisplay:SetPoint('TOPLEFT', container, 'TOPLEFT', 0, -10)
             waDisplay:SetPoint('TOPRIGHT', container, 'TOPRIGHT', 0, -10)
         end

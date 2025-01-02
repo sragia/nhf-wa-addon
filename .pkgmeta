@@ -1,0 +1,13 @@
+package-as: NHFAuraManager
+
+enable-nolib-creation: no
+
+ignore:
+  - generate_changelog.sh
+
+manual-changelog:
+ filename: CHANGELOG.md
+ markup-type: markdown
+
+move-folders:
+  NHFAuraManager/NHFAuraManager: NHFAuraManager

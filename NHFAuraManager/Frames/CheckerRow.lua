@@ -29,6 +29,22 @@ local configure = function(frame)
         end
     end
 
+    frame.SetIsAddonRow = function(self, isAddonRow)
+        if (isAddonRow) then
+            bgTex:SetVertexColor(1, 213 / 255, 0, 0.3)
+        else
+            bgTex:SetVertexColor(50, 50, 50, 0.1)
+        end
+    end
+
+    frame.SetIsHeader = function(self, isHeader)
+        if (isHeader) then
+            bgTex:SetVertexColor(0, 0, 0, 0.5)
+        else
+            bgTex:SetVertexColor(50, 50, 50, 0.1)
+        end
+    end
+
     local name = frame:CreateFontString(nil, 'OVERLAY')
     name:SetFont(AM.const.fonts.DEFAULT, 11, 'OUTLINE')
     name:SetPoint('LEFT', 10, 0)

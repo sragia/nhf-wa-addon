@@ -18,6 +18,8 @@
         "CreateFramePool",
         "ScrollBoxMixin",
         "SlashCmdList",
-        "TableIsEmpty"
+        "TableIsEmpty",
+        "CLASS",
+        "ReloadUI"
     ]
 }

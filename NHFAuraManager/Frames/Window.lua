@@ -1,3 +1,4 @@
+local addonName = ...
 ---@class AuraManager
 local AM = select(2, ...)
 
@@ -5,6 +6,8 @@ local AM = select(2, ...)
 
 --- @class WindowFrame
 local window = AM:GetModule('window-frame')
+
+local addonVersion = C_AddOns.GetAddOnMetadata(addonName, "version")
 
 window.Init = function(self)
     window.pool = CreateFramePool('Frame', UIParent)
@@ -41,11 +44,31 @@ local configure = function(frame)
         local bg = frame:CreateTexture()
         frame.Texture = bg
         bg:SetTexture(AM.const.textures.frame.bg)
-        bg:SetVertexColor(0, 0, 0, 0.6)
+        bg:SetVertexColor(0, 0, 0, 0.8)
         bg:SetTexCoord(7 / 512, 505 / 512, 7 / 512, 505 / 512)
         bg:SetTextureSliceMargins(15, 15, 15, 15)
         bg:SetTextureSliceMode(Enum.UITextureSliceMode.Tiled)
         bg:SetAllPoints()
+    end
+
+    if (not frame.logo) then
+        local logo = CreateFrame('Frame', nil, frame)
+        logo:SetSize(25, 25)
+        logo:SetPoint('LEFT', frame, 'TOPLEFT', 10, 0)
+
+        local texture = logo:CreateTexture(nil, 'OVERLAY')
+        texture:SetTexture(AM.const.textures.logo)
+        texture:SetVertexColor(1, 1, 1, 1)
+        texture:SetTexCoord(0, 1, 0, 1)
+        texture:SetAllPoints()
+
+        local version = logo:CreateFontString(nil, 'OVERLAY')
+        version:SetPoint('LEFT', logo, 'RIGHT', 3, 0)
+        version:SetVertexColor(.8, .8, .8, 1)
+        version:SetFont(AM.const.fonts.DEFAULT, 10, 'OUTLINE')
+        version:SetText(addonVersion)
+
+        frame.logo = logo
     end
 
     if (not frame.resizeBtn) then

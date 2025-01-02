@@ -31,8 +31,13 @@ local function getChannel()
     return IsInRaid() and 'RAID' or 'PARTY'
 end
 
-local function sendMessage(msgType, data, distribution, target, prio, callbackFn)
-    AceComm:SendCommMessage(PREFIX, dataToString({ type = msgType, data = data }), distribution, target, prio, callbackFn)
+local function isAvailableForAction()
+    if (not IsInGroup() or (not UnitIsGroupLeader('player') and not UnitIsGroupAssistant('player'))) then
+        print('Not a leader/assist or not in group')
+        return false
+    end
+
+    return true
 end
 
 local function dataToString(data)
@@ -58,6 +63,10 @@ local function stringToData(payload)
     return data
 end
 
+local function sendMessage(msgType, data, distribution, target, prio, callbackFn)
+    AceComm:SendCommMessage(PREFIX, dataToString({ type = msgType, data = data }), distribution, target, prio, callbackFn)
+end
+
 versionChecker.Init = function(self)
     self.window = windowConstruct:Create({
         size = { (waStorage:GetCount() + 1) * AM.const.colWidth + 100, 600 },
@@ -66,11 +75,12 @@ versionChecker.Init = function(self)
     self:Setup()
 end
 
+versionChecker.isChecking = false
 versionChecker.data = {
     against = {},
     characters = {},
     headers = {},
-    activeRows = {}
+    headerMap = {}
 }
 
 versionChecker.Setup = function(self)
@@ -89,8 +99,9 @@ versionChecker.SetupHeader = function(self)
     local container = self.window.container.scrollFrame.child
     local auras = waStorage:GetAurasForChecker()
     local cols = {}
-    for _, data in ipairs(auras) do
+    for i, data in ipairs(auras) do
         table.insert(cols, data.name)
+        self.data.headerMap[data.name] = i
     end
     self.data.headers = cols
 
@@ -98,62 +109,117 @@ versionChecker.SetupHeader = function(self)
     header:SetParent(container)
     header:SetPoint('TOPLEFT')
     header:SetPoint('TOPRIGHT')
-    header:SetIsLightBg(true)
+    header:SetIsHeader(true)
     container.header = header
 end
 
 versionChecker.Show = function(self)
+    if (not isAvailableForAction()) then
+        return
+    end
     if (self.window) then
         self.window:ShowWindow()
         self:Populate()
+        self:SendVersionCheckRequest()
     end
 end
 
 versionChecker.Populate = function(self)
-    local auras = waStorage:GetAurasForChecker()
     local header = self.window.container.scrollFrame.child.header
     local container = self.window.container.scrollFrame.child
 
-    for _, row in pairs(self.data.activeRows) do
-        row:Destroy()
+    for _, char in ipairs(self.data.characters) do
+        char.row:Destroy()
     end
-    self.data.activeRows = {}
+    self.data.characters = {}
 
-    -- TODO TEST VISUAL
-    local cols = {}
-    local colStatus = {}
-    for _, data in ipairs(auras) do
-        table.insert(cols, data.semver)
-        table.insert(colStatus, waStorage:VersionCheck(data.uid, data.version))
-    end
-    local prev = nil
-    for i = 1, 30 do
-        local _, CLASS = UnitClass('player')
-        local name = string.format('|c%s%s|r', RAID_CLASS_COLORS[CLASS].colorStr, UnitName('player'))
-        local row = checkerRow:Create(name, cols, colStatus);
-        row:SetParent(container)
-        if (prev) then
-            row:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -2)
-            row:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -2)
-        else
-            row:SetPoint('TOPLEFT', header, 'BOTTOMLEFT', 0, -2)
-            row:SetPoint('TOPRIGHT', header, 'BOTTOMRIGHT', 0, -2)
+    for unit in AM.utils.iterateGroupMembers() do
+        local name = UnitName(unit)
+        local _, CLASS = UnitClass(unit)
+        local formattedName = string.format('|c%s%s|r', RAID_CLASS_COLORS[CLASS].colorStr, name)
+        local d = {
+            cols = {},
+            colStatuses = {},
+            row = nil,
+            name = name,
+            received = false,
+            formattedName = formattedName
+        }
+        for i = 1, waStorage:GetCount() do
+            table.insert(d.cols, 'Loading...')
         end
-        row:SetIsLightBg(i % 2 == 0)
-        prev = row
+        local row = checkerRow:Create(formattedName, d.cols);
+        d.row = row
+        table.insert(self.data.characters, d)
+    end
+
+    local auras = waStorage:GetAurasForDisplay()
+    local addonCols = {}
+    for _, data in ipairs(auras) do
+        table.insert(addonCols, data.semver)
+    end
+
+    local prev = checkerRow:Create('Addon', addonCols)
+    prev:SetParent(container)
+    prev:SetPoint('TOPLEFT', header, 'BOTTOMLEFT', 0, -2)
+    prev:SetPoint('TOPRIGHT', header, 'BOTTOMRIGHT', 0, -2)
+    prev:SetIsAddonRow(true)
+    for i, char in ipairs(self.data.characters) do
+        char.row:SetParent(container)
+        char.row:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -2)
+        char.row:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -2)
+        prev = char.row;
+        char.row:SetIsLightBg(i % 2 == 0)
+    end
+end
+
+versionChecker.SendVersionCheckRequest = function(self)
+    sendMessage(MSG_TYPE.VERSION_CHECK, {}, getChannel())
+    self.isChecking = true
+    C_Timer.After(5, function()
+        versionChecker:HandleNoResponse()
+    end)
+end
+
+versionChecker.HandleNoResponse = function(self)
+    for _, char in ipairs(self.data.characters) do
+        if (not char.received) then
+            for i = 1, waStorage:GetCount() do
+                char.cols[i] = 'No Addon'
+                char.colStatuses[i] = 0
+            end
+            char.row:SetCols(char.cols, char.colStatuses)
+        end
     end
 end
 
 versionChecker.RespondToVersionCheck = function(self)
-
+    local data = waStorage:GetAurasForChecker()
+    sendMessage(MSG_TYPE.VERSION_CHECK_RESP, data, getChannel())
 end
 
 versionChecker.HandleVersionCheckResponse = function(self, data, sender)
+    if (not self.isChecking) then return end
 
+    local _, char = FindInTableIf(self.data.characters, function(d) return d.name == sender end)
+
+    if (not char) then
+        print('Response from ', sender, ' could not be parsed')
+    end
+
+    for _, d in ipairs(data) do
+        if (self.data.headerMap[d.name]) then
+            char.cols[self.data.headerMap[d.name]] = d.semver
+            char.colStatuses[self.data.headerMap[d.name]] = waStorage:VersionCheck(d.uid, d.version)
+        end
+    end
+
+    char.row:SetCols(char.cols, char.colStatuses)
+    char.received = true
 end
 
 local receiveMessage = function(prefix, message, _, sender)
-    if (prefix ~= PREFIX or UnitIsUnit(sender, 'player')) then
+    if (prefix ~= PREFIX) then
         return
     end
     local msg = stringToData(message)
@@ -170,7 +236,7 @@ local receiveMessage = function(prefix, message, _, sender)
         [MSG_TYPE.VERSION_CHECK_RESP] = function()
             versionChecker:HandleVersionCheckResponse(msg.data, sender)
         end,
-        default = function() end
+        default = function() print("[NHF AM] Unknown message type", msgType) end
     })
 end
 

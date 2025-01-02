@@ -12,7 +12,6 @@ Init.lua
 Core.lua
 Storage/WeakAuras.lua
 Data.lua
-Comm.lua
 
 Frames/Inputs/EditBox.lua
 Frames/Inputs/Toggle.lua
@@ -28,5 +27,6 @@ WeakAuras.lua
 VersionChecker.lua
 Manager.lua
 VersionModifier.lua
+DuplicatesChecker.lua
 
 Cmd.lua

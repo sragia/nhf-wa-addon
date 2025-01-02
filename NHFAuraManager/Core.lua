@@ -23,7 +23,6 @@ AM.GetModule = function(self, id)
 end
 
 AM.InitModules = function(self)
-    AM.utils.debugWithDevTools(self.modules)
     for _, module in AM.utils.spairs(self.modules, function(t, a, b) return t[a]._index < t[b]._index end) do
         if (module.Init) then
             module:Init()

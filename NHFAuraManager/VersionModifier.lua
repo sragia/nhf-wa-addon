@@ -25,7 +25,13 @@ local function serializeTable(val, name, skipnewlines, depth)
 
     local tmp = string.rep(" ", depth)
 
-    if name then tmp = tmp .. '["' .. name .. '"]' .. " = " end
+    if name then
+        if (type(name) == "number") then
+            tmp = tmp .. '[' .. name .. ']' .. " = "
+        else
+            tmp = tmp .. '["' .. name .. '"]' .. " = "
+        end
+    end
 
     if type(val) == "table" then
         tmp = tmp .. "{" .. (not skipnewlines and "\n" or "")
@@ -184,9 +190,7 @@ versionModifier.SetupEditor = function(self, container)
     local applyBtn = button:Create({
         text = 'Apply',
         onClick = function()
-            local data = WeakAuras.GetData(self.waBrowser.selectedAura)
-            data.version = version:GetEditorValue()
-            data.semver = semver:GetEditorValue()
+            self:ModifyWeakAura(version:GetEditorValue(), semver:GetEditorValue())
         end,
         color = { 21 / 255, 92 / 255, 0, 1 }
     }, container)
@@ -207,6 +211,30 @@ versionModifier.SetupEditor = function(self, container)
 
     exportOutput:SetPoint("TOPLEFT", applyBtn, "BOTTOMLEFT", 0, -20)
     exportOutput:SetPoint("TOPRIGHT", exportBtn, "BOTTOMRIGHT", 0, -20)
+end
+
+versionModifier.ModifyUUID = function(self, data)
+    if (not data.AMModified) then
+        data.AMOriginalUUID = data.uid
+        data.uid = string.format('AM-%s', data.uid)
+        data.AMModified = true
+    end
+    if (data.controlledChildren) then
+        for _, child in pairs(data.controlledChildren) do
+            local childData = WeakAuras.GetData(child)
+            self:ModifyUUID(childData)
+        end
+    end
+end
+
+versionModifier.ModifyWeakAura = function(self, version, semver)
+    local data = WeakAuras.GetData(self.waBrowser.selectedAura)
+    data.version = version
+    data.semver = semver
+
+    self:ModifyUUID(data)
+
+    DevTool:AddData(data)
 end
 
 versionModifier.Export = function(self, id)

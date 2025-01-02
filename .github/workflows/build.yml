@@ -1,0 +1,24 @@
+name: Build Release
+
+on:
+   push:
+      tags:
+         - "*"
+
+jobs:
+   build:
+      runs-on: ubuntu-latest
+
+      env:
+         GITHUB_OAUTH: ${{ secrets.OAUTH_TOKEN }}
+
+      steps:
+         - uses: actions/checkout@v1
+           with:
+              fetch-depth: 150
+
+         - name: Generate Changelog
+           run: ./generate_changelog.sh
+
+         - name: Package And Release
+           uses: BigWigsMods/packager@master
