@@ -22,10 +22,3 @@ jobs:
 
          - name: Package And Release
            uses: BigWigsMods/packager@master
-
-         - name: Send Status to Discord
-           uses: nebularg/actions-discord-webhook@v1
-           with:
-             webhook_url: ${{ secrets.WEBHOOK_URL }}
-             status: ${{ job.status }}
-           if: failure()
