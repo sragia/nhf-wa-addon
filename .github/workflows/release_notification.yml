@@ -17,7 +17,7 @@ jobs:
       - name: Clone Project
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # gets git history for changelogs
+          fetch-depth: 0 # gets git history for changelogs
 
       - name: Hack around https://github.com/actions/checkout/issues/290
         run: |
@@ -48,4 +48,11 @@ jobs:
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
           embed-title: ${{ env.MESSAGE }}
-          embed-description:  ${{needs.release-notification-output.outputs.changeLogText}}
+          embed-description: ${{needs.release-notification-output.outputs.changeLogText}}
+
+  refresh-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Refresh Server
+        run: curl https://nhfmanager.sragia.com/refresh
