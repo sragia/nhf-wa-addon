@@ -55,7 +55,7 @@ local function serializeTable(val, name, skipnewlines, depth)
 end
 
 versionModifier.Init = function(self)
-    self.window = windowConstruct:Create({ size = { 500, 500 }, title = 'Version Modifier' })
+    self.window = windowConstruct:Create({ size = { 500, 550 }, title = 'Version Modifier' })
     self:Setup()
 end
 
@@ -153,6 +153,7 @@ versionModifier.SelectAura = function(self, id, btn)
 
     self.window.container.version:SetEditorValue(data.version or 'no version')
     self.window.container.semver:SetEditorValue(data.semver or 'no semver')
+    self.window.container.isOptional:SetEditorValue(data.AMisOptional or '0')
 end
 
 versionModifier.SetupEditor = function(self, container)
@@ -165,6 +166,11 @@ versionModifier.SetupEditor = function(self, container)
         label = 'SemVer',
         initial = 'Select WA'
     })
+    local isOptional = editBox:Create({
+        label = 'Is Optional',
+        initial = 'Select WA'
+    })
+
     local exportOutput = editBox:Create({
         label = 'Export Output',
         initial = 'Export to get output'
@@ -174,12 +180,15 @@ versionModifier.SetupEditor = function(self, container)
     semver:SetHeight(30)
     version:SetParent(container)
     version:SetHeight(30)
+    isOptional:SetParent(container)
+    isOptional:SetHeight(30)
     exportOutput:SetParent(container)
     exportOutput:SetHeight(30)
 
     container.version = version
     container.semver = semver
     container.exportOutput = exportOutput
+    container.isOptional = isOptional
 
     version:SetPoint("TOPLEFT", container.waBrowser, "BOTTOMLEFT", 0, -5)
     version:SetPoint("TOPRIGHT", container.waBrowser, "BOTTOMRIGHT", 0, -5)
@@ -187,16 +196,19 @@ versionModifier.SetupEditor = function(self, container)
     semver:SetPoint("TOPLEFT", version, "BOTTOMLEFT", 0, -15)
     semver:SetPoint("TOPRIGHT", version, "BOTTOMRIGHT", 0, -15)
 
+    isOptional:SetPoint("TOPLEFT", semver, "BOTTOMLEFT", 0, -15)
+    isOptional:SetPoint("TOPRIGHT", semver, "BOTTOMRIGHT", 0, -15)
+
     local applyBtn = button:Create({
         text = 'Apply',
         onClick = function()
-            self:ModifyWeakAura(version:GetEditorValue(), semver:GetEditorValue())
+            self:ModifyWeakAura(version:GetEditorValue(), semver:GetEditorValue(), isOptional:GetEditorValue())
         end,
         color = { 21 / 255, 92 / 255, 0, 1 }
     }, container)
 
-    applyBtn:SetPoint("TOPLEFT", semver, "BOTTOMLEFT", 0, -15)
-    applyBtn:SetPoint("TOPRIGHT", semver, "BOTTOM", -10, -15)
+    applyBtn:SetPoint("TOPLEFT", isOptional, "BOTTOMLEFT", 0, -15)
+    applyBtn:SetPoint("TOPRIGHT", isOptional, "BOTTOM", -10, -15)
 
     local exportBtn = button:Create({
         text = 'Export',
@@ -206,8 +218,8 @@ versionModifier.SetupEditor = function(self, container)
         color = { 48 / 255, 48 / 255, 48 / 255, 1 }
     }, container)
 
-    exportBtn:SetPoint("TOPLEFT", semver, "BOTTOM", 10, -15)
-    exportBtn:SetPoint("TOPRIGHT", semver, "BOTTOMRIGHT", 0, -15)
+    exportBtn:SetPoint("TOPLEFT", isOptional, "BOTTOM", 10, -15)
+    exportBtn:SetPoint("TOPRIGHT", isOptional, "BOTTOMRIGHT", 0, -15)
 
     exportOutput:SetPoint("TOPLEFT", applyBtn, "BOTTOMLEFT", 0, -20)
     exportOutput:SetPoint("TOPRIGHT", exportBtn, "BOTTOMRIGHT", 0, -20)
@@ -227,14 +239,13 @@ versionModifier.ModifyUUID = function(self, data)
     end
 end
 
-versionModifier.ModifyWeakAura = function(self, version, semver)
+versionModifier.ModifyWeakAura = function(self, version, semver, isOptional)
     local data = WeakAuras.GetData(self.waBrowser.selectedAura)
     data.version = version
     data.semver = semver
+    data.AMisOptional = isOptional
 
     self:ModifyUUID(data)
-
-    DevTool:AddData(data)
 end
 
 versionModifier.Export = function(self, id)
@@ -246,6 +257,7 @@ versionModifier.Export = function(self, id)
         uid = data.uid,
         semver = data.semver,
         version = data.version,
+        isOptional = data.AMisOptional,
         import = shareData
     }
 

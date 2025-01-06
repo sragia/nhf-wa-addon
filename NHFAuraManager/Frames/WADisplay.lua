@@ -16,7 +16,7 @@ local wa = AM:GetModule('weakauras')
 ---@class Manager
 local manager = AM:GetModule('manager')
 
----@class WADisplayOptions : {name: string, uid: string, semver: string, version: string, formattedVersion: string}
+---@class WADisplayOptions : {name: string, uid: string, semver: string, version: string, formattedVersion: string, isOptional: boolean}
 
 waDisplay.Init = function(self)
     self.pool = CreateFramePool('Frame')
@@ -49,8 +49,24 @@ local function configure(f)
     version:SetWidth(0)
     f.version = version
 
+    local isOptional = f:CreateFontString(nil, 'OVERLAY')
+    isOptional:SetFont(AM.const.fonts.DEFAULT, 9, 'OUTLINE')
+    isOptional:SetPoint('TOP', version, 'BOTTOM', 0, -1)
+    isOptional:SetWidth(0)
+    isOptional:SetText('Optional')
+    isOptional:Hide()
+    f.isOptional = isOptional
+
     f.SetWAVersion = function(self, version)
         self.version:SetText(version)
+    end
+
+    f.SetIsOptional = function(self, isOptional)
+        if (isOptional) then
+            self.isOptional:Show()
+        else
+            self.isOptional:Hide()
+        end
     end
 
     f.SetWAState = function(self, state)
@@ -101,6 +117,7 @@ waDisplay.Create = function(self, options)
         f:SetWAState(true)
         f:SetWAVersion(options.semver)
     end
+    f:SetIsOptional(options.isOptional)
     f:Show()
     return f
 end
