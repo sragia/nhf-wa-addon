@@ -93,8 +93,8 @@ wa.data = {
         ["uid"] = "AM-sAklUAnWyJ9",
         ["name"] = "NHF Raid",
         ["isOptional"] = "0",
-        ["semver"] = "0.0.3",
-        ["version"] = "3",
+        ["semver"] = "0.0.4",
+        ["version"] = "4",
         ["import"] = {
             ["d"] = {
                 ["controlledChildren"] = {
@@ -114,15 +114,15 @@ wa.data = {
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["init"] = {
-                    },
                     ["finish"] = {
+                    },
+                    ["init"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["debuffType"] = "HELPFUL",
+                            ["subeventPrefix"] = "SPELL",
                             ["type"] = "aura2",
                             ["spellIds"] = {
                             },
@@ -131,7 +131,7 @@ wa.data = {
                             ["names"] = {
                             },
                             ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
                         },
@@ -139,11 +139,11 @@ wa.data = {
                 },
                 ["internalVersion"] = 79,
                 ["selfPoint"] = "CENTER",
-                ["version"] = "3",
+                ["version"] = "4",
                 ["subRegions"] = {
                 },
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -155,7 +155,7 @@ wa.data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -171,45 +171,45 @@ wa.data = {
                 ["borderEdge"] = "Square Full White",
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
-                ["AMisOptional"] = "0",
-                ["alpha"] = 1,
-                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Textures/logo.png",
-                ["borderOffset"] = 4,
-                ["semver"] = "0.0.3",
+                ["AMModified"] = true,
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
+                ["AMisOptional"] = "0",
+                ["borderOffset"] = 4,
+                ["semver"] = "0.0.4",
+                ["AMOriginalUUID"] = "sAklUAnWyJ9",
                 ["id"] = "NHF Raid",
-                ["conditions"] = {
-                },
+                ["xOffset"] = 0,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-sAklUAnWyJ9",
                 ["borderInset"] = 1,
                 ["config"] = {
                 },
-                ["uid"] = "AM-sAklUAnWyJ9",
-                ["xOffset"] = 0,
-                ["AMOriginalUUID"] = "sAklUAnWyJ9",
+                ["alpha"] = 1,
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["AMModified"] = true,
+                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Textures/logo.png",
             },
             ["c"] = {
                 [1] = {
@@ -232,15 +232,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["finish"] = {
-                        },
                         ["init"] = {
+                        },
+                        ["finish"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -248,8 +249,7 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["subeventPrefix"] = "SPELL",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -258,20 +258,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["easeStrength"] = 3,
                             ["type"] = "none",
+                            ["easeStrength"] = 3,
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["easeStrength"] = 3,
                             ["type"] = "none",
+                            ["easeStrength"] = 3,
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["easeStrength"] = 3,
                             ["type"] = "none",
+                            ["easeStrength"] = 3,
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -279,7 +279,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -291,7 +291,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -307,26 +307,26 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["groupIcon"] = "2027950",
-                    ["parent"] = "NHF Raid",
-                    ["borderOffset"] = 4,
+                    ["AMModified"] = true,
                     ["authorOptions"] = {
                     },
-                    ["conditions"] = {
-                    },
+                    ["borderOffset"] = 4,
+                    ["groupIcon"] = "2027950",
+                    ["AMOriginalUUID"] = "egWF6Vzf08f",
                     ["id"] = "[NHF] Nerub-Ar Palace",
-                    ["alpha"] = 1,
+                    ["selfPoint"] = "CENTER",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-egWF6Vzf08f",
                     ["config"] = {
                     },
-                    ["selfPoint"] = "CENTER",
-                    ["AMOriginalUUID"] = "egWF6Vzf08f",
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-egWF6Vzf08f",
+                    ["alpha"] = 1,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["parent"] = "NHF Raid",
                 },
                 [2] = {
                     ["controlledChildren"] = {
@@ -349,15 +349,15 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "SPELL",
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -366,7 +366,7 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["event"] = "Health",
-                                ["subeventPrefix"] = "SPELL",
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -377,7 +377,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -389,7 +389,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -405,44 +405,44 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["groupIcon"] = "5688871",
+                    ["parent"] = "[NHF] Nerub-Ar Palace",
+                    ["borderOffset"] = 4,
                     ["AMModified"] = true,
+                    ["conditions"] = {
+                    },
+                    ["id"] = "Ovi'nax [NHF]",
+                    ["uid"] = "AM-GT0YnkD02Ck",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["xOffset"] = 0,
+                    ["frameStrata"] = 1,
+                    ["AMOriginalUUID"] = "GT0YnkD02Ck",
+                    ["information"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
-                    ["borderOffset"] = 4,
-                    ["parent"] = "[NHF] Nerub-Ar Palace",
-                    ["AMOriginalUUID"] = "GT0YnkD02Ck",
-                    ["id"] = "Ovi'nax [NHF]",
-                    ["frameStrata"] = 1,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["xOffset"] = 0,
-                    ["borderInset"] = 1,
-                    ["config"] = {
-                    },
-                    ["uid"] = "AM-GT0YnkD02Ck",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["groupIcon"] = "5688871",
                 },
                 [3] = {
                     ["controlledChildren"] = {
@@ -465,15 +465,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -481,8 +482,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -491,20 +491,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -513,7 +513,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -525,7 +525,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -542,29 +542,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
+                    ["selfPoint"] = "CENTER",
+                    ["parent"] = "Ovi'nax [NHF]",
+                    ["anchorFrameParent"] = false,
                     ["authorOptions"] = {
                     },
-                    ["anchorFrameParent"] = false,
-                    ["parent"] = "Ovi'nax [NHF]",
-                    ["AMOriginalUUID"] = "(r4zrFvdU6v",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Broodtwister Ovi'nax - Raid Frame Glows",
-                    ["alpha"] = 1,
+                    ["yOffset"] = 0,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-(r4zrFvdU6v",
-                    ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["yOffset"] = 0,
-                    ["conditions"] = {
-                    },
+                    ["uid"] = "AM-(r4zrFvdU6v",
+                    ["borderInset"] = 1,
+                    ["alpha"] = 1,
+                    ["AMOriginalUUID"] = "(r4zrFvdU6v",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [4] = {
                     ["outline"] = "OUTLINE",
@@ -574,10 +574,29 @@ wa.data = {
                     ["preferToUpdate"] = false,
                     ["shadowYOffset"] = -1,
                     ["anchorPoint"] = "CENTER",
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["displayText_format_p_time_format"] = 0,
                     ["customTextUpdate"] = "event",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["automaticWidth"] = "Auto",
                     ["actions"] = {
                         ["start"] = {
                             ["glow_color"] = {
@@ -590,15 +609,15 @@ wa.data = {
                             ["glow_action"] = "show",
                             ["do_glow"] = true,
                             ["glow_length"] = 10,
-                            ["glow_frame_type"] = "UNITFRAME",
+                            ["glow_lines"] = 10,
                             ["use_glow_color"] = true,
                             ["glow_type"] = "Pixel",
-                            ["glow_lines"] = 10,
-                        },
-                        ["init"] = {
+                            ["glow_frame_type"] = "UNITFRAME",
                         },
                         ["finish"] = {
                             ["hide_all_glows"] = true,
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -611,15 +630,10 @@ wa.data = {
                                 ["showClones"] = true,
                                 ["type"] = "custom",
                                 ["match_countOperator"] = ">",
-                                ["useExactSpellId"] = true,
+                                ["custom_type"] = "stateupdate",
                                 ["event"] = "Health",
-                                ["auraspellids"] = {
-                                    [1] = "446349",
-                                },
-                                ["events"] =
-                                "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, LIQUID_UNSTABLE_WEB, ENCOUNTER_START, LIQUID_ASSIGNMENT_EVENT",
-                                ["spellIds"] = {
-                                },
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["unit"] = "group",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"LIQUID_ASSIGNMENT_EVENT\" and ... then\
                local id = ...\
@@ -700,12 +714,17 @@ wa.data = {
                aura_env.assignment = tIndexOf(healerGUIDs, WeakAuras.myGUID)\
            end\
        end",
+                                ["spellIds"] = {
+                                },
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
-                                ["unit"] = "group",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["custom_type"] = "stateupdate",
+                                ["events"] =
+                                "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, LIQUID_UNSTABLE_WEB, ENCOUNTER_START, LIQUID_ASSIGNMENT_EVENT",
+                                ["auraspellids"] = {
+                                    [1] = "446349",
+                                },
+                                ["useExactSpellId"] = true,
                             },
                             ["untrigger"] = {
                             },
@@ -717,9 +736,9 @@ wa.data = {
                     ["displayText_format_p_time_mod_rate"] = true,
                     ["displayText_format_p_time_legacy_floor"] = false,
                     ["wordWrap"] = "WordWrap",
-                    ["internalVersion"] = 79,
-                    ["displayText_format_p_format"] = "timed",
-                    ["AMOriginalUUID"] = "N7IfodyM(ni",
+                    ["displayText"] = "",
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["fixedWidth"] = 200,
                     ["desaturate"] = false,
                     ["rotation"] = 0,
                     ["font"] = "Friz Quadrata TT",
@@ -731,49 +750,6 @@ wa.data = {
                     },
                     ["height"] = 1,
                     ["rotate"] = false,
-                    ["AMModified"] = true,
-                    ["selfPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["displayText"] = "",
-                    ["shadowXOffset"] = 1,
-                    ["config"] = {
-                    },
-                    ["mirror"] = false,
-                    ["automaticWidth"] = "Auto",
-                    ["regionType"] = "texture",
-                    ["anchorFrameType"] = "SCREEN",
-                    ["blendMode"] = "BLEND",
-                    ["alpha"] = 1,
-                    ["yOffset"] = 0,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                    ["conditions"] = {
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Sticky Web (not safe)",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -799,11 +775,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_difficulty"] = false,
                         ["class_and_spec"] = {
                             ["multi"] = {
                                 [66] = true,
@@ -815,8 +786,13 @@ wa.data = {
                                 [256] = true,
                                 [257] = true,
                                 [65] = true,
-                                [105] = true,
                                 [1468] = true,
+                                [105] = true,
+                            },
+                        },
+                        ["use_difficulty"] = false,
+                        ["spec"] = {
+                            ["multi"] = {
                             },
                         },
                         ["size"] = {
@@ -824,29 +800,53 @@ wa.data = {
                             },
                         },
                     },
-                    ["frameStrata"] = 1,
-                    ["width"] = 1,
-                    ["parent"] = "Broodtwister Ovi'nax - Raid Frame Glows",
-                    ["uid"] = "AM-N7IfodyM(ni",
+                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["yOffset"] = 0,
                     ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                    ["source"] = "import",
+                    ["AMModified"] = true,
+                    ["shadowXOffset"] = 1,
+                    ["uid"] = "AM-N7IfodyM(ni",
+                    ["mirror"] = false,
+                    ["displayText_format_p_format"] = "timed",
+                    ["regionType"] = "texture",
+                    ["width"] = 1,
+                    ["blendMode"] = "BLEND",
+                    ["frameStrata"] = 1,
                     ["color"] = {
                         [1] = 1,
                         [2] = 0.05882353335619,
                         [3] = 0.14901961386204,
                         [4] = 1,
                     },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["conditions"] = {
+                    },
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Sticky Web (not safe)",
+                    ["selfPoint"] = "CENTER",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["internalVersion"] = 79,
+                    ["config"] = {
+                    },
+                    ["fontSize"] = 12,
+                    ["xOffset"] = 0,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "N7IfodyM(ni",
                     ["information"] = {
                         ["forceEvents"] = false,
                         ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["xOffset"] = 0,
+                    ["parent"] = "Broodtwister Ovi'nax - Raid Frame Glows",
                 },
                 [5] = {
                     ["outline"] = "OUTLINE",
@@ -855,10 +855,10 @@ wa.data = {
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                    ["fontSize"] = 12,
                     ["displayText_format_p_time_format"] = 0,
                     ["customTextUpdate"] = "event",
-                    ["automaticWidth"] = "Auto",
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["actions"] = {
                         ["start"] = {
                             ["glow_color"] = {
@@ -871,15 +871,15 @@ wa.data = {
                             ["glow_action"] = "show",
                             ["do_glow"] = true,
                             ["glow_length"] = 10,
-                            ["glow_frame_type"] = "UNITFRAME",
+                            ["glow_lines"] = 10,
                             ["use_glow_color"] = true,
                             ["glow_type"] = "Pixel",
-                            ["glow_lines"] = 10,
-                        },
-                        ["init"] = {
+                            ["glow_frame_type"] = "UNITFRAME",
                         },
                         ["finish"] = {
                             ["hide_all_glows"] = true,
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -892,14 +892,10 @@ wa.data = {
                                 ["showClones"] = true,
                                 ["type"] = "custom",
                                 ["match_countOperator"] = ">",
-                                ["useExactSpellId"] = true,
+                                ["custom_type"] = "stateupdate",
                                 ["event"] = "Health",
-                                ["auraspellids"] = {
-                                    [1] = "446349",
-                                },
-                                ["events"] = "LIQUID_UNSTABLE_WEB_SAFE, CLEU:SPELL_AURA_REMOVED",
-                                ["spellIds"] = {
-                                },
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["unit"] = "group",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"LIQUID_UNSTABLE_WEB_SAFE\" then\
                local unit = ...\
@@ -930,12 +926,16 @@ wa.data = {
                end\
            end\
        end",
+                                ["spellIds"] = {
+                                },
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
-                                ["unit"] = "group",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["custom_type"] = "stateupdate",
+                                ["events"] = "LIQUID_UNSTABLE_WEB_SAFE, CLEU:SPELL_AURA_REMOVED",
+                                ["auraspellids"] = {
+                                    [1] = "446349",
+                                },
+                                ["useExactSpellId"] = true,
                             },
                             ["untrigger"] = {
                             },
@@ -944,45 +944,32 @@ wa.data = {
                         ["customTriggerLogic"] = "",
                         ["activeTriggerMode"] = -10,
                     },
-                    ["displayText_format_p_time_mod_rate"] = true,
-                    ["displayText_format_p_time_legacy_floor"] = false,
+                    ["displayText_format_p_format"] = "timed",
+                    ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
-                    ["color"] = {
-                        [1] = 0.10980392992496,
-                        [2] = 1,
-                        [3] = 0.39607846736908,
-                        [4] = 1,
+                    ["displayText_format_p_time_legacy_floor"] = false,
+                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["conditions"] = {
                     },
-                    ["authorOptions"] = {
-                        [1] = {
-                            ["type"] = "toggle",
-                            ["default"] = false,
-                            ["key"] = "tts",
-                            ["useDesc"] = false,
-                            ["name"] = "TTS",
-                            ["width"] = 1,
-                        },
-                    },
-                    ["AMOriginalUUID"] = "ItyQWh6Vfuk",
                     ["desaturate"] = false,
                     ["rotation"] = 0,
                     ["font"] = "Friz Quadrata TT",
@@ -994,28 +981,6 @@ wa.data = {
                     },
                     ["height"] = 1,
                     ["rotate"] = false,
-                    ["AMModified"] = true,
-                    ["xOffset"] = 0,
-                    ["fixedWidth"] = 200,
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["internalVersion"] = 79,
-                    ["shadowXOffset"] = 1,
-                    ["uid"] = "AM-ItyQWh6Vfuk",
-                    ["mirror"] = false,
-                    ["preferToUpdate"] = false,
-                    ["regionType"] = "texture",
-                    ["anchorFrameType"] = "SCREEN",
-                    ["blendMode"] = "BLEND",
-                    ["frameStrata"] = 1,
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                    ["shadowYOffset"] = -1,
-                    ["semver"] = "1.0.12",
-                    ["justify"] = "LEFT",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Sticky Web (safe)",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -1041,11 +1006,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_difficulty"] = false,
                         ["class_and_spec"] = {
                             ["multi"] = {
                                 [66] = true,
@@ -1057,8 +1017,13 @@ wa.data = {
                                 [256] = true,
                                 [257] = true,
                                 [65] = true,
-                                [105] = true,
                                 [1468] = true,
+                                [105] = true,
+                            },
+                        },
+                        ["use_difficulty"] = false,
+                        ["spec"] = {
+                            ["multi"] = {
                             },
                         },
                         ["size"] = {
@@ -1066,27 +1031,62 @@ wa.data = {
                             },
                         },
                     },
-                    ["alpha"] = 1,
-                    ["width"] = 1,
-                    ["displayText_format_p_format"] = "timed",
+                    ["preferToUpdate"] = false,
+                    ["automaticWidth"] = "Auto",
+                    ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                    ["source"] = "import",
+                    ["AMModified"] = true,
+                    ["shadowXOffset"] = 1,
                     ["config"] = {
                         ["tts"] = false,
                     },
-                    ["displayText"] = "",
+                    ["mirror"] = false,
+                    ["xOffset"] = 0,
+                    ["regionType"] = "texture",
+                    ["width"] = 1,
+                    ["blendMode"] = "BLEND",
+                    ["alpha"] = 1,
                     ["wordWrap"] = "WordWrap",
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["shadowYOffset"] = -1,
+                    ["justify"] = "LEFT",
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Sticky Web (safe)",
+                    ["fixedWidth"] = 200,
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["authorOptions"] = {
+                        [1] = {
+                            ["type"] = "toggle",
+                            ["default"] = false,
+                            ["key"] = "tts",
+                            ["name"] = "TTS",
+                            ["useDesc"] = false,
+                            ["width"] = 1,
+                        },
+                    },
+                    ["uid"] = "AM-ItyQWh6Vfuk",
+                    ["selfPoint"] = "CENTER",
+                    ["color"] = {
+                        [1] = 0.10980392992496,
+                        [2] = 1,
+                        [3] = 0.39607846736908,
+                        [4] = 1,
+                    },
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["conditions"] = {
-                    },
+                    ["AMOriginalUUID"] = "ItyQWh6Vfuk",
                     ["information"] = {
                         ["forceEvents"] = false,
                         ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["displayText"] = "",
                 },
                 [6] = {
                     ["controlledChildren"] = {
@@ -1109,15 +1109,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -1125,8 +1126,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -1138,7 +1138,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -1150,7 +1150,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -1167,48 +1167,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Assignments",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Ovi'nax [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "FQ5o(xQMoL1",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Broodtwister Ovi'nax - Assignments",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-FQ5o(xQMoL1",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Broodtwister Ovi'nax - Assignments",
+                    ["uid"] = "AM-FQ5o(xQMoL1",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "FQ5o(xQMoL1",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Ovi'nax [NHF]",
                 },
                 [7] = {
                     ["outline"] = "OUTLINE",
@@ -1251,6 +1251,10 @@ wa.data = {
                             ["custom"] = "if aura_env and aura_env.state and aura_env.state.assignment then\
            WeakAuras.ScanEvents(\"IRONI_CUSTOM_LIQUID\", \"ovinax\", true, aura_env.state.assignment)\
        end",
+                            ["do_custom"] = true,
+                        },
+                        ["finish"] = {
+                            ["custom"] = "WeakAuras.ScanEvents(\"IRONI_CUSTOM_LIQUID\", \"ovinax\", false)",
                             ["do_custom"] = true,
                         },
                         ["init"] = {
@@ -1346,10 +1350,6 @@ wa.data = {
        end",
                             ["do_custom"] = true,
                         },
-                        ["finish"] = {
-                            ["custom"] = "WeakAuras.ScanEvents(\"IRONI_CUSTOM_LIQUID\", \"ovinax\", false)",
-                            ["do_custom"] = true,
-                        },
                     },
                     ["triggers"] = {
                         [1] = {
@@ -1360,8 +1360,12 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] = "LIQUID_ASSIGNMENT_EVENT, CLEU:SPELL_AURA_APPLIED, ENCOUNTER_START",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                allstates[\"\"] = {\
@@ -1499,10 +1503,6 @@ wa.data = {
                end\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["events"] = "LIQUID_ASSIGNMENT_EVENT, CLEU:SPELL_AURA_APPLIED, ENCOUNTER_START",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -1514,20 +1514,20 @@ wa.data = {
                     ["displayText_format_p_time_legacy_floor"] = false,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -1539,40 +1539,7 @@ wa.data = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["wordWrap"] = "WordWrap",
-                    ["AMModified"] = true,
-                    ["displayText_format_assignment_format"] = "none",
-                    ["fontSize"] = 60,
-                    ["source"] = "import",
-                    ["displayText_format_p_format"] = "timed",
-                    ["shadowXOffset"] = 1,
-                    ["automaticWidth"] = "Auto",
-                    ["AMOriginalUUID"] = "sLhfmSjxyD5",
                     ["selfPoint"] = "BOTTOM",
-                    ["regionType"] = "text",
-                    ["parent"] = "Broodtwister Ovi'nax - Assignments",
-                    ["displayText_format_c_format"] = "none",
-                    ["uid"] = "AM-sLhfmSjxyD5",
-                    ["fixedWidth"] = 200,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "Break {rt%assignment} (%p)%c",
-                    ["authorOptions"] = {
-                        [1] = {
-                            ["type"] = "toggle",
-                            ["default"] = true,
-                            ["key"] = "tts",
-                            ["useDesc"] = false,
-                            ["name"] = "TTS",
-                            ["width"] = 1,
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Experimental Dosage assignments",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -1601,22 +1568,55 @@ wa.data = {
                             },
                         },
                     },
+                    ["displayText_format_assignment_format"] = "none",
+                    ["fontSize"] = 60,
+                    ["source"] = "import",
+                    ["parent"] = "Broodtwister Ovi'nax - Assignments",
+                    ["shadowXOffset"] = 1,
+                    ["preferToUpdate"] = false,
+                    ["fixedWidth"] = 200,
+                    ["displayText_format_c_format"] = "none",
+                    ["regionType"] = "text",
+                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                     ["config"] = {
                         ["tts"] = true,
                     },
-                    ["preferToUpdate"] = false,
-                    ["yOffset"] = 0,
+                    ["automaticWidth"] = "Auto",
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "Break {rt%assignment} (%p)%c",
+                    ["xOffset"] = 0,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Experimental Dosage assignments",
+                    ["authorOptions"] = {
+                        [1] = {
+                            ["type"] = "toggle",
+                            ["default"] = true,
+                            ["key"] = "tts",
+                            ["name"] = "TTS",
+                            ["useDesc"] = false,
+                            ["width"] = 1,
+                        },
+                    },
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["conditions"] = {
+                    },
+                    ["uid"] = "AM-sLhfmSjxyD5",
+                    ["wordWrap"] = "WordWrap",
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["conditions"] = {
-                    },
+                    ["AMOriginalUUID"] = "sLhfmSjxyD5",
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["yOffset"] = 0,
                 },
                 [8] = {
                     ["controlledChildren"] = {
@@ -1639,15 +1639,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -1655,8 +1656,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -1665,20 +1665,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -1687,7 +1687,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -1699,7 +1699,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -1716,27 +1716,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["parent"] = "Ovi'nax [NHF]",
+                    ["selfPoint"] = "CENTER",
                     ["groupIcon"] = "guildfinder-card-guildbanner-background",
-                    ["AMOriginalUUID"] = "WCYTj37ha4T",
+                    ["parent"] = "Ovi'nax [NHF]",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Broodtwister Ovi'nax - Nameplate Indicators",
-                    ["xOffset"] = 0,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-WCYTj37ha4T",
                     ["config"] = {
                     },
-                    ["frameStrata"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-WCYTj37ha4T",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "WCYTj37ha4T",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [9] = {
                     ["wagoID"] = "-NO8XaQxq",
@@ -1749,9 +1749,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -1759,11 +1759,13 @@ wa.data = {
                             ["trigger"] = {
                                 ["type"] = "custom",
                                 ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
+                                ["debuffType"] = "HELPFUL",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
+                                ["spellIds"] = {
+                                },
+                                ["events"] =
+                                "NAME_PLATE_UNIT_ADDED, NAME_PLATE_UNIT_REMOVED, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, ENCOUNTER_START",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"ENCOUNTER_START\" then\
                aura_env.GUIDs = {}\
@@ -1825,11 +1827,9 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
-                                ["events"] =
-                                "NAME_PLATE_UNIT_ADDED, NAME_PLATE_UNIT_REMOVED, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, ENCOUNTER_START",
-                                ["spellIds"] = {
-                                },
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "SPELL",
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["custom_hide"] = "timed",
                             },
                             ["untrigger"] = {
                             },
@@ -1872,25 +1872,23 @@ wa.data = {
                             ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "None",
                             ["text_anchorPoint"] = "CENTER",
-                            ["text_visible"] = true,
+                            ["text_shadowXOffset"] = 1,
                             ["text_anchorYOffset"] = 20,
                             ["text_fontSize"] = 20,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowXOffset"] = 1,
+                            ["text_visible"] = true,
                         },
                     },
                     ["height"] = 120,
                     ["rotate"] = false,
                     ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["use_encounterid"] = true,
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "2919",
                         ["spec"] = {
                             ["multi"] = {
                             },
@@ -1899,62 +1897,64 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2919",
-                        ["use_encounterid"] = true,
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
                     ["source"] = "import",
                     ["mirror"] = false,
                     ["regionType"] = "texture",
-                    ["AMModified"] = true,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["blendMode"] = "BLEND",
+                    ["AMModified"] = true,
                     ["parent"] = "Broodtwister Ovi'nax - Nameplate Indicators",
-                    ["rotation"] = 0,
                     ["anchorFrameParent"] = false,
                     ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
-                    ["AMOriginalUUID"] = "jofaxrv1C7y",
-                    ["xOffset"] = 0,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Blood Parasite Fixate (nameplate)",
+                    ["anchorFrameType"] = "NAMEPLATE",
+                    ["alpha"] = 1,
+                    ["width"] = 120,
+                    ["uid"] = "AM-jofaxrv1C7y",
+                    ["config"] = {
+                    },
                     ["color"] = {
                         [1] = 1,
                         [2] = 0.15686275064945,
                         [3] = 0.2039215862751,
                         [4] = 1,
                     },
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "NAMEPLATE",
-                    ["config"] = {
-                    },
-                    ["uid"] = "AM-jofaxrv1C7y",
-                    ["width"] = 120,
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "jofaxrv1C7y",
                     ["information"] = {
                         ["forceEvents"] = false,
                     },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["rotation"] = 0,
                 },
                 [10] = {
                     ["controlledChildren"] = {
@@ -1978,15 +1978,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -1994,8 +1995,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -2004,20 +2004,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -2026,7 +2026,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -2038,7 +2038,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -2055,27 +2055,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["parent"] = "Ovi'nax [NHF]",
+                    ["selfPoint"] = "CENTER",
                     ["groupIcon"] = "map-icon-ignored-bluequestion",
-                    ["AMOriginalUUID"] = "QZZewk6S9tj",
+                    ["parent"] = "Ovi'nax [NHF]",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Broodtwister Ovi'nax - Miscellaneous",
-                    ["xOffset"] = 0,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-QZZewk6S9tj",
                     ["config"] = {
                     },
-                    ["frameStrata"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-QZZewk6S9tj",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "QZZewk6S9tj",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [11] = {
                     ["outline"] = "OUTLINE",
@@ -2090,6 +2090,8 @@ wa.data = {
                     ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["actions"] = {
                         ["start"] = {
+                        },
+                        ["finish"] = {
                         },
                         ["init"] = {
                             ["custom"] = "-- Marks as used by Liquid\
@@ -2108,8 +2110,6 @@ wa.data = {
        }",
                             ["do_custom"] = true,
                         },
-                        ["finish"] = {
-                        },
                     },
                     ["triggers"] = {
                         [1] = {
@@ -2120,8 +2120,13 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] =
+                                "NAME_PLATE_UNIT_ADDED, UNIT_SPELLCAST_START:boss, ENCOUNTER_START, LIQUID_EXPERIMENTAL_DOSAGE_PLAYER, GROUP_ROSTER_UPDATE",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"NAME_PLATE_UNIT_ADDED\" then\
                if not aura_env.myMark then return end -- We are not assigned to break any Voracious Worm eggs\
@@ -2185,11 +2190,6 @@ wa.data = {
                end\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["events"] =
-                                "NAME_PLATE_UNIT_ADDED, UNIT_SPELLCAST_START:boss, ENCOUNTER_START, LIQUID_EXPERIMENTAL_DOSAGE_PLAYER, GROUP_ROSTER_UPDATE",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -2206,12 +2206,12 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["spellIds"] = {
                                 },
-                                ["names"] = {
-                                },
-                                ["unit"] = "player",
+                                ["use_absorbHealMode"] = true,
                                 ["instance_difficulty"] = {
                                 },
-                                ["use_absorbHealMode"] = true,
+                                ["unit"] = "player",
+                                ["names"] = {
+                                },
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -2264,6 +2264,55 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
+                    ["parent"] = "Broodtwister Ovi'nax - Miscellaneous",
+                    ["fontSize"] = 24,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 0.090196080505848,
+                        [3] = 0.22352942824364,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "zCE8lyyma0O",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "Voracious Worm auto-marking is enabled, but you are not assistant.",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Voracious Worm auto-marker",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-zCE8lyyma0O",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -2278,79 +2327,30 @@ wa.data = {
                             ["single"] = "mythic",
                         },
                         ["use_zone"] = false,
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["zoneIds"] = "g451",
+                        ["use_zoneIds"] = true,
+                        ["use_difficulty"] = true,
                         ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_difficulty"] = true,
-                        ["use_zoneIds"] = true,
-                        ["zoneIds"] = "g451",
-                    },
-                    ["fontSize"] = 24,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "Broodtwister Ovi'nax - Miscellaneous",
-                    ["conditions"] = {
-                    },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 0.090196080505848,
-                        [3] = 0.22352942824364,
-                        [4] = 1,
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["xOffset"] = 0,
-                    ["uid"] = "AM-zCE8lyyma0O",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "Voracious Worm auto-marking is enabled, but you are not assistant.",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Voracious Worm auto-marker",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "zCE8lyyma0O",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [12] = {
                     ["outline"] = "OUTLINE",
@@ -2366,9 +2366,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -2380,8 +2380,12 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] = "PESCORUS_PRIVATE_AURA_SEND, LIQUID_PRIVATE_AURA_MACRO",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "status",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(event)\
            if event == \"PESCORUS_PRIVATE_AURA_SEND\" or event == \"LIQUID_PRIVATE_AURA_MACRO\" then\
                if C_UnitAuras.GetPlayerAuraBySpellID(446349) then -- Sticky Web\
@@ -2389,10 +2393,6 @@ wa.data = {
                end\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "status",
-                                ["events"] = "PESCORUS_PRIVATE_AURA_SEND, LIQUID_PRIVATE_AURA_MACRO",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -2411,6 +2411,55 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
+                    ["parent"] = "Broodtwister Ovi'nax - Miscellaneous",
+                    ["fontSize"] = 12,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "YBeJt2wdr)1",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Sticky Web macro",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-YBeJt2wdr)1",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -2439,67 +2488,18 @@ wa.data = {
                             },
                         },
                     },
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "Broodtwister Ovi'nax - Miscellaneous",
-                    ["conditions"] = {
-                    },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
                     ["xOffset"] = 0,
-                    ["uid"] = "AM-YBeJt2wdr)1",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Sticky Web macro",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "YBeJt2wdr)1",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [13] = {
                     ["controlledChildren"] = {
@@ -2519,15 +2519,15 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "SPELL",
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -2536,7 +2536,7 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["event"] = "Health",
-                                ["subeventPrefix"] = "SPELL",
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -2547,7 +2547,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -2559,7 +2559,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -2575,44 +2575,44 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["groupIcon"] = "5779388",
+                    ["parent"] = "[NHF] Nerub-Ar Palace",
+                    ["borderOffset"] = 4,
                     ["AMModified"] = true,
+                    ["conditions"] = {
+                    },
+                    ["id"] = "Ky'veza [NHF]",
+                    ["uid"] = "AM-22cfwOUxl2d",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["xOffset"] = 0,
+                    ["frameStrata"] = 1,
+                    ["AMOriginalUUID"] = "22cfwOUxl2d",
+                    ["information"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
-                    ["borderOffset"] = 4,
-                    ["parent"] = "[NHF] Nerub-Ar Palace",
-                    ["AMOriginalUUID"] = "22cfwOUxl2d",
-                    ["id"] = "Ky'veza [NHF]",
-                    ["frameStrata"] = 1,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["xOffset"] = 0,
-                    ["borderInset"] = 1,
-                    ["config"] = {
-                    },
-                    ["uid"] = "AM-22cfwOUxl2d",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["groupIcon"] = "5779388",
                 },
                 [14] = {
                     ["controlledChildren"] = {
@@ -2635,15 +2635,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -2651,8 +2652,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -2664,7 +2664,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -2676,7 +2676,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -2693,48 +2693,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Texts",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Ky'veza [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "cMAaoRx)xwS",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Nexus-Princess Ky'veza - Texts",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-cMAaoRx)xwS",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Nexus-Princess Ky'veza - Texts",
+                    ["uid"] = "AM-cMAaoRx)xwS",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "cMAaoRx)xwS",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Ky'veza [NHF]",
                 },
                 [15] = {
                     ["outline"] = "OUTLINE",
@@ -2750,9 +2750,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -2764,8 +2764,12 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] = "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED:SPELL_CAST_SUCCESS",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                allstates[\"\"] = {\
@@ -2809,10 +2813,6 @@ wa.data = {
                aura_env.queensbaneCount = 0\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["events"] = "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED:SPELL_CAST_SUCCESS",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -2831,6 +2831,55 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
+                    ["parent"] = "Nexus-Princess Ky'veza - Texts",
+                    ["fontSize"] = 40,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "eFgaUaGWKIb",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "Go far (%p)",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Queensbane go far",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-eFgaUaGWKIb",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -2856,67 +2905,18 @@ wa.data = {
                             },
                         },
                     },
-                    ["fontSize"] = 40,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "Nexus-Princess Ky'veza - Texts",
-                    ["conditions"] = {
-                    },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
                     ["xOffset"] = 0,
-                    ["uid"] = "AM-eFgaUaGWKIb",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "Go far (%p)",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Queensbane go far",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "eFgaUaGWKIb",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [16] = {
                     ["controlledChildren"] = {
@@ -2942,15 +2942,15 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "SPELL",
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -2959,7 +2959,7 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["event"] = "Health",
-                                ["subeventPrefix"] = "SPELL",
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -2970,7 +2970,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -2982,7 +2982,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -2998,45 +2998,45 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["groupIcon"] = "5779387",
+                    ["authorOptions"] = {
+                    },
+                    ["borderOffset"] = 4,
                     ["AMModified"] = true,
+                    ["conditions"] = {
+                    },
+                    ["id"] = "Silken Court [NHF]",
+                    ["uid"] = "AM-FhU0RIEsCUv",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["parent"] = "[NHF] Nerub-Ar Palace",
+                    ["frameStrata"] = 1,
+                    ["AMOriginalUUID"] = "FhU0RIEsCUv",
+                    ["information"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
-                    ["borderOffset"] = 4,
-                    ["authorOptions"] = {
-                    },
-                    ["AMOriginalUUID"] = "FhU0RIEsCUv",
-                    ["id"] = "Silken Court [NHF]",
-                    ["frameStrata"] = 1,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["parent"] = "[NHF] Nerub-Ar Palace",
-                    ["borderInset"] = 1,
-                    ["config"] = {
-                    },
-                    ["uid"] = "AM-FhU0RIEsCUv",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["groupIcon"] = "5779387",
                 },
                 [17] = {
                     ["controlledChildren"] = {
@@ -3060,15 +3060,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -3076,8 +3077,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -3089,7 +3089,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -3101,7 +3101,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -3118,48 +3118,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Special Bars",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Silken Court [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "OzT9s6FFSLf",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "The Silken Court - Special Bars",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-OzT9s6FFSLf",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "The Silken Court - Special Bars",
+                    ["uid"] = "AM-OzT9s6FFSLf",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "OzT9s6FFSLf",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Silken Court [NHF]",
                 },
                 [18] = {
                     ["sparkWidth"] = 10,
@@ -3194,14 +3194,17 @@ wa.data = {
                     ["sparkOffsetY"] = 0,
                     ["gradientOrientation"] = "HORIZONTAL",
                     ["load"] = {
-                        ["zoneIds"] = "",
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["use_encounterid"] = true,
+                        ["encounterid"] = "2921",
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["single"] = "MONK",
+                            ["multi"] = {
+                                ["MONK"] = true,
                             },
                         },
                         ["spec"] = {
@@ -3210,14 +3213,11 @@ wa.data = {
                                 [1] = true,
                             },
                         },
-                        ["encounterid"] = "2921",
-                        ["class"] = {
-                            ["single"] = "MONK",
+                        ["size"] = {
                             ["multi"] = {
-                                ["MONK"] = true,
                             },
                         },
-                        ["use_encounterid"] = true,
+                        ["zoneIds"] = "",
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
@@ -3241,26 +3241,26 @@ wa.data = {
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["type"] = "aura2",
                                 ["useMatch_count"] = true,
-                                ["names"] = {
-                                },
+                                ["type"] = "aura2",
                                 ["subeventSuffix"] = "_CAST_START",
-                                ["unit"] = "boss",
+                                ["useExactSpellId"] = true,
+                                ["auraspellids"] = {
+                                    [1] = "450980",
+                                    [2] = "451277",
+                                },
                                 ["fetchTooltip"] = true,
                                 ["event"] = "Health",
-                                ["subeventPrefix"] = "SPELL",
+                                ["names"] = {
+                                },
                                 ["match_countOperator"] = ">",
                                 ["use_tooltipValue"] = false,
                                 ["spellIds"] = {
                                 },
                                 ["specificUnit"] = "boss1",
                                 ["match_count"] = "0",
-                                ["auraspellids"] = {
-                                    [1] = "450980",
-                                    [2] = "451277",
-                                },
-                                ["useExactSpellId"] = true,
+                                ["subeventPrefix"] = "SPELL",
+                                ["unit"] = "boss",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -3271,19 +3271,19 @@ wa.data = {
                                 ["type"] = "unit",
                                 ["use_alwaystrue"] = true,
                                 ["subeventSuffix"] = "_CAST_START",
-                                ["use_unit"] = true,
+                                ["unit"] = "player",
                                 ["use_absorbMode"] = true,
                                 ["event"] = "Conditions",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["events"] = "CLEU:SPELL_AURA_APPLIED",
+                                ["use_unit"] = true,
+                                ["use_absorbHealMode"] = true,
+                                ["custom_type"] = "status",
                                 ["spellIds"] = {
                                 },
                                 ["subeventPrefix"] = "SPELL",
                                 ["check"] = "event",
-                                ["custom_type"] = "status",
-                                ["use_absorbHealMode"] = true,
+                                ["events"] = "CLEU:SPELL_AURA_APPLIED",
+                                ["names"] = {
+                                },
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -3302,20 +3302,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -3364,19 +3364,19 @@ wa.data = {
                             ["text_font"] = "PT Sans Narrow",
                             ["text_text_format_tooltip1_decimal_precision"] = 1,
                             ["text_anchorYOffset"] = -1,
-                            ["text_text_format_c2_format"] = "none",
-                            ["text_text_format_2.tooltip1_big_number_format"] = "AbbreviateNumbers",
-                            ["text_text_format_c1_format"] = "BigNumber",
-                            ["text_anchorPoint"] = "INNER_RIGHT",
-                            ["text_text_format_1.tooltip1_format"] = "BigNumber",
-                            ["text_text_format_1.tooltip1_big_number_format"] = "AbbreviateNumbers",
-                            ["text_text_format_tooltip1_big_number_format"] = "AbbreviateNumbers",
                             ["text_visible"] = true,
+                            ["text_text_format_c1_format"] = "BigNumber",
+                            ["text_text_format_tooltip1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_text_format_1.tooltip1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_text_format_1.tooltip1_format"] = "BigNumber",
+                            ["text_anchorPoint"] = "INNER_RIGHT",
+                            ["text_text_format_2.tooltip1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_text_format_c2_format"] = "none",
                         },
                         [4] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -3385,7 +3385,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 24,
@@ -3394,12 +3394,14 @@ wa.data = {
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
                     ["source"] = "import",
-                    ["authorOptions"] = {
+                    ["config"] = {
                     },
                     ["icon_side"] = "RIGHT",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                        ["ignoreOptionsEventErrors"] = false,
+                    ["barColor2"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 0,
+                        [4] = 1,
                     },
                     ["customText"] = "function()\
            if WeakAuras.IsOptionsOpen() then\
@@ -3422,35 +3424,33 @@ wa.data = {
        end",
                     ["sparkHeight"] = 20,
                     ["icon"] = false,
-                    ["uid"] = "AM-jgUKjGI9WMJ",
+                    ["spark"] = false,
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["semver"] = "1.0.12",
-                    ["adjustedMax"] = "",
+                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["sparkHidden"] = "NEVER",
-                    ["width"] = 600,
+                    ["id"] = "Shatter Existence/Spike Storm (shield)",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["id"] = "Shatter Existence/Spike Storm (shield)",
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["width"] = 600,
+                    ["adjustedMax"] = "",
                     ["inverse"] = false,
-                    ["spark"] = false,
+                    ["uid"] = "AM-jgUKjGI9WMJ",
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                        ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["config"] = {
+                    ["authorOptions"] = {
                     },
                 },
                 [19] = {
@@ -3496,24 +3496,24 @@ wa.data = {
                         ["difficulty"] = {
                             ["single"] = "mythic",
                         },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["single"] = 1,
-                            ["multi"] = {
-                                [1] = true,
-                            },
-                        },
-                        ["use_difficulty"] = true,
+                        ["zoneIds"] = "",
                         ["class"] = {
                             ["single"] = "MONK",
                             ["multi"] = {
                                 ["MONK"] = true,
                             },
                         },
-                        ["zoneIds"] = "",
+                        ["use_difficulty"] = true,
+                        ["spec"] = {
+                            ["single"] = 1,
+                            ["multi"] = {
+                                [1] = true,
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
@@ -3558,16 +3558,16 @@ wa.data = {
                         },
                         [2] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["unit"] = "boss",
                                 ["type"] = "aura2",
-                                ["useExactSpellId"] = true,
-                                ["match_countOperator"] = ">",
-                                ["match_count"] = "0",
-                                ["useMatch_count"] = true,
                                 ["auraspellids"] = {
                                     [1] = "450980",
                                 },
-                                ["unit"] = "boss",
+                                ["useExactSpellId"] = true,
+                                ["match_count"] = "0",
+                                ["useMatch_count"] = true,
+                                ["match_countOperator"] = ">",
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -3581,20 +3581,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -3610,7 +3610,7 @@ wa.data = {
                         [3] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -3619,7 +3619,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 24,
@@ -3628,37 +3628,39 @@ wa.data = {
                     ["sparkBlendMode"] = "BLEND",
                     ["useAdjustededMax"] = true,
                     ["source"] = "import",
-                    ["authorOptions"] = {
+                    ["config"] = {
                     },
                     ["icon_side"] = "RIGHT",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                        ["ignoreOptionsEventErrors"] = false,
+                    ["barColor2"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 0,
+                        [4] = 1,
                     },
                     ["customText"] = "\
        \
        ",
                     ["sparkHeight"] = 24,
                     ["icon"] = false,
-                    ["uid"] = "AM-REkFBbY)7rb",
+                    ["spark"] = true,
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["semver"] = "1.0.12",
-                    ["adjustedMax"] = "50",
+                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["sparkHidden"] = "NEVER",
-                    ["width"] = 600,
+                    ["id"] = "Shatter Existence intermission timer",
                     ["frameStrata"] = 5,
                     ["anchorFrameType"] = "SCREEN",
-                    ["id"] = "Shatter Existence intermission timer",
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["width"] = 600,
+                    ["adjustedMax"] = "50",
                     ["inverse"] = false,
-                    ["spark"] = true,
+                    ["uid"] = "AM-REkFBbY)7rb",
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                         [1] = {
@@ -3675,13 +3677,11 @@ wa.data = {
                             },
                         },
                     },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                        ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["config"] = {
+                    ["authorOptions"] = {
                     },
                 },
                 [20] = {
@@ -3691,31 +3691,30 @@ wa.data = {
                         [2] = "Stinging Swarm (list)",
                         [3] = "Stinging Swarm (boss)",
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["xOffset"] = 0,
                     ["preferToUpdate"] = false,
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "TOP",
+                    ["groupIcon"] = "1500881",
+                    ["gridType"] = "RD",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["space"] = 3,
+                    ["rowSpace"] = 1,
                     ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["selfPoint"] = "TOP",
                     ["rotation"] = 0,
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -3727,14 +3726,14 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
                     },
                     ["animate"] = false,
                     ["scale"] = 1,
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["constantFactor"] = "RADIUS",
                     ["borderOffset"] = 4,
                     ["tocversion"] = 110005,
@@ -3747,14 +3746,15 @@ wa.data = {
                     ["parent"] = "Silken Court [NHF]",
                     ["sortHybridTable"] = {
                         ["Stinging Swarm (list)"] = false,
-                        ["Stinging Swarm (boss)"] = false,
                         ["Cataclysmic Entropy timer"] = false,
+                        ["Stinging Swarm (boss)"] = false,
                     },
                     ["fullCircle"] = true,
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -3762,31 +3762,30 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
                         },
                     },
                     ["columnSpace"] = 1,
-                    ["radius"] = 200,
+                    ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -3808,32 +3807,33 @@ wa.data = {
                     ["source"] = "import",
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Raid Leader Lists",
+                    ["borderEdge"] = "Square Full White",
                     ["borderSize"] = 2,
                     ["sort"] = "none",
-                    ["borderEdge"] = "Square Full White",
-                    ["xOffset"] = 0,
-                    ["config"] = {
+                    ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Raid Leader Lists",
+                    ["authorOptions"] = {
                     },
+                    ["useLimit"] = false,
                     ["anchorFrameParent"] = false,
-                    ["groupIcon"] = "1500881",
-                    ["gridType"] = "RD",
-                    ["regionType"] = "dynamicgroup",
+                    ["yOffset"] = 0,
+                    ["anchorPoint"] = "TOP",
+                    ["stepAngle"] = 15,
                     ["semver"] = "1.0.12",
-                    ["rowSpace"] = 1,
+                    ["space"] = 3,
                     ["id"] = "The Silken Court - Raid Leader Lists",
-                    ["internalVersion"] = 79,
+                    ["radius"] = 200,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
-                    ["stagger"] = 0,
-                    ["limit"] = 5,
-                    ["uid"] = "AM-BdCzD3V7bTV",
                     ["gridWidth"] = 5,
+                    ["uid"] = "AM-BdCzD3V7bTV",
+                    ["limit"] = 5,
+                    ["stagger"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["useLimit"] = false,
+                    ["config"] = {
+                    },
                 },
                 [21] = {
                     ["sparkWidth"] = 10,
@@ -3868,14 +3868,15 @@ wa.data = {
                     ["sparkOffsetY"] = 0,
                     ["gradientOrientation"] = "HORIZONTAL",
                     ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_never"] = false,
+                        ["use_encounterid"] = true,
+                        ["encounterid"] = "2921",
                         ["class_and_spec"] = {
                         },
                         ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
@@ -3883,12 +3884,11 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2921",
-                        ["class"] = {
+                        ["use_never"] = false,
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
@@ -3921,35 +3921,35 @@ wa.data = {
                                 ["useExactSpellId"] = true,
                                 ["perUnitMode"] = "all",
                                 ["event"] = "Boss Mod Timer",
-                                ["names"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
+                                ["use_remaining"] = false,
+                                ["match_countOperator"] = ">",
                                 ["use_spellId"] = true,
                                 ["spellIds"] = {
                                 },
+                                ["subeventPrefix"] = "SPELL",
+                                ["fetchRole"] = false,
                                 ["auraspellids"] = {
                                     [1] = "456252",
                                 },
-                                ["fetchRole"] = false,
-                                ["subeventPrefix"] = "SPELL",
-                                ["match_countOperator"] = ">",
-                                ["use_remaining"] = false,
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["names"] = {
+                                },
                             },
                             ["untrigger"] = {
                             },
                         },
                         [2] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HARMFUL",
+                                ["unit"] = "group",
                                 ["type"] = "aura2",
-                                ["useExactSpellId"] = true,
-                                ["match_countOperator"] = ">",
-                                ["match_count"] = "0",
-                                ["useMatch_count"] = true,
                                 ["auraspellids"] = {
                                     [1] = "438708",
                                 },
-                                ["unit"] = "group",
+                                ["useExactSpellId"] = true,
+                                ["match_count"] = "0",
+                                ["useMatch_count"] = true,
+                                ["match_countOperator"] = ">",
+                                ["debuffType"] = "HARMFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -3965,20 +3965,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -4028,18 +4028,18 @@ wa.data = {
                             ["text_text_format_unit_color"] = "class",
                             ["type"] = "subtext",
                             ["text_text_format_order_format"] = "none",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorXOffset"] = 1,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_anchorPoint"] = "INNER_LEFT",
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_font"] = "PT Sans Narrow Bold",
+                            ["text_text_format_p_time_precision"] = 1,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_shadowXOffset"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_anchorPoint"] = "INNER_LEFT",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_p_time_legacy_floor"] = false,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_anchorXOffset"] = 1,
+                            ["text_text_format_previewName_format"] = "none",
                             ["text_text_format_unit_abbreviate_max"] = 8,
                         },
                         [4] = {
@@ -4079,24 +4079,24 @@ wa.data = {
                             ["text_text_format_unit_color"] = "class",
                             ["type"] = "subtext",
                             ["text_text_format_order_format"] = "none",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_anchorPoint"] = "INNER_RIGHT",
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_font"] = "PT Sans Narrow Bold",
+                            ["text_text_format_p_time_precision"] = 1,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_shadowXOffset"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_anchorPoint"] = "INNER_RIGHT",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_p_time_legacy_floor"] = false,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_anchorXOffset"] = 0,
+                            ["text_text_format_previewName_format"] = "none",
                             ["text_text_format_unit_abbreviate_max"] = 8,
                         },
                         [5] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -4105,12 +4105,12 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                         [6] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "icon",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -4119,7 +4119,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 32,
@@ -4128,51 +4128,51 @@ wa.data = {
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
                     ["source"] = "import",
-                    ["AMOriginalUUID"] = "tYqFq8OMvSy",
-                    ["icon_side"] = "LEFT",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["adjustedMax"] = "",
-                    ["sparkHeight"] = 30,
-                    ["customText"] = "",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["icon"] = true,
-                    ["semver"] = "1.0.12",
-                    ["id"] = "Cataclysmic Entropy timer",
-                    ["sparkHidden"] = "NEVER",
-                    ["width"] = 200,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["authorOptions"] = {
-                    },
-                    ["uid"] = "AM-tYqFq8OMvSy",
-                    ["inverse"] = false,
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                    },
-                    ["barColor2"] = {
-                        [1] = 0.74901962280273,
-                        [2] = 0.5137255191803,
-                        [3] = 1,
-                        [4] = 0,
-                    },
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
+                    ["icon_side"] = "LEFT",
+                    ["barColor2"] = {
+                        [1] = 0.74901962280273,
+                        [2] = 0.5137255191803,
+                        [3] = 1,
+                        [4] = 0,
+                    },
+                    ["adjustedMax"] = "",
+                    ["sparkHeight"] = 30,
+                    ["customText"] = "",
+                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                    ["icon"] = true,
+                    ["semver"] = "1.0.12",
+                    ["uid"] = "AM-tYqFq8OMvSy",
+                    ["sparkHidden"] = "NEVER",
+                    ["authorOptions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["width"] = 200,
+                    ["id"] = "Cataclysmic Entropy timer",
+                    ["inverse"] = false,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["finish"] = {
+                        },
+                        ["init"] = {
+                            ["custom"] = "",
+                            ["do_custom"] = false,
+                        },
+                    },
+                    ["orientation"] = "HORIZONTAL",
+                    ["conditions"] = {
+                    },
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                    },
+                    ["AMOriginalUUID"] = "tYqFq8OMvSy",
                 },
                 [22] = {
                     ["sparkWidth"] = 10,
@@ -4218,11 +4218,11 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["use_never"] = false,
                         ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_never"] = false,
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -4252,16 +4252,13 @@ wa.data = {
                             ["trigger"] = {
                                 ["type"] = "custom",
                                 ["custom_type"] = "stateupdate",
-                                ["customVariables"] = "{\
-           isRed = {\
-               display = \"Red\",\
-               type = \"bool\"\
-           }\
-       }",
+                                ["debuffType"] = "HELPFUL",
                                 ["event"] = "Combat Log",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "",
-                                ["subeventPrefix"] = "",
+                                ["spellIds"] = {
+                                },
+                                ["events"] =
+                                "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED:SPELL_CAST_SUCCESS, LIQUID_ASSIGNMENT_EVENT",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                for i = 1, 5 do\
@@ -4409,11 +4406,14 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
-                                ["events"] =
-                                "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED:SPELL_CAST_SUCCESS, LIQUID_ASSIGNMENT_EVENT",
-                                ["spellIds"] = {
-                                },
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "",
+                                ["subeventSuffix"] = "",
+                                ["customVariables"] = "{\
+           isRed = {\
+               display = \"Red\",\
+               type = \"bool\"\
+           }\
+       }",
                             },
                             ["untrigger"] = {
                             },
@@ -4429,20 +4429,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -4489,21 +4489,21 @@ wa.data = {
                             ["anchorYOffset"] = 0,
                             ["text_justify"] = "CENTER",
                             ["text_text_format_p_format"] = "timed",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["type"] = "subtext",
                             ["text_anchorXOffset"] = 1,
-                            ["text_text_format_c2_format"] = "none",
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_text_format_c_format"] = "none",
-                            ["text_anchorPoint"] = "INNER_LEFT",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_unit_color"] = "class",
+                            ["type"] = "subtext",
                             ["text_text_format_order_format"] = "none",
+                            ["text_text_format_unit_color"] = "class",
+                            ["text_font"] = "PT Sans Narrow Bold",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_shadowXOffset"] = 0,
+                            ["text_anchorPoint"] = "INNER_LEFT",
+                            ["text_text_format_c_format"] = "none",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_p_time_precision"] = 1,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_c2_format"] = "none",
+                            ["text_text_format_previewName_format"] = "none",
                             ["text_text_format_unit_abbreviate_max"] = 8,
                         },
                         [4] = {
@@ -4541,27 +4541,27 @@ wa.data = {
                             ["text_justify"] = "CENTER",
                             ["text_text_format_p_format"] = "timed",
                             ["text_text_format_stacks_format"] = "none",
-                            ["text_visible"] = true,
-                            ["type"] = "subtext",
                             ["text_anchorXOffset"] = -1,
-                            ["text_text_format_index_format"] = "none",
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_anchorPoint"] = "INNER_RIGHT",
-                            ["text_text_format_unit_color"] = "class",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_precision"] = 1,
+                            ["type"] = "subtext",
                             ["text_text_format_order_format"] = "none",
+                            ["text_text_format_p_time_precision"] = 1,
+                            ["text_font"] = "PT Sans Narrow Bold",
+                            ["text_shadowXOffset"] = 0,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_text_format_unit_color"] = "class",
+                            ["text_anchorPoint"] = "INNER_RIGHT",
+                            ["text_text_format_p_time_legacy_floor"] = false,
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_text_format_previewName_format"] = "none",
+                            ["text_text_format_index_format"] = "none",
+                            ["text_visible"] = true,
                             ["text_text_format_unit_abbreviate_max"] = 8,
                         },
                         [5] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -4570,12 +4570,12 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                         [6] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "icon",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -4584,7 +4584,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 32,
@@ -4593,9 +4593,13 @@ wa.data = {
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
                     ["source"] = "import",
-                    ["AMOriginalUUID"] = "(LTKVL)mWqo",
-                    ["information"] = {
-                        ["forceEvents"] = false,
+                    ["config"] = {
+                    },
+                    ["barColor2"] = {
+                        [1] = 0.74901962280273,
+                        [2] = 0.5137255191803,
+                        [3] = 1,
+                        [4] = 0,
                     },
                     ["icon_side"] = "LEFT",
                     ["authorOptions"] = {
@@ -4604,41 +4608,41 @@ wa.data = {
            return WA_ClassColorName(aura_env.state.unit), aura_env.state.isWebbed and CreateTextureMarkup(5764932, 64, 64, 0, 0, 5/64, 59/64, 5/64, 59/64) or \"\"\
        end",
                     ["sparkHeight"] = 30,
+                    ["zoom"] = 0.3,
+                    ["desc"] = "forceenable",
+                    ["uid"] = "AM-(LTKVL)mWqo",
+                    ["semver"] = "1.0.12",
+                    ["sparkHidden"] = "NEVER",
+                    ["id"] = "Stinging Swarm (list)",
+                    ["anchorFrameType"] = "SCREEN",
+                    ["frameStrata"] = 1,
+                    ["width"] = 200,
+                    ["preferToUpdate"] = false,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["finish"] = {
+                        },
+                        ["init"] = {
+                            ["custom"] = "",
+                            ["do_custom"] = false,
+                        },
+                    },
+                    ["inverse"] = false,
                     ["backgroundColor"] = {
                         [1] = 0.19607844948769,
                         [2] = 0.58823531866074,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["desc"] = "forceenable",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["semver"] = "1.0.12",
-                    ["preferToUpdate"] = false,
-                    ["sparkHidden"] = "NEVER",
-                    ["width"] = 200,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["id"] = "Stinging Swarm (list)",
-                    ["uid"] = "AM-(LTKVL)mWqo",
-                    ["inverse"] = false,
-                    ["zoom"] = 0.3,
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                         [1] = {
                             ["check"] = {
                                 ["trigger"] = 1,
                                 ["op"] = "==",
-                                ["variable"] = "isRed",
                                 ["value"] = 1,
+                                ["variable"] = "isRed",
                             },
                             ["changes"] = {
                                 [1] = {
@@ -4662,14 +4666,10 @@ wa.data = {
                             },
                         },
                     },
-                    ["barColor2"] = {
-                        [1] = 0.74901962280273,
-                        [2] = 0.5137255191803,
-                        [3] = 1,
-                        [4] = 0,
+                    ["information"] = {
+                        ["forceEvents"] = false,
                     },
-                    ["config"] = {
-                    },
+                    ["AMOriginalUUID"] = "(LTKVL)mWqo",
                 },
                 [23] = {
                     ["sparkWidth"] = 10,
@@ -4704,14 +4704,15 @@ wa.data = {
                     ["sparkOffsetY"] = 0,
                     ["gradientOrientation"] = "HORIZONTAL",
                     ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_never"] = false,
+                        ["use_encounterid"] = true,
+                        ["encounterid"] = "2921",
                         ["class_and_spec"] = {
                         },
                         ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
@@ -4719,12 +4720,11 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2921",
-                        ["class"] = {
+                        ["use_never"] = false,
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
@@ -4756,17 +4756,17 @@ wa.data = {
                                 ["subeventSuffix"] = "_CAST_START",
                                 ["perUnitMode"] = "all",
                                 ["event"] = "Health",
-                                ["match_countOperator"] = ">",
+                                ["unit"] = "boss",
                                 ["spellIds"] = {
                                 },
-                                ["names"] = {
-                                },
+                                ["useExactSpellId"] = true,
                                 ["fetchRole"] = false,
                                 ["auraspellids"] = {
                                     [1] = "456252",
                                 },
-                                ["useExactSpellId"] = true,
-                                ["unit"] = "boss",
+                                ["names"] = {
+                                },
+                                ["match_countOperator"] = ">",
                             },
                             ["untrigger"] = {
                             },
@@ -4782,20 +4782,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -4845,18 +4845,18 @@ wa.data = {
                             ["text_text_format_unit_color"] = "class",
                             ["type"] = "subtext",
                             ["text_text_format_order_format"] = "none",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorXOffset"] = 1,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_anchorPoint"] = "INNER_LEFT",
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_font"] = "PT Sans Narrow Bold",
+                            ["text_text_format_p_time_precision"] = 1,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_shadowXOffset"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_anchorPoint"] = "INNER_LEFT",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_p_time_legacy_floor"] = false,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_anchorXOffset"] = 1,
+                            ["text_text_format_previewName_format"] = "none",
                             ["text_text_format_unit_abbreviate_max"] = 8,
                         },
                         [4] = {
@@ -4896,24 +4896,24 @@ wa.data = {
                             ["text_text_format_unit_color"] = "class",
                             ["type"] = "subtext",
                             ["text_text_format_order_format"] = "none",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_anchorPoint"] = "INNER_RIGHT",
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_font"] = "PT Sans Narrow Bold",
+                            ["text_text_format_p_time_precision"] = 1,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_shadowXOffset"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_anchorPoint"] = "INNER_RIGHT",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_p_time_legacy_floor"] = false,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_anchorXOffset"] = 0,
+                            ["text_text_format_previewName_format"] = "none",
                             ["text_text_format_unit_abbreviate_max"] = 8,
                         },
                         [5] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -4922,12 +4922,12 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                         [6] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "icon",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -4936,7 +4936,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 32,
@@ -4945,51 +4945,51 @@ wa.data = {
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
                     ["source"] = "import",
-                    ["AMOriginalUUID"] = ")fFsDVtSrFr",
-                    ["icon_side"] = "LEFT",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["adjustedMax"] = "",
-                    ["sparkHeight"] = 30,
-                    ["customText"] = "",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["icon"] = true,
-                    ["semver"] = "1.0.12",
-                    ["id"] = "Stinging Swarm (boss)",
-                    ["sparkHidden"] = "NEVER",
-                    ["width"] = 200,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["authorOptions"] = {
-                    },
-                    ["uid"] = "AM-)fFsDVtSrFr",
-                    ["inverse"] = false,
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                    },
-                    ["barColor2"] = {
-                        [1] = 0.74901962280273,
-                        [2] = 0.5137255191803,
-                        [3] = 1,
-                        [4] = 0,
-                    },
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
+                    ["icon_side"] = "LEFT",
+                    ["barColor2"] = {
+                        [1] = 0.74901962280273,
+                        [2] = 0.5137255191803,
+                        [3] = 1,
+                        [4] = 0,
+                    },
+                    ["adjustedMax"] = "",
+                    ["sparkHeight"] = 30,
+                    ["customText"] = "",
+                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                    ["icon"] = true,
+                    ["semver"] = "1.0.12",
+                    ["uid"] = "AM-)fFsDVtSrFr",
+                    ["sparkHidden"] = "NEVER",
+                    ["authorOptions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["width"] = 200,
+                    ["id"] = "Stinging Swarm (boss)",
+                    ["inverse"] = false,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["finish"] = {
+                        },
+                        ["init"] = {
+                            ["custom"] = "",
+                            ["do_custom"] = false,
+                        },
+                    },
+                    ["orientation"] = "HORIZONTAL",
+                    ["conditions"] = {
+                    },
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                    },
+                    ["AMOriginalUUID"] = ")fFsDVtSrFr",
                 },
                 [24] = {
                     ["controlledChildren"] = {
@@ -5012,15 +5012,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -5028,8 +5029,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -5041,7 +5041,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -5053,7 +5053,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -5070,48 +5070,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Big Icons",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Silken Court [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "s(ovJtX0901",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "The Silken Court - Big Icons",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-s(ovJtX0901",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "The Silken Court - Big Icons",
+                    ["uid"] = "AM-s(ovJtX0901",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "s(ovJtX0901",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Silken Court [NHF]",
                 },
                 [25] = {
                     ["limitWeakAuras"] = {
@@ -5133,11 +5133,11 @@ wa.data = {
                             ["do_custom"] = false,
                             ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\BikeHorn.ogg",
                         },
-                        ["init"] = {
+                        ["finish"] = {
                             ["custom"] = "",
                             ["do_custom"] = false,
                         },
-                        ["finish"] = {
+                        ["init"] = {
                             ["custom"] = "",
                             ["do_custom"] = false,
                         },
@@ -5152,15 +5152,15 @@ wa.data = {
                                 ["event"] = "Health",
                                 ["subeventPrefix"] = "SPELL",
                                 ["subeventSuffix"] = "_CAST_START",
-                                ["unit"] = "player",
+                                ["useName"] = false,
                                 ["spellIds"] = {
                                 },
-                                ["auranames"] = {
-                                },
-                                ["useExactSpellId"] = true,
                                 ["names"] = {
                                 },
-                                ["useName"] = false,
+                                ["useExactSpellId"] = true,
+                                ["auranames"] = {
+                                },
+                                ["unit"] = "player",
                                 ["debuffType"] = "HARMFUL",
                             },
                             ["untrigger"] = {
@@ -5173,28 +5173,27 @@ wa.data = {
                     ["keepAspectRatio"] = false,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
                     ["desaturate"] = false,
-                    ["preferToUpdate"] = false,
-                    ["authorOptions"] = {
-                    },
+                    ["iconSource"] = -1,
+                    ["selfPoint"] = "CENTER",
                     ["version"] = 13,
                     ["subRegions"] = {
                         [1] = {
@@ -5215,8 +5214,8 @@ wa.data = {
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorXOffset"] = 0,
+                            ["text_text_format_p_time_format"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["type"] = "subtext",
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_color"] = {
@@ -5226,17 +5225,17 @@ wa.data = {
                                 [4] = 1,
                             },
                             ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_format"] = "timed",
                             ["text_anchorYOffset"] = 0,
-                            ["text_visible"] = true,
+                            ["text_shadowYOffset"] = 0,
+                            ["anchorYOffset"] = 0,
                             ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "OUTLINE",
                             ["text_anchorPoint"] = "OUTER_BOTTOM",
-                            ["anchorYOffset"] = 0,
-                            ["text_shadowYOffset"] = 0,
+                            ["text_visible"] = true,
+                            ["text_text_format_p_format"] = "timed",
                             ["text_fontSize"] = 32,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_time_format"] = 0,
+                            ["anchorXOffset"] = 0,
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                         [3] = {
                             ["text_text_format_p_time_precision"] = 1,
@@ -5250,11 +5249,11 @@ wa.data = {
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = false,
+                            ["text_text_format_p_format"] = "timed",
                             ["anchorYOffset"] = 0,
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["anchorXOffset"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_text_format_stacks_format"] = "none",
                             ["text_shadowXOffset"] = 0,
                             ["type"] = "subtext",
@@ -5266,21 +5265,21 @@ wa.data = {
                                 [4] = 1,
                             },
                             ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_mod_rate"] = true,
                             ["text_anchorYOffset"] = -6,
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_text_format_p_time_format"] = 0,
                             ["text_wordWrap"] = "WordWrap",
                             ["text_visible"] = true,
                             ["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_shadowYOffset"] = 0,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_p_time_mod_rate"] = true,
                             ["text_fontSize"] = 40,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "timed",
+                            ["anchorXOffset"] = 0,
+                            ["text_text_format_p_time_legacy_floor"] = false,
                         },
                         [4] = {
                             ["border_size"] = 4,
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0.19607844948769,
                                 [2] = 0.58823531866074,
@@ -5289,28 +5288,11 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 128,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["AMModified"] = true,
-                    ["cooldown"] = true,
-                    ["useAdjustededMax"] = false,
-                    ["displayIcon"] = "",
-                    ["source"] = "import",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["AMOriginalUUID"] = "TjnrRUON44H",
-                    ["config"] = {
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "icon",
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["useCooldownModRate"] = true,
+                    ["preferToUpdate"] = false,
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -5323,14 +5305,9 @@ wa.data = {
                         },
                         ["role"] = {
                         },
-                        ["size"] = {
-                            ["multi"] = {
-                                ["flexible"] = true,
-                                ["twenty"] = true,
-                                ["none"] = true,
-                            },
-                        },
-                        ["class"] = {
+                        ["zoneIds"] = "2414",
+                        ["use_zoneIds"] = false,
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -5338,39 +5315,62 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_zoneIds"] = false,
-                        ["zoneIds"] = "2414",
+                        ["size"] = {
+                            ["multi"] = {
+                                ["flexible"] = true,
+                                ["twenty"] = true,
+                                ["none"] = true,
+                            },
+                        },
                     },
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                    },
+                    ["useAdjustededMax"] = false,
+                    ["conditions"] = {
+                    },
+                    ["source"] = "import",
+                    ["authorOptions"] = {
+                    },
+                    ["icon"] = true,
+                    ["uid"] = "AM-TjnrRUON44H",
+                    ["progressSource"] = {
+                        [1] = -1,
+                        [2] = "",
+                    },
+                    ["useAdjustededMin"] = false,
+                    ["regionType"] = "icon",
+                    ["width"] = 128,
+                    ["frameStrata"] = 1,
                     ["anchorFrameFrame"] = "WeakAuras:Raid Icon Special Anchor",
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["anchorFrameParent"] = false,
                     ["alpha"] = 1,
-                    ["cooldownTextDisabled"] = true,
                     ["zoom"] = 0.3,
+                    ["cooldownTextDisabled"] = true,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Stinging Swarm",
+                    ["parent"] = "The Silken Court - Big Icons",
+                    ["useCooldownModRate"] = true,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["AMModified"] = true,
+                    ["config"] = {
+                    },
+                    ["inverse"] = false,
+                    ["displayIcon"] = "",
+                    ["AMOriginalUUID"] = "TjnrRUON44H",
+                    ["cooldown"] = true,
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["frameStrata"] = 1,
-                    ["width"] = 128,
-                    ["iconSource"] = -1,
-                    ["uid"] = "AM-TjnrRUON44H",
-                    ["inverse"] = false,
-                    ["parent"] = "The Silken Court - Big Icons",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["icon"] = true,
                 },
                 [26] = {
                     ["controlledChildren"] = {
@@ -5393,15 +5393,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -5409,8 +5410,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -5422,7 +5422,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -5434,7 +5434,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -5451,48 +5451,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Assignments",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Silken Court [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "R1FmgY8xM8a",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "The Silken Court - Assignments",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-R1FmgY8xM8a",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "The Silken Court - Assignments",
+                    ["uid"] = "AM-R1FmgY8xM8a",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "R1FmgY8xM8a",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Silken Court [NHF]",
                 },
                 [27] = {
                     ["outline"] = "OUTLINE",
@@ -5511,9 +5511,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -5521,16 +5521,12 @@ wa.data = {
                             ["trigger"] = {
                                 ["type"] = "custom",
                                 ["custom_type"] = "stateupdate",
-                                ["customVariables"] = "{\
-           order = {\
-               display = \"order\",\
-               type = \"number\"\
-           }\
-       }",
+                                ["debuffType"] = "HELPFUL",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
+                                ["spellIds"] = {
+                                },
+                                ["events"] = "LIQUID_SILKEN_COURT_DISPEL_ORDER, ENCOUNTER_START",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                allstates[\"\"] = {\
@@ -5567,10 +5563,14 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
-                                ["events"] = "LIQUID_SILKEN_COURT_DISPEL_ORDER, ENCOUNTER_START",
-                                ["spellIds"] = {
-                                },
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "SPELL",
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["customVariables"] = "{\
+           order = {\
+               display = \"order\",\
+               type = \"number\"\
+           }\
+       }",
                             },
                             ["untrigger"] = {
                             },
@@ -5581,9 +5581,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "438708",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -5600,31 +5600,17 @@ wa.data = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["internalVersion"] = 79,
-                    ["AMModified"] = true,
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["fontSize"] = 60,
-                    ["source"] = "import",
-                    ["displayText_format_c_format"] = "none",
-                    ["shadowXOffset"] = 1,
-                    ["AMOriginalUUID"] = "y9xX7S7xlQI",
                     ["parent"] = "The Silken Court - Assignments",
-                    ["displayText_format_p_format"] = "timed",
-                    ["regionType"] = "text",
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["uid"] = "AM-y9xX7S7xlQI",
                     ["load"] = {
                         ["difficulty"] = {
                         },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["use_encounterid"] = true,
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "2921",
                         ["spec"] = {
                             ["multi"] = {
                             },
@@ -5633,54 +5619,28 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2921",
-                        ["use_encounterid"] = true,
-                    },
-                    ["preferToUpdate"] = false,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
+                        ["size"] = {
+                            ["multi"] = {
+                            },
                         },
                     },
-                    ["xOffset"] = 0,
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Stinging Swarm dispel number",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["config"] = {
-                    },
+                    ["fontSize"] = 60,
+                    ["source"] = "import",
+                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["shadowXOffset"] = 1,
                     ["conditions"] = {
                         [1] = {
                             ["check"] = {
                                 ["trigger"] = 1,
                                 ["op"] = "==",
-                                ["variable"] = "order",
                                 ["value"] = "1",
+                                ["variable"] = "order",
                             },
                             ["changes"] = {
                                 [1] = {
@@ -5690,6 +5650,46 @@ wa.data = {
                             },
                         },
                     },
+                    ["AMModified"] = true,
+                    ["fixedWidth"] = 200,
+                    ["regionType"] = "text",
+                    ["internalVersion"] = 79,
+                    ["config"] = {
+                    },
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["displayText_format_c_format"] = "none",
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["shadowYOffset"] = -1,
+                    ["xOffset"] = 0,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Stinging Swarm dispel number",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["wordWrap"] = "WordWrap",
+                    ["uid"] = "AM-y9xX7S7xlQI",
+                    ["preferToUpdate"] = false,
                     ["displayText_format_order_format"] = "none",
                     ["shadowColor"] = {
                         [1] = 0,
@@ -5697,10 +5697,10 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "y9xX7S7xlQI",
                     ["information"] = {
                     },
-                    ["wordWrap"] = "WordWrap",
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [28] = {
                     ["controlledChildren"] = {
@@ -5723,15 +5723,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -5739,8 +5740,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -5749,20 +5749,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -5771,7 +5771,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -5783,7 +5783,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -5800,27 +5800,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["parent"] = "Silken Court [NHF]",
+                    ["selfPoint"] = "CENTER",
                     ["groupIcon"] = "guildfinder-card-guildbanner-background",
-                    ["AMOriginalUUID"] = "HDHYll8f2Nn",
+                    ["parent"] = "Silken Court [NHF]",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "The Silken Court - Nameplate Indicators",
-                    ["xOffset"] = 0,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-HDHYll8f2Nn",
                     ["config"] = {
                     },
-                    ["frameStrata"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-HDHYll8f2Nn",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "HDHYll8f2Nn",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [29] = {
                     ["wagoID"] = "-NO8XaQxq",
@@ -5833,9 +5833,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -5843,11 +5843,13 @@ wa.data = {
                             ["trigger"] = {
                                 ["type"] = "custom",
                                 ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
+                                ["debuffType"] = "HELPFUL",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
+                                ["spellIds"] = {
+                                },
+                                ["events"] =
+                                "NAME_PLATE_UNIT_ADDED, NAME_PLATE_UNIT_REMOVED, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, ENCOUNTER_START",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"ENCOUNTER_START\" then\
                aura_env.GUIDs = {}\
@@ -5909,11 +5911,9 @@ wa.data = {
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
-                                ["events"] =
-                                "NAME_PLATE_UNIT_ADDED, NAME_PLATE_UNIT_REMOVED, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, ENCOUNTER_START",
-                                ["spellIds"] = {
-                                },
-                                ["debuffType"] = "HELPFUL",
+                                ["subeventPrefix"] = "SPELL",
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["custom_hide"] = "timed",
                             },
                             ["untrigger"] = {
                             },
@@ -5956,25 +5956,23 @@ wa.data = {
                             ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "None",
                             ["text_anchorPoint"] = "CENTER",
-                            ["text_visible"] = true,
+                            ["text_shadowXOffset"] = 1,
                             ["text_anchorYOffset"] = 20,
                             ["text_fontSize"] = 20,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowXOffset"] = 1,
+                            ["text_visible"] = true,
                         },
                     },
                     ["height"] = 120,
                     ["rotate"] = false,
                     ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["use_encounterid"] = true,
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "2921",
                         ["spec"] = {
                             ["multi"] = {
                             },
@@ -5983,62 +5981,64 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2921",
-                        ["use_encounterid"] = true,
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
                     ["source"] = "import",
                     ["mirror"] = false,
                     ["regionType"] = "texture",
-                    ["AMModified"] = true,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["blendMode"] = "BLEND",
+                    ["AMModified"] = true,
                     ["parent"] = "The Silken Court - Nameplate Indicators",
-                    ["rotation"] = 0,
                     ["anchorFrameParent"] = false,
                     ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
-                    ["AMOriginalUUID"] = "bbMFpGhVPs2",
-                    ["xOffset"] = 0,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Scarab Fixation (nameplate)",
+                    ["anchorFrameType"] = "NAMEPLATE",
+                    ["alpha"] = 1,
+                    ["width"] = 120,
+                    ["uid"] = "AM-bbMFpGhVPs2",
+                    ["config"] = {
+                    },
                     ["color"] = {
                         [1] = 1,
                         [2] = 0.15686275064945,
                         [3] = 0.2039215862751,
                         [4] = 1,
                     },
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "NAMEPLATE",
-                    ["config"] = {
-                    },
-                    ["uid"] = "AM-bbMFpGhVPs2",
-                    ["width"] = 120,
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "bbMFpGhVPs2",
                     ["information"] = {
                         ["forceEvents"] = false,
                     },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["rotation"] = 0,
                 },
                 [30] = {
                     ["controlledChildren"] = {
@@ -6061,15 +6061,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -6077,8 +6078,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -6090,7 +6090,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -6102,7 +6102,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -6119,48 +6119,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Texts",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Silken Court [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "P5BwqvlOVw7",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "The Silken Court - Texts",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-P5BwqvlOVw7",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "The Silken Court - Texts",
+                    ["uid"] = "AM-P5BwqvlOVw7",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "P5BwqvlOVw7",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Silken Court [NHF]",
                 },
                 [31] = {
                     ["outline"] = "OUTLINE",
@@ -6180,9 +6180,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -6194,8 +6194,12 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] = "CLEU:SPELL_CAST_START:SPELL_AURA_APPLIED, ENCOUNTER_START",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                allstates[\"\"] = {\
@@ -6235,10 +6239,6 @@ wa.data = {
                aura_env.count = 0\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["events"] = "CLEU:SPELL_CAST_START:SPELL_AURA_APPLIED, ENCOUNTER_START",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -6257,13 +6257,6 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
-                    ["displayText_format_p_format"] = "timed",
-                    ["fontSize"] = 40,
-                    ["source"] = "import",
-                    ["yOffset"] = 0,
-                    ["shadowXOffset"] = 1,
-                    ["xOffset"] = 0,
-                    ["AMOriginalUUID"] = "HkqtuLuEipp",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -6289,57 +6282,64 @@ wa.data = {
                             },
                         },
                     },
-                    ["regionType"] = "text",
+                    ["fontSize"] = 40,
+                    ["source"] = "import",
                     ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["internalVersion"] = 79,
-                    ["config"] = {
-                    },
+                    ["shadowXOffset"] = 1,
+                    ["parent"] = "The Silken Court - Texts",
                     ["conditions"] = {
                     },
+                    ["internalVersion"] = 79,
+                    ["regionType"] = "text",
+                    ["selfPoint"] = "BOTTOM",
+                    ["yOffset"] = 0,
+                    ["uid"] = "AM-HkqtuLuEipp",
+                    ["xOffset"] = 0,
                     ["displayText_format_p_time_precision"] = 1,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
-                    ["authorOptions"] = {
-                    },
-                    ["justify"] = "LEFT",
+                    ["displayText_format_count_format"] = "none",
                     ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
                     ["tocversion"] = 110005,
                     ["id"] = "Mythic Web Vortex first/second",
-                    ["displayText_format_count_format"] = "none",
+                    ["authorOptions"] = {
+                    },
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_format"] = "timed",
                     ["preferToUpdate"] = false,
-                    ["uid"] = "AM-HkqtuLuEipp",
-                    ["parent"] = "The Silken Court - Texts",
-                    ["displayText"] = "%count pull",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "HkqtuLuEipp",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "BOTTOM",
+                    ["displayText"] = "%count pull",
                 },
                 [32] = {
                     ["controlledChildren"] = {
@@ -6365,15 +6365,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -6381,8 +6382,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -6391,20 +6391,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -6413,7 +6413,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -6425,7 +6425,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -6442,27 +6442,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["parent"] = "Silken Court [NHF]",
+                    ["selfPoint"] = "CENTER",
                     ["groupIcon"] = "map-icon-ignored-bluequestion",
-                    ["AMOriginalUUID"] = "rz7F6KevQZv",
+                    ["parent"] = "Silken Court [NHF]",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "The Silken Court - Miscellaneous",
-                    ["xOffset"] = 0,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-rz7F6KevQZv",
                     ["config"] = {
                     },
-                    ["frameStrata"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-rz7F6KevQZv",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "rz7F6KevQZv",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [33] = {
                     ["outline"] = "OUTLINE",
@@ -6478,9 +6478,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -6492,8 +6492,13 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] =
+                                "PESCORUS_PRIVATE_AURA_SEND, LIQUID_PRIVATE_AURA_MACRO, LIQUID_SILKEN_COURT_DISPEL_ORDER, ENCOUNTER_START",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "status",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(event, ...)\
            if event == \"PESCORUS_PRIVATE_AURA_SEND\" or event == \"LIQUID_PRIVATE_AURA_MACRO\" then\
                if aura_env.next and C_UnitAuras.GetPlayerAuraBySpellID(438708) then -- Stinging Swarm\
@@ -6511,11 +6516,6 @@ wa.data = {
                aura_env.next = false\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "status",
-                                ["events"] =
-                                "PESCORUS_PRIVATE_AURA_SEND, LIQUID_PRIVATE_AURA_MACRO, LIQUID_SILKEN_COURT_DISPEL_ORDER, ENCOUNTER_START",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -6534,6 +6534,55 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
+                    ["parent"] = "The Silken Court - Miscellaneous",
+                    ["fontSize"] = 12,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "yG3HMyoW2j6",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Stinging Swarm macro",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-yG3HMyoW2j6",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -6563,67 +6612,18 @@ wa.data = {
                             },
                         },
                     },
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "The Silken Court - Miscellaneous",
-                    ["conditions"] = {
-                    },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
                     ["xOffset"] = 0,
-                    ["uid"] = "AM-yG3HMyoW2j6",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Stinging Swarm macro",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "yG3HMyoW2j6",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [34] = {
                     ["outline"] = "OUTLINE",
@@ -6648,9 +6648,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -6681,9 +6681,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "440001",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -6694,9 +6694,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "455850",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -6707,9 +6707,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "455849",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -6731,57 +6731,16 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["displayText_format_p_format"] = "timed",
                     ["fontSize"] = 12,
                     ["source"] = "import",
-                    ["internalVersion"] = 79,
-                    ["shadowXOffset"] = 1,
-                    ["displayText_format_c_format"] = "none",
-                    ["AMOriginalUUID"] = "(jZ3j(jDMC8",
-                    ["displayText_format_p_format"] = "timed",
-                    ["regionType"] = "text",
-                    ["conditions"] = {
-                    },
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["uid"] = "AM-(jZ3j(jDMC8",
-                    ["preferToUpdate"] = false,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["parent"] = "The Silken Court - Miscellaneous",
-                    ["selfPoint"] = "BOTTOM",
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Web pair say spam before charge",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["config"] = {
-                    },
+                    ["shadowXOffset"] = 1,
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -6807,17 +6766,58 @@ wa.data = {
                             },
                         },
                     },
-                    ["yOffset"] = 0,
+                    ["conditions"] = {
+                    },
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["regionType"] = "text",
+                    ["preferToUpdate"] = false,
+                    ["automaticWidth"] = "Auto",
+                    ["config"] = {
+                    },
+                    ["displayText_format_c_format"] = "none",
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["parent"] = "The Silken Court - Miscellaneous",
+                    ["xOffset"] = 0,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Web pair say spam before charge",
+                    ["selfPoint"] = "BOTTOM",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["internalVersion"] = 79,
+                    ["uid"] = "AM-(jZ3j(jDMC8",
+                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["fixedWidth"] = 200,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "(jZ3j(jDMC8",
                     ["information"] = {
                     },
-                    ["automaticWidth"] = "Auto",
+                    ["yOffset"] = 0,
                 },
                 [35] = {
                     ["outline"] = "OUTLINE",
@@ -6834,6 +6834,8 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
+                        ["finish"] = {
+                        },
                         ["init"] = {
                             ["custom"] = "aura_env.spellIDs = {\
            [438656] = true, -- Venomous Rain\
@@ -6846,8 +6848,6 @@ wa.data = {
        }",
                             ["do_custom"] = true,
                         },
-                        ["finish"] = {
-                        },
                     },
                     ["triggers"] = {
                         [1] = {
@@ -6858,8 +6858,13 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] =
+                                "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE:SPELL_DAMAGE:SPELL_MISSED:SPELL_AURA_REFRESH",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "status",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(event, ...)\
            if event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
                local _, subEvent, _, _, _, _, _, destGUID, _, _, _, spellID, _, _, missType = ...\
@@ -6909,11 +6914,6 @@ wa.data = {
                WeakAuras.ScanEvents(\"LIQUID_SILKEN_COURT_ORB_COUNT\", aura_env.blueCount, aura_env.redCount)\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "status",
-                                ["events"] =
-                                "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE:SPELL_DAMAGE:SPELL_MISSED:SPELL_AURA_REFRESH",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -6932,11 +6932,24 @@ wa.data = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_c_format"] = "none",
                     ["AMModified"] = true,
-                    ["selfPoint"] = "TOP",
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["fontSize"] = 50,
                     ["source"] = "import",
+                    ["wordWrap"] = "WordWrap",
+                    ["shadowXOffset"] = 1,
+                    ["fixedWidth"] = 200,
+                    ["displayText_format_p_format"] = "timed",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["regionType"] = "text",
+                    ["parent"] = "The Silken Court - Miscellaneous",
+                    ["uid"] = "AM-zi1om4ND)Qv",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -6962,65 +6975,52 @@ wa.data = {
                             },
                         },
                     },
-                    ["shadowXOffset"] = 1,
-                    ["AMOriginalUUID"] = "zi1om4ND)Qv",
                     ["conditions"] = {
                     },
-                    ["preferToUpdate"] = false,
-                    ["regionType"] = "text",
-                    ["wordWrap"] = "WordWrap",
-                    ["config"] = {
-                    },
-                    ["displayText"] = "",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
                     ["displayText_format_p_time_precision"] = 1,
-                    ["xOffset"] = 0,
-                    ["yOffset"] = -40,
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Orb counter (don't turn this off, it doesn't display anything anyway)",
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["yOffset"] = -40,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Orb counter (don't turn this off, it doesn't display anything anyway)",
+                    ["xOffset"] = 0,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "UIPARENT",
-                    ["displayText_format_p_format"] = "timed",
-                    ["uid"] = "AM-zi1om4ND)Qv",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["displayText_format_c_format"] = "none",
+                    ["selfPoint"] = "TOP",
+                    ["config"] = {
+                    },
+                    ["internalVersion"] = 79,
+                    ["displayText"] = "",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "zi1om4ND)Qv",
                     ["information"] = {
                     },
-                    ["parent"] = "The Silken Court - Miscellaneous",
+                    ["preferToUpdate"] = false,
                 },
                 [36] = {
                     ["outline"] = "OUTLINE",
@@ -7033,9 +7033,9 @@ wa.data = {
                                 [1] = "Mine only",
                                 [2] = "Show both",
                             },
-                            ["key"] = "colors",
-                            ["useDesc"] = false,
                             ["name"] = "Colors",
+                            ["useDesc"] = false,
+                            ["key"] = "colors",
                             ["width"] = 0.5,
                         },
                     },
@@ -7061,13 +7061,13 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
+                        ["finish"] = {
+                        },
                         ["init"] = {
                             ["custom"] = "\
        \
        ",
                             ["do_custom"] = false,
-                        },
-                        ["finish"] = {
                         },
                     },
                     ["triggers"] = {
@@ -7079,8 +7079,12 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] = "LIQUID_SILKEN_COURT_ORB_COUNT",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                allstates[\"\"] = {\
@@ -7111,10 +7115,6 @@ wa.data = {
                return true\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["events"] = "LIQUID_SILKEN_COURT_ORB_COUNT",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -7126,9 +7126,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "455850",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -7139,9 +7139,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "455849",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -7163,11 +7163,24 @@ wa.data = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_c_format"] = "none",
                     ["AMModified"] = true,
-                    ["selfPoint"] = "TOP",
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["fontSize"] = 50,
                     ["source"] = "import",
+                    ["wordWrap"] = "WordWrap",
+                    ["shadowXOffset"] = 1,
+                    ["fixedWidth"] = 200,
+                    ["displayText_format_p_format"] = "timed",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["regionType"] = "text",
+                    ["parent"] = "The Silken Court - Miscellaneous",
+                    ["uid"] = "AM-JjlAP2pldPJ",
                     ["load"] = {
                         ["use_never"] = true,
                         ["talent"] = {
@@ -7193,66 +7206,53 @@ wa.data = {
                             },
                         },
                     },
-                    ["shadowXOffset"] = 1,
-                    ["AMOriginalUUID"] = "JjlAP2pldPJ",
                     ["conditions"] = {
                     },
-                    ["preferToUpdate"] = false,
-                    ["regionType"] = "text",
-                    ["wordWrap"] = "WordWrap",
-                    ["config"] = {
-                        ["colors"] = 1,
-                    },
-                    ["displayText"] = "%c",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
                     ["displayText_format_p_time_precision"] = 1,
-                    ["xOffset"] = 0,
-                    ["yOffset"] = -40,
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Remaining orbs",
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["yOffset"] = -40,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Remaining orbs",
+                    ["xOffset"] = 0,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "UIPARENT",
-                    ["displayText_format_p_format"] = "timed",
-                    ["uid"] = "AM-JjlAP2pldPJ",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["displayText_format_c_format"] = "none",
+                    ["selfPoint"] = "TOP",
+                    ["config"] = {
+                        ["colors"] = 1,
+                    },
+                    ["internalVersion"] = 79,
+                    ["displayText"] = "%c",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "JjlAP2pldPJ",
                     ["information"] = {
                     },
-                    ["parent"] = "The Silken Court - Miscellaneous",
+                    ["preferToUpdate"] = false,
                 },
                 [37] = {
                     ["controlledChildren"] = {
@@ -7274,15 +7274,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -7290,8 +7291,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -7300,20 +7300,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -7322,7 +7322,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -7334,7 +7334,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -7351,29 +7351,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
+                    ["selfPoint"] = "CENTER",
+                    ["parent"] = "Silken Court [NHF]",
+                    ["anchorFrameParent"] = false,
                     ["authorOptions"] = {
                     },
-                    ["anchorFrameParent"] = false,
-                    ["parent"] = "Silken Court [NHF]",
-                    ["AMOriginalUUID"] = "rFII1b5oBgq",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "The Silken Court - Raid Frame Glows",
-                    ["alpha"] = 1,
+                    ["yOffset"] = 0,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-rFII1b5oBgq",
-                    ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["yOffset"] = 0,
-                    ["conditions"] = {
-                    },
+                    ["uid"] = "AM-rFII1b5oBgq",
+                    ["borderInset"] = 1,
+                    ["alpha"] = 1,
+                    ["AMOriginalUUID"] = "rFII1b5oBgq",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [38] = {
                     ["outline"] = "OUTLINE",
@@ -7389,9 +7389,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -7403,8 +7403,12 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["events"] = "ENCOUNTER_START, LIQUID_SILKEN_COURT_DISPEL_ORDER",
                                 ["spellIds"] = {
                                 },
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                allstates[1] = {\
@@ -7457,10 +7461,6 @@ wa.data = {
                return true\
            end\
        end",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["events"] = "ENCOUNTER_START, LIQUID_SILKEN_COURT_DISPEL_ORDER",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -7478,31 +7478,12 @@ wa.data = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["displayText_format_p_time_precision"] = 1,
+                    ["anchorFrameParent"] = false,
                     ["AMModified"] = true,
                     ["displayText_format_assignment_format"] = "none",
                     ["fontSize"] = 50,
                     ["source"] = "import",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["displayText_format_p_format"] = "timed",
                     ["shadowXOffset"] = 1,
                     ["load"] = {
                         ["use_never"] = false,
@@ -7529,44 +7510,63 @@ wa.data = {
                             },
                         },
                     },
-                    ["AMOriginalUUID"] = "LwWNm1skce4",
+                    ["conditions"] = {
+                    },
                     ["preferToUpdate"] = false,
                     ["regionType"] = "text",
+                    ["shadowYOffset"] = -1,
+                    ["displayText_format_p_time_legacy_floor"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText"] = "%assignment",
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["parent"] = "The Silken Court - Raid Frame Glows",
+                    ["xOffset"] = 0,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Stinging Swarm dispel number on frames",
+                    ["selfPoint"] = "CENTER",
+                    ["frameStrata"] = 5,
+                    ["anchorFrameType"] = "UNITFRAME",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-LwWNm1skce4",
+                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["uid"] = "AM-LwWNm1skce4",
-                    ["fixedWidth"] = 200,
-                    ["anchorFrameParent"] = false,
-                    ["parent"] = "The Silken Court - Raid Frame Glows",
-                    ["selfPoint"] = "CENTER",
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Stinging Swarm dispel number on frames",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 5,
-                    ["anchorFrameType"] = "UNITFRAME",
-                    ["displayText"] = "%assignment",
-                    ["config"] = {
-                    },
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["shadowYOffset"] = -1,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["conditions"] = {
-                    },
+                    ["AMOriginalUUID"] = "LwWNm1skce4",
                     ["information"] = {
                     },
-                    ["displayText_format_p_format"] = "timed",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                 },
                 [39] = {
                     ["controlledChildren"] = {
@@ -7589,15 +7589,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["finish"] = {
-                        },
                         ["init"] = {
+                        },
+                        ["finish"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -7605,8 +7606,7 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["subeventPrefix"] = "SPELL",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -7615,20 +7615,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["easeStrength"] = 3,
                             ["type"] = "none",
+                            ["easeStrength"] = 3,
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["easeStrength"] = 3,
                             ["type"] = "none",
+                            ["easeStrength"] = 3,
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["easeStrength"] = 3,
                             ["type"] = "none",
+                            ["easeStrength"] = 3,
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -7636,7 +7636,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -7648,7 +7648,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -7664,62 +7664,57 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["groupIcon"] = "5779391",
-                    ["parent"] = "[NHF] Nerub-Ar Palace",
-                    ["borderOffset"] = 4,
+                    ["AMModified"] = true,
                     ["authorOptions"] = {
                     },
-                    ["conditions"] = {
-                    },
+                    ["borderOffset"] = 4,
+                    ["groupIcon"] = "5779391",
+                    ["AMOriginalUUID"] = "UFs2EeQWTnl",
                     ["id"] = "Ansurek [NHF]",
-                    ["alpha"] = 1,
+                    ["selfPoint"] = "CENTER",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-UFs2EeQWTnl",
                     ["config"] = {
                     },
-                    ["selfPoint"] = "CENTER",
-                    ["AMOriginalUUID"] = "UFs2EeQWTnl",
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-UFs2EeQWTnl",
+                    ["alpha"] = 1,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["parent"] = "[NHF] Nerub-Ar Palace",
                 },
                 [40] = {
-                    ["arcLength"] = 360,
+                    ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Shadowgate",
                     },
                     ["borderBackdrop"] = "Blizzard Tooltip",
                     ["wagoID"] = "-NO8XaQxq",
-                    ["xOffset"] = 0,
+                    ["parent"] = "Ansurek [NHF]",
                     ["preferToUpdate"] = false,
                     ["groupIcon"] = "ui-frame-bar-glowcenter",
-                    ["sortHybridTable"] = {
-                        ["Shadowgate"] = false,
+                    ["anchorPoint"] = "BOTTOM",
+                    ["arcLength"] = 360,
+                    ["authorOptions"] = {
                     },
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "NxI)rHrU8vY",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["space"] = 3,
+                    ["fullCircle"] = true,
+                    ["rowSpace"] = 1,
                     ["url"] = "https://wago.io/LiquidNerubarPalace/13",
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["unit"] = "player",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -7727,30 +7722,74 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["debuffType"] = "HELPFUL",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
                         },
                     },
                     ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["grow"] = "UP",
-                    ["useLimit"] = false,
+                    ["internalVersion"] = 79,
+                    ["source"] = "import",
+                    ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["parent"] = "Ansurek [NHF]",
-                    ["regionType"] = "dynamicgroup",
                     ["yOffset"] = 0,
-                    ["stagger"] = 0,
                     ["gridType"] = "RD",
+                    ["xOffset"] = 0,
+                    ["rotation"] = 0,
+                    ["borderColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 1,
+                    },
                     ["version"] = 13,
                     ["subRegions"] = {
                     },
-                    ["gridWidth"] = 5,
-                    ["fullCircle"] = true,
+                    ["space"] = 3,
+                    ["radius"] = 200,
+                    ["AMModified"] = true,
+                    ["borderInset"] = 1,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["animate"] = false,
+                    ["sortHybridTable"] = {
+                        ["Shadowgate"] = false,
+                    },
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Bars",
+                    ["regionType"] = "dynamicgroup",
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["stagger"] = 0,
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -7762,72 +7801,33 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
                     },
-                    ["rowSpace"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["internalVersion"] = 79,
-                    ["source"] = "import",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Bars",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["authorOptions"] = {
-                    },
-                    ["rotation"] = 0,
-                    ["anchorPoint"] = "BOTTOM",
+                    ["useLimit"] = false,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
-                    ["alpha"] = 1,
+                    ["borderEdge"] = "Square Full White",
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Queen Ansurek - Bars",
-                    ["animate"] = false,
-                    ["frameStrata"] = 1,
+                    ["stepAngle"] = 15,
+                    ["gridWidth"] = 5,
                     ["anchorFrameType"] = "SELECTFRAME",
-                    ["selfPoint"] = "BOTTOM",
-                    ["borderInset"] = 1,
-                    ["borderEdge"] = "Square Full White",
                     ["sort"] = "none",
                     ["uid"] = "AM-NxI)rHrU8vY",
+                    ["frameStrata"] = 1,
+                    ["config"] = {
+                    },
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["config"] = {
-                    },
+                    ["AMOriginalUUID"] = "NxI)rHrU8vY",
                 },
                 [41] = {
                     ["sparkWidth"] = 10,
@@ -7917,6 +7917,8 @@ wa.data = {
                                 ["unit"] = "player",
                                 ["names"] = {
                                 },
+                                ["spellIds"] = {
+                                },
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                local count = math.random(8)\
@@ -7973,12 +7975,10 @@ wa.data = {
                return true\
            end\
        end",
-                                ["events"] = "LIQUID_ANSUREK_SHADOW_GATE",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
                                 ["custom_type"] = "stateupdate",
-                                ["spellIds"] = {
-                                },
+                                ["check"] = "event",
+                                ["subeventPrefix"] = "SPELL",
+                                ["events"] = "LIQUID_ANSUREK_SHADOW_GATE",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -7993,20 +7993,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -8023,23 +8023,23 @@ wa.data = {
                             ["text_shadowXOffset"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%{count}. %unit",
-                            ["text_text_format_count_decimal_precision"] = 0,
+                            ["text_text_format_unit_abbreviate_max"] = 8,
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["text_text_format_unit_realm_name"] = "never",
+                            ["text_fixedWidth"] = 64,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_text_format_unit_color"] = "class",
-                            ["text_text_format_count_round_type"] = "floor",
+                            ["text_fontSize"] = 18,
                             ["anchorYOffset"] = 0,
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_visible"] = true,
-                            ["text_fixedWidth"] = 64,
+                            ["text_anchorYOffset"] = -1,
+                            ["text_text_format_count_format"] = "Number",
                             ["text_text_format_count._format"] = "none",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 4,
@@ -8051,16 +8051,16 @@ wa.data = {
                             },
                             ["text_font"] = "PT Sans Narrow Bold",
                             ["text_text_format_unit_abbreviate"] = false,
-                            ["text_anchorYOffset"] = -1,
+                            ["text_shadowYOffset"] = 0,
                             ["text_text_format_unit_format"] = "Unit",
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                             ["text_anchorPoint"] = "LEFT",
-                            ["text_text_format_count_format"] = "Number",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_fontSize"] = 18,
+                            ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_unit_realm_name"] = "never",
+                            ["text_text_format_count_round_type"] = "floor",
                             ["anchorXOffset"] = 0,
-                            ["text_text_format_unit_abbreviate_max"] = 8,
+                            ["text_text_format_count_decimal_precision"] = 0,
                         },
                         [4] = {
                             ["text_text_format_t_time_precision"] = 1,
@@ -8096,22 +8096,22 @@ wa.data = {
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = -2,
                             ["text_font"] = "PT Sans Narrow Bold",
-                            ["anchorXOffset"] = 0,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_shadowXOffset"] = 0,
+                            ["text_text_format_p_time_dynamic_threshold"] = 5,
+                            ["text_text_format_p_format"] = "timed",
                             ["text_text_format_t_time_mod_rate"] = true,
                             ["text_anchorPoint"] = "RIGHT",
-                            ["text_text_format_t_time_legacy_floor"] = false,
                             ["text_text_format_p_time_precision"] = 1,
-                            ["text_text_format_p_format"] = "timed",
-                            ["text_text_format_p_time_dynamic_threshold"] = 5,
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_t_time_legacy_floor"] = false,
+                            ["text_shadowXOffset"] = 0,
+                            ["text_text_format_p_time_format"] = 0,
+                            ["anchorXOffset"] = 0,
                         },
                         [5] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -8120,12 +8120,12 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                         [6] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "icon",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -8134,7 +8134,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 40,
@@ -8142,59 +8142,59 @@ wa.data = {
                     ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["AMOriginalUUID"] = "77jQUOAIPsr",
                     ["source"] = "import",
-                    ["preferToUpdate"] = false,
-                    ["width"] = 270,
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
+                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                        ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["anchorFrameParent"] = false,
+                    ["preferToUpdate"] = false,
                     ["icon"] = true,
-                    ["icon_side"] = "LEFT",
-                    ["cooldown"] = true,
+                    ["zoom"] = 0.3,
                     ["config"] = {
                     },
-                    ["sparkHeight"] = 30,
-                    ["limitWeakAuras"] = {
-                        ["hash"] = "0bf6b48a855637aa0397388ef4dc9437a29c8f0a32e93b3c6e050d64da07f02c",
+                    ["icon_side"] = "LEFT",
+                    ["uid"] = "AM-77jQUOAIPsr",
+                    ["authorOptions"] = {
                     },
+                    ["sparkHeight"] = 30,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["frameStrata"] = 1,
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["id"] = "Shadowgate",
                     ["semver"] = "1.0.12",
+                    ["sparkHidden"] = "NEVER",
+                    ["id"] = "Shadowgate",
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
                         },
+                        ["init"] = {
+                        },
                     },
-                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["authorOptions"] = {
+                    ["width"] = 270,
+                    ["anchorFrameParent"] = false,
+                    ["limitWeakAuras"] = {
+                        ["hash"] = "0bf6b48a855637aa0397388ef4dc9437a29c8f0a32e93b3c6e050d64da07f02c",
                     },
-                    ["uid"] = "AM-77jQUOAIPsr",
                     ["inverse"] = false,
-                    ["zoom"] = 0.3,
+                    ["cooldown"] = true,
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                        ["ignoreOptionsEventErrors"] = false,
+                    ["barColor2"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 0,
+                        [4] = 1,
                     },
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                    ["AMOriginalUUID"] = "77jQUOAIPsr",
                 },
                 [42] = {
                     ["controlledChildren"] = {
@@ -8217,15 +8217,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -8233,8 +8234,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -8246,7 +8246,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -8258,7 +8258,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -8275,48 +8275,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Special Bars",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Ansurek [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "KMXhN3BYR34",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Queen Ansurek - Special Bars",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-KMXhN3BYR34",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Queen Ansurek - Special Bars",
+                    ["uid"] = "AM-KMXhN3BYR34",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "KMXhN3BYR34",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Ansurek [NHF]",
                 },
                 [43] = {
                     ["controlledChildren"] = {
@@ -8340,15 +8340,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -8356,8 +8357,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -8369,7 +8369,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -8381,7 +8381,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -8398,48 +8398,48 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Raid Bar Special Anchor",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Queen Ansurek - Special Bars",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "W12VBrU(ry8",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Predation shield/Wrest",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-W12VBrU(ry8",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Predation shield/Wrest",
+                    ["uid"] = "AM-W12VBrU(ry8",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "W12VBrU(ry8",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Queen Ansurek - Special Bars",
                 },
                 [44] = {
                     ["sparkWidth"] = 10,
@@ -8474,14 +8474,17 @@ wa.data = {
                     ["sparkOffsetY"] = 0,
                     ["gradientOrientation"] = "HORIZONTAL",
                     ["load"] = {
-                        ["zoneIds"] = "",
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["use_encounterid"] = true,
+                        ["encounterid"] = "2922",
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["single"] = "MONK",
+                            ["multi"] = {
+                                ["MONK"] = true,
                             },
                         },
                         ["spec"] = {
@@ -8490,14 +8493,11 @@ wa.data = {
                                 [1] = true,
                             },
                         },
-                        ["encounterid"] = "2922",
-                        ["class"] = {
-                            ["single"] = "MONK",
+                        ["size"] = {
                             ["multi"] = {
-                                ["MONK"] = true,
                             },
                         },
-                        ["use_encounterid"] = true,
+                        ["zoneIds"] = "",
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
@@ -8533,10 +8533,10 @@ wa.data = {
                                 ["spellIds"] = {
                                 },
                                 ["specificUnit"] = "boss1",
-                                ["subeventPrefix"] = "SPELL",
+                                ["useExactSpellId"] = true,
                                 ["names"] = {
                                 },
-                                ["useExactSpellId"] = true,
+                                ["subeventPrefix"] = "SPELL",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -8547,19 +8547,19 @@ wa.data = {
                                 ["type"] = "unit",
                                 ["use_alwaystrue"] = true,
                                 ["subeventSuffix"] = "_CAST_START",
-                                ["use_unit"] = true,
+                                ["unit"] = "player",
                                 ["use_absorbMode"] = true,
                                 ["event"] = "Conditions",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["events"] = "CLEU:SPELL_AURA_APPLIED",
+                                ["use_unit"] = true,
+                                ["use_absorbHealMode"] = true,
+                                ["custom_type"] = "status",
                                 ["spellIds"] = {
                                 },
                                 ["subeventPrefix"] = "SPELL",
                                 ["check"] = "event",
-                                ["custom_type"] = "status",
-                                ["use_absorbHealMode"] = true,
+                                ["events"] = "CLEU:SPELL_AURA_APPLIED",
+                                ["names"] = {
+                                },
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -8578,20 +8578,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -8641,19 +8641,19 @@ wa.data = {
                             ["text_font"] = "PT Sans Narrow",
                             ["text_text_format_tooltip1_decimal_precision"] = 1,
                             ["text_anchorYOffset"] = -1,
-                            ["text_text_format_c2_format"] = "none",
-                            ["text_text_format_c1_format"] = "BigNumber",
-                            ["text_text_format_tooltip1_big_number_format"] = "AbbreviateNumbers",
-                            ["text_text_format_2.tooltip1_big_number_format"] = "AbbreviateNumbers",
-                            ["text_text_format_1.tooltip1_big_number_format"] = "AbbreviateNumbers",
-                            ["text_anchorPoint"] = "INNER_RIGHT",
-                            ["text_text_format_1.tooltip1_format"] = "none",
                             ["text_visible"] = true,
+                            ["text_text_format_1.tooltip1_format"] = "none",
+                            ["text_text_format_tooltip1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_anchorPoint"] = "INNER_RIGHT",
+                            ["text_text_format_1.tooltip1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_text_format_2.tooltip1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_text_format_c1_format"] = "BigNumber",
+                            ["text_text_format_c2_format"] = "none",
                         },
                         [4] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -8662,7 +8662,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 24,
@@ -8671,12 +8671,14 @@ wa.data = {
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
                     ["source"] = "import",
-                    ["authorOptions"] = {
+                    ["config"] = {
                     },
                     ["icon_side"] = "RIGHT",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                        ["ignoreOptionsEventErrors"] = false,
+                    ["barColor2"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 0,
+                        [4] = 1,
                     },
                     ["customText"] = "function()\
            if WeakAuras.IsOptionsOpen() then\
@@ -8701,35 +8703,33 @@ wa.data = {
        end",
                     ["sparkHeight"] = 20,
                     ["icon"] = false,
-                    ["uid"] = "AM-oLrdJ0BXuHX",
+                    ["spark"] = false,
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["semver"] = "1.0.12",
-                    ["adjustedMax"] = "",
+                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["sparkHidden"] = "NEVER",
-                    ["width"] = 600,
+                    ["id"] = "Predation (shield)",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["id"] = "Predation (shield)",
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["width"] = 600,
+                    ["adjustedMax"] = "",
                     ["inverse"] = false,
-                    ["spark"] = false,
+                    ["uid"] = "AM-oLrdJ0BXuHX",
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                        ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["config"] = {
+                    ["authorOptions"] = {
                     },
                 },
                 [45] = {
@@ -8775,24 +8775,24 @@ wa.data = {
                         ["difficulty"] = {
                             ["single"] = "mythic",
                         },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["single"] = 1,
-                            ["multi"] = {
-                                [1] = true,
-                            },
-                        },
-                        ["use_difficulty"] = true,
+                        ["zoneIds"] = "",
                         ["class"] = {
                             ["single"] = "MONK",
                             ["multi"] = {
                                 ["MONK"] = true,
                             },
                         },
-                        ["zoneIds"] = "",
+                        ["use_difficulty"] = true,
+                        ["spec"] = {
+                            ["single"] = 1,
+                            ["multi"] = {
+                                [1] = true,
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
@@ -8848,9 +8848,9 @@ wa.data = {
                                 ["spellIds"] = {
                                 },
                                 ["specificUnit"] = "boss1",
-                                ["useExactSpellId"] = true,
-                                ["unit"] = "member",
                                 ["subeventPrefix"] = "SPELL",
+                                ["unit"] = "member",
+                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -8865,20 +8865,20 @@ wa.data = {
                     },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -8894,7 +8894,7 @@ wa.data = {
                         [3] = {
                             ["border_size"] = 1,
                             ["border_anchor"] = "bar",
-                            ["border_offset"] = 1,
+                            ["type"] = "subborder",
                             ["border_color"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -8903,7 +8903,7 @@ wa.data = {
                             },
                             ["border_visible"] = true,
                             ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
+                            ["border_offset"] = 1,
                         },
                     },
                     ["height"] = 24,
@@ -8912,37 +8912,39 @@ wa.data = {
                     ["sparkBlendMode"] = "BLEND",
                     ["useAdjustededMax"] = true,
                     ["source"] = "import",
-                    ["authorOptions"] = {
+                    ["config"] = {
                     },
                     ["icon_side"] = "RIGHT",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                        ["ignoreOptionsEventErrors"] = false,
+                    ["barColor2"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 0,
+                        [4] = 1,
                     },
                     ["customText"] = "\
        \
        ",
                     ["sparkHeight"] = 24,
                     ["icon"] = false,
-                    ["uid"] = "AM-QJaYkBbsIZS",
+                    ["spark"] = true,
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["semver"] = "1.0.12",
-                    ["adjustedMax"] = "46",
+                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["sparkHidden"] = "NEVER",
-                    ["width"] = 600,
+                    ["id"] = "Wrest timers",
                     ["frameStrata"] = 5,
                     ["anchorFrameType"] = "SCREEN",
-                    ["id"] = "Wrest timers",
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["width"] = 600,
+                    ["adjustedMax"] = "46",
                     ["inverse"] = false,
-                    ["spark"] = true,
+                    ["uid"] = "AM-QJaYkBbsIZS",
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                         [1] = {
@@ -8959,13 +8961,11 @@ wa.data = {
                             },
                         },
                     },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
+                    ["information"] = {
+                        ["forceEvents"] = false,
+                        ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["config"] = {
+                    ["authorOptions"] = {
                     },
                 },
                 [46] = {
@@ -8993,15 +8993,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -9009,8 +9010,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -9022,7 +9022,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -9034,7 +9034,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -9051,52 +9051,51 @@ wa.data = {
                     ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Assignments",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["yOffset"] = 0,
-                    ["parent"] = "Ansurek [NHF]",
-                    ["anchorFrameParent"] = false,
-                    ["AMOriginalUUID"] = "wRWAcMo2U4o",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Queen Ansurek - Assignments",
-                    ["borderEdge"] = "Square Full White",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-wRWAcMo2U4o",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                     },
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorFrameParent"] = false,
+                    ["conditions"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["borderOffset"] = 4,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Queen Ansurek - Assignments",
+                    ["uid"] = "AM-wRWAcMo2U4o",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["config"] = {
+                    },
+                    ["borderInset"] = 1,
+                    ["borderEdge"] = "Square Full White",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "wRWAcMo2U4o",
+                    ["information"] = {
+                    },
+                    ["parent"] = "Ansurek [NHF]",
                 },
                 [47] = {
                     ["outline"] = "OUTLINE",
-                    ["wagoID"] = "-NO8XaQxq",
                     ["authorOptions"] = {
                     },
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -9207,7 +9206,7 @@ wa.data = {
                         [2] = {
                             ["trigger"] = {
                                 ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["customVariables"] = "{\
            assignment = {\
                display = \"Assignment\",\
@@ -9216,7 +9215,6 @@ wa.data = {
        }",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
                                 ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
@@ -9421,12 +9419,13 @@ wa.data = {
                end\
            end\
        end",
+                                ["spellIds"] = {
+                                },
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
                                 ["events"] = "ENCOUNTER_START, UNIT_SPELLCAST_START:boss, LIQUID_ASSIGNMENT_EVENT",
-                                ["spellIds"] = {
-                                },
+                                ["custom_type"] = "stateupdate",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -9437,20 +9436,13 @@ wa.data = {
                     },
                     ["displayText_format_p_time_mod_rate"] = true,
                     ["displayText_format_p_time_legacy_floor"] = false,
-                    ["wordWrap"] = "WordWrap",
-                    ["font"] = "PT Sans Narrow",
-                    ["version"] = 13,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["displayText_format_assignment_format"] = "none",
                     ["AMModified"] = true,
-                    ["selfPoint"] = "BOTTOM",
-                    ["displayText_format_assignmenT_format"] = "none",
-                    ["fontSize"] = 60,
-                    ["source"] = "import",
+                    ["wordWrap"] = "WordWrap",
+                    ["AMOriginalUUID"] = "6oWYO)KJ0h5",
+                    ["font"] = "PT Sans Narrow",
+                    ["version"] = 3,
+                    ["displayText_format_c_format"] = "none",
+                    ["parent"] = "Queen Ansurek - Assignments",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -9476,8 +9468,37 @@ wa.data = {
                             },
                         },
                     },
+                    ["displayText_format_assignmenT_format"] = "none",
+                    ["fontSize"] = 60,
+                    ["source"] = "import",
                     ["shadowXOffset"] = 1,
-                    ["AMOriginalUUID"] = "6oWYO)KJ0h5",
+                    ["preferToUpdate"] = false,
+                    ["subRegions"] = {
+                        [1] = {
+                            ["type"] = "subbackground",
+                        },
+                    },
+                    ["regionType"] = "text",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["conditions"] = {
                         [1] = {
                             ["check"] = {
@@ -9504,51 +9525,28 @@ wa.data = {
                             },
                         },
                     },
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
-                    ["regionType"] = "text",
-                    ["displayText_format_c_format"] = "none",
+                    ["selfPoint"] = "BOTTOM",
+                    ["displayText"] = "%assignment (%p)%c",
+                    ["displayText_format_p_time_precision"] = 1,
                     ["config"] = {
                     },
-                    ["displayText"] = "%assignment (%p)%c",
-                    ["internalVersion"] = 79,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["xOffset"] = 0,
-                    ["yOffset"] = 0,
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Reactive Froth assignments",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["displayText_format_p_format"] = "timed",
-                    ["uid"] = "AM-6oWYO)KJ0h5",
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["preferToUpdate"] = false,
+                    ["yOffset"] = 0,
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Reactive Froth assignments",
+                    ["semver"] = "1.0.2",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["xOffset"] = 0,
+                    ["uid"] = "AM-6oWYO)KJ0h5",
+                    ["displayText_format_p_format"] = "timed",
+                    ["internalVersion"] = 79,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -9558,12 +9556,16 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["parent"] = "Queen Ansurek - Assignments",
+                    ["displayText_format_assignment_format"] = "none",
                 },
                 [48] = {
                     ["outline"] = "OUTLINE",
-                    ["wagoID"] = "-NO8XaQxq",
-                    ["parent"] = "Queen Ansurek - Assignments",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
@@ -9884,17 +9886,18 @@ wa.data = {
                         },
                         ["activeTriggerMode"] = -10,
                     },
-                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["displayText_format_p_format"] = "timed",
                     ["displayText_format_p_time_legacy_floor"] = false,
-                    ["wordWrap"] = "WordWrap",
+                    ["selfPoint"] = "BOTTOM",
+                    ["AMModified"] = true,
+                    ["AMOriginalUUID"] = "n7bC8dAK0FD",
                     ["font"] = "PT Sans Narrow",
-                    ["version"] = 13,
+                    ["version"] = 3,
                     ["subRegions"] = {
                         [1] = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["AMModified"] = true,
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -9922,15 +9925,40 @@ wa.data = {
                     },
                     ["fontSize"] = 60,
                     ["source"] = "import",
-                    ["preferToUpdate"] = false,
+                    ["displayText_format_p_time_mod_rate"] = true,
                     ["shadowXOffset"] = 1,
-                    ["displayText_format_p_format"] = "timed",
-                    ["conditions"] = {
-                    },
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["preferToUpdate"] = false,
                     ["regionType"] = "text",
                     ["displayText_format_message_format"] = "none",
+                    ["wordWrap"] = "WordWrap",
                     ["internalVersion"] = 79,
+                    ["conditions"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "%message (%p)",
+                    ["authorOptions"] = {
+                    },
+                    ["uid"] = "AM-n7bC8dAK0FD",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Shadowgate assignments",
+                    ["shadowYOffset"] = -1,
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["xOffset"] = 0,
+                    ["config"] = {
+                    },
+                    ["parent"] = "Queen Ansurek - Assignments",
+                    ["semver"] = "1.0.2",
+                    ["shadowColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 1,
+                    },
+                    ["fixedWidth"] = 200,
+                    ["information"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -9951,58 +9979,29 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["uid"] = "AM-n7bC8dAK0FD",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "%message (%p)",
+                },
+                [49] = {
+                    ["outline"] = "OUTLINE",
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Shadowgate assignments",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["xOffset"] = 0,
-                    ["config"] = {
-                    },
-                    ["AMOriginalUUID"] = "n7bC8dAK0FD",
-                    ["selfPoint"] = "BOTTOM",
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["fixedWidth"] = 200,
-                    ["information"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                },
-                [49] = {
-                    ["outline"] = "OUTLINE",
-                    ["wagoID"] = "-NO8XaQxq",
-                    ["authorOptions"] = {
-                    },
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
                     ["displayText_format_p_time_format"] = 0,
                     ["customTextUpdate"] = "event",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["automaticWidth"] = "Auto",
                     ["actions"] = {
                         ["start"] = {
                             ["custom"] = "LiquidWeakAuras:PlaySound(\"pick up essence\")",
                             ["do_custom"] = true,
                         },
                         ["init"] = {
-                            ["custom"] = "aura_env.alwaysTanks = false",
-                            ["do_custom"] = true,
+                            ["custom"] = "",
+                            ["do_custom"] = false,
                         },
                         ["finish"] = {
                         },
@@ -10018,17 +10017,17 @@ wa.data = {
                                 ["use_absorbMode"] = true,
                                 ["duration"] = "1",
                                 ["event"] = "Combat Log",
-                                ["names"] = {
-                                },
-                                ["use_unit"] = true,
+                                ["unit"] = "boss",
+                                ["use_spellIds"] = true,
                                 ["use_spellId"] = true,
                                 ["spellIds"] = {
                                     [1] = 445422,
                                 },
-                                ["unit"] = "boss",
-                                ["subeventPrefix"] = "SPELL",
                                 ["use_absorbHealMode"] = true,
-                                ["use_spellIds"] = true,
+                                ["subeventPrefix"] = "SPELL",
+                                ["names"] = {
+                                },
+                                ["use_unit"] = true,
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -10047,10 +10046,10 @@ wa.data = {
                                 ["remaining"] = "10",
                                 ["spellIds"] = {
                                 },
-                                ["use_spellId"] = true,
-                                ["extend"] = "1",
                                 ["names"] = {
                                 },
+                                ["extend"] = "1",
+                                ["use_spellId"] = true,
                                 ["use_extend"] = true,
                                 ["debuffType"] = "HELPFUL",
                             },
@@ -10060,11 +10059,10 @@ wa.data = {
                         [3] = {
                             ["trigger"] = {
                                 ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["custom_hide"] = "timed",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
                                 ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"LIQUID_ASSIGNMENT_EVENT\" then\
@@ -10200,6 +10198,7 @@ wa.data = {
                aura_env.soakOrder = {}\
                aura_env.backupOrder = {}\
                aura_env.GUIDToUnit = {}\
+               aura_env.alwaysTanks = true\
                \
                for unit in WA_IterateGroupMembers() do\
                    aura_env.GUIDToUnit[UnitGUID(unit)] = unit\
@@ -10238,7 +10237,11 @@ wa.data = {
                            end\
                        end\
                        \
-                       if strtrim(line):lower() == \"liquidstart4\" then\
+                       if strtrim(line):lower():match(\"^liquidstart4\") then\
+                           if line:match(\"notanks\") then\
+                               aura_env.alwaysTanks = false\
+                           end\
+                           \
                            betweenLine = true\
                        end\
                    end\
@@ -10291,13 +10294,14 @@ wa.data = {
                tAppendAll(aura_env.soakOrder, unassignedGUIDs)\
            end\
        end",
+                                ["spellIds"] = {
+                                },
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
                                 ["events"] =
                                 "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED:UNIT_DIED, LIQUID_ASSIGNMENT_EVENT, ENCOUNTER_START, INSTANCE_ENCOUNTER_ENGAGE_UNIT",
-                                ["spellIds"] = {
-                                },
+                                ["custom_type"] = "stateupdate",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -10310,16 +10314,36 @@ wa.data = {
                         ["activeTriggerMode"] = -10,
                     },
                     ["displayText_format_p_time_mod_rate"] = true,
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["selfPoint"] = "BOTTOM",
+                    ["internalVersion"] = 79,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["AMModified"] = true,
+                    ["AMOriginalUUID"] = "jO4SE15bb4A",
                     ["font"] = "PT Sans Narrow",
-                    ["version"] = 13,
+                    ["version"] = 3,
                     ["subRegions"] = {
                         [1] = {
                             ["type"] = "subbackground",
                         },
                     },
-                    ["AMModified"] = true,
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -10348,54 +10372,29 @@ wa.data = {
                     ["fontSize"] = 60,
                     ["source"] = "import",
                     ["shadowXOffset"] = 1,
+                    ["displayText_format_p_format"] = "timed",
                     ["preferToUpdate"] = false,
-                    ["parent"] = "Queen Ansurek - Assignments",
+                    ["regionType"] = "text",
+                    ["wordWrap"] = "WordWrap",
+                    ["displayText_format_p_time_legacy_floor"] = false,
                     ["conditions"] = {
                     },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["xOffset"] = 0,
-                    ["uid"] = "AM-jO4SE15bb4A",
                     ["displayText_format_p_time_precision"] = 1,
+                    ["semver"] = "1.0.2",
                     ["displayText"] = "Pick up Essence (%p)",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["uid"] = "AM-jO4SE15bb4A",
                     ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
+                    ["tocversion"] = 110007,
                     ["id"] = "Acolyte's Essence assignments",
-                    ["shadowYOffset"] = -1,
+                    ["xOffset"] = 0,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "jO4SE15bb4A",
+                    ["parent"] = "Queen Ansurek - Assignments",
                     ["config"] = {
                     },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
+                    ["authorOptions"] = {
+                    },
+                    ["shadowYOffset"] = -1,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -10405,17 +10404,11 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["selfPoint"] = "BOTTOM",
                 },
                 [50] = {
                     ["outline"] = "OUTLINE",
-                    ["wagoID"] = "-NO8XaQxq",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
+                    ["parent"] = "Queen Ansurek - Assignments",
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["customText"] = "function()\
            if WeakAuras.IsOptionsOpen() then return end\
@@ -10432,7 +10425,7 @@ wa.data = {
                     ["anchorPoint"] = "CENTER",
                     ["displayText_format_p_time_format"] = 0,
                     ["customTextUpdate"] = "update",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["automaticWidth"] = "Auto",
                     ["actions"] = {
                         ["start"] = {
                             ["custom"] = "",
@@ -10491,11 +10484,10 @@ wa.data = {
                         [1] = {
                             ["trigger"] = {
                                 ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["custom_hide"] = "timed",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
                                 ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
@@ -10570,12 +10562,13 @@ wa.data = {
        \
        \
        ",
+                                ["spellIds"] = {
+                                },
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
                                 ["events"] = "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED, LIQUID_ASSIGNMENT_EVENT",
-                                ["spellIds"] = {
-                                },
+                                ["custom_type"] = "stateupdate",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -10600,59 +10593,12 @@ wa.data = {
                     },
                     ["displayText_format_p_time_mod_rate"] = true,
                     ["displayText_format_p_time_legacy_floor"] = false,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["font"] = "PT Sans Narrow",
-                    ["version"] = 13,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
                     ["wordWrap"] = "WordWrap",
                     ["AMModified"] = true,
-                    ["displayText_format_assignment_format"] = "none",
-                    ["fontSize"] = 60,
-                    ["source"] = "import",
-                    ["displayText_format_p_format"] = "timed",
-                    ["shadowXOffset"] = 1,
-                    ["automaticWidth"] = "Auto",
                     ["AMOriginalUUID"] = "DqxnaN0WKae",
-                    ["selfPoint"] = "BOTTOM",
-                    ["regionType"] = "text",
-                    ["parent"] = "Queen Ansurek - Assignments",
+                    ["font"] = "PT Sans Narrow",
+                    ["version"] = 3,
                     ["displayText_format_c_format"] = "none",
-                    ["uid"] = "AM-DqxnaN0WKae",
-                    ["fixedWidth"] = 200,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "%assignment (%p)%c",
-                    ["authorOptions"] = {
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Royal Condemnation assignments",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -10678,9 +10624,56 @@ wa.data = {
                             },
                         },
                     },
+                    ["displayText_format_p_format"] = "timed",
+                    ["displayText_format_assignment_format"] = "none",
+                    ["fontSize"] = 60,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["preferToUpdate"] = false,
+                    ["regionType"] = "text",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["selfPoint"] = "BOTTOM",
+                    ["fixedWidth"] = 200,
+                    ["internalVersion"] = 79,
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "%assignment (%p)%c",
+                    ["uid"] = "AM-DqxnaN0WKae",
+                    ["xOffset"] = 0,
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Royal Condemnation assignments",
+                    ["semver"] = "1.0.2",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
                     ["config"] = {
                     },
-                    ["preferToUpdate"] = false,
+                    ["authorOptions"] = {
+                    },
                     ["yOffset"] = -70,
                     ["shadowColor"] = {
                         [1] = 0,
@@ -10692,17 +10685,15 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["subRegions"] = {
+                        [1] = {
+                            ["type"] = "subbackground",
+                        },
+                    },
                 },
                 [51] = {
                     ["outline"] = "OUTLINE",
-                    ["wagoID"] = "-NO8XaQxq",
-                    ["color"] = {
-                        [1] = 0.28235295414925,
-                        [2] = 0.90980398654938,
-                        [3] = 1,
-                        [4] = 1,
-                    },
+                    ["parent"] = "Queen Ansurek - Assignments",
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["customText"] = "function()\
            if WeakAuras.IsOptionsOpen() then return end\
@@ -10719,7 +10710,7 @@ wa.data = {
                     ["anchorPoint"] = "CENTER",
                     ["displayText_format_p_time_format"] = 0,
                     ["customTextUpdate"] = "update",
-                    ["url"] = "https://wago.io/LiquidNerubarPalace/13",
+                    ["automaticWidth"] = "Auto",
                     ["actions"] = {
                         ["start"] = {
                             ["custom"] = "",
@@ -10734,11 +10725,10 @@ wa.data = {
                         [1] = {
                             ["trigger"] = {
                                 ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["custom_hide"] = "timed",
                                 ["event"] = "Health",
                                 ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
                                 ["subeventPrefix"] = "SPELL",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
@@ -10817,12 +10807,13 @@ wa.data = {
                end\
            end\
        end",
+                                ["spellIds"] = {
+                                },
                                 ["names"] = {
                                 },
                                 ["check"] = "event",
                                 ["events"] = "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED, LIQUID_ASSIGNMENT_EVENT",
-                                ["spellIds"] = {
-                                },
+                                ["custom_type"] = "stateupdate",
                                 ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
@@ -10847,59 +10838,12 @@ wa.data = {
                     },
                     ["displayText_format_p_time_mod_rate"] = true,
                     ["displayText_format_p_time_legacy_floor"] = false,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["font"] = "PT Sans Narrow",
-                    ["version"] = 13,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
                     ["wordWrap"] = "WordWrap",
                     ["AMModified"] = true,
-                    ["displayText_format_assignment_format"] = "none",
-                    ["fontSize"] = 60,
-                    ["source"] = "import",
-                    ["displayText_format_p_format"] = "timed",
-                    ["shadowXOffset"] = 1,
-                    ["automaticWidth"] = "Auto",
                     ["AMOriginalUUID"] = "aSW81wm4gNq",
-                    ["selfPoint"] = "BOTTOM",
-                    ["regionType"] = "text",
-                    ["parent"] = "Queen Ansurek - Assignments",
+                    ["font"] = "PT Sans Narrow",
+                    ["version"] = 3,
                     ["displayText_format_c_format"] = "none",
-                    ["uid"] = "AM-aSW81wm4gNq",
-                    ["fixedWidth"] = 200,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "%assignment (%p)%c",
-                    ["authorOptions"] = {
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Abyssal Infusion assignments",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -10925,9 +10869,56 @@ wa.data = {
                             },
                         },
                     },
+                    ["displayText_format_p_format"] = "timed",
+                    ["displayText_format_assignment_format"] = "none",
+                    ["fontSize"] = 60,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["preferToUpdate"] = false,
+                    ["regionType"] = "text",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeType"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeStrength"] = 3,
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeType"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeStrength"] = 3,
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeType"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeStrength"] = 3,
+                        },
+                    },
+                    ["selfPoint"] = "BOTTOM",
+                    ["fixedWidth"] = 200,
+                    ["internalVersion"] = 79,
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "%assignment (%p)%c",
+                    ["uid"] = "AM-aSW81wm4gNq",
+                    ["xOffset"] = 0,
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Abyssal Infusion assignments",
+                    ["semver"] = "1.0.2",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["color"] = {
+                        [1] = 0.28235295414925,
+                        [2] = 0.90980398654938,
+                        [3] = 1,
+                        [4] = 1,
+                    },
                     ["config"] = {
                     },
-                    ["preferToUpdate"] = false,
+                    ["authorOptions"] = {
+                    },
                     ["yOffset"] = -70,
                     ["shadowColor"] = {
                         [1] = 0,
@@ -10939,7 +10930,11 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["subRegions"] = {
+                        [1] = {
+                            ["type"] = "subbackground",
+                        },
+                    },
                 },
                 [52] = {
                     ["arcLength"] = 360,
@@ -10961,15 +10956,15 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["selfPoint"] = "CENTER",
                     ["stagger"] = 0,
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -10981,7 +10976,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -11039,7 +11034,8 @@ wa.data = {
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -11047,8 +11043,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -11058,20 +11053,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -11094,29 +11089,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["borderSize"] = 1,
                     ["sort"] = "none",
+                    ["borderInset"] = 1,
                     ["space"] = 2,
+                    ["radius"] = 200,
+                    ["anchorFrameParent"] = false,
                     ["authorOptions"] = {
                     },
-                    ["borderInset"] = 1,
-                    ["anchorFrameParent"] = false,
-                    ["groupIcon"] = "Interface\\CovenantRenown\\CovenantRenownHexagonMask",
-                    ["useLimit"] = false,
-                    ["gridType"] = "RD",
-                    ["semver"] = "1.0.12",
-                    ["rotation"] = 0,
-                    ["id"] = "Queen Ansurek - Position Assignments",
-                    ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Position Assignments",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["frameStrata"] = 1,
-                    ["regionType"] = "dynamicgroup",
-                    ["limit"] = 5,
                     ["uid"] = "AM-KNFmZs8DisN",
+                    ["limit"] = 5,
+                    ["semver"] = "1.0.12",
+                    ["regionType"] = "dynamicgroup",
+                    ["id"] = "Queen Ansurek - Position Assignments",
+                    ["gridWidth"] = 5,
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["anchorFrameFrame"] = "WeakAuras:Liquid Anchor - Position Assignments",
+                    ["rotation"] = 0,
+                    ["gridType"] = "RD",
+                    ["useLimit"] = false,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["radius"] = 200,
+                    ["groupIcon"] = "Interface\\CovenantRenown\\CovenantRenownHexagonMask",
                 },
                 [53] = {
                     ["wagoID"] = "-NO8XaQxq",
@@ -11133,6 +11128,8 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
+                        ["finish"] = {
+                        },
                         ["init"] = {
                             ["custom"] = "aura_env.marks = {\
            [1] = {\"{rt2}\", \"\", \"\"},\
@@ -11140,32 +11137,20 @@ wa.data = {
        }",
                             ["do_custom"] = true,
                         },
-                        ["finish"] = {
-                        },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
                                 ["type"] = "custom",
                                 ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
-                                ["customVariables"] = "{\
-           assigned = {\
-               type = \"bool\",\
-               display = \"Assigned\"\
-           },\
-           set = {\
-               display = \"Set\",\
-               type = \"number\"\
-           },\
-           position = {\
-               display = \"Position\",\
-               type = \"number\"\
-           }\
-       }",
+                                ["debuffType"] = "HELPFUL",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["event"] = "Health",
                                 ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
+                                ["names"] = {
+                                },
+                                ["spellIds"] = {
+                                },
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"OPTIONS\" then\
                local set = math.random(2) == 1 and 1 or 3\
@@ -11251,14 +11236,24 @@ wa.data = {
        \
        \
        ",
-                                ["spellIds"] = {
-                                },
                                 ["events"] = "ENCOUNTER_START, CLEU:SPELL_AURA_APPLIED, LIQUID_ASSIGNMENT_EVENT",
                                 ["check"] = "event",
-                                ["names"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["debuffType"] = "HELPFUL",
+                                ["unit"] = "player",
+                                ["customVariables"] = "{\
+           assigned = {\
+               type = \"bool\",\
+               display = \"Assigned\"\
+           },\
+           set = {\
+               display = \"Set\",\
+               type = \"number\"\
+           },\
+           position = {\
+               display = \"Position\",\
+               type = \"number\"\
+           }\
+       }",
+                                ["custom_hide"] = "timed",
                             },
                             ["untrigger"] = {
                             },
@@ -11269,9 +11264,9 @@ wa.data = {
                                 ["auraspellids"] = {
                                     [1] = "438974",
                                 },
-                                ["unit"] = "player",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
+                                ["useExactSpellId"] = true,
+                                ["unit"] = "player",
                             },
                             ["untrigger"] = {
                             },
@@ -11316,11 +11311,11 @@ wa.data = {
                             ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "None",
                             ["text_anchorPoint"] = "CENTER",
-                            ["text_visible"] = true,
+                            ["text_shadowXOffset"] = 1,
                             ["anchorYOffset"] = 0,
                             ["text_fontSize"] = 32,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowXOffset"] = 1,
+                            ["text_visible"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -11359,47 +11354,16 @@ wa.data = {
                     ["mirror"] = false,
                     ["regionType"] = "texture",
                     ["blendMode"] = "BLEND",
-                    ["AMModified"] = true,
-                    ["xOffset"] = 0,
-                    ["anchorFrameParent"] = false,
-                    ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
+                    ["parent"] = "Queen Ansurek - Position Assignments",
                     ["color"] = {
                         [1] = 0.5137255191803,
                         [2] = 0.5137255191803,
                         [3] = 0.5137255191803,
                         [4] = 1,
                     },
-                    ["AMOriginalUUID"] = "zkS2eP3RwtS",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Royal Condemnation position assignments",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-zkS2eP3RwtS",
-                    ["config"] = {
-                    },
-                    ["frameStrata"] = 1,
-                    ["width"] = 40,
+                    ["anchorFrameParent"] = false,
+                    ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
+                    ["xOffset"] = 0,
                     ["conditions"] = {
                         [1] = {
                             ["check"] = {
@@ -11423,8 +11387,8 @@ wa.data = {
                             ["check"] = {
                                 ["trigger"] = 1,
                                 ["op"] = "==",
-                                ["variable"] = "position",
                                 ["value"] = "1",
+                                ["variable"] = "position",
                             },
                             ["changes"] = {
                                 [1] = {
@@ -11434,11 +11398,42 @@ wa.data = {
                             },
                         },
                     },
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Royal Condemnation position assignments",
+                    ["anchorFrameType"] = "SCREEN",
+                    ["alpha"] = 1,
+                    ["width"] = 40,
+                    ["frameStrata"] = 1,
+                    ["config"] = {
+                    },
+                    ["uid"] = "AM-zkS2eP3RwtS",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["AMOriginalUUID"] = "zkS2eP3RwtS",
                     ["information"] = {
                         ["forceEvents"] = false,
                         ["ignoreOptionsEventErrors"] = false,
                     },
-                    ["parent"] = "Queen Ansurek - Position Assignments",
+                    ["AMModified"] = true,
                 },
                 [54] = {
                     ["controlledChildren"] = {
@@ -11464,15 +11459,16 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
-                                ["debuffType"] = "HELPFUL",
+                                ["names"] = {
+                                },
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
@@ -11480,8 +11476,7 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["unit"] = "player",
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["debuffType"] = "HELPFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -11490,20 +11485,20 @@ wa.data = {
                     ["internalVersion"] = 79,
                     ["animation"] = {
                         ["start"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["main"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
                         ["finish"] = {
-                            ["type"] = "none",
                             ["easeStrength"] = 3,
+                            ["type"] = "none",
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
@@ -11512,7 +11507,7 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["load"] = {
-                        ["talent"] = {
+                        ["size"] = {
                             ["multi"] = {
                             },
                         },
@@ -11524,7 +11519,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["size"] = {
+                        ["talent"] = {
                             ["multi"] = {
                             },
                         },
@@ -11541,27 +11536,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["parent"] = "Ansurek [NHF]",
+                    ["selfPoint"] = "CENTER",
                     ["groupIcon"] = "map-icon-ignored-bluequestion",
-                    ["AMOriginalUUID"] = "3ZUwmjqQIjI",
+                    ["parent"] = "Ansurek [NHF]",
+                    ["conditions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["semver"] = "1.0.12",
                     ["tocversion"] = 110005,
                     ["id"] = "Queen Ansurek - Miscellaneous",
-                    ["xOffset"] = 0,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "AM-3ZUwmjqQIjI",
                     ["config"] = {
                     },
-                    ["frameStrata"] = 1,
-                    ["conditions"] = {
-                    },
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-3ZUwmjqQIjI",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "3ZUwmjqQIjI",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                 },
                 [55] = {
                     ["outline"] = "OUTLINE",
@@ -11598,9 +11593,9 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -11608,21 +11603,21 @@ wa.data = {
                             ["trigger"] = {
                                 ["type"] = "aura2",
                                 ["subeventSuffix"] = "_CAST_START",
-                                ["debuffType"] = "HARMFUL",
+                                ["useRem"] = true,
                                 ["event"] = "Health",
                                 ["names"] = {
                                 },
-                                ["subeventPrefix"] = "SPELL",
-                                ["auraspellids"] = {
-                                    [1] = "445152",
-                                },
+                                ["useExactSpellId"] = true,
+                                ["rem"] = "3",
                                 ["spellIds"] = {
                                 },
                                 ["unit"] = "player",
                                 ["remOperator"] = "<",
-                                ["rem"] = "3",
-                                ["useExactSpellId"] = true,
-                                ["useRem"] = true,
+                                ["auraspellids"] = {
+                                    [1] = "445152",
+                                },
+                                ["subeventPrefix"] = "SPELL",
+                                ["debuffType"] = "HARMFUL",
                             },
                             ["untrigger"] = {
                             },
@@ -11640,57 +11635,16 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["displayText_format_p_format"] = "timed",
                     ["fontSize"] = 12,
                     ["source"] = "import",
-                    ["internalVersion"] = 79,
-                    ["shadowXOffset"] = 1,
-                    ["displayText_format_c_format"] = "none",
-                    ["AMOriginalUUID"] = "tc9T)EAVJe1",
-                    ["displayText_format_p_format"] = "timed",
-                    ["regionType"] = "text",
-                    ["conditions"] = {
-                    },
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["uid"] = "AM-tc9T)EAVJe1",
-                    ["preferToUpdate"] = false,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["parent"] = "Queen Ansurek - Miscellaneous",
-                    ["selfPoint"] = "BOTTOM",
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Dropping Acolyte's Essence countdown",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["config"] = {
-                    },
+                    ["shadowXOffset"] = 1,
                     ["load"] = {
                         ["use_never"] = false,
                         ["talent"] = {
@@ -11716,17 +11670,58 @@ wa.data = {
                             },
                         },
                     },
-                    ["yOffset"] = 0,
+                    ["conditions"] = {
+                    },
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["regionType"] = "text",
+                    ["preferToUpdate"] = false,
+                    ["automaticWidth"] = "Auto",
+                    ["config"] = {
+                    },
+                    ["displayText_format_c_format"] = "none",
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["parent"] = "Queen Ansurek - Miscellaneous",
+                    ["xOffset"] = 0,
+                    ["semver"] = "1.0.12",
+                    ["justify"] = "LEFT",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Dropping Acolyte's Essence countdown",
+                    ["selfPoint"] = "BOTTOM",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["internalVersion"] = 79,
+                    ["uid"] = "AM-tc9T)EAVJe1",
+                    ["displayText_format_p_time_dynamic_threshold"] = 60,
+                    ["fixedWidth"] = 200,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "tc9T)EAVJe1",
                     ["information"] = {
                     },
-                    ["automaticWidth"] = "Auto",
+                    ["yOffset"] = 0,
                 },
                 [56] = {
                     ["outline"] = "OUTLINE",
@@ -11744,9 +11739,9 @@ wa.data = {
                             ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
                             ["do_sound"] = true,
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -11785,16 +11780,63 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
+                    ["parent"] = "Queen Ansurek - Miscellaneous",
+                    ["fontSize"] = 12,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "koR4bFpGQWy",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
                         },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Liquefy puddles rain drop",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-koR4bFpGQWy",
+                    ["load"] = {
+                        ["use_encounterid"] = true,
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "2922",
                         ["spec"] = {
                             ["multi"] = {
                             },
@@ -11803,70 +11845,23 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2922",
-                        ["use_encounterid"] = true,
-                    },
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "Queen Ansurek - Miscellaneous",
-                    ["conditions"] = {
-                    },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["xOffset"] = 0,
-                    ["uid"] = "AM-koR4bFpGQWy",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Liquefy puddles rain drop",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "koR4bFpGQWy",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [57] = {
                     ["outline"] = "OUTLINE",
@@ -11884,11 +11879,11 @@ wa.data = {
                             ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
                             ["do_sound"] = false,
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
                             ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
                             ["do_sound"] = true,
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -11900,17 +11895,26 @@ wa.data = {
                                 },
                                 ["use_absorbMode"] = true,
                                 ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["custom_hide"] = "timed",
-                                ["type"] = "custom",
+                                ["use_unit"] = true,
+                                ["duration"] = "1.5",
+                                ["unit"] = "boss",
                                 ["use_sourceFlags3"] = false,
                                 ["use_cloneId"] = false,
                                 ["debuffType"] = "HELPFUL",
-                                ["custom_type"] = "stateupdate",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["use_spellIds"] = false,
                                 ["use_absorbHealMode"] = true,
-                                ["subeventSuffix"] = "_CAST_START",
+                                ["custom_type"] = "stateupdate",
+                                ["event"] = "Combat Log",
+                                ["spellIds"] = {
+                                },
+                                ["use_spellNames"] = true,
+                                ["spellNames"] = {
+                                    [1] = "447456",
+                                },
+                                ["castType"] = "channel",
+                                ["use_spellId"] = true,
+                                ["events"] = "CLEU:SPELL_CAST_SUCCESS",
                                 ["custom"] = "function(allstates, event, ...)\
            if event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
                local _, subEvent, _, _, _, _, _, _, _, _, _, spellID = ...\
@@ -11933,20 +11937,11 @@ wa.data = {
                end\
            end\
        end",
-                                ["events"] = "CLEU:SPELL_CAST_SUCCESS",
-                                ["event"] = "Combat Log",
-                                ["spellNames"] = {
-                                    [1] = "447456",
-                                },
-                                ["castType"] = "channel",
-                                ["use_spellId"] = true,
-                                ["spellIds"] = {
-                                },
-                                ["use_spellNames"] = true,
                                 ["check"] = "event",
-                                ["unit"] = "boss",
-                                ["duration"] = "1.5",
-                                ["use_unit"] = true,
+                                ["type"] = "custom",
+                                ["custom_hide"] = "timed",
+                                ["names"] = {
+                                },
                             },
                             ["untrigger"] = {
                             },
@@ -11964,16 +11959,63 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
+                    ["parent"] = "Queen Ansurek - Miscellaneous",
+                    ["fontSize"] = 12,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "JiStify4q7V",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
                         },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Web Blades safe to move rain drop",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-JiStify4q7V",
+                    ["load"] = {
+                        ["use_encounterid"] = true,
                         ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "2922",
                         ["spec"] = {
                             ["multi"] = {
                             },
@@ -11982,70 +12024,23 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2922",
-                        ["use_encounterid"] = true,
-                    },
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "Queen Ansurek - Miscellaneous",
-                    ["conditions"] = {
-                    },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["xOffset"] = 0,
-                    ["uid"] = "AM-JiStify4q7V",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Web Blades safe to move rain drop",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "JiStify4q7V",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
                 [58] = {
                     ["outline"] = "OUTLINE",
@@ -12063,11 +12058,11 @@ wa.data = {
                             ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
                             ["do_sound"] = false,
                         },
-                        ["init"] = {
-                        },
                         ["finish"] = {
                             ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
                             ["do_sound"] = false,
+                        },
+                        ["init"] = {
                         },
                     },
                     ["triggers"] = {
@@ -12082,10 +12077,10 @@ wa.data = {
                                 ["spellIds"] = {
                                 },
                                 ["subeventPrefix"] = "SPELL",
+                                ["useExactSpellId"] = true,
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["names"] = {
                                 },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "HARMFUL",
                             },
                             ["untrigger"] = {
@@ -12104,16 +12099,63 @@ wa.data = {
                         },
                     },
                     ["AMModified"] = true,
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
+                    ["parent"] = "Queen Ansurek - Miscellaneous",
+                    ["fontSize"] = 12,
+                    ["source"] = "import",
+                    ["shadowXOffset"] = 1,
+                    ["wordWrap"] = "WordWrap",
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    ["AMOriginalUUID"] = "eYmYh0NRH13",
+                    ["regionType"] = "text",
+                    ["automaticWidth"] = "Auto",
+                    ["internalVersion"] = 79,
+                    ["preferToUpdate"] = false,
+                    ["config"] = {
+                    },
+                    ["displayText_format_p_time_precision"] = 1,
+                    ["displayText"] = "",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
                         },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["shadowYOffset"] = -1,
+                    ["semver"] = "1.0.12",
+                    ["tocversion"] = 110005,
+                    ["id"] = "Frothy Toxin countdown",
+                    ["justify"] = "LEFT",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["fixedWidth"] = 200,
+                    ["uid"] = "AM-eYmYh0NRH13",
+                    ["load"] = {
+                        ["use_encounterid"] = true,
                         ["use_never"] = true,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "2922",
                         ["spec"] = {
                             ["multi"] = {
                             },
@@ -12122,21 +12164,25 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "2922",
-                        ["use_encounterid"] = true,
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 1,
-                    ["preferToUpdate"] = false,
-                    ["parent"] = "Queen Ansurek - Miscellaneous",
+                    ["xOffset"] = 0,
+                    ["shadowColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 1,
+                    },
                     ["conditions"] = {
                         [1] = {
                             ["check"] = {
                                 ["trigger"] = 1,
                                 ["op"] = "<",
-                                ["variable"] = "expirationTime",
                                 ["value"] = "1",
+                                ["variable"] = "expirationTime",
                             },
                             ["changes"] = {
                                 [1] = {
@@ -12151,8 +12197,8 @@ wa.data = {
                             ["check"] = {
                                 ["trigger"] = 1,
                                 ["op"] = "<",
-                                ["variable"] = "expirationTime",
                                 ["value"] = "2",
+                                ["variable"] = "expirationTime",
                             },
                             ["linked"] = true,
                             ["changes"] = {
@@ -12168,8 +12214,8 @@ wa.data = {
                             ["check"] = {
                                 ["trigger"] = 1,
                                 ["op"] = "<",
-                                ["variable"] = "expirationTime",
                                 ["value"] = "3",
+                                ["variable"] = "expirationTime",
                             },
                             ["linked"] = true,
                             ["changes"] = {
@@ -12182,60 +12228,9 @@ wa.data = {
                             },
                         },
                     },
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["xOffset"] = 0,
-                    ["uid"] = "AM-eYmYh0NRH13",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["displayText"] = "",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.12",
-                    ["tocversion"] = 110005,
-                    ["id"] = "Frothy Toxin countdown",
-                    ["shadowYOffset"] = -1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["AMOriginalUUID"] = "eYmYh0NRH13",
-                    ["config"] = {
-                    },
-                    ["automaticWidth"] = "Auto",
-                    ["wordWrap"] = "WordWrap",
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["internalVersion"] = 79,
+                    ["displayText_format_p_format"] = "timed",
                 },
             },
             ["v"] = 2000,
@@ -12243,22 +12238,32 @@ wa.data = {
     },
     -- LiquidWeakauras
     {
-        ["uid"] = "ND0tX3QMwag",
+        ["uid"] = "w1rqJ(8aTNx",
         ["name"] = "LiquidWeakAuras",
-        ["semver"] = "1.0.7",
-        ["version"] = 8,
+        ["semver"] = "1.0.32",
+        ["version"] = 33,
         ["import"] = {
             ["d"] = {
                 ["outline"] = "OUTLINE",
-                ["wagoID"] = "9fSaVflOy",
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
+                ["authorOptions"] = {
+                    [1] = {
+                        ["width"] = 0.6,
+                        ["type"] = "select",
+                        ["values"] = {
+                            [1] = "Davis",
+                            [2] = "Maise",
+                            [3] = "Sara",
+                            [4] = "Stefan",
+                        },
+                        ["name"] = "Text-to-speech voice",
+                        ["useDesc"] = true,
+                        ["key"] = "ttsVoice",
+                        ["default"] = 3,
+                        ["desc"] = "The default voice that should be used for text-to-speech.",
+                    },
                 },
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["yOffset"] = 0,
+                ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "CENTER",
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
@@ -12729,9 +12734,9 @@ wa.data = {
                willPlay = PlaySoundFile(\"Interface\\\\AddOns\\\\Pescorus\\\\Media\\\\TTS\\\\\" .. soundFile, \"Master\")\
            end\
            \
-           -- Try to play a sound from LiquidUpdater\
+           -- Try to play a sound from AuraUpdater\
            if not willPlay then\
-               willPlay = PlaySoundFile(\"Interface\\\\AddOns\\\\LiquidUpdater\\\\Media\\\\TTS\\\\\" .. soundFile, \"Master\")\
+               willPlay = PlaySoundFile(\"Interface\\\\AddOns\\\\AuraUpdater\\\\Media\\\\TTS\\\\\" .. soundFile, \"Master\")\
            end\
            \
            -- Play through in-game TTS\
@@ -12899,13 +12904,13 @@ wa.data = {
                end\
            end\
        end",
-                            ["events"] =
-                            "ENCOUNTER_START, UNIT_SPELLCAST_SUCCEEDED:group, GROUP_ROSTER_UPDATE, LIQUID_WA_SPEC, LIQUID_PRIVATE_AURA_MACRO",
+                            ["spellIds"] = {
+                            },
                             ["custom_type"] = "status",
                             ["check"] = "event",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
+                            ["events"] =
+                            "ENCOUNTER_START, UNIT_SPELLCAST_SUCCEEDED:group, GROUP_ROSTER_UPDATE, LIQUID_WA_SPEC, LIQUID_PRIVATE_AURA_MACRO",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -12918,7 +12923,7 @@ wa.data = {
                 ["wordWrap"] = "WordWrap",
                 ["desc"] = "forceenable",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 8,
+                ["version"] = 33,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
@@ -12945,22 +12950,9 @@ wa.data = {
                 },
                 ["fontSize"] = 6,
                 ["source"] = "import",
+                ["yOffset"] = 0,
                 ["shadowXOffset"] = 1,
-                ["shadowYOffset"] = -1,
-                ["displayText"] = "",
                 ["regionType"] = "text",
-                ["displayText_format_p_time_legacy_floor"] = false,
-                ["conditions"] = {
-                },
-                ["displayText_format_p_format"] = "timed",
-                ["url"] = "https://wago.io/LiquidWeakAuras/8",
-                ["displayText_format_p_time_precision"] = 1,
-                ["uid"] = "ND0tX3QMwag",
-                ["xOffset"] = 0,
-                ["semver"] = "1.0.7",
-                ["justify"] = "LEFT",
-                ["tocversion"] = 110002,
-                ["id"] = "LiquidWeakAuras",
                 ["animation"] = {
                     ["start"] = {
                         ["easeStrength"] = 3,
@@ -12981,13 +12973,30 @@ wa.data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["liquidVersion"] = 5,
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["conditions"] = {
+                },
+                ["displayText_format_p_format"] = "timed",
+                ["liquidVersion"] = 6,
+                ["displayText"] = "",
                 ["config"] = {
                     ["ttsVoice"] = 3,
                 },
-                ["selfPoint"] = "BOTTOM",
+                ["xOffset"] = 0,
+                ["semver"] = "1.0.32",
+                ["tocversion"] = 110005,
+                ["id"] = "LiquidWeakAuras",
+                ["justify"] = "LEFT",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["displayText_format_p_time_precision"] = 1,
+                ["uid"] = "w1rqJ(8aTNx",
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
                 ["preferToUpdate"] = false,
                 ["shadowColor"] = {
                     [1] = 0,
@@ -12997,26 +13006,11 @@ wa.data = {
                 },
                 ["fixedWidth"] = 200,
                 ["information"] = {
+                    ["test"] = "test",
                     ["forceEvents"] = false,
                     ["saved"] = "JrXAQKskoS8Zm5uzhWp",
                 },
-                ["authorOptions"] = {
-                    [1] = {
-                        ["width"] = 0.6,
-                        ["type"] = "select",
-                        ["values"] = {
-                            [1] = "Davis",
-                            [2] = "Maise",
-                            [3] = "Sara",
-                            [4] = "Stefan",
-                        },
-                        ["name"] = "Text-to-speech voice",
-                        ["useDesc"] = true,
-                        ["key"] = "ttsVoice",
-                        ["default"] = 3,
-                        ["desc"] = "The default voice that should be used for text-to-speech.",
-                    },
-                },
+                ["selfPoint"] = "BOTTOM",
             },
             ["v"] = 1421,
         },
