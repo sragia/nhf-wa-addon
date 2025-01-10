@@ -5,6 +5,7 @@ local AM = select(2, ...)
 local data = AM:GetModule('data')
 
 data.data = {
+    showMinimup = true
 }
 
 data.Init = function(self)
@@ -19,4 +20,12 @@ end
 
 data.SetData = function(self, data)
     self.data = data
+end
+
+data.SetDataByKey = function(self, key, data)
+    self.data[key] = data;
+end
+
+data.GetDataByKey = function(self, key)
+    return self.data[key];
 end
