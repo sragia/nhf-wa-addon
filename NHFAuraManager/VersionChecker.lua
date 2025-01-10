@@ -134,14 +134,14 @@ versionChecker.Populate = function(self)
     self.data.characters = {}
 
     for unit in AM.utils.iterateGroupMembers() do
-        local name = UnitName(unit)
+        local name, server = UnitName(unit)
         local _, CLASS = UnitClass(unit)
         local formattedName = string.format('|c%s%s|r', RAID_CLASS_COLORS[CLASS].colorStr, name)
         local d = {
             cols = {},
             colStatuses = {},
             row = nil,
-            name = name,
+            name = server and Ambiguate(name .. '-' .. server, 'short') or name,
             received = false,
             formattedName = formattedName
         }
@@ -201,10 +201,11 @@ end
 versionChecker.HandleVersionCheckResponse = function(self, data, sender)
     if (not self.isChecking) then return end
 
-    local _, char = FindInTableIf(self.data.characters, function(d) return d.name == sender end)
+    local _, char = FindInTableIf(self.data.characters, function(d) return d.name == Ambiguate(sender, 'short') end)
 
     if (not char) then
         print('Response from ', sender, ' could not be parsed')
+        return;
     end
 
     for _, d in ipairs(data) do
