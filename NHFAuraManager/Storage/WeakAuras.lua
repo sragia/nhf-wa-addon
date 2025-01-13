@@ -66,7 +66,7 @@ wa.VersionCheck = function(self, uid, version)
     local storedVersion = tonumber(self:GetStoredVersion(uid))
     version = tonumber(version)
 
-    if (not version) then
+    if (not version or not storedVersion) then
         return 0
     end
 

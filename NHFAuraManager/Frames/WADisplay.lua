@@ -110,7 +110,7 @@ waDisplay.Create = function(self, options)
     local currentData = WeakAuras.GetData(options.name)
 
     f:SetWAName(options.name)
-    if (not currentData or tonumber(currentData.version) < tonumber(options.version)) then
+    if (not currentData or not currentData.version or tonumber(currentData.version) < tonumber(options.version)) then
         f:SetWAState(false)
         f:SetWAVersion(options.semver .. ' (Update)')
     else
