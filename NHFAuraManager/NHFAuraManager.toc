@@ -13,6 +13,9 @@ Core.lua
 Storage/WeakAuras.lua
 Data.lua
 
+# Register media that is used in Weakauras
+Media.lua
+
 Frames/Inputs/EditBox.lua
 Frames/Inputs/Toggle.lua
 Frames/Inputs/Button.lua
