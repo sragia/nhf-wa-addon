@@ -163,7 +163,13 @@ AM.utils = {
                 print('DEBUG no devtool')
                 return
             end
-            DevTool:AddData(data)
+            if (DevTool.AddData) then
+                DevTool:AddData(data)
+            elseif (DevTool_AddData) then
+                DevTool_AddData(data)
+            else
+                print('Devtool Available but no AddData function')
+            end
         end)
     end,
     suggestMatch = function(userInput, source)

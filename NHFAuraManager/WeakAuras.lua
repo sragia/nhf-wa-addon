@@ -85,11 +85,29 @@ WA.TraverseAuras = function(self, waData, returnTable, isNested)
     return returnTable, isNested
 end
 
+WA.ModifyNeverLoad = function(self, data)
+    if (not data.c) then
+        return data
+    end
+    for _, wa in ipairs(data.c) do
+        if (wa.regionType ~= 'group' and wa.regionType ~= 'dynamicgroup') then
+            local currentData = WeakAuras.GetData(wa.id)
+            if (currentData) then
+                if (currentData.load['use_never'] ~= wa.load['use_never']) then
+                    wa.load['use_never'] = currentData.load['use_never']
+                end
+            end
+        end
+    end
+    return data
+end
+
 WA.Import = function(self, data, callback)
     if (not WeakAuras) then
         print('WeakAuras not installed/enabled')
         return
     end
+    data = self:ModifyNeverLoad(data)
     WeakAuras.Import(data, nil, callback)
 end
 
