@@ -21,3 +21,6 @@ LSM:Register("sound", "|cffc334eb10 - NHF|r", [[Interface\Addons\NHFAuraManager\
 LSM:Register("sound", "|cffc334ebToo Close - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\TooClose.mp3]]);
 LSM:Register("sound", "|cffc334ebCharge High - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\ChargeHigh.mp3]]);
 LSM:Register("sound", "|cffc334ebMove Boss - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\MoveBoss.mp3]]);
+LSM:Register("sound", "|cffc334ebBlue - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Blue.mp3]]);
+LSM:Register("sound", "|cffc334ebRed - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Red.mp3]]);
+LSM:Register("sound", "|cffc334ebBait - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Bait.mp3]]);
