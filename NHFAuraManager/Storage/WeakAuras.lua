@@ -12851,7427 +12851,6 @@ wa.data = {
             ["v"] = 2000,
         },
     },
-    -- LiquidWeakauras
-    {
-        ["uid"] = "w1rqJ(8aTNx",
-        ["name"] = "LiquidWeakAuras",
-        ["semver"] = "1.0.32",
-        ["version"] = 33,
-        ["import"] = {
-            ["d"] = {
-                ["outline"] = "OUTLINE",
-                ["authorOptions"] = {
-                    [1] = {
-                        ["width"] = 0.6,
-                        ["type"] = "select",
-                        ["values"] = {
-                            [1] = "Davis",
-                            [2] = "Maise",
-                            [3] = "Sara",
-                            [4] = "Stefan",
-                        },
-                        ["name"] = "Text-to-speech voice",
-                        ["useDesc"] = true,
-                        ["key"] = "ttsVoice",
-                        ["default"] = 3,
-                        ["desc"] = "The default voice that should be used for text-to-speech.",
-                    },
-                },
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["shadowYOffset"] = -1,
-                ["anchorPoint"] = "CENTER",
-                ["displayText_format_p_time_format"] = 0,
-                ["customTextUpdate"] = "event",
-                ["automaticWidth"] = "Auto",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                        ["custom"] = "local aura_env = aura_env\
-       \
-       if not aura_env.saved then aura_env.saved = {} end\
-       \
-       _G[\"LiquidWeakAuras\"] = {}\
-       aura_env.storedUnits = {}\
-       \
-       local ttsVoices = {\
-           [1] = \"Davis\",\
-           [2] = \"Maise\",\
-           [3] = \"Sara\",\
-           [4] = \"Steffan\"\
-       }\
-       \
-       local inspect = LibStub:GetLibrary(\"LibGroupInSpecT-1.1\", true)\
-       local openRaid = LibStub:GetLibrary(\"LibOpenRaid-1.0\", true)\
-       local AceComm = LibStub(\"AceComm-3.0\")\
-       \
-       local markToNumber = {\
-           -- Raid Target Icon (ID)\
-           [\"{rt1}\"] = 1,\
-           [\"{rt2}\"] = 2,\
-           [\"{rt3}\"] = 3,\
-           [\"{rt4}\"] = 4,\
-           [\"{rt5}\"] = 5,\
-           [\"{rt6}\"] = 6,\
-           [\"{rt7}\"] = 7,\
-           [\"{rt8}\"] = 8,\
-           \
-           -- Raid Target Icon (ENG)\
-           [\"{star}\"] = 1,\
-           [\"{circle}\"] = 2,\
-           [\"{diamond}\"] = 3,\
-           [\"{triangle}\"] = 4,\
-           [\"{moon}\"] = 5,\
-           [\"{square}\"] = 6,\
-           [\"{cross}\"] = 7,\
-           [\"{skull}\"] = 8,\
-           \
-           -- Raid Target Icon (DE)\
-           [\"{stern}\"] = 1,\
-           [\"{kreis}\"] = 2,\
-           [\"{diamant}\"] = 3,\
-           [\"{dreieck}\"] = 4,\
-           [\"{mond}\"] = 5,\
-           [\"{quadrat}\"] = 6,\
-           [\"{kreuz}\"] = 7,\
-           [\"{totenschädel}\"] = 8,\
-           \
-           -- Raid Target Icon (FR)\
-           [\"{étoile}\"] = 1,\
-           [\"{cercle}\"] = 2,\
-           [\"{losange}\"] = 3,\
-           [\"{lune}\"] = 5,\
-           [\"{carré}\"] = 6,\
-           [\"{croix}\"] = 7,\
-           [\"{crâne}\"] = 8,\
-           \
-           -- Raid Target Icon (IT)\
-           [\"{stella}\"] = 1,\
-           [\"{cerchio}\"] = 2,\
-           [\"{rombo}\"] = 3,\
-           [\"{triangolo}\"] = 4,\
-           [\"{luna}\"] = 5,\
-           [\"{quadrato}\"] = 6,\
-           [\"{croce}\"] = 7,\
-           [\"{teschio}\"] = 8,\
-           \
-           -- Raid Target Icon (ES)\
-           [\"{estrella}\"] = 1,\
-           [\"{círculo}\"] = 2,\
-           [\"{diamante}\"] = 3,\
-           [\"{triángulo}\"]= 4,\
-           [\"{cuadrado}\"] = 6,\
-           [\"{cruz}\"] = 7,\
-           [\"{calavera}\"] = 8,\
-           \
-           -- Raid Target Icon (RU)\
-           [\"{звезда}\"] = 1,\
-           [\"{круг}\"] = 2,\
-           [\"{ромб}\"] = 3,\
-           [\"{треугольник}\"] = 4,\
-           [\"{полумесяц}\"] = 5,\
-           [\"{квадрат}\"] = 6,\
-           [\"{крест}\"] = 7,\
-           [\"{череп}\"] = 8,\
-           \
-           -- Raid Target Icon (CN)\
-           [\"{星形}\"] = 1,\
-           [\"{圆形}\"] = 2,\
-           [\"{菱形}\"] = 3,\
-           [\"{三角}\"] = 4,\
-           [\"{月亮}\"] = 5,\
-           [\"{方块}\"] = 6,\
-           [\"{十字}\"] = 7,\
-           [\"{骷髅}\"] = 8,\
-           \
-           -- Raid Target Icon (KR)\
-           [\"{별}\"] = 1,\
-           [\"{동그라미}\"] = 2,\
-           [\"{다이아몬드}\"] = 3,\
-           [\"{세모}\"] = 4,\
-           [\"{달}\"] = 5,\
-           [\"{네모}\"] = 6,\
-           [\"{가위표}\"] = 7,\
-           [\"{해골}\"] = 8,\
-       }\
-       \
-       local specToType = {\
-           -- Death Knight\
-           [250] = \"m\", -- Blood\
-           [251] = \"m\", -- Frost\
-           [252] = \"m\", -- Unholy\
-           -- Demon Hunter\
-           [577] = \"m\", -- Havoc\
-           [581] = \"m\", -- Vengeance\
-           -- Druid\
-           [102] = \"r\", -- Balance \
-           [103] = \"m\", -- Feral \
-           [104] = \"m\", -- Guardian \
-           [105] = \"r\", -- Restoration\
-           -- Hunter\
-           [253] = \"r\", -- Beast Mastery\
-           [254] = \"r\", -- Marksmanship\
-           [255] = \"m\", -- Survival\
-           -- Mage\
-           [62] = \"r\", -- Arcane\
-           [63] = \"r\", -- Fire\
-           [64] = \"r\", -- Frost\
-           -- Monk\
-           [268] = \"m\", -- Brewmaster\
-           [270] = \"m\", -- Mistweaver\
-           [269] = \"m\", -- Windwalker\
-           -- Paladin\
-           [65] = \"m\", -- Holy  \
-           [66] = \"m\", -- Protection  \
-           [70] = \"m\", -- Retribution\
-           -- Priest\
-           [256] = \"r\", -- Discipline \
-           [257] = \"r\", -- Holy   \
-           [258] = \"r\", -- Shadow\
-           -- Rogue\
-           [259] = \"m\", -- Assassination  \
-           [260] = \"m\", -- Outlaw  \
-           [261] = \"m\", -- Subtlety\
-           -- Shaman\
-           [262] = \"r\", -- Elemental  \
-           [263] = \"m\", -- Enhancement\
-           [264] = \"r\", -- Restoration\
-           -- Warlock\
-           [265] = \"r\", -- Affliction \
-           [266] = \"r\", -- Demonology  \
-           [267] = \"r\", -- Destruction\
-           -- Warrior\
-           [71] = \"m\", -- Arms  \
-           [72] = \"m\", -- Fury  \
-           [73] = \"m\", -- Protection\
-           -- Evoker\
-           [1467] = \"r\", -- Devastation\
-           [1468] = \"r\", -- Preservation\
-           [1473] = \"r\", -- Augmentation\
-       }\
-       \
-       local classToType = {\
-           WARRIOR = \"m\", -- Warrior\
-           PALADIN = \"m\", -- Paladin\
-           ROGUE = \"m\", -- Rogue\
-           PRIEST = \"r\", -- Priest\
-           DEATHKNIGHT = \"m\", -- Death Knight\
-           MAGE = \"r\", -- Mage\
-           WARLOCK = \"r\", -- Warlock\
-           MONK = \"m\", -- Monk\
-           DEMONHUNTER = \"m\", -- Demon Hunter\
-           EVOKER = \"r\", -- Evoker\
-       }\
-       \
-       local roleClassToSpec = {\
-           DAMAGER = {\
-               PALADIN = 70, -- Retribution\
-               PRIEST = 258, -- Shadow\
-               MONK = 269, -- Windwalker\
-               DEMONHUNTER = 577, -- Havoc\
-           },\
-           HEALER = {\
-               PALADIN = 65, -- Holy\
-               SHAMAN = 264, -- Restoration\
-               MONK = 270, -- Mistweaver\
-               DRUID = 105, -- Restoration\
-               EVOKER = 1468, -- Preservation\
-           },\
-           TANK = {\
-               WARRIOR = 73, -- Protection\
-               PALADIN = 66, -- Protection\
-               DEATHKNIGHT = 250, -- Blood\
-               MONK = 268, -- Brewmaster\
-               DRUID = 104, -- Guardian\
-               DEMONHUNTER = 581, -- Vengeance\
-           },\
-           NONE = {}\
-       }\
-       \
-       aura_env.meleeSpells = {\
-           [186270] = 255, -- Raptor Strike (Survival)\
-           [17364] = 263, -- Stormstrike (Enhancement)\
-           [5217] = 103, -- Tiger's Fury (Feral)\
-       }\
-       \
-       function LiquidWeakAuras:MarkToNumber(mark)\
-           return mark and markToNumber[mark]\
-       end\
-       \
-       -- Returns \"m\" or \"r\"\
-       -- Second return value is the unit's spec ID, but is not guaranteed\
-       function LiquidWeakAuras:Spec(unit)\
-           if unit and UnitExists(unit) then\
-               local GUID = UnitGUID(unit)\
-               \
-               -- If we already requested (or received) information from this unit before, use it\
-               local storedSpec = aura_env.storedUnits[GUID]\
-               \
-               if storedSpec then\
-                   return specToType[storedSpec], storedSpec\
-               end\
-               \
-               -- Use a combination of the unit's role and class to determine spec\
-               local role = UnitGroupRolesAssigned(unit)\
-               local class = UnitClassBase(unit)\
-               \
-               if class then\
-                   local spec = roleClassToSpec[role][class]\
-                   \
-                   if spec then\
-                       aura_env.storedUnits[GUID] = spec\
-                       return specToType[spec], spec\
-                   end\
-               end\
-               \
-               -- WeakAuras built-in spec detection\
-               local waSpec = WeakAuras.SpecForUnit(unit)\
-               \
-               if waSpec then\
-                   aura_env.storedUnits[GUID] = waSpec\
-                   return specToType[waSpec], waSpec\
-               end\
-               \
-               -- Open Raid Library (Details!)\
-               local name, realm = UnitName(unit)\
-               local myRealm = GetNormalizedRealmName()\
-               local fullName = format(\"%s-%s\", name, realm or myRealm)\
-               \
-               if openRaid then\
-                   if openRaid.GetUnitInfo then\
-                       local info = openRaid.GetUnitInfo(unit)\
-                       \
-                       if info and info.specId and specToType[info.specId] then\
-                           aura_env.storedUnits[GUID] = info.specId\
-                           return specToType[info.specId], info.specId\
-                       end\
-                   elseif openRaid.playerInfoManager then\
-                       local info = openRaid.playerInfoManager.GetPlayerInfo(name) or openRaid.playerInfoManager.GetPlayerInfo(fullName)\
-                       \
-                       if info and info.specId and specToType[info.specId] then\
-                           aura_env.storedUnits[GUID] = info.specId\
-                           return specToType[info.specId], info.specId\
-                       end\
-                   end\
-               end\
-               \
-               -- LibGroupInSpecT\
-               if inspect and GUID then\
-                   local info = inspect:GetCachedInfo(GUID)\
-                   \
-                   if info and info.global_spec_id and specToType[info.global_spec_id] then\
-                       aura_env.storedUnits[GUID] = info.global_spec_id\
-                       return specToType[info.global_spec_id], info.global_spec_id\
-                   end\
-               end\
-               \
-               -- MRT\
-               if VExRT and VExRT.ExCD2 and VExRT.ExCD2.gnGUIDs then\
-                   local spec = VExRT.ExCD2.gnGUIDs[name] or VExRT.ExCD2.gnGUIDs[fullName]\
-                   \
-                   if spec and specToType[spec] then\
-                       aura_env.storedUnits[GUID] = spec\
-                       return specToType[spec], spec\
-                   end\
-               end\
-               \
-               -- Class check (no spec information)\
-               if class and classToType[class] then \
-                   return classToType[class]\
-               end\
-               \
-               -- Default to ranged (no spec information)\
-               return \"r\"\
-           end\
-       end\
-       \
-       -- Sort an array of player GUIDs by spec type\
-       -- By default sorts melee specs to the front\
-       function LiquidWeakAuras:SortTable(t, rangedFirst, sortRoles)\
-           table.sort(\
-               t,\
-               function (GUID1, GUID2)\
-                   if not GUID1 then return false end\
-                   if not GUID2 then return true end\
-                   \
-                   local unit1 = aura_env.GUIDToUnit[GUID1] or UnitTokenFromGUID(GUID1)\
-                   local unit2 = aura_env.GUIDToUnit[GUID2] or UnitTokenFromGUID(GUID2)\
-                   \
-                   local type1, spec1 = LiquidWeakAuras:Spec(unit1)\
-                   local type2, spec2 = LiquidWeakAuras:Spec(unit2)\
-                   \
-                   -- Sort dps < healers < tanks if sortRoles is enabled\
-                   if sortRoles then\
-                       local role1 = UnitGroupRolesAssigned(unit1)\
-                       local role2 = UnitGroupRolesAssigned(unit2)\
-                       \
-                       if role1 ~= role2 then\
-                           return role1 < role2\
-                       end\
-                   end\
-                   \
-                   if type1 and type2 and type1 ~= type2 then\
-                       return type1 == (rangedFirst and \"r\" or \"m\")\
-                   elseif spec1 and spec2 and spec1 ~= spec2 then\
-                       return spec1 < spec2 -- For consistency's sake\
-                   else\
-                       return GUID1 < GUID2\
-                   end\
-               end\
-           )\
-       end\
-       \
-       -- Sort an array of player GUIDs by class mobility (slow -> fast)\
-       local classMobility = {\
-           PRIEST = 1,\
-           DEATHKNIGHT = 2,\
-           WARLOCK = 3,\
-           PALADIN = 4,\
-           DRUID = 5,\
-           HUNTER = 6,\
-           SHAMAN = 7,\
-           ROGUE = 8,\
-           EVOKER = 9,\
-           WARRIOR = 10,\
-           DEMONHUNTER = 11,\
-           MONK = 12,\
-           MAGE = 13\
-       }\
-       \
-       function LiquidWeakAuras:SortTableMobility(t, reverse)\
-           table.sort(\
-               t,\
-               function (GUID1, GUID2)\
-                   if not GUID1 then return false end\
-                   if not GUID2 then return true end\
-                   \
-                   local unit1 = aura_env.GUIDToUnit[GUID1] or UnitTokenFromGUID(GUID1)\
-                   local unit2 = aura_env.GUIDToUnit[GUID2] or UnitTokenFromGUID(GUID2)\
-                   \
-                   local class1 = UnitClassBase(unit1)\
-                   local class2 = UnitClassBase(unit2)\
-                   \
-                   local mobility1 = classMobility[class1]\
-                   local mobility2 = classMobility[class2]\
-                   \
-                   if reverse then\
-                       if mobility1 ~= mobility2 then\
-                           return mobility1 > mobility2\
-                       else\
-                           return GUID1 > GUID2\
-                       end\
-                   else\
-                       if mobility1 ~= mobility2 then\
-                           return mobility1 < mobility2\
-                       else\
-                           return GUID1 < GUID2\
-                       end\
-                   end\
-               end\
-           )\
-       end\
-       \
-       -- Broadcast using AceComm while in a group\
-       -- The specified event will be called using WeakAuras.ScanEvents with any number of args provided (of type string or number)\
-       function LiquidWeakAuras:Broadcast(event, ...)\
-           if GetNumGroupMembers() > 0 then\
-               local chatType = IsInGroup(LE_PARTY_CATEGORY_INSTANCE) and \"INSTANCE_CHAT\" or IsInRaid() and \"RAID\" or \"PARTY\"\
-               local message = event\
-               local argTable = {...}\
-               local argCount = select(\"#\", ...)\
-               \
-               for i = 1, argCount do\
-                   local functionArg = argTable[i]\
-                   local argType = type(functionArg)\
-                   \
-                   -- If the arg is of a type that we cannot handle, send an empty string instead\
-                   -- These get converted to nil in the receive function\
-                   if argType ~= \"string\" and argType ~= \"number\" and argType ~= \"boolean\" then\
-                       functionArg = \"\"\
-                       argType = \"string\"\
-                   end\
-                   \
-                   message = string.format(\"%s:%s(%s)\", message, tostring(functionArg), argType)\
-               end\
-               \
-               AceComm:SendCommMessage(\"LiquidWA_MSG\", message, chatType)\
-           else -- If we're not in a group, just send the event directly\
-               WeakAuras.ScanEvents(event, ...)\
-           end\
-       end\
-       \
-       -- Handle LiquidWA_MSG addon messages\
-       local function ReceiveComm(text)\
-           local argTable = {strsplit(\":\", text)}\
-           local formattedArgTable = {}\
-           local event = argTable[1]\
-           \
-           table.remove(argTable, 1)\
-           \
-           for _, functionArg in ipairs(argTable) do\
-               local argValue, argType = functionArg:match(\"(.*)%((%a+)%)\")\
-               \
-               if argType == \"number\" then\
-                   argValue = tonumber(argValue)\
-               elseif argType == \"boolean\" then\
-                   argValue = argValue == \"true\"\
-               end\
-               \
-               if argValue == \"\" then\
-                   table.insert(formattedArgTable, false)\
-               else\
-                   table.insert(formattedArgTable, argValue)\
-               end\
-           end\
-           \
-           WeakAuras.ScanEvents(event, unpack(formattedArgTable))\
-       end\
-       \
-       AceComm:RegisterComm(\"LiquidWA_MSG\", function(_, text) ReceiveComm(text) end)\
-       \
-       -- Plays a sound from LiquidMedia\
-       -- If the sound (or LiquidMedia itself) is not available, play the sound through TTS\
-       -- If a voice is not specified, use the default voice that is configured in custom options\
-       function LiquidWeakAuras:PlaySound(sound, voice)\
-           if not sound then return end\
-           \
-           sound = tostring(sound)\
-           \
-           local soundFile = string.format(\"%s\\\\%s.mp3\", voice or aura_env.ttsVoice, sound)\
-           \
-           -- Try to play a sound file from LiquidMedia\
-           local willPlay = PlaySoundFile(\"Interface\\\\AddOns\\\\LiquidMedia\\\\TTS\\\\\" .. soundFile, \"Master\")\
-           \
-           -- Try to play a sound file from Pescorus\
-           if not willPlay then\
-               willPlay = PlaySoundFile(\"Interface\\\\AddOns\\\\Pescorus\\\\Media\\\\TTS\\\\\" .. soundFile, \"Master\")\
-           end\
-           \
-           -- Try to play a sound from AuraUpdater\
-           if not willPlay then\
-               willPlay = PlaySoundFile(\"Interface\\\\AddOns\\\\AuraUpdater\\\\Media\\\\TTS\\\\\" .. soundFile, \"Master\")\
-           end\
-           \
-           -- Play through in-game TTS\
-           if not willPlay then\
-               C_VoiceChat.SpeakText(\
-                   1,\
-                   sound,\
-                   Enum.VoiceTtsDestination.LocalPlayback,\
-                   C_TTSSettings and C_TTSSettings.GetSpeechRate() or 0,\
-                   C_TTSSettings and C_TTSSettings.GetSpeechVolume() or 100\
-               )\
-           end\
-       end\
-       \
-       -- Returns the npc ID, spawn time, and spawn index for a creature\
-       -- Takes either a unit or a GUID as input\
-       function LiquidWeakAuras:CreatureInfo(GUID)\
-           if UnitExists(GUID) then -- If a unit ID was passed instead of GUID, convert it\
-               GUID = UnitGUID(GUID)\
-           end\
-           \
-           local unitType, _, _, _, _, npcID, spawnUID = strsplit(\"-\", GUID)\
-           \
-           if unitType == \"Creature\" or unitType == \"Vehicle\" then\
-               local spawnEpoch = GetServerTime() - (GetServerTime() % 2^23)\
-               local spawnEpochOffset = bit.band(tonumber(string.sub(spawnUID, 5), 16), 0x7fffff)\
-               local spawnIndex = bit.rshift(bit.band(tonumber(string.sub(spawnUID, 1, 5), 16), 0xffff8), 3)\
-               local spawnTime = spawnEpoch + spawnEpochOffset\
-               \
-               if spawnTime > GetServerTime() then\
-                   -- This only occurs if the epoch has rolled over since a unit has spawned.\
-                   spawnTime = spawnTime - ((2^23) - 1)\
-               end\
-               \
-               return tonumber(npcID), spawnTime, spawnIndex\
-           end\
-       end\
-       \
-       -- Utility function for iterating MRT note assignments\
-       -- Usage: <for lineCount, line in LiquidWeakAuras:IterateNoteAssignment([number]) do>\
-       function LiquidWeakAuras:IterateNoteAssignment(number)\
-           local lineCount = 1\
-           local lines = {}\
-           local startLine = \"liquidstart\" .. (number or \"\")\
-           local endLine = \"liquidend\" .. (number or \"\")\
-           \
-           if (C_AddOns.IsAddOnLoaded(\"ExRT\") or C_AddOns.IsAddOnLoaded(\"MRT\")) and _G.VExRT.Note.Text1 then\
-               local betweenLine = false\
-               \
-               for line in _G.VExRT.Note.Text1:gmatch(\"[^\\r\\n]+\") do\
-                   if strtrim(line):lower() == endLine then\
-                       betweenLine = false\
-                   end\
-                   \
-                   if betweenLine then\
-                       table.insert(lines, line)\
-                   end\
-                   \
-                   if strtrim(line):lower() == startLine then\
-                       betweenLine = true\
-                   end\
-               end\
-           end\
-           \
-           return function()\
-               local line = lines[lineCount]\
-               \
-               if line then\
-                   lineCount = lineCount + 1\
-                   \
-                   return lineCount - 1, line\
-               end\
-           end\
-       end\
-       \
-       -- Play a preview sound when the default text-to-speech voice is changed in custom options\
-       aura_env.ttsVoice = ttsVoices[aura_env.config.ttsVoice]\
-       \
-       if aura_env.saved.ttsVoice and aura_env.config.ttsVoice ~= aura_env.saved.ttsVoice then\
-           local sounds = {\"front\", \"back\", \"left\", \"right\", \"middle\"}\
-           local randomSound = sounds[math.random(#sounds)]\
-           \
-           LiquidWeakAuras:PlaySound(randomSound)\
-       end\
-       \
-       aura_env.saved.ttsVoice = aura_env.config.ttsVoice\
-       \
-       ",
-                        ["do_custom"] = true,
-                    },
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["names"] = {
-                            },
-                            ["custom"] = "function(event, ...)\
-           if event == \"ENCOUNTER_START\" then\
-               aura_env.storedUnits = {}\
-               \
-               -- Broadcast our current spec to the rest of the raid\
-               local specID = GetSpecializationInfo(GetSpecialization())\
-               \
-               LiquidWeakAuras:Broadcast(\"LIQUID_WA_SPEC\", WeakAuras.myGUID, specID)\
-               \
-               C_Timer.After(0.2, function() WeakAuras.ScanEvents(\"LIQUID_ENCOUNTER_START\") end)\
-           elseif event == \"GROUP_ROSTER_UPDATE\" then\
-               aura_env.GUIDToUnit = {}\
-               \
-               for unit in WA_IterateGroupMembers() do\
-                   aura_env.GUIDToUnit[UnitGUID(unit)] = unit\
-               end\
-           elseif event == \"LIQUID_WA_SPEC\" then\
-               local GUID, specID = ...\
-               \
-               aura_env.storedUnits[GUID] = specID\
-           elseif event == \"UNIT_SPELLCAST_SUCCEEDED\" then\
-               local unit, _, spellID = ...\
-               \
-               -- Watch for casts by Feral Druids/Enhancement Shamans/Survival Hunters unique to their spec\
-               local spec = aura_env.meleeSpells[spellID]\
-               \
-               if spec then\
-                   aura_env.storedUnits[UnitGUID(unit)] = spec\
-               end\
-               \
-               -- Keep track of Augmentation Evoker's tier set stage so we can reference it on ENCOUNTER_START\
-               if UnitIsUnit(unit, \"player\") and spellID == 409311 then -- Prescience\
-                   if IsSpellOverlayed(409311) then\
-                       LiquidWeakAuras.prescienceStage = 3\
-                   else\
-                       LiquidWeakAuras.prescienceStage = (LiquidWeakAuras.prescienceStage or 0) + 1\
-                       \
-                       -- We cannot be on 3, as Prescience is not current overlayed\
-                       -- Assume instead that we are on 2\
-                       if LiquidWeakAuras.prescienceStage == 3 then\
-                           LiquidWeakAuras.prescienceStage = 2\
-                       elseif LiquidWeakAuras.prescienceStage == 4 then\
-                           LiquidWeakAuras.prescienceStage = 1\
-                       end\
-                   end\
-               end\
-           elseif event == \"LIQUID_PRIVATE_AURA_MACRO\" then\
-               if InCombatLockdown() then return end -- Only show test messages out of combat\
-               \
-               print(\"Liquid macro pressed!\")\
-           elseif event == \"STATUS\" then\
-               -- Remake the GUID to unit table\
-               aura_env.GUIDToUnit = {}\
-               \
-               for unit in WA_IterateGroupMembers() do\
-                   aura_env.GUIDToUnit[UnitGUID(unit)] = unit\
-               end\
-               \
-               -- Set the prescience stage if we haven't yet\
-               -- If it's not glowing, assume we are on stage 1\
-               if IsSpellKnown(409311) then -- Prescience\
-                   if not LiquidWeakAuras.prescienceStage then\
-                       LiquidWeakAuras.prescienceStage = IsSpellOverlayed(409311) and 3 or 1\
-                   end\
-               end\
-           end\
-       end",
-                            ["spellIds"] = {
-                            },
-                            ["custom_type"] = "status",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["events"] =
-                            "ENCOUNTER_START, UNIT_SPELLCAST_SUCCEEDED:group, GROUP_ROSTER_UPDATE, LIQUID_WA_SPEC, LIQUID_PRIVATE_AURA_MACRO",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["displayText_format_p_time_mod_rate"] = true,
-                ["internalVersion"] = 79,
-                ["wordWrap"] = "WordWrap",
-                ["desc"] = "forceenable",
-                ["font"] = "Friz Quadrata TT",
-                ["version"] = 33,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["load"] = {
-                    ["use_never"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["fontSize"] = 6,
-                ["source"] = "import",
-                ["yOffset"] = 0,
-                ["shadowXOffset"] = 1,
-                ["regionType"] = "text",
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["displayText_format_p_time_legacy_floor"] = false,
-                ["conditions"] = {
-                },
-                ["displayText_format_p_format"] = "timed",
-                ["liquidVersion"] = 6,
-                ["displayText"] = "",
-                ["config"] = {
-                    ["ttsVoice"] = 3,
-                },
-                ["xOffset"] = 0,
-                ["semver"] = "1.0.32",
-                ["tocversion"] = 110005,
-                ["id"] = "LiquidWeakAuras",
-                ["justify"] = "LEFT",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["displayText_format_p_time_precision"] = 1,
-                ["uid"] = "w1rqJ(8aTNx",
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["preferToUpdate"] = false,
-                ["shadowColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
-                ["fixedWidth"] = 200,
-                ["information"] = {
-                    ["test"] = "test",
-                    ["forceEvents"] = false,
-                    ["saved"] = "JrXAQKskoS8Zm5uzhWp",
-                },
-                ["selfPoint"] = "BOTTOM",
-            },
-            ["v"] = 1421,
-        },
-    },
-    -- Liquid anchors
-    {
-        ["uid"] = "Vp4qA0FytSO",
-        ["name"] = "Liquid Anchors (don't rename these)",
-        ["semver"] = "1.0.1",
-        ["version"] = 2,
-        ["import"] = {
-            ["d"] = {
-                ["controlledChildren"] = {
-                    [1] = "Liquid Anchor - Private Aura Warning Text",
-                    [2] = "Liquid Anchor - Private Auras (group)",
-                    [3] = "Liquid Anchor - Bars",
-                    [4] = "Liquid Anchor - Special Bars",
-                    [5] = "Liquid Anchor - Lists",
-                    [6] = "Liquid Anchor - Raid Leader Lists",
-                    [7] = "Liquid Anchor - Big Icons",
-                    [8] = "Liquid Anchor - Icons",
-                    [9] = "Liquid Anchor - Circles",
-                    [10] = "Liquid Anchor - Assignments",
-                    [11] = "Liquid Anchor - Position Assignments",
-                    [12] = "Liquid Anchor - Texts",
-                    [13] = "Liquid Anchor - Tank Warnings",
-                    [14] = "Liquid Anchor - Tank Icons",
-                    [15] = "Liquid Anchor - Co-Tank Icons",
-                },
-                ["borderBackdrop"] = "Blizzard Tooltip",
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = false,
-                ["yOffset"] = 0,
-                ["anchorPoint"] = "CENTER",
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["names"] = {
-                            },
-                            ["type"] = "aura2",
-                            ["spellIds"] = {
-                            },
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["event"] = "Health",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                },
-                ["internalVersion"] = 82,
-                ["selfPoint"] = "CENTER",
-                ["version"] = 2,
-                ["subRegions"] = {
-                },
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["backdropColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 0.5,
-                },
-                ["source"] = "import",
-                ["scale"] = 1,
-                ["border"] = false,
-                ["borderEdge"] = "Square Full White",
-                ["regionType"] = "group",
-                ["borderSize"] = 2,
-                ["liquidVersion"] = 5,
-                ["uid"] = "Vp4qA0FytSO",
-                ["borderOffset"] = 4,
-                ["semver"] = "1.0.1",
-                ["tocversion"] = 110100,
-                ["id"] = "Liquid Anchors (don't rename these)",
-                ["frameStrata"] = 1,
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["groupIcon"] = "1686581",
-                ["config"] = {
-                },
-                ["borderInset"] = 1,
-                ["authorOptions"] = {
-                },
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-            },
-            ["c"] = {
-                [1] = {
-                    ["outline"] = "None",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["displayText"] = "%c",
-                    ["customText"] = "function()\
-           return [=[Test Dummy targets you with [Threat Neutralization]!]=]\
-       end",
-                    ["yOffset"] = 300,
-                    ["anchorPoint"] = "CENTER",
-                    ["displayText_format_p_time_format"] = 0,
-                    ["customTextUpdate"] = "event",
-                    ["automaticWidth"] = "Auto",
-                    ["actions"] = {
-                        ["start"] = {
-                            ["glow_frame_type"] = "UNITFRAME",
-                            ["custom"] = "-- Create a frame that we scale according to the font size in display tab\
-       -- Anchor the private aura text frame to it so it matches the font size\
-       if not aura_env.region.privateWarningParent then\
-           aura_env.region.privateWarningParent = CreateFrame(\"Frame\", nil, aura_env.region)\
-       end\
-       \
-       local data = WeakAuras.GetData(aura_env.id)\
-       local scale = data.fontSize / 20\
-       local height = aura_env.region:GetHeight()\
-       \
-       -- For some reason the private aura text has a vertical offset, event when seemingly anchored properly\
-       -- The -0.36 * height factor seems to account for this\
-       aura_env.region.privateWarningParent:SetAllPoints(aura_env.region)\
-       aura_env.region.privateWarningParent:ClearAllPoints()\
-       aura_env.region.privateWarningParent:SetPoint(\"TOPLEFT\", aura_env.region, \"TOPLEFT\", 0, -0.36 * height)\
-       aura_env.region.privateWarningParent:SetPoint(\"BOTTOMRIGHT\", aura_env.region, \"BOTTOMRIGHT\", 0, -0.36 * height)\
-       \
-       aura_env.region.privateWarningParent:SetScale(scale)\
-       \
-       C_UnitAuras.SetPrivateWarningTextAnchor(\
-           aura_env.region.privateWarningParent,\
-           {\
-               point = \"CENTER\",\
-               relativeTo = aura_env.region.privateWarningParent,\
-               relativePoint = \"CENTER\",\
-               offsetX = 0,\
-               offsetY = 0,\
-           }\
-       )\
-       \
-       \
-       ",
-                            ["glow_action"] = "show",
-                            ["do_custom"] = true,
-                            ["do_glow"] = true,
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "unit",
-                                ["use_alwaystrue"] = true,
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["use_absorbMode"] = true,
-                                ["event"] = "Conditions",
-                                ["use_unit"] = true,
-                                ["spellIds"] = {
-                                },
-                                ["use_absorbHealMode"] = true,
-                                ["names"] = {
-                                },
-                                ["unit"] = "player",
-                                ["subeventPrefix"] = "SPELL",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["displayText_format_p_format"] = "timed",
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["font"] = "Friz Quadrata TT",
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["fontSize"] = 20,
-                    ["source"] = "import",
-                    ["displayText_format_n_format"] = "none",
-                    ["shadowXOffset"] = 1,
-                    ["shadowYOffset"] = -1,
-                    ["displayText_format_c_format"] = "none",
-                    ["regionType"] = "text",
-                    ["preferToUpdate"] = false,
-                    ["fixedWidth"] = 200,
-                    ["selfPoint"] = "CENTER",
-                    ["displayText_format_p_time_mod_rate"] = true,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["uid"] = "tu)WLJl6hs5",
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Private Aura Warning Text",
-                    ["xOffset"] = -15.999633789063,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "UIPARENT",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 0.89803928136826,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["config"] = {
-                    },
-                    ["internalVersion"] = 82,
-                    ["wordWrap"] = "WordWrap",
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 1,
-                                        [2] = 1,
-                                        [3] = 1,
-                                        [4] = 0,
-                                    },
-                                    ["property"] = "color",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["authorOptions"] = {
-                    },
-                },
-                [2] = {
-                    ["grow"] = "RIGHT",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Private Auras",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "4914668",
-                    ["gridType"] = "RD",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["rowSpace"] = 1,
-                    ["stepAngle"] = 15,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["alpha"] = 1,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Private Auras"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rotation"] = 0,
-                    ["stagger"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["anchorPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["borderInset"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["yOffset"] = 0,
-                    ["source"] = "import",
-                    ["uid"] = "12M2bL(2Civ",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["frameStrata"] = 1,
-                    ["space"] = 1,
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Private Auras (group)",
-                    ["sort"] = "none",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["internalVersion"] = 82,
-                    ["config"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["selfPoint"] = "LEFT",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["xOffset"] = 100,
-                },
-                [3] = {
-                    ["iconSource"] = -1,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["adjustedMax"] = "",
-                    ["adjustedMin"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["cooldownSwipe"] = true,
-                    ["cooldownEdge"] = false,
-                    ["icon"] = true,
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["type"] = "custom",
-                                ["use_alwaystrue"] = true,
-                                ["custom_type"] = "stateupdate",
-                                ["unit"] = "player",
-                                ["use_absorbMode"] = true,
-                                ["event"] = "Conditions",
-                                ["use_unit"] = true,
-                                ["use_absorbHealMode"] = true,
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               for i = 1, 3 do\
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       progressType = \"timed\",\
-                       duration = 8,\
-                       icon = i == 1 and 4630415 or i == 2 and 2065635 or 4914668,\
-                       expirationTime = GetTime() + 8\
-                   } \
-               end\
-           elseif event == \"STATUS\" then\
-               for i = 1, 3 do\
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       index = i\
-                   } \
-               end\
-               \
-               return true\
-           end\
-       end",
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["check"] = "event",
-                                ["names"] = {
-                                },
-                                ["subeventPrefix"] = "SPELL",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["desaturate"] = false,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["height"] = 100,
-                    ["load"] = {
-                        ["use_never"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["useAdjustededMax"] = false,
-                    ["source"] = "import",
-                    ["zoom"] = 0,
-                    ["uid"] = "KPyAZulpQAe",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["keepAspectRatio"] = false,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "icon",
-                    ["cooldown"] = true,
-                    ["displayIcon"] = "4630415",
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = false,
-                    ["width"] = 100,
-                    ["alpha"] = 1,
-                    ["cooldownTextDisabled"] = true,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Private Auras",
-                    ["frameStrata"] = 1,
-                    ["useCooldownModRate"] = true,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["parent"] = "Liquid Anchor - Private Auras (group)",
-                    ["config"] = {
-                    },
-                    ["inverse"] = false,
-                    ["actions"] = {
-                        ["start"] = {
-                            ["custom"] = "local anchorID = aura_env.region.anchorID\
-       \
-       if anchorID then\
-           C_UnitAuras.RemovePrivateAuraAnchor(anchorID)\
-       end\
-       \
-       local self = aura_env.region\
-       local privateAnchorArgs = {\
-           unitToken = \"player\",\
-           auraIndex = aura_env.state.index,\
-           parent = self,\
-           showCountdownFrame = true,\
-           showCountdownNumbers = true,\
-           iconInfo = {\
-               iconAnchor = {\
-                   point = \"CENTER\",\
-                   relativeTo = self,\
-                   relativePoint = \"CENTER\",\
-                   offsetX = 0,\
-                   offsetY = 0\
-               },\
-               iconWidth = self:GetWidth(),\
-               iconHeight = self:GetHeight()\
-           },\
-           durationAnchor = {\
-               point = \"CENTER\",\
-               relativeTo = self,\
-               relativePoint = \"CENTER\",\
-               offsetX = 0,\
-               offsetY = 0\
-           }\
-       }\
-       \
-       aura_env.region.anchorID = C_UnitAuras.AddPrivateAuraAnchor(privateAnchorArgs)",
-                            ["do_custom"] = true,
-                        },
-                        ["init"] = {
-                            ["custom"] = "if not C_UnitAuras.AddPrivateAuraAppliedSound then return end\
-       if not aura_env.region.privateAuraSoundIDs then aura_env.region.privateAuraSoundIDs = {} end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                            ["custom"] = "local anchorID = aura_env.region.anchorID\
-       \
-       if anchorID then\
-           C_UnitAuras.RemovePrivateAuraAnchor(anchorID)\
-       end",
-                            ["do_custom"] = true,
-                        },
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 1,
-                                        [2] = 1,
-                                        [3] = 1,
-                                        [4] = 0,
-                                    },
-                                    ["property"] = "color",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["authorOptions"] = {
-                    },
-                },
-                [4] = {
-                    ["grow"] = "UP",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Bar",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "ui-frame-bar-glowcenter",
-                    ["gridType"] = "RD",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["rowSpace"] = 1,
-                    ["stepAngle"] = 15,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["alpha"] = 1,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Bar"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rotation"] = 0,
-                    ["stagger"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["anchorPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["borderInset"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["yOffset"] = 140,
-                    ["source"] = "import",
-                    ["uid"] = "lshfddmL4SX",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 0,
-                    ["frameStrata"] = 1,
-                    ["space"] = 3,
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Bars",
-                    ["sort"] = "ascending",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["internalVersion"] = 82,
-                    ["config"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["selfPoint"] = "BOTTOM",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["xOffset"] = -400,
-                },
-                [5] = {
-                    ["sparkWidth"] = 10,
-                    ["iconSource"] = -1,
-                    ["authorOptions"] = {
-                    },
-                    ["adjustedMax"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["sparkRotation"] = 0,
-                    ["textureInput"] = "Test",
-                    ["icon"] = true,
-                    ["icon_color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["enableGradient"] = false,
-                    ["keepAspectRatio"] = false,
-                    ["selfPoint"] = "CENTER",
-                    ["barColor"] = {
-                        [1] = 0.92941182851791,
-                        [2] = 0.89411771297455,
-                        [3] = 0.31764706969261,
-                        [4] = 1,
-                    },
-                    ["desaturate"] = false,
-                    ["sparkOffsetY"] = 0,
-                    ["gradientOrientation"] = "HORIZONTAL",
-                    ["load"] = {
-                        ["use_never"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "",
-                        ["use_encounterid"] = false,
-                        ["role"] = {
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["zoneIds"] = "",
-                    },
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["texture"] = "Solid",
-                    ["zoom"] = 0.3,
-                    ["spark"] = false,
-                    ["tocversion"] = 110100,
-                    ["alpha"] = 1,
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["displayIcon"] = "1551379",
-                    ["sparkOffsetX"] = 0,
-                    ["parent"] = "Liquid Anchor - Bars",
-                    ["adjustedMin"] = "",
-                    ["cooldownSwipe"] = true,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["cooldownEdge"] = false,
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["debuffType"] = "HELPFUL",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["subeventPrefix"] = "SPELL",
-                                ["events"] = "",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               for i = 1, 3 do\
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       progressType = \"timed\",\
-                       duration = 10,\
-                       expirationTime = GetTime() + 7 + i,\
-                       num = i,\
-                       autoHide = true\
-                   }\
-               end\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Bars\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["custom_type"] = "stateupdate",
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
-                                ["names"] = {
-                                },
-                                ["customVariables"] = "{\
-           num = {\
-               type = \"number\",\
-               display = \"Preview number\"\
-           }\
-       }",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["type"] = "subforeground",
-                        },
-                        [3] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "Frontal",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 4,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["anchor_point"] = "LEFT",
-                            ["text_fontSize"] = 18,
-                            ["anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                        },
-                        [4] = {
-                            ["text_text_format_t_time_precision"] = 1,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text_format_t_time_legacy_floor"] = false,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = true,
-                            ["rotateText"] = "NONE",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_fontSize"] = 18,
-                            ["text_text_format_t_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_text_format_t_time_format"] = 0,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["text_text_format_t_format"] = "timed",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = -2,
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text_format_t_time_mod_rate"] = true,
-                            ["text_text"] = "%p",
-                            ["text_text_format_p_format"] = "timed",
-                            ["anchor_point"] = "RIGHT",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_visible"] = true,
-                        },
-                        [5] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "bar",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                        [6] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "icon",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                    },
-                    ["height"] = 40,
-                    ["textureSource"] = "LSM",
-                    ["sparkBlendMode"] = "ADD",
-                    ["useAdjustededMax"] = false,
-                    ["source"] = "import",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["cooldown"] = true,
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["config"] = {
-                    },
-                    ["icon_side"] = "LEFT",
-                    ["cooldownTextDisabled"] = false,
-                    ["limitWeakAuras"] = {
-                        ["hash"] = "0bf6b48a855637aa0397388ef4dc9437a29c8f0a32e93b3c6e050d64da07f02c",
-                    },
-                    ["sparkHeight"] = 30,
-                    ["actions"] = {
-                        ["start"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                            ["do_sound"] = false,
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Bars\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                    },
-                    ["sparkHidden"] = "NEVER",
-                    ["anchorFrameType"] = "SCREEN",
-                    ["semver"] = "1.0.1",
-                    ["useCooldownModRate"] = true,
-                    ["id"] = "Liquid Anchor - Bar",
-                    ["backgroundColor"] = {
-                        [1] = 0.031372550874949,
-                        [2] = 0.031372550874949,
-                        [3] = 0.031372550874949,
-                        [4] = 0.80000001192093,
-                    },
-                    ["frameStrata"] = 1,
-                    ["width"] = 270,
-                    ["uid"] = "Q00OjVYdLWs",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["inverse"] = false,
-                    ["xOffset"] = 0,
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                        [2] = {
-                            ["check"] = {
-                                ["trigger"] = 1,
-                                ["op"] = "==",
-                                ["variable"] = "num",
-                                ["value"] = "2",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 0,
-                                        [2] = 0.81960791349411,
-                                        [3] = 1,
-                                        [4] = 1,
-                                    },
-                                    ["property"] = "barColor",
-                                },
-                                [2] = {
-                                    ["value"] = "Adds",
-                                    ["property"] = "sub.3.text_text",
-                                },
-                                [3] = {
-                                    ["value"] = "2153980",
-                                    ["property"] = "displayIcon",
-                                },
-                            },
-                        },
-                        [3] = {
-                            ["check"] = {
-                                ["trigger"] = 1,
-                                ["op"] = "==",
-                                ["variable"] = "num",
-                                ["value"] = "3",
-                            },
-                            ["linked"] = true,
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 1,
-                                        [2] = 0,
-                                        [3] = 0.34117648005486,
-                                        [4] = 1,
-                                    },
-                                    ["property"] = "barColor",
-                                },
-                                [2] = {
-                                    ["value"] = "Spread",
-                                    ["property"] = "sub.3.text_text",
-                                },
-                                [3] = {
-                                    ["value"] = "2143078",
-                                    ["property"] = "displayIcon",
-                                },
-                            },
-                        },
-                    },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["preferToUpdate"] = false,
-                },
-                [6] = {
-                    ["arcLength"] = 360,
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Special Bar",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = false,
-                    ["yOffset"] = 400,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Special Bar"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rowSpace"] = 1,
-                    ["regionType"] = "dynamicgroup",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["unit"] = "player",
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["internalVersion"] = 82,
-                    ["alpha"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["align"] = "CENTER",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["authorOptions"] = {
-                    },
-                    ["useLimit"] = false,
-                    ["stagger"] = 0,
-                    ["space"] = 3,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["selfPoint"] = "BOTTOM",
-                    ["rotation"] = 0,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["uid"] = "chyGsCGOKKB",
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["gridType"] = "RD",
-                    ["source"] = "import",
-                    ["groupIcon"] = "UI-CastingBar-Full-ApplyingCrafting",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["sort"] = "ascending",
-                    ["gridWidth"] = 5,
-                    ["config"] = {
-                    },
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Special Bars",
-                    ["limit"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["anchorPoint"] = "CENTER",
-                    ["borderInset"] = 1,
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["radius"] = 200,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["grow"] = "UP",
-                },
-                [7] = {
-                    ["sparkWidth"] = 8,
-                    ["sparkOffsetX"] = 0,
-                    ["parent"] = "Liquid Anchor - Special Bars",
-                    ["preferToUpdate"] = false,
-                    ["adjustedMin"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["zoom"] = 0,
-                    ["sparkRotation"] = 0,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"SpecialBars\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
-                                ["customVariables"] = "\
-       \
-       ",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"static\",\
-                   value = math.random(1000000, 100000000),\
-                   total = 100000000,\
-                   skipPosition = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"SpecialBars\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["names"] = {
-                                },
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["icon_color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["enableGradient"] = false,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["barColor"] = {
-                        [1] = 0.39215689897537,
-                        [2] = 0.85882359743118,
-                        [3] = 0.93725496530533,
-                        [4] = 1,
-                    },
-                    ["desaturate"] = false,
-                    ["adjustedMax"] = "",
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.80000001192093,
-                    },
-                    ["sparkOffsetY"] = 0,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["type"] = "subforeground",
-                        },
-                        [3] = {
-                            ["text_text_format_n_format"] = "none",
-                            ["text_text"] = "Special bar",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 2,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_shadowXOffset"] = 0,
-                            ["anchor_point"] = "INNER_LEFT",
-                            ["text_fontSize"] = 19,
-                            ["anchorXOffset"] = 0,
-                            ["text_visible"] = true,
-                        },
-                        [4] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_big_number_format"] = "AbbreviateNumbers",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["anchorXOffset"] = 0,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text"] = "%p",
-                            ["text_text_format_p_decimal_precision"] = 1,
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 0,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_n_format"] = "none",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_visible"] = true,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["anchor_point"] = "INNER_RIGHT",
-                            ["text_fontSize"] = 19,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "BigNumber",
-                        },
-                        [5] = {
-                            ["border_offset"] = 1,
-                            ["type"] = "subborder",
-                            ["anchor_area"] = "bar",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["border_size"] = 1,
-                        },
-                    },
-                    ["gradientOrientation"] = "HORIZONTAL",
-                    ["textureSource"] = "LSM",
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["sparkBlendMode"] = "BLEND",
-                    ["useAdjustededMax"] = false,
-                    ["selfPoint"] = "CENTER",
-                    ["source"] = "import",
-                    ["config"] = {
-                    },
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 0.11372549831867,
-                        [3] = 0.18823531270027,
-                        [4] = 0,
-                    },
-                    ["height"] = 20,
-                    ["width"] = 600,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["alpha"] = 1,
-                    ["version"] = 2,
-                    ["icon_side"] = "RIGHT",
-                    ["id"] = "Liquid Anchor - Special Bar",
-                    ["sparkHeight"] = 24,
-                    ["texture"] = "Solid",
-                    ["semver"] = "1.0.1",
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                    ["spark"] = true,
-                    ["tocversion"] = 110100,
-                    ["sparkHidden"] = "NEVER",
-                    ["icon"] = false,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["xOffset"] = 0,
-                    ["uid"] = "vOL3IxCafgg",
-                    ["inverse"] = false,
-                    ["internalVersion"] = 82,
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["iconSource"] = -1,
-                },
-                [8] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - List",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "1500881",
-                    ["gridType"] = "RD",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["rowSpace"] = 1,
-                    ["stepAngle"] = 15,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["alpha"] = 1,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - List"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rotation"] = 0,
-                    ["stagger"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["anchorPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["borderInset"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["yOffset"] = 400,
-                    ["source"] = "import",
-                    ["uid"] = "qSdctRY9zQf",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["frameStrata"] = 1,
-                    ["space"] = 3,
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Lists",
-                    ["sort"] = "none",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["internalVersion"] = 82,
-                    ["config"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["xOffset"] = -700,
-                },
-                [9] = {
-                    ["sparkWidth"] = 10,
-                    ["iconSource"] = 0,
-                    ["zoom"] = 0.3,
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = false,
-                    ["customText"] = "\
-       \
-       ",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["adjustedMin"] = "",
-                    ["sparkRotation"] = 0,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Lists\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               local playerName = UnitName(\"player\")\
-               \
-               for i = 1, 10 do\
-                   local stacks = math.random(10)\
-                   \
-                   local _, randomClass = GetClassInfo(math.random(13))\
-                   local colorStr = RAID_CLASS_COLORS[randomClass].colorStr\
-                   local coloredName = string.format(\"|c%s%s\", colorStr, playerName)\
-                   \
-                   local duration = 10 + math.random(20)\
-                   \
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       progressType = \"timed\",\
-                       duration = 30,\
-                       expirationTime = GetTime() + duration,\
-                       stacks = stacks,\
-                       index = stacks,\
-                       name = coloredName,\
-                       autoHide = true\
-                   }\
-               end\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Lists\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["icon_color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["displayIcon"] = "237587",
-                    ["icon"] = true,
-                    ["barColor"] = {
-                        [1] = 0.21568629145622,
-                        [2] = 0.2039215862751,
-                        [3] = 0.92549026012421,
-                        [4] = 1,
-                    },
-                    ["desaturate"] = false,
-                    ["authorOptions"] = {
-                    },
-                    ["config"] = {
-                    },
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["type"] = "subforeground",
-                        },
-                        [3] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text"] = "%name",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_text_format_p_format"] = "timed",
-                            ["anchorXOffset"] = 0,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_text_format_name_format"] = "none",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_c_format"] = "none",
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["anchorYOffset"] = 0,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_shadowYOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 1,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_visible"] = true,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["anchor_point"] = "INNER_LEFT",
-                            ["text_fontSize"] = 16,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_automaticWidth"] = "Auto",
-                        },
-                        [4] = {
-                            ["text_text_format_n_format"] = "none",
-                            ["text_text"] = "%stacks",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_stacks_format"] = "none",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 0,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_text_format_c2_format"] = "none",
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_visible"] = true,
-                            ["text_shadowXOffset"] = 0,
-                            ["anchor_point"] = "INNER_RIGHT",
-                            ["text_fontSize"] = 16,
-                            ["anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                        },
-                        [5] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "bar",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                        [6] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "icon",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                    },
-                    ["gradientOrientation"] = "HORIZONTAL",
-                    ["textureSource"] = "LSM",
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["sparkBlendMode"] = "ADD",
-                    ["useAdjustededMax"] = false,
-                    ["uid"] = "Bmqwl9Epjrf",
-                    ["source"] = "import",
-                    ["parent"] = "Liquid Anchor - Lists",
-                    ["width"] = 200,
-                    ["alpha"] = 1,
-                    ["sparkOffsetY"] = 0,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["id"] = "Liquid Anchor - List",
-                    ["height"] = 24,
-                    ["icon_side"] = "LEFT",
-                    ["semver"] = "1.0.1",
-                    ["sparkHeight"] = 30,
-                    ["texture"] = "Solid",
-                    ["selfPoint"] = "CENTER",
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["spark"] = false,
-                    ["tocversion"] = 110100,
-                    ["sparkHidden"] = "NEVER",
-                    ["adjustedMax"] = "",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["enableGradient"] = false,
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["inverse"] = false,
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.80000001192093,
-                    },
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["sparkOffsetX"] = 0,
-                },
-                [10] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Raid Leader List",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "1500881",
-                    ["gridType"] = "RD",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["rowSpace"] = 1,
-                    ["stepAngle"] = 15,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["alpha"] = 1,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Raid Leader List"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rotation"] = 0,
-                    ["stagger"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["anchorPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["borderInset"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["yOffset"] = 450,
-                    ["source"] = "import",
-                    ["uid"] = "jYmz)LwxlSR",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["frameStrata"] = 1,
-                    ["space"] = 3,
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Raid Leader Lists",
-                    ["sort"] = "none",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["internalVersion"] = 82,
-                    ["config"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["xOffset"] = -450,
-                },
-                [11] = {
-                    ["sparkWidth"] = 10,
-                    ["iconSource"] = 0,
-                    ["zoom"] = 0.3,
-                    ["parent"] = "Liquid Anchor - Raid Leader Lists",
-                    ["preferToUpdate"] = false,
-                    ["customText"] = "function()\
-           if WeakAuras.IsOptionsOpen() then\
-               local playerName = LiquidAPI and LiquidAPI:GetName(\"player\") or UnitName(\"player\")\
-               local _, randomClass = GetClassInfo(math.random(13))\
-               local colorStr = RAID_CLASS_COLORS[randomClass].colorStr\
-               return string.format(\"|c%s%s\", colorStr, playerName)\
-           end\
-       end",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["adjustedMin"] = "",
-                    ["sparkRotation"] = 0,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.80000001192093,
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               local playerName = UnitName(\"player\")\
-               \
-               for i = 1, 4 do\
-                   local stacks = math.random(10)\
-                   \
-                   local _, randomClass = GetClassInfo(math.random(13))\
-                   local colorStr = RAID_CLASS_COLORS[randomClass].colorStr\
-                   local coloredName = string.format(\"|c%s%s\", colorStr, playerName)\
-                   \
-                   local duration = 10 + math.random(20)\
-                   \
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       progressType = \"timed\",\
-                       duration = 30,\
-                       expirationTime = GetTime() + duration,\
-                       stacks = stacks,\
-                       index = stacks,\
-                       name = coloredName,\
-                       autoHide = true\
-                   }\
-               end\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"RaidLeaderLists\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["icon_color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["displayIcon"] = "4914666",
-                    ["enableGradient"] = false,
-                    ["barColor"] = {
-                        [1] = 0.79607850313187,
-                        [2] = 0.21176472306252,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["desaturate"] = false,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"RaidLeaderLists\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["config"] = {
-                    },
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["type"] = "subforeground",
-                        },
-                        [3] = {
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text"] = "%c",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_text_format_name_format"] = "none",
-                            ["text_text_format_unit_color"] = "class",
-                            ["text_text_format_c_format"] = "none",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_unit_realm_name"] = "never",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_text_format_unit_abbreviate"] = false,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_text_format_unit_format"] = "Unit",
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontSize"] = 16,
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_order._format"] = "none",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["text_text_format_order_format"] = "none",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 4,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_format"] = "timed",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text_format_c1_format"] = "none",
-                            ["text_shadowXOffset"] = 0,
-                            ["anchor_point"] = "INNER_LEFT",
-                            ["text_text_format_previewName_format"] = "none",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_unit_abbreviate_max"] = 8,
-                        },
-                        [4] = {
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "%p",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorXOffset"] = 0,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_format"] = "timed",
-                            ["text_text_format_stacks_format"] = "none",
-                            ["text_shadowXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 0,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_n_format"] = "none",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_text_format_c2_format"] = "none",
-                            ["text_anchorYOffset"] = -1,
-                            ["anchor_point"] = "INNER_RIGHT",
-                            ["text_fontSize"] = 16,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_time_format"] = 0,
-                        },
-                        [5] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "bar",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                        [6] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "icon",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                    },
-                    ["gradientOrientation"] = "HORIZONTAL",
-                    ["textureSource"] = "LSM",
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["sparkBlendMode"] = "ADD",
-                    ["useAdjustededMax"] = false,
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["source"] = "import",
-                    ["sparkOffsetY"] = 0,
-                    ["width"] = 200,
-                    ["alpha"] = 1,
-                    ["height"] = 32,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["id"] = "Liquid Anchor - Raid Leader List",
-                    ["selfPoint"] = "CENTER",
-                    ["icon_side"] = "LEFT",
-                    ["semver"] = "1.0.1",
-                    ["sparkHeight"] = 30,
-                    ["texture"] = "Solid",
-                    ["adjustedMax"] = "",
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["spark"] = false,
-                    ["tocversion"] = 110100,
-                    ["sparkHidden"] = "NEVER",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["authorOptions"] = {
-                    },
-                    ["uid"] = "J0wqzh1zmSA",
-                    ["inverse"] = false,
-                    ["icon"] = true,
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["barColor2"] = {
-                        [1] = 0.74901962280273,
-                        [2] = 0.5137255191803,
-                        [3] = 1,
-                        [4] = 0,
-                    },
-                    ["sparkOffsetX"] = 0,
-                },
-                [12] = {
-                    ["grow"] = "LEFT",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Big Icon",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["yOffset"] = 180,
-                    ["anchorPoint"] = "CENTER",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["space"] = 3,
-                    ["alpha"] = 1,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["unit"] = "player",
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["selfPoint"] = "RIGHT",
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["internalVersion"] = 82,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["stagger"] = 0,
-                    ["fullCircle"] = true,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Big Icon"] = false,
-                    },
-                    ["borderInset"] = 1,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["xOffset"] = 340,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["uid"] = "9l58lfZvqR0",
-                    ["source"] = "import",
-                    ["frameStrata"] = 1,
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["sort"] = "ascending",
-                    ["stepAngle"] = 15,
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["rowSpace"] = 1,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Big Icons",
-                    ["animate"] = false,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["groupIcon"] = "UI-HUD-ActionBar-IconFrame-Flash",
-                    ["config"] = {
-                    },
-                    ["gridType"] = "RD",
-                    ["rotation"] = 0,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["useLimit"] = false,
-                },
-                [13] = {
-                    ["iconSource"] = -1,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["adjustedMax"] = "",
-                    ["adjustedMin"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["cooldownSwipe"] = true,
-                    ["cooldownEdge"] = false,
-                    ["icon"] = true,
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["auranames"] = {
-                                },
-                                ["duration"] = "0.1",
-                                ["subeventPrefix"] = "SPELL",
-                                ["debuffType"] = "HARMFUL",
-                                ["type"] = "custom",
-                                ["custom_hide"] = "timed",
-                                ["useExactSpellId"] = false,
-                                ["custom_type"] = "stateupdate",
-                                ["auraspellids"] = {
-                                },
-                                ["event"] = "Health",
-                                ["names"] = {
-                                },
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 10,\
-                   expirationTime = GetTime() + 10,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"BigIcons\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["useName"] = false,
-                                ["check"] = "event",
-                                ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["customVariables"] = "\
-       \
-       ",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["disjunctive"] = "any",
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["desaturate"] = false,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text"] = "%p",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_anchorYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["anchorYOffset"] = 0,
-                            ["anchor_point"] = "CENTER",
-                            ["text_fontSize"] = 40,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "timed",
-                        },
-                        [3] = {
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text"] = "%stacks",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_stacks_format"] = "none",
-                            ["text_shadowXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 10,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_anchorYOffset"] = -12,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["anchorYOffset"] = 0,
-                            ["anchor_point"] = "INNER_BOTTOMRIGHT",
-                            ["text_fontSize"] = 40,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "timed",
-                        },
-                        [4] = {
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text"] = "Bottom text",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_format"] = "timed",
-                            ["anchorXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_anchorYOffset"] = 0,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_visible"] = true,
-                            ["anchorYOffset"] = 0,
-                            ["anchor_point"] = "OUTER_BOTTOM",
-                            ["text_fontSize"] = 32,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowXOffset"] = 0,
-                        },
-                        [5] = {
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text"] = "Top text",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_stacks_format"] = "none",
-                            ["text_text_format_p_format"] = "timed",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 0,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_anchorYOffset"] = 0,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchor_point"] = "OUTER_TOP",
-                            ["text_fontSize"] = 32,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_time_format"] = 0,
-                        },
-                        [6] = {
-                            ["type"] = "subborder",
-                            ["border_offset"] = 1,
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["border_size"] = 1,
-                        },
-                    },
-                    ["height"] = 128,
-                    ["anchorFrameFrame"] = "WeakAuras:Raid Icon Special Anchor",
-                    ["load"] = {
-                        ["use_zoneIds"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "",
-                        ["use_encounterid"] = false,
-                        ["difficulty"] = {
-                        },
-                        ["role"] = {
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                                ["flexible"] = true,
-                                ["twenty"] = true,
-                                ["none"] = true,
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["instance_type"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_never"] = false,
-                        ["zoneIds"] = "2414",
-                    },
-                    ["parent"] = "Liquid Anchor - Big Icons",
-                    ["useAdjustededMax"] = false,
-                    ["authorOptions"] = {
-                    },
-                    ["source"] = "import",
-                    ["cooldown"] = true,
-                    ["displayIcon"] = "2143099",
-                    ["preferToUpdate"] = false,
-                    ["customText"] = "function()\
-           return math.random(100000, 1000000)\
-       end",
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "icon",
-                    ["config"] = {
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["width"] = 128,
-                    ["alpha"] = 1,
-                    ["anchorFrameParent"] = false,
-                    ["limitWeakAuras"] = {
-                        ["hash"] = "4e8efc44e735360567789a00155f766659fc398a062f1e0aa8dc783b0677fd46",
-                    },
-                    ["cooldownTextDisabled"] = true,
-                    ["zoom"] = 0.3,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Big Icon",
-                    ["useCooldownModRate"] = true,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["xOffset"] = 0,
-                    ["uid"] = "dgEyBCMX7Bj",
-                    ["inverse"] = false,
-                    ["actions"] = {
-                        ["start"] = {
-                            ["do_loop"] = false,
-                            ["custom"] = "",
-                            ["do_sound"] = false,
-                            ["do_custom"] = false,
-                            ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\BikeHorn.ogg",
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"BigIcons\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["keepAspectRatio"] = false,
-                },
-                [14] = {
-                    ["arcLength"] = 360,
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Icon",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "GarrMission-AbilityHighlight-Error",
-                    ["anchorPoint"] = "CENTER",
-                    ["fullCircle"] = true,
-                    ["space"] = 3,
-                    ["frameStrata"] = 1,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["internalVersion"] = 82,
-                    ["rowSpace"] = 1,
-                    ["grow"] = "LEFT",
-                    ["rotation"] = 0,
-                    ["gridType"] = "RD",
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Icon"] = false,
-                    },
-                    ["borderInset"] = 1,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["xOffset"] = -120,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["source"] = "import",
-                    ["gridWidth"] = 5,
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["sort"] = "ascending",
-                    ["regionType"] = "dynamicgroup",
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["uid"] = "XcD9ilEuinj",
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Icons",
-                    ["animate"] = false,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["yOffset"] = 0,
-                    ["config"] = {
-                    },
-                    ["selfPoint"] = "RIGHT",
-                    ["stagger"] = 0,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                },
-                [15] = {
-                    ["limitWeakAuras"] = {
-                        ["hash"] = "4e8efc44e735360567789a00155f766659fc398a062f1e0aa8dc783b0677fd46",
-                    },
-                    ["xOffset"] = 0,
-                    ["adjustedMax"] = "",
-                    ["customText"] = "\
-       \
-       ",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["cooldownSwipe"] = true,
-                    ["cooldownEdge"] = false,
-                    ["icon"] = true,
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               for i = 1, 3 do\
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       progressType = \"timed\",\
-                       duration = 10,\
-                       expirationTime = GetTime() + 7 + i,\
-                       num = i,\
-                       autoHide = true\
-                   }\
-               end\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Icons\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["events"] = "",
-                                ["names"] = {
-                                },
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
-                                ["debuffType"] = "HELPFUL",
-                                ["customVariables"] = "{\
-           num = {\
-               type = \"number\",\
-               display = \"Preview number\"\
-           }\
-       }",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["keepAspectRatio"] = false,
-                    ["selfPoint"] = "CENTER",
-                    ["desaturate"] = false,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "%p",
-                            ["text_text_format_p_format"] = "timed",
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_p_decimal_precision"] = 0,
-                            ["type"] = "subtext",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_anchorYOffset"] = 0,
-                            ["anchor_point"] = "CENTER",
-                            ["text_fontSize"] = 30,
-                            ["text_text_format_p_time_dynamic_threshold"] = 3,
-                            ["text_text_format_p_round_type"] = "floor",
-                        },
-                        [3] = {
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "5",
-                            ["text_text_format_p_format"] = "timed",
-                            ["text_selfPoint"] = "BOTTOMRIGHT",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_stacks_format"] = "none",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = -4,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["anchorXOffset"] = 0,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_anchorYOffset"] = 4,
-                            ["anchor_point"] = "OUTER_BOTTOMRIGHT",
-                            ["text_fontSize"] = 20,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowXOffset"] = 0,
-                        },
-                        [4] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "Can't soak",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["type"] = "subtext",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_visible"] = true,
-                            ["text_shadowYOffset"] = 0,
-                            ["anchor_point"] = "OUTER_BOTTOM",
-                            ["text_fontSize"] = 16,
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_c_format"] = "none",
-                        },
-                        [5] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "Top text",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_c_format"] = "none",
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["type"] = "subtext",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_shadowYOffset"] = 0,
-                            ["anchor_point"] = "OUTER_TOP",
-                            ["text_fontSize"] = 16,
-                            ["anchorXOffset"] = 0,
-                            ["anchorYOffset"] = 0,
-                        },
-                        [6] = {
-                            ["border_offset"] = 1,
-                            ["border_size"] = 1,
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                        [7] = {
-                            ["glowFrequency"] = 0.25,
-                            ["glow"] = false,
-                            ["glowDuration"] = 1,
-                            ["glowScale"] = 1,
-                            ["glowThickness"] = 2,
-                            ["glowYOffset"] = 0,
-                            ["glowColor"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["glowType"] = "Pixel",
-                            ["type"] = "subglow",
-                            ["useGlowColor"] = false,
-                            ["glowXOffset"] = 0,
-                            ["glowLength"] = 10,
-                            ["glowLines"] = 10,
-                            ["glowBorder"] = false,
-                        },
-                    },
-                    ["height"] = 70,
-                    ["useAdjustededMin"] = false,
-                    ["load"] = {
-                        ["use_never"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "",
-                        ["use_encounterid"] = false,
-                        ["role"] = {
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["zoneIds"] = "",
-                    },
-                    ["parent"] = "Liquid Anchor - Icons",
-                    ["useAdjustededMax"] = false,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["source"] = "import",
-                    ["cooldown"] = true,
-                    ["displayIcon"] = "464161",
-                    ["preferToUpdate"] = false,
-                    ["adjustedMin"] = "",
-                    ["anchorFrameFrame"] = "WeakAuras:Raid Icon Special Anchor",
-                    ["regionType"] = "icon",
-                    ["uid"] = "Kqi)8F(BwZZ",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["width"] = 70,
-                    ["useCooldownModRate"] = true,
-                    ["anchorFrameParent"] = false,
-                    ["alpha"] = 1,
-                    ["cooldownTextDisabled"] = true,
-                    ["zoom"] = 0.3,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Icon",
-                    ["actions"] = {
-                        ["start"] = {
-                            ["do_custom"] = false,
-                            ["do_message"] = false,
-                            ["custom"] = "",
-                            ["do_sound"] = false,
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Icons\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                    },
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["iconSource"] = 0,
-                    ["config"] = {
-                    },
-                    ["inverse"] = false,
-                    ["authorOptions"] = {
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                        [2] = {
-                            ["check"] = {
-                                ["trigger"] = 1,
-                                ["op"] = "==",
-                                ["variable"] = "num",
-                                ["value"] = "2",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = "DoT",
-                                    ["property"] = "sub.4.text_text",
-                                },
-                                [2] = {
-                                    ["value"] = "2143070",
-                                    ["property"] = "displayIcon",
-                                },
-                            },
-                        },
-                        [3] = {
-                            ["check"] = {
-                                ["trigger"] = 1,
-                                ["op"] = "==",
-                                ["variable"] = "num",
-                                ["value"] = "3",
-                            },
-                            ["linked"] = true,
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "sub.3.glow",
-                                },
-                                [2] = {
-                                    ["value"] = "Stack",
-                                    ["property"] = "sub.4.text_text",
-                                },
-                                [3] = {
-                                    ["value"] = "2341435",
-                                    ["property"] = "displayIcon",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                        ["ignoreOptionsEventErrors"] = false,
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                },
-                [16] = {
-                    ["grow"] = "HORIZONTAL",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Circle",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "Azerite-Trait-RingGlow",
-                    ["anchorPoint"] = "CENTER",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["space"] = 2,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["unit"] = "player",
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["frameStrata"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["align"] = "CENTER",
-                    ["sort"] = "none",
-                    ["useLimit"] = false,
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["rotation"] = 0,
-                    ["arcLength"] = 360,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["xOffset"] = 0,
-                    ["internalVersion"] = 82,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["config"] = {
-                    },
-                    ["animate"] = false,
-                    ["gridType"] = "RD",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["stepAngle"] = 15,
-                    ["alpha"] = 1,
-                    ["constantFactor"] = "RADIUS",
-                    ["rowSpace"] = 1,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Circles",
-                    ["yOffset"] = 0,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "qfffVOe0k70",
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Circle"] = false,
-                    },
-                    ["stagger"] = 0,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["fullCircle"] = true,
-                },
-                [17] = {
-                    ["user_y"] = 0,
-                    ["user_x"] = 0,
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = false,
-                    ["adjustedMin"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["desaturateBackground"] = false,
-                    ["foregroundColor"] = {
-                        [1] = 0.31764705882353,
-                        [2] = 1,
-                        [3] = 0.36862745098039,
-                        [4] = 1,
-                    },
-                    ["sameTexture"] = true,
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 5,\
-                   expirationTime = GetTime() + 5,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Circles\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["endAngle"] = 360,
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["desaturateForeground"] = false,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["rotation"] = 0,
-                    ["font"] = "Friz Quadrata TT",
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["text_shadowXOffset"] = 1,
-                            ["text_text"] = "Spread (%p)",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = true,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "timed",
-                            ["type"] = "subtext",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_color"] = {
-                                [1] = 0.31764705882353,
-                                [2] = 1,
-                                [3] = 0.36862745098039,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_n_format"] = "none",
-                            ["text_shadowYOffset"] = -1,
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "None",
-                            ["text_visible"] = true,
-                            ["text_anchorYOffset"] = 6,
-                            ["anchor_point"] = "TOP",
-                            ["text_fontSize"] = 20,
-                            ["anchorXOffset"] = 0,
-                            ["anchorYOffset"] = 0,
-                        },
-                    },
-                    ["height"] = 120,
-                    ["actions"] = {
-                        ["start"] = {
-                            ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\BikeHorn.ogg",
-                            ["do_sound"] = false,
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Circles\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["load"] = {
-                        ["difficulty"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_never"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "",
-                        ["use_encounterid"] = false,
-                    },
-                    ["crop_y"] = 0.41,
-                    ["useAdjustededMax"] = false,
-                    ["fontSize"] = 12,
-                    ["source"] = "import",
-                    ["startAngle"] = 0,
-                    ["config"] = {
-                    },
-                    ["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_20px.tga",
-                    ["mirror"] = false,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "progresstexture",
-                    ["width"] = 120,
-                    ["blendMode"] = "BLEND",
-                    ["frameStrata"] = 1,
-                    ["customText"] = "function()\
-           if WeakAuras.IsOptionsOpen() then\
-               return \"Rippling Hammer\"\
-           end\
-           \
-           if aura_env.state and aura_env.state.spellId then\
-               return aura_env.state.spellId == 348508 and \"Rippling Hammer\" or aura_env.state.spellId == 355568 and \"Cruciform Axe\" or \"Dualblade Scythe\"\
-           end\
-       end",
-                    ["slantMode"] = "INSIDE",
-                    ["tocversion"] = 110100,
-                    ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                    ["adjustedMax"] = "",
-                    ["semver"] = "1.0.1",
-                    ["compress"] = false,
-                    ["id"] = "Liquid Anchor - Circle",
-                    ["uid"] = "BpsFRl1N(fZ",
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
-                    ["auraRotation"] = 0,
-                    ["inverse"] = false,
-                    ["parent"] = "Liquid Anchor - Circles",
-                    ["orientation"] = "ANTICLOCKWISE",
-                    ["crop_x"] = 0.41,
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["backgroundOffset"] = 0,
-                },
-                [18] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Assignment",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "QuestLegendary",
-                    ["anchorPoint"] = "CENTER",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["space"] = 2,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["unit"] = "player",
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["frameStrata"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["align"] = "CENTER",
-                    ["sort"] = "none",
-                    ["useLimit"] = false,
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["rotation"] = 0,
-                    ["arcLength"] = 360,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["xOffset"] = 0,
-                    ["internalVersion"] = 82,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["config"] = {
-                    },
-                    ["animate"] = false,
-                    ["gridType"] = "RD",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["stepAngle"] = 15,
-                    ["alpha"] = 1,
-                    ["constantFactor"] = "RADIUS",
-                    ["rowSpace"] = 1,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Assignments",
-                    ["yOffset"] = 250,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "VECjpisD1nP",
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Assignment"] = false,
-                    },
-                    ["stagger"] = 0,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["fullCircle"] = true,
-                },
-                [19] = {
-                    ["outline"] = "OUTLINE",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["displayText"] = "Soak %c (%p)",
-                    ["customText"] = "function()\
-           return \"Blue\"\
-       end",
-                    ["shadowYOffset"] = -1,
-                    ["anchorPoint"] = "CENTER",
-                    ["displayText_format_p_time_format"] = 0,
-                    ["customTextUpdate"] = "event",
-                    ["automaticWidth"] = "Auto",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["finish"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Assignments\") end",
-                            ["do_custom"] = true,
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["debuffType"] = "HELPFUL",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["spellIds"] = {
-                                },
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 8,\
-                   expirationTime = GetTime() + 8,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Assignments\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end\
-       \
-       \
-       \
-       ",
-                                ["events"] = "",
-                                ["names"] = {
-                                },
-                                ["check"] = "event",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["displayText_format_p_time_mod_rate"] = true,
-                    ["internalVersion"] = 82,
-                    ["wordWrap"] = "WordWrap",
-                    ["font"] = "PT Sans Narrow Bold",
-                    ["version"] = 2,
-                    ["displayText_format_c_format"] = "none",
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["displayText_format_assignmenT_format"] = "none",
-                    ["fontSize"] = 60,
-                    ["source"] = "import",
-                    ["uid"] = "QyTBZgZKrkZ",
-                    ["shadowXOffset"] = 1,
-                    ["displayText_format_assignment_format"] = "none",
-                    ["preferToUpdate"] = false,
-                    ["regionType"] = "text",
-                    ["fixedWidth"] = 200,
-                    ["selfPoint"] = "BOTTOM",
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["parent"] = "Liquid Anchor - Assignments",
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["xOffset"] = 0,
-                    ["yOffset"] = 0,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Assignment",
-                    ["justify"] = "LEFT",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["displayText_format_p_format"] = "timed",
-                    ["config"] = {
-                    },
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 1,
-                                        [2] = 1,
-                                        [3] = 1,
-                                        [4] = 0,
-                                    },
-                                    ["property"] = "color",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                },
-                [20] = {
-                    ["arcLength"] = 360,
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Position Assignment",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["yOffset"] = 20,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Position Assignment"] = false,
-                    },
-                    ["regionType"] = "dynamicgroup",
-                    ["fullCircle"] = true,
-                    ["space"] = 2,
-                    ["frameStrata"] = 1,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["internalVersion"] = 82,
-                    ["rotation"] = 0,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["align"] = "CENTER",
-                    ["anchorPoint"] = "CENTER",
-                    ["selfPoint"] = "TOP",
-                    ["useLimit"] = false,
-                    ["stagger"] = 0,
-                    ["groupIcon"] = "Interface\\CovenantRenown\\CovenantRenownHexagonMask",
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["borderInset"] = 1,
-                    ["config"] = {
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["xOffset"] = 250,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["source"] = "import",
-                    ["customGrow"] = "function(newPositions, activeRegions)\
-           local positions = {\
-               {0, 0},\
-               {-20, -40},\
-               {20, -40},\
-               {-40, -80},\
-               {0, -80},\
-               {40, -80}\
-           }\
-           \
-           for i = 1, #activeRegions do\
-               newPositions[i] = positions[i]\
-           end\
-       end",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["sort"] = "none",
-                    ["alpha"] = 1,
-                    ["animate"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Position Assignments",
-                    ["limit"] = 5,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["grow"] = "CUSTOM",
-                    ["uid"] = "tKDDRFBhozW",
-                    ["gridType"] = "RD",
-                    ["rowSpace"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["radius"] = 200,
-                },
-                [21] = {
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = false,
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
-                                ["customVariables"] = "{\
-           assigned = {\
-               type = \"bool\",\
-               display = \"Assigned\"\
-           }\
-       }",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               for i = 1, 6 do\
-                   allstates[i] = {\
-                       show = true,\
-                       changed = true,\
-                       index = i,\
-                       autoHide = true\
-                   }\
-               end\
-               \
-               allstates[math.random(6)].assigned = true\
-           elseif event == \"STATUS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end\
-       \
-       \
-       \
-       ",
-                                ["names"] = {
-                                },
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["desaturate"] = false,
-                    ["rotation"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["height"] = 50,
-                    ["rotate"] = false,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                    ["source"] = "import",
-                    ["mirror"] = false,
-                    ["regionType"] = "texture",
-                    ["blendMode"] = "BLEND",
-                    ["texture"] = "Interface\\CovenantRenown\\CovenantRenownHexagonMask",
-                    ["alpha"] = 1,
-                    ["parent"] = "Liquid Anchor - Position Assignments",
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Position Assignment",
-                    ["selfPoint"] = "CENTER",
-                    ["frameStrata"] = 1,
-                    ["width"] = 50,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "PYVaaSX2o66",
-                    ["authorOptions"] = {
-                    },
-                    ["config"] = {
-                    },
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                        [2] = {
-                            ["check"] = {
-                                ["trigger"] = 1,
-                                ["variable"] = "assigned",
-                                ["value"] = 1,
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 0.074509806931019,
-                                        [2] = 1,
-                                        [3] = 0.2039215862751,
-                                        [4] = 1,
-                                    },
-                                    ["property"] = "color",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["color"] = {
-                        [1] = 0.98431378602982,
-                        [2] = 0.14901961386204,
-                        [3] = 0.21568629145622,
-                        [4] = 1,
-                    },
-                },
-                [22] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Text",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "Gamepad_Rev_LShoulder_32",
-                    ["anchorPoint"] = "CENTER",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["space"] = 2,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["unit"] = "player",
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["frameStrata"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["align"] = "CENTER",
-                    ["sort"] = "none",
-                    ["useLimit"] = false,
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["rotation"] = 0,
-                    ["arcLength"] = 360,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["xOffset"] = 0,
-                    ["internalVersion"] = 82,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["config"] = {
-                    },
-                    ["animate"] = false,
-                    ["gridType"] = "RD",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["stepAngle"] = 15,
-                    ["alpha"] = 1,
-                    ["constantFactor"] = "RADIUS",
-                    ["rowSpace"] = 1,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Texts",
-                    ["yOffset"] = 120,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "3(EQ7jsOC5a",
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Text"] = false,
-                    },
-                    ["stagger"] = 0,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["fullCircle"] = true,
-                },
-                [23] = {
-                    ["outline"] = "OUTLINE",
-                    ["color"] = {
-                        [1] = 0.92941182851791,
-                        [2] = 0.19215688109398,
-                        [3] = 0.23529413342476,
-                        [4] = 1,
-                    },
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["displayText_format_p_time_format"] = 0,
-                    ["customTextUpdate"] = "event",
-                    ["automaticWidth"] = "Auto",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Texts\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 5,\
-                   expirationTime = GetTime() + 5,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"Texts\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["displayText_format_p_format"] = "timed",
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["selfPoint"] = "BOTTOM",
-                    ["font"] = "PT Sans Narrow Bold",
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["fontSize"] = 40,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 0,
-                    ["displayText"] = "Raid damage in %p",
-                    ["regionType"] = "text",
-                    ["wordWrap"] = "WordWrap",
-                    ["displayText_format_p_time_mod_rate"] = true,
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 1,
-                                        [2] = 1,
-                                        [3] = 1,
-                                        [4] = 0,
-                                    },
-                                    ["property"] = "color",
-                                },
-                            },
-                        },
-                    },
-                    ["preferToUpdate"] = false,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["authorOptions"] = {
-                    },
-                    ["uid"] = "HBDkVKAdJl0",
-                    ["semver"] = "1.0.1",
-                    ["justify"] = "LEFT",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Text",
-                    ["shadowYOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["xOffset"] = 0,
-                    ["config"] = {
-                    },
-                    ["parent"] = "Liquid Anchor - Texts",
-                    ["internalVersion"] = 82,
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["fixedWidth"] = 200,
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                },
-                [24] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Tank Warning Bar",
-                        [2] = "Liquid Anchor - Tank Warning Text",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "UI-Frame-TankIcon",
-                    ["anchorPoint"] = "CENTER",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["space"] = 3,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["unit"] = "player",
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["names"] = {
-                                },
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["frameStrata"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["align"] = "CENTER",
-                    ["sort"] = "none",
-                    ["useLimit"] = false,
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["rotation"] = 0,
-                    ["arcLength"] = 360,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["xOffset"] = 0,
-                    ["internalVersion"] = 82,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["config"] = {
-                    },
-                    ["animate"] = false,
-                    ["gridType"] = "RD",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["stepAngle"] = 15,
-                    ["alpha"] = 1,
-                    ["constantFactor"] = "RADIUS",
-                    ["rowSpace"] = 1,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Tank Warnings",
-                    ["yOffset"] = 170,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
-                    ["uid"] = "EOfpEdjVWb6",
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Tank Warning Bar"] = false,
-                        ["Liquid Anchor - Tank Warning Text"] = false,
-                    },
-                    ["stagger"] = 0,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["fullCircle"] = true,
-                },
-                [25] = {
-                    ["sparkWidth"] = 10,
-                    ["iconSource"] = -1,
-                    ["xOffset"] = 0,
-                    ["adjustedMax"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["sparkRotation"] = 0,
-                    ["backgroundColor"] = {
-                        [1] = 0.031372550874949,
-                        [2] = 0.031372550874949,
-                        [3] = 0.031372550874949,
-                        [4] = 0.80000001192093,
-                    },
-                    ["icon_color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["enableGradient"] = false,
-                    ["keepAspectRatio"] = false,
-                    ["selfPoint"] = "CENTER",
-                    ["barColor"] = {
-                        [1] = 0.98431378602982,
-                        [2] = 0.14901961386204,
-                        [3] = 0.26666668057442,
-                        [4] = 1,
-                    },
-                    ["desaturate"] = false,
-                    ["sparkOffsetY"] = 0,
-                    ["gradientOrientation"] = "HORIZONTAL",
-                    ["load"] = {
-                        ["use_never"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "",
-                        ["use_encounterid"] = false,
-                        ["role"] = {
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["zoneIds"] = "",
-                    },
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["texture"] = "Solid",
-                    ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["spark"] = false,
-                    ["tocversion"] = 110100,
-                    ["alpha"] = 1,
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["displayIcon"] = "132363",
-                    ["sparkOffsetX"] = 0,
-                    ["parent"] = "Liquid Anchor - Tank Warnings",
-                    ["adjustedMin"] = "",
-                    ["cooldownSwipe"] = true,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["cooldownEdge"] = false,
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               local duration = 5 + math.random(5)\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 10,\
-                   expirationTime = GetTime() + duration,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"TankWarningsBars\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["type"] = "subforeground",
-                        },
-                        [3] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "Taunt",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = 4,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["anchor_point"] = "LEFT",
-                            ["text_fontSize"] = 18,
-                            ["anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                        },
-                        [4] = {
-                            ["text_text_format_t_time_precision"] = 1,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text_format_t_time_legacy_floor"] = false,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_legacy_floor"] = true,
-                            ["rotateText"] = "NONE",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_shadowYOffset"] = 0,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_fontSize"] = 18,
-                            ["text_text_format_t_time_dynamic_threshold"] = 10,
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_text_format_t_time_format"] = 0,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["text_text_format_t_format"] = "timed",
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = -2,
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["anchorXOffset"] = 0,
-                            ["text_anchorYOffset"] = -1,
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text_format_t_time_mod_rate"] = true,
-                            ["text_text"] = "%p / %t",
-                            ["text_text_format_p_format"] = "timed",
-                            ["anchor_point"] = "RIGHT",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_p_time_dynamic_threshold"] = 5,
-                            ["text_visible"] = true,
-                        },
-                        [5] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "bar",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                        [6] = {
-                            ["border_size"] = 1,
-                            ["border_offset"] = 1,
-                            ["anchor_area"] = "icon",
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                    },
-                    ["height"] = 40,
-                    ["textureSource"] = "LSM",
-                    ["sparkBlendMode"] = "ADD",
-                    ["useAdjustededMax"] = false,
-                    ["source"] = "import",
-                    ["zoom"] = 0.3,
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["uid"] = "z7HDcyzRlg6",
-                    ["authorOptions"] = {
-                    },
-                    ["icon_side"] = "LEFT",
-                    ["cooldownTextDisabled"] = false,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["sparkHeight"] = 30,
-                    ["limitWeakAuras"] = {
-                        ["hash"] = "0bf6b48a855637aa0397388ef4dc9437a29c8f0a32e93b3c6e050d64da07f02c",
-                    },
-                    ["sparkHidden"] = "NEVER",
-                    ["width"] = 270,
-                    ["semver"] = "1.0.1",
-                    ["useCooldownModRate"] = true,
-                    ["id"] = "Liquid Anchor - Tank Warning Bar",
-                    ["icon"] = true,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["cooldown"] = true,
-                    ["actions"] = {
-                        ["start"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                            ["do_sound"] = false,
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"TankWarningsBars\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                            ["custom"] = "",
-                            ["do_custom"] = false,
-                        },
-                    },
-                    ["inverse"] = false,
-                    ["config"] = {
-                    },
-                    ["orientation"] = "HORIZONTAL",
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["preferToUpdate"] = false,
-                },
-                [26] = {
-                    ["outline"] = "OUTLINE",
-                    ["authorOptions"] = {
-                    },
-                    ["displayText"] = "Taunt boss",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["displayText_format_p_time_format"] = 0,
-                    ["customTextUpdate"] = "event",
-                    ["automaticWidth"] = "Auto",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] =
-                            "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"TankWarningsTexts\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["names"] = {
-                                },
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["subeventPrefix"] = "SPELL",
-                                ["check"] = "event",
-                                ["custom_type"] = "stateupdate",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 5,\
-                   expirationTime = GetTime() + 5,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"TankWarningsTexts\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["displayText_format_p_time_mod_rate"] = true,
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["font"] = "PT Sans Narrow Bold",
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["fontSize"] = 40,
-                    ["source"] = "import",
-                    ["shadowXOffset"] = 0,
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["regionType"] = "text",
-                    ["wordWrap"] = "WordWrap",
-                    ["displayText_format_p_format"] = "timed",
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["value"] = {
-                                        [1] = 1,
-                                        [2] = 1,
-                                        [3] = 1,
-                                        [4] = 0,
-                                    },
-                                    ["property"] = "color",
-                                },
-                            },
-                        },
-                    },
-                    ["preferToUpdate"] = false,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["color"] = {
-                        [1] = 0.92941182851791,
-                        [2] = 0.19215688109398,
-                        [3] = 0.23529413342476,
-                        [4] = 1,
-                    },
-                    ["uid"] = "Fx1e38OCtZl",
-                    ["justify"] = "LEFT",
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Tank Warning Text",
-                    ["shadowYOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["parent"] = "Liquid Anchor - Tank Warnings",
-                    ["config"] = {
-                    },
-                    ["xOffset"] = 0,
-                    ["internalVersion"] = 82,
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["fixedWidth"] = 200,
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["selfPoint"] = "BOTTOM",
-                },
-                [27] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Tank Icon",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "UI-Frame-TankIcon",
-                    ["gridType"] = "RD",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["rowSpace"] = 1,
-                    ["stepAngle"] = 15,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["alpha"] = 1,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Tank Icon"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rotation"] = 0,
-                    ["stagger"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["anchorPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["borderInset"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["yOffset"] = -120,
-                    ["source"] = "import",
-                    ["uid"] = "9mIQD2uqDUL",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["frameStrata"] = 1,
-                    ["space"] = 3,
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Tank Icons",
-                    ["sort"] = "none",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["internalVersion"] = 82,
-                    ["config"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["xOffset"] = 240,
-                },
-                [28] = {
-                    ["iconSource"] = -1,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["adjustedMax"] = "",
-                    ["adjustedMin"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["cooldownSwipe"] = true,
-                    ["cooldownEdge"] = false,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"TankIcons\") end",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               allstates[1] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 20,\
-                   expirationTime = GetTime() + 10 + math.random(10),\
-                   stacks = math.random(4),\
-                   unit = \"player\",\
-                   icon = 132363,\
-                   autoHide = true\
-               }\
-               \
-               allstates[2] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 20,\
-                   expirationTime = GetTime() + 10 + math.random(10),\
-                   stacks = math.random(4),\
-                   icon = 464973,\
-                   unit = \"player\",\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"TankIcons\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["names"] = {
-                                },
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["desaturate"] = false,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text"] = "%p",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["anchorXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_anchorYOffset"] = -2,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["anchor_point"] = "CENTER",
-                            ["text_fontSize"] = 32,
-                            ["text_text_format_p_time_dynamic_threshold"] = 3,
-                            ["text_text_format_p_format"] = "timed",
-                        },
-                        [3] = {
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text"] = "%stacks",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "BOTTOMRIGHT",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_stacks_format"] = "none",
-                            ["text_shadowXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = -6,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_anchorYOffset"] = 4,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["anchorYOffset"] = 0,
-                            ["anchor_point"] = "OUTER_BOTTOMRIGHT",
-                            ["text_fontSize"] = 20,
-                            ["text_text_format_p_time_dynamic_threshold"] = 3,
-                            ["text_text_format_p_format"] = "timed",
-                        },
-                        [4] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "%unit",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_text_format_name_format"] = "none",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_shadowYOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_text_format_unit_realm_name"] = "never",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_unit_abbreviate"] = true,
-                            ["text_anchorYOffset"] = 6,
-                            ["text_text_format_unit_format"] = "Unit",
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_visible"] = true,
-                            ["text_text_format_unit_color"] = "class",
-                            ["anchor_point"] = "INNER_TOP",
-                            ["text_fontSize"] = 18,
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_unit_abbreviate_max"] = 8,
-                        },
-                        [5] = {
-                            ["border_offset"] = 1,
-                            ["border_size"] = 1,
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                    },
-                    ["height"] = 80,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["useAdjustededMax"] = false,
-                    ["source"] = "import",
-                    ["zoom"] = 0.3,
-                    ["uid"] = "MX(c8ZoiUF9",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["keepAspectRatio"] = false,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "icon",
-                    ["cooldown"] = true,
-                    ["displayIcon"] = "132363",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["width"] = 80,
-                    ["frameStrata"] = 1,
-                    ["cooldownTextDisabled"] = true,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Tank Icon",
-                    ["alpha"] = 1,
-                    ["useCooldownModRate"] = true,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["parent"] = "Liquid Anchor - Tank Icons",
-                    ["config"] = {
-                    },
-                    ["inverse"] = false,
-                    ["icon"] = true,
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["xOffset"] = 0,
-                },
-                [29] = {
-                    ["grow"] = "DOWN",
-                    ["controlledChildren"] = {
-                        [1] = "Liquid Anchor - Co-Tank Icon",
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["parent"] = "Liquid Anchors (don't rename these)",
-                    ["preferToUpdate"] = false,
-                    ["groupIcon"] = "UI-Frame-TankIcon",
-                    ["gridType"] = "RD",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["rowSpace"] = 1,
-                    ["stepAngle"] = 15,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["unit"] = "player",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["alpha"] = 1,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["sortHybridTable"] = {
-                        ["Liquid Anchor - Co-Tank Icon"] = false,
-                    },
-                    ["fullCircle"] = true,
-                    ["rotation"] = 0,
-                    ["stagger"] = 0,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                    },
-                    ["anchorPoint"] = "CENTER",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["borderInset"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["yOffset"] = -120,
-                    ["source"] = "import",
-                    ["uid"] = "mNQnLG4o(NH",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["frameStrata"] = 1,
-                    ["space"] = 3,
-                    ["constantFactor"] = "RADIUS",
-                    ["animate"] = false,
-                    ["borderOffset"] = 4,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Co-Tank Icons",
-                    ["sort"] = "none",
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["internalVersion"] = 82,
-                    ["config"] = {
-                    },
-                    ["authorOptions"] = {
-                    },
-                    ["selfPoint"] = "TOP",
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["xOffset"] = 340,
-                },
-                [30] = {
-                    ["iconSource"] = -1,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["adjustedMax"] = "",
-                    ["adjustedMin"] = "",
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["cooldownSwipe"] = true,
-                    ["cooldownEdge"] = false,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                            ["custom"] = "if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"CoTankIcons\") end\
-       \
-       aura_env.tankClasses = {\
-           [1] = \"WARRIOR\",\
-           [2] = \"PALADIN\",\
-           [3] = \"DEATHKNIGHT\",\
-           [4] = \"DRUID\",\
-           [5] = \"MONK\",\
-           [6] = \"DEMONHUNTER\"\
-       }",
-                            ["do_custom"] = true,
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["custom_type"] = "stateupdate",
-                                ["custom_hide"] = "timed",
-                                ["event"] = "Health",
-                                ["unit"] = "player",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom"] = "function(allstates, event)\
-           if event == \"OPTIONS\" then\
-               local randomTankClass = aura_env.tankClasses[math.random(#aura_env.tankClasses)]\
-               local colorStr = RAID_CLASS_COLORS[randomTankClass].colorStr\
-               local coloredName = string.format(\"|c%sCo-tank\", colorStr)\
-               \
-               allstates[1] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 20,\
-                   expirationTime = GetTime() + 10 + math.random(10),\
-                   stacks = math.random(4),\
-                   name = coloredName,\
-                   icon = 132363,\
-                   autoHide = true\
-               }\
-               \
-               allstates[2] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 20,\
-                   expirationTime = GetTime() + 10 + math.random(10),\
-                   stacks = math.random(4),\
-                   icon = 464973,\
-                   name = coloredName,\
-                   autoHide = true\
-               }\
-           elseif event == \"STATUS\" then\
-               if AuraUpdater then AuraUpdater:UpdateAnchorSettings(\"CoTankIcons\") end\
-               \
-               allstates[\"\"] = {\
-                   show = true,\
-                   changed = true,\
-                   progressType = \"timed\",\
-                   duration = 0.1,\
-                   expirationTime = GetTime() + 0.1,\
-                   autoHide = true\
-               }\
-               \
-               return true\
-           end\
-       end",
-                                ["names"] = {
-                                },
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
-                                ["events"] = "",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["internalVersion"] = 82,
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
-                    ["selfPoint"] = "CENTER",
-                    ["desaturate"] = false,
-                    ["version"] = 2,
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                        [2] = {
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_text"] = "%p",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["anchorXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowXOffset"] = 0,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_anchorYOffset"] = -2,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_p_format"] = "timed",
-                            ["anchor_point"] = "CENTER",
-                            ["text_fontSize"] = 32,
-                            ["text_text_format_p_time_dynamic_threshold"] = 3,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                        },
-                        [3] = {
-                            ["text_text_format_p_time_format"] = 0,
-                            ["text_text"] = "%stacks",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_selfPoint"] = "BOTTOMRIGHT",
-                            ["text_automaticWidth"] = "Auto",
-                            ["text_fixedWidth"] = 64,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_text_format_p_time_legacy_floor"] = false,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_stacks_format"] = "none",
-                            ["text_shadowXOffset"] = 0,
-                            ["type"] = "subtext",
-                            ["text_anchorXOffset"] = -6,
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_text_format_p_time_precision"] = 1,
-                            ["text_shadowYOffset"] = 0,
-                            ["text_anchorYOffset"] = 4,
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_fontType"] = "OUTLINE",
-                            ["anchorYOffset"] = 0,
-                            ["anchor_point"] = "OUTER_BOTTOMRIGHT",
-                            ["text_fontSize"] = 20,
-                            ["text_text_format_p_time_dynamic_threshold"] = 3,
-                            ["text_text_format_p_format"] = "timed",
-                        },
-                        [4] = {
-                            ["text_shadowXOffset"] = 0,
-                            ["text_text_format_s_format"] = "none",
-                            ["text_text"] = "%name",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["text_selfPoint"] = "AUTO",
-                            ["text_text_format_name_format"] = "none",
-                            ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
-                            ["text_justify"] = "CENTER",
-                            ["rotateText"] = "NONE",
-                            ["type"] = "subtext",
-                            ["text_color"] = {
-                                [1] = 1,
-                                [2] = 1,
-                                [3] = 1,
-                                [4] = 1,
-                            },
-                            ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_anchorYOffset"] = 6,
-                            ["text_text_format_unit_format"] = "none",
-                            ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_visible"] = true,
-                            ["text_shadowYOffset"] = 0,
-                            ["anchor_point"] = "INNER_TOP",
-                            ["text_fontSize"] = 18,
-                            ["anchorXOffset"] = 0,
-                            ["text_automaticWidth"] = "Auto",
-                        },
-                        [5] = {
-                            ["border_offset"] = 1,
-                            ["border_size"] = 1,
-                            ["border_color"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["border_visible"] = true,
-                            ["border_edge"] = "Square Full White",
-                            ["type"] = "subborder",
-                        },
-                    },
-                    ["height"] = 80,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["useAdjustededMax"] = false,
-                    ["source"] = "import",
-                    ["zoom"] = 0.3,
-                    ["uid"] = "YVUYS65kCaV",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["keepAspectRatio"] = false,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "icon",
-                    ["cooldown"] = true,
-                    ["displayIcon"] = "132363",
-                    ["authorOptions"] = {
-                    },
-                    ["preferToUpdate"] = false,
-                    ["width"] = 80,
-                    ["frameStrata"] = 1,
-                    ["cooldownTextDisabled"] = true,
-                    ["semver"] = "1.0.1",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Liquid Anchor - Co-Tank Icon",
-                    ["alpha"] = 1,
-                    ["useCooldownModRate"] = true,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["parent"] = "Liquid Anchor - Co-Tank Icons",
-                    ["config"] = {
-                    },
-                    ["inverse"] = false,
-                    ["icon"] = true,
-                    ["conditions"] = {
-                        [1] = {
-                            ["check"] = {
-                                ["trigger"] = -1,
-                                ["variable"] = "customcheck",
-                                ["value"] = "function()\
-           return not WeakAuras.IsOptionsOpen()\
-       end",
-                            },
-                            ["changes"] = {
-                                [1] = {
-                                    ["property"] = "alpha",
-                                },
-                            },
-                        },
-                    },
-                    ["information"] = {
-                        ["forceEvents"] = false,
-                    },
-                    ["xOffset"] = 0,
-                },
-            },
-            ["v"] = 2000,
-        },
-    },
     -- Interrupt anchor
     {
         ["uid"] = "OhDHsn0qc44",
@@ -25414,8 +17993,8 @@ wa.data = {
         ["uid"] = "AM-TKfAuaj1Fhw",
         ["name"] = "[NHF] Liberation of Undermine",
         ["isOptional"] = "1",
-        ["semver"] = "0.0.2",
-        ["version"] = "2",
+        ["semver"] = "0.0.3",
+        ["version"] = "3",
         ["import"] = {
             ["d"] = {
                 ["controlledChildren"] = {
@@ -25486,7 +18065,7 @@ wa.data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["version"] = "2",
+                ["version"] = "3",
                 ["subRegions"] = {
                 },
                 ["load"] = {
@@ -25524,18 +18103,18 @@ wa.data = {
                 ["xOffset"] = 0,
                 ["AMOriginalUUID"] = "TKfAuaj1Fhw",
                 ["borderOffset"] = 4,
-                ["semver"] = "0.0.2",
+                ["semver"] = "0.0.3",
                 ["tocversion"] = 110007,
                 ["id"] = "[NHF] Liberation of Undermine",
                 ["authorOptions"] = {
                 },
-                ["frameStrata"] = 1,
+                ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["uid"] = "AM-TKfAuaj1Fhw",
                 ["borderInset"] = 1,
                 ["config"] = {
                 },
-                ["alpha"] = 1,
+                ["uid"] = "AM-TKfAuaj1Fhw",
+                ["frameStrata"] = 1,
                 ["conditions"] = {
                 },
                 ["information"] = {
@@ -25644,26 +18223,26 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["xOffset"] = 0,
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
+                    ["parent"] = "[NHF] Liberation of Undermine",
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "qbLXRxhiFNZ",
                     ["tocversion"] = 110007,
                     ["id"] = "[1] Vexie and the Geargrinders",
                     ["groupIcon"] = "6392628",
-                    ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-qbLXRxhiFNZ",
                     ["config"] = {
                     },
                     ["borderInset"] = 1,
-                    ["frameStrata"] = 1,
+                    ["uid"] = "AM-qbLXRxhiFNZ",
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["parent"] = "[NHF] Liberation of Undermine",
+                    ["selfPoint"] = "CENTER",
                 },
                 [2] = {
                     ["grow"] = "UP",
@@ -25677,10 +18256,29 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Carrying Oil"] = false,
                     },
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
+                    ["stepAngle"] = 15,
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["selfPoint"] = "BOTTOM",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -25710,34 +18308,15 @@ wa.data = {
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
                     ["internalVersion"] = 82,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["arcLength"] = 360,
+                    ["xOffset"] = 0,
                     ["AMOriginalUUID"] = "nU14rTw9w0h",
                     ["gridType"] = "RD",
                     ["stagger"] = 0,
+                    ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
                     ["authorOptions"] = {
@@ -25773,23 +18352,23 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["source"] = "import",
                     ["animate"] = false,
+                    ["source"] = "import",
                     ["AMModified"] = true,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["alpha"] = 1,
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["stepAngle"] = 15,
+                    ["borderEdge"] = "Square Full White",
                     ["tocversion"] = 110007,
                     ["id"] = "Vexie Big Icon",
                     ["anchorPoint"] = "BOTTOM",
@@ -25803,7 +18382,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["xOffset"] = 0,
+                    ["arcLength"] = 360,
                 },
                 [3] = {
                     ["sparkWidth"] = 10,
@@ -25846,15 +18425,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3009",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -26097,8 +18676,8 @@ wa.data = {
                     ["anchorFrameType"] = "SCREEN",
                     ["frameStrata"] = 2,
                     ["cooldown"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Carrying Oil",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["width"] = 65,
                     ["backgroundColor"] = {
@@ -26134,7 +18713,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["source"] = "import",
+                    ["regionType"] = "dynamicgroup",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -26142,7 +18721,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 10,
-                    ["grow"] = "UP",
+                    ["rowSpace"] = 1,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -26171,9 +18750,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["rowSpace"] = 1,
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
+                    ["grow"] = "UP",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -26194,9 +18771,11 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["selfPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "JSMfOlF3IU4",
                     ["useLimit"] = false,
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["gridType"] = "RD",
                     ["config"] = {
                     },
@@ -26230,22 +18809,22 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["AMModified"] = true,
+                    ["source"] = "import",
                     ["animate"] = false,
-                    ["xOffset"] = 0,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["borderEdge"] = "Square Full White",
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["frameStrata"] = 1,
                     ["borderOffset"] = 4,
-                    ["regionType"] = "dynamicgroup",
+                    ["xOffset"] = 0,
                     ["tocversion"] = 110007,
                     ["id"] = "Vexie Small Icon",
                     ["authorOptions"] = {
@@ -26255,7 +18834,7 @@ wa.data = {
                     ["internalVersion"] = 82,
                     ["borderInset"] = 1,
                     ["fullCircle"] = true,
-                    ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
@@ -26305,15 +18884,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3009",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -26547,8 +19126,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Protective Plating ",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["actions"] = {
@@ -26622,15 +19201,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3009",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -26879,8 +19458,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Soaked in Oil ",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["icon"] = false,
@@ -26930,7 +19509,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -26939,11 +19518,11 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3009",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3009",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -27193,8 +19772,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Tank Buster Me",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["width"] = 60,
                     ["backgroundColor"] = {
@@ -27209,13 +19788,13 @@ wa.data = {
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
-                    ["information"] = {
-                    },
                     ["barColor2"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 0,
                         [4] = 1,
+                    },
+                    ["information"] = {
                     },
                 },
                 [8] = {
@@ -27228,7 +19807,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-bar.png",
                     ["gridType"] = "RD",
-                    ["yOffset"] = 0,
+                    ["limit"] = 5,
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
                     ["sortHybridTable"] = {
@@ -27261,38 +19840,19 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["xOffset"] = 0,
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
+                    ["yOffset"] = 0,
                     ["useLimit"] = false,
+                    ["align"] = "CENTER",
+                    ["selfPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "I7CX09sSFU6",
-                    ["anchorPoint"] = "BOTTOM",
+                    ["xOffset"] = 0,
                     ["rotation"] = 0,
-                    ["parent"] = "[1] Vexie and the Geargrinders",
+                    ["anchorPoint"] = "BOTTOM",
                     ["uid"] = "AM-I7CX09sSFU6",
                     ["subRegions"] = {
                     },
+                    ["parent"] = "[1] Vexie and the Geargrinders",
                     ["radius"] = 200,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
                     ["load"] = {
                         ["talent"] = {
                             ["multi"] = {
@@ -27318,23 +19878,42 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["alpha"] = 1,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["source"] = "import",
-                    ["animate"] = false,
+                    ["alpha"] = 1,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
                     ["sort"] = "none",
+                    ["stepAngle"] = 15,
                     ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["borderInset"] = 1,
                     ["borderOffset"] = 4,
-                    ["limit"] = 5,
+                    ["animate"] = false,
                     ["tocversion"] = 110007,
                     ["id"] = "Vexie Bars",
                     ["AMModified"] = true,
@@ -27368,28 +19947,10 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Repair Progress"] = false,
                     },
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["authorOptions"] = {
-                    },
+                    ["rowSpace"] = 1,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -27418,7 +19979,10 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["rowSpace"] = 1,
+                    ["authorOptions"] = {
+                    },
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -27439,8 +20003,6 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["align"] = "CENTER",
-                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "tBKRWP6YTNz",
                     ["selfPoint"] = "BOTTOM",
                     ["stagger"] = 0,
@@ -27451,7 +20013,24 @@ wa.data = {
                     },
                     ["radius"] = 200,
                     ["xOffset"] = 0,
-                    ["AMModified"] = true,
+                    ["load"] = {
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["alpha"] = 1,
                     ["backdropColor"] = {
                         [1] = 1,
@@ -27459,31 +20038,31 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["anchorPoint"] = "BOTTOM",
+                    ["AMModified"] = true,
                     ["source"] = "import",
-                    ["gridWidth"] = 5,
+                    ["anchorPoint"] = "BOTTOM",
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["regionType"] = "dynamicgroup",
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
+                    ["gridWidth"] = 5,
                     ["tocversion"] = 110007,
                     ["id"] = "Vexie Special Bars",
                     ["grow"] = "UP",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-specialbar.png",
-                    ["borderInset"] = 1,
                     ["uid"] = "AM-tBKRWP6YTNz",
+                    ["borderInset"] = 1,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -27537,15 +20116,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3009",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -27577,89 +20156,89 @@ wa.data = {
                                 ["type"] = "custom",
                                 ["subeventSuffix"] = "_CAST_START",
                                 ["debuffType"] = "HELPFUL",
-                                ["subeventPrefix"] = "SPELL",
-                                ["event"] = "Health",
                                 ["unit"] = "player",
+                                ["event"] = "Health",
+                                ["subeventPrefix"] = "SPELL",
                                 ["names"] = {
                                 },
                                 ["spellIds"] = {
                                 },
-                                ["events"] = "TRIGGER:2, CLEU:SPELL_ENERGIZE:SPELL_AURA_APPLIED, LIQUID_CUSTOM_EVENT",
+                                ["custom"] = "function(allstates, event, ...)\
+           if event == \"OPTIONS\" then\
+               local repaired = math.random(10) * 2\
+               local power = repaired + math.random(10, 60)\
+               \
+               allstates[\"\"] = {\
+                   show = true,\
+                   changed = true,\
+                   progressType = \"static\",\
+                   value = power,\
+                   total = 100,\
+                   repaired = repaired,\
+                   additionalProgress = {\
+                       {\
+                           min = power - repaired,\
+                           max = power\
+                       }\
+                   }\
+               }\
+           elseif event == \"LIQUID_CUSTOM_EVENT\" then\
+               local id = ...\
+               \
+               if id ~= aura_env.id then return end\
+               \
+               allstates[\"\"] = {\
+                   show = true,\
+                   changed = true,\
+                   progressType = \"static\",\
+                   value = aura_env.power,\
+                   total = 100,\
+                   repaired = aura_env.repaired,\
+                   additionalProgress = {\
+                       {\
+                           min = aura_env.power - aura_env.repaired,\
+                           max = aura_env.power\
+                       }\
+                   }\
+               }\
+               \
+               return true\
+           elseif event == \"TRIGGER\" then\
+               local _, triggerStates = ...\
+               local triggerState = triggerStates and triggerStates[\"\"]\
+               \
+               if not (triggerState and triggerState.show) then\
+                   local state = allstates[\"\"]\
+                   \
+                   if state then\
+                       state.show = false\
+                       state.changed = true\
+                       \
+                       return true\
+                   end\
+               end\
+               \
+               aura_env.power = triggerState.value or 0\
+               \
+               WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
+           elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
+               local _, subEvent, _, _, _, _, _, _, _, _, _, spellID, _, _, amount = ...\
+               \
+               if subEvent == \"SPELL_ENERGIZE\" and spellID == 460153 then -- Repair\
+                   aura_env.repaired = aura_env.repaired + (amount or 0)\
+                   \
+                   WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
+               elseif subEvent == \"SPELL_AURA_APPLIED\" and spellID == 460603 then -- Mechanical Breakdown\
+                   aura_env.power = 0\
+                   aura_env.repaired = 0\
+                   \
+                   WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
+               end\
+           end\
+       end",
                                 ["custom_type"] = "stateupdate",
                                 ["check"] = "event",
-                                ["custom"] = "function(allstates, event, ...)\
-                  if event == \"OPTIONS\" then\
-                      local repaired = math.random(10) * 2\
-                      local power = repaired + math.random(10, 60)\
-                      \
-                      allstates[\"\"] = {\
-                          show = true,\
-                          changed = true,\
-                          progressType = \"static\",\
-                          value = power,\
-                          total = 100,\
-                          repaired = repaired,\
-                          additionalProgress = {\
-                              {\
-                                  min = power - repaired,\
-                                  max = power\
-                              }\
-                          }\
-                      }\
-                  elseif event == \"LIQUID_CUSTOM_EVENT\" then\
-                      local id = ...\
-                      \
-                      if id ~= aura_env.id then return end\
-                      \
-                      allstates[\"\"] = {\
-                          show = true,\
-                          changed = true,\
-                          progressType = \"static\",\
-                          value = aura_env.power,\
-                          total = 100,\
-                          repaired = aura_env.repaired,\
-                          additionalProgress = {\
-                              {\
-                                  min = aura_env.power - aura_env.repaired,\
-                                  max = aura_env.power\
-                              }\
-                          }\
-                      }\
-                      \
-                      return true\
-                  elseif event == \"TRIGGER\" then\
-                      local _, triggerStates = ...\
-                      local triggerState = triggerStates and triggerStates[\"\"]\
-                      \
-                      if not (triggerState and triggerState.show) then\
-                          local state = allstates[\"\"]\
-                          \
-                          if state then\
-                              state.show = false\
-                              state.changed = true\
-                              \
-                              return true\
-                          end\
-                      end\
-                      \
-                      aura_env.power = triggerState.value or 0\
-                      \
-                      WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
-                  elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
-                      local _, subEvent, _, _, _, _, _, _, _, _, _, spellID, _, _, amount = ...\
-                      \
-                      if subEvent == \"SPELL_ENERGIZE\" and spellID == 460153 then -- Repair\
-                          aura_env.repaired = aura_env.repaired + (amount or 0)\
-                          \
-                          WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
-                      elseif subEvent == \"SPELL_AURA_APPLIED\" and spellID == 460603 then -- Mechanical Breakdown\
-                          aura_env.power = 0\
-                          aura_env.repaired = 0\
-                          \
-                          WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
-                      end\
-                  end\
-              end",
+                                ["events"] = "TRIGGER:2, CLEU:SPELL_ENERGIZE:SPELL_AURA_APPLIED, LIQUID_CUSTOM_EVENT",
                                 ["custom_hide"] = "timed",
                                 ["customVariables"] = "{\
                   value = true,\
@@ -27694,24 +20273,24 @@ wa.data = {
                             ["trigger"] = {
                                 ["useMatch_count"] = true,
                                 ["type"] = "aura2",
-                                ["subeventSuffix"] = "_CAST_START",
                                 ["auraspellids"] = {
                                     [1] = "460603",
                                 },
-                                ["subeventPrefix"] = "SPELL",
+                                ["auranames"] = {
+                                },
+                                ["unit"] = "boss",
                                 ["fetchTooltip"] = false,
                                 ["event"] = "Health",
-                                ["unit"] = "boss",
+                                ["names"] = {
+                                },
                                 ["match_countOperator"] = ">",
                                 ["useName"] = false,
                                 ["spellIds"] = {
                                 },
                                 ["useExactSpellId"] = true,
                                 ["match_count"] = "0",
-                                ["names"] = {
-                                },
-                                ["auranames"] = {
-                                },
+                                ["subeventPrefix"] = "SPELL",
+                                ["subeventSuffix"] = "_CAST_START",
                                 ["debuffType"] = "BOTH",
                             },
                             ["untrigger"] = {
@@ -27784,10 +20363,10 @@ wa.data = {
                             ["text_text_format_p_time_format"] = 0,
                             ["text_shadowYOffset"] = -1,
                             ["text_visible"] = true,
-                            ["text_wordWrap"] = "WordWrap",
+                            ["text_text_format_c2_format"] = "none",
                             ["text_fontType"] = "None",
                             ["text_text_format_c1_format"] = "none",
-                            ["text_text_format_c2_format"] = "none",
+                            ["text_wordWrap"] = "WordWrap",
                             ["anchor_point"] = "INNER_RIGHT",
                             ["text_fontSize"] = 12,
                             ["anchorXOffset"] = 0,
@@ -27860,8 +20439,8 @@ wa.data = {
                     },
                     ["uid"] = "AM-uX09n91eEi6",
                     ["semver"] = "1.0.1",
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Repair Progress",
+                    ["sparkHidden"] = "NEVER",
                     ["anchorFrameType"] = "SCREEN",
                     ["frameStrata"] = 2,
                     ["width"] = 500,
@@ -27909,8 +20488,7 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Vexie Taunt Notification"] = false,
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["borderEdge"] = "Square Full White",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -27918,7 +20496,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["internalVersion"] = 82,
+                    ["radius"] = 200,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -27946,8 +20524,9 @@ wa.data = {
                         },
                     },
                     ["columnSpace"] = 1,
-                    ["radius"] = 200,
-                    ["gridType"] = "RD",
+                    ["internalVersion"] = 82,
+                    ["authorOptions"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -27969,17 +20548,25 @@ wa.data = {
                         },
                     },
                     ["align"] = "CENTER",
-                    ["parent"] = "[1] Vexie and the Geargrinders",
+                    ["fullCircle"] = true,
                     ["AMOriginalUUID"] = "BR5UKbL5xZy",
+                    ["gridType"] = "RD",
+                    ["stagger"] = 0,
                     ["selfPoint"] = "TOP",
-                    ["rotation"] = 0,
                     ["config"] = {
                     },
-                    ["uid"] = "AM-BR5UKbL5xZy",
                     ["subRegions"] = {
                     },
+                    ["uid"] = "AM-BR5UKbL5xZy",
                     ["anchorPoint"] = "CENTER",
                     ["AMModified"] = true,
+                    ["alpha"] = 1,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -27998,30 +20585,22 @@ wa.data = {
                             },
                         },
                     },
-                    ["alpha"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["frameStrata"] = 1,
                     ["source"] = "import",
-                    ["animate"] = false,
+                    ["frameStrata"] = 1,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
                     ["sort"] = "none",
+                    ["stepAngle"] = 15,
                     ["limit"] = 5,
-                    ["regionType"] = "dynamicgroup",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["animate"] = false,
                     ["tocversion"] = 110007,
                     ["id"] = "Vexie Texts",
                     ["arcLength"] = 360,
@@ -28030,12 +20609,12 @@ wa.data = {
                     ["useLimit"] = false,
                     ["borderInset"] = 1,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-text.png",
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["fullCircle"] = true,
+                    ["parent"] = "[1] Vexie and the Geargrinders",
                 },
                 [12] = {
                     ["outline"] = "OUTLINE",
@@ -28160,7 +20739,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -28169,11 +20748,11 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3009",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3009",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -28181,8 +20760,11 @@ wa.data = {
                     },
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["displayText_format_p_time_legacy_floor"] = false,
+                    ["fixedWidth"] = 200,
                     ["regionType"] = "text",
+                    ["displayText_format_p_time_legacy_floor"] = false,
+                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["AMOriginalUUID"] = "yRtAmR3AgrO",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -28203,9 +20785,6 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "yRtAmR3AgrO",
-                    ["fixedWidth"] = 200,
                     ["displayText_format_p_time_precision"] = 1,
                     ["color"] = {
                         [1] = 1,
@@ -28225,7 +20804,7 @@ wa.data = {
                     ["parent"] = "Vexie Texts",
                     ["uid"] = "AM-yRtAmR3AgrO",
                     ["displayText"] = "Taunt Now",
-                    ["yOffset"] = 0,
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -28236,7 +20815,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["yOffset"] = 0,
                 },
                 [13] = {
                     ["grow"] = "UP",
@@ -28250,7 +20829,7 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Tank Buster Co-Tank"] = false,
                     },
-                    ["parent"] = "[1] Vexie and the Geargrinders",
+                    ["borderEdge"] = "Square Full White",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -28258,7 +20837,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["useLimit"] = false,
+                    ["gridType"] = "RD",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -28286,14 +20865,18 @@ wa.data = {
                         },
                     },
                     ["columnSpace"] = 1,
-                    ["internalVersion"] = 82,
-                    ["gridType"] = "RD",
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
                     ["radius"] = 200,
+                    ["parent"] = "[1] Vexie and the Geargrinders",
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
+                    ["fullCircle"] = true,
                     ["AMOriginalUUID"] = "8B5Xs9R0mOZ",
+                    ["selfPoint"] = "BOTTOM",
                     ["rotation"] = 0,
                     ["stagger"] = 0,
+                    ["borderInset"] = 1,
+                    ["subRegions"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -28314,9 +20897,6 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["borderInset"] = 1,
-                    ["subRegions"] = {
-                    },
                     ["yOffset"] = 0,
                     ["load"] = {
                         ["talent"] = {
@@ -28336,7 +20916,6 @@ wa.data = {
                             },
                         },
                     },
-                    ["AMModified"] = true,
                     ["alpha"] = 1,
                     ["backdropColor"] = {
                         [1] = 1,
@@ -28344,23 +20923,23 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["gridWidth"] = 5,
+                    ["AMModified"] = true,
                     ["source"] = "import",
-                    ["animate"] = false,
+                    ["gridWidth"] = 5,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
                     ["sort"] = "none",
+                    ["stepAngle"] = 15,
                     ["limit"] = 5,
-                    ["regionType"] = "dynamicgroup",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["animate"] = false,
                     ["tocversion"] = 110007,
                     ["id"] = "Vexie Co-Tank Icon",
                     ["arcLength"] = 360,
@@ -28376,7 +20955,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["fullCircle"] = true,
+                    ["internalVersion"] = 82,
                 },
                 [14] = {
                     ["sparkWidth"] = 10,
@@ -28415,7 +20994,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -28424,11 +21003,11 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3009",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3009",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -28623,14 +21202,14 @@ wa.data = {
                             ["text_anchorYOffset"] = -5,
                             ["text_shadowYOffset"] = 0,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                             ["anchor_point"] = "TOPRIGHT",
                             ["text_fontSize"] = 19,
                             ["anchorXOffset"] = 0,
@@ -28713,8 +21292,8 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["id"] = "Tank Buster Co-Tank",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Tank Buster Co-Tank",
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
                     ["icon"] = false,
@@ -28830,58 +21409,35 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["selfPoint"] = "CENTER",
                     ["xOffset"] = 0,
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
-                    ["parent"] = "[1] Vexie and the Geargrinders",
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "nIxO6JRbTCk",
                     ["id"] = "Vexie Raid Frame Glows",
-                    ["frameStrata"] = 1,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["config"] = {
-                    },
                     ["uid"] = "AM-nIxO6JRbTCk",
                     ["borderInset"] = 1,
+                    ["config"] = {
+                    },
                     ["yOffset"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["parent"] = "[1] Vexie and the Geargrinders",
                 },
                 [16] = {
                     ["parent"] = "Vexie Raid Frame Glows",
                     ["preferToUpdate"] = true,
-                    ["AMModified"] = true,
+                    ["information"] = {
+                    },
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
                     ["regionType"] = "empty",
-                    ["load"] = {
-                        ["use_never"] = true,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["encounterid"] = "3009",
-                        ["use_encounterid"] = true,
-                        ["role"] = {
-                            ["single"] = "HEALER",
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "yWLVkA9CD0n",
                     ["actions"] = {
                         ["start"] = {
@@ -28935,15 +21491,7 @@ wa.data = {
                     },
                     ["xOffset"] = 0,
                     ["internalVersion"] = 82,
-                    ["frameStrata"] = 1,
-                    ["selfPoint"] = "CENTER",
-                    ["id"] = "Bomb Voyage! (Glow)",
-                    ["config"] = {
-                    },
                     ["alpha"] = 1,
-                    ["width"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-yWLVkA9CD0n",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -28964,12 +21512,43 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["id"] = "Bomb Voyage! (Glow)",
+                    ["config"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["width"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["uid"] = "AM-yWLVkA9CD0n",
+                    ["selfPoint"] = "CENTER",
                     ["subRegions"] = {
                     },
                     ["height"] = 1,
                     ["conditions"] = {
                     },
-                    ["information"] = {
+                    ["load"] = {
+                        ["use_never"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["encounterid"] = "3009",
+                        ["use_encounterid"] = true,
+                        ["role"] = {
+                            ["single"] = "HEALER",
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["authorOptions"] = {
                     },
@@ -29075,27 +21654,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["parent"] = "[NHF] Liberation of Undermine",
                     ["AMModified"] = true,
-                    ["authorOptions"] = {
-                    },
+                    ["parent"] = "[NHF] Liberation of Undermine",
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "UYHmxjz4N0A",
                     ["tocversion"] = 110007,
                     ["id"] = "[2] Cauldron of Carnage",
                     ["groupIcon"] = "6253176",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-UYHmxjz4N0A",
                     ["config"] = {
                     },
                     ["borderInset"] = 1,
-                    ["alpha"] = 1,
+                    ["uid"] = "AM-UYHmxjz4N0A",
+                    ["frameStrata"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["authorOptions"] = {
+                    },
                 },
                 [18] = {
                     ["grow"] = "UP",
@@ -29108,12 +21687,10 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["gridType"] = "RD",
-                    ["limit"] = 5,
+                    ["gridWidth"] = 5,
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["sortHybridTable"] = {
-                        ["Voltaic Image "] = false,
-                    },
+                    ["arcLength"] = 360,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -29142,13 +21719,15 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["arcLength"] = 360,
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
+                    ["sortHybridTable"] = {
+                        ["Voltaic Image "] = false,
+                    },
                     ["useLimit"] = false,
+                    ["align"] = "CENTER",
+                    ["selfPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "7MnU6g0CBFy",
                     ["space"] = 2,
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -29211,17 +21790,17 @@ wa.data = {
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
+                    ["borderEdge"] = "Square Full White",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
-                    ["sort"] = "none",
+                    ["limit"] = 5,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
                     ["regionType"] = "dynamicgroup",
-                    ["borderEdge"] = "Square Full White",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["gridWidth"] = 5,
+                    ["sort"] = "none",
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Big Icon",
                     ["xOffset"] = 0,
@@ -29230,7 +21809,7 @@ wa.data = {
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                     ["uid"] = "AM-7MnU6g0CBFy",
                     ["radius"] = 200,
-                    ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
@@ -29278,7 +21857,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3010",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -29287,6 +21865,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3010",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -29510,8 +22089,8 @@ wa.data = {
                     ["width"] = 65,
                     ["useCooldownModRate"] = true,
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Voltaic Image ",
+                    ["sparkHidden"] = "NEVER",
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
                     ["actions"] = {
@@ -29559,29 +22138,27 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["gridType"] = "RD",
-                    ["borderEdge"] = "Square Full White",
-                    ["fullCircle"] = true,
-                    ["space"] = 10,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
+                    ["load"] = {
+                        ["size"] = {
+                            ["multi"] = {
+                            },
                         },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
                         },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
                         },
                     },
+                    ["fullCircle"] = true,
+                    ["space"] = 10,
+                    ["selfPoint"] = "BOTTOM",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -29611,10 +22188,28 @@ wa.data = {
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
                     ["grow"] = "UP",
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
-                    ["authorOptions"] = {
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
                     },
+                    ["align"] = "CENTER",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                     ["AMOriginalUUID"] = "H)M4aX4GXgU",
                     ["useLimit"] = false,
                     ["stagger"] = 0,
@@ -29639,39 +22234,22 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
+                    ["animate"] = false,
                     ["source"] = "import",
-                    ["gridWidth"] = 5,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
+                    ["borderEdge"] = "Square Full White",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
                     ["sort"] = "none",
+                    ["gridWidth"] = 5,
                     ["limit"] = 5,
-                    ["animate"] = false,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["regionType"] = "dynamicgroup",
                     ["borderOffset"] = 4,
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Small Icon",
                     ["anchorPoint"] = "BOTTOM",
@@ -29686,7 +22264,8 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
+                    ["authorOptions"] = {
+                    },
                 },
                 [21] = {
                     ["arcLength"] = 360,
@@ -29701,7 +22280,7 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Colossal Clash "] = false,
                     },
-                    ["xOffset"] = 0,
+                    ["borderEdge"] = "Square Full White",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -29709,26 +22288,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["radius"] = 200,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -29757,19 +22317,38 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["radius"] = 200,
-                    ["selfPoint"] = "BOTTOM",
+                    ["xOffset"] = 0,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["align"] = "CENTER",
-                    ["anchorPoint"] = "BOTTOM",
+                    ["space"] = 2,
                     ["AMOriginalUUID"] = "nPn8OPAwAcs",
+                    ["selfPoint"] = "BOTTOM",
                     ["stagger"] = 0,
                     ["rotation"] = 0,
-                    ["useLimit"] = false,
                     ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
+                    ["useLimit"] = false,
                     ["gridType"] = "RD",
-                    ["parent"] = "[2] Cauldron of Carnage",
                     ["AMModified"] = true,
                     ["alpha"] = 1,
                     ["backdropColor"] = {
@@ -29778,6 +22357,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
+                    ["parent"] = "[2] Cauldron of Carnage",
+                    ["source"] = "import",
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -29796,37 +22377,35 @@ wa.data = {
                             },
                         },
                     },
-                    ["source"] = "import",
-                    ["animate"] = false,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["regionType"] = "dynamicgroup",
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["gridWidth"] = 5,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["animate"] = false,
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Bars",
                     ["grow"] = "UP",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["yOffset"] = 0,
-                    ["uid"] = "AM-nPn8OPAwAcs",
                     ["config"] = {
                     },
+                    ["uid"] = "AM-nPn8OPAwAcs",
                     ["fullCircle"] = true,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["space"] = 2,
+                    ["anchorPoint"] = "BOTTOM",
                 },
                 [22] = {
                     ["sparkWidth"] = 2,
@@ -29836,6 +22415,10 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
+                    ["config"] = {
+                    },
+                    ["sparkRotation"] = 0,
+                    ["sparkRotationMode"] = "AUTO",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -29843,14 +22426,6 @@ wa.data = {
                         },
                         ["finish"] = {
                         },
-                    },
-                    ["sparkRotation"] = 0,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
                     },
                     ["triggers"] = {
                         [1] = {
@@ -29868,7 +22443,7 @@ wa.data = {
                                 },
                                 ["event"] = "Cast",
                                 ["use_unit"] = true,
-                                ["use_npcId"] = true,
+                                ["castType"] = "channel",
                                 ["subeventPrefix"] = "SPELL",
                                 ["spellIds"] = {
                                 },
@@ -29876,7 +22451,7 @@ wa.data = {
                                 ["use_spellIds"] = false,
                                 ["names"] = {
                                 },
-                                ["castType"] = "channel",
+                                ["use_npcId"] = true,
                                 ["use_castType"] = false,
                             },
                             ["untrigger"] = {
@@ -29896,7 +22471,12 @@ wa.data = {
                         [2] = "",
                     },
                     ["selfPoint"] = "CENTER",
-                    ["internalVersion"] = 82,
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0.5,
+                    },
                     ["barColor2"] = {
                         [1] = 0,
                         [2] = 1,
@@ -29911,7 +22491,26 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["AMOriginalUUID"] = "BaF6dGv)WA3",
-                    ["displayIcon"] = 2065603,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -30011,17 +22610,17 @@ wa.data = {
                     ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["xOffset"] = 0,
+                    ["displayIcon"] = 2065603,
                     ["source"] = "import",
-                    ["preferToUpdate"] = true,
+                    ["authorOptions"] = {
+                    },
                     ["uid"] = "AM-BaF6dGv)WA3",
-                    ["icon"] = true,
+                    ["preferToUpdate"] = true,
                     ["width"] = 266.00021362305,
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["frameStrata"] = 2,
-                    ["config"] = {
-                    },
+                    ["icon"] = true,
                     ["icon_side"] = "RIGHT",
                     ["sparkHidden"] = "NEVER",
                     ["sparkHeight"] = 30,
@@ -30029,15 +22628,12 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["zoom"] = 0.3,
                     ["spark"] = true,
-                    ["sparkOffsetX"] = 0,
-                    ["id"] = "Colossal Clash ",
                     ["load"] = {
                         ["use_encounterid"] = true,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3010",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -30046,14 +22642,17 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3010",
                         ["size"] = {
                             ["multi"] = {
                             },
                         },
                     },
+                    ["id"] = "Colossal Clash ",
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["xOffset"] = 0,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
@@ -30061,33 +22660,13 @@ wa.data = {
                         [4] = 1,
                     },
                     ["inverse"] = false,
-                    ["authorOptions"] = {
-                    },
+                    ["internalVersion"] = 82,
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["sparkOffsetX"] = 0,
                 },
                 [23] = {
                     ["arcLength"] = 360,
@@ -30101,10 +22680,10 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Molten Phelgm "] = false,
                     },
-                    ["sort"] = "none",
+                    ["AMModified"] = true,
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["xOffset"] = 0,
+                    ["grow"] = "UP",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -30133,7 +22712,9 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["grow"] = "UP",
+                    ["xOffset"] = 0,
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -30154,8 +22735,6 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["align"] = "CENTER",
-                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "trwKeBT99d8",
                     ["selfPoint"] = "BOTTOM",
                     ["rotation"] = 0,
@@ -30198,16 +22777,16 @@ wa.data = {
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
                     ["regionType"] = "dynamicgroup",
+                    ["borderSize"] = 2,
+                    ["sort"] = "none",
+                    ["stepAngle"] = 15,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["AMModified"] = true,
+                    ["limit"] = 5,
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Circles",
                     ["authorOptions"] = {
@@ -30267,7 +22846,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3010",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -30276,6 +22854,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3010",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -30293,14 +22872,14 @@ wa.data = {
                     ["spark"] = false,
                     ["compress"] = false,
                     ["alpha"] = 1,
-                    ["AMOriginalUUID"] = "3dZx(mz6oV5",
+                    ["displayIcon"] = 2065603,
                     ["uid"] = "AM-3dZx(mz6oV5",
                     ["information"] = {
                     },
                     ["conditions"] = {
                     },
                     ["orientation"] = "ANTICLOCKWISE",
-                    ["displayIcon"] = 2065603,
+                    ["AMOriginalUUID"] = "3dZx(mz6oV5",
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
@@ -30312,13 +22891,13 @@ wa.data = {
                     ["config"] = {
                     },
                     ["sparkOffsetX"] = 0,
+                    ["parent"] = "CoC Circles",
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["parent"] = "CoC Circles",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -30327,23 +22906,14 @@ wa.data = {
                         ["init"] = {
                         },
                     },
-                    ["customText"] = "function()\
-                  local u = aura_env.state.unit\
-                  if (WeakAuras.IsOptionsOpen()) then\
-                      return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
-                  end\
-                  \
-                  if aura_env.state and u then\
-                      return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
-                  end\
-              end",
+                    ["adjustedMin"] = "",
                     ["shadowYOffset"] = -1,
                     ["anchorFrameType"] = "SCREEN",
                     ["desaturateBackground"] = false,
                     ["cooldownSwipe"] = true,
                     ["frameStrata"] = 2,
                     ["sparkRotationMode"] = "AUTO",
-                    ["automaticWidth"] = "Auto",
+                    ["cooldownEdge"] = false,
                     ["desaturateForeground"] = false,
                     ["triggers"] = {
                         [1] = {
@@ -30358,8 +22928,8 @@ wa.data = {
                                 ["subeventSuffix"] = "_CAST_START",
                                 ["use_castType"] = false,
                                 ["event"] = "Cast",
-                                ["use_npcId"] = true,
                                 ["castType"] = "channel",
+                                ["use_npcId"] = true,
                                 ["unit"] = "boss",
                                 ["spellIds"] = {
                                 },
@@ -30452,9 +23022,9 @@ wa.data = {
                             ["text_font"] = "Poppins SemiBold",
                             ["text_shadowXOffset"] = 1,
                             ["text_shadowYOffset"] = -1,
-                            ["text_visible"] = true,
-                            ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "None",
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_visible"] = true,
                             ["text_text_format_p_format"] = "timed",
                             ["text_text_format_p_time_format"] = 0,
                             ["anchor_point"] = "TOP",
@@ -30492,8 +23062,17 @@ wa.data = {
                     ["adjustedMax"] = "",
                     ["useCooldownModRate"] = true,
                     ["width"] = 200,
-                    ["cooldownEdge"] = false,
-                    ["adjustedMin"] = "",
+                    ["automaticWidth"] = "Auto",
+                    ["customText"] = "function()\
+                  local u = aura_env.state.unit\
+                  if (WeakAuras.IsOptionsOpen()) then\
+                      return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
+                  end\
+                  \
+                  if aura_env.state and u then\
+                      return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
+                  end\
+              end",
                     ["inverse"] = false,
                     ["fixedWidth"] = 200,
                     ["shadowColor"] = {
@@ -30503,13 +23082,13 @@ wa.data = {
                         [4] = 1,
                     },
                     ["crop_x"] = 0.41,
-                    ["cooldown"] = true,
                     ["barColor2"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 0,
                         [4] = 1,
                     },
+                    ["cooldown"] = true,
                 },
                 [25] = {
                     ["grow"] = "UP",
@@ -30524,7 +23103,7 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Static Charge Status"] = false,
                     },
-                    ["borderEdge"] = "Square Full White",
+                    ["arcLength"] = 360,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -30532,7 +23111,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["selfPoint"] = "BOTTOM",
+                    ["useLimit"] = false,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -30562,8 +23141,6 @@ wa.data = {
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
                     ["yOffset"] = 0,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -30584,9 +23161,11 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["selfPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "P(Nl8lHgG3v",
-                    ["rotation"] = 0,
                     ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["radius"] = 200,
                     ["borderInset"] = 1,
                     ["subRegions"] = {
@@ -30624,26 +23203,26 @@ wa.data = {
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
-                    ["stepAngle"] = 15,
+                    ["borderEdge"] = "Square Full White",
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
                     ["limit"] = 5,
+                    ["stepAngle"] = 15,
                     ["sort"] = "none",
-                    ["regionType"] = "dynamicgroup",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["arcLength"] = 360,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Special Bars",
                     ["xOffset"] = 0,
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["anchorPoint"] = "BOTTOM",
-                    ["uid"] = "AM-P(Nl8lHgG3v",
                     ["config"] = {
                     },
+                    ["uid"] = "AM-P(Nl8lHgG3v",
                     ["fullCircle"] = true,
                     ["conditions"] = {
                     },
@@ -30695,7 +23274,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3010",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -30704,6 +23282,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3010",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -30732,8 +23311,6 @@ wa.data = {
                                 ["event"] = "Health",
                                 ["unit"] = "player",
                                 ["custom_hide"] = "timed",
-                                ["spellIds"] = {
-                                },
                                 ["custom"] = "function(allstates, event)\
                   if event == \"OPTIONS\" then\
                       allstates[\"\"] = {\
@@ -30745,6 +23322,8 @@ wa.data = {
                       }\
                   end\
               end",
+                                ["spellIds"] = {
+                                },
                                 ["custom_type"] = "stateupdate",
                                 ["check"] = "event",
                                 ["names"] = {
@@ -30966,8 +23545,8 @@ wa.data = {
                     },
                     ["icon"] = false,
                     ["semver"] = "1.0.1",
-                    ["id"] = "Static Charge Status",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Static Charge Status",
                     ["width"] = 500,
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
@@ -30998,7 +23577,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-text.png",
                     ["anchorPoint"] = "CENTER",
-                    ["regionType"] = "dynamicgroup",
+                    ["gridWidth"] = 5,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -31006,8 +23585,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["authorOptions"] = {
-                    },
+                    ["grow"] = "DOWN",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -31036,7 +23614,10 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["grow"] = "DOWN",
+                    ["authorOptions"] = {
+                    },
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -31057,11 +23638,9 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["align"] = "CENTER",
-                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "0Dw9xIRI2pR",
                     ["space"] = 2,
-                    ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["selfPoint"] = "TOP",
                     ["config"] = {
                     },
@@ -31101,16 +23680,16 @@ wa.data = {
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["gridWidth"] = 5,
+                    ["stepAngle"] = 15,
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Texts",
                     ["parent"] = "[2] Cauldron of Carnage",
@@ -31119,7 +23698,7 @@ wa.data = {
                     ["gridType"] = "RD",
                     ["borderInset"] = 1,
                     ["internalVersion"] = 82,
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
@@ -31197,26 +23776,30 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3010",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3010",
                         ["use_encounterid"] = true,
                     },
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["internalVersion"] = 82,
+                    ["conditions"] = {
+                    },
                     ["regionType"] = "text",
+                    ["internalVersion"] = 82,
+                    ["displayText_format_p_format"] = "timed",
+                    ["AMOriginalUUID"] = "98YRQi6Re2T",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -31236,10 +23819,6 @@ wa.data = {
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
-                    },
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "98YRQi6Re2T",
-                    ["conditions"] = {
                     },
                     ["displayText_format_p_time_precision"] = 1,
                     ["preferToUpdate"] = true,
@@ -31261,7 +23840,7 @@ wa.data = {
                     ["config"] = {
                     },
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["yOffset"] = 0,
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -31271,7 +23850,7 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["displayText_format_p_format"] = "timed",
+                    ["yOffset"] = 0,
                 },
                 [29] = {
                     ["outline"] = "OUTLINE",
@@ -31315,10 +23894,10 @@ wa.data = {
                                 ["use_unit"] = true,
                                 ["use_power"] = true,
                                 ["debuffType"] = "HARMFUL",
-                                ["match_countOperator"] = ">",
-                                ["type"] = "unit",
-                                ["stacksOperator"] = ">=",
                                 ["subeventSuffix"] = "_CAST_START",
+                                ["use_remaining"] = true,
+                                ["stacksOperator"] = ">=",
+                                ["match_countOperator"] = ">",
                                 ["power_operator"] = {
                                     [1] = ">",
                                 },
@@ -31332,7 +23911,7 @@ wa.data = {
                                 ["spellIds"] = {
                                 },
                                 ["useStacks"] = true,
-                                ["use_remaining"] = true,
+                                ["type"] = "unit",
                                 ["remaining_operator"] = "<",
                                 ["unit"] = "player",
                                 ["remaining"] = "5",
@@ -31390,12 +23969,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3010",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3010",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -31406,14 +23985,14 @@ wa.data = {
                     },
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
+                    ["displayText_format_p_time_mod_rate"] = true,
                     ["displayText_format_p_time_legacy_floor"] = false,
-                    ["displayText"] = "Stop moving (%p%c)",
                     ["regionType"] = "text",
-                    ["AMModified"] = true,
+                    ["shadowYOffset"] = -1,
                     ["conditions"] = {
                     },
+                    ["displayText"] = "Stop moving (%p%c)",
                     ["AMOriginalUUID"] = "eEbwHmyG5ln",
-                    ["displayText_format_p_time_mod_rate"] = true,
                     ["displayText_format_p_time_precision"] = 1,
                     ["config"] = {
                     },
@@ -31452,8 +24031,8 @@ wa.data = {
                         [4] = 1,
                     },
                     ["uid"] = "AM-eEbwHmyG5ln",
-                    ["wordWrap"] = "WordWrap",
                     ["displayText_format_c_format"] = "none",
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -31463,7 +24042,7 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["shadowYOffset"] = -1,
+                    ["wordWrap"] = "WordWrap",
                 },
                 [30] = {
                     ["grow"] = "UP",
@@ -31475,7 +24054,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["regionType"] = "dynamicgroup",
+                    ["frameStrata"] = 1,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -31483,7 +24062,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["xOffset"] = 0,
+                    ["arcLength"] = 360,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -31512,7 +24091,9 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["arcLength"] = 360,
+                    ["xOffset"] = 0,
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -31533,11 +24114,9 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["align"] = "CENTER",
-                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "uSPvuo3)NYe",
                     ["internalVersion"] = 82,
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["fullCircle"] = true,
                     ["uid"] = "AM-uSPvuo3)NYe",
                     ["subRegions"] = {
@@ -31578,16 +24157,16 @@ wa.data = {
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["frameStrata"] = 1,
+                    ["stepAngle"] = 15,
                     ["tocversion"] = 110007,
                     ["id"] = "CoC Co-Tank Icon",
                     ["parent"] = "[2] Cauldron of Carnage",
@@ -31596,7 +24175,7 @@ wa.data = {
                     ["gridType"] = "RD",
                     ["borderInset"] = 1,
                     ["space"] = 2,
-                    ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
@@ -31677,10 +24256,25 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["xOffset"] = 0,
                     ["authorOptions"] = {
                     },
+                    ["xOffset"] = 0,
                     ["borderOffset"] = 4,
+                    ["AMModified"] = true,
+                    ["AMOriginalUUID"] = "cOEjr3vCG4W",
+                    ["id"] = "CoC Raid Frame Glows",
+                    ["config"] = {
+                    },
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["borderInset"] = 1,
+                    ["uid"] = "AM-cOEjr3vCG4W",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-heal.png",
+                    ["alpha"] = 1,
+                    ["conditions"] = {
+                    },
+                    ["information"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -31701,31 +24295,39 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["AMOriginalUUID"] = "cOEjr3vCG4W",
-                    ["id"] = "CoC Raid Frame Glows",
-                    ["uid"] = "AM-cOEjr3vCG4W",
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["config"] = {
-                    },
-                    ["borderInset"] = 1,
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-heal.png",
-                    ["frameStrata"] = 1,
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["AMModified"] = true,
                 },
                 [32] = {
                     ["xOffset"] = 0,
                     ["preferToUpdate"] = true,
-                    ["AMModified"] = true,
+                    ["load"] = {
+                        ["use_never"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_encounterid"] = true,
+                        ["role"] = {
+                            ["single"] = "HEALER",
+                        },
+                        ["encounterid"] = "3010",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["yOffset"] = 0,
                     ["regionType"] = "empty",
                     ["anchorPoint"] = "CENTER",
-                    ["information"] = {
-                    },
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "BhELRn556BI",
                     ["actions"] = {
                         ["start"] = {
@@ -31779,7 +24381,7 @@ wa.data = {
                     },
                     ["parent"] = "CoC Raid Frame Glows",
                     ["internalVersion"] = 82,
-                    ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -31802,41 +24404,18 @@ wa.data = {
                     },
                     ["id"] = "Molten Phlegm (Glow)",
                     ["uid"] = "AM-BhELRn556BI",
-                    ["frameStrata"] = 1,
-                    ["width"] = 1,
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
                     ["selfPoint"] = "CENTER",
                     ["config"] = {
                     },
-                    ["anchorFrameType"] = "SCREEN",
+                    ["width"] = 1,
                     ["subRegions"] = {
                     },
                     ["height"] = 1,
                     ["conditions"] = {
                     },
-                    ["load"] = {
-                        ["use_never"] = true,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_encounterid"] = true,
-                        ["role"] = {
-                            ["single"] = "HEALER",
-                        },
-                        ["encounterid"] = "3010",
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
+                    ["information"] = {
                     },
                     ["authorOptions"] = {
                     },
@@ -31944,27 +24523,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["xOffset"] = 0,
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
+                    ["authorOptions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "iLNiOLolEQ5",
                     ["tocversion"] = 110007,
                     ["id"] = "[3] Rik Reverb",
                     ["groupIcon"] = "6392625",
-                    ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-iLNiOLolEQ5",
                     ["config"] = {
                     },
                     ["borderInset"] = 1,
-                    ["frameStrata"] = 1,
+                    ["uid"] = "AM-iLNiOLolEQ5",
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["selfPoint"] = "CENTER",
                 },
                 [34] = {
                     ["arcLength"] = 360,
@@ -31978,7 +24557,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["animate"] = false,
+                    ["regionType"] = "dynamicgroup",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -31986,7 +24565,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["grow"] = "UP",
+                    ["fullCircle"] = true,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -32015,10 +24594,10 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["fullCircle"] = true,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
+                    ["grow"] = "UP",
                     ["selfPoint"] = "BOTTOM",
+                    ["align"] = "CENTER",
+                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "RmRi27jHEMe",
                     ["animation"] = {
                         ["start"] = {
@@ -32074,22 +24653,22 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["AMModified"] = true,
+                    ["animate"] = false,
                     ["source"] = "import",
-                    ["xOffset"] = 0,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["frameStrata"] = 1,
                     ["borderOffset"] = 4,
-                    ["regionType"] = "dynamicgroup",
+                    ["xOffset"] = 0,
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Small Icon",
                     ["authorOptions"] = {
@@ -32101,8 +24680,8 @@ wa.data = {
                         ["Excitement "] = false,
                         ["Tinnitus Me"] = false,
                     },
-                    ["uid"] = "AM-RmRi27jHEMe",
                     ["borderInset"] = 1,
+                    ["uid"] = "AM-RmRi27jHEMe",
                     ["gridType"] = "RD",
                     ["conditions"] = {
                     },
@@ -32151,7 +24730,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -32160,6 +24738,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -32370,7 +24949,7 @@ wa.data = {
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
                             ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorYOffset"] = 0,
+                            ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
                             ["anchorXOffset"] = 0,
@@ -32390,17 +24969,17 @@ wa.data = {
                                 [4] = 1,
                             },
                             ["text_font"] = "Poppins SemiBold",
-                            ["text_shadowYOffset"] = 0,
                             ["text_anchorYOffset"] = 0,
-                            ["text_visible"] = true,
-                            ["text_wordWrap"] = "WordWrap",
+                            ["text_shadowYOffset"] = 0,
                             ["text_fontType"] = "OUTLINE",
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_visible"] = true,
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_text_format_p_time_format"] = 0,
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_c_format"] = "none",
+                            ["anchorYOffset"] = 0,
                         },
                     },
                     ["height"] = 40,
@@ -32429,8 +25008,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Lingering Voltage  ",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["actions"] = {
@@ -32498,7 +25077,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -32507,6 +25085,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -32722,8 +25301,8 @@ wa.data = {
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
-                            ["text_text_format_c_format"] = "none",
                             ["anchorYOffset"] = 0,
+                            ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
@@ -32739,12 +25318,12 @@ wa.data = {
                             },
                             ["text_font"] = "Poppins SemiBold",
                             ["text_text_format_p_time_format"] = 0,
-                            ["text_shadowYOffset"] = 0,
+                            ["text_anchorYOffset"] = 0,
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = false,
                             ["text_fontType"] = "OUTLINE",
-                            ["text_anchorYOffset"] = 0,
+                            ["text_visible"] = false,
+                            ["text_shadowYOffset"] = 0,
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
@@ -32780,8 +25359,8 @@ wa.data = {
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
                     ["cooldownTextDisabled"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Excitement ",
+                    ["sparkHidden"] = "NEVER",
                     ["frameStrata"] = 2,
                     ["width"] = 60,
                     ["actions"] = {
@@ -32845,20 +25424,20 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3011",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -33082,7 +25661,7 @@ wa.data = {
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["anchorYOffset"] = 0,
+                            ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
                             ["anchorXOffset"] = 0,
@@ -33097,17 +25676,17 @@ wa.data = {
                                 [4] = 1,
                             },
                             ["text_font"] = "Poppins SemiBold",
-                            ["text_anchorYOffset"] = 0,
                             ["text_shadowYOffset"] = 0,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_wordWrap"] = "WordWrap",
+                            ["text_anchorYOffset"] = 0,
                             ["text_visible"] = false,
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_fontType"] = "OUTLINE",
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_text_format_p_time_format"] = 0,
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_c_format"] = "none",
+                            ["anchorYOffset"] = 0,
                         },
                     },
                     ["height"] = 40,
@@ -33142,8 +25721,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["id"] = "Tinnitus Me",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Tinnitus Me",
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
                     ["backgroundColor"] = {
@@ -33181,7 +25760,7 @@ wa.data = {
                         ["Faulty Zap "] = false,
                         ["Sound Cloud "] = false,
                     },
-                    ["source"] = "import",
+                    ["stepAngle"] = 15,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -33189,7 +25768,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["parent"] = "[3] Rik Reverb",
+                    ["internalVersion"] = 82,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -33218,9 +25797,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["internalVersion"] = 82,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
+                    ["parent"] = "[3] Rik Reverb",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -33241,6 +25818,8 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "CtyxvIffkzb",
                     ["gridType"] = "RD",
                     ["stagger"] = 0,
@@ -33276,31 +25855,31 @@ wa.data = {
                             },
                         },
                     },
+                    ["source"] = "import",
                     ["animate"] = false,
-                    ["alpha"] = 1,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["borderEdge"] = "Square Full White",
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["stepAngle"] = 15,
+                    ["alpha"] = 1,
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Big Icon",
                     ["grow"] = "UP",
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
+                    ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["borderInset"] = 1,
                     ["selfPoint"] = "BOTTOM",
                     ["conditions"] = {
                     },
@@ -33349,12 +25928,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3011",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -33606,8 +26185,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Faulty Zap ",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["width"] = 65,
                     ["icon"] = false,
@@ -33663,15 +26242,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3011",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -33902,8 +26481,8 @@ wa.data = {
                     ["width"] = 65,
                     ["frameStrata"] = 2,
                     ["cooldownTextDisabled"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Sound Cloud ",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["actions"] = {
@@ -33948,7 +26527,24 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["sort"] = "none",
+                    ["load"] = {
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -33956,7 +26552,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["gridType"] = "RD",
+                    ["arcLength"] = 360,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -33985,7 +26581,9 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["arcLength"] = 360,
+                    ["gridType"] = "RD",
+                    ["selfPoint"] = "BOTTOM",
+                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -34006,11 +26604,9 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["align"] = "CENTER",
-                    ["selfPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "spFkJksBRvT",
                     ["useLimit"] = false,
-                    ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["rowSpace"] = 1,
                     ["config"] = {
                     },
@@ -34033,33 +26629,16 @@ wa.data = {
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
                     ["regionType"] = "dynamicgroup",
+                    ["borderSize"] = 2,
+                    ["sort"] = "none",
+                    ["stepAngle"] = 15,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["limit"] = 5,
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Bars",
                     ["authorOptions"] = {
@@ -34071,7 +26650,7 @@ wa.data = {
                     ["sortHybridTable"] = {
                         ["Hype Hustle! Phase 2"] = false,
                     },
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
@@ -34087,7 +26666,7 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["uid"] = "AM-JCnjQf7oLIh",
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
                     ["actions"] = {
@@ -34151,7 +26730,7 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["AMOriginalUUID"] = "JCnjQf7oLIh",
-                    ["enableGradient"] = true,
+                    ["parent"] = "Rik Bars",
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -34246,7 +26825,7 @@ wa.data = {
                             ["border_offset"] = 0,
                         },
                     },
-                    ["height"] = 32.999893188477,
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["textureSource"] = "LSM",
                     ["load"] = {
                         ["size"] = {
@@ -34257,12 +26836,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3011",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -34270,13 +26849,15 @@ wa.data = {
                     },
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
-                    },
+                    ["height"] = 32.999893188477,
                     ["source"] = "import",
+                    ["adjustedMax"] = "",
+                    ["sparkColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -34297,18 +26878,11 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["displayIcon"] = 2065603,
                     ["anchorFrameType"] = "SCREEN",
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["alpha"] = 1,
-                    ["uid"] = "AM-JCnjQf7oLIh",
+                    ["displayIcon"] = 2065603,
                     ["icon_side"] = "RIGHT",
                     ["sparkHidden"] = "NEVER",
                     ["sparkHeight"] = 30,
@@ -34316,16 +26890,21 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["zoom"] = 0.3,
                     ["spark"] = true,
-                    ["sparkOffsetX"] = 0,
-                    ["id"] = "Hype Hustle! Phase 2",
                     ["AMModified"] = true,
+                    ["id"] = "Hype Hustle! Phase 2",
+                    ["xOffset"] = 0,
                     ["frameStrata"] = 2,
                     ["width"] = 266.00021362305,
-                    ["xOffset"] = 0,
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0.5,
+                    },
                     ["config"] = {
                     },
                     ["inverse"] = false,
-                    ["adjustedMax"] = "",
+                    ["enableGradient"] = true,
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
@@ -34335,7 +26914,7 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["parent"] = "Rik Bars",
+                    ["sparkOffsetX"] = 0,
                 },
                 [43] = {
                     ["arcLength"] = 360,
@@ -34348,13 +26927,10 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-circle.png",
                     ["anchorPoint"] = "BOTTOM",
-                    ["regionType"] = "dynamicgroup",
+                    ["borderEdge"] = "Square Full White",
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["sortHybridTable"] = {
-                        ["Faulty Zap (Targeted) "] = false,
-                        ["Sound Cannon "] = false,
-                    },
+                    ["radius"] = 200,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -34383,13 +26959,16 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["radius"] = 200,
+                    ["sortHybridTable"] = {
+                        ["Faulty Zap (Targeted) "] = false,
+                        ["Sound Cannon "] = false,
+                    },
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["grow"] = "UP",
+                    ["parent"] = "[3] Rik Reverb",
                     ["AMOriginalUUID"] = "eVKnWweh2cw",
-                    ["rotation"] = 0,
                     ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -34409,15 +26988,16 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["source"] = "import",
                     ["animate"] = false,
+                    ["source"] = "import",
                     ["yOffset"] = 0,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["load"] = {
                         ["size"] = {
@@ -34437,12 +27017,11 @@ wa.data = {
                             },
                         },
                     },
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["gridWidth"] = 5,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["stepAngle"] = 15,
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Circles",
                     ["uid"] = "AM-eVKnWweh2cw",
@@ -34477,7 +27056,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["parent"] = "[3] Rik Reverb",
+                    ["grow"] = "UP",
                 },
                 [44] = {
                     ["sparkWidth"] = 10,
@@ -34527,12 +27106,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3011",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -34550,9 +27129,9 @@ wa.data = {
                     ["spark"] = false,
                     ["compress"] = false,
                     ["alpha"] = 1,
+                    ["uid"] = "AM-)26ua5lvIYv",
                     ["config"] = {
                     },
-                    ["uid"] = "AM-)26ua5lvIYv",
                     ["cooldown"] = true,
                     ["crop_x"] = 0.41,
                     ["shadowColor"] = {
@@ -34561,7 +27140,7 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["AMOriginalUUID"] = ")26ua5lvIYv",
+                    ["displayIcon"] = 2065603,
                     ["barColor2"] = {
                         [1] = 1,
                         [2] = 1,
@@ -34573,12 +27152,7 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["sparkOffsetX"] = 0,
                     ["displayText_format_p_time_mod_rate"] = true,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
+                    ["parent"] = "Rik Circles",
                     ["icon"] = false,
                     ["customText"] = "function()\
                   local u = aura_env.state.unit\
@@ -34625,7 +27199,7 @@ wa.data = {
                         ["disjunctive"] = "any",
                         ["activeTriggerMode"] = -10,
                     },
-                    ["endAngle"] = 360,
+                    ["displayText_format_p_format"] = "timed",
                     ["internalVersion"] = 82,
                     ["progressSource"] = {
                         [1] = -1,
@@ -34692,9 +27266,9 @@ wa.data = {
                             ["text_shadowYOffset"] = -1,
                             ["text_text_format_p_time_format"] = 0,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_text_format_p_format"] = "timed",
                             ["text_fontType"] = "None",
+                            ["text_text_format_p_format"] = "timed",
+                            ["text_visible"] = true,
                             ["anchor_point"] = "TOP",
                             ["text_fontSize"] = 16,
                             ["anchorXOffset"] = 0,
@@ -34740,8 +27314,13 @@ wa.data = {
                     ["selfPoint"] = "CENTER",
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
-                    ["displayText_format_p_format"] = "timed",
-                    ["parent"] = "Rik Circles",
+                    ["endAngle"] = 360,
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
                     ["inverse"] = false,
                     ["sparkColor"] = {
                         [1] = 1,
@@ -34754,7 +27333,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["displayIcon"] = 2065603,
+                    ["AMOriginalUUID"] = ")26ua5lvIYv",
                 },
                 [45] = {
                     ["sparkWidth"] = 10,
@@ -34794,15 +27373,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3011",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -34820,7 +27399,7 @@ wa.data = {
                     ["spark"] = false,
                     ["compress"] = false,
                     ["alpha"] = 1,
-                    ["AMOriginalUUID"] = "6reVQTfDSI1",
+                    ["displayIcon"] = 2065603,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
@@ -34832,20 +27411,20 @@ wa.data = {
                     ["conditions"] = {
                     },
                     ["orientation"] = "ANTICLOCKWISE",
-                    ["displayIcon"] = 2065603,
+                    ["fixedWidth"] = 200,
                     ["uid"] = "AM-6reVQTfDSI1",
                     ["backgroundOffset"] = 2,
                     ["outline"] = "OUTLINE",
                     ["config"] = {
                     },
                     ["sparkOffsetX"] = 0,
+                    ["parent"] = "Rik Circles",
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["parent"] = "Rik Circles",
                     ["foregroundColor"] = {
                         [1] = 1,
                         [2] = 0,
@@ -34868,7 +27447,7 @@ wa.data = {
                     ["cooldownSwipe"] = true,
                     ["frameStrata"] = 2,
                     ["sparkRotationMode"] = "AUTO",
-                    ["automaticWidth"] = "Auto",
+                    ["cooldownEdge"] = false,
                     ["desaturateForeground"] = false,
                     ["triggers"] = {
                         [1] = {
@@ -34961,7 +27540,7 @@ wa.data = {
                         ["disjunctive"] = "all",
                         ["activeTriggerMode"] = -10,
                     },
-                    ["displayText_format_p_format"] = "timed",
+                    ["endAngle"] = 360,
                     ["internalVersion"] = 82,
                     ["progressSource"] = {
                         [1] = -1,
@@ -35038,9 +27617,9 @@ wa.data = {
                             ["text_font"] = "Poppins SemiBold",
                             ["text_text_format_n_format"] = "none",
                             ["text_shadowYOffset"] = -1,
-                            ["text_fontType"] = "None",
-                            ["text_wordWrap"] = "WordWrap",
                             ["text_visible"] = true,
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_fontType"] = "None",
                             ["text_text_format_p_format"] = "timed",
                             ["text_text_format_p_time_format"] = 0,
                             ["anchor_point"] = "TOP",
@@ -35078,8 +27657,8 @@ wa.data = {
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["useCooldownModRate"] = true,
                     ["width"] = 200,
-                    ["endAngle"] = 360,
-                    ["cooldownEdge"] = false,
+                    ["displayText_format_p_format"] = "timed",
+                    ["automaticWidth"] = "Auto",
                     ["inverse"] = false,
                     ["cooldown"] = true,
                     ["shadowColor"] = {
@@ -35095,7 +27674,7 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "6reVQTfDSI1",
                 },
                 [46] = {
                     ["grow"] = "UP",
@@ -35108,10 +27687,10 @@ wa.data = {
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-specialbar.png",
                     ["sortHybridTable"] = {
                     },
-                    ["regionType"] = "dynamicgroup",
+                    ["borderEdge"] = "Square Full White",
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["useLimit"] = false,
+                    ["selfPoint"] = "BOTTOM",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -35141,9 +27720,9 @@ wa.data = {
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
                     ["gridType"] = "RD",
-                    ["selfPoint"] = "BOTTOM",
+                    ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["arcLength"] = 360,
+                    ["xOffset"] = 0,
                     ["AMOriginalUUID"] = "pFjdo5wyIDn",
                     ["borderColor"] = {
                         [1] = 0,
@@ -35152,8 +27731,8 @@ wa.data = {
                         [4] = 1,
                     },
                     ["stagger"] = 0,
-                    ["borderInset"] = 1,
                     ["uid"] = "AM-pFjdo5wyIDn",
+                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
                     ["rotation"] = 0,
@@ -35190,16 +27769,16 @@ wa.data = {
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
-                    ["stepAngle"] = 15,
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["gridWidth"] = 5,
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["stepAngle"] = 15,
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Special Bars",
                     ["yOffset"] = 0,
@@ -35233,7 +27812,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["xOffset"] = 0,
+                    ["arcLength"] = 360,
                 },
                 [47] = {
                     ["arcLength"] = 360,
@@ -35251,10 +27830,29 @@ wa.data = {
                         ["Resonance Warning [Tank]"] = false,
                         ["Tinnitus Taunt [Tank]"] = false,
                     },
-                    ["limit"] = 5,
+                    ["borderEdge"] = "Square Full White",
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["selfPoint"] = "TOP",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -35284,33 +27882,15 @@ wa.data = {
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
                     ["internalVersion"] = 82,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["selfPoint"] = "TOP",
                     ["align"] = "CENTER",
-                    ["grow"] = "DOWN",
+                    ["authorOptions"] = {
+                    },
                     ["AMOriginalUUID"] = "iYaiVLci9NK",
                     ["anchorPoint"] = "CENTER",
                     ["rotation"] = 0,
-                    ["uid"] = "AM-iYaiVLci9NK",
                     ["borderInset"] = 1,
+                    ["uid"] = "AM-iYaiVLci9NK",
                     ["subRegions"] = {
                     },
                     ["xOffset"] = 0,
@@ -35340,23 +27920,23 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["source"] = "import",
                     ["animate"] = false,
+                    ["source"] = "import",
                     ["AMModified"] = true,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["sort"] = "none",
-                    ["frameStrata"] = 1,
                     ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["regionType"] = "dynamicgroup",
+                    ["frameStrata"] = 1,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["sort"] = "none",
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Texts",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-text.png",
@@ -35376,8 +27956,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["grow"] = "DOWN",
                 },
                 [48] = {
                     ["outline"] = "OUTLINE",
@@ -35478,17 +28057,17 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["encounterid"] = "3011",
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["encounterid"] = "3011",
                         ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -35499,12 +28078,12 @@ wa.data = {
                     },
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["internalVersion"] = 82,
-                    ["regionType"] = "text",
-                    ["selfPoint"] = "BOTTOM",
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "9x4ZHNjwyCO",
                     ["fixedWidth"] = 200,
+                    ["regionType"] = "text",
+                    ["internalVersion"] = 82,
+                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["AMOriginalUUID"] = "9x4ZHNjwyCO",
+                    ["selfPoint"] = "BOTTOM",
                     ["displayText_format_p_time_precision"] = 1,
                     ["color"] = {
                         [1] = 0.97254908084869,
@@ -35524,7 +28103,7 @@ wa.data = {
                     ["parent"] = "Rik Texts",
                     ["uid"] = "AM-9x4ZHNjwyCO",
                     ["displayText"] = "Waves Inc - %p",
-                    ["yOffset"] = 0,
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -35535,7 +28114,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["yOffset"] = 0,
                 },
                 [49] = {
                     ["outline"] = "OUTLINE",
@@ -35705,7 +28284,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -35714,22 +28293,22 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3011",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
                         ["use_encounterid"] = true,
                     },
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["displayText_format_p_format"] = "timed",
-                    ["regionType"] = "text",
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "CrZp7922lv)",
                     ["conditions"] = {
                     },
+                    ["regionType"] = "text",
+                    ["displayText_format_p_format"] = "timed",
+                    ["xOffset"] = 0,
+                    ["AMOriginalUUID"] = "CrZp7922lv)",
+                    ["displayText_format_p_time_legacy_floor"] = false,
                     ["displayText_format_p_time_precision"] = 1,
                     ["preferToUpdate"] = true,
                     ["uid"] = "AM-CrZp7922lv)",
@@ -35745,7 +28324,7 @@ wa.data = {
                     ["config"] = {
                     },
                     ["displayText"] = "Taunt Boss",
-                    ["yOffset"] = 0,
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -35755,7 +28334,7 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["xOffset"] = 0,
+                    ["yOffset"] = 0,
                 },
                 [50] = {
                     ["outline"] = "OUTLINE",
@@ -35840,20 +28419,20 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3011",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -35861,8 +28440,11 @@ wa.data = {
                     },
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["internalVersion"] = 82,
+                    ["fixedWidth"] = 200,
                     ["regionType"] = "text",
+                    ["internalVersion"] = 82,
+                    ["displayText_format_p_format"] = "timed",
+                    ["AMOriginalUUID"] = "CRRoRMEpJqU",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -35883,9 +28465,6 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "CRRoRMEpJqU",
-                    ["fixedWidth"] = 200,
                     ["displayText_format_p_time_precision"] = 1,
                     ["selfPoint"] = "BOTTOM",
                     ["config"] = {
@@ -35905,7 +28484,7 @@ wa.data = {
                     ["parent"] = "Rik Texts",
                     ["uid"] = "AM-CRRoRMEpJqU",
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["yOffset"] = 0,
+                    ["AMModified"] = true,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -35916,7 +28495,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["displayText_format_p_format"] = "timed",
+                    ["yOffset"] = 0,
                 },
                 [51] = {
                     ["controlledChildren"] = {
@@ -36012,26 +28591,26 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["parent"] = "[3] Rik Reverb",
+                    ["AMModified"] = true,
                     ["borderOffset"] = 4,
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-nameplate.png",
+                    ["authorOptions"] = {
+                    },
                     ["AMOriginalUUID"] = "ZcoFDY1UcD4",
                     ["id"] = "Rik Nameplates",
                     ["selfPoint"] = "CENTER",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-ZcoFDY1UcD4",
                     ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["alpha"] = 1,
+                    ["uid"] = "AM-ZcoFDY1UcD4",
+                    ["frameStrata"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-nameplate.png",
                 },
                 [52] = {
                     ["iconSource"] = -1,
@@ -36084,26 +28663,7 @@ wa.data = {
                     },
                     ["selfPoint"] = "RIGHT",
                     ["desaturate"] = false,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["alpha"] = 1,
                     ["version"] = 3,
                     ["subRegions"] = {
                         [1] = {
@@ -36113,14 +28673,19 @@ wa.data = {
                             ["text_text_format_tooltip1M_format"] = "none",
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%p",
-                            ["text_text_format_c_format"] = "BigNumber",
+                            ["anchorYOffset"] = 0,
                             ["text_text_format_c_big_number_format"] = "AbbreviateNumbers",
-                            ["text_text_format_p_format"] = "timed",
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
-                            ["anchorYOffset"] = 0,
+                            ["text_text_format_c_format"] = "BigNumber",
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
@@ -36146,12 +28711,7 @@ wa.data = {
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 20,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_format"] = "timed",
                         },
                         [3] = {
                             ["text_text_format_tooltip1M_format"] = "none",
@@ -36179,8 +28739,8 @@ wa.data = {
                                 [4] = 1,
                             },
                             ["text_font"] = "Poppins SemiBold",
-                            ["text_anchorYOffset"] = -1,
                             ["text_shadowYOffset"] = 0,
+                            ["text_anchorYOffset"] = -1,
                             ["text_shadowXOffset"] = 0,
                             ["text_wordWrap"] = "WordWrap",
                             ["text_visible"] = true,
@@ -36209,49 +28769,60 @@ wa.data = {
                     ["authorOptions"] = {
                     },
                     ["AMModified"] = true,
-                    ["adjustedMin"] = "",
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["useAdjustededMax"] = false,
                     ["information"] = {
                     },
                     ["source"] = "import",
                     ["AMOriginalUUID"] = "3BpnUJTq(Gj",
-                    ["conditions"] = {
-                    },
-                    ["adjustedMax"] = "",
+                    ["adjustedMin"] = "",
+                    ["xOffset"] = -10,
                     ["uid"] = "AM-3BpnUJTq(Gj",
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "icon",
+                    ["adjustedMax"] = "",
+                    ["anchorFrameType"] = "NAMEPLATE",
+                    ["useCooldownModRate"] = true,
                     ["load"] = {
                         ["use_encounterid"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
+                        ["encounterid"] = "3011",
+                        ["class_and_spec"] = {
                         },
-                        ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
-                        ["class_and_spec"] = {
-                        },
+                        ["use_never"] = false,
                         ["size"] = {
                             ["multi"] = {
                             },
-                        },
-                    },
-                    ["anchorFrameType"] = "NAMEPLATE",
-                    ["useCooldownModRate"] = true,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["finish"] = {
-                        },
-                        ["init"] = {
                         },
                     },
                     ["anchorFrameParent"] = false,
@@ -36266,17 +28837,25 @@ wa.data = {
                     ["semver"] = "1.0.2",
                     ["tocversion"] = 110100,
                     ["id"] = "Sparkblast Ignition (nameplate)",
-                    ["alpha"] = 1,
+                    ["keepAspectRatio"] = false,
                     ["frameStrata"] = 3,
                     ["width"] = 40,
-                    ["keepAspectRatio"] = false,
+                    ["conditions"] = {
+                    },
                     ["config"] = {
                     },
                     ["inverse"] = false,
-                    ["xOffset"] = -10,
+                    ["useTooltip"] = false,
                     ["displayIcon"] = "134337",
                     ["cooldown"] = true,
-                    ["useTooltip"] = false,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["finish"] = {
+                        },
+                        ["init"] = {
+                        },
+                    },
                 },
                 [53] = {
                     ["iconSource"] = -1,
@@ -36343,7 +28922,7 @@ wa.data = {
                     },
                     ["selfPoint"] = "RIGHT",
                     ["desaturate"] = false,
-                    ["internalVersion"] = 82,
+                    ["useCooldownModRate"] = true,
                     ["version"] = 3,
                     ["subRegions"] = {
                         [1] = {
@@ -36353,9 +28932,9 @@ wa.data = {
                             ["text_text_format_p_time_format"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%p",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_c_big_number_format"] = "AbbreviateNumbers",
                             ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_c_big_number_format"] = "AbbreviateNumbers",
+                            ["text_text_format_p_time_mod_rate"] = true,
                             ["anchorXOffset"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -36457,9 +29036,9 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["use_never"] = false,
                         ["class_and_spec"] = {
                         },
-                        ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
@@ -36468,13 +29047,18 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
                         ["use_encounterid"] = true,
                     },
+                    ["internalVersion"] = 82,
+                    ["useAdjustededMax"] = false,
+                    ["cooldown"] = true,
+                    ["source"] = "import",
+                    ["AMOriginalUUID"] = "ju(e8BnYbl1",
                     ["customText"] = "function()\
                   if WeakAuras.IsOptionsOpen() then\
                       return math.random(1000000, 72000000)\
@@ -36484,27 +29068,15 @@ wa.data = {
                   \
                   return aura_env.state.points and aura_env.state.points[1] or UnitGetTotalAbsorbs(aura_env.state.unit)\
               end",
-                    ["useAdjustededMax"] = false,
-                    ["cooldown"] = true,
-                    ["source"] = "import",
-                    ["AMOriginalUUID"] = "ju(e8BnYbl1",
-                    ["keepAspectRatio"] = false,
-                    ["adjustedMax"] = "",
+                    ["displayIcon"] = "134337",
                     ["config"] = {
                     },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "icon",
-                    ["AMModified"] = true,
+                    ["adjustedMax"] = "",
                     ["width"] = 64,
                     ["alpha"] = 1,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
+                    ["AMModified"] = true,
                     ["anchorFrameParent"] = false,
                     ["authorOptions"] = {
                     },
@@ -36513,9 +29085,6 @@ wa.data = {
                     ["semver"] = "1.0.2",
                     ["tocversion"] = 110100,
                     ["id"] = "Entranced (nameplate) ",
-                    ["useCooldownModRate"] = true,
-                    ["frameStrata"] = 3,
-                    ["anchorFrameType"] = "NAMEPLATE",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -36536,14 +29105,24 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["frameStrata"] = 3,
+                    ["anchorFrameType"] = "NAMEPLATE",
+                    ["keepAspectRatio"] = false,
                     ["uid"] = "AM-ju(e8BnYbl1",
                     ["inverse"] = false,
-                    ["displayIcon"] = "134337",
+                    ["xOffset"] = -10,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["xOffset"] = -10,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["init"] = {
+                        },
+                        ["finish"] = {
+                        },
+                    },
                 },
                 [54] = {
                     ["arcLength"] = 360,
@@ -36555,10 +29134,10 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["gridType"] = "RD",
-                    ["limit"] = 5,
+                    ["borderEdge"] = "Square Full White",
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["anchorPoint"] = "BOTTOM",
+                    ["radius"] = 200,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -36587,18 +29166,18 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["radius"] = 200,
+                    ["anchorPoint"] = "BOTTOM",
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["grow"] = "UP",
+                    ["xOffset"] = 0,
                     ["AMOriginalUUID"] = "XSVxG4o55PV",
                     ["sortHybridTable"] = {
                         ["Tinnitus Co-Tank"] = false,
                     },
                     ["rotation"] = 0,
-                    ["borderInset"] = 1,
                     ["config"] = {
                     },
+                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
                     ["authorOptions"] = {
@@ -36634,23 +29213,23 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["source"] = "import",
                     ["animate"] = false,
+                    ["source"] = "import",
                     ["AMModified"] = true,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["sort"] = "none",
-                    ["gridWidth"] = 5,
                     ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["regionType"] = "dynamicgroup",
+                    ["gridWidth"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["sort"] = "none",
                     ["tocversion"] = 110007,
                     ["id"] = "Rik Co-Tank Icon",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-tank.png",
@@ -36683,7 +29262,7 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["xOffset"] = 0,
+                    ["grow"] = "UP",
                 },
                 [55] = {
                     ["sparkWidth"] = 10,
@@ -36727,20 +29306,20 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3011",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -36937,14 +29516,14 @@ wa.data = {
                             ["text_anchorYOffset"] = -5,
                             ["text_shadowYOffset"] = 0,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                             ["anchor_point"] = "TOPRIGHT",
                             ["text_fontSize"] = 19,
                             ["anchorXOffset"] = 0,
@@ -37010,8 +29589,8 @@ wa.data = {
                     ["width"] = 50,
                     ["frameStrata"] = 2,
                     ["icon"] = false,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Tinnitus Co-Tank",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["backgroundColor"] = {
@@ -37140,31 +29719,30 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["selfPoint"] = "CENTER",
                     ["xOffset"] = 0,
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
-                    ["authorOptions"] = {
-                    },
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "Vl3UwVs(Wn2",
                     ["id"] = "Rik Raid Frame Glows",
-                    ["alpha"] = 1,
                     ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-Vl3UwVs(Wn2",
                     ["borderInset"] = 1,
                     ["config"] = {
                     },
+                    ["uid"] = "AM-Vl3UwVs(Wn2",
                     ["yOffset"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["authorOptions"] = {
+                    },
                 },
                 [57] = {
                     ["controlledChildren"] = {
                         [1] = "Lingering Voltage stacks /say ",
-                        [2] = "Amplifier auto-marker ",
                     },
                     ["borderBackdrop"] = "Blizzard Tooltip",
                     ["xOffset"] = 0,
@@ -37236,6 +29814,7 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["parent"] = "[3] Rik Reverb",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -37256,25 +29835,24 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["parent"] = "[3] Rik Reverb",
                     ["borderOffset"] = 4,
-                    ["authorOptions"] = {
-                    },
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "zfDNghBnOqm",
                     ["id"] = "Rik Misc",
-                    ["frameStrata"] = 1,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-zfDNghBnOqm",
                     ["borderInset"] = 1,
                     ["config"] = {
                     },
+                    ["uid"] = "AM-zfDNghBnOqm",
                     ["yOffset"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["authorOptions"] = {
+                    },
                 },
                 [58] = {
                     ["outline"] = "OUTLINE",
@@ -37349,7 +29927,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3011",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -37358,6 +29935,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3011",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -37367,10 +29945,10 @@ wa.data = {
                     ["uid"] = "AM-LbzQ4GaE8QM",
                     ["shadowXOffset"] = 1,
                     ["AMModified"] = true,
+                    ["AMOriginalUUID"] = "LbzQ4GaE8QM",
+                    ["regionType"] = "text",
                     ["conditions"] = {
                     },
-                    ["regionType"] = "text",
-                    ["fixedWidth"] = 200,
                     ["displayText_format_c_format"] = "none",
                     ["selfPoint"] = "BOTTOM",
                     ["parent"] = "Rik Misc",
@@ -37396,7 +29974,7 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["AMOriginalUUID"] = "LbzQ4GaE8QM",
+                    ["fixedWidth"] = 200,
                     ["information"] = {
                     },
                     ["animation"] = {
@@ -37421,262 +29999,6 @@ wa.data = {
                     },
                 },
                 [59] = {
-                    ["outline"] = "OUTLINE",
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = true,
-                    ["shadowYOffset"] = -1,
-                    ["anchorPoint"] = "CENTER",
-                    ["displayText_format_p_time_format"] = 0,
-                    ["customTextUpdate"] = "event",
-                    ["automaticWidth"] = "Auto",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["finish"] = {
-                        },
-                        ["init"] = {
-                            ["do_custom"] = true,
-                            ["custom"] = "aura_env.checkUnits = {\
-                  \"boss1\",\
-                  \"boss2\",\
-                  \"boss3\",\
-                  \"boss4\",\
-                  \"boss5\",\
-                  \"boss6\",\
-                  \"boss7\",\
-                  \"boss8\",\
-                  \"boss9\",\
-                  \"boss10\",\
-                  \"boss11\",\
-                  \"boss12\",\
-                  \"boss13\",\
-                  \"boss14\",\
-                  \"boss15\",\
-                  \"boss16\",\
-                  \"arena1\",\
-                  \"arena2\",\
-                  \"arena3\",\
-                  \"arena4\",\
-                  \"arena5\",\
-                  \"arena6\",\
-                  \"arena7\",\
-                  \"arena8\",\
-              }",
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["type"] = "custom",
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["custom_hide"] = "timed",
-                                ["custom_type"] = "status",
-                                ["event"] = "Health",
-                                ["subeventPrefix"] = "SPELL",
-                                ["custom"] = "function(event, ...)\
-                  if event == \"LIQUID_CUSTOM_EVENT\" then\
-                      local id = ...\
-                      \
-                      if id ~= aura_env.id then return end\
-                      \
-                      -- If any GUIDs are still in this table, that means Resonance was never applied\
-                      -- Just add them in spawn order\
-                      if next(aura_env.newGUIDs) then\
-                          for _, GUID in ipairs(aura_env.newGUIDs) do\
-                              table.insert(aura_env.markerQueue, GUID)\
-                          end\
-                          \
-                          aura_env.newGUIDs = {}\
-                      end\
-                      \
-                      for _, unit in ipairs(aura_env.checkUnits) do\
-                          if UnitExists(unit) then\
-                              local GUID = UnitGUID(unit)\
-                              local index = tIndexOf(aura_env.markerQueue, GUID)\
-                              \
-                              if index and not aura_env.marked[GUID] then\
-                                  local mark = ((index - 1) % 8) + 1\
-                                  \
-                                  if GetRaidTargetIndex(unit) ~= mark then\
-                                      SetRaidTarget(unit, mark)\
-                                      \
-                                      aura_env.marked[GUID] = true\
-                                  end\
-                              end\
-                          end\
-                      end\
-                  elseif event == \"INSTANCE_ENCOUNTER_ENGAGE_UNIT\" or (event == \"FRAME_UPDATE\" and (not aura_env.last or aura_env.last < GetTime() - 1)) then\
-                      aura_env.last = GetTime()\
-                      \
-                      for _, unit in ipairs(aura_env.checkUnits) do\
-                          if UnitExists(unit) then\
-                              local GUID = UnitGUID(unit)\
-                              local npcID = select(6, strsplit(\"-\", GUID))\
-                              \
-                              if npcID == \"230197\" and not tContains(aura_env.markerQueue, GUID) and not tContains(aura_env.newGUIDs, GUID) then -- Amplifier\
-                                  table.insert(aura_env.newGUIDs, GUID)\
-                                  \
-                                  -- Force marking 5s after spawn, in case neither of them got Resonance\
-                                  if #aura_env.newGUIDs == 2 then\
-                                      local id = aura_env.id\
-                                      \
-                                      C_Timer.After(5, function() WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", id) end)\
-                                  end\
-                              end\
-                          end\
-                      end\
-                  elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
-                      local _, subEvent, _, _, _, _, _, destGUID, _, _, _, spellID = ...\
-                      \
-                      if subEvent == \"SPELL_AURA_APPLIED\" and spellID == 466128 and #aura_env.newGUIDs == 2 and tContains(aura_env.newGUIDs, destGUID) then -- Resonance\
-                          table.insert(aura_env.markerQueue, destGUID)\
-                          \
-                          if aura_env.newGUIDs[1] == destGUID then\
-                              table.insert(aura_env.markerQueue, aura_env.newGUIDs[2])\
-                          else\
-                              table.insert(aura_env.markerQueue, aura_env.newGUIDs[1])\
-                          end\
-                          \
-                          aura_env.newGUIDs = {}\
-                          \
-                          WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", aura_env.id)\
-                      elseif subEvent == \"SPELL_AURA_REMOVED\" and spellID == 1213817 then -- Sound Cloud\
-                          aura_env.marked = {}\
-                          aura_env.newGUIDs = {}\
-                          \
-                          local newMarkerQueue = {}\
-                          local id = aura_env.id\
-                          \
-                          for _, GUID in ipairs(aura_env.markerQueue) do\
-                              local unit = UnitTokenFromGUID(GUID)\
-                              \
-                              if unit then\
-                                  table.insert(newMarkerQueue, GUID)\
-                              end\
-                          end\
-                          \
-                          aura_env.markerQueue = newMarkerQueue\
-                          \
-                          C_Timer.After(5, function() WeakAuras.ScanEvents(\"LIQUID_CUSTOM_EVENT\", id) end)\
-                      end\
-                  elseif event == \"ENCOUNTER_START\" then\
-                      aura_env.marked = {} -- GUIDs that have previously been marked\
-                      aura_env.newGUIDs = {}\
-                      aura_env.markerQueue = {} -- Amplifier GUIDs in order of how they should be marked\
-                  end\
-              end",
-                                ["events"] =
-                                "INSTANCE_ENCOUNTER_ENGAGE_UNIT, ENCOUNTER_START, LIQUID_CUSTOM_EVENT, CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED, FRAME_UPDATE",
-                                ["spellIds"] = {
-                                },
-                                ["unit"] = "player",
-                                ["check"] = "event",
-                                ["names"] = {
-                                },
-                                ["useExactSpellId"] = false,
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                        ["activeTriggerMode"] = -10,
-                    },
-                    ["displayText_format_p_time_mod_rate"] = true,
-                    ["internalVersion"] = 82,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["font"] = "Friz Quadrata TT",
-                    ["subRegions"] = {
-                        [1] = {
-                            ["type"] = "subbackground",
-                        },
-                    },
-                    ["load"] = {
-                        ["use_group_leader"] = true,
-                        ["use_never"] = false,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["group_leader"] = {
-                            ["single"] = "LEADER",
-                        },
-                        ["encounterid"] = "3011",
-                        ["use_encounterid"] = true,
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["fontSize"] = 12,
-                    ["shadowXOffset"] = 1,
-                    ["authorOptions"] = {
-                    },
-                    ["yOffset"] = 0,
-                    ["regionType"] = "text",
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "x2MgwQQtUTm",
-                    ["fixedWidth"] = 200,
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["displayText_format_p_time_precision"] = 1,
-                    ["config"] = {
-                    },
-                    ["displayText"] = "",
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    ["justify"] = "LEFT",
-                    ["tocversion"] = 110100,
-                    ["id"] = "Amplifier auto-marker ",
-                    ["displayText_format_p_format"] = "timed",
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["uid"] = "AM-x2MgwQQtUTm",
-                    ["wordWrap"] = "WordWrap",
-                    ["selfPoint"] = "BOTTOM",
-                    ["shadowColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["parent"] = "Rik Misc",
-                },
-                [60] = {
                     ["controlledChildren"] = {
                         [1] = "Stix Small Icon",
                         [2] = "Stix Big Icon",
@@ -37779,29 +30101,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["xOffset"] = 0,
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
+                    ["authorOptions"] = {
+                    },
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "mc0Qgxd26AP",
                     ["tocversion"] = 110007,
                     ["id"] = "[4] Stix Bunkjunker",
                     ["groupIcon"] = "6392627",
-                    ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
                     ["uid"] = "AM-mc0Qgxd26AP",
                     ["config"] = {
                     },
-                    ["frameStrata"] = 1,
+                    ["borderInset"] = 1,
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["selfPoint"] = "CENTER",
                 },
-                [61] = {
+                [60] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Infected Bite  ",
@@ -37815,7 +30137,7 @@ wa.data = {
                         ["Infected Bite  "] = false,
                         ["Demolish "] = false,
                     },
-                    ["source"] = "import",
+                    ["sort"] = "none",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -37823,7 +30145,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 15,
-                    ["arcLength"] = 360,
+                    ["fullCircle"] = true,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -37852,9 +30174,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["fullCircle"] = true,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
+                    ["arcLength"] = 360,
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -37875,6 +30195,8 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "BWELVe7uH41",
                     ["selfPoint"] = "BOTTOM",
                     ["rotation"] = 0,
@@ -37910,22 +30232,22 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["frameStrata"] = 1,
+                    ["source"] = "import",
                     ["animate"] = false,
-                    ["xOffset"] = 0,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
-                    ["regionType"] = "dynamicgroup",
+                    ["stepAngle"] = 15,
                     ["borderSize"] = 2,
                     ["limit"] = 5,
+                    ["regionType"] = "dynamicgroup",
                     ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["anchorPoint"] = "BOTTOM",
                     ["borderOffset"] = 4,
-                    ["sort"] = "none",
+                    ["xOffset"] = 0,
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Small Icon",
                     ["authorOptions"] = {
@@ -37933,9 +30255,9 @@ wa.data = {
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["yOffset"] = 0,
+                    ["uid"] = "AM-BWELVe7uH41",
                     ["config"] = {
                     },
-                    ["uid"] = "AM-BWELVe7uH41",
                     ["rowSpace"] = 1,
                     ["conditions"] = {
                     },
@@ -37943,7 +30265,7 @@ wa.data = {
                     },
                     ["radius"] = 200,
                 },
-                [62] = {
+                [61] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -37983,12 +30305,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3012",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3012",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -38215,9 +30537,14 @@ wa.data = {
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%c1%c3 / %{c2}s",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_text_format_p_time_format"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -38226,9 +30553,9 @@ wa.data = {
                             ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_text_format_c3_format"] = "none",
-                            ["text_shadowYOffset"] = 0,
                             ["text_fontType"] = "OUTLINE",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_text_format_c3_format"] = "none",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -38248,12 +30575,7 @@ wa.data = {
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -38291,8 +30613,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["id"] = "Infected Bite  ",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Infected Bite  ",
                     ["frameStrata"] = 2,
                     ["width"] = 60,
                     ["icon"] = false,
@@ -38307,11 +30629,11 @@ wa.data = {
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
+                    ["cooldown"] = true,
                     ["information"] = {
                     },
-                    ["cooldown"] = true,
                 },
-                [63] = {
+                [62] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -38346,7 +30668,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -38355,11 +30677,11 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3012",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3012",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -38566,14 +30888,9 @@ wa.data = {
                             ["text_shadowXOffset"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%c1%c3 / %{c2}s",
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
-                            ["anchorXOffset"] = 0,
                             ["text_text_format_p_time_mod_rate"] = true,
+                            ["anchorXOffset"] = 0,
+                            ["text_text_format_p_format"] = "timed",
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -38582,9 +30899,9 @@ wa.data = {
                             ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_text_format_c3_format"] = "none",
-                            ["text_anchorYOffset"] = 0,
                             ["text_visible"] = false,
+                            ["text_anchorYOffset"] = 0,
+                            ["text_text_format_c3_format"] = "none",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -38604,7 +30921,12 @@ wa.data = {
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "timed",
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                         },
                     },
                     ["height"] = 40,
@@ -38638,8 +30960,8 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["id"] = "Demolish ",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Demolish ",
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
                     ["actions"] = {
@@ -38683,7 +31005,7 @@ wa.data = {
                     },
                     ["zoom"] = 0.3,
                 },
-                [64] = {
+                [63] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                     },
@@ -38692,7 +31014,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                     ["anchorPoint"] = "BOTTOM",
-                    ["borderEdge"] = "Square Full White",
+                    ["limit"] = 5,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -38700,8 +31022,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["authorOptions"] = {
-                    },
+                    ["radius"] = 200,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -38730,10 +31051,11 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["radius"] = 200,
+                    ["authorOptions"] = {
+                    },
                     ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["gridType"] = "RD",
+                    ["yOffset"] = 0,
                     ["AMOriginalUUID"] = "RFiyOkyM)jb",
                     ["grow"] = "UP",
                     ["stagger"] = 0,
@@ -38769,22 +31091,22 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["parent"] = "[4] Stix Bunkjunker",
+                    ["source"] = "import",
                     ["animate"] = false,
-                    ["useLimit"] = false,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
+                    ["borderEdge"] = "Square Full White",
                     ["stepAngle"] = 15,
                     ["borderSize"] = 2,
                     ["sort"] = "none",
+                    ["useLimit"] = false,
                     ["regionType"] = "dynamicgroup",
-                    ["source"] = "import",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["rowSpace"] = 1,
                     ["borderOffset"] = 4,
-                    ["limit"] = 5,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Big Icon",
                     ["alpha"] = 1,
@@ -38792,9 +31114,9 @@ wa.data = {
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["sortHybridTable"] = {
                     },
+                    ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["borderInset"] = 1,
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -38819,9 +31141,9 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["yOffset"] = 0,
+                    ["gridType"] = "RD",
                 },
-                [65] = {
+                [64] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Overdrive ",
@@ -38833,10 +31155,14 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-bar.png",
                     ["gridType"] = "RD",
-                    ["animate"] = false,
+                    ["stepAngle"] = 15,
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["arcLength"] = 360,
+                    ["sortHybridTable"] = {
+                        ["Trash Compactor "] = false,
+                        ["Overdrive "] = false,
+                        ["Discarded Doomsplosive Timer "] = false,
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -38865,13 +31191,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["sortHybridTable"] = {
-                        ["Trash Compactor "] = false,
-                        ["Overdrive "] = false,
-                        ["Discarded Doomsplosive Timer "] = false,
-                    },
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
+                    ["arcLength"] = 360,
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -38892,6 +31212,8 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["selfPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "mcJWtH29o88",
                     ["borderColor"] = {
                         [1] = 0,
@@ -38932,22 +31254,22 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["gridWidth"] = 5,
+                    ["animate"] = false,
                     ["source"] = "import",
-                    ["xOffset"] = 0,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["borderEdge"] = "Square Full White",
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["space"] = 2,
                     ["borderOffset"] = 4,
-                    ["stepAngle"] = 15,
+                    ["xOffset"] = 0,
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Bars",
                     ["authorOptions"] = {
@@ -38955,9 +31277,9 @@ wa.data = {
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["anchorPoint"] = "BOTTOM",
-                    ["uid"] = "AM-mcJWtH29o88",
                     ["config"] = {
                     },
+                    ["uid"] = "AM-mcJWtH29o88",
                     ["yOffset"] = 0,
                     ["conditions"] = {
                     },
@@ -38965,7 +31287,7 @@ wa.data = {
                     },
                     ["useLimit"] = false,
                 },
-                [66] = {
+                [65] = {
                     ["sparkWidth"] = 2,
                     ["sparkOffsetX"] = 0,
                     ["xOffset"] = 0,
@@ -38973,14 +31295,17 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["AMModified"] = true,
+                    ["config"] = {
+                    },
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["init"] = {
+                        },
+                        ["finish"] = {
+                        },
                     },
                     ["triggers"] = {
                         [1] = {
@@ -39055,7 +31380,7 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["AMOriginalUUID"] = "aZFK8fTPUqI",
-                    ["selfPoint"] = "CENTER",
+                    ["icon"] = true,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -39152,13 +31477,12 @@ wa.data = {
                     },
                     ["gradientOrientation"] = "HORIZONTAL",
                     ["textureSource"] = "LSM",
+                    ["AMModified"] = true,
+                    ["sparkBlendMode"] = "ADD",
+                    ["useAdjustededMax"] = false,
                     ["load"] = {
                         ["use_encounterid"] = true,
                         ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
                             ["multi"] = {
                             },
                         },
@@ -39167,30 +31491,29 @@ wa.data = {
                             },
                         },
                         ["encounterid"] = "3012",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
                         },
                     },
-                    ["sparkBlendMode"] = "ADD",
-                    ["useAdjustededMax"] = false,
-                    ["authorOptions"] = {
-                    },
                     ["source"] = "import",
-                    ["iconSource"] = -1,
+                    ["preferToUpdate"] = true,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["parent"] = "Stix Bars",
+                    ["iconSource"] = -1,
                     ["anchorFrameType"] = "SCREEN",
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["alpha"] = 1,
-                    ["config"] = {
-                    },
+                    ["parent"] = "Stix Bars",
                     ["icon_side"] = "RIGHT",
                     ["sparkHidden"] = "NEVER",
                     ["sparkHeight"] = 30,
@@ -39198,30 +31521,29 @@ wa.data = {
                     ["zoom"] = 0.3,
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["spark"] = true,
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["id"] = "Overdrive ",
                     ["height"] = 32.999893188477,
+                    ["id"] = "Overdrive ",
+                    ["conditions"] = {
+                    },
                     ["frameStrata"] = 2,
                     ["width"] = 266.00021362305,
-                    ["conditions"] = {
+                    ["authorOptions"] = {
                     },
                     ["uid"] = "AM-aZFK8fTPUqI",
                     ["inverse"] = false,
-                    ["preferToUpdate"] = true,
+                    ["selfPoint"] = "CENTER",
                     ["orientation"] = "HORIZONTAL",
                     ["displayIcon"] = 2065603,
                     ["information"] = {
                     },
-                    ["icon"] = true,
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0.5,
+                    },
                 },
-                [67] = {
+                [66] = {
                     ["sparkWidth"] = 2,
                     ["sparkOffsetX"] = 0,
                     ["parent"] = "Stix Bars",
@@ -39229,26 +31551,7 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["load"] = {
-                        ["use_encounterid"] = true,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "3012",
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
                     ["icon"] = true,
@@ -39328,14 +31631,7 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["AMOriginalUUID"] = "ngsCtYaArEc",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
+                    ["enableGradient"] = true,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -39432,22 +31728,40 @@ wa.data = {
                     },
                     ["height"] = 32.999893188477,
                     ["textureSource"] = "LSM",
-                    ["AMModified"] = true,
+                    ["load"] = {
+                        ["use_encounterid"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["encounterid"] = "3012",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["authorOptions"] = {
-                    },
+                    ["AMModified"] = true,
                     ["source"] = "import",
-                    ["selfPoint"] = "CENTER",
+                    ["xOffset"] = 0,
                     ["config"] = {
                     },
-                    ["conditions"] = {
-                    },
+                    ["selfPoint"] = "CENTER",
                     ["width"] = 266.00021362305,
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["frameStrata"] = 2,
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["conditions"] = {
+                    },
                     ["icon_side"] = "RIGHT",
                     ["sparkHidden"] = "NEVER",
                     ["sparkHeight"] = 30,
@@ -39455,27 +31769,35 @@ wa.data = {
                     ["zoom"] = 0.3,
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["spark"] = true,
-                    ["preferToUpdate"] = true,
-                    ["id"] = "Trash Compactor ",
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
+                    ["id"] = "Trash Compactor ",
+                    ["iconSource"] = -1,
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["iconSource"] = -1,
+                    ["authorOptions"] = {
+                    },
                     ["uid"] = "AM-ngsCtYaArEc",
                     ["inverse"] = false,
-                    ["xOffset"] = 0,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["init"] = {
+                        },
+                        ["finish"] = {
+                        },
+                    },
                     ["orientation"] = "HORIZONTAL",
                     ["displayIcon"] = "136111",
                     ["information"] = {
                     },
-                    ["enableGradient"] = true,
+                    ["preferToUpdate"] = true,
                 },
-                [68] = {
+                [67] = {
                     ["sparkWidth"] = 2,
                     ["sparkOffsetX"] = 0,
                     ["xOffset"] = 0,
@@ -39483,21 +31805,14 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
+                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["sparkRotation"] = 0,
+                    ["sparkRotationMode"] = "AUTO",
                     ["backgroundColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 0.5,
-                    },
-                    ["sparkRotation"] = 0,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["finish"] = {
-                        },
-                        ["init"] = {
-                        },
                     },
                     ["triggers"] = {
                         [1] = {
@@ -39510,6 +31825,11 @@ wa.data = {
                                 ["subeventPrefix"] = "SPELL",
                                 ["names"] = {
                                 },
+                                ["spellIds"] = {
+                                },
+                                ["events"] =
+                                "ENCOUNTER_START, UNIT_SPELLCAST_SUCCEEDED:boss, LIQUID_CUSTOM_EVENT, CLEU:SPELL_DAMAGE",
+                                ["check"] = "event",
                                 ["custom"] = "function(allstates, event, ...)\
                   if event == \"OPTIONS\" then\
                       for i = 1, 2 do\
@@ -39573,11 +31893,6 @@ wa.data = {
                       aura_env.muffledDoomsplosionCounts = {} -- [GUID] = count\
                   end\
               end",
-                                ["events"] =
-                                "ENCOUNTER_START, UNIT_SPELLCAST_SUCCEEDED:boss, LIQUID_CUSTOM_EVENT, CLEU:SPELL_DAMAGE",
-                                ["check"] = "event",
-                                ["spellIds"] = {
-                                },
                                 ["subeventSuffix"] = "_CAST_START",
                                 ["custom_hide"] = "timed",
                             },
@@ -39598,8 +31913,33 @@ wa.data = {
                         [1] = -1,
                         [2] = "",
                     },
-                    ["selfPoint"] = "CENTER",
-                    ["authorOptions"] = {
+                    ["animation"] = {
+                        ["start"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["easeStrength"] = 3,
+                            ["type"] = "none",
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["finish"] = {
+                        },
+                        ["init"] = {
+                        },
                     },
                     ["information"] = {
                     },
@@ -39611,7 +31951,7 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["AMOriginalUUID"] = "X9xnjAhh1jc",
-                    ["parent"] = "Stix Bars",
+                    ["enableGradient"] = true,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -39711,21 +32051,21 @@ wa.data = {
                     ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["iconSource"] = -1,
+                    ["parent"] = "Stix Bars",
                     ["source"] = "import",
-                    ["icon"] = true,
+                    ["adjustedMax"] = "",
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["uid"] = "AM-X9xnjAhh1jc",
+                    ["icon"] = true,
                     ["width"] = 266.00021362305,
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["frameStrata"] = 2,
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["uid"] = "AM-X9xnjAhh1jc",
                     ["icon_side"] = "RIGHT",
                     ["id"] = "Discarded Doomsplosive Timer ",
                     ["sparkHeight"] = 30,
@@ -39733,27 +32073,6 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["zoom"] = 0.3,
                     ["spark"] = true,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["easeStrength"] = 3,
-                            ["type"] = "none",
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["sparkHidden"] = "NEVER",
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -39763,7 +32082,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3012",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -39772,15 +32090,19 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3012",
                         ["use_encounterid"] = true,
                     },
+                    ["sparkHidden"] = "NEVER",
+                    ["displayIcon"] = "2115301",
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["displayIcon"] = "2115301",
+                    ["iconSource"] = -1,
                     ["config"] = {
                     },
                     ["inverse"] = false,
-                    ["adjustedMax"] = "",
+                    ["authorOptions"] = {
+                    },
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
@@ -39790,9 +32112,9 @@ wa.data = {
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["enableGradient"] = true,
+                    ["selfPoint"] = "CENTER",
                 },
-                [69] = {
+                [68] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "Rolling Rubbish Prog",
@@ -39806,11 +32128,27 @@ wa.data = {
                         ["Rolling Rubbish Prog"] = false,
                         ["Rolling Rubbish Remaining"] = false,
                     },
-                    ["borderEdge"] = "Square Full White",
+                    ["load"] = {
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["authorOptions"] = {
-                    },
+                    ["grow"] = "UP",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -39839,10 +32177,11 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["grow"] = "UP",
+                    ["authorOptions"] = {
+                    },
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-specialbar.png",
+                    ["anchorPoint"] = "BOTTOM",
                     ["AMOriginalUUID"] = "xS1)M1qHxce",
                     ["selfPoint"] = "BOTTOM",
                     ["rotation"] = 0,
@@ -39880,17 +32219,17 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["parent"] = "[4] Stix Bunkjunker",
-                    ["source"] = "import",
+                    ["animate"] = false,
                     ["frameStrata"] = 1,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
-                    ["stepAngle"] = 15,
+                    ["borderEdge"] = "Square Full White",
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
                     ["limit"] = 5,
+                    ["stepAngle"] = 15,
                     ["sort"] = "none",
-                    ["regionType"] = "dynamicgroup",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["borderColor"] = {
@@ -39900,41 +32239,24 @@ wa.data = {
                         [4] = 1,
                     },
                     ["borderOffset"] = 4,
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Special Bars",
-                    ["animate"] = false,
+                    ["source"] = "import",
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["gridType"] = "RD",
-                    ["uid"] = "AM-xS1)M1qHxce",
                     ["config"] = {
                     },
+                    ["uid"] = "AM-xS1)M1qHxce",
                     ["rowSpace"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["anchorPoint"] = "BOTTOM",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-specialbar.png",
                 },
-                [70] = {
+                [69] = {
                     ["sparkWidth"] = 10,
                     ["sparkOffsetX"] = 0,
                     ["xOffset"] = 0,
@@ -39942,7 +32264,7 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["height"] = 20,
+                    ["iconSource"] = -1,
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
                     ["backgroundColor"] = {
@@ -39957,16 +32279,13 @@ wa.data = {
                                 ["type"] = "custom",
                                 ["subeventSuffix"] = "_CAST_START",
                                 ["debuffType"] = "HELPFUL",
-                                ["subeventPrefix"] = "SPELL",
-                                ["event"] = "Health",
                                 ["unit"] = "player",
+                                ["event"] = "Health",
+                                ["subeventPrefix"] = "SPELL",
                                 ["names"] = {
                                 },
                                 ["spellIds"] = {
                                 },
-                                ["events"] = "TRIGGER:2",
-                                ["custom_type"] = "stateupdate",
-                                ["check"] = "event",
                                 ["custom"] = "function(allstates, event, ...)\
                   if event == \"OPTIONS\" then\
                       allstates[\"\"] = {\
@@ -40002,6 +32321,9 @@ wa.data = {
                       return true\
                   end\
               end",
+                                ["custom_type"] = "stateupdate",
+                                ["check"] = "event",
+                                ["events"] = "TRIGGER:2",
                                 ["custom_hide"] = "timed",
                                 ["customVariables"] = "{\
                   value = true\
@@ -40034,24 +32356,24 @@ wa.data = {
                             ["trigger"] = {
                                 ["useMatch_count"] = true,
                                 ["useName"] = false,
-                                ["useExactSpellId"] = true,
                                 ["subeventSuffix"] = "_CAST_START",
+                                ["auranames"] = {
+                                },
                                 ["auraspellids"] = {
                                     [1] = "461536",
                                 },
                                 ["fetchTooltip"] = false,
                                 ["event"] = "Health",
-                                ["names"] = {
-                                },
+                                ["unit"] = "player",
                                 ["subeventPrefix"] = "SPELL",
                                 ["type"] = "aura2",
                                 ["spellIds"] = {
                                 },
                                 ["match_countOperator"] = ">",
                                 ["match_count"] = "0",
-                                ["unit"] = "player",
-                                ["auranames"] = {
+                                ["names"] = {
                                 },
+                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "BOTH",
                             },
                             ["untrigger"] = {
@@ -40111,7 +32433,7 @@ wa.data = {
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["enableGradient"] = false,
+                    ["internalVersion"] = 82,
                     ["progressSource"] = {
                         [1] = -1,
                         [2] = "",
@@ -40132,7 +32454,7 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["displayIcon"] = 2065603,
-                    ["adjustedMax"] = "",
+                    ["icon"] = false,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -40257,7 +32579,7 @@ wa.data = {
                             ["tick_yOffset"] = 0,
                         },
                     },
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["height"] = 20,
                     ["textureSource"] = "LSM",
                     ["load"] = {
                         ["use_encounterid"] = true,
@@ -40265,7 +32587,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3012",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -40274,6 +32595,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3012",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -40281,9 +32603,12 @@ wa.data = {
                     },
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["authorOptions"] = {
-                    },
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["source"] = "import",
+                    ["conditions"] = {
+                    },
+                    ["config"] = {
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -40292,19 +32617,16 @@ wa.data = {
                         ["finish"] = {
                         },
                     },
-                    ["config"] = {
-                    },
+                    ["anchorFrameType"] = "SCREEN",
+                    ["useAdjustededMin"] = false,
+                    ["regionType"] = "aurabar",
+                    ["frameStrata"] = 2,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["anchorFrameType"] = "SCREEN",
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["frameStrata"] = 2,
-                    ["iconSource"] = -1,
                     ["icon_side"] = "RIGHT",
                     ["id"] = "Rolling Rubbish Prog",
                     ["sparkHeight"] = 30,
@@ -40312,11 +32634,8 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["zoom"] = 0.3,
                     ["spark"] = false,
-                    ["internalVersion"] = 82,
-                    ["sparkHidden"] = "NEVER",
                     ["AMModified"] = true,
-                    ["alpha"] = 1,
-                    ["width"] = 500,
+                    ["sparkHidden"] = "NEVER",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -40337,17 +32656,20 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["alpha"] = 1,
+                    ["width"] = 500,
+                    ["authorOptions"] = {
+                    },
                     ["uid"] = "AM-RMaBOYuoOR8",
                     ["inverse"] = false,
-                    ["conditions"] = {
-                    },
+                    ["adjustedMax"] = "",
                     ["orientation"] = "HORIZONTAL",
                     ["AMOriginalUUID"] = "RMaBOYuoOR8",
                     ["information"] = {
                     },
-                    ["icon"] = false,
+                    ["enableGradient"] = false,
                 },
-                [71] = {
+                [70] = {
                     ["sparkWidth"] = 5,
                     ["sparkOffsetX"] = 0,
                     ["authorOptions"] = {
@@ -40356,6 +32678,14 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = -22,
                     ["anchorPoint"] = "CENTER",
+                    ["sparkColor"] = {
+                        [1] = 1,
+                        [2] = 0,
+                        [3] = 0.13725490868092,
+                        [4] = 1,
+                    },
+                    ["sparkRotation"] = 0,
+                    ["sparkRotationMode"] = "AUTO",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -40364,27 +32694,20 @@ wa.data = {
                         ["init"] = {
                         },
                     },
-                    ["sparkRotation"] = 0,
-                    ["sparkRotationMode"] = "AUTO",
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0,
-                    },
                     ["triggers"] = {
                         [1] = {
                             ["trigger"] = {
                                 ["useMatch_count"] = true,
                                 ["useName"] = false,
-                                ["useExactSpellId"] = true,
                                 ["subeventSuffix"] = "_CAST_START",
+                                ["auranames"] = {
+                                },
                                 ["auraspellids"] = {
                                     [1] = "461536",
                                 },
                                 ["fetchTooltip"] = false,
                                 ["event"] = "Health",
-                                ["unit"] = "player",
+                                ["subeventPrefix"] = "SPELL",
                                 ["names"] = {
                                 },
                                 ["type"] = "aura2",
@@ -40392,9 +32715,8 @@ wa.data = {
                                 },
                                 ["match_countOperator"] = ">",
                                 ["match_count"] = "0",
-                                ["subeventPrefix"] = "SPELL",
-                                ["auranames"] = {
-                                },
+                                ["unit"] = "player",
+                                ["useExactSpellId"] = true,
                                 ["debuffType"] = "BOTH",
                             },
                             ["untrigger"] = {
@@ -40435,7 +32757,12 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["internalVersion"] = 82,
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0,
+                    },
                     ["information"] = {
                     },
                     ["barColor"] = {
@@ -40446,7 +32773,7 @@ wa.data = {
                     },
                     ["desaturate"] = false,
                     ["displayIcon"] = 2065603,
-                    ["xOffset"] = 0,
+                    ["internalVersion"] = 82,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -40573,38 +32900,12 @@ wa.data = {
                     },
                     ["gradientOrientation"] = "HORIZONTAL",
                     ["textureSource"] = "LSM",
-                    ["AMModified"] = true,
-                    ["sparkBlendMode"] = "ADD",
-                    ["useAdjustededMax"] = false,
-                    ["parent"] = "Stix Special Bars",
-                    ["source"] = "import",
-                    ["preferToUpdate"] = true,
-                    ["uid"] = "AM-yV1(Sfrn(hG",
-                    ["icon"] = false,
-                    ["width"] = 500,
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["frameStrata"] = 2,
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 0,
-                        [3] = 0.13725490868092,
-                        [4] = 1,
-                    },
-                    ["icon_side"] = "RIGHT",
-                    ["id"] = "Rolling Rubbish Remaining",
-                    ["sparkHeight"] = 20,
-                    ["texture"] = "Clean",
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                    ["zoom"] = 0.3,
-                    ["spark"] = true,
                     ["load"] = {
                         ["use_encounterid"] = true,
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3012",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -40613,21 +32914,42 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3012",
                         ["size"] = {
                             ["multi"] = {
                             },
                         },
                     },
-                    ["sparkHidden"] = "NEVER",
+                    ["sparkBlendMode"] = "ADD",
+                    ["useAdjustededMax"] = false,
+                    ["xOffset"] = 0,
+                    ["source"] = "import",
+                    ["height"] = 20,
+                    ["uid"] = "AM-yV1(Sfrn(hG",
+                    ["preferToUpdate"] = true,
+                    ["width"] = 500,
+                    ["useAdjustededMin"] = false,
+                    ["regionType"] = "aurabar",
+                    ["frameStrata"] = 2,
+                    ["icon"] = false,
+                    ["icon_side"] = "RIGHT",
+                    ["id"] = "Rolling Rubbish Remaining",
+                    ["sparkHeight"] = 20,
+                    ["texture"] = "Clean",
+                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["zoom"] = 0.3,
+                    ["spark"] = true,
                     ["conditions"] = {
                     },
+                    ["sparkHidden"] = "NEVER",
+                    ["iconSource"] = -1,
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["iconSource"] = -1,
+                    ["parent"] = "Stix Special Bars",
                     ["config"] = {
                     },
                     ["inverse"] = false,
-                    ["height"] = 20,
+                    ["AMModified"] = true,
                     ["orientation"] = "HORIZONTAL",
                     ["AMOriginalUUID"] = "yV1(Sfrn(hG",
                     ["barColor2"] = {
@@ -40638,7 +32960,7 @@ wa.data = {
                     },
                     ["selfPoint"] = "CENTER",
                 },
-                [72] = {
+                [71] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                     },
@@ -40648,7 +32970,7 @@ wa.data = {
                     ["yOffset"] = 0,
                     ["sortHybridTable"] = {
                     },
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
+                    ["sort"] = "none",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -40656,7 +32978,8 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["arcLength"] = 360,
+                    ["authorOptions"] = {
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -40685,14 +33008,13 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["authorOptions"] = {
-                    },
+                    ["arcLength"] = 360,
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-circle.png",
+                    ["fullCircle"] = true,
                     ["AMOriginalUUID"] = "8Hhgv7TV)1o",
-                    ["rotation"] = 0,
                     ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["space"] = 2,
                     ["uid"] = "AM-8Hhgv7TV)1o",
                     ["subRegions"] = {
@@ -40725,7 +33047,15 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["gridType"] = "RD",
+                    ["source"] = "import",
                     ["animate"] = false,
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
+                    ["regionType"] = "dynamicgroup",
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -40746,20 +33076,12 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
                     ["stepAngle"] = 15,
-                    ["source"] = "import",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["parent"] = "[4] Stix Bunkjunker",
                     ["borderOffset"] = 4,
-                    ["sort"] = "none",
+                    ["borderEdge"] = "Square Full White",
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Circles",
                     ["gridWidth"] = 5,
@@ -40774,9 +33096,9 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["fullCircle"] = true,
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-circle.png",
                 },
-                [73] = {
+                [72] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "Demolish Taunt [Tank]",
@@ -40790,10 +33112,10 @@ wa.data = {
                         ["Demolish Taunt [Tank]"] = false,
                         ["Meltdown inc [Tank]"] = false,
                     },
-                    ["animate"] = false,
+                    ["stepAngle"] = 15,
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["grow"] = "DOWN",
+                    ["internalVersion"] = 82,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -40822,9 +33144,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["internalVersion"] = 82,
-                    ["selfPoint"] = "TOP",
-                    ["align"] = "CENTER",
+                    ["grow"] = "DOWN",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -40845,6 +33165,8 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["selfPoint"] = "TOP",
                     ["AMOriginalUUID"] = "xFW9Hr48bBl",
                     ["useLimit"] = false,
                     ["rotation"] = 0,
@@ -40880,32 +33202,32 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["gridWidth"] = 5,
+                    ["animate"] = false,
                     ["source"] = "import",
-                    ["authorOptions"] = {
-                    },
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["space"] = 2,
                     ["borderOffset"] = 4,
-                    ["stepAngle"] = 15,
+                    ["authorOptions"] = {
+                    },
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Texts",
                     ["xOffset"] = 0,
                     ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["yOffset"] = 0,
+                    ["uid"] = "AM-xFW9Hr48bBl",
                     ["config"] = {
                     },
-                    ["uid"] = "AM-xFW9Hr48bBl",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -40918,7 +33240,7 @@ wa.data = {
                     },
                     ["anchorPoint"] = "CENTER",
                 },
-                [74] = {
+                [73] = {
                     ["outline"] = "OUTLINE",
                     ["color"] = {
                         [1] = 1,
@@ -41063,36 +33385,13 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["internalVersion"] = 82,
-                    ["regionType"] = "text",
-                    ["wordWrap"] = "WordWrap",
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["role"] = {
-                            ["single"] = "TANK",
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["encounterid"] = "3012",
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_encounterid"] = true,
-                    },
-                    ["AMOriginalUUID"] = "AEBCze1qi8C",
                     ["conditions"] = {
                     },
+                    ["regionType"] = "text",
+                    ["internalVersion"] = 82,
+                    ["parent"] = "Stix Texts",
+                    ["AMOriginalUUID"] = "AEBCze1qi8C",
+                    ["wordWrap"] = "WordWrap",
                     ["displayText_format_p_time_precision"] = 1,
                     ["preferToUpdate"] = true,
                     ["uid"] = "AM-AEBCze1qi8C",
@@ -41108,7 +33407,30 @@ wa.data = {
                     ["config"] = {
                     },
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
-                    ["yOffset"] = 0,
+                    ["load"] = {
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["role"] = {
+                            ["single"] = "TANK",
+                        },
+                        ["encounterid"] = "3012",
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_encounterid"] = true,
+                    },
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -41118,9 +33440,9 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["parent"] = "Stix Texts",
+                    ["yOffset"] = 0,
                 },
-                [75] = {
+                [74] = {
                     ["outline"] = "OUTLINE",
                     ["xOffset"] = 0,
                     ["preferToUpdate"] = true,
@@ -41220,6 +33542,9 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
+                    ["conditions"] = {
+                    },
+                    ["regionType"] = "text",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -41240,35 +33565,9 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["regionType"] = "text",
-                    ["selfPoint"] = "BOTTOM",
-                    ["load"] = {
-                        ["use_encounterid"] = true,
-                        ["role"] = {
-                            ["single"] = "TANK",
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "3012",
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["displayText_format_p_time_mod_rate"] = true,
                     ["AMOriginalUUID"] = "HnHLXunzzBM",
-                    ["conditions"] = {
-                    },
+                    ["selfPoint"] = "BOTTOM",
                     ["displayText_format_p_time_precision"] = 1,
                     ["displayText"] = "Meltdown Inc - %p",
                     ["config"] = {
@@ -41289,7 +33588,30 @@ wa.data = {
                     ["parent"] = "Stix Texts",
                     ["uid"] = "AM-HnHLXunzzBM",
                     ["shadowYOffset"] = -1,
-                    ["internalVersion"] = 82,
+                    ["load"] = {
+                        ["use_encounterid"] = true,
+                        ["role"] = {
+                            ["single"] = "TANK",
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["encounterid"] = "3012",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -41299,9 +33621,9 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["internalVersion"] = 82,
                 },
-                [76] = {
+                [75] = {
                     ["controlledChildren"] = {
                         [1] = "Messed Up ",
                     },
@@ -41394,28 +33716,28 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-nameplate.png",
+                    ["AMModified"] = true,
                     ["borderOffset"] = 4,
-                    ["authorOptions"] = {
-                    },
+                    ["parent"] = "[4] Stix Bunkjunker",
                     ["AMOriginalUUID"] = "205f0GKYiRC",
                     ["id"] = "Stix Nameplates",
-                    ["frameStrata"] = 1,
                     ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["config"] = {
-                    },
                     ["borderInset"] = 1,
                     ["uid"] = "AM-205f0GKYiRC",
+                    ["config"] = {
+                    },
                     ["selfPoint"] = "CENTER",
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["parent"] = "[4] Stix Bunkjunker",
+                    ["authorOptions"] = {
+                    },
                 },
-                [77] = {
+                [76] = {
                     ["iconSource"] = -1,
                     ["color"] = {
                         [1] = 1,
@@ -41490,7 +33812,7 @@ wa.data = {
                         },
                     },
                     ["desaturate"] = false,
-                    ["xOffset"] = -10,
+                    ["alpha"] = 1,
                     ["version"] = 3,
                     ["subRegions"] = {
                         [1] = {
@@ -41552,45 +33874,46 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["load"] = {
                         ["use_encounterid"] = true,
-                        ["encounterid"] = "3012",
-                        ["class_and_spec"] = {
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["class"] = {
                             ["multi"] = {
                             },
                         },
+                        ["use_never"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["encounterid"] = "3012",
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_never"] = true,
+                        ["class_and_spec"] = {
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
                         },
                     },
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
+                    ["xOffset"] = -10,
                     ["useAdjustededMax"] = false,
                     ["information"] = {
                     },
                     ["source"] = "import",
                     ["AMOriginalUUID"] = "6tLxb70A9nd",
-                    ["icon"] = true,
-                    ["useTooltip"] = false,
+                    ["progressSource"] = {
+                        [1] = -1,
+                        [2] = "",
+                    },
+                    ["conditions"] = {
+                    },
                     ["uid"] = "AM-6tLxb70A9nd",
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "icon",
-                    ["AMModified"] = true,
+                    ["useTooltip"] = false,
                     ["anchorFrameType"] = "NAMEPLATE",
                     ["frameStrata"] = 3,
-                    ["selfPoint"] = "RIGHT",
+                    ["AMModified"] = true,
                     ["anchorFrameParent"] = false,
                     ["authorOptions"] = {
                     },
@@ -41599,24 +33922,23 @@ wa.data = {
                     ["semver"] = "1.0.2",
                     ["tocversion"] = 110100,
                     ["id"] = "Messed Up ",
-                    ["alpha"] = 1,
-                    ["useCooldownModRate"] = true,
-                    ["width"] = 40,
                     ["customText"] = "function()\
                   if WeakAuras.IsOptionsOpen() then\
                       return 1000000 + math.random(1000000)\
                   end\
               end",
+                    ["useCooldownModRate"] = true,
+                    ["width"] = 40,
+                    ["icon"] = true,
                     ["config"] = {
                     },
                     ["inverse"] = false,
-                    ["conditions"] = {
-                    },
+                    ["parent"] = "Stix Nameplates",
                     ["displayIcon"] = "134337",
                     ["cooldown"] = false,
-                    ["parent"] = "Stix Nameplates",
+                    ["selfPoint"] = "RIGHT",
                 },
-                [78] = {
+                [77] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Demolish Co-Tank",
@@ -41626,11 +33948,10 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["gridType"] = "RD",
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
+                    ["AMModified"] = true,
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["authorOptions"] = {
-                    },
+                    ["xOffset"] = 0,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -41659,9 +33980,8 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["xOffset"] = 0,
-                    ["useLimit"] = false,
-                    ["align"] = "CENTER",
+                    ["authorOptions"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -41682,6 +34002,8 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["align"] = "CENTER",
+                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "K3ZtUWxoEoN",
                     ["internalVersion"] = 82,
                     ["rotation"] = 0,
@@ -41729,26 +34051,26 @@ wa.data = {
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["stepAngle"] = 15,
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animate"] = false,
                     ["borderOffset"] = 4,
-                    ["AMModified"] = true,
+                    ["borderEdge"] = "Square Full White",
                     ["tocversion"] = 110007,
                     ["id"] = "Stix Co-Tank Icon",
                     ["arcLength"] = 360,
                     ["gridWidth"] = 5,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-tank.png",
-                    ["uid"] = "AM-K3ZtUWxoEoN",
                     ["config"] = {
                     },
+                    ["uid"] = "AM-K3ZtUWxoEoN",
                     ["rowSpace"] = 1,
                     ["conditions"] = {
                     },
@@ -41756,7 +34078,7 @@ wa.data = {
                     },
                     ["anchorPoint"] = "BOTTOM",
                 },
-                [79] = {
+                [78] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -41793,17 +34115,17 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["encounterid"] = "3012",
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["encounterid"] = "3012",
                         ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -41999,9 +34321,9 @@ wa.data = {
                             ["text_font"] = "Poppins SemiBold",
                             ["text_text_format_p_time_format"] = 0,
                             ["text_anchorYOffset"] = -5,
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_wordWrap"] = "WordWrap",
                             ["text_visible"] = true,
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_fontType"] = "OUTLINE",
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -42083,8 +34405,8 @@ wa.data = {
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
                     ["icon"] = false,
-                    ["id"] = "Demolish Co-Tank",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Demolish Co-Tank",
                     ["frameStrata"] = 2,
                     ["width"] = 50,
                     ["actions"] = {
@@ -42119,7 +34441,7 @@ wa.data = {
                     },
                     ["uid"] = "AM-(oTOqooEJh1",
                 },
-                [80] = {
+                [79] = {
                     ["controlledChildren"] = {
                         [1] = "Infected Bite (Glow)",
                     },
@@ -42213,58 +34535,35 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["xOffset"] = 0,
                     ["parent"] = "[4] Stix Bunkjunker",
+                    ["xOffset"] = 0,
                     ["borderOffset"] = 4,
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "j67HgNoSfVW",
                     ["id"] = "Stix Raid Frame Glows",
-                    ["borderInset"] = 1,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["uid"] = "AM-j67HgNoSfVW",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
                     ["config"] = {
                     },
+                    ["borderInset"] = 1,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-heal.png",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["selfPoint"] = "CENTER",
                 },
-                [81] = {
+                [80] = {
                     ["xOffset"] = 0,
                     ["preferToUpdate"] = true,
-                    ["AMModified"] = true,
+                    ["information"] = {
+                    },
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
                     ["regionType"] = "empty",
-                    ["load"] = {
-                        ["use_never"] = true,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["encounterid"] = "3012",
-                        ["use_encounterid"] = true,
-                        ["role"] = {
-                            ["single"] = "HEALER",
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "5gEA0R3BXB9",
                     ["actions"] = {
                         ["start"] = {
@@ -42319,12 +34618,12 @@ wa.data = {
                     ["authorOptions"] = {
                     },
                     ["internalVersion"] = 82,
-                    ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["selfPoint"] = "CENTER",
                     ["id"] = "Infected Bite (Glow)",
                     ["uid"] = "AM-5gEA0R3BXB9",
-                    ["frameStrata"] = 1,
-                    ["width"] = 1,
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -42347,17 +34646,40 @@ wa.data = {
                     },
                     ["config"] = {
                     },
-                    ["anchorFrameType"] = "SCREEN",
+                    ["width"] = 1,
                     ["subRegions"] = {
                     },
                     ["height"] = 1,
                     ["conditions"] = {
                     },
-                    ["information"] = {
+                    ["load"] = {
+                        ["use_never"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["encounterid"] = "3012",
+                        ["use_encounterid"] = true,
+                        ["role"] = {
+                            ["single"] = "HEALER",
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
                     },
                     ["parent"] = "Stix Raid Frame Glows",
                 },
-                [82] = {
+                [81] = {
                     ["controlledChildren"] = {
                     },
                     ["borderBackdrop"] = "Blizzard Tooltip",
@@ -42449,28 +34771,28 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["parent"] = "[4] Stix Bunkjunker",
                     ["authorOptions"] = {
                     },
-                    ["parent"] = "[4] Stix Bunkjunker",
                     ["borderOffset"] = 4,
-                    ["selfPoint"] = "CENTER",
+                    ["AMModified"] = true,
                     ["AMOriginalUUID"] = "TDOkDLKKBp(",
                     ["id"] = "Stix  Misc",
-                    ["uid"] = "AM-TDOkDLKKBp(",
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["borderInset"] = 1,
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
                     ["config"] = {
                     },
+                    ["uid"] = "AM-TDOkDLKKBp(",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-misc.png",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["selfPoint"] = "CENTER",
                 },
-                [83] = {
+                [82] = {
                     ["controlledChildren"] = {
                         [1] = "Sprocket Big Icon",
                         [2] = "Sprocket Small Icon",
@@ -42573,29 +34895,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["parent"] = "[NHF] Liberation of Undermine",
                     ["AMModified"] = true,
-                    ["authorOptions"] = {
-                    },
+                    ["parent"] = "[NHF] Liberation of Undermine",
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "9pn7cEoZ(zF",
                     ["tocversion"] = 110007,
                     ["id"] = "[5] Sprocketmonger Lockenstock",
                     ["groupIcon"] = "6392626",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
                     ["uid"] = "AM-9pn7cEoZ(zF",
                     ["config"] = {
                     },
-                    ["alpha"] = 1,
+                    ["borderInset"] = 1,
+                    ["frameStrata"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["authorOptions"] = {
+                    },
                 },
-                [84] = {
+                [83] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Polarization Blast ",
@@ -42607,7 +34929,7 @@ wa.data = {
                     ["yOffset"] = 0,
                     ["sortHybridTable"] = {
                     },
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
+                    ["stepAngle"] = 15,
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
                     ["borderColor"] = {
@@ -42644,22 +34966,21 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
-                    ["anchorPoint"] = "BOTTOM",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["authorOptions"] = {
-                    },
+                    ["arcLength"] = 360,
                     ["conditions"] = {
                     },
+                    ["anchorPoint"] = "BOTTOM",
+                    ["rotation"] = 0,
+                    ["gridType"] = "RD",
                     ["config"] = {
                     },
-                    ["stagger"] = 0,
-                    ["gridType"] = "RD",
-                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
+                    ["borderInset"] = 1,
                     ["parent"] = "[5] Sprocketmonger Lockenstock",
-                    ["alpha"] = 1,
                     ["load"] = {
                         ["talent"] = {
                             ["multi"] = {
@@ -42678,13 +34999,15 @@ wa.data = {
                             },
                         },
                     },
-                    ["gridWidth"] = 5,
+                    ["alpha"] = 1,
                     ["backdropColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 0.5,
                     },
+                    ["gridWidth"] = 5,
+                    ["source"] = "import",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -42705,22 +35028,20 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["source"] = "import",
-                    ["animate"] = false,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["limit"] = 5,
                     ["sort"] = "none",
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
-                    ["limit"] = 5,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["AMModified"] = true,
                     ["borderOffset"] = 4,
-                    ["stepAngle"] = 15,
+                    ["animate"] = false,
                     ["tocversion"] = 110007,
                     ["id"] = "Sprocket Big Icon",
                     ["selfPoint"] = "BOTTOM",
@@ -42729,13 +35050,14 @@ wa.data = {
                     ["internalVersion"] = 82,
                     ["uid"] = "5dJg12Y2tKu",
                     ["space"] = 2,
-                    ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["AMOriginalUUID"] = "RFiyOkyM)jb",
                     ["information"] = {
                     },
-                    ["arcLength"] = 360,
+                    ["authorOptions"] = {
+                    },
                 },
-                [85] = {
+                [84] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["authorOptions"] = {
@@ -42776,12 +35098,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3013",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -42945,13 +35267,13 @@ wa.data = {
                             ["text_shadowYOffset"] = -1,
                             ["text_text_format_c3_format"] = "none",
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_text_format_c1_format"] = "BigNumber",
                             ["text_text_format_n_format"] = "none",
                             ["anchor_point"] = "BOTTOM",
                             ["text_fontSize"] = 12,
                             ["anchorXOffset"] = 0,
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                         },
                         [5] = {
                             ["text_text_format_p_time_precision"] = 1,
@@ -43013,17 +35335,17 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["adjustedMax"] = "",
                     ["sparkHeight"] = 30,
-                    ["sparkHidden"] = "NEVER",
                     ["icon"] = false,
-                    ["width"] = 65,
-                    ["useCooldownModRate"] = true,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
+                    ["width"] = 65,
+                    ["useCooldownModRate"] = true,
                     ["id"] = "Polarization Blast ",
+                    ["sparkHidden"] = "NEVER",
                     ["cooldownTextDisabled"] = true,
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
@@ -43052,7 +35374,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Big Icon",
                 },
-                [86] = {
+                [85] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["authorOptions"] = {
@@ -43268,13 +35590,13 @@ wa.data = {
                             ["text_shadowYOffset"] = -1,
                             ["text_text_format_c3_format"] = "none",
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_text_format_c1_format"] = "BigNumber",
                             ["text_text_format_n_format"] = "none",
                             ["anchor_point"] = "BOTTOM",
                             ["text_fontSize"] = 12,
                             ["anchorXOffset"] = 0,
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                         },
                         [5] = {
                             ["text_text_format_p_time_precision"] = 1,
@@ -43345,8 +35667,8 @@ wa.data = {
                     },
                     ["width"] = 65,
                     ["useCooldownModRate"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Pyro Party Pack [Tank]",
+                    ["sparkHidden"] = "NEVER",
                     ["cooldownTextDisabled"] = true,
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
@@ -43375,7 +35697,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Big Icon",
                 },
-                [87] = {
+                [86] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Posi-Polarization ",
@@ -43390,7 +35712,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                     ["gridType"] = "RD",
-                    ["anchorPoint"] = "BOTTOM",
+                    ["stepAngle"] = 15,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -43427,21 +35749,21 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["radius"] = 200,
+                    ["anchorPoint"] = "BOTTOM",
+                    ["selfPoint"] = "BOTTOM",
+                    ["align"] = "CENTER",
+                    ["yOffset"] = 0,
+                    ["AMOriginalUUID"] = "BWELVe7uH41",
                     ["sortHybridTable"] = {
                         ["Infected Bite  "] = false,
                         ["Demolish "] = false,
                     },
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
-                    ["arcLength"] = 360,
-                    ["AMOriginalUUID"] = "BWELVe7uH41",
                     ["stagger"] = 0,
                     ["rotation"] = 0,
-                    ["internalVersion"] = 82,
                     ["uid"] = "GJ0aYGGxUqW",
                     ["subRegions"] = {
                     },
-                    ["gridWidth"] = 5,
+                    ["internalVersion"] = 82,
                     ["AMModified"] = true,
                     ["load"] = {
                         ["talent"] = {
@@ -43461,32 +35783,32 @@ wa.data = {
                             },
                         },
                     },
-                    ["frameStrata"] = 1,
+                    ["gridWidth"] = 5,
                     ["backdropColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 0.5,
                     },
+                    ["frameStrata"] = 1,
+                    ["source"] = "import",
                     ["authorOptions"] = {
                     },
-                    ["source"] = "import",
-                    ["animate"] = false,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["borderEdge"] = "Square Full White",
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["config"] = {
                     },
                     ["borderOffset"] = 4,
-                    ["stepAngle"] = 15,
+                    ["animate"] = false,
                     ["tocversion"] = 110007,
                     ["id"] = "Sprocket Small Icon",
                     ["animation"] = {
@@ -43519,9 +35841,9 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["yOffset"] = 0,
+                    ["arcLength"] = 360,
                 },
-                [88] = {
+                [87] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -43557,15 +35879,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3013",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -43771,9 +36093,14 @@ wa.data = {
                             ["text_shadowXOffset"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%c1%c3 / %{c2}s",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorXOffset"] = 0,
                             ["text_text_format_p_format"] = "timed",
+                            ["anchorXOffset"] = 0,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -43798,18 +36125,13 @@ wa.data = {
                             ["text_shadowYOffset"] = 0,
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_text_format_c2_format"] = "none",
-                            ["text_text_format_c3_format"] = "none",
-                            ["text_text_format_c1_format"] = "none",
                             ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_c3_format"] = "none",
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -43836,8 +36158,8 @@ wa.data = {
                     ["uid"] = "dItpWY)Tm)n",
                     ["width"] = 60,
                     ["frameStrata"] = 2,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Posi-Polarization ",
+                    ["sparkHidden"] = "NEVER",
                     ["authorOptions"] = {
                     },
                     ["useCooldownModRate"] = true,
@@ -43888,7 +36210,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Small Icon",
                 },
-                [89] = {
+                [88] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -43928,7 +36250,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -43937,6 +36258,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3013",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -44164,9 +36486,14 @@ wa.data = {
                             ["text_text_format_p_time_format"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%c1%c3 / %{c2}s",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -44175,9 +36502,9 @@ wa.data = {
                             ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_shadowYOffset"] = 0,
                             ["text_text_format_c3_format"] = "none",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_fontType"] = "OUTLINE",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -44197,12 +36524,7 @@ wa.data = {
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -44234,8 +36556,8 @@ wa.data = {
                     },
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
-                    ["id"] = "Nega-Polarization ",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Nega-Polarization ",
                     ["uid"] = "R6mJMb5fACg",
                     ["frameStrata"] = 2,
                     ["width"] = 60,
@@ -44255,7 +36577,7 @@ wa.data = {
                     },
                     ["AMOriginalUUID"] = "Je1hIRO3Yzo",
                 },
-                [90] = {
+                [89] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -44294,17 +36616,17 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["encounterid"] = "3013",
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["encounterid"] = "3013",
                         ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -44531,9 +36853,14 @@ wa.data = {
                             ["text_shadowXOffset"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "+200%",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_text_format_p_time_format"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -44542,9 +36869,9 @@ wa.data = {
                             ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_shadowYOffset"] = 0,
                             ["text_text_format_c3_format"] = "none",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_fontType"] = "OUTLINE",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -44564,12 +36891,7 @@ wa.data = {
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -44606,8 +36928,8 @@ wa.data = {
                     },
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
-                    ["id"] = "Gravi-Gunk [Tank]",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Gravi-Gunk [Tank]",
                     ["cooldown"] = true,
                     ["frameStrata"] = 2,
                     ["width"] = 60,
@@ -44627,7 +36949,7 @@ wa.data = {
                     },
                     ["AMOriginalUUID"] = "Je1hIRO3Yzo",
                 },
-                [91] = {
+                [90] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -44663,7 +36985,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -44672,6 +36993,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3013",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -44878,9 +37200,14 @@ wa.data = {
                             ["text_text_format_p_time_format"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "+200%",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorXOffset"] = 0,
                             ["text_text_format_p_format"] = "timed",
+                            ["anchorXOffset"] = 0,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_shadowXOffset"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -44905,18 +37232,13 @@ wa.data = {
                             ["text_shadowYOffset"] = 0,
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_text_format_c2_format"] = "none",
-                            ["text_text_format_c3_format"] = "none",
-                            ["text_text_format_c1_format"] = "none",
                             ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_text_format_c3_format"] = "none",
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -44950,8 +37272,8 @@ wa.data = {
                     ["width"] = 60,
                     ["frameStrata"] = 2,
                     ["uid"] = "TkyuHC9wyAP",
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Unstable Shrapnel ",
+                    ["sparkHidden"] = "NEVER",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["actions"] = {
@@ -44995,7 +37317,7 @@ wa.data = {
                     },
                     ["zoom"] = 0.3,
                 },
-                [92] = {
+                [91] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -45036,12 +37358,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3013",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -45251,9 +37573,14 @@ wa.data = {
                             ["text_shadowXOffset"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "+500%",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["anchorXOffset"] = 0,
                             ["text_text_format_p_format"] = "timed",
+                            ["anchorXOffset"] = 0,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -45278,18 +37605,13 @@ wa.data = {
                             ["text_shadowYOffset"] = 0,
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_text_format_c2_format"] = "none",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_c1_format"] = "none",
                             ["text_text_format_c3_format"] = "none",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_fontType"] = "OUTLINE",
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -45324,8 +37646,8 @@ wa.data = {
                     ["width"] = 60,
                     ["frameStrata"] = 2,
                     ["uid"] = "vNHH0ng14mh",
-                    ["id"] = "Polarized Catastro-Blast ",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Polarized Catastro-Blast ",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
                     ["authorOptions"] = {
@@ -45363,7 +37685,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Small Icon",
                 },
-                [93] = {
+                [92] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -45403,15 +37725,15 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
                         ["encounterid"] = "3013",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -45635,9 +37957,14 @@ wa.data = {
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "+200%",
-                            ["text_text_format_p_time_mod_rate"] = true,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
                             ["text_shadowXOffset"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
@@ -45646,9 +37973,9 @@ wa.data = {
                             ["anchorYOffset"] = 0,
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_text_format_c3_format"] = "none",
-                            ["text_shadowYOffset"] = 0,
                             ["text_fontType"] = "OUTLINE",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_text_format_c3_format"] = "none",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -45668,12 +37995,7 @@ wa.data = {
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -45705,8 +38027,8 @@ wa.data = {
                     },
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Unstable Explosion ",
+                    ["sparkHidden"] = "NEVER",
                     ["cooldown"] = true,
                     ["frameStrata"] = 2,
                     ["width"] = 60,
@@ -45731,7 +38053,7 @@ wa.data = {
                     },
                     ["AMOriginalUUID"] = "Je1hIRO3Yzo",
                 },
-                [94] = {
+                [93] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "Beta Launch ",
@@ -45744,7 +38066,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["regionType"] = "dynamicgroup",
+                    ["animate"] = false,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -45752,7 +38074,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["xOffset"] = 0,
+                    ["gridType"] = "RD",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -45781,10 +38103,10 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["gridType"] = "RD",
+                    ["xOffset"] = 0,
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-bar.png",
+                    ["grow"] = "UP",
                     ["conditions"] = {
                     },
                     ["sortHybridTable"] = {
@@ -45831,12 +38153,12 @@ wa.data = {
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
-                    ["stepAngle"] = 15,
+                    ["borderEdge"] = "Square Full White",
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
                     ["limit"] = 5,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
                     ["sort"] = "none",
-                    ["borderEdge"] = "Square Full White",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["animation"] = {
@@ -45860,7 +38182,7 @@ wa.data = {
                         },
                     },
                     ["borderOffset"] = 4,
-                    ["animate"] = false,
+                    ["stepAngle"] = 15,
                     ["tocversion"] = 110007,
                     ["id"] = "Sprocket Bars",
                     ["selfPoint"] = "BOTTOM",
@@ -45873,9 +38195,9 @@ wa.data = {
                     ["AMOriginalUUID"] = "mcJWtH29o88",
                     ["information"] = {
                     },
-                    ["grow"] = "UP",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-bar.png",
                 },
-                [95] = {
+                [94] = {
                     ["sparkWidth"] = 2,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -45883,7 +38205,11 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["authorOptions"] = {
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0.5,
                     },
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
@@ -45937,7 +38263,7 @@ wa.data = {
                         [2] = "",
                     },
                     ["selfPoint"] = "CENTER",
-                    ["conditions"] = {
+                    ["authorOptions"] = {
                     },
                     ["information"] = {
                     },
@@ -45948,8 +38274,9 @@ wa.data = {
                         [4] = 1,
                     },
                     ["desaturate"] = false,
+                    ["conditions"] = {
+                    },
                     ["displayIcon"] = 2065603,
-                    ["sparkOffsetX"] = 0,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -46046,43 +38373,19 @@ wa.data = {
                     },
                     ["height"] = 32.999893188477,
                     ["textureSource"] = "LSM",
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "3013",
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_encounterid"] = true,
-                    },
+                    ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["enableGradient"] = true,
+                    ["sparkOffsetX"] = 0,
                     ["source"] = "import",
-                    ["icon"] = true,
+                    ["preferToUpdate"] = true,
                     ["uid"] = "5QjaiAhJPFa",
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["icon"] = true,
                     ["width"] = 266.00021362305,
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["alpha"] = 1,
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
-                    },
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["icon_side"] = "RIGHT",
                     ["id"] = "Beta Launch ",
                     ["sparkHeight"] = 30,
@@ -46090,8 +38393,6 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["zoom"] = 0.3,
                     ["spark"] = true,
-                    ["AMModified"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -46112,10 +38413,12 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["frameStrata"] = 2,
-                    ["anchorFrameType"] = "SCREEN",
+                    ["sparkHidden"] = "NEVER",
                     ["config"] = {
                     },
+                    ["frameStrata"] = 2,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["enableGradient"] = true,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
@@ -46123,7 +38426,26 @@ wa.data = {
                         [4] = 1,
                     },
                     ["inverse"] = false,
-                    ["preferToUpdate"] = true,
+                    ["load"] = {
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["encounterid"] = "3013",
+                        ["use_encounterid"] = true,
+                    },
                     ["orientation"] = "HORIZONTAL",
                     ["AMOriginalUUID"] = "aZFK8fTPUqI",
                     ["barColor2"] = {
@@ -46134,7 +38456,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Bars",
                 },
-                [96] = {
+                [95] = {
                     ["sparkWidth"] = 2,
                     ["iconSource"] = -1,
                     ["authorOptions"] = {
@@ -46143,12 +38465,7 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["sparkColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
+                    ["AMModified"] = true,
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
                     ["icon"] = true,
@@ -46304,7 +38621,7 @@ wa.data = {
                             ["border_offset"] = 0,
                         },
                     },
-                    ["height"] = 32.999893188477,
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["textureSource"] = "LSM",
                     ["load"] = {
                         ["use_encounterid"] = true,
@@ -46312,12 +38629,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3013",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -46330,27 +38647,25 @@ wa.data = {
                     ["useAdjustededMax"] = false,
                     ["adjustedMax"] = "",
                     ["source"] = "import",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
+                    ["displayIcon"] = 2065603,
+                    ["sparkColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
                     },
                     ["config"] = {
                     },
+                    ["anchorFrameType"] = "SCREEN",
+                    ["useAdjustededMin"] = false,
+                    ["regionType"] = "aurabar",
+                    ["alpha"] = 1,
                     ["backgroundColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 0.5,
                     },
-                    ["anchorFrameType"] = "SCREEN",
-                    ["useAdjustededMin"] = false,
-                    ["regionType"] = "aurabar",
-                    ["alpha"] = 1,
-                    ["AMModified"] = true,
                     ["icon_side"] = "RIGHT",
                     ["sparkHidden"] = "NEVER",
                     ["sparkHeight"] = 30,
@@ -46358,8 +38673,6 @@ wa.data = {
                     ["zoom"] = 0.3,
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["spark"] = true,
-                    ["gradientOrientation"] = "HORIZONTAL",
-                    ["id"] = "Polarization Generator ",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -46380,12 +38693,21 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["id"] = "Polarization Generator ",
+                    ["enableGradient"] = true,
                     ["frameStrata"] = 2,
                     ["width"] = 266.00021362305,
-                    ["enableGradient"] = true,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["init"] = {
+                        },
+                        ["finish"] = {
+                        },
+                    },
                     ["uid"] = "ATICKVW7Xsn",
                     ["inverse"] = false,
-                    ["displayIcon"] = 2065603,
+                    ["height"] = 32.999893188477,
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
@@ -46393,7 +38715,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Bars",
                 },
-                [97] = {
+                [96] = {
                     ["sparkWidth"] = 2,
                     ["sparkOffsetX"] = 0,
                     ["authorOptions"] = {
@@ -46402,7 +38724,26 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["uid"] = "M7)OsFlXv84",
+                    ["load"] = {
+                        ["use_encounterid"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["encounterid"] = "3013",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
                     ["actions"] = {
@@ -46474,7 +38815,7 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["displayIcon"] = 2065603,
+                    ["AMOriginalUUID"] = "aZFK8fTPUqI",
                     ["barColor2"] = {
                         [1] = 0,
                         [2] = 0.84705889225006,
@@ -46488,7 +38829,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["desaturate"] = false,
-                    ["AMOriginalUUID"] = "aZFK8fTPUqI",
+                    ["displayIcon"] = 2065603,
                     ["iconSource"] = -1,
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
@@ -46708,50 +39049,26 @@ wa.data = {
                             ["border_offset"] = 0,
                         },
                     },
-                    ["gradientOrientation"] = "HORIZONTAL",
+                    ["height"] = 32.999893188477,
                     ["textureSource"] = "LSM",
                     ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = true,
                     ["internalVersion"] = 82,
                     ["source"] = "import",
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
-                    },
+                    ["preferToUpdate"] = true,
+                    ["uid"] = "M7)OsFlXv84",
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["parent"] = "Sprocket Bars",
                     ["anchorFrameType"] = "SCREEN",
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
                     ["alpha"] = 1,
-                    ["load"] = {
-                        ["use_encounterid"] = true,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["encounterid"] = "3013",
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["parent"] = "Sprocket Bars",
                     ["icon_side"] = "RIGHT",
                     ["sparkHidden"] = "NEVER",
                     ["sparkHeight"] = 30,
@@ -46759,16 +39076,21 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                     ["zoom"] = 0.3,
                     ["spark"] = true,
-                    ["height"] = 32.999893188477,
-                    ["id"] = "Bleeding Edge ",
                     ["selfPoint"] = "CENTER",
+                    ["id"] = "Bleeding Edge ",
+                    ["icon"] = false,
                     ["frameStrata"] = 2,
                     ["width"] = 266.00021362305,
-                    ["icon"] = false,
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0.5,
+                    },
                     ["config"] = {
                     },
                     ["inverse"] = false,
-                    ["preferToUpdate"] = true,
+                    ["gradientOrientation"] = "HORIZONTAL",
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
@@ -46776,7 +39098,7 @@ wa.data = {
                     },
                     ["xOffset"] = 0,
                 },
-                [98] = {
+                [97] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                     },
@@ -46788,10 +39110,10 @@ wa.data = {
                         ["Rolling Rubbish Remaining"] = false,
                         ["Rolling Rubbish Prog"] = false,
                     },
-                    ["regionType"] = "dynamicgroup",
+                    ["sort"] = "none",
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["useLimit"] = false,
+                    ["selfPoint"] = "BOTTOM",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -46822,39 +39144,20 @@ wa.data = {
                     ["radius"] = 200,
                     ["authorOptions"] = {
                     },
-                    ["selfPoint"] = "BOTTOM",
+                    ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["grow"] = "UP",
+                    ["space"] = 2,
                     ["conditions"] = {
                     },
                     ["anchorPoint"] = "BOTTOM",
                     ["rotation"] = 0,
-                    ["uid"] = "L6jfwlECxzF",
                     ["config"] = {
                     },
+                    ["uid"] = "L6jfwlECxzF",
                     ["subRegions"] = {
                     },
                     ["yOffset"] = 0,
                     ["internalVersion"] = 82,
-                    ["AMModified"] = true,
-                    ["alpha"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["animate"] = false,
-                    ["source"] = "import",
-                    ["frameStrata"] = 1,
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -46873,6 +39176,25 @@ wa.data = {
                             },
                         },
                     },
+                    ["alpha"] = 1,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["source"] = "import",
+                    ["animate"] = false,
+                    ["xOffset"] = 0,
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["regionType"] = "dynamicgroup",
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["frameStrata"] = 1,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["borderColor"] = {
@@ -46882,10 +39204,10 @@ wa.data = {
                         [4] = 1,
                     },
                     ["borderOffset"] = 4,
-                    ["sort"] = "none",
+                    ["stepAngle"] = 15,
                     ["tocversion"] = 110007,
                     ["id"] = "Sprocket Special Bars",
-                    ["xOffset"] = 0,
+                    ["AMModified"] = true,
                     ["gridWidth"] = 5,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["stagger"] = 0,
@@ -46914,9 +39236,9 @@ wa.data = {
                     ["AMOriginalUUID"] = "xS1)M1qHxce",
                     ["information"] = {
                     },
-                    ["space"] = 2,
+                    ["grow"] = "UP",
                 },
-                [99] = {
+                [98] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "Screw Up Spawning",
@@ -46926,10 +39248,11 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-circle.png",
                     ["anchorPoint"] = "BOTTOM",
-                    ["limit"] = 5,
+                    ["borderEdge"] = "Square Full White",
                     ["fullCircle"] = true,
                     ["space"] = 2,
-                    ["gridType"] = "RD",
+                    ["sortHybridTable"] = {
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -46958,19 +39281,17 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["sortHybridTable"] = {
-                    },
+                    ["gridType"] = "RD",
                     ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["authorOptions"] = {
-                    },
+                    ["grow"] = "UP",
                     ["conditions"] = {
                     },
                     ["parent"] = "[5] Sprocketmonger Lockenstock",
                     ["rotation"] = 0,
+                    ["borderInset"] = 1,
                     ["config"] = {
                     },
-                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
                     ["radius"] = 200,
@@ -46983,23 +39304,23 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["source"] = "import",
                     ["animate"] = false,
+                    ["source"] = "import",
                     ["alpha"] = 1,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["sort"] = "none",
-                    ["yOffset"] = 0,
                     ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["regionType"] = "dynamicgroup",
+                    ["yOffset"] = 0,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["useLimit"] = false,
                     ["borderOffset"] = 4,
-                    ["borderEdge"] = "Square Full White",
+                    ["sort"] = "none",
                     ["tocversion"] = 110007,
                     ["id"] = "Sprocket Circles",
                     ["load"] = {
@@ -47053,9 +39374,10 @@ wa.data = {
                     ["AMOriginalUUID"] = "8Hhgv7TV)1o",
                     ["information"] = {
                     },
-                    ["grow"] = "UP",
+                    ["authorOptions"] = {
+                    },
                 },
-                [100] = {
+                [99] = {
                     ["user_y"] = 0,
                     ["iconSource"] = 0,
                     ["user_x"] = 0,
@@ -47102,7 +39424,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -47111,6 +39432,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3013",
                         ["use_encounterid"] = true,
                     },
                     ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
@@ -47125,9 +39447,9 @@ wa.data = {
                     ["spark"] = false,
                     ["compress"] = false,
                     ["alpha"] = 1,
-                    ["uid"] = "tRo8CPVcJ8g",
                     ["config"] = {
                     },
+                    ["uid"] = "tRo8CPVcJ8g",
                     ["information"] = {
                     },
                     ["conditions"] = {
@@ -47140,12 +39462,8 @@ wa.data = {
                     ["displayIcon"] = 2065603,
                     ["sparkOffsetX"] = 0,
                     ["auraRotation"] = 0,
-                    ["color"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 1,
-                    },
+                    ["parent"] = "Sprocket Circles",
+                    ["adjustedMin"] = "",
                     ["customText"] = "function()\
            local u = aura_env.state.unit\
            if (WeakAuras.IsOptionsOpen()) then\
@@ -47156,14 +39474,13 @@ wa.data = {
                return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
            end\
        end",
-                    ["adjustedMin"] = "",
                     ["shadowYOffset"] = -1,
                     ["width"] = 200,
                     ["desaturateBackground"] = false,
                     ["cooldownSwipe"] = true,
                     ["frameStrata"] = 2,
                     ["customTextUpdate"] = "event",
-                    ["cooldownEdge"] = false,
+                    ["automaticWidth"] = "Auto",
                     ["desaturateForeground"] = false,
                     ["triggers"] = {
                         [1] = {
@@ -47261,9 +39578,9 @@ wa.data = {
                             ["text_shadowYOffset"] = -1,
                             ["text_text_format_p_time_format"] = 0,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
-                            ["text_text_format_p_format"] = "timed",
                             ["text_fontType"] = "None",
+                            ["text_text_format_p_format"] = "timed",
+                            ["text_visible"] = true,
                             ["anchor_point"] = "TOP",
                             ["text_fontSize"] = 16,
                             ["anchorXOffset"] = 0,
@@ -47275,7 +39592,7 @@ wa.data = {
                     ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["backgroundTexture"] = "PowerAurasMedia\\Auras\\Aura3",
+                    ["fontSize"] = 22,
                     ["source"] = "import",
                     ["displayText_format_p_time_precision"] = 1,
                     ["foregroundColor"] = {
@@ -47299,7 +39616,7 @@ wa.data = {
                     ["sparkRotationMode"] = "AUTO",
                     ["displayText_format_p_time_legacy_floor"] = false,
                     ["sparkHeight"] = 30,
-                    ["fontSize"] = 22,
+                    ["backgroundTexture"] = "PowerAurasMedia\\Auras\\Aura3",
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["authorOptions"] = {
                     },
@@ -47309,8 +39626,13 @@ wa.data = {
                     ["displayText_format_p_format"] = "timed",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
-                    ["automaticWidth"] = "Auto",
-                    ["parent"] = "Sprocket Circles",
+                    ["cooldownEdge"] = false,
+                    ["color"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 1,
+                    },
                     ["inverse"] = false,
                     ["displayText"] = "Text Notification (%p)\
        ",
@@ -47329,7 +39651,7 @@ wa.data = {
                     },
                     ["wordWrap"] = "WordWrap",
                 },
-                [101] = {
+                [100] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "Polarization Gen Red",
@@ -47345,7 +39667,7 @@ wa.data = {
                         ["Demolish Taunt [Tank]"] = false,
                         ["Meltdown inc [Tank]"] = false,
                     },
-                    ["yOffset"] = 0,
+                    ["limit"] = 5,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -47353,7 +39675,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["useLimit"] = false,
+                    ["gridType"] = "RD",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -47382,7 +39704,12 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["gridType"] = "RD",
+                    ["yOffset"] = 0,
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
+                    ["grow"] = "DOWN",
+                    ["conditions"] = {
+                    },
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -47403,16 +39730,41 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["align"] = "CENTER",
-                    ["grow"] = "DOWN",
-                    ["conditions"] = {
-                    },
+                    ["rotation"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["stagger"] = 0,
-                    ["alpha"] = 1,
                     ["uid"] = "kL075qhvPnF",
                     ["subRegions"] = {
                     },
+                    ["space"] = 2,
+                    ["config"] = {
+                    },
+                    ["AMModified"] = true,
+                    ["alpha"] = 1,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["frameStrata"] = 1,
+                    ["animate"] = false,
+                    ["selfPoint"] = "TOP",
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["sort"] = "none",
+                    ["radius"] = 200,
+                    ["regionType"] = "dynamicgroup",
+                    ["anchorFrameParent"] = false,
+                    ["constantFactor"] = "RADIUS",
+                    ["source"] = "import",
+                    ["borderOffset"] = 4,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Sprocket Texts",
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -47431,49 +39783,19 @@ wa.data = {
                             },
                         },
                     },
-                    ["space"] = 2,
-                    ["AMModified"] = true,
-                    ["frameStrata"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["borderEdge"] = "Square Full White",
-                    ["animate"] = false,
-                    ["radius"] = 200,
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["sort"] = "none",
-                    ["regionType"] = "dynamicgroup",
-                    ["xOffset"] = 0,
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["source"] = "import",
-                    ["borderOffset"] = 4,
-                    ["limit"] = 5,
-                    ["tocversion"] = 110007,
-                    ["id"] = "Sprocket Texts",
-                    ["selfPoint"] = "TOP",
                     ["gridWidth"] = 5,
                     ["anchorFrameType"] = "SELECTFRAME",
-                    ["config"] = {
-                    },
-                    ["borderInset"] = 1,
                     ["fullCircle"] = true,
-                    ["rotation"] = 0,
+                    ["borderInset"] = 1,
+                    ["stagger"] = 0,
+                    ["authorOptions"] = {
+                    },
                     ["AMOriginalUUID"] = "xFW9Hr48bBl",
                     ["information"] = {
                     },
-                    ["authorOptions"] = {
-                    },
+                    ["xOffset"] = 0,
                 },
-                [102] = {
+                [101] = {
                     ["outline"] = "OUTLINE",
                     ["parent"] = "Sprocket Texts",
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -47559,11 +39881,6 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["selfPoint"] = "BOTTOM",
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["fixedWidth"] = 200,
                     ["load"] = {
                         ["role"] = {
                             ["single"] = "TANK",
@@ -47579,7 +39896,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -47588,8 +39904,14 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3013",
                         ["use_encounterid"] = true,
                     },
+                    ["regionType"] = "text",
+                    ["selfPoint"] = "BOTTOM",
+                    ["displayText_format_p_format"] = "timed",
+                    ["fixedWidth"] = 200,
+                    ["AMOriginalUUID"] = "HnHLXunzzBM",
                     ["displayText_format_p_time_precision"] = 1,
                     ["preferToUpdate"] = true,
                     ["uid"] = "FVvHEvlQ)5H",
@@ -47610,20 +39932,20 @@ wa.data = {
                     ["config"] = {
                     },
                     ["displayText"] = "Turning Red - %p",
-                    ["conditions"] = {
-                    },
+                    ["displayText_format_p_time_legacy_floor"] = false,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
-                    ["AMOriginalUUID"] = "HnHLXunzzBM",
+                    ["conditions"] = {
+                    },
                     ["information"] = {
                     },
                     ["wordWrap"] = "WordWrap",
                 },
-                [103] = {
+                [102] = {
                     ["outline"] = "OUTLINE",
                     ["xOffset"] = 0,
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -47690,6 +40012,9 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
+                    ["conditions"] = {
+                    },
+                    ["regionType"] = "text",
                     ["load"] = {
                         ["role"] = {
                             ["single"] = "TANK",
@@ -47702,12 +40027,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3013",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -47716,7 +40041,8 @@ wa.data = {
                             },
                         },
                     },
-                    ["regionType"] = "text",
+                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["fixedWidth"] = 200,
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -47736,10 +40062,6 @@ wa.data = {
                             ["duration_type"] = "seconds",
                             ["easeType"] = "none",
                         },
-                    },
-                    ["displayText_format_p_time_legacy_floor"] = false,
-                    ["fixedWidth"] = 200,
-                    ["conditions"] = {
                     },
                     ["displayText_format_p_time_precision"] = 1,
                     ["displayText"] = "Turning Blue - %p",
@@ -47761,7 +40083,7 @@ wa.data = {
                     ["parent"] = "Sprocket Texts",
                     ["uid"] = "vZF2V2szb7e",
                     ["shadowYOffset"] = -1,
-                    ["wordWrap"] = "WordWrap",
+                    ["displayText_format_p_time_legacy_floor"] = false,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -47771,9 +40093,9 @@ wa.data = {
                     ["AMOriginalUUID"] = "HnHLXunzzBM",
                     ["information"] = {
                     },
-                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["wordWrap"] = "WordWrap",
                 },
-                [104] = {
+                [103] = {
                     ["outline"] = "OUTLINE",
                     ["authorOptions"] = {
                     },
@@ -47895,38 +40217,12 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["wordWrap"] = "WordWrap",
-                    ["regionType"] = "text",
-                    ["internalVersion"] = 82,
-                    ["load"] = {
-                        ["use_encounterid"] = true,
-                        ["role"] = {
-                            ["single"] = "TANK",
-                            ["multi"] = {
-                                ["TANK"] = true,
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["encounterid"] = "3013",
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["AMOriginalUUID"] = "HnHLXunzzBM",
                     ["fixedWidth"] = 200,
+                    ["regionType"] = "text",
+                    ["wordWrap"] = "WordWrap",
+                    ["parent"] = "Sprocket Texts",
+                    ["AMOriginalUUID"] = "HnHLXunzzBM",
+                    ["internalVersion"] = 82,
                     ["displayText_format_p_time_precision"] = 1,
                     ["shadowYOffset"] = -1,
                     ["config"] = {
@@ -47965,7 +40261,33 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["displayText_format_p_format"] = "timed",
+                    ["load"] = {
+                        ["use_encounterid"] = true,
+                        ["role"] = {
+                            ["single"] = "TANK",
+                            ["multi"] = {
+                                ["TANK"] = true,
+                            },
+                        },
+                        ["encounterid"] = "3013",
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -47976,9 +40298,9 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["parent"] = "Sprocket Texts",
+                    ["displayText_format_p_format"] = "timed",
                 },
-                [105] = {
+                [104] = {
                     ["outline"] = "OUTLINE",
                     ["parent"] = "Sprocket Texts",
                     ["preferToUpdate"] = true,
@@ -48035,31 +40357,6 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["fixedWidth"] = 200,
-                    ["regionType"] = "text",
-                    ["displayText_format_p_format"] = "timed",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["conditions"] = {
-                    },
                     ["load"] = {
                         ["spec_position"] = {
                             ["single"] = "RANGED",
@@ -48090,6 +40387,30 @@ wa.data = {
                             },
                         },
                     },
+                    ["regionType"] = "text",
+                    ["displayText_format_p_format"] = "timed",
+                    ["selfPoint"] = "BOTTOM",
+                    ["fixedWidth"] = 200,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["displayText_format_p_time_precision"] = 1,
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["uid"] = "0u89Rzqt84V",
@@ -48110,7 +40431,8 @@ wa.data = {
                     ["config"] = {
                     },
                     ["displayText"] = "Bait Drills - %p",
-                    ["displayText_format_p_time_legacy_floor"] = false,
+                    ["conditions"] = {
+                    },
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -48120,9 +40442,9 @@ wa.data = {
                     ["AMOriginalUUID"] = "HnHLXunzzBM",
                     ["information"] = {
                     },
-                    ["selfPoint"] = "BOTTOM",
+                    ["displayText_format_p_time_legacy_floor"] = false,
                 },
-                [106] = {
+                [105] = {
                     ["controlledChildren"] = {
                     },
                     ["borderBackdrop"] = "Blizzard Tooltip",
@@ -48214,28 +40536,28 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["parent"] = "[5] Sprocketmonger Lockenstock",
                     ["authorOptions"] = {
                     },
-                    ["parent"] = "[5] Sprocketmonger Lockenstock",
                     ["borderOffset"] = 4,
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-nameplate.png",
+                    ["AMModified"] = true,
                     ["conditions"] = {
                     },
                     ["id"] = "Sprocket Nameplates",
                     ["selfPoint"] = "CENTER",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "eOCwAKV3uI8",
                     ["config"] = {
                     },
                     ["borderInset"] = 1,
-                    ["alpha"] = 1,
+                    ["uid"] = "eOCwAKV3uI8",
+                    ["frameStrata"] = 1,
                     ["AMOriginalUUID"] = "205f0GKYiRC",
                     ["information"] = {
                     },
-                    ["AMModified"] = true,
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-nameplate.png",
                 },
-                [107] = {
+                [106] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Gravi-Gunk [Co-Tank]",
@@ -48246,7 +40568,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["limit"] = 5,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -48254,7 +40576,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["radius"] = 200,
+                    ["fullCircle"] = true,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -48282,8 +40604,8 @@ wa.data = {
                         },
                     },
                     ["columnSpace"] = 1,
+                    ["radius"] = 200,
                     ["internalVersion"] = 82,
-                    ["fullCircle"] = true,
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -48305,7 +40627,7 @@ wa.data = {
                         },
                     },
                     ["align"] = "CENTER",
-                    ["parent"] = "[5] Sprocketmonger Lockenstock",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-tank.png",
                     ["conditions"] = {
                     },
                     ["gridType"] = "RD",
@@ -48349,18 +40671,18 @@ wa.data = {
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
+                    ["stepAngle"] = 15,
                     ["borderSize"] = 2,
-                    ["sort"] = "none",
+                    ["limit"] = 5,
+                    ["regionType"] = "dynamicgroup",
                     ["sortHybridTable"] = {
                         ["Demolish Co-Tank"] = false,
                     },
-                    ["stepAngle"] = 15,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["selfPoint"] = "BOTTOM",
                     ["borderOffset"] = 4,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
+                    ["sort"] = "none",
                     ["tocversion"] = 110007,
                     ["id"] = "Sprocket Co-Tank Icon",
                     ["AMModified"] = true,
@@ -48374,9 +40696,9 @@ wa.data = {
                     ["AMOriginalUUID"] = "K3ZtUWxoEoN",
                     ["information"] = {
                     },
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-tank.png",
+                    ["parent"] = "[5] Sprocketmonger Lockenstock",
                 },
-                [108] = {
+                [107] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -48418,7 +40740,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -48427,11 +40749,11 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3013",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3013",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -48637,14 +40959,14 @@ wa.data = {
                             ["text_anchorYOffset"] = -5,
                             ["text_shadowYOffset"] = 0,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["anchor_point"] = "TOPRIGHT",
                             ["text_fontSize"] = 19,
                             ["anchorXOffset"] = 0,
@@ -48714,8 +41036,8 @@ wa.data = {
                     },
                     ["width"] = 50,
                     ["frameStrata"] = 2,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Gravi-Gunk [Co-Tank]",
+                    ["sparkHidden"] = "NEVER",
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
@@ -48739,7 +41061,7 @@ wa.data = {
                     },
                     ["parent"] = "Sprocket Co-Tank Icon",
                 },
-                [109] = {
+                [108] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -48776,20 +41098,20 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3013",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3013",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -48982,9 +41304,9 @@ wa.data = {
                             ["text_font"] = "Poppins SemiBold",
                             ["text_text_format_p_time_format"] = 0,
                             ["text_anchorYOffset"] = -5,
-                            ["text_visible"] = true,
-                            ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "OUTLINE",
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_visible"] = true,
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -49065,8 +41387,8 @@ wa.data = {
                     },
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Pyro Party Pack [Co-Tank]",
+                    ["sparkHidden"] = "NEVER",
                     ["icon"] = false,
                     ["frameStrata"] = 2,
                     ["width"] = 50,
@@ -49102,7 +41424,7 @@ wa.data = {
                     },
                     ["uid"] = "EEkuTb9jfpI",
                 },
-                [110] = {
+                [109] = {
                     ["controlledChildren"] = {
                         [1] = "Screwed! (Glow)",
                     },
@@ -49196,29 +41518,33 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["parent"] = "[5] Sprocketmonger Lockenstock",
+                    ["AMModified"] = true,
                     ["borderOffset"] = 4,
-                    ["selfPoint"] = "CENTER",
+                    ["xOffset"] = 0,
                     ["conditions"] = {
                     },
                     ["id"] = "Sprocket Raid Frame Glows",
-                    ["alpha"] = 1,
                     ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
                     ["config"] = {
                     },
                     ["uid"] = "N0Paj69ZBmv",
+                    ["borderInset"] = 1,
                     ["yOffset"] = 0,
                     ["AMOriginalUUID"] = "j67HgNoSfVW",
                     ["information"] = {
                     },
-                    ["xOffset"] = 0,
+                    ["selfPoint"] = "CENTER",
                 },
-                [111] = {
+                [110] = {
                     ["parent"] = "Sprocket Raid Frame Glows",
                     ["preferToUpdate"] = true,
+                    ["AMModified"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorPoint"] = "CENTER",
+                    ["regionType"] = "empty",
                     ["load"] = {
                         ["use_never"] = true,
                         ["talent"] = {
@@ -49243,11 +41569,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                    },
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["regionType"] = "empty",
-                    ["information"] = {
                     },
                     ["conditions"] = {
                     },
@@ -49303,7 +41624,15 @@ wa.data = {
                     },
                     ["xOffset"] = 0,
                     ["internalVersion"] = 82,
+                    ["width"] = 1,
+                    ["selfPoint"] = "CENTER",
+                    ["id"] = "Screwed! (Glow)",
+                    ["config"] = {
+                    },
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
+                    ["frameStrata"] = 1,
+                    ["uid"] = "pv(dPOmWhYc",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -49324,23 +41653,16 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["id"] = "Screwed! (Glow)",
-                    ["config"] = {
-                    },
-                    ["alpha"] = 1,
-                    ["width"] = 1,
-                    ["frameStrata"] = 1,
-                    ["uid"] = "pv(dPOmWhYc",
-                    ["selfPoint"] = "CENTER",
                     ["subRegions"] = {
                     },
                     ["height"] = 1,
                     ["AMOriginalUUID"] = "5gEA0R3BXB9",
-                    ["AMModified"] = true,
+                    ["information"] = {
+                    },
                     ["authorOptions"] = {
                     },
                 },
-                [112] = {
+                [111] = {
                     ["controlledChildren"] = {
                     },
                     ["borderBackdrop"] = "Blizzard Tooltip",
@@ -49432,28 +41754,28 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["authorOptions"] = {
                     },
+                    ["AMModified"] = true,
                     ["borderOffset"] = 4,
-                    ["selfPoint"] = "CENTER",
+                    ["parent"] = "[5] Sprocketmonger Lockenstock",
                     ["conditions"] = {
                     },
                     ["id"] = "Sprocket Misc",
-                    ["alpha"] = 1,
                     ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "YEuKS67zBG8",
                     ["config"] = {
                     },
                     ["borderInset"] = 1,
+                    ["uid"] = "YEuKS67zBG8",
                     ["yOffset"] = 0,
                     ["AMOriginalUUID"] = "TDOkDLKKBp(",
                     ["information"] = {
                     },
-                    ["parent"] = "[5] Sprocketmonger Lockenstock",
+                    ["selfPoint"] = "CENTER",
                 },
-                [113] = {
+                [112] = {
                     ["controlledChildren"] = {
                         [1] = "Bandit Big Icon",
                         [2] = "Bandit Small Icon",
@@ -49556,29 +41878,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["parent"] = "[NHF] Liberation of Undermine",
                     ["AMModified"] = true,
-                    ["authorOptions"] = {
-                    },
+                    ["parent"] = "[NHF] Liberation of Undermine",
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "XcoBdXGcSTM",
                     ["tocversion"] = 110007,
                     ["id"] = "[6] The One-Armed Bandit",
                     ["groupIcon"] = "6392624",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["uid"] = "AM-XcoBdXGcSTM",
                     ["config"] = {
                     },
                     ["borderInset"] = 1,
-                    ["alpha"] = 1,
+                    ["uid"] = "AM-XcoBdXGcSTM",
+                    ["frameStrata"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["authorOptions"] = {
+                    },
                 },
-                [114] = {
+                [113] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "Explosive Gaze ",
@@ -49589,10 +41911,46 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                     ["anchorPoint"] = "BOTTOM",
-                    ["selfPoint"] = "BOTTOM",
-                    ["borderInset"] = 1,
+                    ["load"] = {
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -49622,46 +41980,26 @@ wa.data = {
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
                     ["grow"] = "UP",
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
+                    ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["authorOptions"] = {
-                    },
-                    ["yOffset"] = 0,
+                    ["gridType"] = "RD",
+                    ["AMOriginalUUID"] = "RFiyOkyM)jb",
                     ["sortHybridTable"] = {
                     },
                     ["stagger"] = 0,
-                    ["limit"] = 5,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
                         [3] = 0,
                         [4] = 1,
                     },
+                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
                     ["space"] = 2,
-                    ["radius"] = 200,
+                    ["source"] = "import",
                     ["AMModified"] = true,
-                    ["rotation"] = 0,
+                    ["alpha"] = 1,
                     ["backdropColor"] = {
                         [1] = 1,
                         [2] = 1,
@@ -49669,56 +42007,40 @@ wa.data = {
                         [4] = 0.5,
                     },
                     ["useLimit"] = false,
-                    ["source"] = "import",
-                    ["AMOriginalUUID"] = "RFiyOkyM)jb",
+                    ["animate"] = false,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
-                    ["stepAngle"] = 15,
+                    ["borderEdge"] = "Square Full White",
+                    ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
-                    ["sort"] = "none",
-                    ["alpha"] = 1,
-                    ["uid"] = "QAq7O2b13Hf",
+                    ["limit"] = 5,
+                    ["stepAngle"] = 15,
+                    ["rotation"] = 0,
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["parent"] = "[6] The One-Armed Bandit",
                     ["borderOffset"] = 4,
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["sort"] = "none",
                     ["tocversion"] = 110007,
                     ["id"] = "Bandit Big Icon",
-                    ["frameStrata"] = 1,
+                    ["authorOptions"] = {
+                    },
                     ["gridWidth"] = 5,
                     ["anchorFrameType"] = "SELECTFRAME",
-                    ["animate"] = false,
+                    ["frameStrata"] = 1,
+                    ["uid"] = "QAq7O2b13Hf",
+                    ["radius"] = 200,
                     ["config"] = {
                     },
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["gridType"] = "RD",
+                    ["yOffset"] = 0,
                 },
-                [115] = {
+                [114] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["authorOptions"] = {
@@ -49760,7 +42082,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3014",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -49769,6 +42090,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3014",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -49918,7 +42240,7 @@ wa.data = {
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
                             ["type"] = "subtext",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_color"] = {
                                 [1] = 1,
                                 [2] = 1,
@@ -49928,7 +42250,7 @@ wa.data = {
                             ["text_font"] = "Poppins SemiBold",
                             ["text_wordWrap"] = "WordWrap",
                             ["text_shadowYOffset"] = -1,
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                             ["text_text_format_c2_format"] = "none",
                             ["text_text_format_c3_format"] = "none",
                             ["text_text_format_c1_format"] = "BigNumber",
@@ -50011,8 +42333,8 @@ wa.data = {
                     ["anchorFrameType"] = "SCREEN",
                     ["frameStrata"] = 2,
                     ["icon"] = false,
-                    ["id"] = "Explosive Gaze ",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Explosive Gaze ",
                     ["useCooldownModRate"] = true,
                     ["width"] = 65,
                     ["color"] = {
@@ -50035,7 +42357,7 @@ wa.data = {
                     },
                     ["AMOriginalUUID"] = "PPLuHLM4ZTK",
                 },
-                [116] = {
+                [115] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["authorOptions"] = {
@@ -50076,12 +42398,12 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["spec"] = {
+                        ["encounterid"] = "3014",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3014",
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -50253,7 +42575,7 @@ wa.data = {
                             ["rotateText"] = "NONE",
                             ["text_text_format_c4_format"] = "none",
                             ["type"] = "subtext",
-                            ["text_text_format_c1_big_number_format"] = "AbbreviateNumbers",
+                            ["text_visible"] = true,
                             ["text_color"] = {
                                 [1] = 1,
                                 [2] = 1,
@@ -50265,13 +42587,13 @@ wa.data = {
                             ["text_shadowYOffset"] = -1,
                             ["text_text_format_c3_format"] = "none",
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_text_format_c1_format"] = "BigNumber",
                             ["text_text_format_n_format"] = "none",
                             ["anchor_point"] = "BOTTOM",
                             ["text_fontSize"] = 12,
                             ["anchorXOffset"] = 0,
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_text_format_c1_big_number_format"] = "AbbreviateNumbers",
                         },
                         [5] = {
                             ["text_text_format_p_time_precision"] = 1,
@@ -50342,8 +42664,8 @@ wa.data = {
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["width"] = 65,
                     ["useCooldownModRate"] = true,
-                    ["sparkHidden"] = "NEVER",
                     ["id"] = "Withering Flames ",
+                    ["sparkHidden"] = "NEVER",
                     ["icon"] = false,
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
@@ -50363,7 +42685,7 @@ wa.data = {
                     },
                     ["uid"] = "236RMFTjy(i",
                 },
-                [117] = {
+                [116] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                         [1] = "High Roller! ",
@@ -50376,8 +42698,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["borderInset"] = 1,
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -50385,6 +42706,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
+                    ["parent"] = "[6] The One-Armed Bandit",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -50435,16 +42757,50 @@ wa.data = {
                         },
                     },
                     ["align"] = "CENTER",
-                    ["parent"] = "[6] The One-Armed Bandit",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
-                    ["gridType"] = "RD",
-                    ["rotation"] = 0,
-                    ["sort"] = "none",
+                    ["sortHybridTable"] = {
+                        ["Demolish "] = false,
+                        ["Infected Bite  "] = false,
+                    },
+                    ["conditions"] = {
+                    },
                     ["fullCircle"] = true,
+                    ["stagger"] = 0,
+                    ["space"] = 8,
+                    ["borderInset"] = 1,
                     ["subRegions"] = {
                     },
-                    ["space"] = 8,
                     ["radius"] = 200,
+                    ["source"] = "import",
+                    ["AMModified"] = true,
+                    ["frameStrata"] = 1,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["selfPoint"] = "BOTTOM",
+                    ["animate"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
+                    ["regionType"] = "dynamicgroup",
+                    ["borderSize"] = 2,
+                    ["sort"] = "none",
+                    ["stepAngle"] = 15,
+                    ["useLimit"] = false,
+                    ["anchorFrameParent"] = false,
+                    ["constantFactor"] = "RADIUS",
+                    ["xOffset"] = 0,
+                    ["borderOffset"] = 4,
+                    ["limit"] = 5,
+                    ["tocversion"] = 110007,
+                    ["id"] = "Bandit Small Icon",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
+                    ["gridWidth"] = 5,
+                    ["anchorFrameType"] = "SELECTFRAME",
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -50463,50 +42819,16 @@ wa.data = {
                             },
                         },
                     },
-                    ["AMModified"] = true,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["selfPoint"] = "BOTTOM",
-                    ["source"] = "import",
-                    ["conditions"] = {
-                    },
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["useLimit"] = false,
-                    ["stagger"] = 0,
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["xOffset"] = 0,
-                    ["borderOffset"] = 4,
-                    ["alpha"] = 1,
-                    ["tocversion"] = 110007,
-                    ["id"] = "Bandit Small Icon",
-                    ["animate"] = false,
-                    ["gridWidth"] = 5,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmall",
-                    ["uid"] = "wRRUeYcvDWT",
-                    ["regionType"] = "dynamicgroup",
                     ["config"] = {
                     },
+                    ["uid"] = "wRRUeYcvDWT",
+                    ["rotation"] = 0,
                     ["AMOriginalUUID"] = "BWELVe7uH41",
                     ["information"] = {
                     },
-                    ["sortHybridTable"] = {
-                        ["Demolish "] = false,
-                        ["Infected Bite  "] = false,
-                    },
+                    ["gridType"] = "RD",
                 },
-                [118] = {
+                [117] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -50544,7 +42866,6 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3014",
                         ["class"] = {
                             ["multi"] = {
                             },
@@ -50553,6 +42874,7 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3014",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -50776,20 +43098,25 @@ wa.data = {
                             ["text_shadowXOffset"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "%c1%c3 / %{c2}s",
-                            ["anchorYOffset"] = 0,
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_time_mod_rate"] = true,
                             ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
+                            ["text_text_format_p_time_precision"] = 1,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
-                            ["text_text_format_p_time_precision"] = 1,
+                            ["anchorYOffset"] = 0,
                             ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_shadowYOffset"] = 0,
                             ["text_text_format_c3_format"] = "none",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_fontType"] = "OUTLINE",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -50809,12 +43136,7 @@ wa.data = {
                             ["anchor_point"] = "OUTER_TOP",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -50845,11 +43167,11 @@ wa.data = {
                     ["sparkHeight"] = 30,
                     ["authorOptions"] = {
                     },
-                    ["sparkHidden"] = "NEVER",
+                    ["uid"] = "DoS8)ZC69YK",
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
-                    ["uid"] = "DoS8)ZC69YK",
                     ["id"] = "High Roller! ",
+                    ["sparkHidden"] = "NEVER",
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
@@ -50874,7 +43196,7 @@ wa.data = {
                     },
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 },
-                [119] = {
+                [118] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -50914,7 +43236,7 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -50923,11 +43245,11 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3014",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3014",
                         ["use_encounterid"] = true,
                     },
                     ["useAdjustededMin"] = false,
@@ -51134,14 +43456,19 @@ wa.data = {
                             ["text_text_format_p_time_precision"] = 1,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "+200%",
-                            ["anchorYOffset"] = 0,
-                            ["anchorXOffset"] = 0,
-                            ["text_text_format_p_time_mod_rate"] = true,
                             ["text_text_format_p_format"] = "timed",
+                            ["anchorXOffset"] = 0,
+                            ["text_shadowColor"] = {
+                                [1] = 0,
+                                [2] = 0,
+                                [3] = 0,
+                                [4] = 1,
+                            },
+                            ["text_shadowXOffset"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
-                            ["text_shadowXOffset"] = 0,
+                            ["anchorYOffset"] = 0,
                             ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
@@ -51161,18 +43488,13 @@ wa.data = {
                             ["text_shadowYOffset"] = 0,
                             ["text_text_format_p_time_legacy_floor"] = false,
                             ["text_text_format_c2_format"] = "none",
-                            ["text_fontType"] = "OUTLINE",
-                            ["text_text_format_c1_format"] = "none",
                             ["text_text_format_c3_format"] = "none",
+                            ["text_text_format_c1_format"] = "none",
+                            ["text_fontType"] = "OUTLINE",
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 11,
                             ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_shadowColor"] = {
-                                [1] = 0,
-                                [2] = 0,
-                                [3] = 0,
-                                [4] = 1,
-                            },
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -51192,16 +43514,16 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["sparkHeight"] = 30,
                     ["cooldown"] = true,
-                    ["id"] = "The Big Hit [Tank]",
-                    ["width"] = 60,
-                    ["frameStrata"] = 2,
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
+                    ["width"] = 60,
+                    ["frameStrata"] = 2,
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "The Big Hit [Tank]",
                     ["uid"] = "ObDEaGq4Mxd",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
@@ -51246,7 +43568,7 @@ wa.data = {
                     },
                     ["cooldownTextDisabled"] = true,
                 },
-                [120] = {
+                [119] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -51278,20 +43600,20 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3014",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3014",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -51520,25 +43842,25 @@ wa.data = {
                             ["text_text_format_p_time_format"] = 0,
                             ["text_text_format_s_format"] = "none",
                             ["text_text"] = "+200%",
+                            ["text_text_format_p_format"] = "timed",
+                            ["text_text_format_p_time_dynamic_threshold"] = 60,
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["text_text_format_p_time_dynamic_threshold"] = 60,
-                            ["text_text_format_p_format"] = "timed",
-                            ["text_text_format_p_time_mod_rate"] = true,
+                            ["text_shadowXOffset"] = 0,
                             ["text_selfPoint"] = "AUTO",
                             ["text_automaticWidth"] = "Auto",
                             ["text_fixedWidth"] = 64,
-                            ["text_shadowXOffset"] = 0,
                             ["anchorYOffset"] = 0,
+                            ["text_text_format_c_format"] = "none",
                             ["text_justify"] = "CENTER",
                             ["rotateText"] = "NONE",
-                            ["text_text_format_c3_format"] = "none",
-                            ["text_shadowYOffset"] = 0,
                             ["text_fontType"] = "OUTLINE",
+                            ["text_shadowYOffset"] = 0,
+                            ["text_text_format_c3_format"] = "none",
                             ["type"] = "subtext",
                             ["text_anchorXOffset"] = 0,
                             ["text_color"] = {
@@ -51558,7 +43880,7 @@ wa.data = {
                             ["anchor_point"] = "CENTER",
                             ["text_fontSize"] = 11,
                             ["anchorXOffset"] = 0,
-                            ["text_text_format_c_format"] = "none",
+                            ["text_text_format_p_time_mod_rate"] = true,
                         },
                     },
                     ["height"] = 40,
@@ -51568,13 +43890,13 @@ wa.data = {
                     ["useAdjustededMax"] = false,
                     ["source"] = "import",
                     ["parent"] = "Bandit Small Icon",
-                    ["cooldownTextDisabled"] = true,
                     ["barColor2"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 0,
                         [4] = 1,
                     },
+                    ["cooldownTextDisabled"] = true,
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["icon_side"] = "RIGHT",
                     ["adjustedMax"] = "",
@@ -51597,8 +43919,8 @@ wa.data = {
                     ["anchorFrameType"] = "SCREEN",
                     ["useCooldownModRate"] = true,
                     ["uid"] = "eyAYxugtuLu",
-                    ["id"] = "Electric Blast [Tank]",
                     ["sparkHidden"] = "NEVER",
+                    ["id"] = "Electric Blast [Tank]",
                     ["frameStrata"] = 2,
                     ["width"] = 60,
                     ["sparkColor"] = {
@@ -51618,7 +43940,7 @@ wa.data = {
                     },
                     ["AMOriginalUUID"] = "Je1hIRO3Yzo",
                 },
-                [121] = {
+                [120] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "Coin Magnet ",
@@ -51632,8 +43954,7 @@ wa.data = {
                         ["Discarded Doomsplosive Timer "] = false,
                         ["Overdrive "] = false,
                     },
-                    ["config"] = {
-                    },
+                    ["rotation"] = 0,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -51641,7 +43962,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["space"] = 2,
-                    ["anchorPoint"] = "BOTTOM",
+                    ["selfPoint"] = "BOTTOM",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -51670,6 +43991,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
+                    ["anchorPoint"] = "BOTTOM",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -51690,18 +44012,46 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["xOffset"] = 0,
+                    ["arcLength"] = 360,
                     ["AMOriginalUUID"] = "mcJWtH29o88",
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
-                    ["stagger"] = 0,
-                    ["source"] = "import",
                     ["borderInset"] = 1,
+                    ["stagger"] = 0,
+                    ["gridType"] = "RD",
+                    ["config"] = {
+                    },
                     ["subRegions"] = {
                     },
+                    ["gridWidth"] = 5,
+                    ["useLimit"] = false,
+                    ["AMModified"] = true,
                     ["frameStrata"] = 1,
-                    ["gridType"] = "RD",
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["animate"] = false,
+                    ["source"] = "import",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-bar.png",
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityRaidBar",
+                    ["sort"] = "none",
+                    ["anchorFrameParent"] = false,
+                    ["constantFactor"] = "RADIUS",
+                    ["authorOptions"] = {
+                    },
+                    ["borderOffset"] = 4,
+                    ["regionType"] = "dynamicgroup",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Bandit Bars",
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -51720,34 +44070,6 @@ wa.data = {
                             },
                         },
                     },
-                    ["gridWidth"] = 5,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["useLimit"] = false,
-                    ["animate"] = false,
-                    ["stepAngle"] = 15,
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["sort"] = "none",
-                    ["AMModified"] = true,
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["authorOptions"] = {
-                    },
-                    ["borderOffset"] = 4,
-                    ["rotation"] = 0,
-                    ["tocversion"] = 110007,
-                    ["id"] = "Bandit Bars",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-bar.png",
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["radius"] = 200,
@@ -51758,9 +44080,9 @@ wa.data = {
                     },
                     ["information"] = {
                     },
-                    ["arcLength"] = 360,
+                    ["xOffset"] = 0,
                 },
-                [122] = {
+                [121] = {
                     ["sparkWidth"] = 2,
                     ["iconSource"] = -1,
                     ["parent"] = "Bandit Bars",
@@ -51768,7 +44090,8 @@ wa.data = {
                     ["adjustedMin"] = "",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["alpha"] = 1,
+                    ["config"] = {
+                    },
                     ["sparkRotation"] = 0,
                     ["sparkRotationMode"] = "AUTO",
                     ["actions"] = {
@@ -51836,7 +44159,11 @@ wa.data = {
                         },
                     },
                     ["sparkOffsetX"] = 0,
-                    ["authorOptions"] = {
+                    ["barColor2"] = {
+                        [1] = 1,
+                        [2] = 0.96470594406128,
+                        [3] = 0,
+                        [4] = 1,
                     },
                     ["barColor"] = {
                         [1] = 0.86274516582489,
@@ -51845,8 +44172,13 @@ wa.data = {
                         [4] = 1,
                     },
                     ["desaturate"] = false,
-                    ["adjustedMax"] = "",
-                    ["zoom"] = 0.3,
+                    ["AMOriginalUUID"] = "aZFK8fTPUqI",
+                    ["backgroundColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 0.5,
+                    },
                     ["sparkOffsetY"] = 0,
                     ["subRegions"] = {
                         [1] = {
@@ -51946,34 +44278,32 @@ wa.data = {
                     ["AMModified"] = true,
                     ["sparkBlendMode"] = "ADD",
                     ["useAdjustededMax"] = false,
-                    ["icon"] = true,
-                    ["source"] = "import",
                     ["internalVersion"] = 82,
-                    ["selfPoint"] = "CENTER",
+                    ["source"] = "import",
+                    ["displayIcon"] = "961622",
                     ["sparkColor"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["barColor2"] = {
-                        [1] = 1,
-                        [2] = 0.96470594406128,
-                        [3] = 0,
-                        [4] = 1,
+                    ["authorOptions"] = {
                     },
+                    ["width"] = 266.00021362305,
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "aurabar",
-                    ["AMOriginalUUID"] = "aZFK8fTPUqI",
+                    ["alpha"] = 1,
                     ["height"] = 32.999893188477,
                     ["icon_side"] = "RIGHT",
+                    ["id"] = "Coin Magnet ",
+                    ["sparkHeight"] = 30,
+                    ["texture"] = "Clean",
+                    ["zoom"] = 0.3,
+                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                    ["spark"] = true,
                     ["load"] = {
                         ["use_encounterid"] = true,
                         ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -51982,39 +44312,31 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["size"] = {
                             ["multi"] = {
                             },
                         },
                     },
-                    ["sparkHeight"] = 30,
-                    ["texture"] = "Clean",
-                    ["config"] = {
-                    },
-                    ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                    ["spark"] = true,
-                    ["width"] = 266.00021362305,
-                    ["id"] = "Coin Magnet ",
+                    ["sparkHidden"] = "NEVER",
                     ["xOffset"] = 0,
                     ["frameStrata"] = 2,
                     ["anchorFrameType"] = "SCREEN",
-                    ["sparkHidden"] = "NEVER",
+                    ["selfPoint"] = "CENTER",
                     ["uid"] = "SdQr0XWnaSj",
                     ["inverse"] = false,
-                    ["displayIcon"] = "961622",
+                    ["icon"] = true,
                     ["orientation"] = "HORIZONTAL",
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["backgroundColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 0.5,
-                    },
+                    ["adjustedMax"] = "",
                 },
-                [123] = {
+                [122] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                     },
@@ -52023,27 +44345,10 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-specialbar.png",
                     ["gridType"] = "RD",
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
                     ["fullCircle"] = true,
                     ["rowSpace"] = 1,
-                    ["anchorPoint"] = "BOTTOM",
+                    ["selfPoint"] = "BOTTOM",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -52072,6 +44377,9 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
+                    ["anchorPoint"] = "BOTTOM",
+                    ["useLimit"] = false,
+                    ["align"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -52092,12 +44400,9 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["selfPoint"] = "BOTTOM",
-                    ["align"] = "CENTER",
-                    ["useLimit"] = false,
                     ["AMOriginalUUID"] = "xS1)M1qHxce",
                     ["radius"] = 200,
-                    ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["space"] = 2,
                     ["borderInset"] = 1,
                     ["subRegions"] = {
@@ -52107,7 +44412,24 @@ wa.data = {
                         ["Rolling Rubbish Remaining"] = false,
                     },
                     ["parent"] = "[6] The One-Armed Bandit",
-                    ["AMModified"] = true,
+                    ["load"] = {
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["gridWidth"] = 5,
                     ["backdropColor"] = {
                         [1] = 1,
@@ -52115,18 +44437,18 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
+                    ["AMModified"] = true,
+                    ["source"] = "import",
                     ["grow"] = "UP",
-                    ["animate"] = false,
-                    ["frameStrata"] = 1,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "dynamicgroup",
                     ["borderSize"] = 2,
+                    ["sort"] = "none",
                     ["limit"] = 5,
                     ["stepAngle"] = 15,
-                    ["sort"] = "none",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["borderColor"] = {
@@ -52136,17 +44458,17 @@ wa.data = {
                         [4] = 1,
                     },
                     ["borderOffset"] = 4,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalitySpecialBar",
+                    ["frameStrata"] = 1,
                     ["tocversion"] = 110007,
                     ["id"] = "Bandit Special Bars",
-                    ["source"] = "import",
+                    ["animate"] = false,
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["yOffset"] = 0,
-                    ["uid"] = "aypbzXRUbDf",
                     ["config"] = {
                     },
-                    ["rotation"] = 0,
+                    ["uid"] = "aypbzXRUbDf",
+                    ["stagger"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
@@ -52154,7 +44476,7 @@ wa.data = {
                     ["authorOptions"] = {
                     },
                 },
-                [124] = {
+                [123] = {
                     ["arcLength"] = 360,
                     ["controlledChildren"] = {
                     },
@@ -52164,7 +44486,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-circle.png",
                     ["gridType"] = "RD",
-                    ["stepAngle"] = 15,
+                    ["yOffset"] = 0,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -52172,7 +44494,8 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["parent"] = "[6] The One-Armed Bandit",
+                    ["sortHybridTable"] = {
+                    },
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -52201,14 +44524,13 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["rotation"] = 0,
+                    ["parent"] = "[6] The One-Armed Bandit",
                     ["selfPoint"] = "BOTTOM",
                     ["align"] = "CENTER",
-                    ["sortHybridTable"] = {
-                    },
+                    ["space"] = 2,
                     ["AMOriginalUUID"] = "8Hhgv7TV)1o",
-                    ["fullCircle"] = true,
                     ["stagger"] = 0,
+                    ["rotation"] = 0,
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -52233,7 +44555,37 @@ wa.data = {
                     ["subRegions"] = {
                     },
                     ["anchorPoint"] = "BOTTOM",
+                    ["alpha"] = 1,
+                    ["AMModified"] = true,
                     ["gridWidth"] = 5,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["xOffset"] = 0,
+                    ["animate"] = false,
+                    ["grow"] = "UP",
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["limit"] = 5,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
+                    ["sort"] = "none",
+                    ["anchorFrameParent"] = false,
+                    ["constantFactor"] = "RADIUS",
+                    ["useLimit"] = false,
+                    ["borderOffset"] = 4,
+                    ["regionType"] = "dynamicgroup",
+                    ["tocversion"] = 110007,
+                    ["id"] = "Bandit Circles",
+                    ["source"] = "import",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
                     ["load"] = {
                         ["talent"] = {
                             ["multi"] = {
@@ -52252,47 +44604,17 @@ wa.data = {
                             },
                         },
                     },
-                    ["frameStrata"] = 1,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["xOffset"] = 0,
-                    ["source"] = "import",
-                    ["grow"] = "UP",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityCircle",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["sort"] = "none",
-                    ["borderEdge"] = "Square Full White",
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["useLimit"] = false,
-                    ["borderOffset"] = 4,
-                    ["yOffset"] = 0,
-                    ["tocversion"] = 110007,
-                    ["id"] = "Bandit Circles",
-                    ["animate"] = false,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["AMModified"] = true,
+                    ["borderInset"] = 1,
                     ["config"] = {
                     },
                     ["radius"] = 200,
-                    ["borderInset"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["space"] = 2,
+                    ["fullCircle"] = true,
                 },
-                [125] = {
+                [124] = {
                     ["grow"] = "DOWN",
                     ["controlledChildren"] = {
                         [1] = "The Big Hit Taunt [Tank]",
@@ -52303,8 +44625,7 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
-                    ["stagger"] = 0,
-                    ["sort"] = "none",
+                    ["AMModified"] = true,
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -52312,6 +44633,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
+                    ["parent"] = "[6] The One-Armed Bandit",
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -52343,18 +44665,70 @@ wa.data = {
                     ["arcLength"] = 360,
                     ["useLimit"] = false,
                     ["align"] = "CENTER",
-                    ["parent"] = "[6] The One-Armed Bandit",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-text.png",
                     ["sortHybridTable"] = {
                         ["Demolish Taunt [Tank]"] = false,
                         ["Meltdown inc [Tank]"] = false,
                     },
+                    ["AMOriginalUUID"] = "xFW9Hr48bBl",
                     ["rotation"] = 0,
+                    ["stagger"] = 0,
                     ["xOffset"] = 0,
-                    ["fullCircle"] = true,
+                    ["config"] = {
+                    },
                     ["subRegions"] = {
                     },
                     ["space"] = 2,
+                    ["source"] = "import",
+                    ["load"] = {
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
+                    ["gridWidth"] = 5,
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["fullCircle"] = true,
+                    ["animate"] = false,
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
+                    ["scale"] = 1,
+                    ["centerType"] = "LR",
+                    ["border"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["stepAngle"] = 15,
+                    ["borderSize"] = 2,
+                    ["sort"] = "none",
+                    ["regionType"] = "dynamicgroup",
+                    ["gridType"] = "RD",
+                    ["anchorFrameParent"] = false,
+                    ["constantFactor"] = "RADIUS",
+                    ["borderInset"] = 1,
+                    ["borderOffset"] = 4,
+                    ["limit"] = 5,
+                    ["tocversion"] = 110007,
+                    ["id"] = "Bandit Texts",
+                    ["selfPoint"] = "TOP",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SELECTFRAME",
+                    ["internalVersion"] = 82,
+                    ["uid"] = "z3t4KP5Y8M4",
+                    ["alpha"] = 1,
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -52375,65 +44749,13 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["load"] = {
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["internalVersion"] = 82,
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["config"] = {
-                    },
-                    ["source"] = "import",
-                    ["selfPoint"] = "TOP",
-                    ["scale"] = 1,
-                    ["centerType"] = "LR",
-                    ["border"] = false,
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityTexts",
-                    ["regionType"] = "dynamicgroup",
-                    ["borderSize"] = 2,
-                    ["limit"] = 5,
-                    ["gridType"] = "RD",
-                    ["AMOriginalUUID"] = "xFW9Hr48bBl",
-                    ["anchorFrameParent"] = false,
-                    ["constantFactor"] = "RADIUS",
-                    ["borderInset"] = 1,
-                    ["borderOffset"] = 4,
-                    ["AMModified"] = true,
-                    ["tocversion"] = 110007,
-                    ["id"] = "Bandit Texts",
-                    ["gridWidth"] = 5,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SELECTFRAME",
-                    ["animate"] = false,
-                    ["uid"] = "z3t4KP5Y8M4",
-                    ["borderEdge"] = "Square Full White",
-                    ["stepAngle"] = 15,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["frameStrata"] = 1,
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-text.png",
                 },
-                [126] = {
+                [125] = {
                     ["outline"] = "OUTLINE",
                     ["parent"] = "Bandit Texts",
                     ["preferToUpdate"] = true,
@@ -52554,8 +44876,12 @@ wa.data = {
                     ["AMModified"] = true,
                     ["fontSize"] = 27,
                     ["shadowXOffset"] = 1,
-                    ["displayText"] = "Taunt Boss",
+                    ["AMOriginalUUID"] = "HnHLXunzzBM",
                     ["regionType"] = "text",
+                    ["displayText"] = "Taunt Boss",
+                    ["wordWrap"] = "WordWrap",
+                    ["conditions"] = {
+                    },
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -52567,7 +44893,7 @@ wa.data = {
                                 ["TANK"] = true,
                             },
                         },
-                        ["class"] = {
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -52576,17 +44902,13 @@ wa.data = {
                             },
                         },
                         ["use_role"] = true,
-                        ["spec"] = {
+                        ["encounterid"] = "3014",
+                        ["class"] = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3014",
                         ["use_encounterid"] = true,
                     },
-                    ["internalVersion"] = 82,
-                    ["conditions"] = {
-                    },
-                    ["AMOriginalUUID"] = "HnHLXunzzBM",
                     ["displayText_format_p_time_precision"] = 1,
                     ["displayText_format_p_time_dynamic_threshold"] = 60,
                     ["uid"] = "dNiggGp)i)b",
@@ -52626,7 +44948,7 @@ wa.data = {
                     ["config"] = {
                     },
                     ["shadowYOffset"] = -1,
-                    ["displayText_format_p_time_mod_rate"] = true,
+                    ["internalVersion"] = 82,
                     ["shadowColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -52636,9 +44958,9 @@ wa.data = {
                     ["fixedWidth"] = 200,
                     ["information"] = {
                     },
-                    ["wordWrap"] = "WordWrap",
+                    ["displayText_format_p_time_mod_rate"] = true,
                 },
-                [127] = {
+                [126] = {
                     ["controlledChildren"] = {
                         [1] = "Dark Lined Cuirass",
                     },
@@ -52731,28 +45053,28 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["selfPoint"] = "CENTER",
                     ["AMModified"] = true,
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
-                    ["authorOptions"] = {
-                    },
+                    ["parent"] = "[6] The One-Armed Bandit",
                     ["AMOriginalUUID"] = "205f0GKYiRC",
                     ["id"] = "Bandit Nameplates",
-                    ["borderInset"] = 1,
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["uid"] = "f)CN6KqO0iG",
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
                     ["config"] = {
                     },
+                    ["borderInset"] = 1,
                     ["yOffset"] = 0,
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["parent"] = "[6] The One-Armed Bandit",
+                    ["authorOptions"] = {
+                    },
                 },
-                [128] = {
+                [127] = {
                     ["iconSource"] = -1,
                     ["xOffset"] = -10,
                     ["adjustedMax"] = "",
@@ -52818,9 +45140,15 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
-                    ["AMModified"] = true,
-                    ["AMOriginalUUID"] = "UKTdW95UEWr",
                     ["desaturate"] = false,
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["init"] = {
+                        },
+                        ["finish"] = {
+                        },
+                    },
                     ["version"] = 3,
                     ["subRegions"] = {
                         [1] = {
@@ -52852,8 +45180,8 @@ wa.data = {
                                 [4] = 1,
                             },
                             ["text_font"] = "PT Sans Narrow Bold",
-                            ["text_shadowYOffset"] = 0,
                             ["text_anchorYOffset"] = -1,
+                            ["text_shadowYOffset"] = 0,
                             ["text_text_format_tooltip1M_format"] = "none",
                             ["text_wordWrap"] = "WordWrap",
                             ["text_visible"] = true,
@@ -52879,14 +45207,19 @@ wa.data = {
                         },
                     },
                     ["height"] = 40,
+                    ["progressSource"] = {
+                        [1] = -1,
+                        [2] = "",
+                    },
+                    ["AMModified"] = true,
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
                             },
                         },
-                        ["use_never"] = false,
                         ["class_and_spec"] = {
                         },
+                        ["use_never"] = false,
                         ["talent"] = {
                             ["multi"] = {
                             },
@@ -52895,36 +45228,32 @@ wa.data = {
                             ["multi"] = {
                             },
                         },
-                        ["encounterid"] = "3014",
                         ["class"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3014",
                         ["use_encounterid"] = true,
                     },
-                    ["useCooldownModRate"] = true,
                     ["useAdjustededMax"] = false,
-                    ["selfPoint"] = "RIGHT",
-                    ["source"] = "import",
-                    ["progressSource"] = {
-                        [1] = -1,
-                        [2] = "",
-                    },
                     ["cooldown"] = false,
-                    ["displayIcon"] = "134337",
-                    ["useTooltip"] = false,
+                    ["source"] = "import",
+                    ["AMOriginalUUID"] = "UKTdW95UEWr",
+                    ["selfPoint"] = "RIGHT",
+                    ["parent"] = "Bandit Nameplates",
+                    ["config"] = {
+                    },
                     ["useAdjustededMin"] = false,
                     ["regionType"] = "icon",
                     ["adjustedMin"] = "",
-                    ["config"] = {
-                    },
+                    ["width"] = 40,
+                    ["useCooldownModRate"] = true,
                     ["color"] = {
                         [1] = 1,
                         [2] = 1,
                         [3] = 1,
                         [4] = 1,
                     },
-                    ["width"] = 40,
                     ["anchorFrameParent"] = false,
                     ["frameStrata"] = 3,
                     ["zoom"] = 0.3,
@@ -52932,28 +45261,21 @@ wa.data = {
                     ["semver"] = "1.0.2",
                     ["tocversion"] = 110100,
                     ["id"] = "Dark Lined Cuirass",
-                    ["actions"] = {
-                        ["start"] = {
-                        },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
+                    ["authorOptions"] = {
                     },
                     ["alpha"] = 1,
                     ["anchorFrameType"] = "NAMEPLATE",
-                    ["authorOptions"] = {
-                    },
+                    ["displayIcon"] = "134337",
                     ["uid"] = "AM-UKTdW95UEWr",
                     ["inverse"] = false,
-                    ["parent"] = "Bandit Nameplates",
+                    ["preferToUpdate"] = false,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["preferToUpdate"] = false,
+                    ["useTooltip"] = false,
                 },
-                [129] = {
+                [128] = {
                     ["controlledChildren"] = {
                         [1] = "Withering Flames (Glow)",
                         [2] = "Crushed (Glow)",
@@ -53048,60 +45370,36 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["AMModified"] = true,
                     ["xOffset"] = 0,
+                    ["AMModified"] = true,
                     ["borderOffset"] = 4,
-                    ["parent"] = "[6] The One-Armed Bandit",
+                    ["selfPoint"] = "CENTER",
                     ["AMOriginalUUID"] = "j67HgNoSfVW",
                     ["id"] = "Bandit Raid Frame Glows",
-                    ["uid"] = "dDRzg4ZHKHI",
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["borderInset"] = 1,
+                    ["frameStrata"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
                     ["config"] = {
                     },
+                    ["uid"] = "dDRzg4ZHKHI",
                     ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-heal.png",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["parent"] = "[6] The One-Armed Bandit",
                 },
-                [130] = {
+                [129] = {
                     ["authorOptions"] = {
                     },
                     ["preferToUpdate"] = true,
-                    ["AMModified"] = true,
+                    ["regionType"] = "empty",
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "CENTER",
                     ["parent"] = "Bandit Raid Frame Glows",
-                    ["regionType"] = "empty",
-                    ["load"] = {
-                        ["use_never"] = true,
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["use_role"] = true,
-                        ["encounterid"] = "3014",
-                        ["use_encounterid"] = true,
-                        ["role"] = {
-                            ["single"] = "HEALER",
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
+                    ["AMModified"] = true,
+                    ["AMOriginalUUID"] = "5gEA0R3BXB9",
                     ["actions"] = {
                         ["start"] = {
                             ["glow_color"] = {
@@ -53152,9 +45450,8 @@ wa.data = {
                         },
                         ["activeTriggerMode"] = -10,
                     },
-                    ["AMOriginalUUID"] = "5gEA0R3BXB9",
+                    ["frameStrata"] = 1,
                     ["internalVersion"] = 82,
-                    ["selfPoint"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["easeStrength"] = 3,
@@ -53175,33 +45472,58 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["selfPoint"] = "CENTER",
                     ["id"] = "Withering Flames (Glow)",
-                    ["xOffset"] = 0,
-                    ["frameStrata"] = 1,
-                    ["width"] = 1,
                     ["uid"] = "0GgUVYrXJ4(",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["xOffset"] = 0,
                     ["config"] = {
                     },
-                    ["alpha"] = 1,
+                    ["width"] = 1,
                     ["subRegions"] = {
                     },
                     ["height"] = 1,
                     ["conditions"] = {
                     },
+                    ["load"] = {
+                        ["use_never"] = true,
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["use_role"] = true,
+                        ["encounterid"] = "3014",
+                        ["use_encounterid"] = true,
+                        ["role"] = {
+                            ["single"] = "HEALER",
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
                     ["information"] = {
                     },
-                    ["anchorFrameType"] = "SCREEN",
                 },
-                [131] = {
+                [130] = {
                     ["xOffset"] = 0,
                     ["preferToUpdate"] = true,
-                    ["information"] = {
-                    },
+                    ["AMModified"] = true,
                     ["yOffset"] = 0,
                     ["regionType"] = "empty",
                     ["parent"] = "Bandit Raid Frame Glows",
-                    ["anchorPoint"] = "CENTER",
-                    ["authorOptions"] = {
+                    ["information"] = {
+                    },
+                    ["conditions"] = {
                     },
                     ["actions"] = {
                         ["start"] = {
@@ -53253,10 +45575,8 @@ wa.data = {
                         },
                         ["activeTriggerMode"] = -10,
                     },
-                    ["conditions"] = {
-                    },
+                    ["anchorPoint"] = "CENTER",
                     ["internalVersion"] = 82,
-                    ["selfPoint"] = "CENTER",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -53277,19 +45597,19 @@ wa.data = {
                             ["easeType"] = "none",
                         },
                     },
+                    ["selfPoint"] = "CENTER",
                     ["id"] = "Crushed (Glow)",
-                    ["width"] = 1,
-                    ["frameStrata"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
                     ["config"] = {
                     },
-                    ["uid"] = "sr9rLsPsSRK",
                     ["alpha"] = 1,
+                    ["width"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["uid"] = "sr9rLsPsSRK",
+                    ["frameStrata"] = 1,
                     ["subRegions"] = {
                     },
                     ["height"] = 1,
                     ["AMOriginalUUID"] = "5gEA0R3BXB9",
-                    ["AMModified"] = true,
                     ["load"] = {
                         ["use_never"] = true,
                         ["talent"] = {
@@ -53315,8 +45635,10 @@ wa.data = {
                             },
                         },
                     },
+                    ["authorOptions"] = {
+                    },
                 },
-                [132] = {
+                [131] = {
                     ["grow"] = "UP",
                     ["controlledChildren"] = {
                         [1] = "The Big Hit [Co-Tank]",
@@ -53327,7 +45649,9 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["yOffset"] = 0,
                     ["anchorPoint"] = "BOTTOM",
-                    ["stepAngle"] = 15,
+                    ["sortHybridTable"] = {
+                        ["Demolish Co-Tank"] = false,
+                    },
                     ["borderColor"] = {
                         [1] = 0,
                         [2] = 0,
@@ -53335,7 +45659,7 @@ wa.data = {
                         [4] = 1,
                     },
                     ["rowSpace"] = 1,
-                    ["gridType"] = "RD",
+                    ["useLimit"] = false,
                     ["actions"] = {
                         ["start"] = {
                         },
@@ -53364,7 +45688,7 @@ wa.data = {
                     },
                     ["columnSpace"] = 1,
                     ["internalVersion"] = 82,
-                    ["rotation"] = 0,
+                    ["gridType"] = "RD",
                     ["animation"] = {
                         ["start"] = {
                             ["type"] = "none",
@@ -53388,15 +45712,15 @@ wa.data = {
                     ["align"] = "CENTER",
                     ["fullCircle"] = true,
                     ["AMOriginalUUID"] = "K3ZtUWxoEoN",
-                    ["AMModified"] = true,
-                    ["stagger"] = 0,
                     ["space"] = 2,
+                    ["stagger"] = 0,
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-tank.png",
                     ["config"] = {
                     },
                     ["subRegions"] = {
                     },
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-tank.png",
                     ["parent"] = "[6] The One-Armed Bandit",
+                    ["AMModified"] = true,
                     ["load"] = {
                         ["size"] = {
                             ["multi"] = {
@@ -53422,25 +45746,23 @@ wa.data = {
                         [3] = 1,
                         [4] = 0.5,
                     },
-                    ["animate"] = false,
                     ["source"] = "import",
+                    ["animate"] = false,
                     ["arcLength"] = 360,
                     ["scale"] = 1,
                     ["centerType"] = "LR",
                     ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "dynamicgroup",
+                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
+                    ["stepAngle"] = 15,
                     ["borderSize"] = 2,
                     ["limit"] = 5,
+                    ["borderEdge"] = "Square Full White",
                     ["sort"] = "none",
-                    ["anchorFrameFrame"] = "WeakAuras:ExalityIconSmallCoTank",
                     ["anchorFrameParent"] = false,
                     ["constantFactor"] = "RADIUS",
                     ["selfPoint"] = "BOTTOM",
                     ["borderOffset"] = 4,
-                    ["sortHybridTable"] = {
-                        ["Demolish Co-Tank"] = false,
-                    },
+                    ["regionType"] = "dynamicgroup",
                     ["tocversion"] = 110007,
                     ["id"] = "Bandit Co-Tank Icon",
                     ["frameStrata"] = 1,
@@ -53448,16 +45770,16 @@ wa.data = {
                     ["anchorFrameType"] = "SELECTFRAME",
                     ["authorOptions"] = {
                     },
-                    ["borderInset"] = 1,
                     ["uid"] = "XyJVKe39vWx",
-                    ["useLimit"] = false,
+                    ["borderInset"] = 1,
+                    ["rotation"] = 0,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
                     ["radius"] = 200,
                 },
-                [133] = {
+                [132] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -53494,20 +45816,20 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["encounterid"] = "3014",
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
                         ["spec"] = {
                             ["multi"] = {
                             },
                         },
+                        ["encounterid"] = "3014",
                         ["size"] = {
                             ["multi"] = {
                             },
@@ -53700,9 +46022,9 @@ wa.data = {
                             ["text_font"] = "Poppins SemiBold",
                             ["text_text_format_p_time_format"] = 0,
                             ["text_anchorYOffset"] = -5,
-                            ["text_visible"] = true,
-                            ["text_wordWrap"] = "WordWrap",
                             ["text_fontType"] = "OUTLINE",
+                            ["text_wordWrap"] = "WordWrap",
+                            ["text_visible"] = true,
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
@@ -53779,12 +46101,12 @@ wa.data = {
                     ["preferToUpdate"] = true,
                     ["sparkHeight"] = 30,
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                    ["sparkHidden"] = "NEVER",
-                    ["anchorFrameType"] = "SCREEN",
-                    ["useCooldownModRate"] = true,
                     ["authorOptions"] = {
                     },
+                    ["anchorFrameType"] = "SCREEN",
+                    ["useCooldownModRate"] = true,
                     ["id"] = "The Big Hit [Co-Tank]",
+                    ["sparkHidden"] = "NEVER",
                     ["icon"] = false,
                     ["frameStrata"] = 2,
                     ["width"] = 50,
@@ -53820,7 +46142,7 @@ wa.data = {
                     },
                     ["uid"] = "ovG2AXTiSZf",
                 },
-                [134] = {
+                [133] = {
                     ["sparkWidth"] = 10,
                     ["iconSource"] = -1,
                     ["xOffset"] = 0,
@@ -53862,17 +46184,17 @@ wa.data = {
                         ["role"] = {
                             ["single"] = "TANK",
                         },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
+                        ["encounterid"] = "3014",
                         ["talent"] = {
                             ["multi"] = {
                             },
                         },
                         ["use_role"] = true,
-                        ["encounterid"] = "3014",
                         ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
                             ["multi"] = {
                             },
                         },
@@ -54081,14 +46403,14 @@ wa.data = {
                             ["text_anchorYOffset"] = -5,
                             ["text_shadowYOffset"] = 0,
                             ["text_wordWrap"] = "WordWrap",
-                            ["text_visible"] = true,
+                            ["text_fontType"] = "OUTLINE",
                             ["text_shadowColor"] = {
                                 [1] = 0,
                                 [2] = 0,
                                 [3] = 0,
                                 [4] = 1,
                             },
-                            ["text_fontType"] = "OUTLINE",
+                            ["text_visible"] = true,
                             ["anchor_point"] = "TOPRIGHT",
                             ["text_fontSize"] = 19,
                             ["anchorXOffset"] = 0,
@@ -54154,12 +46476,12 @@ wa.data = {
                     ["adjustedMax"] = "",
                     ["sparkHeight"] = 30,
                     ["icon"] = false,
-                    ["sparkHidden"] = "NEVER",
-                    ["width"] = 50,
-                    ["frameStrata"] = 2,
                     ["authorOptions"] = {
                     },
+                    ["width"] = 50,
+                    ["frameStrata"] = 2,
                     ["id"] = "Electric Blast [Co-Tank]",
+                    ["sparkHidden"] = "NEVER",
                     ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                     ["useCooldownModRate"] = true,
                     ["anchorFrameType"] = "SCREEN",
@@ -54183,6 +46505,119 @@ wa.data = {
                     },
                     ["parent"] = "Bandit Co-Tank Icon",
                 },
+                [134] = {
+                    ["controlledChildren"] = {
+                    },
+                    ["borderBackdrop"] = "Blizzard Tooltip",
+                    ["xOffset"] = 0,
+                    ["preferToUpdate"] = true,
+                    ["yOffset"] = 0,
+                    ["anchorPoint"] = "CENTER",
+                    ["borderColor"] = {
+                        [1] = 0,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 1,
+                    },
+                    ["actions"] = {
+                        ["start"] = {
+                        },
+                        ["init"] = {
+                        },
+                        ["finish"] = {
+                        },
+                    },
+                    ["triggers"] = {
+                        [1] = {
+                            ["trigger"] = {
+                                ["names"] = {
+                                },
+                                ["type"] = "aura2",
+                                ["spellIds"] = {
+                                },
+                                ["subeventSuffix"] = "_CAST_START",
+                                ["unit"] = "player",
+                                ["subeventPrefix"] = "SPELL",
+                                ["event"] = "Health",
+                                ["debuffType"] = "HELPFUL",
+                            },
+                            ["untrigger"] = {
+                            },
+                        },
+                    },
+                    ["internalVersion"] = 82,
+                    ["animation"] = {
+                        ["start"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["main"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                        ["finish"] = {
+                            ["type"] = "none",
+                            ["easeStrength"] = 3,
+                            ["duration_type"] = "seconds",
+                            ["easeType"] = "none",
+                        },
+                    },
+                    ["subRegions"] = {
+                    },
+                    ["load"] = {
+                        ["size"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["spec"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["class"] = {
+                            ["multi"] = {
+                            },
+                        },
+                        ["talent"] = {
+                            ["multi"] = {
+                            },
+                        },
+                    },
+                    ["backdropColor"] = {
+                        [1] = 1,
+                        [2] = 1,
+                        [3] = 1,
+                        [4] = 0.5,
+                    },
+                    ["scale"] = 1,
+                    ["border"] = false,
+                    ["borderEdge"] = "Square Full White",
+                    ["regionType"] = "group",
+                    ["borderSize"] = 2,
+                    ["authorOptions"] = {
+                    },
+                    ["AMModified"] = true,
+                    ["borderOffset"] = 4,
+                    ["selfPoint"] = "CENTER",
+                    ["AMOriginalUUID"] = "TDOkDLKKBp(",
+                    ["id"] = "Bandit Misc",
+                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-misc.png",
+                    ["alpha"] = 1,
+                    ["anchorFrameType"] = "SCREEN",
+                    ["config"] = {
+                    },
+                    ["uid"] = "6TBQSC5xlPL",
+                    ["borderInset"] = 1,
+                    ["frameStrata"] = 1,
+                    ["conditions"] = {
+                    },
+                    ["information"] = {
+                    },
+                    ["parent"] = "[6] The One-Armed Bandit",
+                },
                 [135] = {
                     ["controlledChildren"] = {
                     },
@@ -54200,119 +46635,6 @@ wa.data = {
                     ["actions"] = {
                         ["start"] = {
                         },
-                        ["init"] = {
-                        },
-                        ["finish"] = {
-                        },
-                    },
-                    ["triggers"] = {
-                        [1] = {
-                            ["trigger"] = {
-                                ["names"] = {
-                                },
-                                ["type"] = "aura2",
-                                ["spellIds"] = {
-                                },
-                                ["subeventSuffix"] = "_CAST_START",
-                                ["unit"] = "player",
-                                ["subeventPrefix"] = "SPELL",
-                                ["event"] = "Health",
-                                ["debuffType"] = "HELPFUL",
-                            },
-                            ["untrigger"] = {
-                            },
-                        },
-                    },
-                    ["internalVersion"] = 82,
-                    ["animation"] = {
-                        ["start"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["main"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                        ["finish"] = {
-                            ["type"] = "none",
-                            ["easeStrength"] = 3,
-                            ["duration_type"] = "seconds",
-                            ["easeType"] = "none",
-                        },
-                    },
-                    ["subRegions"] = {
-                    },
-                    ["load"] = {
-                        ["size"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["spec"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["class"] = {
-                            ["multi"] = {
-                            },
-                        },
-                        ["talent"] = {
-                            ["multi"] = {
-                            },
-                        },
-                    },
-                    ["backdropColor"] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 1,
-                        [4] = 0.5,
-                    },
-                    ["scale"] = 1,
-                    ["border"] = false,
-                    ["borderEdge"] = "Square Full White",
-                    ["regionType"] = "group",
-                    ["borderSize"] = 2,
-                    ["AMModified"] = true,
-                    ["selfPoint"] = "CENTER",
-                    ["borderOffset"] = 4,
-                    ["AMOriginalUUID"] = "TDOkDLKKBp(",
-                    ["borderInset"] = 1,
-                    ["id"] = "Bandit Misc",
-                    ["uid"] = "6TBQSC5xlPL",
-                    ["alpha"] = 1,
-                    ["anchorFrameType"] = "SCREEN",
-                    ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-misc.png",
-                    ["config"] = {
-                    },
-                    ["frameStrata"] = 1,
-                    ["authorOptions"] = {
-                    },
-                    ["conditions"] = {
-                    },
-                    ["information"] = {
-                    },
-                    ["parent"] = "[6] The One-Armed Bandit",
-                },
-                [136] = {
-                    ["controlledChildren"] = {
-                    },
-                    ["borderBackdrop"] = "Blizzard Tooltip",
-                    ["xOffset"] = 0,
-                    ["preferToUpdate"] = true,
-                    ["yOffset"] = 0,
-                    ["anchorPoint"] = "CENTER",
-                    ["borderColor"] = {
-                        [1] = 0,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                    ["actions"] = {
-                        ["start"] = {
-                        },
                         ["finish"] = {
                         },
                         ["init"] = {
@@ -54389,29 +46711,29 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
-                    ["parent"] = "[NHF] Liberation of Undermine",
                     ["AMModified"] = true,
-                    ["authorOptions"] = {
-                    },
+                    ["parent"] = "[NHF] Liberation of Undermine",
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "Dn)KiKqVrj9",
                     ["tocversion"] = 110007,
                     ["id"] = "[7] Mug'Zee, Heads of Security",
                     ["groupIcon"] = "6392623",
-                    ["frameStrata"] = 1,
+                    ["alpha"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["config"] = {
-                    },
                     ["borderInset"] = 1,
                     ["uid"] = "AM-Dn)KiKqVrj9",
-                    ["alpha"] = 1,
+                    ["config"] = {
+                    },
+                    ["frameStrata"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["authorOptions"] = {
+                    },
                 },
-                [137] = {
+                [136] = {
                     ["controlledChildren"] = {
                     },
                     ["borderBackdrop"] = "Blizzard Tooltip",
@@ -54504,27 +46826,27 @@ wa.data = {
                     ["borderEdge"] = "Square Full White",
                     ["regionType"] = "group",
                     ["borderSize"] = 2,
+                    ["AMModified"] = true,
                     ["authorOptions"] = {
                     },
-                    ["AMModified"] = true,
-                    ["xOffset"] = 0,
+                    ["selfPoint"] = "CENTER",
                     ["borderOffset"] = 4,
                     ["AMOriginalUUID"] = "k5HKM7agB4S",
                     ["tocversion"] = 110007,
                     ["id"] = "[8] Chrome King Gallywix",
                     ["groupIcon"] = "6392621",
-                    ["alpha"] = 1,
+                    ["frameStrata"] = 1,
                     ["anchorFrameType"] = "SCREEN",
-                    ["borderInset"] = 1,
                     ["config"] = {
                     },
                     ["uid"] = "AM-k5HKM7agB4S",
-                    ["frameStrata"] = 1,
+                    ["borderInset"] = 1,
+                    ["alpha"] = 1,
                     ["conditions"] = {
                     },
                     ["information"] = {
                     },
-                    ["selfPoint"] = "CENTER",
+                    ["xOffset"] = 0,
                 },
             },
             ["v"] = 2000,
