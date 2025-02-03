@@ -22,6 +22,9 @@ local button = AM:GetModule('button')
 ---@class VersionChecker
 local versionChecker = AM:GetModule('version-checker')
 
+---@class EditBoxInput
+local editBox = AM:GetModule('edit-box-input')
+
 manager.waDisplays = {}
 
 manager.Init = function(self)
@@ -48,11 +51,20 @@ manager.Setup = function(self)
     local scrollFrame = scrollFrameConstruct:Create()
     scrollFrame:SetParent(container)
     scrollFrame:SetPoint('TOPLEFT', checkVersionsBtn, 'BOTTOMLEFT', 0, -10)
-    scrollFrame:SetPoint('BOTTOMRIGHT', -10, 10)
+    scrollFrame:SetPoint('BOTTOMRIGHT', -10, 40)
 
-    scrollFrame:UpdateScrollChild(container:GetWidth() - 20, container:GetHeight())
+    scrollFrame:UpdateScrollChild(container:GetWidth() - 20, container:GetHeight() - 100)
     container.scrollFrame = scrollFrame
     self:PopulateDisplays(scrollFrame.child)
+
+    local macroEditBox = editBox:Create({
+        label = 'Macro Text',
+        initial = '/run WeakAuras.ScanEvents("NS_PA_MACRO", true)'
+    })
+    macroEditBox:SetParent(container)
+    macroEditBox:SetHeight(30)
+    macroEditBox:SetPoint('TOPLEFT', container.scrollFrame, 'BOTTOMLEFT', 0, -20)
+    macroEditBox:SetPoint('TOPRIGHT', container.scrollFrame, 'BOTTOMRIGHT', 0, -20)
 end
 
 manager.Show = function(self)

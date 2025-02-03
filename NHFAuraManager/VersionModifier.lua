@@ -251,7 +251,6 @@ end
 versionModifier.Export = function(self, id)
     local data = WeakAuras.GetData(id)
     local shareData = wa:GetShareTable(id)
-
     local formatted = {
         name = data.id,
         uid = data.uid,
@@ -260,6 +259,5 @@ versionModifier.Export = function(self, id)
         isOptional = data.AMisOptional,
         import = shareData
     }
-
-    self.window.container.exportOutput:SetEditorValue(serializeTable(formatted))
+    self.window.container.exportOutput:SetEditorValue(serializeTable(formatted):gsub("|", "||"))
 end
