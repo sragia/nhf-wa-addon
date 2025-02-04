@@ -24,3 +24,4 @@ LSM:Register("sound", "|cffc334ebMove Boss - NHF|r", [[Interface\Addons\NHFAuraM
 LSM:Register("sound", "|cffc334ebBlue - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Blue.mp3]]);
 LSM:Register("sound", "|cffc334ebRed - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Red.mp3]]);
 LSM:Register("sound", "|cffc334ebBait - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Bait.mp3]]);
+LSM:Register("sound", "|cffc334ebFixated - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Fixated.mp3]]);
