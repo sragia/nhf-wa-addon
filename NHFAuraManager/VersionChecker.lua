@@ -69,7 +69,7 @@ end
 
 versionChecker.Init = function(self)
     self.window = windowConstruct:Create({
-        size = { (waStorage:GetCount() + 1) * AM.const.colWidth + 100, 600 },
+        size = { (waStorage:GetCount(true) + 1) * AM.const.colWidth + 100, 600 },
         title = 'Version Check'
     })
     self:Setup()
@@ -145,7 +145,7 @@ versionChecker.Populate = function(self)
             received = false,
             formattedName = formattedName
         }
-        for i = 1, waStorage:GetCount() do
+        for i = 1, waStorage:GetCount(true) do
             table.insert(d.cols, 'Loading...')
         end
         local row = checkerRow:Create(formattedName, d.cols);
@@ -153,7 +153,7 @@ versionChecker.Populate = function(self)
         table.insert(self.data.characters, d)
     end
 
-    local auras = waStorage:GetAurasForDisplay()
+    local auras = waStorage:GetAurasForChecker()
     local addonCols = {}
     for _, data in ipairs(auras) do
         table.insert(addonCols, data.semver)
@@ -184,7 +184,7 @@ end
 versionChecker.HandleNoResponse = function(self)
     for _, char in ipairs(self.data.characters) do
         if (not char.received) then
-            for i = 1, waStorage:GetCount() do
+            for i = 1, waStorage:GetCount(true) do
                 char.cols[i] = 'No Addon'
                 char.colStatuses[i] = 0
             end
