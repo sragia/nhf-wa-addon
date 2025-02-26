@@ -25,3 +25,5 @@ LSM:Register("sound", "|cffc334ebBlue - NHF|r", [[Interface\Addons\NHFAuraManage
 LSM:Register("sound", "|cffc334ebRed - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Red.mp3]]);
 LSM:Register("sound", "|cffc334ebBait - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Bait.mp3]]);
 LSM:Register("sound", "|cffc334ebFixated - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Fixated.mp3]]);
+LSM:Register("sound", "|cffc334ebSpread - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Spread.mp3]]);
+LSM:Register("sound", "|cffc334ebTargeted - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Targeted.mp3]]);
