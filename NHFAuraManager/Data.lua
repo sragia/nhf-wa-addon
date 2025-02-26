@@ -5,7 +5,7 @@ local AM = select(2, ...)
 local data = AM:GetModule('data')
 
 data.data = {
-    showMinimup = true
+    showMinimap = true
 }
 
 data.Init = function(self)
