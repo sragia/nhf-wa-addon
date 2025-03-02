@@ -33,3 +33,4 @@ VersionModifier.lua
 DuplicatesChecker.lua
 
 Cmd.lua
+BossModDisable.lua
