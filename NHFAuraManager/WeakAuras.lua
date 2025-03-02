@@ -93,7 +93,7 @@ WA.ModifyNeverLoad = function(self, data)
         if (wa.regionType ~= 'group' and wa.regionType ~= 'dynamicgroup') then
             local currentData = WeakAuras.GetData(wa.id)
             if (currentData) then
-                if (currentData.load['use_never'] ~= wa.load['use_never']) then
+                if (currentData.load['use_never'] ~= wa.load['use_never'] and not strfind('NHFEnable', wa.desc)) then
                     wa.load['use_never'] = currentData.load['use_never']
                 end
             end
