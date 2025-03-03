@@ -58,6 +58,25 @@ wa.GetAurasForChecker = function(self)
     return displayData
 end
 
+wa.GetOutOfDateAuras = function(self)
+    local lowerVersion = {}
+    local missing = {}
+    local hasOutOfDate = false
+    for _, d in ipairs(self.data) do
+        if (not d.isOptional or d.isOptional == '0') then
+            local localData = WeakAuras.GetData(d.name)
+            if (not localData) then
+                hasOutOfDate = true
+                table.insert(missing, d.name)
+            elseif (tonumber(d.version) > tonumber(localData.version)) then
+                hasOutOfDate = true
+                table.insert(lowerVersion, d.name)
+            end
+        end
+    end
+    return hasOutOfDate, lowerVersion, missing
+end
+
 wa.GetStoredVersion = function(self, uid)
     local _, data = FindInTableIf(self.data, function(d) return d.uid == uid end)
 
@@ -104,8 +123,8 @@ wa.data = {
         ["uid"] = "AM-sAklUAnWyJ9",
         ["name"] = "[NHF] Assignments",
         ["isOptional"] = "0",
-        ["semver"] = "0.0.12",
-        ["version"] = "12",
+        ["semver"] = "0.0.13",
+        ["version"] = "13",
         ["import"] = {
             ["d"] = {
                 ["controlledChildren"] = {

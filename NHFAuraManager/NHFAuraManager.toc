@@ -34,3 +34,4 @@ DuplicatesChecker.lua
 
 Cmd.lua
 BossModDisable.lua
+AnnoyancePopup.lua

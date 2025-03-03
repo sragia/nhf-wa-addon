@@ -107,11 +107,13 @@ WA.ModifyKeeperSettings = function(self, data)
                 end
             end
         end
-        if (currentData.xOffset ~= wa.xOffset) then
-            wa.xOffset = currentData.xOffset
-        end
-        if (currentData.yOffset ~= wa.yOffset) then
-            wa.yOffset = currentData.yOffset
+        if (currentData) then
+            if (currentData.xOffset ~= wa.xOffset) then
+                wa.xOffset = currentData.xOffset
+            end
+            if (currentData.yOffset ~= wa.yOffset) then
+                wa.yOffset = currentData.yOffset
+            end
         end
     end
     return data

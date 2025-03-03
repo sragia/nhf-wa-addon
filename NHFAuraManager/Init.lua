@@ -17,7 +17,8 @@ AM.const = {
                 buttonHover = [[Interface/Addons/NHFAuraManager/Textures/button-hover.png]],
             }
         },
-        logo = [[Interface/Addons/NHFAuraManager/Textures/logo.png]]
+        logo = [[Interface/Addons/NHFAuraManager/Textures/logo.png]],
+        annoyed = [[Interface/Addons/NHFAuraManager/Textures/annoyed.png]],
     },
     fonts = {
         DEFAULT = [[Interface/Addons/NHFAuraManager/Fonts/Poppins.ttf]]
