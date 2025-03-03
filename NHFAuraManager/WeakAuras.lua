@@ -122,6 +122,7 @@ WA.Import = function(self, data, callback)
         print('WeakAuras not installed/enabled')
         return
     end
+    AM.utils.printOut('Importing ' .. data.d.id)
     data = self:ModifyKeeperSettings(data)
     WeakAuras.Import(data, nil, callback)
 end

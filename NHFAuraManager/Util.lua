@@ -150,6 +150,9 @@ AM.utils = {
 
         return t
     end,
+    printOut = function(outputString)
+        print("|cffc334eb[NHF]|r " .. outputString)
+    end,
     addDebugTexture = function(frame)
         local tex = frame:CreateTexture()
         tex:SetTexture(AM.const.textures.frame.bg)
