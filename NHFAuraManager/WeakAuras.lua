@@ -102,7 +102,7 @@ WA.ModifyKeeperSettings = function(self, data)
         local currentData = WeakAuras.GetData(wa.id)
         if (wa.regionType ~= 'group' and wa.regionType ~= 'dynamicgroup') then
             if (currentData) then
-                if (not currentData.load['use_never'] and currentData.load['use_never'] ~= wa.load['use_never'] and not strfind('NHFEnable', wa.desc)) then
+                if (not currentData.load['use_never'] and currentData.load['use_never'] ~= wa.load['use_never'] and (not wa.desc or not strfind('NHFEnable', wa.desc))) then
                     wa.load['use_never'] = currentData.load['use_never']
                 end
             end
