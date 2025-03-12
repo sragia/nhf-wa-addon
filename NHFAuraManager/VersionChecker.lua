@@ -69,7 +69,7 @@ end
 
 versionChecker.Init = function(self)
     self.window = windowConstruct:Create({
-        size = { (waStorage:GetCount(true) + 1) * AM.const.colWidth + 100, 600 },
+        size = { (waStorage:GetCount(true) + 2) * AM.const.colWidth + 100, 600 },
         title = 'Version Check'
     })
     self:Setup()
@@ -209,7 +209,10 @@ versionChecker.HandleVersionCheckResponse = function(self, data, sender)
     end
 
     for _, d in ipairs(data) do
-        if (self.data.headerMap[d.name]) then
+        if (d.name == 'Addon') then
+            char.cols[self.data.headerMap[d.name]] = d.semver
+            char.colStatuses[self.data.headerMap[d.name]] = 1
+        elseif (self.data.headerMap[d.name]) then
             char.cols[self.data.headerMap[d.name]] = d.semver
             char.colStatuses[self.data.headerMap[d.name]] = waStorage:VersionCheck(d.uid, d.version)
         end

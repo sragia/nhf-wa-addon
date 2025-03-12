@@ -1,9 +1,10 @@
 ---@class AuraManager
 local AM = select(2, ...)
+local addonName = ...
 ---@class WeakAuraStorage
 local wa = AM:GetModule('wa-storage')
 
-wa.Init  = function(self)
+wa.Init = function(self)
 end
 
 --[[
@@ -41,7 +42,12 @@ end
 
 wa.GetAurasForChecker = function(self)
     if (not self.data) then return {} end
-    local displayData = {}
+    local displayData = { {
+        name = 'Addon',
+        semver = C_AddOns.GetAddOnMetadata(addonName, "version"),
+        uid = '',
+        version = ''
+    } }
 
     for _, data in ipairs(self.data) do
         if (not data.isOptional or data.isOptional == '0') then
