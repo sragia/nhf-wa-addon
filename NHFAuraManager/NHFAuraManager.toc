@@ -35,3 +35,5 @@ DuplicatesChecker.lua
 Cmd.lua
 BossModDisable.lua
 AnnoyancePopup.lua
+
+Storage/Auras/Auras.xml
