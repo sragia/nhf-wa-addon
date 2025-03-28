@@ -12,8 +12,8 @@ wa.data['assignments'].data = {
     ["uid"] = "AM-sAklUAnWyJ9",
     ["name"] = "[NHF] Assignments",
     ["isOptional"] = "0",
-    ["semver"] = "0.0.21",
-    ["version"] = "21",
+    ["semver"] = "0.0.22",
+    ["version"] = "22",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -79,8 +79,8 @@ wa.data['assignments'].data = {
                     ["easeType"] = "none",
                 },
             },
-            ["desc"] = "Up to date with NS 1.0.36",
-            ["version"] = "21",
+            ["desc"] = "Up to date with NS 1.0.37",
+            ["version"] = "22",
             ["subRegions"] = {
             },
             ["load"] = {
@@ -113,19 +113,19 @@ wa.data['assignments'].data = {
             ["regionType"] = "group",
             ["borderSize"] = 2,
             ["AMisOptional"] = "0",
-            ["yOffset"] = 0,
-            ["xOffset"] = 0,
+            ["yOffset"] = -2,
+            ["xOffset"] = -3.0001220703125,
             ["borderOffset"] = 4,
-            ["semver"] = "0.0.21",
+            ["semver"] = "0.0.22",
             ["AMOriginalUUID"] = "sAklUAnWyJ9",
             ["id"] = "[NHF] Assignments",
             ["AMModified"] = true,
             ["alpha"] = 1,
             ["anchorFrameType"] = "SCREEN",
-            ["uid"] = "AM-sAklUAnWyJ9",
-            ["borderInset"] = 1,
             ["config"] = {
             },
+            ["uid"] = "AM-sAklUAnWyJ9",
+            ["borderInset"] = 1,
             ["frameStrata"] = 1,
             ["conditions"] = {
             },
@@ -151,9 +151,9 @@ wa.data['assignments'].data = {
                 ["automaticWidth"] = "Auto",
                 ["actions"] = {
                     ["start"] = {
-                        ["custom"] = "",
                         ["do_message"] = false,
                         ["do_custom"] = false,
+                        ["custom"] = "",
                         ["do_sound"] = false,
                     },
                     ["init"] = {
@@ -688,57 +688,9 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["AMModified"] = true,
-                ["load"] = {
-                    ["use_size"] = false,
-                    ["use_never"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_encounterid"] = false,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["mythic"] = true,
-                        },
-                    },
-                    ["role"] = {
-                    },
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["ingroup"] = {
-                        ["single"] = "raid",
-                        ["multi"] = {
-                            ["raid"] = true,
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                            ["flexible"] = true,
-                            ["party"] = true,
-                            ["twenty"] = true,
-                            ["none"] = true,
-                        },
-                    },
-                },
+                ["displayText_format_p_format"] = "timed",
                 ["fontSize"] = 12,
                 ["source"] = "import",
-                ["displayText_format_p_time_legacy_floor"] = false,
-                ["lastUpdate"] = {
-                    ["when"] = "29/12/2023 03:58",
-                    ["who"] = "Relowindi",
-                },
-                ["xOffset"] = 0,
-                ["AMOriginalUUID"] = "W)RX6HcdFVM",
-                ["yOffset"] = 0,
-                ["regionType"] = "text",
-                ["displayText_format_p_format"] = "timed",
                 ["authorOptions"] = {
                     [1] = {
                         ["desc"] =
@@ -848,6 +800,16 @@ wa.data['assignments'].data = {
                         ["size"] = 10,
                     },
                 },
+                ["lastUpdate"] = {
+                    ["when"] = "29/12/2023 03:58",
+                    ["who"] = "Relowindi",
+                },
+                ["shadowXOffset"] = 1,
+                ["AMOriginalUUID"] = "W)RX6HcdFVM",
+                ["parent"] = "[NHF] Assignments",
+                ["regionType"] = "text",
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["xOffset"] = 0,
                 ["uid"] = "AM-W)RX6HcdFVM",
                 ["conditions"] = {
                 },
@@ -880,7 +842,7 @@ wa.data['assignments'].data = {
                 },
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["preferToUpdate"] = false,
+                ["url"] = "https://wago.io/NorthernSky/49",
                 ["config"] = {
                     ["TTS"] = 2,
                     ["debug"] = false,
@@ -890,8 +852,46 @@ wa.data['assignments'].data = {
                     },
                     ["blocknicknames"] = false,
                 },
-                ["url"] = "https://wago.io/NorthernSky/49",
-                ["shadowXOffset"] = 1,
+                ["yOffset"] = 0,
+                ["load"] = {
+                    ["use_size"] = false,
+                    ["use_never"] = false,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_encounterid"] = false,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["mythic"] = true,
+                        },
+                    },
+                    ["role"] = {
+                    },
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["ingroup"] = {
+                        ["single"] = "raid",
+                        ["multi"] = {
+                            ["raid"] = true,
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                            ["flexible"] = true,
+                            ["party"] = true,
+                            ["twenty"] = true,
+                            ["none"] = true,
+                        },
+                    },
+                },
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
@@ -904,7 +904,7 @@ wa.data['assignments'].data = {
                     ["forceEvents"] = false,
                     ["debugLog"] = false,
                 },
-                ["parent"] = "[NHF] Assignments",
+                ["preferToUpdate"] = false,
             },
             [2] = {
                 ["controlledChildren"] = {
@@ -1016,10 +1016,10 @@ wa.data['assignments'].data = {
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
                 ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-lou.png",
-                ["uid"] = "AM-0MNhls18WeY",
                 ["config"] = {
                 },
                 ["borderInset"] = 1,
+                ["uid"] = "AM-0MNhls18WeY",
                 ["conditions"] = {
                 },
                 ["information"] = {
@@ -1135,10 +1135,10 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["borderInset"] = 1,
-                ["uid"] = "AM-AZX0Crl8aNF",
                 ["config"] = {
                 },
+                ["borderInset"] = 1,
+                ["uid"] = "AM-AZX0Crl8aNF",
                 ["xOffset"] = 0,
                 ["AMOriginalUUID"] = "AZX0Crl8aNF",
                 ["information"] = {
@@ -1171,9 +1171,9 @@ wa.data['assignments'].data = {
                  ",
                         ["do_sound"] = false,
                         ["message_type"] = "SAY",
+                        ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AcousticGuitar.ogg",
                         ["do_message"] = false,
                         ["do_custom"] = false,
-                        ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AcousticGuitar.ogg",
                     },
                     ["finish"] = {
                     },
@@ -1190,6 +1190,8 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
+                            ["spellIds"] = {
+                            },
                             ["custom"] = "function(e, ...)\
                      local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellID = ... -- full CLEU\
                      if spellID == 473531 and WA_GetUnitDebuff(\"player\", 473507) then\
@@ -1204,8 +1206,6 @@ wa.data['assignments'].data = {
                  \
                  ",
                             ["events"] = "CLEU:SPELL_CAST_SUCCESS",
-                            ["spellIds"] = {
-                            },
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -1224,7 +1224,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = true,
                 ["selfPoint"] = "CENTER",
                 ["displayText_format_p_format"] = "Number",
-                ["font"] = "Expressway",
+                ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 7,
                 ["subRegions"] = {
                     [1] = {
@@ -1285,20 +1285,20 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
-                ["conditions"] = {
-                },
+                ["fixedWidth"] = 200,
                 ["fontSize"] = 60,
                 ["source"] = "import",
                 ["authorOptions"] = {
                 },
                 ["shadowXOffset"] = 1,
-                ["displayText_format_p_round_type"] = "ceil",
-                ["fixedWidth"] = 200,
+                ["font"] = "Expressway",
+                ["wordWrap"] = "WordWrap",
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
                 ["uid"] = "AM-3VyiPKbJrN5",
-                ["wordWrap"] = "WordWrap",
                 ["internalVersion"] = 83,
+                ["conditions"] = {
+                },
                 ["frameStrata"] = 1,
                 ["displayText_format_p_time_precision"] = 1,
                 ["automaticWidth"] = "Auto",
@@ -1456,10 +1456,10 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["borderInset"] = 1,
-                ["uid"] = "AM-EQe3A0yPXrf",
                 ["config"] = {
                 },
+                ["borderInset"] = 1,
+                ["uid"] = "AM-EQe3A0yPXrf",
                 ["xOffset"] = 0,
                 ["AMOriginalUUID"] = "EQe3A0yPXrf",
                 ["information"] = {
@@ -1608,12 +1608,12 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
-                ["gridType"] = "RD",
+                ["uid"] = "AM-Z)NPeqrqEhD",
                 ["borderSize"] = 2,
                 ["limit"] = 6,
+                ["xOffset"] = 0,
                 ["borderInset"] = 1,
                 ["borderEdge"] = "Square Full White",
-                ["uid"] = "AM-Z)NPeqrqEhD",
                 ["anchorFrameParent"] = false,
                 ["sort"] = "none",
                 ["groupIcon"] = 133014,
@@ -1652,7 +1652,7 @@ wa.data['assignments'].data = {
                 ["information"] = {
                     ["forceEvents"] = true,
                 },
-                ["xOffset"] = 0,
+                ["gridType"] = "RD",
             },
             [7] = {
                 ["sparkWidth"] = 10,
@@ -1761,12 +1761,10 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
+                            ["events"] = "TRIGGER:2 NSAPI_ENCOUNTER_START",
                             ["names"] = {
                             },
                             ["check"] = "event",
-                            ["events"] = "TRIGGER:2 NSAPI_ENCOUNTER_START",
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
            aura_env.MRT()\
@@ -1801,6 +1799,8 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2322,12 +2322,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["names"] = {
                             },
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "TRIGGER:2 NSAPI_ENCOUNTER_START",
-                            ["subeventPrefix"] = "SPELL",
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
            aura_env.MRT()\
@@ -2361,6 +2355,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
+                            ["subeventPrefix"] = "SPELL",
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
+                            ["events"] = "TRIGGER:2 NSAPI_ENCOUNTER_START",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2807,11 +2807,11 @@ wa.data['assignments'].data = {
                 ["url"] = "https://wago.io/NSUndermine/12",
                 ["actions"] = {
                     ["start"] = {
+                        ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_jedi1.ogg",
+                        ["do_custom"] = false,
                         ["custom"] = "\
           \
           ",
-                        ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_jedi1.ogg",
-                        ["do_custom"] = false,
                         ["do_sound"] = false,
                     },
                     ["finish"] = {
@@ -2830,6 +2830,7 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["names"] = {
                             },
+                            ["events"] = "NS_AMPLIFIER_ALERT",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local i = 1\
@@ -2857,12 +2858,11 @@ wa.data['assignments'].data = {
            return true\
        end\
    end",
-                            ["spellIds"] = {
-                            },
                             ["custom_type"] = "stateupdate",
                             ["check"] = "event",
                             ["subeventPrefix"] = "SPELL",
-                            ["events"] = "NS_AMPLIFIER_ALERT",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2890,15 +2890,27 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_format"] = "Number",
                 ["internalVersion"] = 83,
                 ["wordWrap"] = "WordWrap",
-                ["displayText_format_p_time_mod_rate"] = true,
-                ["displayText_format_p_round_type"] = "ceil",
+                ["preferToUpdate"] = true,
+                ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 12,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["preferToUpdate"] = true,
+                ["displayText_format_p_round_type"] = "ceil",
+                ["AMModified"] = true,
+                ["automaticWidth"] = "Auto",
+                ["fixedWidth"] = 200,
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["AMOriginalUUID"] = "HZbFJjPd(xH",
+                ["shadowXOffset"] = 1,
+                ["displayText"] = "%text",
+                ["selfPoint"] = "BOTTOM",
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["regionType"] = "text",
+                ["uid"] = "AM-HZbFJjPd(xH",
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["spec_position"] = {
@@ -2952,19 +2964,7 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["font"] = "PT Sans Narrow Bold",
-                ["fixedWidth"] = 200,
-                ["fontSize"] = 50,
-                ["source"] = "import",
-                ["automaticWidth"] = "Auto",
-                ["shadowXOffset"] = 1,
-                ["displayText"] = "%text",
-                ["AMModified"] = true,
-                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
-                ["regionType"] = "text",
-                ["uid"] = "AM-HZbFJjPd(xH",
-                ["selfPoint"] = "BOTTOM",
-                ["AMOriginalUUID"] = "HZbFJjPd(xH",
+                ["displayText_format_p_time_mod_rate"] = true,
                 ["frameStrata"] = 1,
                 ["anchorFrameParent"] = false,
                 ["animation"] = {
@@ -3120,12 +3120,12 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "SvQNgcN5Cnz",
                 ["tocversion"] = 110007,
                 ["id"] = "[4] Stix Bunkjunker Assignments",
-                ["borderInset"] = 1,
+                ["uid"] = "AM-SvQNgcN5Cnz",
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["config"] = {
                 },
-                ["uid"] = "AM-SvQNgcN5Cnz",
                 ["authorOptions"] = {
                 },
                 ["frameStrata"] = 1,
@@ -3250,10 +3250,10 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-47LJZ7s2fqV",
                 ["config"] = {
                 },
                 ["borderInset"] = 1,
-                ["uid"] = "AM-47LJZ7s2fqV",
                 ["xOffset"] = 0,
                 ["AMOriginalUUID"] = "47LJZ7s2fqV",
                 ["information"] = {
@@ -3398,12 +3398,12 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
-                ["borderEdge"] = "Square Full White",
+                ["borderInset"] = 1,
                 ["borderSize"] = 2,
                 ["limit"] = 6,
+                ["xOffset"] = 0,
                 ["uid"] = "AM-y8Habt)aHmu",
                 ["gridType"] = "RD",
-                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["regionType"] = "dynamicgroup",
                 ["anchorPerUnit"] = "CUSTOM",
@@ -3442,7 +3442,7 @@ wa.data['assignments'].data = {
                 ["information"] = {
                     ["forceEvents"] = true,
                 },
-                ["xOffset"] = 0,
+                ["borderEdge"] = "Square Full White",
             },
             [13] = {
                 ["sparkWidth"] = 10,
@@ -4145,9 +4145,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT CLEU:SPELL_AURA_APPLIED",
                             ["custom"] = "function(e, ...)\
        \
        if e == \"NSAPI_ENCOUNTER_START\" then\
@@ -4217,6 +4214,9 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT CLEU:SPELL_AURA_APPLIED",
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -4240,47 +4240,17 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["AMModified"] = true,
-                ["automaticWidth"] = "Auto",
+                ["internalVersion"] = 83,
                 ["fontSize"] = 12,
                 ["source"] = "import",
                 ["shadowXOffset"] = 1,
-                ["xOffset"] = 0,
-                ["load"] = {
-                    ["use_zoneIds"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["encounterid"] = "3012",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["mythic"] = true,
-                        },
-                    },
-                    ["use_never"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["conditions"] = {
-                },
-                ["regionType"] = "text",
-                ["internalVersion"] = 83,
-                ["fixedWidth"] = 200,
                 ["parent"] = "Rolling Rubbish Assign",
+                ["displayText_format_p_format"] = "timed",
+                ["fixedWidth"] = 200,
+                ["regionType"] = "text",
+                ["wordWrap"] = "WordWrap",
+                ["automaticWidth"] = "Auto",
+                ["AMOriginalUUID"] = "weoUR(BrmDs",
                 ["config"] = {
                     ["flip"] = false,
                 },
@@ -4313,25 +4283,55 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.25",
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["wordWrap"] = "WordWrap",
+                ["load"] = {
+                    ["use_zoneIds"] = false,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["encounterid"] = "3012",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["mythic"] = true,
+                        },
+                    },
+                    ["use_never"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_ignoreNameRealm"] = false,
+                    ["use_difficulty"] = true,
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
                 ["uid"] = "AM-weoUR(BrmDs",
-                ["displayText_format_p_format"] = "timed",
-                ["preferToUpdate"] = false,
-                ["shadowColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
-                ["AMOriginalUUID"] = "weoUR(BrmDs",
-                ["information"] = {
-                },
+                ["xOffset"] = 0,
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
+                ["shadowColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["preferToUpdate"] = false,
             },
             [15] = {
                 ["controlledChildren"] = {
@@ -4446,10 +4446,10 @@ wa.data['assignments'].data = {
                 },
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-HN6vPhON9FN",
                 ["config"] = {
                 },
                 ["borderInset"] = 1,
-                ["uid"] = "AM-HN6vPhON9FN",
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "HN6vPhON9FN",
                 ["information"] = {
@@ -4486,9 +4486,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local num = math.random(1, 4)\
@@ -4529,6 +4526,9 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -4759,9 +4759,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local num = math.random(1, 4)\
@@ -4802,6 +4799,9 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -5040,9 +5040,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local num = math.random(1, 4)\
@@ -5083,6 +5080,9 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -5317,9 +5317,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local num = math.random(1, 4)\
@@ -5360,6 +5357,9 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NS_ROLLING_RUBBSIH",
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -5833,7 +5833,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_marker_format"] = "none",
                 ["displayText_format_num_format"] = "none",
                 ["displayText_format_name_format"] = "none",
-                ["displayText_format_p_time_mod_rate"] = true,
+                ["yOffset"] = 380,
                 ["font"] = "Fira Mono Medium",
                 ["version"] = 26,
                 ["subRegions"] = {
@@ -5841,69 +5841,12 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["yOffset"] = 380,
-                ["load"] = {
-                    ["use_zoneIds"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["encounterid"] = "3012",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["mythic"] = true,
-                            ["heroic"] = true,
-                        },
-                    },
-                    ["use_never"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
                 ["displayText"] = "%marker%marker%marker",
+                ["AMModified"] = true,
+                ["wordWrap"] = "WordWrap",
                 ["fixedWidth"] = 200,
                 ["fontSize"] = 100,
                 ["source"] = "import",
-                ["wordWrap"] = "WordWrap",
-                ["shadowXOffset"] = 1,
-                ["AMModified"] = true,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["config"] = {
-                },
-                ["regionType"] = "text",
-                ["automaticWidth"] = "Auto",
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -5978,6 +5921,63 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
+                ["shadowXOffset"] = 1,
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["load"] = {
+                    ["use_zoneIds"] = false,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["encounterid"] = "3012",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["mythic"] = true,
+                            ["heroic"] = true,
+                        },
+                    },
+                    ["use_never"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_ignoreNameRealm"] = false,
+                    ["use_difficulty"] = true,
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["config"] = {
+                },
+                ["regionType"] = "text",
+                ["automaticWidth"] = "Auto",
+                ["displayText_format_p_time_mod_rate"] = true,
                 ["frameStrata"] = 1,
                 ["displayText_format_marker_round_type"] = "floor",
                 ["displayText_format_p_time_precision"] = 1,
@@ -6121,10 +6121,10 @@ wa.data['assignments'].data = {
                 ["alpha"] = 1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-NSjiPGzR2y3",
                 ["borderInset"] = 1,
                 ["config"] = {
                 },
-                ["uid"] = "AM-NSjiPGzR2y3",
                 ["xOffset"] = 0,
                 ["AMOriginalUUID"] = "NSjiPGzR2y3",
                 ["information"] = {
@@ -6257,37 +6257,6 @@ wa.data['assignments'].data = {
                     [4] = 0.5,
                 },
                 ["source"] = "import",
-                ["sort"] = "custom",
-                ["centerType"] = "LR",
-                ["border"] = false,
-                ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
-                ["config"] = {
-                },
-                ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["stagger"] = 0,
-                ["anchorPoint"] = "BOTTOM",
-                ["anchorPerUnit"] = "CUSTOM",
-                ["anchorFrameParent"] = false,
-                ["hybridPosition"] = "hybridLast",
-                ["borderEdge"] = "Square Full White",
-                ["xOffset"] = -45.864704423513,
-                ["semver"] = "1.0.36",
-                ["borderInset"] = 1,
-                ["id"] = "Foot-Blasters List - disabled by default",
-                ["groupIcon"] = 4624638,
-                ["frameStrata"] = 4,
-                ["anchorFrameType"] = "SELECTFRAME",
-                ["gridWidth"] = 10,
-                ["regionType"] = "dynamicgroup",
-                ["space"] = -1,
-                ["internalVersion"] = 83,
-                ["conditions"] = {
-                },
-                ["information"] = {
-                    ["forceEvents"] = true,
-                    ["debugLog"] = true,
-                },
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -6308,6 +6277,37 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
+                ["stagger"] = 0,
+                ["borderSize"] = 2,
+                ["limit"] = 6,
+                ["sort"] = "custom",
+                ["config"] = {
+                },
+                ["anchorPerUnit"] = "CUSTOM",
+                ["anchorFrameParent"] = false,
+                ["hybridPosition"] = "hybridLast",
+                ["borderEdge"] = "Square Full White",
+                ["xOffset"] = -45.864704423513,
+                ["semver"] = "1.0.36",
+                ["groupIcon"] = 4624638,
+                ["id"] = "Foot-Blasters List - disabled by default",
+                ["frameStrata"] = 4,
+                ["gridWidth"] = 10,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["borderInset"] = 1,
+                ["regionType"] = "dynamicgroup",
+                ["space"] = -1,
+                ["internalVersion"] = 83,
+                ["conditions"] = {
+                },
+                ["information"] = {
+                    ["forceEvents"] = true,
+                    ["debugLog"] = true,
+                },
+                ["anchorPoint"] = "BOTTOM",
             },
             [24] = {
                 ["sparkWidth"] = 10,
@@ -6477,11 +6477,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        \
        if e == \"OPTIONS\" then\
@@ -6574,7 +6569,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED NSAPI_ENCOUNTER_START",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -6624,7 +6624,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["AMOriginalUUID"] = "C2TiWLB2)U2",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -6725,10 +6724,10 @@ wa.data['assignments'].data = {
                         ["text_text_format_2.p_round_type"] = "ceil",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_1.p_time_legacy_floor"] = false,
+                        ["text_text_format_c2_format"] = "none",
+                        ["text_text_format_p_format"] = "Number",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_justify"] = "CENTER",
-                        ["text_text_format_p_format"] = "Number",
-                        ["text_text_format_c2_format"] = "none",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_text_format_c1_format"] = "none",
@@ -6772,7 +6771,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["text_fontType"] = "OUTLINE",
+                        ["anchorYOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 5,
                         ["text_color"] = {
@@ -6782,9 +6781,9 @@ wa.data['assignments'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["anchorYOffset"] = 0,
-                        ["text_anchorYOffset"] = 0,
                         ["text_text_format_c2_format"] = "none",
+                        ["text_anchorYOffset"] = 0,
+                        ["text_fontType"] = "OUTLINE",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
                         ["text_text_format_c1_format"] = "none",
@@ -6836,21 +6835,20 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
+                ["AMOriginalUUID"] = "C2TiWLB2)U2",
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
                 ["information"] = {
                     ["forceEvents"] = false,
                     ["debugLog"] = false,
                 },
+                ["preferToUpdate"] = false,
                 ["barColor2"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["anchorFrameParent"] = false,
                 ["icon"] = true,
-                ["anchorFrameType"] = "SCREEN",
                 ["zoom"] = 0.1,
                 ["color"] = {
                     [1] = 1,
@@ -6858,8 +6856,32 @@ wa.data['assignments'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["icon_side"] = "LEFT",
                 ["cooldownTextDisabled"] = false,
+                ["anchorFrameType"] = "SCREEN",
+                ["icon_side"] = "LEFT",
+                ["useCooldownModRate"] = true,
+                ["anchorFrameParent"] = false,
+                ["sparkHeight"] = 30,
+                ["id"] = "Foot Blasters List",
+                ["overlaysTexture"] = {
+                    [1] = "Clean",
+                    [2] = "Clean",
+                },
+                ["overlays"] = {
+                    [1] = {
+                        [1] = 0,
+                        [2] = 0.50196081399918,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    [2] = {
+                        [1] = 1,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 1,
+                    },
+                },
+                ["semver"] = "1.0.36",
                 ["customText"] = "function()\
        local u = aura_env.state and aura_env.state.unit\
        if WeakAuras.IsOptionsOpen() then\
@@ -6890,28 +6912,6 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                ["sparkHeight"] = 30,
-                ["useCooldownModRate"] = true,
-                ["overlaysTexture"] = {
-                    [1] = "Clean",
-                    [2] = "Clean",
-                },
-                ["overlays"] = {
-                    [1] = {
-                        [1] = 0,
-                        [2] = 0.50196081399918,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    [2] = {
-                        [1] = 1,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                },
-                ["semver"] = "1.0.36",
-                ["id"] = "Foot Blasters List",
                 ["sparkHidden"] = "NEVER",
                 ["authorOptions"] = {
                 },
@@ -7109,26 +7109,26 @@ wa.data['assignments'].data = {
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
                 ["AMModified"] = true,
-                ["AMOriginalUUID"] = "0adImr19Jp4",
-                ["uid"] = "AM-0adImr19Jp4",
+                ["parent"] = "[5] Sprocketmonger Lockenstock ",
                 ["groupIcon"] = "4624638",
+                ["AMOriginalUUID"] = "0adImr19Jp4",
                 ["borderOffset"] = 4,
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Foot-Blasters Assign/Map",
-                ["selfPoint"] = "CENTER",
+                ["xOffset"] = 0,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = 0,
+                ["borderInset"] = 1,
+                ["uid"] = "AM-0adImr19Jp4",
                 ["config"] = {
                 },
-                ["borderInset"] = 1,
-                ["parent"] = "[5] Sprocketmonger Lockenstock ",
+                ["frameStrata"] = 1,
                 ["conditions"] = {
                 },
                 ["information"] = {
                 },
-                ["frameStrata"] = 1,
+                ["selfPoint"] = "CENTER",
             },
             [26] = {
                 ["outline"] = "OUTLINE",
@@ -7710,11 +7710,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(e, ...)\
        \
        if e == \"NSAPI_ENCOUNTER_START\" then\
@@ -7934,9 +7929,14 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] =
                             "NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT UNIT_SPELLCAST_SUCCEEDED:boss1 CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE ENCOUNTER_END UNIT_SPELLCAST_START:boss1\
    ",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -7947,8 +7947,6 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "1jE7v8WlDwc",
                 ["font"] = "Friz Quadrata TT",
                 ["version"] = 37,
                 ["subRegions"] = {
@@ -7956,6 +7954,22 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
+                ["AMModified"] = true,
+                ["displayText_format_p_format"] = "timed",
+                ["fontSize"] = 12,
+                ["source"] = "import",
+                ["shadowXOffset"] = 1,
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["automaticWidth"] = "Auto",
+                ["conditions"] = {
+                },
+                ["regionType"] = "text",
+                ["xOffset"] = 0,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -7986,24 +8000,9 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["fontSize"] = 12,
-                ["source"] = "import",
+                ["fixedWidth"] = 200,
                 ["uid"] = "AM-1jE7v8WlDwc",
-                ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = false,
-                ["regionType"] = "text",
-                ["parent"] = "Foot-Blasters Assign/Map",
-                ["displayText_format_p_format"] = "timed",
-                ["conditions"] = {
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
                 ["displayText_format_p_time_precision"] = 1,
-                ["justify"] = "LEFT",
                 ["displayText"] = "",
                 ["animation"] = {
                     ["start"] = {
@@ -8025,48 +8024,41 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
+                ["justify"] = "LEFT",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Foot Blasters Assign Handler",
                 ["shadowYOffset"] = -1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = 0,
+                ["parent"] = "Foot-Blasters Assign/Map",
                 ["config"] = {
                 },
-                ["automaticWidth"] = "Auto",
-                ["wordWrap"] = "WordWrap",
+                ["preferToUpdate"] = false,
+                ["internalVersion"] = 83,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "1jE7v8WlDwc",
                 ["information"] = {
                     ["debugLog"] = false,
                 },
-                ["internalVersion"] = 83,
+                ["wordWrap"] = "WordWrap",
             },
             [27] = {
-                ["grow"] = "DOWN",
+                ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Vulnerable Bar 2",
                     [2] = "Foot-Blasters List of Triggers 2",
                 },
-                ["borderBackdrop"] = "Blizzard Tooltip",
-                ["wagoID"] = "bCjQjZ9yK",
                 ["authorOptions"] = {
                 },
                 ["preferToUpdate"] = false,
-                ["AMModified"] = true,
                 ["yOffset"] = 133.83462324799,
-                ["sortHybridTable"] = {
-                    ["Vulnerable Bar 2"] = false,
-                    ["Foot-Blasters List of Triggers 2"] = false,
-                },
-                ["arcLength"] = 360,
-                ["parent"] = "Foot-Blasters Assign/Map",
+                ["gridType"] = "RD",
                 ["borderColor"] = {
                     [1] = 0,
                     [2] = 0,
@@ -8083,6 +8075,47 @@ wa.data['assignments'].data = {
                     ["finish"] = {
                     },
                 },
+                ["selfPoint"] = "TOPLEFT",
+                ["rotation"] = 0,
+                ["load"] = {
+                    ["use_never"] = true,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["animate"] = false,
+                ["customGrow"] = "",
+                ["scale"] = 1,
+                ["stepAngle"] = 15,
+                ["constantFactor"] = "RADIUS",
+                ["borderOffset"] = 4,
+                ["tocversion"] = 110100,
+                ["alpha"] = 1,
+                ["config"] = {
+                },
+                ["AMOriginalUUID"] = "ZP0aNXDsV3z",
+                ["grow"] = "DOWN",
+                ["borderBackdrop"] = "Blizzard Tooltip",
+                ["wagoID"] = "bCjQjZ9yK",
+                ["parent"] = "Foot-Blasters Assign/Map",
+                ["sortHybridTable"] = {
+                    ["Vulnerable Bar 2"] = false,
+                    ["Foot-Blasters List of Triggers 2"] = false,
+                },
+                ["fullCircle"] = true,
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
@@ -8103,55 +8136,6 @@ wa.data['assignments'].data = {
                 },
                 ["columnSpace"] = 1,
                 ["radius"] = 200,
-                ["AMOriginalUUID"] = "ZP0aNXDsV3z",
-                ["useLimit"] = false,
-                ["align"] = "LEFT",
-                ["growOn"] = "changed",
-                ["groupIcon"] = "4624638",
-                ["gridType"] = "RD",
-                ["rotation"] = 0,
-                ["fullCircle"] = true,
-                ["version"] = 37,
-                ["subRegions"] = {
-                },
-                ["rowSpace"] = 1,
-                ["internalVersion"] = 83,
-                ["load"] = {
-                    ["use_never"] = true,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["xOffset"] = 100.00018823078,
-                ["backdropColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 0.5,
-                },
-                ["selfPoint"] = "TOPLEFT",
-                ["animate"] = false,
-                ["customGrow"] = "",
-                ["scale"] = 1,
-                ["centerType"] = "LR",
-                ["border"] = false,
-                ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
-                ["stepAngle"] = 15,
-                ["borderSize"] = 2,
-                ["sort"] = "none",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -8172,29 +8156,45 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["stagger"] = 0,
-                ["anchorPoint"] = "CENTER",
-                ["anchorFrameParent"] = false,
-                ["constantFactor"] = "RADIUS",
-                ["frameStrata"] = 1,
-                ["borderOffset"] = 4,
-                ["semver"] = "1.0.36",
-                ["tocversion"] = 110100,
-                ["id"] = "Foot-Blasters Trigger List",
-                ["borderEdge"] = "Square Full White",
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SELECTFRAME",
-                ["regionType"] = "dynamicgroup",
-                ["config"] = {
+                ["align"] = "LEFT",
+                ["growOn"] = "changed",
+                ["version"] = 37,
+                ["subRegions"] = {
                 },
+                ["AMModified"] = true,
+                ["backdropColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.5,
+                },
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["borderSize"] = 2,
+                ["sort"] = "none",
                 ["limit"] = 5,
+                ["xOffset"] = 100.00018823078,
+                ["borderInset"] = 1,
+                ["anchorFrameParent"] = false,
+                ["groupIcon"] = "4624638",
+                ["anchorPoint"] = "CENTER",
+                ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
+                ["semver"] = "1.0.36",
+                ["rowSpace"] = 1,
+                ["id"] = "Foot-Blasters Trigger List",
+                ["internalVersion"] = 83,
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["stagger"] = 0,
                 ["gridWidth"] = 5,
-                ["uid"] = "AM-ZP0aNXDsV3z",
+                ["useLimit"] = false,
+                ["regionType"] = "dynamicgroup",
                 ["conditions"] = {
                 },
                 ["information"] = {
                 },
-                ["borderInset"] = 1,
+                ["uid"] = "AM-ZP0aNXDsV3z",
             },
             [28] = {
                 ["sparkWidth"] = 10,
@@ -8371,7 +8371,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["AMOriginalUUID"] = "qx7(ULsMkzU",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -8527,21 +8526,20 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
+                ["AMOriginalUUID"] = "qx7(ULsMkzU",
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
                 ["information"] = {
                     ["forceEvents"] = false,
                     ["debugLog"] = false,
                 },
+                ["preferToUpdate"] = false,
                 ["barColor2"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["anchorFrameParent"] = false,
                 ["icon"] = true,
-                ["anchorFrameType"] = "SCREEN",
                 ["zoom"] = 0.1,
                 ["color"] = {
                     [1] = 1,
@@ -8549,11 +8547,13 @@ wa.data['assignments'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["icon_side"] = "LEFT",
                 ["cooldownTextDisabled"] = false,
-                ["customText"] = "",
-                ["sparkHeight"] = 30,
+                ["anchorFrameType"] = "SCREEN",
+                ["icon_side"] = "LEFT",
                 ["useCooldownModRate"] = true,
+                ["anchorFrameParent"] = false,
+                ["sparkHeight"] = 30,
+                ["id"] = "Vulnerable Bar 2",
                 ["overlaysTexture"] = {
                     [1] = "Clean",
                     [2] = "Clean",
@@ -8573,7 +8573,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["semver"] = "1.0.36",
-                ["id"] = "Vulnerable Bar 2",
+                ["customText"] = "",
                 ["sparkHidden"] = "NEVER",
                 ["authorOptions"] = {
                 },
@@ -8616,8 +8616,6 @@ wa.data['assignments'].data = {
                 ["displayText"] = "%mark %name",
                 ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "TOP",
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "ByJQL5ylRFE",
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
                 ["url"] = "https://wago.io/NSUndermine/37",
@@ -8742,6 +8740,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_p_time_precision"] = 1,
+                ["AMModified"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["use_ignoreNameRealm"] = false,
@@ -8777,6 +8776,7 @@ wa.data['assignments'].data = {
                 ["preferToUpdate"] = false,
                 ["fontSize"] = 34,
                 ["source"] = "import",
+                ["AMOriginalUUID"] = "ByJQL5ylRFE",
                 ["shadowXOffset"] = 1,
                 ["animation"] = {
                     ["start"] = {
@@ -8826,8 +8826,8 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["automaticWidth"] = "Auto",
                 ["uid"] = "AM-ByJQL5ylRFE",
+                ["automaticWidth"] = "Auto",
                 ["internalVersion"] = 83,
                 ["anchorFrameParent"] = false,
                 ["yOffset"] = 0,
@@ -8950,9 +8950,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["AMModified"] = true,
                 ["displayText_format_marker_format"] = "none",
-                ["AMOriginalUUID"] = "cQSc1sCTTmo",
                 ["displayText_format_name_format"] = "none",
                 ["font"] = "Expressway",
                 ["version"] = 37,
@@ -8961,6 +8959,10 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
+                ["AMModified"] = true,
+                ["anchorFrameParent"] = false,
+                ["fontSize"] = 40,
+                ["source"] = "import",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -8991,23 +8993,22 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["selfPoint"] = "BOTTOM",
-                ["fontSize"] = 40,
-                ["source"] = "import",
                 ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["AMOriginalUUID"] = "cQSc1sCTTmo",
+                ["conditions"] = {
+                },
+                ["regionType"] = "text",
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["regionType"] = "text",
                 ["displayText_format_p_format"] = "timed",
-                ["fixedWidth"] = 200,
-                ["displayText_format_p_time_legacy_floor"] = false,
                 ["uid"] = "AM-cQSc1sCTTmo",
-                ["anchorFrameParent"] = false,
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["displayText_format_p_time_precision"] = 1,
                 ["displayText"] = " ",
                 ["parent"] = "Foot-Blasters Assign/Map",
                 ["justify"] = "LEFT",
@@ -9021,15 +9022,14 @@ wa.data['assignments'].data = {
                 ["config"] = {
                 },
                 ["automaticWidth"] = "Auto",
-                ["displayText_format_p_time_precision"] = 1,
+                ["preferToUpdate"] = false,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["conditions"] = {
-                },
+                ["fixedWidth"] = 200,
                 ["information"] = {
                 },
                 ["wordWrap"] = "WordWrap",
@@ -9125,9 +9125,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
-                ["AMModified"] = true,
                 ["wordWrap"] = "WordWrap",
-                ["AMOriginalUUID"] = "GZvyLrPFJb)",
                 ["displayText_format_marker_format"] = "none",
                 ["displayText_format_name_format"] = "none",
                 ["font"] = "Expressway",
@@ -9137,8 +9135,8 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["config"] = {
-                },
+                ["anchorFrameParent"] = false,
+                ["AMModified"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -9171,14 +9169,10 @@ wa.data['assignments'].data = {
                 },
                 ["fontSize"] = 40,
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
+                ["displayText_format_p_format"] = "timed",
                 ["shadowXOffset"] = 1,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
+                ["AMOriginalUUID"] = "GZvyLrPFJb)",
+                ["preferToUpdate"] = false,
                 ["automaticWidth"] = "Auto",
                 ["regionType"] = "text",
                 ["conditions"] = {
@@ -9221,11 +9215,11 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
+                ["config"] = {
+                },
                 ["selfPoint"] = "CENTER",
                 ["internalVersion"] = 83,
-                ["authorOptions"] = {
-                },
-                ["anchorFrameParent"] = false,
+                ["displayText_format_p_time_precision"] = 1,
                 ["parent"] = "Foot-Blasters Assign/Map",
                 ["shadowYOffset"] = -1,
                 ["justify"] = "LEFT",
@@ -9257,7 +9251,12 @@ wa.data['assignments'].data = {
                 ["displayText_format_pos_format"] = "none",
                 ["uid"] = "AM-GZvyLrPFJb)",
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["displayText_format_p_time_precision"] = 1,
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
@@ -9267,7 +9266,8 @@ wa.data['assignments'].data = {
                 ["fixedWidth"] = 200,
                 ["information"] = {
                 },
-                ["displayText_format_p_format"] = "timed",
+                ["authorOptions"] = {
+                },
             },
             [32] = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
@@ -9527,11 +9527,10 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_2.p_time_format"] = 0,
-                ["AMOriginalUUID"] = "62gqAZ4XAgN",
                 ["AMModified"] = true,
                 ["fontSize"] = 70,
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
+                ["AMOriginalUUID"] = "62gqAZ4XAgN",
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
@@ -9540,21 +9539,22 @@ wa.data['assignments'].data = {
                 },
                 ["displayText"] = "%mark%text%mark",
                 ["xOffset"] = 0,
-                ["displayText_format_marker_round_type"] = "floor",
                 ["displayText_format_p_time_legacy_floor"] = false,
+                ["displayText_format_marker_round_type"] = "floor",
                 ["anchorFrameParent"] = false,
+                ["displayText_format_p_time_precision"] = 1,
                 ["displayText_format_2.p_time_dynamic_threshold"] = 60,
                 ["selfPoint"] = "CENTER",
                 ["displayText_format_2.p_format"] = "timed",
                 ["semver"] = "1.0.36",
-                ["displayText_format_2p_format"] = "none",
-                ["id"] = "Foot-Blasters Text + Sound(in conditions)",
                 ["version"] = 37,
+                ["id"] = "Foot-Blasters Text + Sound(in conditions)",
                 ["displayText_format_p_decimal_precision"] = 0,
+                ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["uid"] = "AM-62gqAZ4XAgN",
-                ["displayText_format_p_time_precision"] = 1,
                 ["justify"] = "LEFT",
+                ["displayText_format_2p_format"] = "none",
+                ["uid"] = "AM-62gqAZ4XAgN",
                 ["displayText_format_markNEXT_format"] = "none",
                 ["shadowColor"] = {
                     [1] = 0,
@@ -10003,7 +10003,7 @@ wa.data['assignments'].data = {
                 },
                 ["information"] = {
                 },
-                ["frameStrata"] = 1,
+                ["preferToUpdate"] = false,
             },
             [33] = {
                 ["controlledChildren"] = {
@@ -10022,7 +10022,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {
                 },
                 ["preferToUpdate"] = false,
-                ["yOffset"] = 300.75185922899,
+                ["yOffset"] = 392.75170898438,
                 ["anchorPoint"] = "CENTER",
                 ["borderColor"] = {
                     [1] = 0,
@@ -10042,16 +10042,16 @@ wa.data['assignments'].data = {
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["unit"] = "player",
+                            ["debuffType"] = "HELPFUL",
                             ["type"] = "aura2",
                             ["spellIds"] = {
                             },
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["debuffType"] = "HELPFUL",
-                            ["event"] = "Health",
                             ["names"] = {
                             },
+                            ["event"] = "Health",
+                            ["unit"] = "player",
                         },
                         ["untrigger"] = {
                         },
@@ -10113,26 +10113,26 @@ wa.data['assignments'].data = {
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
                 ["AMModified"] = true,
-                ["AMOriginalUUID"] = "5aUXmO5sV(O",
-                ["uid"] = "AM-5aUXmO5sV(O",
+                ["parent"] = "Foot-Blasters Assign/Map",
                 ["groupIcon"] = 134269,
+                ["AMOriginalUUID"] = "5aUXmO5sV(O",
                 ["borderOffset"] = 4,
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Foot-Blasters Map",
-                ["selfPoint"] = "CENTER",
+                ["xOffset"] = -1138.1427001953,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = -457.14300959243,
+                ["borderInset"] = 1,
+                ["uid"] = "AM-5aUXmO5sV(O",
                 ["config"] = {
                 },
-                ["borderInset"] = 1,
-                ["parent"] = "Foot-Blasters Assign/Map",
+                ["frameStrata"] = 1,
                 ["conditions"] = {
                 },
                 ["information"] = {
                 },
-                ["frameStrata"] = 1,
+                ["selfPoint"] = "CENTER",
             },
             [34] = {
                 ["iconSource"] = 0,
@@ -10148,8 +10148,6 @@ wa.data['assignments'].data = {
                 ["yOffset"] = 27.743918459393,
                 ["anchorPoint"] = "CENTER",
                 ["cooldownSwipe"] = false,
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "etS4PoO33hZ",
                 ["cooldownEdge"] = false,
                 ["icon"] = true,
                 ["triggers"] = {
@@ -10162,11 +10160,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"NS_FOOT_MAP\" and ... and C_AddOns.IsAddOnLoaded(\"NorthernSkyMedia\") then\
            s[\"\"] = {\
@@ -10176,7 +10169,12 @@ wa.data['assignments'].data = {
            return true\
        end\
    end",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_MAP",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -10184,9 +10182,12 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["width"] = 140,
+                ["alpha"] = 1,
                 ["internalVersion"] = 83,
-                ["keepAspectRatio"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -10207,19 +10208,43 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["xOffset"] = 13.608515732706,
-                ["actions"] = {
-                    ["start"] = {
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["load"] = {
+                    ["use_zoneIds"] = false,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
                     },
-                    ["init"] = {
-                        ["do_custom"] = false,
+                    ["encounterid"] = "3013",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["mythic"] = true,
+                        },
                     },
-                    ["finish"] = {
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_never"] = false,
+                    ["use_ignoreNameRealm"] = false,
+                    ["use_difficulty"] = true,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
                     },
                 },
+                ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["preferToUpdate"] = false,
+                ["information"] = {
+                    ["forceEvents"] = true,
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -10241,73 +10266,48 @@ wa.data['assignments'].data = {
                 },
                 ["height"] = 320,
                 ["rotate"] = false,
-                ["load"] = {
-                    ["use_zoneIds"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["encounterid"] = "3013",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["mythic"] = true,
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_never"] = true,
-                    ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
+                ["AMModified"] = true,
+                ["conditions"] = {
                 },
                 ["useAdjustededMax"] = false,
                 ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
                 ["source"] = "import",
-                ["selfPoint"] = "CENTER",
-                ["information"] = {
-                    ["forceEvents"] = true,
+                ["xOffset"] = 13.608515732706,
+                ["keepAspectRatio"] = false,
+                ["config"] = {
                 },
-                ["displayIcon"] = "",
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "texture",
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["blendMode"] = "BLEND",
                 ["authorOptions"] = {
                 },
-                ["config"] = {
-                },
-                ["texture"] = "Interface\\AddOns\\NorthernSkyMedia\\Media\\EncounterPics\\SprocktemongerBG.blp",
+                ["blendMode"] = "BLEND",
+                ["width"] = 140,
                 ["useCooldownModRate"] = false,
+                ["texture"] = "Interface\\AddOns\\NorthernSkyMedia\\Media\\EncounterPics\\SprocktemongerBG.blp",
                 ["zoom"] = 0,
+                ["cooldownTextDisabled"] = false,
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Foot-Blasters Background",
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["AMOriginalUUID"] = "etS4PoO33hZ",
                 ["frameStrata"] = 3,
                 ["anchorFrameType"] = "SCREEN",
-                ["cooldownTextDisabled"] = false,
+                ["preferToUpdate"] = false,
                 ["uid"] = "AM-etS4PoO33hZ",
                 ["inverse"] = false,
-                ["parent"] = "Foot-Blasters Map",
-                ["conditions"] = {
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                        ["do_custom"] = false,
+                    },
+                    ["finish"] = {
+                    },
                 },
+                ["displayIcon"] = "",
                 ["cooldown"] = false,
-                ["alpha"] = 1,
+                ["parent"] = "Foot-Blasters Map",
             },
             [35] = {
                 ["iconSource"] = -1,
@@ -10349,11 +10349,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -10401,7 +10396,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -10409,14 +10409,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "LEFT",
-                ["AMOriginalUUID"] = "jifqIrX39xP",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -10562,6 +10563,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -10580,7 +10582,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -10592,13 +10594,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -10619,13 +10620,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = 20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -10633,21 +10636,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 1",
-                ["xOffset"] = 20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-jifqIrX39xP",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "jifqIrX39xP",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [36] = {
                 ["iconSource"] = -1,
@@ -10689,11 +10689,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -10741,7 +10736,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -10749,14 +10749,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "RIGHT",
-                ["AMOriginalUUID"] = "XdrzTNgvTGN",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -10902,6 +10903,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -10920,7 +10922,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -10932,13 +10934,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -10959,13 +10960,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = -20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -10973,21 +10976,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 2",
-                ["xOffset"] = -20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-XdrzTNgvTGN",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "XdrzTNgvTGN",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [37] = {
                 ["iconSource"] = -1,
@@ -11029,11 +11029,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -11081,7 +11076,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -11089,14 +11089,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "LEFT",
-                ["AMOriginalUUID"] = "IufZ7rMsmH2",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -11242,6 +11243,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -11260,7 +11262,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -11272,13 +11274,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -11299,13 +11300,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = 20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -11313,21 +11316,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 3",
-                ["xOffset"] = 20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-IufZ7rMsmH2",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "IufZ7rMsmH2",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [38] = {
                 ["iconSource"] = -1,
@@ -11369,11 +11369,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -11421,7 +11416,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -11429,14 +11429,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "RIGHT",
-                ["AMOriginalUUID"] = "wd47WZz(QU(",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -11582,6 +11583,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -11600,7 +11602,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -11612,13 +11614,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -11639,13 +11640,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = -20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -11653,21 +11656,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 4",
-                ["xOffset"] = -20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-wd47WZz(QU(",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "wd47WZz(QU(",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [39] = {
                 ["iconSource"] = -1,
@@ -11709,11 +11709,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -11761,7 +11756,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -11769,14 +11769,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "LEFT",
-                ["AMOriginalUUID"] = "3)2opvcIC1R",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -11922,6 +11923,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -11940,7 +11942,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -11952,13 +11954,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -11979,13 +11980,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = 20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -11993,21 +11996,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 5",
-                ["xOffset"] = 20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-3)2opvcIC1R",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "3)2opvcIC1R",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [40] = {
                 ["iconSource"] = -1,
@@ -12049,11 +12049,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12101,7 +12096,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -12109,14 +12109,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "RIGHT",
-                ["AMOriginalUUID"] = "LFkM4RmzGLB",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -12262,6 +12263,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -12280,7 +12282,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -12292,13 +12294,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -12319,13 +12320,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = -20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -12333,21 +12336,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 6",
-                ["xOffset"] = -20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-LFkM4RmzGLB",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "LFkM4RmzGLB",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [41] = {
                 ["iconSource"] = -1,
@@ -12389,11 +12389,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12441,7 +12436,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -12449,14 +12449,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "LEFT",
-                ["AMOriginalUUID"] = "N30pZhl8iq5",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -12602,6 +12603,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -12620,7 +12622,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -12632,13 +12634,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -12659,13 +12660,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = 20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -12673,21 +12676,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 7",
-                ["xOffset"] = 20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-N30pZhl8iq5",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "N30pZhl8iq5",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [42] = {
                 ["iconSource"] = -1,
@@ -12729,11 +12729,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12781,7 +12776,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_FOOT_SHOW NS_FOOT_HIDE",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -12789,14 +12789,15 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["AMModified"] = true,
                 ["internalVersion"] = 83,
                 ["keepAspectRatio"] = false,
                 ["selfPoint"] = "RIGHT",
-                ["AMOriginalUUID"] = "8tjlekFlwly",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
-                ["adjustedMin"] = "",
+                ["preferToUpdate"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -12942,6 +12943,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["height"] = 20,
+                ["icon"] = true,
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -12960,7 +12962,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = true,
+                    ["use_never"] = false,
                     ["use_ignoreNameRealm"] = false,
                     ["use_difficulty"] = true,
                     ["class"] = {
@@ -12972,13 +12974,12 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["useAdjustededMax"] = false,
-                ["source"] = "import",
-                ["parent"] = "Foot-Blasters Map",
                 ["information"] = {
                 },
+                ["useAdjustededMax"] = false,
                 ["displayIcon"] = "4624638",
+                ["source"] = "import",
+                ["adjustedMin"] = "",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -12999,13 +13000,15 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
-                ["regionType"] = "icon",
-                ["icon"] = true,
                 ["config"] = {
                 },
-                ["url"] = "https://wago.io/NSUndermine/37",
+                ["xOffset"] = -20,
+                ["anchorFrameFrame"] = "WeakAuras:Foot-Blasters Background",
+                ["regionType"] = "icon",
                 ["anchorFrameType"] = "SELECTFRAME",
+                ["useCooldownModRate"] = true,
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["useAdjustededMin"] = false,
                 ["anchorFrameParent"] = false,
                 ["alpha"] = 1,
                 ["cooldownTextDisabled"] = false,
@@ -13013,21 +13016,18 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Mine 8",
-                ["xOffset"] = -20,
+                ["AMModified"] = true,
                 ["frameStrata"] = 4,
                 ["width"] = 20,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
+                ["authorOptions"] = {
                 },
                 ["uid"] = "AM-8tjlekFlwly",
                 ["inverse"] = false,
-                ["authorOptions"] = {
-                },
                 ["conditions"] = {
                 },
+                ["AMOriginalUUID"] = "8tjlekFlwly",
                 ["cooldown"] = false,
-                ["useAdjustededMin"] = false,
+                ["parent"] = "Foot-Blasters Map",
             },
             [43] = {
                 ["outline"] = "OUTLINE",
@@ -13045,11 +13045,11 @@ wa.data['assignments'].data = {
                 ["automaticWidth"] = "Auto",
                 ["actions"] = {
                     ["start"] = {
-                        ["do_custom"] = false,
                         ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
                         ["custom"] = "\
    \
    ",
+                        ["do_custom"] = false,
                         ["do_sound"] = true,
                     },
                     ["init"] = {
@@ -13075,11 +13075,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        \
        if e == \"OPTIONS\" then\
@@ -13138,7 +13133,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -13151,14 +13151,15 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = true,
                 ["selfPoint"] = "BOTTOM",
-                ["font"] = "PT Sans Narrow Bold",
+                ["anchorFrameParent"] = false,
+                ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["AMModified"] = true,
+                ["preferToUpdate"] = false,
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["use_never"] = false,
@@ -13210,23 +13211,15 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["AMOriginalUUID"] = "j671FfmSacO",
-                ["authorOptions"] = {
+                ["color"] = {
+                    [1] = 0.25098040699959,
+                    [2] = 0.6235294342041,
+                    [3] = 1,
+                    [4] = 1,
                 },
+                ["AMOriginalUUID"] = "j671FfmSacO",
                 ["fontSize"] = 70,
                 ["source"] = "import",
-                ["displayText_format_p_time_dynamic_threshold"] = 0,
-                ["shadowXOffset"] = 1,
-                ["yOffset"] = 78.947317156518,
-                ["url"] = "https://wago.io/NSUndermine/37",
-                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
-                ["regionType"] = "text",
-                ["displayText_format_p_format"] = "Number",
-                ["internalVersion"] = 83,
-                ["wordWrap"] = "WordWrap",
-                ["displayText_format_p_round_type"] = "ceil",
-                ["preferToUpdate"] = false,
-                ["displayText_format_p_time_precision"] = 1,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -13281,6 +13274,17 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
+                ["shadowXOffset"] = 1,
+                ["displayText_format_p_time_dynamic_threshold"] = 0,
+                ["yOffset"] = 78.947317156518,
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["regionType"] = "text",
+                ["config"] = {
+                },
+                ["url"] = "https://wago.io/NSUndermine/37",
+                ["parent"] = "[5] Sprocketmonger Lockenstock ",
+                ["frameStrata"] = 1,
+                ["displayText_format_p_time_precision"] = 1,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -13301,23 +13305,18 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["config"] = {
-                },
+                ["displayText_format_p_format"] = "Number",
                 ["justify"] = "LEFT",
+                ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Polarization Swap Alert",
-                ["anchorFrameParent"] = false,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SELECTFRAME",
+                ["AMModified"] = true,
                 ["displayText_format_p_decimal_precision"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["internalVersion"] = 83,
                 ["uid"] = "AM-j671FfmSacO",
-                ["color"] = {
-                    [1] = 0.25098040699959,
-                    [2] = 0.6235294342041,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["semver"] = "1.0.36",
+                ["font"] = "PT Sans Narrow Bold",
+                ["wordWrap"] = "WordWrap",
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
@@ -13328,7 +13327,8 @@ wa.data['assignments'].data = {
                 ["information"] = {
                     ["forceEvents"] = false,
                 },
-                ["parent"] = "[5] Sprocketmonger Lockenstock ",
+                ["authorOptions"] = {
+                },
             },
             [44] = {
                 ["controlledChildren"] = {
@@ -13442,10 +13442,10 @@ wa.data['assignments'].data = {
                 ["alpha"] = 1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-M6ul(HZJ(zn",
                 ["borderInset"] = 1,
                 ["config"] = {
                 },
-                ["uid"] = "AM-M6ul(HZJ(zn",
                 ["xOffset"] = 0,
                 ["AMOriginalUUID"] = "M6ul(HZJ(zn",
                 ["information"] = {
@@ -13554,26 +13554,26 @@ wa.data['assignments'].data = {
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
                 ["AMModified"] = true,
-                ["AMOriginalUUID"] = "0mr6xlLXYqF",
-                ["uid"] = "AM-0mr6xlLXYqF",
+                ["parent"] = "[6] The One-Armed Bandit ",
                 ["groupIcon"] = 460952,
+                ["AMOriginalUUID"] = "0mr6xlLXYqF",
                 ["borderOffset"] = 4,
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Withering Flames Dispel Glow",
-                ["selfPoint"] = "CENTER",
+                ["xOffset"] = 0,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = 0,
+                ["borderInset"] = 1,
+                ["uid"] = "AM-0mr6xlLXYqF",
                 ["config"] = {
                 },
-                ["borderInset"] = 1,
-                ["parent"] = "[6] The One-Armed Bandit ",
+                ["frameStrata"] = 1,
                 ["conditions"] = {
                 },
                 ["information"] = {
                 },
-                ["frameStrata"] = 1,
+                ["selfPoint"] = "CENTER",
             },
             [46] = {
                 ["outline"] = "OUTLINE",
@@ -13581,10 +13581,8 @@ wa.data['assignments'].data = {
                 ["wagoID"] = "bCjQjZ9yK",
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["AMModified"] = true,
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
-                ["AMOriginalUUID"] = "FmqrcxJGHc3",
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
                 ["url"] = "https://wago.io/NSUndermine/37",
@@ -13593,11 +13591,11 @@ wa.data['assignments'].data = {
                         ["glow_lines"] = 10,
                         ["glow_thickness"] = 4,
                         ["glow_action"] = "show",
+                        ["glow_frame_type"] = "UNITFRAME",
+                        ["do_glow"] = false,
                         ["custom"] = "\
    \
    ",
-                        ["do_glow"] = false,
-                        ["glow_frame_type"] = "UNITFRAME",
                         ["glow_border"] = false,
                         ["use_glow_color"] = true,
                         ["glow_color"] = {
@@ -13686,11 +13684,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)     \
        \
        if e == \"OPTIONS\" then\
@@ -13859,8 +13852,13 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] =
                             "NS_PA_DISPEL NS_PA_MACRO CLEU:SPELL_AURA_REMOVED:SPELL_AURA_APPLIED:SPELL_DISPEL NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT LIQUID_PRIVATE_AURA_MACRO NS_DWARF_STATUS",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -13880,17 +13878,16 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["authorOptions"] = {
-                },
+                ["displayText_format_p_time_precision"] = 1,
                 ["load"] = {
                     ["use_namerealm"] = false,
+                    ["use_ignoreNameRealm"] = false,
+                    ["use_zoneIds"] = false,
+                    ["instance_type"] = {
+                    },
                     ["class"] = {
                         ["multi"] = {
                         },
-                    },
-                    ["use_zoneIds"] = false,
-                    ["use_ignoreNameRealm"] = false,
-                    ["instance_type"] = {
                     },
                     ["encounterid"] = "3014",
                     ["use_not_spellknown"] = false,
@@ -13924,17 +13921,11 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
+                ["authorOptions"] = {
+                },
+                ["selfPoint"] = "CENTER",
                 ["fontSize"] = 30,
                 ["source"] = "import",
-                ["shadowXOffset"] = 1,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["displayText_format_p_format"] = "Number",
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -14033,9 +14024,22 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
+                ["shadowXOffset"] = 1,
+                ["displayText"] = "",
+                ["preferToUpdate"] = false,
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
                 ["regionType"] = "text",
-                ["automaticWidth"] = "Auto",
-                ["displayText_format_p_time_legacy_floor"] = false,
+                ["config"] = {
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["shadowYOffset"] = -1,
+                ["displayText_format_p_decimal_precision"] = 0,
+                ["anchorFrameParent"] = false,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -14056,33 +14060,29 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["config"] = {
-                },
-                ["anchorFrameParent"] = false,
-                ["shadowYOffset"] = -1,
-                ["displayText_format_p_decimal_precision"] = 0,
                 ["parent"] = "Withering Flames Dispel Glow",
                 ["semver"] = "1.0.36",
+                ["justify"] = "LEFT",
                 ["tocversion"] = 110100,
                 ["id"] = "Withering Flames Dispel",
-                ["justify"] = "LEFT",
+                ["font"] = "Expressway",
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "UNITFRAME",
-                ["displayText"] = "",
+                ["automaticWidth"] = "Auto",
                 ["uid"] = "AM-FmqrcxJGHc3",
-                ["displayText_format_p_time_precision"] = 1,
-                ["selfPoint"] = "CENTER",
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["fixedWidth"] = 200,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "FmqrcxJGHc3",
                 ["information"] = {
                     ["debugLog"] = false,
                 },
-                ["font"] = "Expressway",
+                ["AMModified"] = true,
             },
             [47] = {
                 ["outline"] = "OUTLINE",
@@ -14207,8 +14207,6 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "8hNf754(7BZ",
                 ["font"] = "Expressway",
                 ["version"] = 37,
                 ["subRegions"] = {
@@ -14216,44 +14214,18 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["load"] = {
-                    ["use_never"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["encounterid"] = "3014",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["mythic"] = true,
-                            ["heroic"] = true,
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
+                ["AMModified"] = true,
+                ["displayText_format_p_format"] = "timed",
                 ["fontSize"] = 40,
                 ["source"] = "import",
-                ["uid"] = "AM-8hNf754(7BZ",
                 ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = false,
-                ["regionType"] = "text",
-                ["parent"] = "Withering Flames Dispel Glow",
-                ["displayText_format_p_format"] = "timed",
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["automaticWidth"] = "Auto",
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -14329,14 +14301,41 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
+                ["regionType"] = "text",
+                ["xOffset"] = -15.789656173889,
+                ["load"] = {
+                    ["use_never"] = false,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["encounterid"] = "3014",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["mythic"] = true,
+                            ["heroic"] = true,
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_ignoreNameRealm"] = false,
+                    ["use_difficulty"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
                 },
+                ["fixedWidth"] = 200,
+                ["uid"] = "AM-8hNf754(7BZ",
                 ["displayText_format_p_time_precision"] = 1,
-                ["justify"] = "LEFT",
                 ["displayText"] = "Macro not Pressed",
                 ["animation"] = {
                     ["start"] = {
@@ -14358,27 +14357,28 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
+                ["justify"] = "LEFT",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Macro Press Check Withering Flames",
                 ["shadowYOffset"] = -1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = -15.789656173889,
+                ["parent"] = "Withering Flames Dispel Glow",
                 ["config"] = {
                 },
-                ["automaticWidth"] = "Auto",
-                ["wordWrap"] = "WordWrap",
+                ["preferToUpdate"] = false,
+                ["internalVersion"] = 83,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "8hNf754(7BZ",
                 ["information"] = {
                 },
-                ["internalVersion"] = 83,
+                ["wordWrap"] = "WordWrap",
             },
             [48] = {
                 ["outline"] = "OUTLINE",
@@ -14396,11 +14396,11 @@ wa.data['assignments'].data = {
                         ["glow_lines"] = 10,
                         ["glow_thickness"] = 4,
                         ["glow_action"] = "show",
+                        ["glow_frame_type"] = "UNITFRAME",
+                        ["do_glow"] = false,
                         ["custom"] = "\
    \
    ",
-                        ["do_glow"] = false,
-                        ["glow_frame_type"] = "UNITFRAME",
                         ["glow_border"] = false,
                         ["use_glow_color"] = true,
                         ["glow_color"] = {
@@ -14431,11 +14431,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...) \
        if e == \"ENCOUNTER_START\" then\
            \
@@ -14468,7 +14463,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_APPLIED ENCOUNTER_START",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -14480,9 +14480,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["internalVersion"] = 83,
-                ["AMModified"] = true,
                 ["wordWrap"] = "WordWrap",
-                ["AMOriginalUUID"] = "v7xuhnEscJ4",
                 ["displayText_format_p_round_type"] = "floor",
                 ["version"] = 37,
                 ["subRegions"] = {
@@ -14490,8 +14488,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
-                ["authorOptions"] = {
-                },
+                ["displayText_format_p_time_precision"] = 1,
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["size"] = {
@@ -14533,22 +14530,29 @@ wa.data['assignments'].data = {
                     },
                     ["zoneIds"] = "g458",
                 },
-                ["preferToUpdate"] = false,
+                ["authorOptions"] = {
+                },
+                ["selfPoint"] = "CENTER",
                 ["fontSize"] = 30,
                 ["source"] = "import",
+                ["conditions"] = {
+                },
                 ["shadowXOffset"] = 1,
+                ["displayText"] = "",
+                ["preferToUpdate"] = false,
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["displayText_format_p_format"] = "Number",
-                ["conditions"] = {
-                },
                 ["regionType"] = "text",
-                ["automaticWidth"] = "Auto",
-                ["displayText_format_p_time_legacy_floor"] = false,
+                ["config"] = {
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["shadowYOffset"] = -1,
+                ["displayText_format_p_decimal_precision"] = 0,
+                ["anchorFrameParent"] = false,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -14569,33 +14573,29 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["config"] = {
-                },
-                ["anchorFrameParent"] = false,
-                ["shadowYOffset"] = -1,
-                ["displayText_format_p_decimal_precision"] = 0,
                 ["parent"] = "Withering Flames Dispel Glow",
                 ["semver"] = "1.0.36",
+                ["justify"] = "LEFT",
                 ["tocversion"] = 110100,
                 ["id"] = "Dwarf Table Withering Flames",
-                ["justify"] = "LEFT",
+                ["font"] = "Expressway",
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "UNITFRAME",
-                ["displayText"] = "",
+                ["automaticWidth"] = "Auto",
                 ["uid"] = "AM-v7xuhnEscJ4",
-                ["displayText_format_p_time_precision"] = 1,
-                ["selfPoint"] = "CENTER",
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["fixedWidth"] = 200,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "v7xuhnEscJ4",
                 ["information"] = {
                     ["debugLog"] = false,
                 },
-                ["font"] = "Expressway",
+                ["AMModified"] = true,
             },
             [49] = {
                 ["outline"] = "OUTLINE",
@@ -14604,7 +14604,6 @@ wa.data['assignments'].data = {
                 ["displayText"] = "Kill This",
                 ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "BOTTOM",
-                ["AMModified"] = true,
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
                 ["automaticWidth"] = "Auto",
@@ -14626,6 +14625,8 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {
+                            },
+                            ["spellIds"] = {
                             },
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
@@ -14691,13 +14692,11 @@ wa.data['assignments'].data = {
        \
        \
    end",
-                            ["events"] =
-                            "NS_BANDIT_NAMEPLATE NAME_PLATE_UNIT_ADDED NAME_PLATE_UNIT_REMOVED NSAPI_ENCOUNTER_START UNIT_SPELLCAST_START:boss1",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {
-                            },
+                            ["events"] =
+                            "NS_BANDIT_NAMEPLATE NAME_PLATE_UNIT_ADDED NAME_PLATE_UNIT_REMOVED NSAPI_ENCOUNTER_START UNIT_SPELLCAST_START:boss1",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -14707,54 +14706,6 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
-                ["AMOriginalUUID"] = "M(qiYktoJJs",
-                ["selfPoint"] = "TOP",
-                ["preferToUpdate"] = false,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["font"] = "Expressway",
-                ["version"] = 37,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 200,
-                ["rotate"] = false,
-                ["load"] = {
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_never"] = false,
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["encounterid"] = "3014",
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_encounterid"] = true,
-                },
-                ["parent"] = "[6] The One-Armed Bandit ",
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["fontSize"] = 24,
-                ["yOffset"] = 0,
-                ["url"] = "https://wago.io/NSUndermine/37",
-                ["shadowXOffset"] = 1,
-                ["displayText_format_p_format"] = "timed",
-                ["mirror"] = false,
-                ["internalVersion"] = 83,
-                ["regionType"] = "text",
-                ["anchorFrameType"] = "NAMEPLATE",
-                ["blendMode"] = "BLEND",
-                ["wordWrap"] = "WordWrap",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -14775,28 +14726,77 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["displayText_format_p_time_precision"] = 1,
-                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["conditions"] = {
+                ["selfPoint"] = "TOP",
+                ["wordWrap"] = "WordWrap",
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["desaturate"] = false,
+                ["rotation"] = 0,
+                ["font"] = "Expressway",
+                ["version"] = 37,
+                ["subRegions"] = {
+                    [1] = {
+                        ["type"] = "subbackground",
+                    },
                 },
-                ["justify"] = "LEFT",
-                ["tocversion"] = 110100,
-                ["id"] = "Bandit Nameplate Highlight",
+                ["height"] = 200,
+                ["rotate"] = false,
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "M(qiYktoJJs",
+                ["parent"] = "[6] The One-Armed Bandit ",
+                ["fontSize"] = 24,
+                ["load"] = {
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_never"] = false,
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["encounterid"] = "3014",
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_encounterid"] = true,
+                },
+                ["yOffset"] = 0,
+                ["shadowXOffset"] = 1,
+                ["config"] = {
+                },
+                ["mirror"] = false,
+                ["internalVersion"] = 83,
+                ["regionType"] = "text",
+                ["anchorFrameType"] = "NAMEPLATE",
+                ["blendMode"] = "BLEND",
+                ["alpha"] = 1,
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["alpha"] = 1,
+                ["displayText_format_p_time_precision"] = 1,
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
+                ["conditions"] = {
+                },
+                ["justify"] = "LEFT",
+                ["semver"] = "1.0.36",
+                ["tocversion"] = 110100,
+                ["id"] = "Bandit Nameplate Highlight",
+                ["displayText_format_p_format"] = "timed",
+                ["frameStrata"] = 5,
                 ["width"] = 200,
+                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                ["uid"] = "AM-M(qiYktoJJs",
                 ["authorOptions"] = {
                 },
-                ["config"] = {
-                },
-                ["uid"] = "AM-M(qiYktoJJs",
-                ["frameStrata"] = 5,
+                ["url"] = "https://wago.io/NSUndermine/37",
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
@@ -14806,7 +14806,7 @@ wa.data['assignments'].data = {
                 ["fixedWidth"] = 200,
                 ["information"] = {
                 },
-                ["semver"] = "1.0.36",
+                ["preferToUpdate"] = false,
             },
             [50] = {
                 ["outline"] = "OUTLINE",
@@ -14836,6 +14836,8 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["names"] = {
                             },
+                            ["spellIds"] = {
+                            },
                             ["custom"] = "function(e, ...)\
        if e == \"NS_BANDIT_AUTOMARK\" and ... then\
            local units = ...\
@@ -14854,12 +14856,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "NS_BANDIT_AUTOMARK NS_AUTOMARK_3RD",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "status",
-                            ["spellIds"] = {
-                            },
+                            ["events"] = "NS_BANDIT_AUTOMARK NS_AUTOMARK_3RD",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -14870,8 +14870,6 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "abr(3Q7KyKa",
                 ["font"] = "Friz Quadrata TT",
                 ["version"] = 37,
                 ["subRegions"] = {
@@ -14879,6 +14877,21 @@ wa.data['assignments'].data = {
                         ["type"] = "subbackground",
                     },
                 },
+                ["AMModified"] = true,
+                ["fontSize"] = 12,
+                ["displayText_format_p_format"] = "timed",
+                ["shadowXOffset"] = 1,
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["automaticWidth"] = "Auto",
+                ["conditions"] = {
+                },
+                ["regionType"] = "text",
+                ["xOffset"] = 0,
                 ["load"] = {
                     ["size"] = {
                         ["multi"] = {
@@ -14889,34 +14902,20 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
                     ["encounterid"] = "3014",
                     ["class"] = {
                         ["multi"] = {
                         },
                     },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
                     ["use_encounterid"] = true,
                 },
-                ["fontSize"] = 12,
+                ["fixedWidth"] = 200,
                 ["uid"] = "AM-abr(3Q7KyKa",
-                ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = false,
-                ["regionType"] = "text",
-                ["parent"] = "[6] The One-Armed Bandit ",
-                ["displayText_format_p_format"] = "timed",
-                ["conditions"] = {
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
                 ["displayText_format_p_time_precision"] = 1,
-                ["justify"] = "LEFT",
                 ["displayText"] = "",
                 ["animation"] = {
                     ["start"] = {
@@ -14938,27 +14937,28 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
+                ["justify"] = "LEFT",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Bandit Automark",
                 ["shadowYOffset"] = -1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = 0,
+                ["parent"] = "[6] The One-Armed Bandit ",
                 ["config"] = {
                 },
-                ["automaticWidth"] = "Auto",
-                ["wordWrap"] = "WordWrap",
+                ["preferToUpdate"] = false,
+                ["internalVersion"] = 83,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "abr(3Q7KyKa",
                 ["information"] = {
                 },
-                ["internalVersion"] = 83,
+                ["wordWrap"] = "WordWrap",
             },
             [51] = {
                 ["arcLength"] = 360,
@@ -15070,15 +15070,15 @@ wa.data['assignments'].data = {
                     [4] = 0.5,
                 },
                 ["source"] = "import",
-                ["uid"] = "AM-szCrGDJTTb9",
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Overview Anchor",
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
                 ["limit"] = 6,
+                ["gridType"] = "RD",
                 ["borderInset"] = 1,
                 ["borderEdge"] = "Square Full White",
-                ["xOffset"] = 0,
                 ["anchorFrameParent"] = false,
                 ["sort"] = "none",
                 ["groupIcon"] = 629485,
@@ -15105,11 +15105,11 @@ wa.data['assignments'].data = {
                 ["semver"] = "1.0.36",
                 ["rotation"] = 0,
                 ["id"] = "Spin to Win Combation + Token List",
-                ["rowSpace"] = 1,
                 ["gridWidth"] = 5,
-                ["anchorFrameType"] = "SELECTFRAME",
-                ["radius"] = 200,
                 ["frameStrata"] = 4,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["rowSpace"] = 1,
+                ["radius"] = 200,
                 ["anchorPerUnit"] = "CUSTOM",
                 ["regionType"] = "dynamicgroup",
                 ["conditions"] = {
@@ -15117,7 +15117,7 @@ wa.data['assignments'].data = {
                 ["information"] = {
                     ["forceEvents"] = true,
                 },
-                ["gridType"] = "RD",
+                ["uid"] = "AM-szCrGDJTTb9",
             },
             [52] = {
                 ["sparkWidth"] = 10,
@@ -15274,7 +15274,6 @@ wa.data['assignments'].data = {
                 ["wagoID"] = "bCjQjZ9yK",
                 ["parent"] = "Spin to Win Combation + Token List",
                 ["adjustedMin"] = "",
-                ["AMOriginalUUID"] = "CSo7ReaxMsI",
                 ["cooldownSwipe"] = true,
                 ["sparkRotationMode"] = "AUTO",
                 ["cooldownEdge"] = false,
@@ -15344,11 +15343,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local available = {\
@@ -15518,8 +15512,13 @@ wa.data['assignments'].data = {
            end\
        end\
    end",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] =
                             "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_START:boss1 NS_CHECK_COMBO UNIT_SPELLCAST_SUCCEEDED:boss1",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -15617,8 +15616,8 @@ wa.data['assignments'].data = {
                         ["text_text_format_text1_format"] = "none",
                         ["rotateText"] = "NONE",
                         ["text_text_format_raidMark_format"] = "none",
-                        ["text_shadowYOffset"] = 0,
                         ["text_justify"] = "CENTER",
+                        ["text_text_format_text_format"] = "none",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
                         ["text_color"] = {
@@ -15627,8 +15626,8 @@ wa.data['assignments'].data = {
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_text_format_text_format"] = "none",
                         ["text_font"] = "Expressway",
+                        ["text_shadowYOffset"] = 0,
                         ["text_anchorYOffset"] = 0,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -15749,21 +15748,20 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
+                ["AMOriginalUUID"] = "CSo7ReaxMsI",
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
                 ["information"] = {
                     ["forceEvents"] = false,
                     ["debugLog"] = false,
                 },
+                ["preferToUpdate"] = false,
                 ["barColor2"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["anchorFrameParent"] = false,
                 ["icon"] = true,
-                ["anchorFrameType"] = "SCREEN",
                 ["zoom"] = 0.1,
                 ["color"] = {
                     [1] = 1,
@@ -15771,13 +15769,13 @@ wa.data['assignments'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["icon_side"] = "LEFT",
                 ["cooldownTextDisabled"] = false,
-                ["customText"] = "\
-   \
-   ",
-                ["sparkHeight"] = 30,
+                ["anchorFrameType"] = "SCREEN",
+                ["icon_side"] = "LEFT",
                 ["useCooldownModRate"] = true,
+                ["anchorFrameParent"] = false,
+                ["sparkHeight"] = 30,
+                ["id"] = "Spin to Win List - need to keep this enabled for other Auras to work (Mythic)",
                 ["overlaysTexture"] = {
                     [1] = "Clean",
                     [2] = "Clean",
@@ -15797,7 +15795,9 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["semver"] = "1.0.36",
-                ["id"] = "Spin to Win List - need to keep this enabled for other Auras to work (Mythic)",
+                ["customText"] = "\
+   \
+   ",
                 ["sparkHidden"] = "NEVER",
                 ["authorOptions"] = {
                 },
@@ -16102,6 +16102,8 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
+                            ["spellIds"] = {
+                            },
                             ["events"] =
                             "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_START:boss1 NS_CHECK_COMBO UNIT_SPELLCAST_SUCCEEDED:boss1",
                             ["custom"] = "function(s, e, ...)\
@@ -16273,8 +16275,6 @@ wa.data['assignments'].data = {
            end\
        end\
    end",
-                            ["spellIds"] = {
-                            },
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -16406,7 +16406,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["AMOriginalUUID"] = "dOaCBSO6dQC",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -16566,39 +16565,12 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
+                ["AMOriginalUUID"] = "dOaCBSO6dQC",
                 ["source"] = "import",
-                ["iconSource"] = -1,
                 ["cooldown"] = true,
+                ["iconSource"] = -1,
                 ["zoom"] = 0.1,
                 ["cooldownTextDisabled"] = false,
-                ["uid"] = "AM-dOaCBSO6dQC",
-                ["parent"] = "Spin to Win Combation + Token List",
-                ["config"] = {
-                },
-                ["backgroundColor"] = {
-                    [1] = 0.031372549019608,
-                    [2] = 0.031372549019608,
-                    [3] = 0.031372549019608,
-                    [4] = 0.80000001192093,
-                },
-                ["icon_side"] = "LEFT",
-                ["width"] = 200,
-                ["frameStrata"] = 1,
-                ["anchorFrameParent"] = false,
-                ["authorOptions"] = {
-                },
-                ["overlaysTexture"] = {
-                    [1] = "Clean",
-                    [2] = "Clean",
-                },
-                ["sparkWidth"] = 10,
-                ["semver"] = "1.0.36",
-                ["sparkHidden"] = "NEVER",
-                ["id"] = "Spin to Win List - need to keep this enabled for other Auras to work (Non-Mythic)",
-                ["adjustedMax"] = "",
-                ["useCooldownModRate"] = true,
-                ["anchorFrameType"] = "SCREEN",
-                ["adjustedMin"] = "",
                 ["actions"] = {
                     ["start"] = {
                         ["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\PUNCH.ogg",
@@ -16677,8 +16649,36 @@ wa.data['assignments'].data = {
                         ["do_custom"] = true,
                     },
                 },
-                ["inverse"] = false,
+                ["parent"] = "Spin to Win Combation + Token List",
+                ["config"] = {
+                },
+                ["width"] = 200,
+                ["icon_side"] = "LEFT",
+                ["frameStrata"] = 1,
+                ["backgroundColor"] = {
+                    [1] = 0.031372549019608,
+                    [2] = 0.031372549019608,
+                    [3] = 0.031372549019608,
+                    [4] = 0.80000001192093,
+                },
+                ["anchorFrameParent"] = false,
+                ["sparkHidden"] = "NEVER",
+                ["overlaysTexture"] = {
+                    [1] = "Clean",
+                    [2] = "Clean",
+                },
+                ["sparkWidth"] = 10,
+                ["semver"] = "1.0.36",
+                ["authorOptions"] = {
+                },
+                ["id"] = "Spin to Win List - need to keep this enabled for other Auras to work (Non-Mythic)",
                 ["sparkHeight"] = 30,
+                ["useCooldownModRate"] = true,
+                ["anchorFrameType"] = "SCREEN",
+                ["adjustedMax"] = "",
+                ["adjustedMin"] = "",
+                ["inverse"] = false,
+                ["uid"] = "AM-dOaCBSO6dQC",
                 ["orientation"] = "HORIZONTAL",
                 ["conditions"] = {
                     [1] = {
@@ -16968,8 +16968,8 @@ wa.data['assignments'].data = {
                             ["showClones"] = true,
                             ["type"] = "aura2",
                             ["subeventSuffix"] = "_CAST_START",
-                            ["unit"] = "group",
                             ["useMatch_count"] = true,
+                            ["unit"] = "group",
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["auraspellids"] = {
@@ -17018,7 +17018,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["AMOriginalUUID"] = "AzTso4e9Z(u",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -17052,9 +17051,9 @@ wa.data['assignments'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["text_fontType"] = "OUTLINE",
-                        ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
+                        ["text_shadowYOffset"] = 0,
+                        ["text_fontType"] = "OUTLINE",
                         ["text_text_format_c2_format"] = "none",
                         ["text_visible"] = true,
                         ["text_text_format_c1_format"] = "none",
@@ -17158,20 +17157,19 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
+                ["AMOriginalUUID"] = "AzTso4e9Z(u",
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
                 ["information"] = {
                     ["forceEvents"] = false,
                 },
+                ["preferToUpdate"] = false,
                 ["barColor2"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["anchorFrameParent"] = false,
                 ["icon"] = true,
-                ["anchorFrameType"] = "SCREEN",
                 ["zoom"] = 0.1,
                 ["color"] = {
                     [1] = 1,
@@ -17179,8 +17177,32 @@ wa.data['assignments'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["icon_side"] = "LEFT",
                 ["cooldownTextDisabled"] = false,
+                ["anchorFrameType"] = "SCREEN",
+                ["icon_side"] = "LEFT",
+                ["useCooldownModRate"] = true,
+                ["anchorFrameParent"] = false,
+                ["sparkHeight"] = 30,
+                ["id"] = "Token Player List",
+                ["overlaysTexture"] = {
+                    [1] = "Clean",
+                    [2] = "Clean",
+                },
+                ["overlays"] = {
+                    [1] = {
+                        [1] = 0,
+                        [2] = 0.50196081399918,
+                        [3] = 1,
+                        [4] = 1,
+                    },
+                    [2] = {
+                        [1] = 1,
+                        [2] = 0,
+                        [3] = 0,
+                        [4] = 1,
+                    },
+                },
+                ["semver"] = "1.0.36",
                 ["customText"] = "function()\
        local u = aura_env.state and aura_env.state.unit\
        if WeakAuras.IsOptionsOpen() then\
@@ -17209,28 +17231,6 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                ["sparkHeight"] = 30,
-                ["useCooldownModRate"] = true,
-                ["overlaysTexture"] = {
-                    [1] = "Clean",
-                    [2] = "Clean",
-                },
-                ["overlays"] = {
-                    [1] = {
-                        [1] = 0,
-                        [2] = 0.50196081399918,
-                        [3] = 1,
-                        [4] = 1,
-                    },
-                    [2] = {
-                        [1] = 1,
-                        [2] = 0,
-                        [3] = 0,
-                        [4] = 1,
-                    },
-                },
-                ["semver"] = "1.0.36",
-                ["id"] = "Token Player List",
                 ["sparkHidden"] = "NEVER",
                 ["authorOptions"] = {
                 },
@@ -17415,10 +17415,10 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["uid"] = "AM-cqO0WrvE0VB",
                 ["config"] = {
                 },
-                ["borderInset"] = 1,
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "cqO0WrvE0VB",
                 ["information"] = {
@@ -17525,9 +17525,9 @@ wa.data['assignments'].data = {
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
                 ["AMModified"] = true,
-                ["AMOriginalUUID"] = "MaExfjbbca4",
                 ["xOffset"] = 0,
                 ["groupIcon"] = 2101174,
+                ["AMOriginalUUID"] = "MaExfjbbca4",
                 ["borderOffset"] = 4,
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
@@ -17535,10 +17535,10 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["uid"] = "AM-MaExfjbbca4",
                 ["config"] = {
                 },
-                ["borderInset"] = 1,
                 ["authorOptions"] = {
                 },
                 ["conditions"] = {
@@ -17654,7 +17654,7 @@ wa.data['assignments'].data = {
    aura_env.positions = {\
        [1] = {\"LEFT\", \"RIGHT\", \"LEFT\", \"RIGHT\",}, -- some additional, not used, texts here for options preview purposes\
        [2] = {\"LEFT\", \"MIDDLE\", \"FAR RIGHT\", \"FAR LEFT\"},\
-       [3] = {\"FAR LEFT\", \"FRONT LEFT\", \"FRONT RIGHT\", \"FAR RIGHT\"},    \
+       [3] = {\"FAR LEFT\", \"MIDDLE LEFT\", \"MIDDLE RIGHT\", \"FAR RIGHT\"},    \
    }\
    \
    aura_env.helper = {\
@@ -17729,11 +17729,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)    \
        if e == \"OPTIONS\" then\
            local i = math.random(1, 4)\
@@ -18003,7 +17998,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -18013,12 +18013,10 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_format"] = "Number",
                 ["displayText_format_p_time_legacy_floor"] = true,
-                ["AMModified"] = true,
                 ["wordWrap"] = "WordWrap",
-                ["AMOriginalUUID"] = "JV6JNPFd0Tg",
+                ["anchorFrameParent"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -18026,7 +18024,12 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_direction_format"] = "none",
-                ["preferToUpdate"] = false,
+                ["automaticWidth"] = "Auto",
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "JV6JNPFd0Tg",
+                ["font"] = "PT Sans Narrow Bold",
+                ["fontSize"] = 60,
+                ["source"] = "import",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -18056,23 +18059,46 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["fontSize"] = 60,
-                ["source"] = "import",
-                ["displayText_format_p_time_mod_rate"] = true,
                 ["shadowXOffset"] = 1,
-                ["conditions"] = {
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["config"] = {
                 },
-                ["displayText"] = "",
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
+                ["displayText"] = "",
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["conditions"] = {
+                },
+                ["displayText_format_p_time_precision"] = 1,
                 ["internalVersion"] = 83,
-                ["config"] = {
+                ["justify"] = "LEFT",
+                ["shadowYOffset"] = -1,
+                ["semver"] = "1.0.36",
+                ["tocversion"] = 110100,
+                ["id"] = "Gaol Assigns Handler",
+                ["anchorPoint"] = "CENTER",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["parent"] = "Gaol Assign Group",
+                ["uid"] = "AM-JV6JNPFd0Tg",
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = false,
+                ["shadowColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["fixedWidth"] = 200,
+                ["information"] = {
+                    ["forceEvents"] = false,
+                    ["debugLog"] = false,
                 },
                 ["animation"] = {
                     ["start"] = {
@@ -18094,32 +18120,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["anchorFrameParent"] = false,
-                ["displayText_format_p_decimal_precision"] = 1,
-                ["shadowYOffset"] = -1,
-                ["justify"] = "LEFT",
-                ["semver"] = "1.0.36",
-                ["tocversion"] = 110100,
-                ["id"] = "Gaol Assigns Handler",
-                ["anchorPoint"] = "CENTER",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SELECTFRAME",
-                ["displayText_format_p_time_precision"] = 1,
-                ["uid"] = "AM-JV6JNPFd0Tg",
-                ["parent"] = "Gaol Assign Group",
-                ["xOffset"] = 0,
-                ["shadowColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
-                ["fixedWidth"] = 200,
-                ["information"] = {
-                    ["forceEvents"] = false,
-                    ["debugLog"] = false,
-                },
-                ["automaticWidth"] = "Auto",
             },
             [58] = {
                 ["controlledChildren"] = {
@@ -18205,9 +18205,9 @@ wa.data['assignments'].data = {
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
                 ["AMModified"] = true,
-                ["AMOriginalUUID"] = "HOY8K1YKBtY",
                 ["xOffset"] = 0,
                 ["groupIcon"] = 2101174,
+                ["AMOriginalUUID"] = "HOY8K1YKBtY",
                 ["borderOffset"] = 4,
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
@@ -18215,10 +18215,10 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["uid"] = "AM-HOY8K1YKBtY",
                 ["config"] = {
                 },
-                ["borderInset"] = 1,
                 ["authorOptions"] = {
                 },
                 ["conditions"] = {
@@ -18271,6 +18271,8 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["names"] = {
                             },
+                            ["spellIds"] = {
+                            },
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local expires = 8\
@@ -18296,12 +18298,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "NS_GAOL_DISPLAY",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {
-                            },
+                            ["events"] = "NS_GAOL_DISPLAY",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -18351,24 +18351,24 @@ wa.data['assignments'].data = {
                 ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
                 ["mirror"] = false,
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "3Me6Q5n6Y4D",
-                ["uid"] = "AM-3Me6Q5n6Y4D",
-                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                ["AMModified"] = true,
                 ["color"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 0.62999963760376,
                 },
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                ["xOffset"] = -548.87223052663,
+                ["AMOriginalUUID"] = "3Me6Q5n6Y4D",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Background",
-                ["xOffset"] = -548.87223052663,
+                ["parent"] = "Gaol Position Display",
                 ["alpha"] = 1,
                 ["width"] = 210.52668762207,
-                ["parent"] = "Gaol Position Display",
+                ["uid"] = "AM-3Me6Q5n6Y4D",
                 ["config"] = {
                 },
                 ["anchorFrameType"] = "SCREEN",
@@ -18429,11 +18429,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(0, 2) > 1\
@@ -18463,7 +18458,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_DISPLAY",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -18533,10 +18533,9 @@ wa.data['assignments'].data = {
                 ["mirror"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Gaol Background",
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "xyprx8pplPc",
-                ["alpha"] = 1,
+                ["AMModified"] = true,
+                ["xOffset"] = -83.458686827136,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
                 ["color"] = {
                     [1] = 1,
@@ -18544,6 +18543,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 1,
                 },
+                ["AMOriginalUUID"] = "xyprx8pplPc",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Display 1",
@@ -18552,9 +18552,9 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["parent"] = "Gaol Position Display",
                 ["uid"] = "AM-xyprx8pplPc",
-                ["xOffset"] = -83.458686827136,
                 ["config"] = {
                 },
+                ["alpha"] = 1,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -18610,11 +18610,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(0, 2) > 1\
@@ -18644,7 +18639,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_DISPLAY",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -18714,10 +18714,9 @@ wa.data['assignments'].data = {
                 ["mirror"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Gaol Background",
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "3TuRMLaiKrw",
-                ["alpha"] = 1,
+                ["AMModified"] = true,
+                ["xOffset"] = -30.075094140715,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
                 ["color"] = {
                     [1] = 1,
@@ -18725,6 +18724,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 1,
                 },
+                ["AMOriginalUUID"] = "3TuRMLaiKrw",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Display 2",
@@ -18733,9 +18733,9 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["parent"] = "Gaol Position Display",
                 ["uid"] = "AM-3TuRMLaiKrw",
-                ["xOffset"] = -30.075094140715,
                 ["config"] = {
                 },
+                ["alpha"] = 1,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -18791,11 +18791,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(0, 2) > 1\
@@ -18825,7 +18820,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_DISPLAY",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -18895,10 +18895,9 @@ wa.data['assignments'].data = {
                 ["mirror"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Gaol Background",
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "lnD4OWgrxHr",
-                ["alpha"] = 1,
+                ["AMModified"] = true,
+                ["xOffset"] = 27.067850894976,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
                 ["color"] = {
                     [1] = 1,
@@ -18906,6 +18905,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 1,
                 },
+                ["AMOriginalUUID"] = "lnD4OWgrxHr",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Display 3",
@@ -18914,9 +18914,9 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["parent"] = "Gaol Position Display",
                 ["uid"] = "AM-lnD4OWgrxHr",
-                ["xOffset"] = 27.067850894976,
                 ["config"] = {
                 },
+                ["alpha"] = 1,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -18972,11 +18972,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(0, 2) > 1\
@@ -19006,7 +19001,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_DISPLAY",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -19076,10 +19076,9 @@ wa.data['assignments'].data = {
                 ["mirror"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Gaol Background",
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "v311pahWuTh",
-                ["alpha"] = 1,
+                ["AMModified"] = true,
+                ["xOffset"] = 69.92480727074,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
                 ["color"] = {
                     [1] = 1,
@@ -19087,6 +19086,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 1,
                 },
+                ["AMOriginalUUID"] = "v311pahWuTh",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Display 4",
@@ -19095,9 +19095,9 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["parent"] = "Gaol Position Display",
                 ["uid"] = "AM-v311pahWuTh",
-                ["xOffset"] = 69.92480727074,
                 ["config"] = {
                 },
+                ["alpha"] = 1,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -19153,11 +19153,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local expires = 8\
@@ -19184,7 +19179,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_DISPLAY",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -19254,10 +19254,9 @@ wa.data['assignments'].data = {
                 ["mirror"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Gaol Background",
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "edgVYp7micZ",
-                ["alpha"] = 1,
+                ["AMModified"] = true,
+                ["xOffset"] = 4.5891091801298e-05,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
                 ["color"] = {
                     [1] = 1,
@@ -19265,6 +19264,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 1,
                 },
+                ["AMOriginalUUID"] = "edgVYp7micZ",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Fire Display 1",
@@ -19273,9 +19273,9 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["parent"] = "Gaol Position Display",
                 ["uid"] = "AM-edgVYp7micZ",
-                ["xOffset"] = 4.5891091801298e-05,
                 ["config"] = {
                 },
+                ["alpha"] = 1,
                 ["conditions"] = {
                 },
                 ["information"] = {
@@ -19313,11 +19313,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local expires = 8\
@@ -19344,7 +19339,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_DISPLAY",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -19414,10 +19414,9 @@ wa.data['assignments'].data = {
                 ["mirror"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:Gaol Background",
                 ["regionType"] = "texture",
-                ["AMModified"] = true,
                 ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "m5CjneI8Q34",
-                ["alpha"] = 1,
+                ["AMModified"] = true,
+                ["xOffset"] = -53.383294394324,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White_Border",
                 ["color"] = {
                     [1] = 1,
@@ -19425,6 +19424,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 1,
                 },
+                ["AMOriginalUUID"] = "m5CjneI8Q34",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Fire Display 2",
@@ -19433,9 +19433,9 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["parent"] = "Gaol Position Display",
                 ["uid"] = "AM-m5CjneI8Q34",
-                ["xOffset"] = -53.383294394324,
                 ["config"] = {
                 },
+                ["alpha"] = 1,
                 ["conditions"] = {
                 },
                 ["information"] = {
@@ -19453,7 +19453,6 @@ wa.data['assignments'].data = {
                 ["displayText"] = "%text (%p)",
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
-                ["AMModified"] = true,
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
                 ["url"] = "https://wago.io/NSUndermine/37",
@@ -19484,11 +19483,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)    \
        if e == \"OPTIONS\" then\
            local texts = {\"LEFT\", \"RIGHT\", \"MIDDLE\", \"FAR LEFT\", \"MIDDLE LEFT\", \"MIDDLE RIGHT\", \"FAR RIGHT\"}\
@@ -19545,7 +19539,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_SOAK NS_GAOL_TARGET",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -19555,7 +19554,6 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_format"] = "Number",
                 ["displayText_format_p_time_legacy_floor"] = true,
-                ["AMOriginalUUID"] = "AupLkPZfTKp",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -19577,9 +19575,8 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_p_time_precision"] = 1,
-                ["displayText_format_p_round_type"] = "ceil",
                 ["preferToUpdate"] = false,
-                ["font"] = "PT Sans Narrow Bold",
+                ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -19587,6 +19584,9 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_direction_format"] = "none",
+                ["font"] = "PT Sans Narrow Bold",
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "AupLkPZfTKp",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -19622,7 +19622,9 @@ wa.data['assignments'].data = {
                 ["shadowXOffset"] = 1,
                 ["conditions"] = {
                 },
-                ["automaticWidth"] = "Auto",
+                ["config"] = {
+                    ["tts"] = true,
+                },
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
                 ["color"] = {
@@ -19632,12 +19634,11 @@ wa.data['assignments'].data = {
                     [4] = 1,
                 },
                 ["wordWrap"] = "WordWrap",
-                ["config"] = {
-                    ["tts"] = true,
-                },
+                ["displayText_format_p_decimal_precision"] = 1,
                 ["shadowYOffset"] = -1,
                 ["anchorFrameParent"] = false,
-                ["displayText_format_p_decimal_precision"] = 1,
+                ["automaticWidth"] = "Auto",
+                ["justify"] = "LEFT",
                 ["authorOptions"] = {
                     [1] = {
                         ["type"] = "toggle",
@@ -19648,7 +19649,6 @@ wa.data['assignments'].data = {
                         ["width"] = 1,
                     },
                 },
-                ["justify"] = "LEFT",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Gaol Text & Saychat",
@@ -19684,7 +19684,6 @@ wa.data['assignments'].data = {
    %pos",
                 ["yOffset"] = 70,
                 ["anchorPoint"] = "CENTER",
-                ["AMModified"] = true,
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
                 ["url"] = "https://wago.io/NSUndermine/37",
@@ -19726,11 +19725,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)    \
        if e == \"OPTIONS\" then\
            local texts = {\"LEFT\", \"RIGHT\", \"MIDDLE\", \"FAR LEFT\", \"MIDDLE LEFT\", \"MIDDLE RIGHT\", \"FAR RIGHT\"}\
@@ -19785,7 +19779,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "NS_GAOL_HELP",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -19795,7 +19794,6 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_format"] = "Number",
                 ["displayText_format_p_time_legacy_floor"] = true,
-                ["AMOriginalUUID"] = "wfQv8wmP1YH",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -19817,9 +19815,8 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_p_time_precision"] = 1,
-                ["displayText_format_p_round_type"] = "ceil",
                 ["preferToUpdate"] = false,
-                ["font"] = "PT Sans Narrow Bold",
+                ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 37,
                 ["subRegions"] = {
                     [1] = {
@@ -19827,6 +19824,9 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_direction_format"] = "none",
+                ["font"] = "PT Sans Narrow Bold",
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "wfQv8wmP1YH",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {
@@ -19862,7 +19862,9 @@ wa.data['assignments'].data = {
                 ["shadowXOffset"] = 1,
                 ["conditions"] = {
                 },
-                ["automaticWidth"] = "Auto",
+                ["config"] = {
+                    ["tts"] = true,
+                },
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
                 ["color"] = {
@@ -19872,12 +19874,11 @@ wa.data['assignments'].data = {
                     [4] = 1,
                 },
                 ["wordWrap"] = "WordWrap",
-                ["config"] = {
-                    ["tts"] = true,
-                },
+                ["displayText_format_p_decimal_precision"] = 1,
                 ["shadowYOffset"] = -1,
                 ["anchorFrameParent"] = false,
-                ["displayText_format_p_decimal_precision"] = 1,
+                ["automaticWidth"] = "Auto",
+                ["justify"] = "LEFT",
                 ["authorOptions"] = {
                     [1] = {
                         ["type"] = "toggle",
@@ -19888,7 +19889,6 @@ wa.data['assignments'].data = {
                         ["width"] = 1,
                     },
                 },
-                ["justify"] = "LEFT",
                 ["semver"] = "1.0.36",
                 ["tocversion"] = 110100,
                 ["id"] = "Goal Helper Text",
@@ -20030,19 +20030,14 @@ wa.data['assignments'].data = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["custom_type"] = "stateupdate",
+                            ["subeventSuffix"] = "_CAST_START",
                             ["customVariables"] = "{\
        direction = \"string\",\
    }",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_type"] = "stateupdate",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)    \
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20060,8 +20055,9 @@ wa.data['assignments'].data = {
            aura_env.specs = NSAPI:GetSpecs()\
            aura_env.MRT()      \
            aura_env.casts = 0\
+           aura_env.active = true\
            \
-       elseif NSAPI and not NSAPI.disable then\
+       elseif NSAPI and aura_env.active and not NSAPI.disable then\
            if e == \"NS_ASSIGN_EVENT\" and ... and aura_env.id == ...then\
                aura_env.casts = aura_env.casts+1\
                table.sort(aura_env.affected, \
@@ -20116,7 +20112,7 @@ wa.data['assignments'].data = {
                        end\
                    end\
                elseif spellID == 463967 then -- bloodlust on boss\
-                   aura_env.found = false -- disable assignments in p2                \
+                   aura_env.active = false -- disable assignments in p2                \
                end\
            end\
        end\
@@ -20137,6 +20133,11 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
+                            ["spellIds"] = {
+                            },
                             ["events"] = "CLEU:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
                             ["debuffType"] = "HELPFUL",
                         },
@@ -20147,7 +20148,6 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_format"] = "Number",
                 ["internalVersion"] = 83,
-                ["AMModified"] = true,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -20168,8 +20168,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["AMOriginalUUID"] = "EPjFV4sIMf(",
-                ["shadowYOffset"] = -1,
+                ["displayText_format_p_time_precision"] = 1,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 37,
                 ["subRegions"] = {
@@ -20178,6 +20177,7 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_direction_format"] = "none",
+                ["shadowYOffset"] = -1,
                 ["load"] = {
                     ["difficulty"] = {
                         ["single"] = "mythic",
@@ -20205,12 +20205,7 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["fontSize"] = 60,
-                ["source"] = "import",
-                ["displayText_format_p_round_type"] = "ceil",
-                ["shadowXOffset"] = 1,
-                ["displayText_format_p_time_mod_rate"] = true,
+                ["AMModified"] = true,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -20263,39 +20258,45 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
+                ["fontSize"] = 60,
+                ["source"] = "import",
+                ["parent"] = "[7] Mug'Zee",
+                ["shadowXOffset"] = 1,
+                ["preferToUpdate"] = false,
+                ["displayText_format_p_round_type"] = "ceil",
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
-                ["displayText_format_p_time_legacy_floor"] = true,
-                ["automaticWidth"] = "Auto",
-                ["authorOptions"] = {
-                },
                 ["config"] = {
                 },
-                ["anchorFrameParent"] = false,
+                ["displayText_format_p_time_mod_rate"] = true,
                 ["selfPoint"] = "BOTTOM",
                 ["displayText_format_p_decimal_precision"] = 1,
+                ["anchorFrameParent"] = false,
+                ["authorOptions"] = {
+                },
                 ["xOffset"] = 0,
                 ["semver"] = "1.0.36",
+                ["justify"] = "LEFT",
                 ["tocversion"] = 110100,
                 ["id"] = "Frostshatter Spear Assign",
-                ["justify"] = "LEFT",
+                ["wordWrap"] = "WordWrap",
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
-                ["displayText_format_p_time_precision"] = 1,
+                ["displayText_format_p_time_legacy_floor"] = true,
                 ["uid"] = "AM-EPjFV4sIMf(",
-                ["parent"] = "[7] Mug'Zee",
-                ["displayText"] = "%direction (%p)",
+                ["automaticWidth"] = "Auto",
+                ["fixedWidth"] = 200,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "EPjFV4sIMf(",
                 ["information"] = {
                     ["forceEvents"] = false,
                 },
-                ["wordWrap"] = "WordWrap",
+                ["displayText"] = "%direction (%p)",
             },
             [69] = {
                 ["outline"] = "OUTLINE",
@@ -20378,11 +20379,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["names"] = {
-                            },
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local targeted = math.random(0, 2) > 1\
@@ -20437,7 +20433,12 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {
+                            },
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED NSAPI_ENCOUNTER_START",
+                            ["spellIds"] = {
+                            },
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -20448,8 +20449,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_format"] = "Number",
                 ["internalVersion"] = 83,
                 ["wordWrap"] = "WordWrap",
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "GR75iYagCrh",
+                ["displayText_format_p_time_precision"] = 1,
                 ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 37,
                 ["subRegions"] = {
@@ -20487,12 +20487,7 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
-                ["preferToUpdate"] = false,
-                ["fontSize"] = 50,
-                ["source"] = "import",
-                ["font"] = "PT Sans Narrow Bold",
-                ["shadowXOffset"] = 1,
-                ["displayText_format_p_time_legacy_floor"] = true,
+                ["AMModified"] = true,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -20612,14 +20607,18 @@ wa.data['assignments'].data = {
                         },
                     },
                 },
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["authorOptions"] = {
+                },
+                ["shadowXOffset"] = 1,
+                ["preferToUpdate"] = false,
+                ["font"] = "PT Sans Narrow Bold",
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
-                ["parent"] = "[7] Mug'Zee",
-                ["selfPoint"] = "BOTTOM",
-                ["automaticWidth"] = "Auto",
                 ["config"] = {
                 },
-                ["anchorFrameParent"] = false,
+                ["displayText_format_p_time_legacy_floor"] = true,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -20641,6 +20640,8 @@ wa.data['assignments'].data = {
                     },
                 },
                 ["displayText_format_p_decimal_precision"] = 1,
+                ["anchorFrameParent"] = false,
+                ["automaticWidth"] = "Auto",
                 ["color"] = {
                     [1] = 0.24705883860588,
                     [2] = 0.98823535442352,
@@ -20648,27 +20649,27 @@ wa.data['assignments'].data = {
                     [4] = 1,
                 },
                 ["semver"] = "1.0.36",
+                ["justify"] = "LEFT",
                 ["tocversion"] = 110100,
                 ["id"] = "Goblin-guided Rocket Assign",
-                ["justify"] = "LEFT",
+                ["displayText_format_p_time_mod_rate"] = true,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
-                ["displayText_format_p_time_precision"] = 1,
+                ["parent"] = "[7] Mug'Zee",
                 ["uid"] = "AM-GR75iYagCrh",
-                ["authorOptions"] = {
-                },
-                ["displayText"] = "SOAK ROCKET (%p)",
+                ["selfPoint"] = "BOTTOM",
+                ["fixedWidth"] = 200,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "GR75iYagCrh",
                 ["information"] = {
                     ["forceEvents"] = false,
                 },
-                ["displayText_format_p_time_mod_rate"] = true,
+                ["displayText"] = "SOAK ROCKET (%p)",
             },
             [70] = {
                 ["controlledChildren"] = {
@@ -20755,10 +20756,10 @@ wa.data['assignments'].data = {
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
                 ["yOffset"] = 0,
-                ["uid"] = "EUPhCuyeYVB",
                 ["borderInset"] = 1,
                 ["config"] = {
                 },
+                ["uid"] = "EUPhCuyeYVB",
                 ["conditions"] = {
                 },
                 ["information"] = {
@@ -20855,9 +20856,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "UNIT_SPELLCAST_START:boss1 NSAPI_ENCOUNTER_START TRIGGER:2 NS_ASSIGN_EVENT",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20919,6 +20917,9 @@ wa.data['assignments'].data = {
            end\
        end    \
    end",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "UNIT_SPELLCAST_START:boss1 NSAPI_ENCOUNTER_START TRIGGER:2 NS_ASSIGN_EVENT",
                             ["names"] = {
                             },
                             ["check"] = "event",
@@ -20960,6 +20961,17 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_format"] = "Number",
                 ["internalVersion"] = 83,
                 ["wordWrap"] = "WordWrap",
+                ["displayText"] = "SOAK (%p)",
+                ["displayText_format_p_round_type"] = "ceil",
+                ["version"] = 18,
+                ["subRegions"] = {
+                    [1] = {
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["authorOptions"] = {
+                },
+                ["AMModified"] = true,
                 ["load"] = {
                     ["use_encounterid"] = true,
                     ["use_never"] = true,
@@ -20967,6 +20979,7 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
+                    ["encounterid"] = "3016",
                     ["class"] = {
                         ["multi"] = {
                         },
@@ -20975,33 +20988,17 @@ wa.data['assignments'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["encounterid"] = "3016",
                     ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 18,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["displayText"] = "SOAK (%p)",
-                ["AMModified"] = true,
-                ["authorOptions"] = {
-                },
-                ["fixedWidth"] = 200,
+                ["AMOriginalUUID"] = "BFq2j82i1vl",
                 ["fontSize"] = 40,
                 ["source"] = "import",
                 ["selfPoint"] = "BOTTOM",
                 ["shadowXOffset"] = 1,
-                ["AMOriginalUUID"] = "BFq2j82i1vl",
                 ["parent"] = "[8] Gallywix",
-                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
-                ["regionType"] = "text",
-                ["uid"] = "AM-BFq2j82i1vl",
                 ["animation"] = {
                     ["start"] = {
                         ["easeStrength"] = 3,
@@ -21022,6 +21019,10 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none",
                     },
                 },
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["regionType"] = "text",
+                ["uid"] = "AM-BFq2j82i1vl",
+                ["fixedWidth"] = 200,
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["frameStrata"] = 1,
                 ["displayText_format_p_time_precision"] = 1,
