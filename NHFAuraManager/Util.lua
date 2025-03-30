@@ -222,6 +222,37 @@ AM.utils = {
         end
         return output
     end,
+    compareSemver = function(v1, v2)
+        -- -1 - older
+        -- 0 - equal
+        -- 1 - newer
+        local function splitVersion(version)
+            return version:match("(%d+)%.(%d+)%.(%d+)")
+        end
+
+        local major1, minor1, patch1 = splitVersion(v1)
+        local major2, minor2, patch2 = splitVersion(v2)
+
+        if tonumber(major1) > tonumber(major2) then
+            return 1
+        elseif tonumber(major1) < tonumber(major2) then
+            return -1
+        else
+            if tonumber(minor1) > tonumber(minor2) then
+                return 1
+            elseif tonumber(minor1) < tonumber(minor2) then
+                return -1
+            else
+                if tonumber(patch1) > tonumber(patch2) then
+                    return 1
+                elseif tonumber(patch1) < tonumber(patch2) then
+                    return -1
+                else
+                    return 0
+                end
+            end
+        end
+    end,
     -- From Weakauras AuraEnvironment.lua
     iterateGroupMembers = function(reversed, forceParty)
         local unit = (not forceParty and IsInRaid()) and 'raid' or 'party'

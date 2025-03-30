@@ -12,6 +12,7 @@ Init.lua
 Core.lua
 Storage/WeakAuras.lua
 Data.lua
+Comm.lua
 
 # Register media that is used in Weakauras
 Media.lua
