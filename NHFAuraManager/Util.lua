@@ -232,6 +232,9 @@ AM.utils = {
 
         local major1, minor1, patch1 = splitVersion(v1)
         local major2, minor2, patch2 = splitVersion(v2)
+        if (not tonumber(major1) or not tonumber(major2)) then
+            return 0
+        end
 
         if tonumber(major1) > tonumber(major2) then
             return 1

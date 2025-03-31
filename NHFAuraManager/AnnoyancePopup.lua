@@ -69,7 +69,7 @@ end
 
 popup.OnVersionReceive = function(self)
     return function(msgType, data)
-        if (msgType == 'VERSION_CHECK' and data.version ~= '@project-version@') then
+        if (msgType == 'VERSION_CHECK' and self.addonVersion ~= '@project-version@' and data.version ~= '@project-version@') then
             local check = AM.utils.compareSemver(self.addonVersion, data.version)
             if (check < 0 and not self.versionOODShown) then
                 self:ShowOutofDateAddon(string.format(
