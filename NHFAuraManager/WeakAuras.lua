@@ -86,15 +86,6 @@ WA.TraverseAuras = function(self, waData, returnTable, isNested)
 end
 
 WA.ModifyKeeperSettings = function(self, data)
-    local baseCurrentData = WeakAuras.GetData(data.d.id)
-    if (baseCurrentData) then
-        if (baseCurrentData.xOffset ~= data.d.xOffset) then
-            data.d.xOffset = baseCurrentData.xOffset
-        end
-        if (baseCurrentData.yOffset ~= data.d.yOffset) then
-            data.d.yOffset = baseCurrentData.yOffset
-        end
-    end
     if (not data.c) then
         return data
     end
@@ -105,14 +96,6 @@ WA.ModifyKeeperSettings = function(self, data)
                 if (not currentData.load['use_never'] and currentData.load['use_never'] ~= wa.load['use_never'] and (not wa.desc or not strfind('NHFEnable', wa.desc))) then
                     wa.load['use_never'] = currentData.load['use_never']
                 end
-            end
-        end
-        if (currentData) then
-            if (currentData.xOffset ~= wa.xOffset) then
-                wa.xOffset = currentData.xOffset
-            end
-            if (currentData.yOffset ~= wa.yOffset) then
-                wa.yOffset = currentData.yOffset
             end
         end
     end
