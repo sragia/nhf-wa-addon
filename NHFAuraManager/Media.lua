@@ -31,3 +31,4 @@ LSM:Register("sound", "|cffc334ebSoak - NHF|r", [[Interface\Addons\NHFAuraManage
 LSM:Register("sound", "|cffc334ebRun Out - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\RunOut.mp3]]);
 LSM:Register("sound", "|cffc334ebMove - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Move.mp3]]);
 LSM:Register("sound", "|cffc334ebDefensive - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Defensive.mp3]]);
+LSM:Register("sound", "|cffc334ebFire - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Fire.mp3]]);
