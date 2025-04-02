@@ -12,8 +12,8 @@ wa.data['generalLoU'].data = {
     ["uid"] = "AM-TKfAuaj1Fhw",
     ["name"] = "[NHF] Liberation of Undermine",
     ["isOptional"] = "1",
-    ["semver"] = "0.0.23",
-    ["version"] = "23",
+    ["semver"] = "0.0.24",
+    ["version"] = "24",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -66,7 +66,7 @@ wa.data['generalLoU'].data = {
             },
             ["internalVersion"] = 83,
             ["selfPoint"] = "CENTER",
-            ["version"] = "23",
+            ["version"] = "24",
             ["subRegions"] = {
             },
             ["load"] = {
@@ -124,7 +124,7 @@ wa.data['generalLoU'].data = {
             ["conditions"] = {
             },
             ["borderOffset"] = 4,
-            ["semver"] = "0.0.23",
+            ["semver"] = "0.0.24",
             ["tocversion"] = 110007,
             ["id"] = "[NHF] Liberation of Undermine",
             ["alpha"] = 1,
@@ -24665,33 +24665,6 @@ wa.data['generalLoU'].data = {
                 ["font"] = "Poppins SemiBold",
                 ["subRegions"] = {
                     [1] = {
-                        ["textureMirror"] = false,
-                        ["scale"] = 1,
-                        ["mirror"] = false,
-                        ["yOffset"] = 6,
-                        ["self_point"] = "CENTER",
-                        ["textureRotation"] = 0,
-                        ["textureVisible"] = true,
-                        ["anchor_mode"] = "area",
-                        ["anchor_area"] = "ALL",
-                        ["type"] = "subtexture",
-                        ["textureDesaturate"] = false,
-                        ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                        ["width"] = 32,
-                        ["textureBlendMode"] = "BLEND",
-                        ["textureColor"] = {
-                            [1] = 1,
-                            [2] = 0.023529414087534,
-                            [3] = 0,
-                            [4] = 1,
-                        },
-                        ["height"] = 32,
-                        ["anchor_point"] = "CENTER",
-                        ["rotate"] = false,
-                        ["textureRotate"] = false,
-                        ["xOffset"] = 4,
-                    },
-                    [2] = {
                         ["type"] = "subbackground",
                     },
                 },
@@ -24863,33 +24836,6 @@ wa.data['generalLoU'].data = {
                 ["font"] = "Poppins SemiBold",
                 ["subRegions"] = {
                     [1] = {
-                        ["textureMirror"] = false,
-                        ["scale"] = 1,
-                        ["mirror"] = false,
-                        ["yOffset"] = 6,
-                        ["self_point"] = "CENTER",
-                        ["textureRotation"] = 0,
-                        ["textureVisible"] = true,
-                        ["anchor_mode"] = "area",
-                        ["anchor_area"] = "ALL",
-                        ["type"] = "subtexture",
-                        ["textureDesaturate"] = false,
-                        ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                        ["width"] = 32,
-                        ["textureBlendMode"] = "BLEND",
-                        ["textureColor"] = {
-                            [1] = 0,
-                            [2] = 1,
-                            [3] = 0.97254908084869,
-                            [4] = 1,
-                        },
-                        ["height"] = 32,
-                        ["anchor_point"] = "CENTER",
-                        ["rotate"] = false,
-                        ["textureRotate"] = false,
-                        ["xOffset"] = 4,
-                    },
-                    [2] = {
                         ["type"] = "subbackground",
                     },
                 },
