@@ -5,6 +5,12 @@ LSM:Register("font", "Bahnschrift Semi Bold", [[Interface\Addons\NHFAuraManager\
 LSM:Register("font", "Poppins Bold", [[Interface\Addons\NHFAuraManager\Media\Fonts\Poppins-Bold.ttf]]);
 LSM:Register("font", "Poppins Medium", [[Interface\Addons\NHFAuraManager\Media\Fonts\Poppins-Medium.ttf]]);
 LSM:Register("font", "Poppins SemiBold", [[Interface\Addons\NHFAuraManager\Media\Fonts\Poppins-SemiBold.ttf]]);
+LSM:Register("font", "JetBrainsMono - ExtraBold",
+    [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-ExtraBold.ttf]]);
+LSM:Register("font", "JetBrainsMono - Bold",
+    [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-Bold.ttf]]);
+LSM:Register("font", "JetBrainsMono - Medium",
+    [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-Medium.ttf]]);
 
 -- Sounds
 LSM:Register("sound", "|cffc334ebTaunt - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Taunt.mp3]]);
