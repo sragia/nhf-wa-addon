@@ -42,3 +42,5 @@ LSM:Register("sound", "|cffc334ebCoin - NHF|r", [[Interface\Addons\NHFAuraManage
 LSM:Register("sound", "|cffc334ebBomb - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Bomb.mp3]]);
 LSM:Register("sound", "|cffc334ebFlame - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Flame.mp3]]);
 LSM:Register("sound", "|cffc334ebShock - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Shock.mp3]]);
+LSM:Register("sound", "|cffc334ebShock - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\Shock.mp3]]);
+LSM:Register("sound", "|cffc334ebStand in Fire - NHF|r", [[Interface\Addons\NHFAuraManager\Media\Sounds\StandInFire.mp3]]);
