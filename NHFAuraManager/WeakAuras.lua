@@ -98,13 +98,15 @@ WA.ModifyKeeperSettings = function(self, data)
     return data
 end
 
-WA.Import = function(self, data, callback)
+WA.Import = function(self, data, callback, fresh)
     if (not WeakAuras) then
         print('WeakAuras not installed/enabled')
         return
     end
     AM.utils.printOut('Importing ' .. data.d.id)
-    data = self:ModifyKeeperSettings(data)
+    if (not fresh) then
+        data = self:ModifyKeeperSettings(data)
+    end
     WeakAuras.Import(data, nil, callback)
 end
 

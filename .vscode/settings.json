@@ -23,6 +23,7 @@
         "ReloadUI",
         "RAID_CLASS_COLORS",
         "Add",
-        "IGNORED"
+        "IGNORED",
+        "FindInTable"
     ]
 }

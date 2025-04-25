@@ -43,7 +43,7 @@ wa.GetImportTableByUID = function(self, uid)
         print("Couldn't find data for UID: " .. uid)
     end
 
-    return data.import
+    return AM.utils.deepCloneTable(data.import)
 end
 
 wa.GetAurasForChecker = function(self)

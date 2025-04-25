@@ -46,6 +46,20 @@ AM.utils = {
         end
         return keys
     end,
+    deepCloneTable = function(orig)
+        local orig_type = type(orig)
+        local copy
+        if orig_type == 'table' then
+            copy = {}
+            for orig_key, orig_value in next, orig, nil do
+                copy[AM.utils.deepCloneTable(orig_key)] = AM.utils.deepCloneTable(orig_value)
+            end
+            setmetatable(copy, AM.utils.deepCloneTable(getmetatable(orig)))
+        else -- number, string, boolean, etc
+            copy = orig
+        end
+        return copy
+    end,
     animation = {
         getAnimationGroup = function(f)
             return f:CreateAnimationGroup();
