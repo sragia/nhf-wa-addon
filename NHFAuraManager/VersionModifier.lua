@@ -231,6 +231,11 @@ versionModifier.ModifyUUID = function(self, data)
         data.uid = string.format('AM-%s', data.uid)
         data.AMModified = true
     end
+    if (data.subRegions) then
+        for _, subRegion in pairs(data.subRegions) do
+            subRegion.amId = AM.utils.generateRandomString(8)
+        end
+    end
     if (data.controlledChildren) then
         for _, child in pairs(data.controlledChildren) do
             local childData = WeakAuras.GetData(child)

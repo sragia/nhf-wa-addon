@@ -7,7 +7,6 @@ local wa = AM:GetModule('wa-storage')
 wa.Init = function(self)
     --Transform data into iteratable table
     local t = {}
-    print('init', self.data)
     for _, v in AM.utils.spairs(self.data, function(t, a, b) return t[a].order < t[b].order end) do
         table.insert(t, v.data)
     end
@@ -128,6 +127,22 @@ end
 
 wa.GetFullData = function(self)
     return self.data
+end
+
+wa.GetAuraByUID = function(self, uid)
+    for _, baseData in ipairs(self.data) do
+        -- check if it's group
+        if (baseData.uid == uid) then
+            return baseData.import.d
+        end
+        -- check children
+        for _, child in ipairs(baseData.import.c) do
+            if (child.uid == uid) then
+                return child
+            end
+        end
+    end
+    return nil
 end
 
 wa.data = {}

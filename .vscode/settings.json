@@ -21,6 +21,8 @@
         "TableIsEmpty",
         "CLASS",
         "ReloadUI",
-        "RAID_CLASS_COLORS"
+        "RAID_CLASS_COLORS",
+        "Add",
+        "IGNORED"
     ]
 }

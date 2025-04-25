@@ -26,6 +26,8 @@ Frames/Window.lua
 Frames/ScrollFrame.lua
 Frames/WADisplay.lua
 
+UserConfigManager.lua
+
 WeakAuras.lua
 
 VersionChecker.lua
