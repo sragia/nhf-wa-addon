@@ -68,6 +68,7 @@ keyBindings.ClearBinding = function(self, macroName)
     if key2 then
         SetBinding(key2, nil, 1);
     end
+    DeleteMacro(macroName)
     AM.utils.printOut('Cleared keybind')
     SaveBindings(GetCurrentBindingSet());
 end
@@ -79,6 +80,7 @@ keyBindings.SetupWindow = function(self)
     self:AddPAInput();
     self:AddWorldMarkerInputs();
     self:AddPlayerPing();
+    self:AddTargetMarkerInputs();
 end
 
 keyBindings.AddPAInput = function(self)
@@ -212,7 +214,78 @@ keyBindings.AddPlayerPing = function(self)
     }, container)
     group:SetPoint('TOPLEFT', self.keybindFrames.paMacro, 'TOPRIGHT', 40, 0)
 
-    self.keybindFrames.playerPing = nil -- todo
+    self.keybindFrames.playerPing = group
+end
+
+keyBindings.AddTargetMarkerInputs = function(self)
+    local container = self.window.container
+    local macros = {
+        {
+            code = "/script SetRaidTarget('target', 1)",
+            name = '[NHF] Yellow Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt1}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 2)",
+            name = '[NHF] Orange Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt2}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 3)",
+            name = '[NHF] Purple Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt3}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 4)",
+            name = '[NHF] Green Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt4}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 5)",
+            name = '[NHF] Moon Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt5}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 6)",
+            name = '[NHF] Blue Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt6}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 7)",
+            name = '[NHF] Red Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt7}')
+        },
+        {
+            code = "/script SetRaidTarget('target', 8)",
+            name = '[NHF] Skull Target Marker',
+            label = C_ChatInfo.ReplaceIconAndGroupExpressions('{rt8}')
+        }
+    }
+    local frames = {}
+
+    for _, macro in ipairs(macros) do
+        local frame = keybind:Create({
+            name = macro.label,
+            onChange = function(key, f)
+                keyBindings:CreateOrUpdateMacro(macro.name,
+                    macro.code)
+                return keyBindings:SetKeybind(key, macro.name)
+            end,
+            onClear = function()
+                keyBindings:ClearBinding(macro.name)
+            end,
+            keybind = GetBindingKey('MACRO ' .. macro.name) or nil
+        }, container)
+        table.insert(frames, frame)
+    end
+
+    local group = inputGroup:Create({
+        name = 'Target Markers',
+        children = frames
+    }, container)
+    group:SetPoint('TOPLEFT', self.keybindFrames.playerPing, 'BOTTOMLEFT', 0, -20)
+
+    self.keybindFrames.targetMarkers = group
 end
 
 keyBindings.Show = function(self)
