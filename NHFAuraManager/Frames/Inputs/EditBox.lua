@@ -84,6 +84,9 @@ local function ConfigureFrame(f, options)
         if (not self:IsMouseOver()) then
             onLeave:Play()
         end
+        if (self.onFocusLost) then
+            self.onFocusLost(self:GetText())
+        end
     end)
     hoverContainer:Show()
 
@@ -93,7 +96,7 @@ end
 ---comment
 ---@param self EditBoxInput
 ---@param options any
-editBox.Create = function(self, options)
+editBox.Create = function(self, options, parent)
     local f = self.pool:Acquire()
     if (not f.configured) then
         ConfigureFrame(f, options)
@@ -103,8 +106,16 @@ editBox.Create = function(self, options)
         f:SetLabel(options.label)
     end
 
+    if (parent) then
+        f:SetParent(parent)
+    end
+
     if (options.initial) then
         f:SetEditorValue(options.initial)
+    end
+
+    if (options.onFocusLost) then
+        f.editBox.onFocusLost = options.onFocusLost
     end
 
     f:Show()

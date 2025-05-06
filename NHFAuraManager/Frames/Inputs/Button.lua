@@ -45,6 +45,8 @@ local function ConfigureFrame(f)
 
     local onHover = AM.utils.animation.fade(hover, 0.1, 0, 1)
     local onLeave = AM.utils.animation.fade(hover, 0.1, 1, 0)
+    f.onHover = onHover
+    f.onLeave = onLeave
 
     f:SetScript('OnEnter', function(self)
         onHover:Play()

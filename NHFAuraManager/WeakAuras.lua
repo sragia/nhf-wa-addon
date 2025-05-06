@@ -4,6 +4,9 @@ local AM = select(2, ...)
 ---@class WeakAuras
 local WA = AM:GetModule('weakauras')
 
+---@class UserConfigManager
+local userConfigManager = AM:GetModule('user-config-manager')
+
 --- Get All Available auras
 ---@param self unknown
 ---@param filters ?table
@@ -90,25 +93,20 @@ WA.ModifyKeeperSettings = function(self, data)
         return data
     end
     for _, wa in ipairs(data.c) do
-        local currentData = WeakAuras.GetData(wa.id)
-        if (wa.regionType ~= 'group' and wa.regionType ~= 'dynamicgroup') then
-            if (currentData) then
-                if (not currentData.load['use_never'] and currentData.load['use_never'] ~= wa.load['use_never'] and (not wa.desc or not strfind('NHFEnable', wa.desc))) then
-                    wa.load['use_never'] = currentData.load['use_never']
-                end
-            end
-        end
+        userConfigManager:ApplyUserConfig(wa)
     end
     return data
 end
 
-WA.Import = function(self, data, callback)
+WA.Import = function(self, data, callback, fresh)
     if (not WeakAuras) then
         print('WeakAuras not installed/enabled')
         return
     end
     AM.utils.printOut('Importing ' .. data.d.id)
-    data = self:ModifyKeeperSettings(data)
+    if (not fresh) then
+        data = self:ModifyKeeperSettings(data)
+    end
     WeakAuras.Import(data, nil, callback)
 end
 

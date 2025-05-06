@@ -16,6 +16,9 @@ local wa = AM:GetModule('weakauras')
 ---@class Manager
 local manager = AM:GetModule('manager')
 
+---@class TooltipInput
+local tooltip = AM:GetModule('frame-input-tooltip')
+
 ---@class WADisplayOptions : {name: string, uid: string, semver: string, version: string, formattedVersion: string, isOptional: boolean}
 
 waDisplay.Init = function(self)
@@ -49,24 +52,8 @@ local function configure(f)
     version:SetWidth(0)
     f.version = version
 
-    local isOptional = f:CreateFontString(nil, 'OVERLAY')
-    isOptional:SetFont(AM.const.fonts.DEFAULT, 9, 'OUTLINE')
-    isOptional:SetPoint('TOP', version, 'BOTTOM', 0, -1)
-    isOptional:SetWidth(0)
-    isOptional:SetText('Optional')
-    isOptional:Hide()
-    f.isOptional = isOptional
-
     f.SetWAVersion = function(self, version)
         self.version:SetText(version)
-    end
-
-    f.SetIsOptional = function(self, isOptional)
-        if (isOptional) then
-            self.isOptional:Show()
-        else
-            self.isOptional:Hide()
-        end
     end
 
     f.SetWAState = function(self, state)
@@ -77,7 +64,7 @@ local function configure(f)
         end
     end
 
-    local button = button:Create({
+    local importBtn = button:Create({
         text = 'Import',
         onClick = function()
             local data = waStorage:GetImportTableByUID(f.data.uid)
@@ -85,8 +72,42 @@ local function configure(f)
         end,
         color = { 0, 163 / 255, 19 / 255, 1 }
     }, f)
-    button:SetPoint('RIGHT', -5, 0)
-    f.button = button
+    importBtn:SetPoint('RIGHT', -5, 0)
+    f.importBtn = importBtn
+
+    local cleanImportBtn = button:Create({
+        text = 'Clean',
+        onClick = function()
+            local data = waStorage:GetImportTableByUID(f.data.uid)
+            wa:Import(data, function() manager:PopulateDisplays() end, true)
+        end,
+        size = { 60, 29 },
+        color = { 3 / 255, 186 / 255, 252 / 255, 1 }
+    }, f)
+    cleanImportBtn:SetPoint('RIGHT', importBtn, 'LEFT', -5, 0)
+    f.cleanImportBtn = cleanImportBtn
+
+    local importTooltip = tooltip:Get({ text = 'Import WeakAura while saving any changes you have made' }, importBtn)
+    importBtn:SetScript('OnEnter', function(self)
+        self.onHover:Play()
+        importTooltip:ShowTooltip()
+    end)
+    importBtn:SetScript('OnLeave', function(self)
+        self.onLeave:Play()
+        importTooltip:HideTooltip()
+    end)
+
+    local cleanTooltip = tooltip:Get({ text = 'Import Weakaura fresh, ignoring changes you have made' }, cleanImportBtn)
+    cleanImportBtn:SetScript('OnEnter', function(self)
+        self.onHover:Play()
+        cleanTooltip:ShowTooltip()
+    end)
+    cleanImportBtn:SetScript('OnLeave', function(self)
+        self.onLeave:Play()
+        cleanTooltip:HideTooltip()
+    end)
+
+
     f.configured = true
     f:Show()
 end
@@ -112,12 +133,15 @@ waDisplay.Create = function(self, options)
     f:SetWAName(options.name)
     if (not currentData or not currentData.version or tonumber(currentData.version or 0) < tonumber(options.version)) then
         f:SetWAState(false)
-        f:SetWAVersion(options.semver .. ' (Update)')
+        if (not currentData) then
+            f:SetWAVersion(options.semver .. ' \n(Missing)')
+        else
+            f:SetWAVersion(options.semver .. ' \n(Update)')
+        end
     else
         f:SetWAState(true)
         f:SetWAVersion(options.semver)
     end
-    f:SetIsOptional(options.isOptional)
     f:Show()
     return f
 end

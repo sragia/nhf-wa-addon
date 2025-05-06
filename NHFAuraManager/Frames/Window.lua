@@ -7,6 +7,9 @@ local AM = select(2, ...)
 --- @class WindowFrame
 local window = AM:GetModule('window-frame')
 
+---@class WindowManager
+local windowManager = AM:GetModule('window-manager')
+
 local addonVersion = C_AddOns.GetAddOnMetadata(addonName, "version")
 
 window.Init = function(self)
@@ -33,6 +36,7 @@ local configure = function(frame)
 
     frame.ShowWindow = function(self)
         self:Show()
+        windowManager:SetValidCenterPosition(self)
         self.fadeIn:Play()
     end
 
@@ -125,7 +129,7 @@ local configure = function(frame)
         container:SetPoint("TOPLEFT", 30, -50)
         container:SetPoint("BOTTOMRIGHT", -30, 30)
     end
-
+    windowManager:RegisterWindow(frame)
     frame.configured = true
 end
 

@@ -16,6 +16,9 @@ local waStorage = AM:GetModule('wa-storage')
 ---@class WADisplay
 local waDisplay = AM:GetModule('wa-display')
 
+---@class WADisplayHeader
+local waDisplayHeader = AM:GetModule('wa-display-header')
+
 ---@class AMButton
 local button = AM:GetModule('button')
 
@@ -25,10 +28,13 @@ local versionChecker = AM:GetModule('version-checker')
 ---@class EditBoxInput
 local editBox = AM:GetModule('edit-box-input')
 
+---@class KeyBindings
+local keyBindings = AM:GetModule('key-bindings')
+
 manager.waDisplays = {}
 
 manager.Init = function(self)
-    self.window = windowConstruct:Create()
+    self.window = windowConstruct:Create({ size = { 500, 580 } })
     self:Setup()
 end
 
@@ -38,7 +44,7 @@ manager.Setup = function(self)
     local container = self.window.container
 
     local checkVersionsBtn = button:Create({
-        text = 'Check versions',
+        text = 'Check versions (For RL/RA)',
         onClick = function()
             versionChecker:Show()
         end,
@@ -46,7 +52,18 @@ manager.Setup = function(self)
     }, container)
 
     checkVersionsBtn:SetPoint('TOPLEFT', 0, 0)
-    checkVersionsBtn:SetPoint('TOPRIGHT', -10, 0)
+    checkVersionsBtn:SetPoint('TOPRIGHT', container, 'TOP', -5, 0)
+
+    local keyBindingsBtn = button:Create({
+        text = 'Key Bindings',
+        onClick = function()
+            keyBindings:Show()
+        end,
+        color = { 0.47, 0.47, 0.47, 1 }
+    }, container)
+
+    keyBindingsBtn:SetPoint('TOPLEFT', container, 'TOP', 5, 0)
+    keyBindingsBtn:SetPoint('TOPRIGHT', container, 'TOPRIGHT', -10, 0)
 
     local scrollFrame = scrollFrameConstruct:Create()
     scrollFrame:SetParent(container)
@@ -83,7 +100,15 @@ manager.PopulateDisplays = function(self, container)
     self.waDisplays = {}
     local displays = waStorage:GetAurasForDisplay()
     local prev = nil
-    for _, display in ipairs(displays) do
+    local mandatoryHeader = waDisplayHeader:Create({
+        name = 'Mandatory',
+        tooltipText = 'These auras are mandatory to install. Required for all assignments.'
+    })
+    mandatoryHeader:SetParent(container)
+    mandatoryHeader:SetPoint('TOPLEFT', container, 'TOPLEFT', 0, -10)
+    mandatoryHeader:SetPoint('TOPRIGHT', container, 'TOPRIGHT', 0, -10)
+    prev = mandatoryHeader
+    for _, display in ipairs(tFilter(displays, function(v) return not v.isOptional end, true)) do
         local waDisplay = waDisplay:Create(display)
         waDisplay:SetParent(container)
         table.insert(self.waDisplays, waDisplay)
@@ -96,6 +121,30 @@ manager.PopulateDisplays = function(self, container)
             waDisplay:SetPoint('TOPRIGHT', container, 'TOPRIGHT', 0, -10)
         end
 
+        prev = waDisplay
+    end
+
+    local optionalHeader = waDisplayHeader:Create({
+        name = 'Optional',
+        tooltipText =
+        'Recommended to install, but not required.\nIncludes general use auras, like text timers and important buffs/debuffs.'
+    })
+    optionalHeader:SetParent(container)
+    optionalHeader:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -10)
+    optionalHeader:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -10)
+    prev = optionalHeader
+    for _, display in ipairs(tFilter(displays, function(v) return v.isOptional end, true)) do
+        local waDisplay = waDisplay:Create(display)
+        waDisplay:SetParent(container)
+        table.insert(self.waDisplays, waDisplay)
+
+        if (prev) then
+            waDisplay:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -10)
+            waDisplay:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -10)
+        else
+            waDisplay:SetPoint('TOPLEFT', container, 'TOPLEFT', 0, -10)
+            waDisplay:SetPoint('TOPRIGHT', container, 'TOPRIGHT', 0, -10)
+        end
 
         prev = waDisplay
     end
