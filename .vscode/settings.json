@@ -24,6 +24,9 @@
         "RAID_CLASS_COLORS",
         "Add",
         "IGNORED",
-        "FindInTable"
+        "FindInTable",
+        "CreateKeyChordStringUsingMetaKeyState",
+        "MACRO",
+        "Round"
     ]
 }

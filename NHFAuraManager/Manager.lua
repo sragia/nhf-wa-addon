@@ -28,6 +28,9 @@ local versionChecker = AM:GetModule('version-checker')
 ---@class EditBoxInput
 local editBox = AM:GetModule('edit-box-input')
 
+---@class KeyBindings
+local keyBindings = AM:GetModule('key-bindings')
+
 manager.waDisplays = {}
 
 manager.Init = function(self)
@@ -49,7 +52,18 @@ manager.Setup = function(self)
     }, container)
 
     checkVersionsBtn:SetPoint('TOPLEFT', 0, 0)
-    checkVersionsBtn:SetPoint('TOPRIGHT', -10, 0)
+    checkVersionsBtn:SetPoint('TOPRIGHT', container, 'TOP', -5, 0)
+
+    local keyBindingsBtn = button:Create({
+        text = 'Key Bindings',
+        onClick = function()
+            keyBindings:Show()
+        end,
+        color = { 0.47, 0.47, 0.47, 1 }
+    }, container)
+
+    keyBindingsBtn:SetPoint('TOPLEFT', container, 'TOP', 5, 0)
+    keyBindingsBtn:SetPoint('TOPRIGHT', container, 'TOPRIGHT', -10, 0)
 
     local scrollFrame = scrollFrameConstruct:Create()
     scrollFrame:SetParent(container)

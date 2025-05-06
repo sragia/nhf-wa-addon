@@ -22,11 +22,14 @@ Frames/Inputs/EditBox.lua
 Frames/Inputs/Toggle.lua
 Frames/Inputs/Button.lua
 Frames/Inputs/ToggleButton.lua
+Frames/Inputs/Keybind.lua
 Frames/CheckerRow.lua
+Frames/WindowManager.lua
 Frames/Window.lua
 Frames/ScrollFrame.lua
 Frames/WADisplayHeader.lua
 Frames/WADisplay.lua
+Frames/InputGroup.lua
 
 UserConfigManager.lua
 
@@ -40,5 +43,6 @@ DuplicatesChecker.lua
 Cmd.lua
 BossModDisable.lua
 AnnoyancePopup.lua
+KeyBindings.lua
 
 Storage/Auras/Auras.xml
