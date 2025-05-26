@@ -13,6 +13,9 @@ local data = AM:GetModule('data')
 ---@class Cmd
 local cmd = AM:GetModule('cmd')
 
+---@class SoundLoader
+local soundLoader = AM:GetModule('sound-loader')
+
 local libDB = LibStub("LibDBIcon-1.0")
 local libDataBroker = LibStub("LibDataBroker-1.1")
 
@@ -24,6 +27,8 @@ function SlashCmdList.NHFAURAMANAGER(msg)
         local showMinimap = data:GetDataByKey('showMinimap')
         data:SetDataByKey('showMinimap', not showMinimap)
         cmd:RefreshMinimap()
+    elseif (msg == 'load-sounds') then
+        soundLoader:PlayAllSounds()
     else
         manager:Show()
     end

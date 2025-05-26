@@ -39,6 +39,7 @@ VersionChecker.lua
 Manager.lua
 VersionModifier.lua
 DuplicatesChecker.lua
+SoundsLoader.lua
 
 Cmd.lua
 BossModDisable.lua
