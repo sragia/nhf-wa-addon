@@ -23,6 +23,7 @@ Frames/Inputs/Toggle.lua
 Frames/Inputs/Button.lua
 Frames/Inputs/ToggleButton.lua
 Frames/Inputs/Keybind.lua
+Frames/Inputs/Dropdown.lua
 Frames/CheckerRow.lua
 Frames/WindowManager.lua
 Frames/Window.lua
@@ -40,6 +41,8 @@ Manager.lua
 VersionModifier.lua
 DuplicatesChecker.lua
 SoundsLoader.lua
+
+RaidManagement/RaidManagement.xml
 
 Cmd.lua
 BossModDisable.lua

@@ -31,6 +31,9 @@ local editBox = AM:GetModule('edit-box-input')
 ---@class KeyBindings
 local keyBindings = AM:GetModule('key-bindings')
 
+---@class RaidManagement
+local raidManagement = AM:GetModule('raid-management')
+
 manager.waDisplays = {}
 
 manager.Init = function(self)
@@ -43,16 +46,16 @@ manager.Setup = function(self)
 
     local container = self.window.container
 
-    local checkVersionsBtn = button:Create({
-        text = 'Check versions (For RL/RA)',
+    local raidManagementBtn = button:Create({
+        text = 'Raid Management',
         onClick = function()
-            versionChecker:Show()
+            raidManagement:Show()
         end,
         color = { 161 / 255, 3 / 255, 252 / 255, 1 }
     }, container)
 
-    checkVersionsBtn:SetPoint('TOPLEFT', 0, 0)
-    checkVersionsBtn:SetPoint('TOPRIGHT', container, 'TOP', -5, 0)
+    raidManagementBtn:SetPoint('TOPLEFT', 0, 0)
+    raidManagementBtn:SetPoint('TOPRIGHT', container, 'TOP', -5, 0)
 
     local keyBindingsBtn = button:Create({
         text = 'Key Bindings',
@@ -67,7 +70,7 @@ manager.Setup = function(self)
 
     local scrollFrame = scrollFrameConstruct:Create()
     scrollFrame:SetParent(container)
-    scrollFrame:SetPoint('TOPLEFT', checkVersionsBtn, 'BOTTOMLEFT', 0, -10)
+    scrollFrame:SetPoint('TOPLEFT', raidManagementBtn, 'BOTTOMLEFT', 0, -10)
     scrollFrame:SetPoint('BOTTOMRIGHT', -10, 40)
 
     scrollFrame:UpdateScrollChild(container:GetWidth() - 20, container:GetHeight() - 100)

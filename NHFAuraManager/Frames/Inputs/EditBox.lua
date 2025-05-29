@@ -21,7 +21,7 @@ local function ConfigureFrame(f, options)
     input:SetTextInsets(10, 10, 0, 0)
     local bgTex = input:CreateTexture(nil, 'BACKGROUND')
     bgTex:SetTexture(AM.const.textures.frame.inputs.editboxBg)
-    bgTex:SetVertexColor(0, 0, 0, 0.6)
+    bgTex:SetVertexColor(0.25, 0.25, 0.25, 0.6)
     bgTex:SetTexCoord(6 / 512, 506 / 512, 5 / 64, 58 / 64)
     bgTex:SetAllPoints()
 

@@ -2,7 +2,7 @@ local addonName = ...
 ---@class AuraManager
 local AM = select(2, ...)
 
----@class WindowOptions : {size?: table<number>, title?: string}
+---@class WindowOptions : {size?: table<number>, title?: string, hideVersion?: boolean}
 
 --- @class WindowFrame
 local window = AM:GetModule('window-frame')
@@ -73,6 +73,14 @@ local configure = function(frame)
         version:SetText(addonVersion)
 
         frame.logo = logo
+
+        frame.HideVersion = function(self, hide)
+            if (hide) then
+                version:Hide()
+            else
+                version:Show()
+            end
+        end
     end
 
     if (not frame.resizeBtn) then
@@ -149,6 +157,10 @@ window.Create = function(self, options)
 
     if (options and options.title) then
         f:SetTitle(options.title)
+    end
+
+    if (options and options.hideVersion) then
+        f:HideVersion(options.hideVersion)
     end
 
     return f

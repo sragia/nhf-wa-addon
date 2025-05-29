@@ -15,6 +15,7 @@ AM.const = {
                 editboxHover = [[Interface/Addons/NHFAuraManager/Textures/editbox-hover]],
                 buttonBg = [[Interface/Addons/NHFAuraManager/Textures/button-bg.png]],
                 buttonHover = [[Interface/Addons/NHFAuraManager/Textures/button-hover.png]],
+                chevronDown = [[Interface/Addons/NHFAuraManager/Textures/chevronDown]],
             }
         },
         logo = [[Interface/Addons/NHFAuraManager/Textures/logo.png]],
