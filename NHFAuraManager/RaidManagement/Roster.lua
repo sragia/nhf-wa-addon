@@ -99,7 +99,7 @@ roster.SetupWindow = function(self)
     end
 
     local swapBtn = button:Create({
-        text = 'Swap (Press Twice)',
+        text = 'Swap',
         onClick = function()
             self:DoTheSwap()
         end,
@@ -194,7 +194,7 @@ roster.FindCurrentIndex = function(self, playerName)
     for i = 1, GetNumGroupMembers() do
         local name, _, group = GetRaidRosterInfo(i)
         if (Ambiguate(name, 'short') == playerName) then
-            return i
+            return i, group
         end
     end
 
@@ -219,36 +219,43 @@ roster.DoTheSwap = function(self)
     end
 
     for _, player in ipairs(self.toSwapOut) do
-        local currentIndx = self:FindCurrentIndex(player)
-        if (currentIndx) then
+        local currentIndx, currentGrp = self:FindCurrentIndex(player)
+        if (currentIndx and currentGrp) then
             if (groupAmounts[6] < 5) then
                 SetRaidSubgroup(currentIndx, 6)
                 groupAmounts[6] = groupAmounts[6] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             elseif (groupAmounts[7] < 5) then
                 SetRaidSubgroup(currentIndx, 7)
                 groupAmounts[7] = groupAmounts[7] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             elseif (groupAmounts[8] < 5) then
                 SetRaidSubgroup(currentIndx, 8)
                 groupAmounts[8] = groupAmounts[8] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             end
         end
     end
     for _, player in ipairs(self.toSwapIn) do
-        local currentIndx = self:FindCurrentIndex(player)
+        local currentIndx, currentGrp = self:FindCurrentIndex(player)
 
-        if (currentIndx) then
+        if (currentIndx and currentGrp) then
             if (groupAmounts[1] < 5) then
                 SetRaidSubgroup(currentIndx, 1)
                 groupAmounts[1] = groupAmounts[1] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             elseif (groupAmounts[2] < 5) then
                 SetRaidSubgroup(currentIndx, 2)
                 groupAmounts[2] = groupAmounts[2] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             elseif (groupAmounts[3] < 5) then
                 SetRaidSubgroup(currentIndx, 3)
                 groupAmounts[3] = groupAmounts[3] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             elseif (groupAmounts[4] < 5) then
                 SetRaidSubgroup(currentIndx, 4)
                 groupAmounts[4] = groupAmounts[4] + 1
+                groupAmounts[currentGrp] = groupAmounts[currentGrp] - 1
             end
         end
     end
