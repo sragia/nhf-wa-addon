@@ -52,29 +52,119 @@ local function setValueWithKeyPath(data, keyPath, value)
         path[i] = normalizedKey
     end
 
+    -- Crime against humanity
     if (#path == 1) then
         data[path[1]] = value
     elseif (#path == 2) then
+        data[path[1]] = data[path[1]] or {}
         data[path[1]][path[2]] = value
     elseif (#path == 3) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
         data[path[1]][path[2]][path[3]] = value
     elseif (#path == 4) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
         data[path[1]][path[2]][path[3]][path[4]] = value
     elseif (#path == 5) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]] = value
     elseif (#path == 6) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = value
     elseif (#path == 7) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = data[path[1]][path[2]][path[3]][path[4]][path[5]]
+            [path[6]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]] = value
     elseif (#path == 8) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = data[path[1]][path[2]][path[3]][path[4]][path[5]]
+            [path[6]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]] = data[path[1]][path[2]][path[3]][path[4]]
+            [path[5]][path[6]][path[7]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]] = value
     elseif (#path == 9) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = data[path[1]][path[2]][path[3]][path[4]][path[5]]
+            [path[6]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]] = data[path[1]][path[2]][path[3]][path[4]]
+            [path[5]][path[6]][path[7]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]] = data[path[1]][path[2]][path[3]]
+            [path[4]][path[5]][path[6]][path[7]][path[8]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] = value
     elseif (#path == 10) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = data[path[1]][path[2]][path[3]][path[4]][path[5]]
+            [path[6]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]] = data[path[1]][path[2]][path[3]][path[4]]
+            [path[5]][path[6]][path[7]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]] = data[path[1]][path[2]][path[3]]
+            [path[4]][path[5]][path[6]][path[7]][path[8]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] = data[path[1]][path[2]]
+            [path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]] = value
     elseif (#path == 11) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = data[path[1]][path[2]][path[3]][path[4]][path[5]]
+            [path[6]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]] = data[path[1]][path[2]][path[3]][path[4]]
+            [path[5]][path[6]][path[7]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]] = data[path[1]][path[2]][path[3]]
+            [path[4]][path[5]][path[6]][path[7]][path[8]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] = data[path[1]][path[2]]
+            [path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]] = data[path[1]]
+            [path[2]]
+            [path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]][path[11]] = value
     elseif (#path == 12) then
+        data[path[1]] = data[path[1]] or {}
+        data[path[1]][path[2]] = data[path[1]][path[2]] or {}
+        data[path[1]][path[2]][path[3]] = data[path[1]][path[2]][path[3]] or {}
+        data[path[1]][path[2]][path[3]][path[4]] = data[path[1]][path[2]][path[3]][path[4]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]] = data[path[1]][path[2]][path[3]][path[4]][path[5]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]] = data[path[1]][path[2]][path[3]][path[4]][path[5]]
+            [path[6]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]] = data[path[1]][path[2]][path[3]][path[4]]
+            [path[5]][path[6]][path[7]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]] = data[path[1]][path[2]][path[3]]
+            [path[4]][path[5]][path[6]][path[7]][path[8]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] = data[path[1]][path[2]]
+            [path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]] = data[path[1]]
+            [path[2]]
+            [path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]] or {}
+        data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]][path[11]] = data
+        [path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]][path[11]] or {}
         data[path[1]][path[2]][path[3]][path[4]][path[5]][path[6]][path[7]][path[8]][path[9]][path[10]][path[11]][path[12]] =
             value
     end
