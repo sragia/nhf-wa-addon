@@ -95,14 +95,21 @@ local configure = function(frame)
 
     if (not frame.close) then
         local closeContainer = CreateFrame("Button", nil, frame)
-        closeContainer:SetSize(43, 28)
-        closeContainer:SetPoint("TOPRIGHT")
+        closeContainer:SetSize(38, 28)
+        closeContainer:SetPoint("TOPRIGHT", -8, -5)
 
         local texture = closeContainer:CreateTexture(nil, "BACKGROUND")
-        texture:SetTexture(AM.const.textures.frame.closeBtn)
-        texture:SetVertexColor(0.8, 0.8, 0.8, 0.8)
-        texture:SetTexCoord(10.5 / 64, 53 / 64, 18 / 64, 45.5 / 64)
+        texture:SetTexture(AM.const.textures.frame.inputs.buttonBg)
+        texture:SetTextureSliceMargins(20, 20, 20, 20)
+        texture:SetTextureSliceMode(Enum.UITextureSliceMode.Stretched)
+        texture:SetVertexColor(110 / 255, 4 / 255, 0, 1)
         texture:SetAllPoints()
+
+        local closeIcon = closeContainer:CreateTexture(nil, "OVERLAY")
+        closeIcon:SetTexture(AM.const.textures.frame.closeIcon)
+        closeIcon:SetVertexColor(1, 1, 1, 1)
+        closeIcon:SetPoint("CENTER")
+        closeIcon:SetSize(10, 10)
 
         closeContainer:EnableMouse(true)
         closeContainer:SetMouseClickEnabled()
@@ -112,10 +119,10 @@ local configure = function(frame)
             end
         end)
         closeContainer:SetScript("OnEnter", function(_)
-            texture:SetVertexColor(1, 1, 1, 1)
+            texture:SetVertexColor(186 / 255, 6 / 255, 0, 1)
         end)
         closeContainer:SetScript("OnLeave", function(_)
-            texture:SetVertexColor(0.8, 0.8, 0.8, 0.8)
+            texture:SetVertexColor(110 / 255, 4 / 255, 0, 1)
         end)
 
         frame.close = closeContainer

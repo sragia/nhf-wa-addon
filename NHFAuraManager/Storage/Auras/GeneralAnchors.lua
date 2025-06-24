@@ -12,8 +12,9 @@ wa.data['generalAnchors'].data = {
     ["uid"] = "AM-(wb6kX0Wrc9",
     ["name"] = "[NHF] Anchors",
     ["isOptional"] = "1",
-    ["semver"] = "0.0.3",
-    ["version"] = "3",
+    ["isAnchor"] = "1",
+    ["semver"] = "0.0.5",
+    ["version"] = "5",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -26,8 +27,7 @@ wa.data['generalAnchors'].data = {
                 [7] = "ExalityCircle",
             },
             ["borderBackdrop"] = "Blizzard Tooltip",
-            ["authorOptions"] = {
-            },
+            ["xOffset"] = 0,
             ["preferToUpdate"] = false,
             ["yOffset"] = 0,
             ["anchorPoint"] = "CENTER",
@@ -40,36 +40,36 @@ wa.data['generalAnchors'].data = {
             ["actions"] = {
                 ["start"] = {
                 },
-                ["init"] = {
-                },
                 ["finish"] = {
+                },
+                ["init"] = {
                 },
             },
             ["triggers"] = {
                 [1] = {
                     ["trigger"] = {
-                        ["type"] = "aura2",
-                        ["subeventSuffix"] = "_CAST_START",
-                        ["event"] = "Health",
                         ["names"] = {
                         },
+                        ["type"] = "aura2",
                         ["spellIds"] = {
                         },
-                        ["subeventPrefix"] = "SPELL",
+                        ["subeventSuffix"] = "_CAST_START",
                         ["unit"] = "player",
+                        ["subeventPrefix"] = "SPELL",
+                        ["event"] = "Health",
                         ["debuffType"] = "HELPFUL",
                     },
                     ["untrigger"] = {
                     },
                 },
             },
-            ["internalVersion"] = 83,
+            ["internalVersion"] = 85,
             ["selfPoint"] = "CENTER",
-            ["version"] = "3",
+            ["version"] = "5",
             ["subRegions"] = {
             },
             ["load"] = {
-                ["size"] = {
+                ["talent"] = {
                     ["multi"] = {
                     },
                 },
@@ -81,7 +81,7 @@ wa.data['generalAnchors'].data = {
                     ["multi"] = {
                     },
                 },
-                ["talent"] = {
+                ["size"] = {
                     ["multi"] = {
                     },
                 },
@@ -98,43 +98,45 @@ wa.data['generalAnchors'].data = {
             ["borderEdge"] = "Square Full White",
             ["regionType"] = "group",
             ["borderSize"] = 2,
-            ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-icon.png",
-            ["xOffset"] = 0,
-            ["AMisOptional"] = "1",
-            ["conditions"] = {
-            },
-            ["borderOffset"] = 4,
-            ["semver"] = "0.0.3",
-            ["tocversion"] = 110007,
-            ["id"] = "[NHF] Anchors",
-            ["alpha"] = 1,
-            ["frameStrata"] = 1,
-            ["anchorFrameType"] = "SCREEN",
-            ["uid"] = "AM-(wb6kX0Wrc9",
-            ["config"] = {
-            },
-            ["borderInset"] = 1,
             ["animation"] = {
                 ["start"] = {
-                    ["type"] = "none",
                     ["easeStrength"] = 3,
+                    ["type"] = "none",
                     ["duration_type"] = "seconds",
                     ["easeType"] = "none",
                 },
                 ["main"] = {
-                    ["type"] = "none",
                     ["easeStrength"] = 3,
+                    ["type"] = "none",
                     ["duration_type"] = "seconds",
                     ["easeType"] = "none",
                 },
                 ["finish"] = {
-                    ["type"] = "none",
                     ["easeStrength"] = 3,
+                    ["type"] = "none",
                     ["duration_type"] = "seconds",
                     ["easeType"] = "none",
                 },
             },
+            ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-icon.png",
+            ["AMisOptional"] = "1",
             ["AMOriginalUUID"] = "(wb6kX0Wrc9",
+            ["authorOptions"] = {
+            },
+            ["borderOffset"] = 4,
+            ["semver"] = "0.0.5",
+            ["tocversion"] = 110007,
+            ["id"] = "[NHF] Anchors",
+            ["borderInset"] = 1,
+            ["alpha"] = 1,
+            ["anchorFrameType"] = "SCREEN",
+            ["AMisAnchor"] = "1",
+            ["uid"] = "AM-(wb6kX0Wrc9",
+            ["config"] = {
+            },
+            ["frameStrata"] = 1,
+            ["conditions"] = {
+            },
             ["information"] = {
             },
             ["AMModified"] = true,
@@ -146,34 +148,39 @@ wa.data['generalAnchors'].data = {
                     [1] = "ExalityRaidBar Sample",
                 },
                 ["borderBackdrop"] = "Blizzard Tooltip",
-                ["xOffset"] = 240.99987792969,
+                ["parent"] = "[NHF] Anchors",
                 ["preferToUpdate"] = false,
                 ["yOffset"] = -150.99987792969,
                 ["sortHybridTable"] = {
                     ["ExalityRaidBar Sample"] = false,
                 },
-                ["fullCircle"] = true,
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["space"] = 2,
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["init"] = {
-                    },
                     ["finish"] = {
+                    },
+                    ["init"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["names"] = {
                             },
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
-                            ["subeventPrefix"] = "SPELL",
+                            ["subeventSuffix"] = "_CAST_START",
                             ["unit"] = "player",
+                            ["subeventPrefix"] = "SPELL",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -181,42 +188,23 @@ wa.data['generalAnchors'].data = {
                     },
                 },
                 ["columnSpace"] = 1,
-                ["internalVersion"] = 83,
-                ["sort"] = "none",
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["align"] = "CENTER",
-                ["alpha"] = 1,
+                ["internalVersion"] = 85,
+                ["xOffset"] = 240.99987792969,
                 ["useLimit"] = false,
-                ["arcLength"] = 360,
-                ["stagger"] = 0,
+                ["align"] = "CENTER",
+                ["frameStrata"] = 1,
                 ["radius"] = 200,
-                ["conditions"] = {
+                ["anchorPoint"] = "CENTER",
+                ["rotation"] = 0,
+                ["authorOptions"] = {
                 },
+                ["AMOriginalUUID"] = "dKfOTrMFe1s",
                 ["subRegions"] = {
                 },
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Anchors",
+                ["stagger"] = 0,
+                ["fullCircle"] = true,
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -228,67 +216,86 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["borderInset"] = 1,
+                ["config"] = {
+                },
                 ["backdropColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 0.5,
                 },
-                ["AMModified"] = true,
+                ["selfPoint"] = "BOTTOM",
                 ["source"] = "import",
-                ["authorOptions"] = {
-                },
+                ["animate"] = false,
                 ["scale"] = 1,
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["stepAngle"] = 15,
                 ["borderSize"] = 2,
-                ["limit"] = 5,
-                ["frameStrata"] = 1,
-                ["animate"] = false,
+                ["sort"] = "none",
+                ["gridWidth"] = 5,
+                ["regionType"] = "dynamicgroup",
                 ["constantFactor"] = "RADIUS",
-                ["rowSpace"] = 1,
-                ["borderOffset"] = 4,
                 ["uid"] = "AM-dKfOTrMFe1s",
+                ["borderOffset"] = 4,
+                ["rowSpace"] = 1,
                 ["tocversion"] = 110007,
                 ["id"] = "ExalityRaidBar",
-                ["regionType"] = "dynamicgroup",
-                ["gridWidth"] = 5,
+                ["limit"] = 5,
+                ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["anchorPoint"] = "CENTER",
-                ["config"] = {
+                ["AMModified"] = true,
+                ["borderInset"] = 1,
+                ["arcLength"] = 360,
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
                 },
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
+                ["conditions"] = {
                 },
-                ["gridType"] = "RD",
-                ["AMOriginalUUID"] = "dKfOTrMFe1s",
                 ["information"] = {
                 },
-                ["selfPoint"] = "BOTTOM",
+                ["gridType"] = "RD",
             },
             [2] = {
                 ["sparkWidth"] = 2,
                 ["sparkOffsetX"] = 0,
-                ["parent"] = "ExalityRaidBar",
-                ["preferToUpdate"] = false,
+                ["xOffset"] = 0,
+                ["adjustedMax"] = "",
                 ["adjustedMin"] = "",
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
-                ["gradientOrientation"] = "HORIZONTAL",
+                ["backgroundColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 0.5,
+                },
                 ["sparkRotation"] = 0,
                 ["sparkRotationMode"] = "AUTO",
-                ["xOffset"] = 0,
+                ["iconSource"] = -1,
                 ["icon"] = true,
                 ["triggers"] = {
                     [1] = {
@@ -298,31 +305,31 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
-                            ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 3 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 5,\
-                          duration = 5,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
                             ["events"] = "OPTIONS",
-                            ["custom_type"] = "stateupdate",
-                            ["check"] = "event",
+                            ["custom"] = "function(allstates)\
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 3 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 5,\
+                duration = 5,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
                             ["names"] = {
                             },
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
                             ["spellIds"] = {
                             },
                             ["debuffType"] = "HELPFUL",
@@ -338,17 +345,32 @@ wa.data['generalAnchors'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
-                ["selfPoint"] = "CENTER",
-                ["barColor2"] = {
-                    [1] = 1,
-                    [2] = 0.23921570181847,
-                    [3] = 0,
-                    [4] = 1,
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["information"] = {
                 },
                 ["AMOriginalUUID"] = "FDNJyb4yL1E",
                 ["barColor"] = {
@@ -358,52 +380,36 @@ wa.data['generalAnchors'].data = {
                     [4] = 1,
                 },
                 ["desaturate"] = false,
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["enableGradient"] = true,
+                ["selfPoint"] = "CENTER",
+                ["preferToUpdate"] = false,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
+                        ["amId"] = "VjoVPkY3",
                     },
                     [2] = {
                         ["type"] = "subforeground",
+                        ["amId"] = "Uccl5BQk",
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["anchorXOffset"] = 0,
                         ["anchorYOffset"] = 0,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = -5,
                         ["text_color"] = {
@@ -412,22 +418,22 @@ wa.data['generalAnchors'].data = {
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_text_format_p_format"] = "timed",
                         ["text_shadowYOffset"] = -1,
-                        ["text_shadowXOffset"] = 1,
-                        ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
                         ["text_text_format_p_time_format"] = 0,
-                        ["text_fontType"] = "None",
+                        ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 19,
-                        ["anchorXOffset"] = 0,
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "WmV4RHQY",
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 1,
-                        ["text_text"] = "TEXT GOES HERE",
+                        ["text_text"] = "Text Goes Here",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
@@ -448,35 +454,50 @@ wa.data['generalAnchors'].data = {
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
+                        ["text_font"] = "Poppins Bold",
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
+                        ["text_fontType"] = "OUTLINE",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["text_fontType"] = "None",
+                        ["amId"] = "6yJR3qYz",
                     },
                     [5] = {
                         ["border_offset"] = 0,
-                        ["type"] = "subborder",
+                        ["border_size"] = 1,
                         ["border_visible"] = true,
+                        ["anchor_area"] = "bar",
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["anchor_area"] = "bar",
-                        ["border_edge"] = "1 Pixel",
-                        ["border_size"] = 1,
+                        ["amId"] = "tSY5F9t7",
+                        ["border_edge"] = "Square Full White",
+                        ["type"] = "subborder",
                     },
                 },
-                ["height"] = 32.999893188477,
+                ["gradientOrientation"] = "HORIZONTAL",
                 ["textureSource"] = "LSM",
+                ["AMModified"] = true,
+                ["sparkBlendMode"] = "ADD",
+                ["useAdjustededMax"] = false,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                    },
+                },
+                ["source"] = "import",
+                ["uid"] = "AM-FDNJyb4yL1E",
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -488,38 +509,24 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["sparkBlendMode"] = "ADD",
-                ["useAdjustededMax"] = false,
+                ["width"] = 266.00021362305,
+                ["alpha"] = 1,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "aurabar",
                 ["authorOptions"] = {
                 },
-                ["source"] = "import",
+                ["id"] = "ExalityRaidBar Sample",
+                ["icon_side"] = "RIGHT",
                 ["sparkColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
-                },
-                ["displayIcon"] = 2065603,
-                ["anchorFrameType"] = "SCREEN",
-                ["frameStrata"] = 2,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "aurabar",
-                ["config"] = {
-                },
-                ["id"] = "ExalityRaidBar Sample",
-                ["icon_side"] = "RIGHT",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
                 },
                 ["sparkHeight"] = 30,
                 ["texture"] = "Clean",
@@ -528,58 +535,62 @@ wa.data['generalAnchors'].data = {
                 ["spark"] = true,
                 ["tocversion"] = 110007,
                 ["sparkHidden"] = "NEVER",
-                ["adjustedMax"] = "",
-                ["alpha"] = 1,
-                ["width"] = 266.00021362305,
-                ["AMModified"] = true,
-                ["uid"] = "AM-FDNJyb4yL1E",
-                ["inverse"] = false,
-                ["backgroundColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 0.5,
+                ["enableGradient"] = true,
+                ["frameStrata"] = 2,
+                ["anchorFrameType"] = "SCREEN",
+                ["height"] = 32.999893188477,
+                ["config"] = {
                 },
-                ["orientation"] = "HORIZONTAL",
+                ["inverse"] = false,
                 ["conditions"] = {
                 },
-                ["information"] = {
+                ["orientation"] = "HORIZONTAL",
+                ["displayIcon"] = 2065603,
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 0.23921570181847,
+                    [3] = 0,
+                    [4] = 1,
                 },
-                ["iconSource"] = -1,
+                ["parent"] = "ExalityRaidBar",
             },
             [3] = {
-                ["grow"] = "UP",
+                ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "ExalityRaidBar Sample 2",
                 },
                 ["borderBackdrop"] = "Blizzard Tooltip",
-                ["authorOptions"] = {
-                },
+                ["xOffset"] = 0,
                 ["preferToUpdate"] = false,
-                ["yOffset"] = 288.99987792969,
-                ["gridType"] = "RD",
-                ["fullCircle"] = true,
+                ["yOffset"] = 312,
+                ["anchorPoint"] = "CENTER",
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["space"] = 2,
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["finish"] = {
-                    },
                     ["init"] = {
+                    },
+                    ["finish"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["unit"] = "player",
                             ["names"] = {
                             },
-                            ["unit"] = "player",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -587,77 +598,44 @@ wa.data['generalAnchors'].data = {
                     },
                 },
                 ["columnSpace"] = 1,
-                ["internalVersion"] = 83,
-                ["stepAngle"] = 15,
+                ["radius"] = 200,
+                ["limit"] = 5,
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
                 ["align"] = "CENTER",
-                ["frameStrata"] = 1,
-                ["useLimit"] = false,
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
+                ["gridWidth"] = 5,
+                ["internalVersion"] = 85,
+                ["authorOptions"] = {
                 },
                 ["rotation"] = 0,
-                ["xOffset"] = 0,
-                ["conditions"] = {
-                },
+                ["useLimit"] = false,
+                ["AMOriginalUUID"] = "XzpTNqVJ73)",
                 ["subRegions"] = {
                 },
-                ["arcLength"] = 360,
-                ["stagger"] = 0,
-                ["AMModified"] = true,
-                ["config"] = {
+                ["sortHybridTable"] = {
+                    ["ExalityRaidBar Sample"] = false,
                 },
-                ["backdropColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 0.5,
-                },
-                ["parent"] = "[NHF] Anchors",
-                ["animate"] = false,
-                ["source"] = "import",
-                ["scale"] = 1,
-                ["centerType"] = "LR",
-                ["border"] = false,
-                ["borderEdge"] = "Square Full White",
-                ["regionType"] = "dynamicgroup",
-                ["borderSize"] = 2,
-                ["sort"] = "none",
-                ["gridWidth"] = 5,
-                ["limit"] = 5,
-                ["constantFactor"] = "RADIUS",
-                ["rowSpace"] = 1,
-                ["borderOffset"] = 4,
-                ["uid"] = "AM-XzpTNqVJ73)",
-                ["tocversion"] = 110007,
-                ["id"] = "ExalitySpecialBar",
-                ["selfPoint"] = "BOTTOM",
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
+                ["grow"] = "UP",
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -669,39 +647,63 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
                 },
                 ["borderInset"] = 1,
-                ["anchorPoint"] = "CENTER",
-                ["sortHybridTable"] = {
-                    ["ExalityRaidBar Sample 2"] = false,
+                ["backdropColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.5,
                 },
-                ["AMOriginalUUID"] = "XzpTNqVJ73)",
+                ["fullCircle"] = true,
+                ["animate"] = false,
+                ["AMModified"] = true,
+                ["scale"] = 1,
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["stepAngle"] = 15,
+                ["borderSize"] = 2,
+                ["sort"] = "none",
+                ["alpha"] = 1,
+                ["source"] = "import",
+                ["constantFactor"] = "RADIUS",
+                ["uid"] = "AM-XzpTNqVJ73)",
+                ["borderOffset"] = 4,
+                ["rowSpace"] = 1,
+                ["tocversion"] = 110007,
+                ["id"] = "ExalitySpecialBar",
+                ["regionType"] = "dynamicgroup",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["selfPoint"] = "BOTTOM",
+                ["config"] = {
+                },
+                ["stagger"] = 0,
+                ["parent"] = "[NHF] Anchors",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["radius"] = 200,
+                ["gridType"] = "RD",
             },
             [4] = {
-                ["sparkWidth"] = 10,
+                ["sparkWidth"] = 2,
                 ["iconSource"] = -1,
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = false,
+                ["parent"] = "ExalitySpecialBar",
+                ["adjustedMax"] = "",
                 ["adjustedMin"] = "",
-                ["yOffset"] = 0,
+                ["yOffset"] = -7.916690826416,
                 ["anchorPoint"] = "CENTER",
-                ["height"] = 20,
+                ["height"] = 35.833381652832,
                 ["sparkRotation"] = 0,
                 ["sparkRotationMode"] = "AUTO",
                 ["sparkOffsetX"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 0.5,
-                },
+                ["icon"] = false,
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
@@ -710,31 +712,31 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
-                            ["events"] = "OPTIONS",
                             ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 3 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 5,\
-                          duration = 5,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 3 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 5,\
+                duration = 5,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
+                            ["events"] = "OPTIONS",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
                             ["names"] = {
                             },
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
                             ["spellIds"] = {
                             },
                             ["debuffType"] = "HELPFUL",
@@ -750,13 +752,36 @@ wa.data['generalAnchors'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["enableGradient"] = false,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
-                ["selfPoint"] = "CENTER",
-                ["information"] = {
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 0,
+                    [4] = 1,
                 },
                 ["conditions"] = {
                 },
@@ -767,76 +792,59 @@ wa.data['generalAnchors'].data = {
                     [4] = 1,
                 },
                 ["desaturate"] = false,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["authorOptions"] = {
-                },
+                ["displayIcon"] = 2065603,
+                ["xOffset"] = -3.0517578125e-05,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
+                        ["amId"] = "I17IDmJZ",
                     },
                     [2] = {
                         ["type"] = "subforeground",
+                        ["amId"] = "2lnUCpAP",
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
-                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_text_format_p_format"] = "timed",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["type"] = "subtext",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["type"] = "subtext",
-                        ["anchorXOffset"] = 0,
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowYOffset"] = -1,
-                        ["text_shadowXOffset"] = 1,
+                        ["text_text_format_p_time_format"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["text_fontType"] = "None",
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "INNER_RIGHT",
-                        ["text_fontSize"] = 12,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["anchorYOffset"] = 0,
+                        ["text_fontSize"] = 18,
+                        ["anchorXOffset"] = 0,
+                        ["amId"] = "yikeMaZs",
                     },
                     [4] = {
-                        ["text_shadowXOffset"] = 1,
-                        ["text_text"] = "TEXT GOES HERE",
+                        ["text_text_format_n_format"] = "none",
+                        ["text_text"] = "Text Goes Here",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
@@ -860,35 +868,71 @@ wa.data['generalAnchors'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["text_fontType"] = "None",
+                        ["text_shadowXOffset"] = 1,
+                        ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "INNER_LEFT",
-                        ["text_fontSize"] = 10,
+                        ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["text_text_format_n_format"] = "none",
+                        ["amId"] = "uT6Wj78V",
                     },
                     [5] = {
                         ["border_size"] = 1,
-                        ["border_offset"] = 0,
+                        ["type"] = "subborder",
                         ["anchor_area"] = "bar",
+                        ["border_visible"] = true,
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["border_visible"] = true,
-                        ["border_edge"] = "1 Pixel",
-                        ["type"] = "subborder",
+                        ["amId"] = "jQLYCiNS",
+                        ["border_edge"] = "Square Full White",
+                        ["border_offset"] = 0,
                     },
                 },
                 ["gradientOrientation"] = "HORIZONTAL",
                 ["textureSource"] = "LSM",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
+                ["AMModified"] = true,
+                ["sparkBlendMode"] = "ADD",
+                ["useAdjustededMax"] = false,
+                ["enableGradient"] = false,
+                ["source"] = "import",
+                ["uid"] = "AM-(5u9H)LU0Pj",
+                ["backgroundColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 0.5,
+                },
+                ["anchorFrameType"] = "SCREEN",
+                ["alpha"] = 1,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "aurabar",
+                ["actions"] = {
+                    ["start"] = {
                     },
-                    ["spec"] = {
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
+                ["id"] = "ExalityRaidBar Sample 2",
+                ["icon_side"] = "RIGHT",
+                ["config"] = {
+                },
+                ["sparkHeight"] = 35,
+                ["texture"] = "Clean",
+                ["zoom"] = 0.3,
+                ["sparkTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                ["spark"] = true,
+                ["tocversion"] = 110007,
+                ["sparkHidden"] = "NEVER",
+                ["selfPoint"] = "CENTER",
+                ["frameStrata"] = 2,
+                ["width"] = 499.99993896484,
+                ["load"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -896,64 +940,32 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["sparkBlendMode"] = "ADD",
-                ["useAdjustededMax"] = false,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["source"] = "import",
-                ["config"] = {
-                },
-                ["internalVersion"] = 83,
-                ["width"] = 500,
-                ["alpha"] = 1,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "aurabar",
-                ["icon"] = false,
-                ["id"] = "ExalityRaidBar Sample 2",
-                ["icon_side"] = "RIGHT",
                 ["sparkColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["sparkHeight"] = 30,
-                ["texture"] = "Clean",
-                ["zoom"] = 0.3,
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["spark"] = false,
-                ["tocversion"] = 110007,
-                ["sparkHidden"] = "NEVER",
-                ["parent"] = "ExalitySpecialBar",
-                ["frameStrata"] = 2,
-                ["anchorFrameType"] = "SCREEN",
-                ["AMModified"] = true,
-                ["uid"] = "AM-(5u9H)LU0Pj",
                 ["inverse"] = false,
-                ["displayIcon"] = 2065603,
+                ["authorOptions"] = {
+                },
                 ["orientation"] = "HORIZONTAL",
                 ["AMOriginalUUID"] = "(5u9H)LU0Pj",
-                ["barColor2"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 0,
-                    [4] = 1,
+                ["information"] = {
                 },
-                ["adjustedMax"] = "",
+                ["preferToUpdate"] = false,
             },
             [5] = {
-                ["arcLength"] = 360,
+                ["grow"] = "UP",
                 ["controlledChildren"] = {
                     [1] = "ExalityIconSmall Sample",
                 },
@@ -961,31 +973,29 @@ wa.data['generalAnchors'].data = {
                 ["parent"] = "[NHF] Anchors",
                 ["preferToUpdate"] = false,
                 ["yOffset"] = -60.999938964844,
-                ["sortHybridTable"] = {
-                    ["ExalityIconSmall Sample"] = false,
-                },
+                ["gridType"] = "RD",
                 ["fullCircle"] = true,
-                ["space"] = 10,
+                ["rowSpace"] = 1,
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["finish"] = {
-                    },
                     ["init"] = {
+                    },
+                    ["finish"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["unit"] = "player",
                             ["names"] = {
                             },
-                            ["unit"] = "player",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -993,25 +1003,9 @@ wa.data['generalAnchors'].data = {
                     },
                 },
                 ["columnSpace"] = 1,
-                ["internalVersion"] = 83,
-                ["source"] = "import",
-                ["useLimit"] = false,
-                ["align"] = "CENTER",
-                ["config"] = {
-                },
-                ["rotation"] = 0,
-                ["gridType"] = "RD",
-                ["stagger"] = 0,
-                ["xOffset"] = -255,
-                ["conditions"] = {
-                },
-                ["subRegions"] = {
-                },
-                ["authorOptions"] = {
-                },
-                ["rowSpace"] = 1,
+                ["internalVersion"] = 85,
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -1023,25 +1017,56 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["borderInset"] = 1,
+                ["selfPoint"] = "BOTTOM",
+                ["align"] = "CENTER",
+                ["authorOptions"] = {
+                },
+                ["useLimit"] = false,
+                ["space"] = 10,
+                ["rotation"] = 0,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["AMOriginalUUID"] = ")WlFS7G0mzK",
+                ["subRegions"] = {
+                },
+                ["sortHybridTable"] = {
+                    ["ExalityIconSmall Sample"] = false,
+                },
+                ["xOffset"] = -255,
+                ["AMModified"] = true,
+                ["uid"] = "AM-)WlFS7G0mzK",
                 ["backdropColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 0.5,
                 },
-                ["AMModified"] = true,
-                ["animate"] = false,
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
+                ["arcLength"] = 360,
+                ["source"] = "import",
+                ["config"] = {
                 },
                 ["scale"] = 1,
                 ["centerType"] = "LR",
@@ -1050,44 +1075,31 @@ wa.data['generalAnchors'].data = {
                 ["stepAngle"] = 15,
                 ["borderSize"] = 2,
                 ["sort"] = "none",
-                ["alpha"] = 1,
-                ["anchorPoint"] = "CENTER",
+                ["gridWidth"] = 5,
+                ["limit"] = 5,
                 ["constantFactor"] = "RADIUS",
-                ["frameStrata"] = 1,
-                ["borderOffset"] = 4,
                 ["regionType"] = "dynamicgroup",
+                ["borderOffset"] = 4,
+                ["frameStrata"] = 1,
                 ["tocversion"] = 110007,
                 ["id"] = "ExalityIconSmall",
-                ["limit"] = 5,
-                ["gridWidth"] = 5,
+                ["animate"] = false,
+                ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["uid"] = "AM-)WlFS7G0mzK",
+                ["stagger"] = 0,
+                ["borderInset"] = 1,
+                ["anchorPoint"] = "CENTER",
                 ["radius"] = 200,
-                ["selfPoint"] = "BOTTOM",
-                ["AMOriginalUUID"] = ")WlFS7G0mzK",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["grow"] = "UP",
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
             },
             [6] = {
                 ["sparkWidth"] = 10,
@@ -1097,11 +1109,13 @@ wa.data['generalAnchors'].data = {
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["sparkRotation"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 0.5,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
                 },
                 ["icon_color"] = {
                     [1] = 1,
@@ -1122,7 +1136,7 @@ wa.data['generalAnchors'].data = {
                 ["sparkOffsetY"] = 0,
                 ["gradientOrientation"] = "HORIZONTAL",
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -1134,7 +1148,7 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -1149,12 +1163,7 @@ wa.data['generalAnchors'].data = {
                 ["uid"] = "AM-KW671Xt5ZEt",
                 ["displayIcon"] = 2065603,
                 ["sparkOffsetX"] = 0,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
+                ["parent"] = "ExalityIconSmall",
                 ["adjustedMin"] = "",
                 ["cooldownSwipe"] = true,
                 ["sparkRotationMode"] = "AUTO",
@@ -1167,33 +1176,33 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
+                            ["custom"] = "function(allstates)\
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 3 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 40,\
+                duration = 40,\
+                stacks = 2,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
                             ["spellIds"] = {
                             },
-                            ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 3 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 40,\
-                          duration = 40,\
-                          stacks = 2,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
                             ["names"] = {
                             },
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
                             ["events"] = "OPTIONS",
                             ["debuffType"] = "HELPFUL",
                         },
@@ -1202,27 +1211,27 @@ wa.data['generalAnchors'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
@@ -1230,109 +1239,81 @@ wa.data['generalAnchors'].data = {
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
+                        ["amId"] = "ft0tEn1s",
                     },
                     [2] = {
                         ["type"] = "subborder",
-                        ["border_size"] = 1,
+                        ["border_offset"] = 0,
                         ["border_visible"] = true,
+                        ["anchor_area"] = "bar",
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["anchor_area"] = "bar",
+                        ["amId"] = "mDABgtQM",
                         ["border_edge"] = "1 Pixel",
-                        ["border_offset"] = 0,
+                        ["border_size"] = 1,
                     },
                     [3] = {
-                        ["text_shadowXOffset"] = 1,
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
                         ["text_text_format_p_format"] = "timed",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
-                        ["text_justify"] = "CENTER",
-                        ["rotateText"] = "NONE",
-                        ["text_text_format_p_time_mod_rate"] = true,
-                        ["type"] = "subtext",
-                        ["anchorXOffset"] = 0,
-                        ["text_color"] = {
-                            [1] = 1,
-                            [2] = 1,
-                            [3] = 1,
-                            [4] = 1,
-                        },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_time_precision"] = 1,
-                        ["text_shadowYOffset"] = -1,
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_fontType"] = "None",
-                        ["text_text_format_p_time_format"] = 0,
-                        ["text_visible"] = true,
-                        ["anchor_point"] = "INNER_TOPLEFT",
-                        ["text_fontSize"] = 14,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_legacy_floor"] = false,
-                    },
-                    [4] = {
-                        ["text_shadowXOffset"] = 1,
-                        ["text_text"] = "TEXT",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["anchorYOffset"] = 0,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_shadowXOffset"] = 1,
                         ["text_shadowYOffset"] = -1,
+                        ["text_fontType"] = "OUTLINE",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["text_fontType"] = "OUTLINE",
-                        ["anchor_point"] = "BOTTOM",
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["text_text_format_n_format"] = "none",
+                        ["amId"] = "St0Qjhxs",
                     },
-                    [5] = {
-                        ["text_shadowXOffset"] = 0,
+                    [4] = {
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_text_format_s_format"] = "none",
                         ["text_text"] = "%s",
+                        ["text_text_format_p_format"] = "timed",
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = -5,
                         ["text_color"] = {
@@ -1341,28 +1322,66 @@ wa.data['generalAnchors'].data = {
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_anchorYOffset"] = -5,
-                        ["text_text_format_p_time_legacy_floor"] = false,
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_fontType"] = "OUTLINE",
-                        ["text_visible"] = true,
                         ["text_shadowYOffset"] = 0,
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_visible"] = true,
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_text_format_p_time_format"] = 0,
                         ["anchor_point"] = "TOPRIGHT",
-                        ["text_fontSize"] = 19,
+                        ["text_fontSize"] = 18,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "e27iBSCG",
+                    },
+                    [5] = {
+                        ["text_text_format_n_format"] = "none",
+                        ["text_text"] = "Text",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["type"] = "subtext",
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "Poppins Bold",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_visible"] = true,
+                        ["text_shadowXOffset"] = 1,
+                        ["text_fontType"] = "OUTLINE",
+                        ["anchor_point"] = "BOTTOM",
+                        ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["text_text_format_p_format"] = "timed",
+                        ["amId"] = "GHpFBNEE",
                     },
                 },
-                ["height"] = 40,
+                ["height"] = 50,
                 ["textureSource"] = "LSM",
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
-                ["cooldown"] = true,
+                ["AMOriginalUUID"] = "KW671Xt5ZEt",
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["sparkColor"] = {
                     [1] = 1,
                     [2] = 1,
@@ -1370,76 +1389,78 @@ wa.data['generalAnchors'].data = {
                     [4] = 1,
                 },
                 ["icon_side"] = "RIGHT",
-                ["information"] = {
+                ["config"] = {
                 },
-                ["parent"] = "ExalityIconSmall",
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
                 ["sparkHeight"] = 30,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
+                ["zoom"] = 0.3,
+                ["backgroundColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 0.5,
                 },
-                ["icon"] = false,
-                ["sparkHidden"] = "NEVER",
-                ["anchorFrameType"] = "SCREEN",
-                ["frameStrata"] = 2,
-                ["id"] = "ExalityIconSmall Sample",
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["useCooldownModRate"] = true,
-                ["width"] = 60,
                 ["authorOptions"] = {
                 },
-                ["zoom"] = 0.3,
+                ["width"] = 50,
+                ["useCooldownModRate"] = true,
+                ["sparkHidden"] = "NEVER",
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                ["frameStrata"] = 2,
+                ["anchorFrameType"] = "SCREEN",
+                ["id"] = "ExalityIconSmall Sample",
+                ["icon"] = false,
                 ["inverse"] = true,
-                ["config"] = {
+                ["information"] = {
                 },
                 ["orientation"] = "HORIZONTAL",
                 ["conditions"] = {
                 },
-                ["barColor2"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 0,
-                    [4] = 1,
-                },
-                ["AMOriginalUUID"] = "KW671Xt5ZEt",
+                ["cooldown"] = true,
+                ["preferToUpdate"] = false,
             },
             [7] = {
-                ["grow"] = "UP",
+                ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "ExalityIconSmallCoTank Sample",
                 },
                 ["borderBackdrop"] = "Blizzard Tooltip",
-                ["authorOptions"] = {
-                },
+                ["xOffset"] = -318.00018310547,
                 ["preferToUpdate"] = false,
                 ["yOffset"] = -59.999816894531,
-                ["anchorPoint"] = "CENTER",
-                ["fullCircle"] = true,
+                ["gridType"] = "RD",
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["space"] = 10,
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["init"] = {
-                    },
                     ["finish"] = {
+                    },
+                    ["init"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["names"] = {
                             },
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
-                            ["subeventPrefix"] = "SPELL",
+                            ["subeventSuffix"] = "_CAST_START",
                             ["unit"] = "player",
+                            ["subeventPrefix"] = "SPELL",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -1448,75 +1469,41 @@ wa.data['generalAnchors'].data = {
                 },
                 ["columnSpace"] = 1,
                 ["radius"] = 200,
-                ["regionType"] = "dynamicgroup",
-                ["selfPoint"] = "BOTTOM",
+                ["sort"] = "none",
+                ["useLimit"] = false,
                 ["align"] = "CENTER",
-                ["alpha"] = 1,
-                ["sortHybridTable"] = {
-                    ["ExalityIconSmallCoTank Sample"] = false,
-                },
-                ["arcLength"] = 360,
+                ["frameStrata"] = 1,
+                ["fullCircle"] = true,
+                ["selfPoint"] = "BOTTOM",
                 ["stagger"] = 0,
-                ["xOffset"] = -318.00018310547,
-                ["conditions"] = {
+                ["authorOptions"] = {
                 },
+                ["AMOriginalUUID"] = "CLvoB66yi(o",
                 ["subRegions"] = {
                 },
+                ["rotation"] = 0,
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["internalVersion"] = 83,
-                ["AMModified"] = true,
-                ["borderInset"] = 1,
-                ["backdropColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 0.5,
-                },
-                ["config"] = {
-                },
-                ["animate"] = false,
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
-                ["scale"] = 1,
-                ["centerType"] = "LR",
-                ["border"] = false,
-                ["borderEdge"] = "Square Full White",
-                ["stepAngle"] = 15,
-                ["borderSize"] = 2,
-                ["limit"] = 5,
-                ["frameStrata"] = 1,
-                ["sort"] = "none",
-                ["constantFactor"] = "RADIUS",
-                ["rowSpace"] = 1,
-                ["borderOffset"] = 4,
-                ["source"] = "import",
-                ["tocversion"] = 110007,
-                ["id"] = "ExalityIconSmallCoTank",
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -1528,21 +1515,51 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["gridWidth"] = 5,
-                ["anchorFrameType"] = "SCREEN",
-                ["parent"] = "[NHF] Anchors",
                 ["uid"] = "AM-CLvoB66yi(o",
-                ["useLimit"] = false,
-                ["rotation"] = 0,
-                ["AMOriginalUUID"] = "CLvoB66yi(o",
+                ["backdropColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.5,
+                },
+                ["AMModified"] = true,
+                ["animate"] = false,
+                ["anchorPoint"] = "CENTER",
+                ["scale"] = 1,
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["regionType"] = "dynamicgroup",
+                ["borderSize"] = 2,
+                ["limit"] = 5,
+                ["gridWidth"] = 5,
+                ["internalVersion"] = 85,
+                ["constantFactor"] = "RADIUS",
+                ["source"] = "import",
+                ["borderOffset"] = 4,
+                ["rowSpace"] = 1,
+                ["tocversion"] = 110007,
+                ["id"] = "ExalityIconSmallCoTank",
+                ["stepAngle"] = 15,
+                ["alpha"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["config"] = {
+                },
+                ["borderInset"] = 1,
+                ["parent"] = "[NHF] Anchors",
+                ["grow"] = "UP",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["gridType"] = "RD",
+                ["sortHybridTable"] = {
+                    ["ExalityIconSmallCoTank Sample"] = false,
+                },
             },
             [8] = {
                 ["sparkWidth"] = 10,
@@ -1553,7 +1570,14 @@ wa.data['generalAnchors'].data = {
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["sparkRotation"] = 0,
-                ["icon"] = false,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                    },
+                },
                 ["icon_color"] = {
                     [1] = 1,
                     [2] = 1,
@@ -1573,7 +1597,7 @@ wa.data['generalAnchors'].data = {
                 ["sparkOffsetY"] = 0,
                 ["gradientOrientation"] = "HORIZONTAL",
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -1585,7 +1609,7 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -1606,16 +1630,7 @@ wa.data['generalAnchors'].data = {
                     [3] = 0.69803923368454,
                     [4] = 1,
                 },
-                ["customText"] = "function()\
-              local u = aura_env.state.unit\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
-              end\
-              \
-              if aura_env.state and u then\
-                  return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
-              end\
-          end",
+                ["adjustedMin"] = "",
                 ["cooldownSwipe"] = true,
                 ["sparkRotationMode"] = "AUTO",
                 ["cooldownEdge"] = false,
@@ -1627,33 +1642,33 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
-                            ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 3 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 40,\
-                          duration = 40,\
-                          stacks = 2,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
                             ["spellIds"] = {
                             },
-                            ["custom_type"] = "stateupdate",
-                            ["check"] = "event",
+                            ["custom"] = "function(allstates)\
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 3 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 40,\
+                duration = 40,\
+                stacks = 2,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
                             ["names"] = {
                             },
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
                             ["events"] = "OPTIONS",
                             ["debuffType"] = "HELPFUL",
                         },
@@ -1662,27 +1677,27 @@ wa.data['generalAnchors'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
@@ -1690,61 +1705,64 @@ wa.data['generalAnchors'].data = {
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
+                        ["amId"] = "LlCk3rvx",
                     },
                     [2] = {
                         ["border_size"] = 1,
-                        ["border_offset"] = 0,
+                        ["type"] = "subborder",
                         ["border_visible"] = true,
+                        ["anchor_area"] = "bar",
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["anchor_area"] = "bar",
+                        ["amId"] = "TOrcouvr",
                         ["border_edge"] = "1 Pixel",
-                        ["type"] = "subborder",
+                        ["border_offset"] = 0,
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
-                        ["text_text_format_p_time_mod_rate"] = true,
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
-                        ["text_justify"] = "CENTER",
-                        ["rotateText"] = "NONE",
-                        ["text_text_format_p_time_legacy_floor"] = false,
-                        ["type"] = "subtext",
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["text_color"] = {
-                            [1] = 1,
-                            [2] = 1,
-                            [3] = 1,
-                            [4] = 1,
-                        },
-                        ["text_font"] = "Poppins SemiBold",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["text_shadowYOffset"] = -1,
-                        ["text_shadowXOffset"] = 1,
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_fontType"] = "None",
-                        ["text_text_format_p_time_format"] = 0,
-                        ["text_visible"] = true,
-                        ["anchor_point"] = "INNER_TOPLEFT",
-                        ["text_fontSize"] = 14,
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["anchorXOffset"] = 0,
+                        ["type"] = "subtext",
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_text_format_p_format"] = "timed",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_visible"] = true,
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_shadowXOffset"] = 1,
+                        ["anchor_point"] = "INNER_TOPLEFT",
+                        ["text_fontSize"] = 12,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "AKbFx3ht",
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 1,
-                        ["text_text"] = "TEXT",
+                        ["text_text"] = "Text",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
@@ -1768,26 +1786,28 @@ wa.data['generalAnchors'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
+                        ["text_fontType"] = "OUTLINE",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["text_fontType"] = "OUTLINE",
+                        ["amId"] = "WuTo9MAD",
                     },
                     [5] = {
-                        ["text_shadowXOffset"] = 0,
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_text_format_s_format"] = "none",
                         ["text_text"] = "%s",
                         ["text_text_format_p_format"] = "timed",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
+                        ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
-                        ["anchorXOffset"] = 0,
-                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = -5,
                         ["text_color"] = {
@@ -1796,43 +1816,44 @@ wa.data['generalAnchors'].data = {
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_anchorYOffset"] = -5,
-                        ["text_fontType"] = "OUTLINE",
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
+                        ["text_shadowYOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["text_shadowYOffset"] = 0,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_visible"] = true,
+                        ["text_text_format_p_time_format"] = 0,
                         ["anchor_point"] = "TOPRIGHT",
-                        ["text_fontSize"] = 19,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_fontSize"] = 17,
+                        ["anchorXOffset"] = 0,
+                        ["amId"] = "KVS5LHaO",
                     },
                     [6] = {
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%c",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["anchorXOffset"] = 0,
                         ["anchorYOffset"] = 0,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
-                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_text_format_p_format"] = "timed",
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
@@ -1840,17 +1861,17 @@ wa.data['generalAnchors'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_time_precision"] = 1,
-                        ["text_shadowYOffset"] = 0,
-                        ["text_text_format_p_time_legacy_floor"] = false,
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_fontType"] = "OUTLINE",
-                        ["text_visible"] = true,
                         ["text_shadowXOffset"] = 0,
+                        ["text_shadowYOffset"] = 0,
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_visible"] = true,
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_text_format_p_time_format"] = 0,
                         ["anchor_point"] = "OUTER_LEFT",
                         ["text_fontSize"] = 10,
-                        ["anchorXOffset"] = 0,
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "A1gju1Gh",
                     },
                 },
                 ["height"] = 30,
@@ -1859,15 +1880,9 @@ wa.data['generalAnchors'].data = {
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
-                ["information"] = {
-                },
-                ["sparkColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
+                ["AMOriginalUUID"] = "h6i7uCg(BWP",
+                ["cooldown"] = true,
+                ["icon"] = false,
                 ["barColor2"] = {
                     [1] = 1,
                     [2] = 1,
@@ -1875,52 +1890,61 @@ wa.data['generalAnchors'].data = {
                     [4] = 1,
                 },
                 ["icon_side"] = "RIGHT",
-                ["parent"] = "ExalityIconSmallCoTank",
-                ["adjustedMin"] = "",
+                ["sparkColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["customText"] = "function()\
+    local u = aura_env.state.unit\
+    if (WeakAuras.IsOptionsOpen()) then\
+        return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
+    end\
+    \
+    if aura_env.state and u then\
+        return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
+    end\
+end",
                 ["sparkHeight"] = 30,
+                ["cooldownTextDisabled"] = true,
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                ["anchorFrameType"] = "SCREEN",
+                ["frameStrata"] = 2,
+                ["sparkHidden"] = "NEVER",
+                ["id"] = "ExalityIconSmallCoTank Sample",
+                ["config"] = {
+                },
+                ["useCooldownModRate"] = true,
+                ["width"] = 50,
+                ["xOffset"] = 0,
                 ["backgroundColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 0.5,
                 },
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["width"] = 50,
-                ["useCooldownModRate"] = true,
-                ["xOffset"] = 0,
-                ["id"] = "ExalityIconSmallCoTank Sample",
-                ["sparkHidden"] = "NEVER",
-                ["frameStrata"] = 2,
-                ["anchorFrameType"] = "SCREEN",
-                ["config"] = {
-                },
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["inverse"] = true,
-                ["cooldownTextDisabled"] = true,
+                ["parent"] = "ExalityIconSmallCoTank",
                 ["orientation"] = "HORIZONTAL",
                 ["conditions"] = {
                 },
-                ["cooldown"] = true,
-                ["AMOriginalUUID"] = "h6i7uCg(BWP",
-            },
-            [9] = {
-                ["arcLength"] = 360,
-                ["controlledChildren"] = {
-                    [1] = "ExalityIconSmallCoTank Sample 2",
-                },
-                ["borderBackdrop"] = "Blizzard Tooltip",
-                ["authorOptions"] = {
+                ["information"] = {
                 },
                 ["preferToUpdate"] = false,
+            },
+            [9] = {
+                ["grow"] = "UP",
+                ["controlledChildren"] = {
+                    [1] = "ExalityIconBig Sample",
+                },
+                ["borderBackdrop"] = "Blizzard Tooltip",
+                ["xOffset"] = -185.00036621094,
+                ["preferToUpdate"] = false,
                 ["yOffset"] = -60.999816894531,
-                ["gridType"] = "RD",
+                ["sortHybridTable"] = {
+                    ["ExalityIconSmallCoTank Sample 2"] = false,
+                },
                 ["borderColor"] = {
                     [1] = 0,
                     [2] = 0,
@@ -1931,23 +1955,23 @@ wa.data['generalAnchors'].data = {
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["finish"] = {
-                    },
                     ["init"] = {
+                    },
+                    ["finish"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["unit"] = "player",
                             ["names"] = {
                             },
-                            ["unit"] = "player",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -1955,51 +1979,33 @@ wa.data['generalAnchors'].data = {
                     },
                 },
                 ["columnSpace"] = 1,
-                ["radius"] = 200,
-                ["stepAngle"] = 15,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["align"] = "CENTER",
-                ["grow"] = "UP",
-                ["selfPoint"] = "BOTTOM",
+                ["internalVersion"] = 85,
                 ["parent"] = "[NHF] Anchors",
-                ["stagger"] = 0,
-                ["internalVersion"] = 83,
-                ["conditions"] = {
+                ["useLimit"] = false,
+                ["align"] = "CENTER",
+                ["source"] = "import",
+                ["arcLength"] = 360,
+                ["authorOptions"] = {
                 },
+                ["rotation"] = 0,
+                ["radius"] = 200,
+                ["AMOriginalUUID"] = "fZokiCIhAP9",
                 ["subRegions"] = {
                 },
-                ["rowSpace"] = 1,
-                ["rotation"] = 0,
+                ["gridType"] = "RD",
+                ["fullCircle"] = true,
                 ["AMModified"] = true,
-                ["config"] = {
-                },
+                ["borderInset"] = 1,
                 ["backdropColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 0.5,
                 },
+                ["stagger"] = 0,
+                ["animate"] = false,
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -2011,38 +2017,55 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["animate"] = false,
-                ["source"] = "import",
                 ["scale"] = 1,
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["borderEdge"] = "Square Full White",
-                ["regionType"] = "dynamicgroup",
+                ["stepAngle"] = 15,
                 ["borderSize"] = 2,
                 ["sort"] = "none",
-                ["alpha"] = 1,
-                ["useLimit"] = false,
+                ["gridWidth"] = 5,
+                ["limit"] = 5,
                 ["constantFactor"] = "RADIUS",
-                ["frameStrata"] = 1,
-                ["borderOffset"] = 4,
                 ["uid"] = "AM-fZokiCIhAP9",
+                ["borderOffset"] = 4,
+                ["frameStrata"] = 1,
                 ["tocversion"] = 110007,
                 ["id"] = "ExalityIconBig",
-                ["limit"] = 5,
-                ["gridWidth"] = 5,
+                ["regionType"] = "dynamicgroup",
+                ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["fullCircle"] = true,
-                ["borderInset"] = 1,
-                ["xOffset"] = -185.00036621094,
-                ["sortHybridTable"] = {
-                    ["ExalityIconSmallCoTank Sample 2"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["config"] = {
                 },
-                ["AMOriginalUUID"] = "fZokiCIhAP9",
+                ["rowSpace"] = 1,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
                 ["anchorPoint"] = "CENTER",
@@ -2056,12 +2079,7 @@ wa.data['generalAnchors'].data = {
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["sparkRotation"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 0.5,
-                },
+                ["icon"] = false,
                 ["icon_color"] = {
                     [1] = 1,
                     [2] = 1,
@@ -2081,7 +2099,7 @@ wa.data['generalAnchors'].data = {
                 ["sparkOffsetY"] = 0,
                 ["gradientOrientation"] = "HORIZONTAL",
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -2093,7 +2111,7 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -2119,7 +2137,16 @@ wa.data['generalAnchors'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["adjustedMin"] = "",
+                ["customText"] = "function()\
+    local u = aura_env.state.unit\
+    if (WeakAuras.IsOptionsOpen()) then\
+        return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
+    end\
+    \
+    if aura_env.state and u then\
+        return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
+    end\
+end",
                 ["cooldownSwipe"] = true,
                 ["sparkRotationMode"] = "AUTO",
                 ["cooldownEdge"] = false,
@@ -2131,33 +2158,33 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
+                            ["custom"] = "function(allstates)\
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 3 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 40,\
+                duration = 40,\
+                stacks = 2,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
                             ["spellIds"] = {
                             },
-                            ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 3 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 40,\
-                          duration = 40,\
-                          stacks = 2,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
                             ["names"] = {
                             },
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
                             ["events"] = "OPTIONS",
                             ["debuffType"] = "HELPFUL",
                         },
@@ -2166,27 +2193,27 @@ wa.data['generalAnchors'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
@@ -2194,61 +2221,64 @@ wa.data['generalAnchors'].data = {
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
+                        ["amId"] = "8OeyF0fD",
                     },
                     [2] = {
                         ["border_offset"] = 0,
-                        ["type"] = "subborder",
+                        ["border_size"] = 1,
                         ["border_visible"] = true,
+                        ["anchor_area"] = "bar",
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["anchor_area"] = "bar",
+                        ["amId"] = "QOJYgk2P",
                         ["border_edge"] = "1 Pixel",
-                        ["border_size"] = 1,
+                        ["type"] = "subborder",
                     },
                     [3] = {
-                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowXOffset"] = 1,
                         ["text_text"] = "%p",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
-                        ["anchorXOffset"] = 0,
+                        ["text_text_format_p_format"] = "timed",
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_shadowXOffset"] = 1,
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_shadowYOffset"] = -1,
+                        ["text_visible"] = true,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_text_format_p_time_format"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
-                        ["text_text_format_p_time_format"] = 0,
-                        ["text_fontType"] = "None",
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 14,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["anchorYOffset"] = 0,
+                        ["anchorXOffset"] = 0,
+                        ["amId"] = "tNHraynW",
                     },
                     [4] = {
-                        ["text_shadowXOffset"] = 1,
-                        ["text_text"] = "TEXT",
+                        ["text_text_format_n_format"] = "none",
+                        ["text_text"] = "Text",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
@@ -2272,26 +2302,28 @@ wa.data['generalAnchors'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
+                        ["text_shadowXOffset"] = 1,
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["text_text_format_n_format"] = "none",
+                        ["amId"] = "OTSiAoY0",
                     },
                     [5] = {
-                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowXOffset"] = 0,
                         ["text_text_format_s_format"] = "none",
                         ["text_text"] = "%s",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
+                        ["text_text_format_p_format"] = "timed",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
+                        ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_legacy_floor"] = false,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["text_shadowXOffset"] = 0,
+                        ["text_text_format_p_time_precision"] = 1,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = -5,
                         ["text_color"] = {
@@ -2300,93 +2332,61 @@ wa.data['generalAnchors'].data = {
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_shadowYOffset"] = 0,
+                        ["text_anchorYOffset"] = -5,
+                        ["text_visible"] = true,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
-                        ["text_fontType"] = "OUTLINE",
-                        ["text_anchorYOffset"] = -5,
+                        ["text_text_format_p_time_format"] = 0,
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 19,
-                        ["anchorXOffset"] = 0,
-                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "JOy9sE7o",
                     },
                 },
-                ["height"] = 65,
+                ["height"] = 60,
                 ["textureSource"] = "LSM",
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
                 ["source"] = "import",
-                ["preferToUpdate"] = false,
-                ["cooldown"] = true,
-                ["information"] = {
-                },
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["icon_side"] = "RIGHT",
-                ["parent"] = "ExalityIconBig",
-                ["customText"] = "function()\
-              local u = aura_env.state.unit\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
-              end\
-              \
-              if aura_env.state and u then\
-                  return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
-              end\
-          end",
-                ["sparkHeight"] = 30,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["icon"] = false,
-                ["width"] = 65,
-                ["useCooldownModRate"] = true,
-                ["config"] = {
-                },
-                ["sparkHidden"] = "NEVER",
-                ["id"] = "ExalityIconSmallCoTank Sample 2",
-                ["frameStrata"] = 2,
-                ["anchorFrameType"] = "SCREEN",
-                ["uid"] = "AM-PPLuHLM4ZTK",
-                ["xOffset"] = 0,
-                ["inverse"] = true,
-                ["zoom"] = 0.3,
-                ["orientation"] = "HORIZONTAL",
-                ["conditions"] = {
-                },
+                ["AMOriginalUUID"] = "PPLuHLM4ZTK",
                 ["barColor2"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["AMOriginalUUID"] = "PPLuHLM4ZTK",
-            },
-            [11] = {
-                ["arcLength"] = 360,
-                ["controlledChildren"] = {
-                    [1] = "ExalityIconSmallCoTank Sample 3",
+                ["information"] = {
                 },
-                ["borderBackdrop"] = "Blizzard Tooltip",
-                ["parent"] = "[NHF] Anchors",
-                ["preferToUpdate"] = false,
-                ["yOffset"] = 143,
-                ["gridType"] = "RD",
-                ["fullCircle"] = true,
-                ["space"] = 2,
+                ["xOffset"] = 0,
+                ["icon_side"] = "RIGHT",
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                ["zoom"] = 0.3,
+                ["sparkHeight"] = 30,
+                ["adjustedMin"] = "",
+                ["uid"] = "AM-PPLuHLM4ZTK",
+                ["anchorFrameType"] = "SCREEN",
+                ["frameStrata"] = 2,
+                ["id"] = "ExalityIconBig Sample",
+                ["sparkHidden"] = "NEVER",
+                ["backgroundColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 0.5,
+                },
+                ["useCooldownModRate"] = true,
+                ["width"] = 60,
+                ["config"] = {
+                },
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -2395,18 +2395,51 @@ wa.data['generalAnchors'].data = {
                     ["finish"] = {
                     },
                 },
+                ["inverse"] = true,
+                ["parent"] = "ExalityIconBig",
+                ["orientation"] = "HORIZONTAL",
+                ["conditions"] = {
+                },
+                ["cooldown"] = true,
+                ["preferToUpdate"] = false,
+            },
+            [11] = {
+                ["grow"] = "UP",
+                ["controlledChildren"] = {
+                    [1] = "ExalityText Sample",
+                },
+                ["borderBackdrop"] = "Blizzard Tooltip",
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = false,
+                ["yOffset"] = 143,
+                ["gridType"] = "RD",
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["rowSpace"] = 1,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                    },
+                },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["names"] = {
                             },
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
-                            ["subeventPrefix"] = "SPELL",
+                            ["subeventSuffix"] = "_CAST_START",
                             ["unit"] = "player",
+                            ["subeventPrefix"] = "SPELL",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2414,45 +2447,42 @@ wa.data['generalAnchors'].data = {
                     },
                 },
                 ["columnSpace"] = 1,
-                ["internalVersion"] = 83,
-                ["sort"] = "none",
+                ["radius"] = 200,
+                ["authorOptions"] = {
+                },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
                 ["align"] = "CENTER",
-                ["useLimit"] = false,
-                ["grow"] = "UP",
-                ["sortHybridTable"] = {
-                    ["ExalityIconSmallCoTank Sample 3"] = false,
-                },
+                ["animate"] = false,
+                ["fullCircle"] = true,
+                ["space"] = 2,
                 ["rotation"] = 0,
-                ["authorOptions"] = {
-                },
-                ["conditions"] = {
-                },
+                ["parent"] = "[NHF] Anchors",
+                ["AMOriginalUUID"] = "zzTHpZAe2Po",
                 ["subRegions"] = {
                 },
-                ["anchorPoint"] = "CENTER",
-                ["stagger"] = 0,
+                ["selfPoint"] = "BOTTOM",
+                ["arcLength"] = 360,
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -2464,73 +2494,76 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["borderInset"] = 1,
+                ["config"] = {
+                },
                 ["backdropColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 0.5,
                 },
-                ["selfPoint"] = "BOTTOM",
+                ["AMModified"] = true,
                 ["source"] = "import",
-                ["animate"] = false,
+                ["internalVersion"] = 85,
                 ["scale"] = 1,
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["regionType"] = "dynamicgroup",
                 ["borderSize"] = 2,
-                ["limit"] = 5,
-                ["gridWidth"] = 5,
-                ["AMModified"] = true,
+                ["sort"] = "none",
+                ["alpha"] = 1,
+                ["stepAngle"] = 15,
                 ["constantFactor"] = "RADIUS",
-                ["frameStrata"] = 1,
-                ["borderOffset"] = 4,
                 ["uid"] = "AM-zzTHpZAe2Po",
+                ["borderOffset"] = 4,
+                ["frameStrata"] = 1,
                 ["tocversion"] = 110007,
                 ["id"] = "ExalityTexts",
-                ["stepAngle"] = 15,
-                ["alpha"] = 1,
+                ["limit"] = 5,
+                ["gridWidth"] = 5,
                 ["anchorFrameType"] = "SCREEN",
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
+                ["stagger"] = 0,
+                ["borderInset"] = 1,
+                ["anchorPoint"] = "CENTER",
+                ["sortHybridTable"] = {
+                    ["ExalityIconSmallCoTank Sample 2"] = false,
                 },
-                ["config"] = {
+                ["conditions"] = {
                 },
-                ["radius"] = 200,
-                ["rowSpace"] = 1,
-                ["AMOriginalUUID"] = "zzTHpZAe2Po",
                 ["information"] = {
                 },
-                ["xOffset"] = 0,
+                ["useLimit"] = false,
             },
             [12] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["authorOptions"] = {
                 },
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["adjustedMax"] = "",
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
-                ["displayText_format_p_time_format"] = 0,
+                ["sparkRotation"] = 0,
                 ["backgroundColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 0.5,
                 },
-                ["displayText_format_p_time_mod_rate"] = true,
+                ["icon_color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
                 ["enableGradient"] = false,
                 ["keepAspectRatio"] = true,
-                ["wordWrap"] = "WordWrap",
+                ["selfPoint"] = "BOTTOM",
                 ["barColor"] = {
                     [1] = 0.86274516582489,
                     [2] = 0,
@@ -2538,11 +2571,11 @@ wa.data['generalAnchors'].data = {
                     [4] = 1,
                 },
                 ["desaturate"] = false,
-                ["font"] = "Poppins SemiBold",
+                ["font"] = "JetBrainsMono - ExtraBold",
                 ["sparkOffsetY"] = 0,
                 ["gradientOrientation"] = "HORIZONTAL",
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -2554,14 +2587,14 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
                 ["shadowXOffset"] = 1,
                 ["useAdjustededMin"] = false,
-                ["regionType"] = "text",
+                ["regionType"] = "empty",
                 ["texture"] = "Clean",
                 ["cooldownTextDisabled"] = true,
                 ["spark"] = false,
@@ -2581,13 +2614,8 @@ wa.data['generalAnchors'].data = {
                 ["shadowYOffset"] = -1,
                 ["cooldownSwipe"] = true,
                 ["sparkRotationMode"] = "AUTO",
-                ["automaticWidth"] = "Auto",
-                ["barColor2"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 0,
-                    [4] = 1,
-                },
+                ["cooldownEdge"] = false,
+                ["displayText_format_p_time_format"] = 0,
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
@@ -2596,34 +2624,34 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
+                            ["events"] = "OPTIONS",
                             ["spellIds"] = {
                             },
-                            ["events"] = "OPTIONS",
-                            ["custom_type"] = "stateupdate",
-                            ["check"] = "event",
                             ["names"] = {
                             },
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
                             ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 3 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 40,\
-                          duration = 40,\
-                          stacks = 2,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 3 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 40,\
+                duration = 40,\
+                stacks = 2,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2639,121 +2667,150 @@ wa.data['generalAnchors'].data = {
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["information"] = {
-                },
-                ["fixedWidth"] = 200,
-                ["orientation"] = "HORIZONTAL",
-                ["zoom"] = 0,
-                ["icon_color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["uid"] = "AM-dy)YVgRfOHc",
-                ["xOffset"] = 0,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 65,
-                ["textureSource"] = "LSM",
-                ["AMModified"] = true,
-                ["sparkBlendMode"] = "ADD",
-                ["useAdjustededMax"] = false,
-                ["fontSize"] = 22,
-                ["source"] = "import",
-                ["anchorFrameType"] = "SCREEN",
-                ["frameStrata"] = 2,
-                ["preferToUpdate"] = false,
-                ["id"] = "ExalityIconSmallCoTank Sample 3",
-                ["customTextUpdate"] = "event",
-                ["internalVersion"] = 83,
-                ["config"] = {
-                },
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["icon_side"] = "RIGHT",
-                ["icon"] = false,
-                ["displayText_format_p_time_precision"] = 1,
-                ["sparkHeight"] = 30,
-                ["customText"] = "function()\
-              local u = aura_env.state.unit\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
-              end\
-              \
-              if aura_env.state and u then\
-                  return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
-              end\
-          end",
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["justify"] = "LEFT",
-                ["adjustedMax"] = "",
-                ["sparkHidden"] = "NEVER",
-                ["displayText"] = "Text Notification (%p)\
-          ",
-                ["useCooldownModRate"] = true,
-                ["width"] = 65,
-                ["sparkRotation"] = 0,
-                ["cooldownEdge"] = false,
-                ["inverse"] = true,
-                ["selfPoint"] = "CENTER",
+                ["cooldown"] = true,
+                ["displayText_format_p_time_mod_rate"] = true,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["conditions"] = {
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["AMOriginalUUID"] = "HnHLXunzzBM",
+                ["wordWrap"] = "WordWrap",
+                ["fixedWidth"] = 200,
+                ["subRegions"] = {
+                    [1] = {
+                        ["type"] = "subbackground",
+                        ["amId"] = "ILUmZv7v",
+                    },
+                    [2] = {
+                        ["text_text_format_n_format"] = "none",
+                        ["text_text"] = "Text",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["text_selfPoint"] = "RIGHT",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["type"] = "subtext",
+                        ["text_anchorXOffset"] = -3,
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "Poppins Bold",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_shadowXOffset"] = 1,
+                        ["text_visible"] = true,
+                        ["anchor_point"] = "CENTER",
+                        ["text_fontSize"] = 30,
+                        ["anchorXOffset"] = 0,
+                        ["amId"] = "tMA7vCei",
+                    },
+                    [3] = {
+                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_text"] = "(%p)",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["text_selfPoint"] = "LEFT",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["anchorXOffset"] = 0,
+                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_shadowXOffset"] = 1,
+                        ["type"] = "subtext",
+                        ["text_anchorXOffset"] = 3,
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_text_format_p_format"] = "timed",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_visible"] = true,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_text_format_n_format"] = "none",
+                        ["anchor_point"] = "CENTER",
+                        ["text_fontSize"] = 30,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "ImQEu4cz",
+                    },
                 },
-                ["cooldown"] = true,
-                ["AMOriginalUUID"] = "dy)YVgRfOHc",
-            },
-            [13] = {
-                ["arcLength"] = 360,
-                ["controlledChildren"] = {
-                    [1] = "ExalityCircle Example",
+                ["height"] = 30,
+                ["textureSource"] = "LSM",
+                ["AMModified"] = true,
+                ["sparkBlendMode"] = "ADD",
+                ["useAdjustededMax"] = false,
+                ["fontSize"] = 27,
+                ["source"] = "import",
+                ["width"] = 1,
+                ["useCooldownModRate"] = true,
+                ["automaticWidth"] = "Auto",
+                ["sparkHidden"] = "NEVER",
+                ["displayText"] = "Bait Frontal (%p)",
+                ["internalVersion"] = 85,
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                ["color"] = {
+                    [1] = 0.24705883860588,
+                    [2] = 0.82745105028152,
+                    [3] = 0,
+                    [4] = 1,
                 },
-                ["borderBackdrop"] = "Blizzard Tooltip",
-                ["authorOptions"] = {
-                },
-                ["preferToUpdate"] = false,
-                ["yOffset"] = 0,
-                ["anchorPoint"] = "CENTER",
-                ["fullCircle"] = true,
-                ["space"] = 2,
+                ["icon_side"] = "RIGHT",
+                ["customText"] = "function()\
+    local u = aura_env.state.unit\
+    if (WeakAuras.IsOptionsOpen()) then\
+        return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
+    end\
+    \
+    if aura_env.state and u then\
+        return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
+    end\
+end",
+                ["sparkHeight"] = 30,
+                ["displayText_format_p_time_precision"] = 1,
+                ["icon"] = false,
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -2762,18 +2819,62 @@ wa.data['generalAnchors'].data = {
                     ["init"] = {
                     },
                 },
+                ["config"] = {
+                },
+                ["justify"] = "LEFT",
+                ["customTextUpdate"] = "event",
+                ["id"] = "ExalityText Sample",
+                ["preferToUpdate"] = true,
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["xOffset"] = 0,
+                ["uid"] = "AM-dy)YVgRfOHc",
+                ["inverse"] = true,
+                ["zoom"] = 0,
+                ["orientation"] = "HORIZONTAL",
+                ["conditions"] = {
+                },
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["information"] = {
+                },
+            },
+            [13] = {
+                ["grow"] = "HORIZONTAL",
+                ["controlledChildren"] = {
+                    [1] = "ExalityCircle Example",
+                },
+                ["borderBackdrop"] = "Blizzard Tooltip",
+                ["parent"] = "[NHF] Anchors",
+                ["preferToUpdate"] = false,
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["fullCircle"] = true,
+                ["rowSpace"] = 1,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["type"] = "aura2",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
+                            ["type"] = "aura2",
                             ["spellIds"] = {
                             },
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["unit"] = "player",
                             ["names"] = {
                             },
-                            ["unit"] = "player",
+                            ["event"] = "Health",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2781,49 +2882,70 @@ wa.data['generalAnchors'].data = {
                     },
                 },
                 ["columnSpace"] = 1,
-                ["internalVersion"] = 83,
-                ["xOffset"] = 0,
-                ["selfPoint"] = "CENTER",
-                ["align"] = "CENTER",
-                ["source"] = "import",
                 ["radius"] = 200,
-                ["useLimit"] = false,
-                ["stagger"] = 0,
-                ["sortHybridTable"] = {
-                    ["ExalityCircle Example"] = false,
-                },
-                ["conditions"] = {
-                },
-                ["subRegions"] = {
-                },
-                ["borderColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
+                ["limit"] = 5,
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
+                ["align"] = "CENTER",
+                ["source"] = "import",
+                ["space"] = 2,
+                ["xOffset"] = 0,
+                ["stagger"] = 0,
+                ["arcLength"] = 360,
+                ["AMOriginalUUID"] = ")05A4xasSAH",
+                ["subRegions"] = {
+                },
+                ["rotation"] = 0,
+                ["internalVersion"] = 85,
+                ["AMModified"] = true,
+                ["borderInset"] = 1,
+                ["backdropColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.5,
+                },
+                ["authorOptions"] = {
+                },
+                ["animate"] = false,
+                ["sortHybridTable"] = {
+                    ["ExalityIconSmallCoTank Sample 2"] = false,
+                },
+                ["scale"] = 1,
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["regionType"] = "dynamicgroup",
+                ["borderSize"] = 2,
+                ["sort"] = "none",
+                ["gridWidth"] = 5,
+                ["stepAngle"] = 15,
+                ["constantFactor"] = "RADIUS",
+                ["uid"] = "AM-)05A4xasSAH",
+                ["borderOffset"] = 4,
+                ["frameStrata"] = 1,
+                ["tocversion"] = 110007,
+                ["id"] = "ExalityCircle",
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -2835,48 +2957,28 @@ wa.data['generalAnchors'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
                 },
+                ["alpha"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["config"] = {
                 },
-                ["backdropColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 0.5,
-                },
-                ["grow"] = "HORIZONTAL",
-                ["animate"] = false,
-                ["rotation"] = 0,
-                ["scale"] = 1,
-                ["centerType"] = "LR",
-                ["border"] = false,
-                ["borderEdge"] = "Square Full White",
-                ["regionType"] = "dynamicgroup",
-                ["borderSize"] = 2,
-                ["sort"] = "none",
-                ["alpha"] = 1,
-                ["limit"] = 5,
-                ["constantFactor"] = "RADIUS",
-                ["frameStrata"] = 1,
-                ["borderOffset"] = 4,
-                ["uid"] = "AM-)05A4xasSAH",
-                ["tocversion"] = 110007,
-                ["id"] = "ExalityCircle",
-                ["stepAngle"] = 15,
-                ["gridWidth"] = 5,
-                ["anchorFrameType"] = "SCREEN",
-                ["AMModified"] = true,
-                ["borderInset"] = 1,
-                ["rowSpace"] = 1,
+                ["selfPoint"] = "CENTER",
                 ["gridType"] = "RD",
-                ["AMOriginalUUID"] = ")05A4xasSAH",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["parent"] = "[NHF] Anchors",
+                ["useLimit"] = false,
             },
             [14] = {
                 ["sparkWidth"] = 10,
@@ -2888,7 +2990,12 @@ wa.data['generalAnchors'].data = {
                 ["anchorPoint"] = "CENTER",
                 ["sparkRotation"] = 0,
                 ["sameTexture"] = true,
-                ["icon"] = false,
+                ["backgroundColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 0.19666694104671,
+                },
                 ["icon_color"] = {
                     [1] = 1,
                     [2] = 1,
@@ -2909,9 +3016,26 @@ wa.data['generalAnchors'].data = {
                 ["font"] = "Poppins SemiBold",
                 ["sparkOffsetY"] = 0,
                 ["gradientOrientation"] = "HORIZONTAL",
-                ["crop_y"] = 0.41,
+                ["load"] = {
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
                 ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
+                ["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_20px.tga",
                 ["shadowXOffset"] = 1,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "progresstexture",
@@ -2921,44 +3045,36 @@ wa.data['generalAnchors'].data = {
                 ["cooldownTextDisabled"] = true,
                 ["spark"] = false,
                 ["tocversion"] = 110007,
+                ["icon"] = false,
                 ["alpha"] = 1,
-                ["displayText"] = "Text Notification (%p)\
-          ",
-                ["cooldown"] = true,
+                ["information"] = {
+                },
+                ["conditions"] = {
+                },
                 ["sparkColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["crop_x"] = 0.41,
-                ["shadowColor"] = {
-                    [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 1,
-                },
+                ["orientation"] = "ANTICLOCKWISE",
                 ["compress"] = false,
                 ["displayIcon"] = 2065603,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 0,
-                    [3] = 0.21568629145622,
-                    [4] = 1,
-                },
-                ["backgroundOffset"] = 2,
+                ["AMOriginalUUID"] = "6reVQTfDSI1",
+                ["uid"] = "AM-7r17YEO7T1i",
+                ["backgroundOffset"] = 0,
                 ["outline"] = "OUTLINE",
-                ["user_y"] = 0,
+                ["crop_y"] = 0.41,
                 ["sparkOffsetX"] = 0,
-                ["startAngle"] = 0,
+                ["anchorFrameType"] = "SCREEN",
                 ["parent"] = "ExalityCircle",
-                ["width"] = 200,
+                ["frameStrata"] = 2,
                 ["adjustedMin"] = "",
                 ["shadowYOffset"] = -1,
-                ["useCooldownModRate"] = true,
+                ["customTextUpdate"] = "event",
                 ["desaturateBackground"] = false,
                 ["cooldownSwipe"] = true,
-                ["customTextUpdate"] = "event",
+                ["id"] = "ExalityCircle Example",
                 ["sparkRotationMode"] = "AUTO",
                 ["cooldownEdge"] = false,
                 ["desaturateForeground"] = false,
@@ -2970,34 +3086,34 @@ wa.data['generalAnchors'].data = {
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
-                            ["events"] = "OPTIONS",
                             ["spellIds"] = {
                             },
+                            ["events"] = "OPTIONS",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
                             ["names"] = {
                             },
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
                             ["custom"] = "function(allstates)\
-              for _, state in pairs(allstates) do\
-                  state.show = false;\
-                  state.changed = true;\
-              end\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  for i=1, 1 do\
-                      allstates[i] = {\
-                          \
-                          show = true,\
-                          changed = true,\
-                          progressType = \"timed\",\
-                          expirationTime = GetTime() + 40,\
-                          duration = 40,\
-                          stacks = 2,\
-                          autoHide = false,\
-                      }\
-                  end \
-              end\
-              \
-          end",
+    for _, state in pairs(allstates) do\
+        state.show = false;\
+        state.changed = true;\
+    end\
+    if (WeakAuras.IsOptionsOpen()) then\
+        for i=1, 1 do\
+            allstates[i] = {\
+                \
+                show = true,\
+                changed = true,\
+                progressType = \"timed\",\
+                expirationTime = GetTime() + 40,\
+                duration = 40,\
+                stacks = 2,\
+                autoHide = false,\
+            }\
+        end \
+    end\
+    \
+end",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -3013,153 +3129,172 @@ wa.data['generalAnchors'].data = {
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["sparkHidden"] = "NEVER",
+                ["adjustedMax"] = "",
                 ["auraRotation"] = 0,
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["preferToUpdate"] = false,
-                ["displayText_format_p_time_format"] = 0,
-                ["fontSize"] = 22,
-                ["displayText_format_p_time_precision"] = 1,
+                ["authorOptions"] = {
+                },
+                ["wordWrap"] = "WordWrap",
+                ["fixedWidth"] = 200,
+                ["sparkHeight"] = 30,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
+                        ["amId"] = "bne7YAqA",
                     },
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
-                        ["text_text"] = "Spread - %p",
-                        ["text_text_format_p_time_mod_rate"] = true,
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
-                        ["text_justify"] = "CENTER",
-                        ["rotateText"] = "NONE",
-                        ["text_text_format_p_time_legacy_floor"] = false,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["type"] = "subtext",
+                        ["text_text"] = "Text",
                         ["text_shadowColor"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["text_shadowXOffset"] = 1,
+                        ["anchorXOffset"] = 0,
+                        ["anchorYOffset"] = 0,
+                        ["type"] = "subtext",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
                             [3] = 1,
                             [4] = 1,
                         },
-                        ["text_font"] = "Poppins SemiBold",
-                        ["text_shadowXOffset"] = 1,
-                        ["text_shadowYOffset"] = -1,
-                        ["text_text_format_p_time_format"] = 0,
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
+                        ["text_font"] = "Poppins Bold",
                         ["text_text_format_p_format"] = "timed",
-                        ["text_fontType"] = "None",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_visible"] = true,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 16,
-                        ["anchorXOffset"] = 0,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["amId"] = "Yqzr2ifs",
+                    },
+                    [3] = {
                         ["text_text_format_n_format"] = "none",
+                        ["text_text"] = "%p",
+                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_selfPoint"] = "CENTER",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["type"] = "subtext",
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_text_format_p_format"] = "timed",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_visible"] = true,
+                        ["text_anchorYOffset"] = -15,
+                        ["text_shadowXOffset"] = 1,
+                        ["anchor_point"] = "TOP",
+                        ["text_fontSize"] = 19,
+                        ["anchorXOffset"] = 0,
+                        ["amId"] = "TxaD6VoE",
                     },
                 },
-                ["height"] = 200,
+                ["height"] = 180,
                 ["textureSource"] = "LSM",
                 ["AMModified"] = true,
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "PowerAurasMedia\\Auras\\Aura3",
+                ["fontSize"] = 22,
                 ["source"] = "import",
-                ["displayText_format_p_format"] = "timed",
+                ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_mod_rate"] = true,
-                ["customText"] = "function()\
-              local u = aura_env.state.unit\
-              if (WeakAuras.IsOptionsOpen()) then\
-                  return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
-              end\
-              \
-              if aura_env.state and u then\
-                  return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
-              end\
-          end",
+                ["zoom"] = 0,
                 ["mirror"] = false,
-                ["internalVersion"] = 83,
-                ["config"] = {
-                },
                 ["color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["zoom"] = 0,
+                ["config"] = {
+                },
+                ["internalVersion"] = 85,
+                ["customText"] = "function()\
+                     local u = aura_env.state.unit\
+                     if (WeakAuras.IsOptionsOpen()) then\
+                         return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
+                     end\
+                     \
+                     if aura_env.state and u then\
+                         return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
+                     end\
+                 end",
                 ["icon_side"] = "RIGHT",
-                ["automaticWidth"] = "Auto",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["sparkHeight"] = 30,
-                ["fixedWidth"] = 200,
-                ["wordWrap"] = "WordWrap",
-                ["authorOptions"] = {
-                },
+                ["displayText_format_p_format"] = "timed",
+                ["backgroundTexture"] = "PowerAurasMedia\\Auras\\Aura3",
+                ["displayText_format_p_time_precision"] = 1,
+                ["displayText_format_p_time_format"] = 0,
+                ["preferToUpdate"] = true,
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["justify"] = "LEFT",
-                ["adjustedMax"] = "",
-                ["id"] = "ExalityCircle Example",
-                ["backgroundColor"] = {
+                ["startAngle"] = 0,
+                ["sparkHidden"] = "NEVER",
+                ["user_y"] = 0,
+                ["useCooldownModRate"] = true,
+                ["width"] = 180,
+                ["foregroundColor"] = {
                     [1] = 0,
-                    [2] = 0,
-                    [3] = 0,
-                    [4] = 0,
-                },
-                ["frameStrata"] = 2,
-                ["anchorFrameType"] = "SCREEN",
-                ["uid"] = "AM-7r17YEO7T1i",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["inverse"] = false,
-                ["AMOriginalUUID"] = "7r17YEO7T1i",
-                ["orientation"] = "ANTICLOCKWISE",
-                ["conditions"] = {
+                    [2] = 1,
+                    [3] = 0.79215693473816,
+                    [4] = 1,
                 },
                 ["barColor2"] = {
                     [1] = 1,
@@ -3167,7 +3302,24 @@ wa.data['generalAnchors'].data = {
                     [3] = 0,
                     [4] = 1,
                 },
-                ["information"] = {
+                ["inverse"] = false,
+                ["displayText"] = "Text Notification (%p)\
+                 ",
+                ["shadowColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["crop_x"] = 0.41,
+                ["cooldown"] = true,
+                ["overlays"] = {
+                    [1] = {
+                        [1] = 1,
+                        [2] = 0,
+                        [3] = 0.054901964962482,
+                        [4] = 1,
+                    },
                 },
             },
         },

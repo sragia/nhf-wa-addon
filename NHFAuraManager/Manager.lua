@@ -107,11 +107,12 @@ manager.PopulateDisplays = function(self, container)
         name = 'Mandatory',
         tooltipText = 'These auras are mandatory to install. Required for all assignments.'
     })
+    table.insert(self.waDisplays, mandatoryHeader)
     mandatoryHeader:SetParent(container)
     mandatoryHeader:SetPoint('TOPLEFT', container, 'TOPLEFT', 0, -10)
     mandatoryHeader:SetPoint('TOPRIGHT', container, 'TOPRIGHT', 0, -10)
     prev = mandatoryHeader
-    for _, display in ipairs(tFilter(displays, function(v) return not v.isOptional end, true)) do
+    for _, display in ipairs(tFilter(displays, function(v) return not v.isOptional and not v.isAnchor end, true)) do
         local waDisplay = waDisplay:Create(display)
         waDisplay:SetParent(container)
         table.insert(self.waDisplays, waDisplay)
@@ -127,16 +128,44 @@ manager.PopulateDisplays = function(self, container)
         prev = waDisplay
     end
 
+    local anchorHeader = waDisplayHeader:Create({
+        name = 'Anchors',
+        tooltipText =
+        'Required to position your Auras.'
+    })
+    table.insert(self.waDisplays, anchorHeader)
+    anchorHeader:SetParent(container)
+    anchorHeader:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -10)
+    anchorHeader:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -10)
+    prev = anchorHeader
+    for _, display in ipairs(tFilter(displays, function(v) return v.isAnchor end, true)) do
+        local waDisplay = waDisplay:Create(display)
+        waDisplay:SetParent(container)
+        table.insert(self.waDisplays, waDisplay)
+
+        if (prev) then
+            waDisplay:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -10)
+            waDisplay:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -10)
+        else
+            waDisplay:SetPoint('TOPLEFT', container, 'TOPLEFT', 0, -10)
+            waDisplay:SetPoint('TOPRIGHT', container, 'TOPRIGHT', 0, -10)
+        end
+
+        prev = waDisplay
+    end
+
+
     local optionalHeader = waDisplayHeader:Create({
         name = 'Optional',
         tooltipText =
         'Recommended to install, but not required.\nIncludes general use auras, like text timers and important buffs/debuffs.'
     })
+    table.insert(self.waDisplays, optionalHeader)
     optionalHeader:SetParent(container)
     optionalHeader:SetPoint('TOPLEFT', prev, 'BOTTOMLEFT', 0, -10)
     optionalHeader:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -10)
     prev = optionalHeader
-    for _, display in ipairs(tFilter(displays, function(v) return v.isOptional end, true)) do
+    for _, display in ipairs(tFilter(displays, function(v) return v.isOptional and not v.isAnchor end, true)) do
         local waDisplay = waDisplay:Create(display)
         waDisplay:SetParent(container)
         table.insert(self.waDisplays, waDisplay)

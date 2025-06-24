@@ -54,7 +54,7 @@ local receiveMessage = function(prefix, message, _, sender)
 
     if (comm.callbacks[msg.type]) then
         for _, func in ipairs(comm.callbacks[msg.type]) do
-            func(msg.type, msg.data)
+            func(msg.type, msg.data, sender)
         end
     end
 end

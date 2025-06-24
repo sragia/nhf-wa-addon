@@ -8,6 +8,7 @@ AM.const = {
             resizeBtn = [[Interface/Addons/NHFAuraManager/Textures/expand-btn]],
             resizeBtnHighlight = [[Interface/Addons/NHFAuraManager/Textures/expand-highlight]],
             closeBtn = [[Interface/Addons/NHFAuraManager/Textures/close-btn]],
+            closeIcon = [[Interface/Addons/NHFAuraManager/Textures/close-icon.png]],
             statusBar = [[Interface/Addons/NHFAuraManager/Textures/statusBar]],
             inputs = {
                 toggle = [[Interface/Addons/NHFAuraManager/Textures/toggle]],

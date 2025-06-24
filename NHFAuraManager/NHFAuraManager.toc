@@ -5,6 +5,10 @@
 ## SavedVariables: AuraManagerData
 ## Version: @project-version@
 ## Dependencies: WeakAuras
+## IconTexture: Interface\AddOns\NHFAuraManager\Textures\logo.png
+
+# Libs
+Libs/!BugGrabber/load.xml
 
 # Core Functionality
 Util.lua 
@@ -22,6 +26,7 @@ Frames/Inputs/EditBox.lua
 Frames/Inputs/Toggle.lua
 Frames/Inputs/Button.lua
 Frames/Inputs/ToggleButton.lua
+Frames/Inputs/LuaEditor.lua
 Frames/Inputs/Keybind.lua
 Frames/Inputs/Dropdown.lua
 Frames/CheckerRow.lua
@@ -30,6 +35,7 @@ Frames/Window.lua
 Frames/ScrollFrame.lua
 Frames/WADisplayHeader.lua
 Frames/WADisplay.lua
+Frames/BugReportDisplay.lua
 Frames/InputGroup.lua
 
 UserConfigManager.lua
@@ -43,6 +49,10 @@ DuplicatesChecker.lua
 SoundsLoader.lua
 
 RaidManagement/RaidManagement.xml
+
+CmdMenu.lua
+
+BugReports.lua
 
 Cmd.lua
 BossModDisable.lua
