@@ -7,5 +7,6 @@
   <Script file="InterruptAnchor.lua"/>
   <Script file="GeneralAnchors.lua"/>
   <Script file="ManaforgeOmega.lua"/>
+  <Script file="ExternalAlert.lua"/>
   <Script file="Memes.lua"/>
 </Ui>

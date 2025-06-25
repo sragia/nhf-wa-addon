@@ -34,7 +34,10 @@ bugReports.Init = function(self)
 end
 
 bugReports.onError = function(self, error)
-    if (error.message and error.message:find('Lua error in aura')) then
+    if (error.message and
+            (error.message:find('Lua error in aura') or
+                error.message:find('NHFAuraManager') or
+                (error.stack and error.stack:find('NHFAuraManager')))) then
         -- Actual WA error
         local report = {
             playerName = UnitName('player'),
@@ -73,6 +76,13 @@ bugReports.SetupWindow = function(self)
 
     requestReportBtn:SetPoint('BOTTOMLEFT')
 
+    local noBugsTxt = container:CreateFontString(nil, 'ARTWORK')
+    noBugsTxt:SetFont(AM.const.fonts.DEFAULT, 13, 'OUTLINE')
+    noBugsTxt:SetPoint('CENTER', container, 'CENTER', 0, 0)
+    noBugsTxt:SetText('No Bugs Reported. Good Job!')
+    self.noBugsTxt = noBugsTxt
+    self.noBugsTxt:Hide()
+
     self.window = window
     self.isWindowCreated = true
 end
@@ -83,6 +93,13 @@ bugReports.PopulateReports = function(self)
     end
     self.displays = {}
     local prev = nil
+    if (#self.reports == 0) then
+        self.noBugsTxt:Show()
+        return
+    else
+        self.noBugsTxt:Hide()
+    end
+
     for _, report in ipairs(self.reports) do
         local display = bugReportDisplay:Create()
         display:SetErrorInfo(report)
