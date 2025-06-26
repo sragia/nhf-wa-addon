@@ -79,7 +79,7 @@ manager.Setup = function(self)
 
     local macroEditBox = editBox:Create({
         label = 'Macro Text',
-        initial = '/run WeakAuras.ScanEvents("NS_PA_MACRO", true)'
+        initial = '/run NSAPI:PrivateAura();'
     })
     macroEditBox:SetParent(container)
     macroEditBox:SetHeight(30)

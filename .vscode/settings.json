@@ -29,6 +29,8 @@
         "MACRO",
         "Round",
         "ScriptErrorsFrame",
-        "ItemRefTooltip"
-    ]
+        "ItemRefTooltip",
+        "SecureHandlerWrapScript"
+    ],
+    "Lua.type.weakUnionCheck": true
 }

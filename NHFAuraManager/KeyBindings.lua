@@ -88,7 +88,7 @@ keyBindings.AddPAInput = function(self)
         name = 'Private Aura Macro',
         onChange = function(key, f)
             keyBindings:CreateOrUpdateMacro('[NHF] Private Aura',
-                '/run WeakAuras.ScanEvents("NS_PA_MACRO", true);')
+                '/run NSAPI:PrivateAura();')
             return keyBindings:SetKeybind(key, '[NHF] Private Aura')
         end,
         onClear = function()

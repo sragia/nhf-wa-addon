@@ -12,7 +12,7 @@ local windowManager = AM:GetModule('window-manager')
 
 local addonVersion = C_AddOns.GetAddOnMetadata(addonName, "version")
 if addonVersion == '@project-version@' then
-    addonVersion = '9.8.7'
+    addonVersion = '1.0.0-dev'
 end
 
 window.Init = function(self)
