@@ -59,4 +59,6 @@ BossModDisable.lua
 AnnoyancePopup.lua
 KeyBindings.lua
 
+API.lua
+
 Storage/Auras/Auras.xml

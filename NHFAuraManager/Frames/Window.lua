@@ -11,6 +11,9 @@ local window = AM:GetModule('window-frame')
 local windowManager = AM:GetModule('window-manager')
 
 local addonVersion = C_AddOns.GetAddOnMetadata(addonName, "version")
+if addonVersion == '@project-version@' then
+    addonVersion = '9.8.7'
+end
 
 window.Init = function(self)
     window.pool = CreateFramePool('Frame', UIParent)

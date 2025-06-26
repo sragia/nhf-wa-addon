@@ -37,8 +37,11 @@ bugReports.onError = function(self, error)
     if (error.message and
             (error.message:find('Lua error in aura') or
                 error.message:find('NHFAuraManager') or
-                (error.stack and error.stack:find('NHFAuraManager')))) then
+                (error.stack and error.stack:find('NHFAuraManager'))) and
+            not FindInTableIf(bugReports.reports, function(v) return v.message == error.message end)
+        ) then
         -- Actual WA error
+
         local report = {
             playerName = UnitName('player'),
             message = error.message,

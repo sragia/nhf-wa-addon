@@ -113,7 +113,7 @@ popup.CheckOutOfDateVersion = function(self)
 end
 
 popup.handler:SetScript('OnEvent', function(self, event, ...)
-    if (event == 'READY_CHECK') then
+    if (event == 'READY_CHECK' and IsInRaid()) then
         popup:CheckOutOfDate()
         popup:CheckOutOfDateVersion()
     end
