@@ -1,4 +1,4 @@
-## Interface: 110000
+## Interface: 110200
 ## Title: NHF Aura Manager
 ## Notes: Manages Auras
 ## Author: Exality
