@@ -37,14 +37,26 @@ local configure = function(frame)
     AM.utils.animation.diveIn(frame, 0.2, 0, 20, 'IN', frame.fadeIn)
     AM.utils.animation.diveIn(frame, 0.2, 0, -20, 'OUT', frame.fadeOut)
 
-    frame.ShowWindow = function(self)
+    frame.ShowWindow = function(self, hideAfter)
         self:Show()
         windowManager:SetValidCenterPosition(self)
         self.fadeIn:Play()
+        if (hideAfter) then
+            self.timerContainer:Show();
+            self.timer:SetMinMaxValues(0, hideAfter)
+            self.timer:SetValue(hideAfter)
+            self:SetScript('OnUpdate', function(self, elapsed)
+                self.timer:SetValue(self.timer:GetValue() - elapsed)
+                if (self.timer:GetValue() <= 0) then
+                    self:HideWindow()
+                end
+            end)
+        end
     end
 
     frame.HideWindow = function(self)
         self.fadeOut:Play()
+        self:SetScript('OnUpdate', nil)
     end
 
     if (not frame.Texture) then
@@ -129,6 +141,25 @@ local configure = function(frame)
         end)
 
         frame.close = closeContainer
+    end
+
+    if (not frame.timer) then
+        frame.timerContainer = CreateFrame("Frame", nil, frame)
+        frame.timerContainer:SetHeight(12)
+        frame.timerContainer:SetPoint('BOTTOMLEFT', frame, 'BOTTOMLEFT', 20, 15)
+        frame.timerContainer:SetPoint('BOTTOMRIGHT', frame, 'BOTTOMRIGHT', -20, 15)
+        local timerBg = frame.timerContainer:CreateTexture(nil, "BACKGROUND")
+        timerBg:SetTexture(AM.const.textures.frame.statusBar)
+        timerBg:SetVertexColor(0, 0, 0, 1)
+        timerBg:SetAllPoints()
+
+        frame.timer = CreateFrame("StatusBar", nil, frame.timerContainer)
+        frame.timer:SetAllPoints()
+        frame.timer:SetStatusBarTexture(AM.const.textures.frame.statusBar)
+        frame.timer:SetStatusBarColor(194 / 255, 2 / 255, 37 / 255, 1)
+        frame.timer:SetMinMaxValues(0, 1)
+        frame.timer:SetValue(0)
+        frame.timerContainer:Hide();
     end
 
     local title = frame:CreateFontString(nil, "OVERLAY")

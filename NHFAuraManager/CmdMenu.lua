@@ -25,11 +25,21 @@ local keyBindings = AM:GetModule('key-bindings')
 ---@class BugReports
 local bugReports = AM:GetModule('bug-reports')
 
+---@class MyAssignments
+local myAssignments = AM:GetModule('my-assignments')
+
 local menuItems = {
     {
         text = 'Open Manager',
         onClick = function()
             manager:Show()
+            cmdMenu:HideMenu()
+        end
+    },
+    {
+        text = 'My Assignments',
+        onClick = function()
+            myAssignments:Show()
             cmdMenu:HideMenu()
         end
     },

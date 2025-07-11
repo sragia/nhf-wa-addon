@@ -37,6 +37,7 @@ Frames/WADisplayHeader.lua
 Frames/WADisplay.lua
 Frames/BugReportDisplay.lua
 Frames/InputGroup.lua
+Frames/Assignment.lua
 
 UserConfigManager.lua
 
@@ -53,6 +54,8 @@ RaidManagement/RaidManagement.xml
 CmdMenu.lua
 
 BugReports.lua
+
+MyAssignments.lua
 
 Cmd.lua
 BossModDisable.lua

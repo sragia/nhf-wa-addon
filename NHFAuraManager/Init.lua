@@ -10,6 +10,7 @@ AM.const = {
             closeBtn = [[Interface/Addons/NHFAuraManager/Textures/close-btn]],
             closeIcon = [[Interface/Addons/NHFAuraManager/Textures/close-icon.png]],
             statusBar = [[Interface/Addons/NHFAuraManager/Textures/statusBar]],
+            iconMask = [[Interface/Addons/NHFAuraManager/Textures/icon-mask]],
             inputs = {
                 toggle = [[Interface/Addons/NHFAuraManager/Textures/toggle]],
                 editboxBg = [[Interface/Addons/NHFAuraManager/Textures/editbox-bg]],
