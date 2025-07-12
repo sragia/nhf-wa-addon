@@ -4,7 +4,7 @@
 ## Author: Exality
 ## SavedVariables: AuraManagerData
 ## Version: @project-version@
-## Dependencies: WeakAuras
+## Dependencies: WeakAuras, NorthernSkyRaidTools
 ## IconTexture: Interface\AddOns\NHFAuraManager\Textures\logo.png
 
 # Libs
