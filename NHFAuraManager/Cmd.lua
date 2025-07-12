@@ -32,6 +32,12 @@ function SlashCmdList.NHFAURAMANAGER(msg)
         cmd:RefreshMinimap()
     elseif (msg == 'load-sounds') then
         soundLoader:PlayAllSounds()
+    elseif (msg == 'disable-duplicate-check') then
+        data:SetDataByKey('disableDuplicateCheck', true)
+        AM.utils.printOut('Duplicate check disabled')
+    elseif (msg == 'enable-duplicate-check') then
+        data:SetDataByKey('disableDuplicateCheck', false)
+        AM.utils.printOut('Duplicate check enabled')
     else
         manager:Show()
     end

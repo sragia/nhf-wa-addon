@@ -13,6 +13,9 @@ local window = AM:GetModule('window-frame')
 ---@class AMButton
 local button = AM:GetModule('button')
 
+---@class Data
+local data = AM:GetModule('data')
+
 --[[
 Purpose of this is to check if there are auras that we have placed in our groups
 
@@ -97,7 +100,10 @@ duplicatesChecker.UpdateList = function(self, list)
 end
 
 duplicatesChecker.Check = function(self)
-    -- TODO
+    if (data:GetDataByKey('disableDuplicateCheck')) then
+        return
+    end
+
     local addonAuras = waStorage:GetFullData()
 
     local disabledAuras = {}

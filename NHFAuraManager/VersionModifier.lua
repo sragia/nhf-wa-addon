@@ -29,7 +29,7 @@ local function serializeTable(val, name, skipnewlines, depth)
         if (type(name) == "number") then
             tmp = tmp .. '[' .. name .. ']' .. " = "
         else
-            tmp = tmp .. '["' .. name .. '"]' .. " = "
+            tmp = tmp .. '["' .. string.gsub(name, '"', '\\"') .. '"]' .. " = "
         end
     end
 
