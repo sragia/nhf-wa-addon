@@ -100,7 +100,7 @@ end
 
 WA.Import = function(self, data, callback, fresh)
     if (not WeakAuras) then
-        print('WeakAuras not installed/enabled')
+        AM.utils.printOut('WeakAuras not installed/enabled')
         return
     end
     AM.utils.printOut('Importing ' .. data.d.id)

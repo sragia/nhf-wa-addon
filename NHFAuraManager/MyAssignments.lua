@@ -119,7 +119,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = '',
+                        subText = assignment.subText,
                         icon = assignment.iconID,
                     })
                 end
@@ -129,7 +129,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = '',
+                        subText = assignment.subText,
                         icon = assignment.iconID,
                     })
                 end
@@ -139,7 +139,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('Position: |cff00ff00%d|r', index),
+                        subText = string.format('%sPosition: |cffffffff%d|r', assignment.subText or '', index),
                         icon = assignment.iconID,
                     })
                 end
@@ -149,7 +149,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('Position: |cff00ff00%d|r', index),
+                        subText = string.format('%sPosition: |cffffffff%d|r', assignment.subText or '', index),
                         icon = assignment.iconID,
                     })
                 end
@@ -159,13 +159,13 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('Position: |cff00ff00%d|r', index),
+                        subText = string.format('%sPosition: |cffffffff%d|r', assignment.subText or '', index),
                         icon = assignment.iconID,
                     })
                 end
             end,
             default = function()
-                print('Unknown assignment type: ' .. assignment.type)
+                AM.utils.printOut('Unknown assignment type: ' .. assignment.type)
             end
         })
     end
@@ -220,5 +220,5 @@ myAssignments.Show = function(self, isNoteUpdated)
     else
         self.notUpdatedFrame:Hide();
     end
-    self.window:ShowWindow(isNoteUpdated and 60);
+    self.window:ShowWindow(isNoteUpdated and 5);
 end

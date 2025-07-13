@@ -33,7 +33,7 @@ end
 
 local function isAvailableForAction()
     if (not IsInGroup() or (not UnitIsGroupLeader('player') and not UnitIsGroupAssistant('player'))) then
-        print('Not a leader/assist or not in group')
+        AM.utils.printOut('Not a leader/assist or not in group')
         return false
     end
 
@@ -204,7 +204,7 @@ versionChecker.HandleVersionCheckResponse = function(self, data, sender)
     local _, char = FindInTableIf(self.data.characters, function(d) return d.name == Ambiguate(sender, 'short') end)
 
     if (not char) then
-        print('Response from ', sender, ' could not be parsed')
+        AM.utils.printOut('Response from ', sender, ' could not be parsed')
         return;
     end
 

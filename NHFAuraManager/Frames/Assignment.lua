@@ -49,6 +49,7 @@ local function Configure(f)
     local subText = f:CreateFontString(nil, 'OVERLAY')
     subText:SetFont(AM.const.fonts.DEFAULT, 12, 'OUTLINE')
     subText:SetPoint('TOPLEFT', name, 'BOTTOMLEFT', 0, -3)
+    subText:SetVertexColor(18 / 255, 1, 61 / 255, 1)
     subText:SetWidth(0)
     f.subText = subText
 

@@ -42,7 +42,7 @@ duplicatesChecker.Init = function(self)
     local WAImportOriginal = WeakAuras.Import
     WeakAuras.Import = function(inData, target, callbackFunc, ...)
         if (callbackFunc and type(callbackFunc) ~= 'function') then
-            print('NHF Aura Manager: Something has changed in args, report to Exality')
+            AM.utils.printOut('NHF Aura Manager: Something has changed in args, report to Exality')
             WAImportOriginal(inData, target, callbackFunc, ...)
             return
         end

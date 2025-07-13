@@ -158,7 +158,7 @@ manager.PopulateDisplays = function(self, container)
     local optionalHeader = waDisplayHeader:Create({
         name = 'Optional',
         tooltipText =
-        'Recommended to install, but not required.\nIncludes general use auras, like text timers and important buffs/debuffs.'
+        'Recommended to install, but not required.'
     })
     table.insert(self.waDisplays, optionalHeader)
     optionalHeader:SetParent(container)

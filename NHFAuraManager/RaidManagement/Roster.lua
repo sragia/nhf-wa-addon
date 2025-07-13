@@ -126,7 +126,7 @@ roster.Import = function(self)
     local bosses = { strsplit('/', text) }
     self.roster = {}
     if (#bosses < 2) then
-        print('invalid roster')
+        AM.utils.printOut('Invalid roster import')
         return
     end
     for i = 1, #bosses do
