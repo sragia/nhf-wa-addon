@@ -30,13 +30,35 @@ myAssignments.Init = function(self)
     self.scrollFrame:SetPoint('BOTTOMRIGHT', -10, 40)
     self.scrollFrame:UpdateScrollChild(self.window.container:GetWidth() - 20, self.window.container:GetHeight() - 100)
 
+    local notUpdatedFrame = CreateFrame('Frame', nil, self.window.container)
+    notUpdatedFrame:SetPoint('TOP', self.window.container, 'TOP', 0, 10)
+    notUpdatedFrame:SetSize(150, 40)
+    notUpdatedFrame:Hide()
 
-    local noteUpdatedTxt = self.window.container:CreateFontString(nil, 'OVERLAY')
-    noteUpdatedTxt:SetFont(AM.const.fonts.DEFAULT, 16, 'OUTLINE')
-    noteUpdatedTxt:SetPoint('TOP', self.window.container, 'TOP', 0, 10)
+    local noteUpdatedTex = notUpdatedFrame:CreateTexture(nil, 'BACKGROUND')
+    noteUpdatedTex:SetTexture(AM.const.textures.frame.inputs.buttonBg)
+    noteUpdatedTex:SetTextureSliceMargins(10, 10, 10, 10)
+    noteUpdatedTex:SetTextureSliceMode(Enum.UITextureSliceMode.Stretched)
+    noteUpdatedTex:SetVertexColor(1, 18 / 255, 69 / 255, 1)
+    noteUpdatedTex:SetAllPoints()
+    self.noteUpdatedTex = noteUpdatedTex
+
+    self.notUpdatedFrame = notUpdatedFrame
+
+    local noteUpdatedTxt = notUpdatedFrame:CreateFontString(nil, 'OVERLAY')
+    noteUpdatedTxt:SetFont(AM.const.fonts.DEFAULT, 15, 'OUTLINE')
+    noteUpdatedTxt:SetPoint('CENTER', notUpdatedFrame)
     noteUpdatedTxt:SetWidth(0)
-    noteUpdatedTxt:SetText('Note Updated')
+    noteUpdatedTxt:SetText('Note Updated!')
     self.noteUpdatedTxt = noteUpdatedTxt
+
+    local noAssignmentsTxt = self.window.container:CreateFontString(nil, 'OVERLAY')
+    noAssignmentsTxt:SetFont(AM.const.fonts.DEFAULT, 16, 'OUTLINE')
+    noAssignmentsTxt:SetPoint('CENTER', self.window.container)
+    noAssignmentsTxt:SetWidth(0)
+    noAssignmentsTxt:SetText('You have no assignments!')
+    noAssignmentsTxt:Hide()
+    self.noAssignmentsTxt = noAssignmentsTxt
 end
 
 myAssignments.ReadNote = function(self)
@@ -96,7 +118,7 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = assignment.name,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
                         subText = '',
                         icon = assignment.iconID,
                     })
@@ -106,7 +128,7 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = assignment.name,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
                         subText = '',
                         icon = assignment.iconID,
                     })
@@ -116,7 +138,7 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = assignment.name,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
                         subText = string.format('Position: |cff00ff00%d|r', index),
                         icon = assignment.iconID,
                     })
@@ -126,7 +148,7 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = assignment.name,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
                         subText = string.format('Position: |cff00ff00%d|r', index),
                         icon = assignment.iconID,
                     })
@@ -136,7 +158,7 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = assignment.name,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
                         subText = string.format('Position: |cff00ff00%d|r', index),
                         icon = assignment.iconID,
                     })
@@ -152,6 +174,9 @@ end
 
 myAssignments.PopulateWindow = function(self)
     local assignments = myAssignments:ParseAssignments()
+    if (#assignments <= 0) then
+        return false;
+    end
     local prev = nil;
     for _, frame in pairs(self.frames) do
         frame:Destroy()
@@ -170,6 +195,7 @@ myAssignments.PopulateWindow = function(self)
         end
         prev = frame;
     end
+    return true;
 end
 
 myAssignments.Show = function(self, isNoteUpdated)
@@ -180,11 +206,19 @@ myAssignments.Show = function(self, isNoteUpdated)
             return;
         end
     end
-    self:PopulateWindow();
-    if (isNoteUpdated) then
-        self.noteUpdatedTxt:Show();
-    else
-        self.noteUpdatedTxt:Hide();
+    if (isNoteUpdated and not IsInRaid()) then
+        return;
     end
-    self.window:ShowWindow(isNoteUpdated and 5);
+    local hasAssignments = self:PopulateWindow();
+    if (not hasAssignments) then
+        self.noAssignmentsTxt:Show();
+    else
+        self.noAssignmentsTxt:Hide();
+    end
+    if (isNoteUpdated) then
+        self.notUpdatedFrame:Show();
+    else
+        self.notUpdatedFrame:Hide();
+    end
+    self.window:ShowWindow(isNoteUpdated and 60);
 end
