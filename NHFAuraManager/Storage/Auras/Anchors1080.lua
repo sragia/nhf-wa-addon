@@ -160,7 +160,7 @@ wa.data['1080panchors'].data = {
                 ["arcLength"] = 360,
                 ["fullCircle"] = true,
                 ["rowSpace"] = 1,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -298,7 +298,7 @@ wa.data['1080panchors'].data = {
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["sparkRotation"] = 0,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["backgroundColor"] = {
                     [1] = 0.031372549019608,
                     [2] = 0.031372549019608,
@@ -749,7 +749,7 @@ end\
                 ["arcLength"] = 360,
                 ["fullCircle"] = true,
                 ["rowSpace"] = 1,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -884,7 +884,7 @@ end\
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["displayText_format_p_time_format"] = 0,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["actions"] = {
                     ["start"] = {
                         ["sound"] = "Interface\\AddOns\\BigWigs\\Media\\Sounds\\Info.ogg",

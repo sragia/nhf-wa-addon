@@ -165,7 +165,7 @@ wa.data['1440panchors'].data = {
                     [4] = 1,
                 },
                 ["space"] = -1,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -296,7 +296,7 @@ wa.data['1440panchors'].data = {
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["sparkRotation"] = 0,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["icon"] = true,
                 ["icon_color"] = {
                     [1] = 1,
@@ -752,7 +752,7 @@ end\
                     [4] = 1,
                 },
                 ["space"] = -1,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -883,7 +883,7 @@ end\
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["displayText_format_p_time_format"] = 0,
-                ["url"] = "https://wago.io/NSAnchors/3",
+                ["url"] = "",
                 ["icon"] = true,
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["keepAspectRatio"] = false,

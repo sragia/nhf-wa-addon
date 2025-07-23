@@ -249,6 +249,10 @@ versionModifier.ModifyUUID = function(self, data)
             subRegion.amId = AM.utils.generateRandomString(8)
         end
     end
+    if (data.url) then
+        data.url = ''
+    end
+
     if (data.controlledChildren) then
         for _, child in pairs(data.controlledChildren) do
             local childData = WeakAuras.GetData(child)
