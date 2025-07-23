@@ -151,3 +151,8 @@ NHFAPI.SortPositionsUp = function(self, type, newPositions, regions)
 
     return newPositions
 end
+
+NHFAPI.PlaySound = function(self, sound)
+    if (not sound or not AM.Media.sounds[sound]) then return end
+    PlaySoundFile(AM.Media.sounds[sound], "Master")
+end
