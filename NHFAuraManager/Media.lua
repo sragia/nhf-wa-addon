@@ -44,6 +44,8 @@ AM.Media = {
         ["Stand in Fire"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\StandInFire.mp3]],
         ["Spawning Add"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\SpawningAdd.mp3]],
         ["Face Spirit"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\FaceSpirit.mp3]],
+        ["Knock"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Knock.mp3]],
+        ["Pull In"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\PullIn.mp3]]
     }
 }
 
