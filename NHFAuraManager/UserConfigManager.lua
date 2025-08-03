@@ -28,7 +28,8 @@ local IGNORED_KEYS = {
     'triggers',
     'authorMode',
     'config',
-    'actions.init'
+    'actions.init',
+    'sortHybridTable'
 }
 
 local function getValueFromKeyPath(keyPath, data)
