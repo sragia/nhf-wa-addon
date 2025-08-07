@@ -30,6 +30,7 @@ wa.GetAurasForDisplay = function(self)
             semver = data.semver,
             version = data.version,
             isOptional = tonumber(data.isOptional) == 1,
+            isAnchor = tonumber(data.isAnchor) == 1,
             formattedVersion = string.format('%s (%s)', data.semver, data.version),
         })
     end
@@ -51,6 +52,11 @@ wa.GetAurasForChecker = function(self)
     local displayData = { {
         name = 'Addon',
         semver = C_AddOns.GetAddOnMetadata(addonName, "version"),
+        uid = '',
+        version = ''
+    }, {
+        name = 'NS Raid Tools',
+        semver = C_AddOns.GetAddOnMetadata('NorthernSkyRaidTools', "version"),
         uid = '',
         version = ''
     } }

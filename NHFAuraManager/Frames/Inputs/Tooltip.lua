@@ -35,7 +35,7 @@ local function ConfigureFrame(f)
     bg:SetTextureSliceMode(Enum.UITextureSliceMode.Tiled)
     bg:SetPoint('TOPLEFT', text, -5, 10)
     bg:SetPoint('BOTTOMRIGHT', text, 5, -10)
-    bg:SetVertexColor(0, 0, 0, 0.5)
+    bg:SetVertexColor(0, 0, 0, 0.8)
 
     local showAG = AM.utils.animation.getAnimationGroup(f)
     AM.utils.animation.diveIn(f, 0.2, 0, 10, 'IN', showAG)

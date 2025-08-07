@@ -29,7 +29,7 @@ local function serializeTable(val, name, skipnewlines, depth)
         if (type(name) == "number") then
             tmp = tmp .. '[' .. name .. ']' .. " = "
         else
-            tmp = tmp .. '["' .. name .. '"]' .. " = "
+            tmp = tmp .. '["' .. string.gsub(name, '"', '\\"') .. '"]' .. " = "
         end
     end
 
@@ -55,7 +55,7 @@ local function serializeTable(val, name, skipnewlines, depth)
 end
 
 versionModifier.Init = function(self)
-    self.window = windowConstruct:Create({ size = { 500, 550 }, title = 'Version Modifier' })
+    self.window = windowConstruct:Create({ size = { 500, 600 }, title = 'Version Modifier' })
     self:Setup()
 end
 
@@ -154,6 +154,7 @@ versionModifier.SelectAura = function(self, id, btn)
     self.window.container.version:SetEditorValue(data.version or 'no version')
     self.window.container.semver:SetEditorValue(data.semver or 'no semver')
     self.window.container.isOptional:SetEditorValue(data.AMisOptional or '0')
+    self.window.container.isAnchor:SetEditorValue(data.AMisAnchor or '0')
 end
 
 versionModifier.SetupEditor = function(self, container)
@@ -171,6 +172,11 @@ versionModifier.SetupEditor = function(self, container)
         initial = 'Select WA'
     })
 
+    local isAnchor = editBox:Create({
+        label = 'Is Anchor',
+        initial = 'Select WA'
+    })
+
     local exportOutput = editBox:Create({
         label = 'Export Output',
         initial = 'Export to get output'
@@ -182,6 +188,8 @@ versionModifier.SetupEditor = function(self, container)
     version:SetHeight(30)
     isOptional:SetParent(container)
     isOptional:SetHeight(30)
+    isAnchor:SetParent(container)
+    isAnchor:SetHeight(30)
     exportOutput:SetParent(container)
     exportOutput:SetHeight(30)
 
@@ -189,6 +197,7 @@ versionModifier.SetupEditor = function(self, container)
     container.semver = semver
     container.exportOutput = exportOutput
     container.isOptional = isOptional
+    container.isAnchor = isAnchor
 
     version:SetPoint("TOPLEFT", container.waBrowser, "BOTTOMLEFT", 0, -5)
     version:SetPoint("TOPRIGHT", container.waBrowser, "BOTTOMRIGHT", 0, -5)
@@ -199,16 +208,20 @@ versionModifier.SetupEditor = function(self, container)
     isOptional:SetPoint("TOPLEFT", semver, "BOTTOMLEFT", 0, -15)
     isOptional:SetPoint("TOPRIGHT", semver, "BOTTOMRIGHT", 0, -15)
 
+    isAnchor:SetPoint("TOPLEFT", isOptional, "BOTTOMLEFT", 0, -15)
+    isAnchor:SetPoint("TOPRIGHT", isOptional, "BOTTOMRIGHT", 0, -15)
+
     local applyBtn = button:Create({
         text = 'Apply',
         onClick = function()
-            self:ModifyWeakAura(version:GetEditorValue(), semver:GetEditorValue(), isOptional:GetEditorValue())
+            self:ModifyWeakAura(version:GetEditorValue(), semver:GetEditorValue(), isOptional:GetEditorValue(),
+                isAnchor:GetEditorValue())
         end,
         color = { 21 / 255, 92 / 255, 0, 1 }
     }, container)
 
-    applyBtn:SetPoint("TOPLEFT", isOptional, "BOTTOMLEFT", 0, -15)
-    applyBtn:SetPoint("TOPRIGHT", isOptional, "BOTTOM", -10, -15)
+    applyBtn:SetPoint("TOPLEFT", isAnchor, "BOTTOMLEFT", 0, -15)
+    applyBtn:SetPoint("TOPRIGHT", isAnchor, "BOTTOM", -10, -15)
 
     local exportBtn = button:Create({
         text = 'Export',
@@ -218,8 +231,8 @@ versionModifier.SetupEditor = function(self, container)
         color = { 48 / 255, 48 / 255, 48 / 255, 1 }
     }, container)
 
-    exportBtn:SetPoint("TOPLEFT", isOptional, "BOTTOM", 10, -15)
-    exportBtn:SetPoint("TOPRIGHT", isOptional, "BOTTOMRIGHT", 0, -15)
+    exportBtn:SetPoint("TOPLEFT", isAnchor, "BOTTOM", 10, -15)
+    exportBtn:SetPoint("TOPRIGHT", isAnchor, "BOTTOMRIGHT", 0, -15)
 
     exportOutput:SetPoint("TOPLEFT", applyBtn, "BOTTOMLEFT", 0, -20)
     exportOutput:SetPoint("TOPRIGHT", exportBtn, "BOTTOMRIGHT", 0, -20)
@@ -236,6 +249,10 @@ versionModifier.ModifyUUID = function(self, data)
             subRegion.amId = AM.utils.generateRandomString(8)
         end
     end
+    if (data.url) then
+        data.url = ''
+    end
+
     if (data.controlledChildren) then
         for _, child in pairs(data.controlledChildren) do
             local childData = WeakAuras.GetData(child)
@@ -244,11 +261,12 @@ versionModifier.ModifyUUID = function(self, data)
     end
 end
 
-versionModifier.ModifyWeakAura = function(self, version, semver, isOptional)
+versionModifier.ModifyWeakAura = function(self, version, semver, isOptional, isAnchor)
     local data = WeakAuras.GetData(self.waBrowser.selectedAura)
     data.version = version
     data.semver = semver
     data.AMisOptional = isOptional
+    data.AMisAnchor = isAnchor
 
     self:ModifyUUID(data)
 end
@@ -262,6 +280,7 @@ versionModifier.Export = function(self, id)
         semver = data.semver,
         version = data.version,
         isOptional = data.AMisOptional,
+        isAnchor = data.AMisAnchor,
         import = shareData
     }
     self.window.container.exportOutput:SetEditorValue(serializeTable(formatted):gsub("|", "||"))

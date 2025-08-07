@@ -12,8 +12,9 @@ wa.data['memes'].data = {
     ["uid"] = "AM-AvDs1d7FLue",
     ["name"] = "[NHF] Memes",
     ["isOptional"] = "1",
-    ["semver"] = "0.0.4",
-    ["version"] = "4",
+    ["isAnchor"] = "0",
+    ["semver"] = "0.0.3",
+    ["version"] = "3",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -23,7 +24,7 @@ wa.data['memes'].data = {
             ["authorOptions"] = {
             },
             ["preferToUpdate"] = false,
-            ["yOffset"] = 0,
+            ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-meme.png",
             ["anchorPoint"] = "CENTER",
             ["borderColor"] = {
                 [1] = 0,
@@ -34,15 +35,16 @@ wa.data['memes'].data = {
             ["actions"] = {
                 ["start"] = {
                 },
-                ["finish"] = {
-                },
                 ["init"] = {
+                },
+                ["finish"] = {
                 },
             },
             ["triggers"] = {
                 [1] = {
                     ["trigger"] = {
-                        ["debuffType"] = "HELPFUL",
+                        ["names"] = {
+                        },
                         ["type"] = "aura2",
                         ["spellIds"] = {
                         },
@@ -50,20 +52,19 @@ wa.data['memes'].data = {
                         ["unit"] = "player",
                         ["subeventPrefix"] = "SPELL",
                         ["event"] = "Health",
-                        ["names"] = {
-                        },
+                        ["debuffType"] = "HELPFUL",
                     },
                     ["untrigger"] = {
                     },
                 },
             },
-            ["internalVersion"] = 83,
+            ["internalVersion"] = 85,
             ["selfPoint"] = "CENTER",
-            ["version"] = "4",
+            ["version"] = "3",
             ["subRegions"] = {
             },
             ["load"] = {
-                ["talent"] = {
+                ["size"] = {
                     ["multi"] = {
                     },
                 },
@@ -75,7 +76,7 @@ wa.data['memes'].data = {
                     ["multi"] = {
                     },
                 },
-                ["size"] = {
+                ["talent"] = {
                     ["multi"] = {
                     },
                 },
@@ -91,45 +92,46 @@ wa.data['memes'].data = {
             ["borderEdge"] = "Square Full White",
             ["regionType"] = "group",
             ["borderSize"] = 2,
-            ["xOffset"] = 0,
-            ["AMModified"] = true,
-            ["AMisOptional"] = "1",
-            ["borderOffset"] = 4,
-            ["semver"] = "0.0.4",
-            ["conditions"] = {
-            },
-            ["id"] = "[NHF] Memes",
-            ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-meme.png",
-            ["frameStrata"] = 1,
-            ["anchorFrameType"] = "SCREEN",
             ["borderInset"] = 1,
-            ["config"] = {
-            },
-            ["uid"] = "AM-AvDs1d7FLue",
-            ["alpha"] = 1,
-            ["AMOriginalUUID"] = "AvDs1d7FLue",
-            ["information"] = {
-            },
+            ["xOffset"] = 0,
             ["animation"] = {
                 ["start"] = {
-                    ["easeStrength"] = 3,
                     ["type"] = "none",
+                    ["easeStrength"] = 3,
                     ["duration_type"] = "seconds",
                     ["easeType"] = "none",
                 },
                 ["main"] = {
-                    ["easeStrength"] = 3,
                     ["type"] = "none",
+                    ["easeStrength"] = 3,
                     ["duration_type"] = "seconds",
                     ["easeType"] = "none",
                 },
                 ["finish"] = {
-                    ["easeStrength"] = 3,
                     ["type"] = "none",
+                    ["easeStrength"] = 3,
                     ["duration_type"] = "seconds",
                     ["easeType"] = "none",
                 },
             },
+            ["AMisOptional"] = "1",
+            ["borderOffset"] = 4,
+            ["semver"] = "0.0.3",
+            ["AMOriginalUUID"] = "AvDs1d7FLue",
+            ["id"] = "[NHF] Memes",
+            ["config"] = {
+            },
+            ["alpha"] = 1,
+            ["anchorFrameType"] = "SCREEN",
+            ["AMisAnchor"] = "0",
+            ["uid"] = "AM-AvDs1d7FLue",
+            ["frameStrata"] = 1,
+            ["yOffset"] = 0,
+            ["conditions"] = {
+            },
+            ["information"] = {
+            },
+            ["AMModified"] = true,
         },
         ["c"] = {
             [1] = {
@@ -151,15 +153,16 @@ wa.data['memes'].data = {
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["finish"] = {
-                    },
                     ["init"] = {
+                    },
+                    ["finish"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["debuffType"] = "HELPFUL",
+                            ["names"] = {
+                            },
                             ["type"] = "aura2",
                             ["spellIds"] = {
                             },
@@ -167,19 +170,18 @@ wa.data['memes'].data = {
                             ["unit"] = "player",
                             ["subeventPrefix"] = "SPELL",
                             ["event"] = "Health",
-                            ["names"] = {
-                            },
+                            ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
                         },
                     },
                 },
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
                 ["subRegions"] = {
                 },
                 ["load"] = {
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -191,7 +193,7 @@ wa.data['memes'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -207,101 +209,83 @@ wa.data['memes'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
-                ["alpha"] = 1,
+                ["frameStrata"] = 1,
                 ["borderOffset"] = 4,
-                ["AMModified"] = true,
                 ["authorOptions"] = {
                 },
+                ["AMModified"] = true,
                 ["id"] = "[NHF] Break Timer",
-                ["conditions"] = {
-                },
-                ["frameStrata"] = 1,
+                ["AMOriginalUUID"] = "oxcjz50l9oi",
+                ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["config"] = {
-                },
-                ["borderInset"] = 1,
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
+                ["borderInset"] = 1,
+                ["config"] = {
+                },
                 ["uid"] = "AM-oxcjz50l9oi",
-                ["AMOriginalUUID"] = "oxcjz50l9oi",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
                 ["parent"] = "[NHF] Memes",
             },
             [2] = {
-                ["outline"] = "OUTLINE",
-                ["parent"] = "[NHF] Break Timer",
-                ["displayText"] = "Break Time! |cffff0022%p|r",
-                ["shadowYOffset"] = -1,
+                ["sparkWidth"] = 10,
+                ["iconSource"] = 0,
+                ["xOffset"] = 2.9166259765625,
+                ["displayText"] = "Bait Frontal (%p)",
+                ["yOffset"] = 137.33319091797,
                 ["anchorPoint"] = "CENTER",
-                ["displayText_format_p_time_format"] = 0,
-                ["customTextUpdate"] = "event",
-                ["automaticWidth"] = "Auto",
+                ["sparkRotation"] = 0,
                 ["actions"] = {
                     ["start"] = {
                         ["do_custom"] = true,
                         ["custom"] = "local num = math.random(1,aura_env.config.available)\
-                                      WeakAuras.ScanEvents(\"NHF_MEME_BREAK\", num, true)",
-                    },
-                    ["init"] = {
+                            WeakAuras.ScanEvents(\"NHF_MEME_BREAK\", num, true)",
                     },
                     ["finish"] = {
                         ["do_custom"] = true,
                         ["custom"] = "WeakAuras.ScanEvents(\"NHF_MEME_BREAK\", 1, false)\
-                                      ",
+                            ",
+                    },
+                    ["init"] = {
                     },
                 },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "addons",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Boss Mod Timer",
-                            ["subeventPrefix"] = "SPELL",
-                            ["message"] = "Break time",
-                            ["spellIds"] = {
-                            },
-                            ["message_operator"] = "find('%s')",
-                            ["use_message"] = true,
-                            ["names"] = {
-                            },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["enableGradient"] = false,
+                ["keepAspectRatio"] = true,
+                ["selfPoint"] = "BOTTOM",
+                ["barColor"] = {
+                    [1] = 0.86274516582489,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
                 },
-                ["displayText_format_p_format"] = "timed",
-                ["displayText_format_p_time_legacy_floor"] = false,
-                ["wordWrap"] = "WordWrap",
-                ["font"] = "Poppins SemiBold",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
+                ["desaturate"] = false,
+                ["font"] = "JetBrainsMono - ExtraBold",
+                ["sparkOffsetY"] = 0,
+                ["gradientOrientation"] = "HORIZONTAL",
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -313,53 +297,227 @@ wa.data['memes'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
                 },
-                ["fontSize"] = 24,
                 ["shadowXOffset"] = 1,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "empty",
+                ["texture"] = "Clean",
+                ["cooldownTextDisabled"] = true,
+                ["spark"] = false,
+                ["alpha"] = 1,
+                ["config"] = {
+                    ["available"] = "14",
                 },
-                ["regionType"] = "text",
-                ["yOffset"] = 109.16625976562,
-                ["internalVersion"] = 83,
                 ["fixedWidth"] = 200,
-                ["AMModified"] = true,
-                ["displayText_format_p_time_precision"] = 1,
-                ["preferToUpdate"] = false,
-                ["uid"] = "AM-bUzSHYQcnSh",
+                ["outline"] = "OUTLINE",
+                ["sparkOffsetX"] = 0,
                 ["color"] = {
+                    [1] = 0.24705883860588,
+                    [2] = 0.82745105028152,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["adjustedMin"] = "",
+                ["shadowYOffset"] = -1,
+                ["cooldownSwipe"] = true,
+                ["customTextUpdate"] = "event",
+                ["automaticWidth"] = "Auto",
+                ["icon_color"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["justify"] = "CENTER",
-                ["conditions"] = {
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "addons",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["event"] = "Boss Mod Timer",
+                            ["subeventPrefix"] = "SPELL",
+                            ["message"] = "Break",
+                            ["spellIds"] = {
+                            },
+                            ["message_operator"] = "find('%s')",
+                            ["use_message"] = true,
+                            ["unit"] = "player",
+                            ["names"] = {
+                            },
+                            ["debuffType"] = "HELPFUL",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
                 },
-                ["id"] = "Break Text",
+                ["displayText_format_p_format"] = "timed",
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["adjustedMax"] = "",
+                ["orientation"] = "HORIZONTAL",
+                ["icon"] = false,
+                ["customText"] = "function()\
+    local u = aura_env.state.unit\
+    if (WeakAuras.IsOptionsOpen()) then\
+        return NSAPI and NSAPI:Shorten('player', 10) or WA_ClassColorName('player')\
+    end\
+    \
+    if aura_env.state and u then\
+        return NSAPI and NSAPI:Shorten(u, 8) or WA_ClassColorName(u)\
+    end\
+end",
+                ["sparkColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "MD01E3kk",
+                        ["type"] = "subbackground",
+                    },
+                    [2] = {
+                        ["text_text_format_n_format"] = "none",
+                        ["text_text"] = "Break",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["text_selfPoint"] = "RIGHT",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["type"] = "subtext",
+                        ["text_anchorXOffset"] = -3,
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "Poppins Bold",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["amId"] = "yuJUiV4E",
+                        ["text_visible"] = true,
+                        ["anchor_point"] = "CENTER",
+                        ["text_fontSize"] = 30,
+                        ["anchorXOffset"] = 0,
+                        ["text_shadowXOffset"] = 1,
+                    },
+                    [3] = {
+                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_text"] = "(|cffff0022%p|r)",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
+                        ["text_selfPoint"] = "LEFT",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["amId"] = "JJdIUcwm",
+                        ["text_text_format_p_time_legacy_floor"] = false,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
+                        ["text_text_format_p_time_mod_rate"] = true,
+                        ["text_shadowXOffset"] = 1,
+                        ["type"] = "subtext",
+                        ["text_anchorXOffset"] = 3,
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 1,
+                            [3] = 1,
+                            [4] = 1,
+                        },
+                        ["text_font"] = "JetBrainsMono - ExtraBold",
+                        ["text_text_format_n_format"] = "none",
+                        ["text_shadowYOffset"] = -1,
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_visible"] = true,
+                        ["text_text_format_p_format"] = "timed",
+                        ["anchor_point"] = "CENTER",
+                        ["text_fontSize"] = 30,
+                        ["anchorXOffset"] = 0,
+                        ["anchorYOffset"] = 0,
+                    },
+                },
+                ["height"] = 0.99994909763336,
+                ["textureSource"] = "LSM",
+                ["AMModified"] = true,
+                ["sparkBlendMode"] = "ADD",
+                ["useAdjustededMax"] = false,
+                ["fontSize"] = 27,
+                ["source"] = "import",
+                ["width"] = 20.166467666626,
+                ["useCooldownModRate"] = true,
+                ["zoom"] = 0,
+                ["sparkHidden"] = "NEVER",
+                ["cooldown"] = true,
+                ["cooldownEdge"] = false,
+                ["sparkRotationMode"] = "AUTO",
+                ["parent"] = "[NHF] Break Timer",
+                ["icon_side"] = "RIGHT",
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["frameStrata"] = 5,
+                ["sparkHeight"] = 30,
+                ["displayText_format_p_time_precision"] = 1,
+                ["displayIcon"] = 2065603,
+                ["displayText_format_p_time_format"] = 0,
+                ["backgroundColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 0.5,
+                },
+                ["justify"] = "LEFT",
+                ["internalVersion"] = 85,
+                ["id"] = "Break Text",
+                ["wordWrap"] = "WordWrap",
+                ["frameStrata"] = 6,
                 ["anchorFrameType"] = "SCREEN",
                 ["authorOptions"] = {
                     [1] = {
@@ -367,28 +525,27 @@ wa.data['memes'].data = {
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["default"] = "",
-                        ["key"] = "available",
                         ["name"] = "# Available",
-                        ["length"] = 10,
                         ["multiline"] = false,
+                        ["length"] = 10,
+                        ["key"] = "available",
                         ["useLength"] = false,
                     },
                 },
-                ["config"] = {
-                    ["available"] = "27",
-                },
-                ["xOffset"] = -2.5001220703125,
-                ["selfPoint"] = "BOTTOM",
+                ["preferToUpdate"] = true,
+                ["inverse"] = true,
+                ["AMOriginalUUID"] = "HnHLXunzzBM",
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["AMOriginalUUID"] = "bUzSHYQcnSh",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["displayText_format_p_time_mod_rate"] = true,
+                ["uid"] = "AM-bUzSHYQcnSh",
             },
             [3] = {
                 ["controlledChildren"] = {
@@ -406,25 +563,12 @@ wa.data['memes'].data = {
                     [12] = "Break Image 12",
                     [13] = "Break Image 13",
                     [14] = "Break Image 14",
-                    [15] = "Break Image 15",
-                    [16] = "Break Image 16",
-                    [17] = "Break Image 17",
-                    [18] = "Break Image 18",
-                    [19] = "Break Image 19",
-                    [20] = "Break Image 20",
-                    [21] = "Break Image 21",
-                    [22] = "Break Image 22",
-                    [23] = "Break Image 23",
-                    [24] = "Break Image 24",
-                    [25] = "Break Image 25",
-                    [26] = "Break Image 26",
-                    [27] = "Break Image 27",
                 },
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["authorOptions"] = {
                 },
                 ["preferToUpdate"] = false,
-                ["yOffset"] = 0,
+                ["groupIcon"] = "",
                 ["anchorPoint"] = "CENTER",
                 ["borderColor"] = {
                     [1] = 0,
@@ -435,16 +579,15 @@ wa.data['memes'].data = {
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["init"] = {
-                    },
                     ["finish"] = {
+                    },
+                    ["init"] = {
                     },
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["names"] = {
-                            },
+                            ["debuffType"] = "HELPFUL",
                             ["type"] = "aura2",
                             ["spellIds"] = {
                             },
@@ -452,37 +595,19 @@ wa.data['memes'].data = {
                             ["unit"] = "player",
                             ["subeventPrefix"] = "SPELL",
                             ["event"] = "Health",
-                            ["debuffType"] = "HELPFUL",
+                            ["names"] = {
+                            },
                         },
                         ["untrigger"] = {
                         },
                     },
                 },
-                ["internalVersion"] = 83,
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
+                ["internalVersion"] = 85,
+                ["selfPoint"] = "CENTER",
                 ["subRegions"] = {
                 },
                 ["load"] = {
-                    ["size"] = {
+                    ["talent"] = {
                         ["multi"] = {
                         },
                     },
@@ -494,7 +619,7 @@ wa.data['memes'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["talent"] = {
+                    ["size"] = {
                         ["multi"] = {
                         },
                     },
@@ -510,25 +635,44 @@ wa.data['memes'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
-                ["AMModified"] = true,
-                ["selfPoint"] = "CENTER",
-                ["borderOffset"] = 4,
                 ["parent"] = "[NHF] Break Timer",
-                ["conditions"] = {
-                },
+                ["xOffset"] = 0,
+                ["borderOffset"] = 4,
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "vg38pwXdk13",
                 ["id"] = "[NHF] Break Images",
-                ["config"] = {
-                },
+                ["yOffset"] = 0,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["uid"] = "AM-vg38pwXdk13",
+                ["config"] = {
+                },
                 ["borderInset"] = 1,
-                ["groupIcon"] = "",
+                ["uid"] = "AM-vg38pwXdk13",
                 ["alpha"] = 1,
-                ["AMOriginalUUID"] = "vg38pwXdk13",
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["xOffset"] = 0,
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
             },
             [4] = {
                 ["authorOptions"] = {
@@ -537,14 +681,14 @@ wa.data['memes'].data = {
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["key"] = "number",
                         ["multiline"] = false,
-                        ["length"] = 10,
                         ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
                         ["useLength"] = false,
                     },
                 },
-                ["adjustedMax"] = "",
+                ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
                 ["yOffset"] = 274.58343505859,
                 ["foregroundColor"] = {
@@ -556,42 +700,16 @@ wa.data['memes'].data = {
                 ["desaturateBackground"] = false,
                 ["animationType"] = "loop",
                 ["sameTexture"] = true,
-                ["hideBackground"] = true,
+                ["startPercent"] = 0,
                 ["backgroundColor"] = {
                     [1] = 0.5,
                     [2] = 0.5,
                     [3] = 0.5,
                     [4] = 0.5,
                 },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["names"] = {
-                            },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
+                ["customForegroundRows"] = 7,
                 ["frameRate"] = 15,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
@@ -600,7 +718,255 @@ wa.data['memes'].data = {
                 ["customForegroundFileHeight"] = 2048,
                 ["customBackgroundRows"] = 16,
                 ["customForegroundFileWidth"] = 2048,
+                ["blendMode"] = "BLEND",
+                ["anchorPoint"] = "CENTER",
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "IdGYao4X",
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["height"] = 258.83334350586,
+                ["customForegroundFrameHeight"] = 268,
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_combat"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["subeventPrefix"] = "SPELL",
+                            ["customDuration"] = "",
+                            ["names"] = {
+                            },
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break1",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "LhpV41IK46I",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                    },
+                },
+                ["customForegroundFrames"] = 21,
+                ["hideBackground"] = true,
+                ["config"] = {
+                    ["number"] = "1",
+                },
+                ["customForegroundColumns"] = 4,
+                ["width"] = 327.16790771484,
                 ["endPercent"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["parent"] = "[NHF] Break Images",
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 1",
+                ["desaturateForeground"] = false,
+                ["frameStrata"] = 1,
+                ["customForegroundFrameWidth"] = 360,
+                ["AMModified"] = true,
+                ["uid"] = "AM-LhpV41IK46I",
+                ["inverse"] = false,
+                ["xOffset"] = 0,
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["adjustedMax"] = "",
+            },
+            [5] = {
+                ["parent"] = "[NHF] Break Images",
+                ["adjustedMax"] = "",
+                ["adjustedMin"] = "",
+                ["yOffset"] = 274.58349609375,
+                ["foregroundColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["desaturateForeground"] = false,
+                ["customForegroundRows"] = 6,
+                ["frameRate"] = 15,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
+                ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 2048,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 1024,
+                ["blendMode"] = "BLEND",
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["names"] = {
+                            },
+                            ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["startPercent"] = 0,
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "nKwKJsPU",
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["height"] = 258.83334350586,
+                ["customForegroundFrameHeight"] = 244,
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_combat"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["AMModified"] = true,
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break2",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "7EA8puUIaIH",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["xOffset"] = 0,
+                ["endPercent"] = 1,
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
+                },
+                ["uid"] = "AM-7EA8puUIaIH",
+                ["customForegroundColumns"] = 2,
+                ["width"] = 444.66793823242,
+                ["anchorFrameType"] = "SCREEN",
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 2",
+                ["customForegroundFrames"] = 12,
+                ["frameStrata"] = 1,
+                ["customForegroundFrameWidth"] = 498,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -621,78 +987,19 @@ wa.data['memes'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["startPercent"] = 0,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 258.83334350586,
-                ["customForegroundFrameHeight"] = 268,
-                ["AMModified"] = true,
-                ["customForegroundRows"] = 7,
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break1",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["customForegroundFrames"] = 21,
-                ["preferToUpdate"] = false,
-                ["uid"] = "AM-LhpV41IK46I",
-                ["customForegroundColumns"] = 4,
-                ["customForegroundFrameWidth"] = 360,
-                ["blendMode"] = "BLEND",
-                ["parent"] = "[NHF] Break Images",
-                ["anchorFrameType"] = "SCREEN",
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 1",
-                ["desaturateForeground"] = false,
-                ["frameStrata"] = 1,
-                ["width"] = 327.16790771484,
-                ["anchorPoint"] = "CENTER",
                 ["config"] = {
-                    ["number"] = "1",
+                    ["number"] = "2",
                 },
                 ["inverse"] = false,
-                ["xOffset"] = 0,
-                ["AMOriginalUUID"] = "LhpV41IK46I",
+                ["preferToUpdate"] = false,
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
+                ["anchorPoint"] = "CENTER",
             },
-            [5] = {
-                ["xOffset"] = 8.499740600585,
+            [6] = {
+                ["xOffset"] = 0,
                 ["adjustedMax"] = "",
                 ["adjustedMin"] = "",
                 ["yOffset"] = 274.58349609375,
@@ -700,199 +1007,62 @@ wa.data['memes'].data = {
                 ["desaturateBackground"] = false,
                 ["animationType"] = "loop",
                 ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["desaturateForeground"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 15,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["anchorFrameType"] = "SCREEN",
-                ["customForegroundRows"] = 12,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 258.83334350586,
-                ["customForegroundFrameHeight"] = 164,
-                ["AMModified"] = true,
-                ["selfPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break36",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["endPercent"] = 1,
                 ["startPercent"] = 0,
-                ["config"] = {
-                    ["number"] = "2",
-                },
-                ["customForegroundColumns"] = 11,
-                ["customForegroundFrameWidth"] = 185,
-                ["blendMode"] = "BLEND",
                 ["backgroundColor"] = {
                     [1] = 0.5,
                     [2] = 0.5,
                     [3] = 0.5,
                     [4] = 0.5,
                 },
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 2",
-                ["customForegroundFrames"] = 128,
-                ["frameStrata"] = 1,
-                ["width"] = 365.66870117188,
-                ["preferToUpdate"] = false,
-                ["uid"] = "AM-7EA8puUIaIH",
-                ["inverse"] = false,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["subeventPrefix"] = "SPELL",
+                            ["customDuration"] = "",
+                            ["names"] = {
+                            },
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
                         },
                     },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
+                    ["activeTriggerMode"] = -10,
                 },
-                ["AMOriginalUUID"] = "7EA8puUIaIH",
-                ["information"] = {
-                },
-                ["parent"] = "[NHF] Break Images",
-            },
-            [6] = {
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 274.58349609375,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["customForegroundRows"] = 59,
                 ["frameRate"] = 24,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
@@ -900,228 +1070,7 @@ wa.data['memes'].data = {
                 ["customForegroundFileHeight"] = 8192,
                 ["customBackgroundRows"] = 16,
                 ["customForegroundFileWidth"] = 512,
-                ["anchorFrameType"] = "SCREEN",
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["names"] = {
-                            },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 258.83334350586,
-                ["customForegroundFrameHeight"] = 138,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["adjustedMax"] = "",
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break3",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["blendMode"] = "BLEND",
-                ["endPercent"] = 1,
-                ["config"] = {
-                    ["number"] = "3",
-                },
-                ["customForegroundColumns"] = 2,
-                ["customForegroundFrameWidth"] = 244,
                 ["customForegroundFrames"] = 118,
-                ["hideBackground"] = true,
-                ["parent"] = "[NHF] Break Images",
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 3",
-                ["selfPoint"] = "CENTER",
-                ["frameStrata"] = 1,
-                ["width"] = 444.66793823242,
-                ["desaturateForeground"] = false,
-                ["uid"] = "AM-hXuMl3iavTa",
-                ["inverse"] = false,
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "hXuMl3iavTa",
-                ["information"] = {
-                },
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-            },
-            [7] = {
-                ["parent"] = "[NHF] Break Images",
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 274.58349609375,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["desaturateForeground"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["customForegroundFrameWidth"] = 204,
-                ["customForegroundRows"] = 16,
-                ["anchorPoint"] = "CENTER",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 258.83334350586,
-                ["customForegroundFrameHeight"] = 114,
-                ["AMModified"] = true,
-                ["selfPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break4",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundFrames"] = 154,
-                ["startPercent"] = 0,
-                ["config"] = {
-                    ["number"] = "4",
-                },
-                ["customForegroundColumns"] = 10,
-                ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = 0,
-                ["endPercent"] = 1,
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -1130,14 +1079,45 @@ wa.data['memes'].data = {
                     ["init"] = {
                     },
                 },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 4",
-                ["blendMode"] = "BLEND",
-                ["frameStrata"] = 1,
-                ["width"] = 444.66793823242,
+                ["desaturateForeground"] = false,
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "Ax1ZugS9",
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["height"] = 258.83334350586,
+                ["customForegroundFrameHeight"] = 138,
+                ["AMModified"] = true,
                 ["preferToUpdate"] = false,
-                ["uid"] = "AM-91ZTaFcZ8Zt",
-                ["inverse"] = false,
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break3",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "hXuMl3iavTa",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["blendMode"] = "BLEND",
+                ["endPercent"] = 1,
+                ["foregroundColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["uid"] = "AM-hXuMl3iavTa",
+                ["customForegroundColumns"] = 2,
+                ["width"] = 444.66793823242,
+                ["anchorFrameType"] = "SCREEN",
+                ["parent"] = "[NHF] Break Images",
+                ["hideBackground"] = true,
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 3",
+                ["selfPoint"] = "CENTER",
+                ["frameStrata"] = 1,
+                ["customForegroundFrameWidth"] = 244,
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -1157,34 +1137,364 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["AMOriginalUUID"] = "91ZTaFcZ8Zt",
-                ["information"] = {
+                ["config"] = {
+                    ["number"] = "3",
                 },
+                ["inverse"] = false,
                 ["authorOptions"] = {
                     [1] = {
                         ["type"] = "input",
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["key"] = "number",
                         ["multiline"] = false,
-                        ["length"] = 10,
                         ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
                         ["useLength"] = false,
                     },
                 },
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["customForegroundRows"] = 59,
             },
-            [8] = {
+            [7] = {
                 ["authorOptions"] = {
                     [1] = {
                         ["type"] = "input",
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["key"] = "number",
                         ["multiline"] = false,
-                        ["length"] = 10,
                         ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
+                },
+                ["adjustedMax"] = "",
+                ["adjustedMin"] = "",
+                ["yOffset"] = 274.58349609375,
+                ["anchorPoint"] = "CENTER",
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["desaturateForeground"] = false,
+                ["customForegroundRows"] = 16,
+                ["frameRate"] = 24,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
+                ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 2048,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 2048,
+                ["xOffset"] = 0,
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["names"] = {
+                            },
+                            ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["startPercent"] = 0,
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "vjSCgBNb",
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["height"] = 258.83334350586,
+                ["customForegroundFrameHeight"] = 114,
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_combat"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["AMModified"] = true,
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break4",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "91ZTaFcZ8Zt",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["parent"] = "[NHF] Break Images",
+                ["customForegroundFrames"] = 154,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
+                ["uid"] = "AM-91ZTaFcZ8Zt",
+                ["customForegroundColumns"] = 10,
+                ["width"] = 444.66793823242,
+                ["customForegroundFrameWidth"] = 204,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
+                ["endPercent"] = 1,
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 4",
+                ["blendMode"] = "BLEND",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["config"] = {
+                    ["number"] = "4",
+                },
+                ["inverse"] = false,
+                ["preferToUpdate"] = false,
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["foregroundColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+            },
+            [8] = {
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = false,
+                ["adjustedMin"] = "",
+                ["yOffset"] = 289.58349609375,
+                ["anchorPoint"] = "CENTER",
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["names"] = {
+                            },
+                            ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["frameRate"] = 24,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
+                ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 4096,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 1024,
+                ["endPercent"] = 1,
+                ["customForegroundRows"] = 25,
+                ["parent"] = "[NHF] Break Images",
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "uo79RKBn",
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["height"] = 258.83334350586,
+                ["customForegroundFrameHeight"] = 160,
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_combat"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
+                },
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break6",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "LD8BvXz8o8Y",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["startPercent"] = 0,
+                ["blendMode"] = "BLEND",
+                ["AMModified"] = true,
+                ["uid"] = "AM-LD8BvXz8o8Y",
+                ["customForegroundColumns"] = 11,
+                ["customForegroundFrameWidth"] = 90,
+                ["adjustedMax"] = "",
+                ["anchorFrameType"] = "SCREEN",
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 5",
+                ["desaturateForeground"] = false,
+                ["frameStrata"] = 1,
+                ["width"] = 157.16847229004,
+                ["customForegroundFrames"] = 274,
+                ["config"] = {
+                    ["number"] = "5",
+                },
+                ["inverse"] = false,
+                ["foregroundColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+            },
+            [9] = {
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
                         ["useLength"] = false,
                     },
                 },
@@ -1201,15 +1511,43 @@ wa.data['memes'].data = {
                 ["animationType"] = "loop",
                 ["sameTexture"] = true,
                 ["hideBackground"] = true,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                    },
                 },
-                ["customForegroundRows"] = 25,
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["subeventPrefix"] = "SPELL",
+                            ["customDuration"] = "",
+                            ["names"] = {
+                            },
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
                 ["frameRate"] = 24,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
@@ -1234,173 +1572,24 @@ wa.data['memes'].data = {
                         ["easeType"] = "none",
                     },
                 },
-                ["customForegroundFileHeight"] = 4096,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 1024,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["anchorPoint"] = "CENTER",
-                ["startPercent"] = 0,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 258.83334350586,
-                ["customForegroundFrameHeight"] = 160,
-                ["AMModified"] = true,
-                ["parent"] = "[NHF] Break Images",
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break6",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
-                ["selfPoint"] = "CENTER",
-                ["blendMode"] = "BLEND",
-                ["xOffset"] = 0,
-                ["config"] = {
-                    ["number"] = "5",
-                },
-                ["customForegroundColumns"] = 11,
-                ["width"] = 157.16847229004,
-                ["endPercent"] = 1,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["anchorFrameType"] = "SCREEN",
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 5",
-                ["desaturateForeground"] = false,
-                ["frameStrata"] = 1,
-                ["customForegroundFrameWidth"] = 90,
-                ["customForegroundFrames"] = 274,
-                ["uid"] = "AM-LD8BvXz8o8Y",
-                ["inverse"] = false,
-                ["adjustedMax"] = "",
-                ["AMOriginalUUID"] = "LD8BvXz8o8Y",
-                ["information"] = {
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-            },
-            [9] = {
-                ["rotate"] = false,
-                ["customForegroundFrameWidth"] = 320,
-                ["parent"] = "[NHF] Break Images",
-                ["alpha"] = 1,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 316.08345031738,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["customForegroundRows"] = 8,
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
                 ["customForegroundFileHeight"] = 2048,
                 ["customBackgroundRows"] = 16,
                 ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["adjustedMax"] = "",
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
                 },
+                ["customForegroundRows"] = 8,
+                ["parent"] = "[NHF] Break Images",
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "m2N9Egsc",
                         ["type"] = "subbackground",
                     },
                 },
-                ["height"] = 375.00033569336,
+                ["height"] = 300,
                 ["customForegroundFrameHeight"] = 256,
                 ["load"] = {
                     ["talent"] = {
@@ -1421,229 +1610,155 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["xOffset"] = -1.52587890625e-05,
+                ["xOffset"] = 0,
                 ["useAdjustededMax"] = false,
                 ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
                 ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break20.png",
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break7",
                 ["backgroundPercent"] = 1,
-                ["startPercent"] = 0,
+                ["AMOriginalUUID"] = "ckQuPXCJfTU",
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
+                ["regionType"] = "stopmotion",
+                ["startPercent"] = 0,
+                ["blendMode"] = "BLEND",
+                ["AMModified"] = true,
+                ["uid"] = "AM-ckQuPXCJfTU",
+                ["customForegroundColumns"] = 5,
+                ["width"] = 300,
+                ["adjustedMax"] = "",
+                ["customForegroundFrameWidth"] = 320,
                 ["endPercent"] = 1,
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 6",
+                ["desaturateForeground"] = false,
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["customForegroundFrames"] = 38,
+                ["config"] = {
+                    ["number"] = "6",
+                },
+                ["inverse"] = false,
+                ["anchorPoint"] = "CENTER",
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["selfPoint"] = "CENTER",
+            },
+            [10] = {
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = false,
+                ["adjustedMin"] = "",
+                ["yOffset"] = 289.58349609375,
+                ["anchorPoint"] = "CENTER",
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
                             ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
                             ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
                             ["names"] = {
                             },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
+                            ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
                         },
                         ["untrigger"] = {
                         },
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
+                ["frameRate"] = 24,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
                 },
-                ["customForegroundColumns"] = 5,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break20.png",
-                ["AMModified"] = true,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["uid"] = "AM-ckQuPXCJfTU",
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 6",
-                ["customForegroundFrames"] = 38,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
+                ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 2048,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 2048,
+                ["customForegroundFrames"] = 43,
+                ["adjustedMax"] = "",
                 ["desaturateForeground"] = false,
-                ["config"] = {
-                    ["number"] = "6",
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "hdfWRTP4",
+                        ["type"] = "subbackground",
+                    },
                 },
-                ["inverse"] = false,
-                ["width"] = 299.99996948242,
-                ["blendMode"] = "BLEND",
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["AMOriginalUUID"] = "ckQuPXCJfTU",
-            },
-            [10] = {
+                ["height"] = 300,
+                ["customForegroundFrameHeight"] = 284,
+                ["AMModified"] = true,
                 ["parent"] = "[NHF] Break Images",
-                ["config"] = {
-                    ["number"] = "7",
-                },
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break8",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "o4TUHA6Bf35",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
                 ["authorOptions"] = {
                     [1] = {
                         ["type"] = "input",
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["key"] = "number",
                         ["multiline"] = false,
-                        ["length"] = 10,
                         ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
                         ["useLength"] = false,
                     },
                 },
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 289.58349609375,
+                ["endPercent"] = 1,
+                ["startPercent"] = 0,
+                ["uid"] = "AM-o4TUHA6Bf35",
+                ["customForegroundColumns"] = 7,
+                ["anchorFrameType"] = "SCREEN",
                 ["foregroundColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["customForegroundFrames"] = 43,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["customForegroundRows"] = 7,
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 300,
-                ["rotate"] = false,
-                ["AMModified"] = true,
-                ["anchorPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break8",
-                ["backgroundPercent"] = 1,
-                ["hideBackground"] = true,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
+                ["customForegroundFrameWidth"] = 288,
+                ["blendMode"] = "BLEND",
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 7",
                 ["backgroundColor"] = {
                     [1] = 0.5,
                     [2] = 0.5,
                     [3] = 0.5,
                     [4] = 0.5,
                 },
-                ["endPercent"] = 1,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundColumns"] = 7,
-                ["customForegroundFrameHeight"] = 284,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break21.png",
+                ["frameStrata"] = 1,
+                ["width"] = 300,
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -1663,23 +1778,35 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["width"] = 300,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 7",
-                ["desaturateForeground"] = false,
-                ["frameStrata"] = 1,
-                ["customForegroundFrameWidth"] = 288,
-                ["blendMode"] = "BLEND",
-                ["uid"] = "AM-o4TUHA6Bf35",
+                ["config"] = {
+                    ["number"] = "7",
+                },
                 ["inverse"] = false,
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
+                ["customForegroundRows"] = 7,
                 ["conditions"] = {
                 },
                 ["information"] = {
                 },
-                ["AMOriginalUUID"] = "o4TUHA6Bf35",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
             },
             [11] = {
                 ["authorOptions"] = {
@@ -1688,50 +1815,50 @@ wa.data['memes'].data = {
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["key"] = "number",
                         ["multiline"] = false,
-                        ["length"] = 10,
                         ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
                         ["useLength"] = false,
                     },
                 },
-                ["adjustedMax"] = "",
+                ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
                 ["yOffset"] = 261.25009918213,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
+                ["anchorPoint"] = "CENTER",
                 ["desaturateBackground"] = false,
                 ["animationType"] = "loop",
                 ["sameTexture"] = true,
                 ["startPercent"] = 0,
-                ["desaturateForeground"] = false,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
                 ["customForegroundRows"] = 10,
                 ["frameRate"] = 24,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
@@ -1739,59 +1866,43 @@ wa.data['memes'].data = {
                 ["customForegroundFileHeight"] = 2048,
                 ["customBackgroundRows"] = 16,
                 ["customForegroundFileWidth"] = 2048,
-                ["customForegroundFrames"] = 50,
+                ["parent"] = "[NHF] Break Images",
+                ["selfPoint"] = "CENTER",
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
                             ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
                             ["event"] = "Health",
                             ["subeventPrefix"] = "SPELL",
                             ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
                             ["names"] = {
                             },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
                         },
                         ["untrigger"] = {
                         },
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["anchorPoint"] = "CENTER",
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "E45uSctd",
                         ["type"] = "subbackground",
                     },
                 },
                 ["height"] = 243.33338928223,
                 ["customForegroundFrameHeight"] = 204,
-                ["AMModified"] = true,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break9",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -1811,135 +1922,34 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["endPercent"] = 1,
-                ["preferToUpdate"] = false,
-                ["uid"] = "AM-0buQ8ND)nyG",
-                ["customForegroundColumns"] = 5,
-                ["anchorFrameType"] = "SCREEN",
-                ["parent"] = "[NHF] Break Images",
-                ["blendMode"] = "BLEND",
-                ["customForegroundFrameWidth"] = 363,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 8",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["frameStrata"] = 1,
-                ["width"] = 380.00094604492,
-                ["selfPoint"] = "CENTER",
-                ["config"] = {
-                    ["number"] = "8",
-                },
-                ["inverse"] = false,
-                ["xOffset"] = 0,
-                ["AMOriginalUUID"] = "0buQ8ND)nyG",
-                ["information"] = {
-                },
-                ["hideBackground"] = true,
-            },
-            [12] = {
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 270.41676330566,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
                 ["desaturateForeground"] = false,
-                ["customForegroundRows"] = 15,
-                ["frameRate"] = 18,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 4096,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 1024,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break9",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "0buQ8ND)nyG",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["hideBackground"] = true,
+                ["endPercent"] = 1,
                 ["foregroundColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["selfPoint"] = "CENTER",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 261.6667175293,
-                ["customForegroundFrameHeight"] = 260,
-                ["AMModified"] = true,
-                ["parent"] = "[NHF] Break Images",
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break10",
-                ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "stopmotion",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundFrames"] = 30,
-                ["hideBackground"] = true,
                 ["config"] = {
-                    ["number"] = "9",
+                    ["number"] = "8",
                 },
-                ["customForegroundColumns"] = 2,
-                ["width"] = 411.66757202148,
+                ["customForegroundColumns"] = 5,
+                ["width"] = 380.00094604492,
+                ["customForegroundFrames"] = 50,
+                ["customForegroundFrameWidth"] = 363,
                 ["blendMode"] = "BLEND",
-                ["endPercent"] = 1,
-                ["anchorFrameType"] = "SCREEN",
                 ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 9",
+                ["id"] = "Break Image 8",
                 ["actions"] = {
                     ["start"] = {
                     },
@@ -1949,7 +1959,130 @@ wa.data['memes'].data = {
                     },
                 },
                 ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["AMModified"] = true,
+                ["uid"] = "AM-0buQ8ND)nyG",
+                ["inverse"] = false,
+                ["xOffset"] = 0,
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
+                ["adjustedMax"] = "",
+            },
+            [12] = {
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = false,
+                ["adjustedMin"] = "",
+                ["yOffset"] = 270.41676330566,
+                ["foregroundColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["names"] = {
+                            },
+                            ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["frameRate"] = 18,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
+                ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 4096,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 1024,
+                ["blendMode"] = "BLEND",
+                ["adjustedMax"] = "",
+                ["desaturateForeground"] = false,
+                ["subRegions"] = {
+                    [1] = {
+                        ["amId"] = "uNFnJvEx",
+                        ["type"] = "subbackground",
+                    },
+                },
+                ["height"] = 261.6667175293,
+                ["customForegroundFrameHeight"] = 260,
+                ["AMModified"] = true,
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
+                },
+                ["useAdjustededMax"] = false,
+                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
+                ["customBackgroundColumns"] = 16,
+                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break10",
+                ["backgroundPercent"] = 1,
+                ["AMOriginalUUID"] = "p4MU)AGK2vN",
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "stopmotion",
+                ["parent"] = "[NHF] Break Images",
+                ["customForegroundFrames"] = 30,
+                ["startPercent"] = 0,
+                ["uid"] = "AM-p4MU)AGK2vN",
+                ["customForegroundColumns"] = 2,
                 ["customForegroundFrameWidth"] = 460,
+                ["anchorPoint"] = "CENTER",
+                ["anchorFrameType"] = "SCREEN",
+                ["endPercent"] = 1,
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 9",
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
+                ["frameStrata"] = 1,
+                ["width"] = 411.66757202148,
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -1969,39 +2102,35 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["uid"] = "AM-p4MU)AGK2vN",
-                ["inverse"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
+                ["config"] = {
+                    ["number"] = "9",
                 },
-                ["AMOriginalUUID"] = "p4MU)AGK2vN",
+                ["inverse"] = false,
+                ["customForegroundRows"] = 15,
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["adjustedMax"] = "",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
             },
             [13] = {
                 ["authorOptions"] = {
@@ -2010,131 +2139,88 @@ wa.data['memes'].data = {
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["key"] = "number",
                         ["multiline"] = false,
-                        ["length"] = 10,
                         ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
                         ["useLength"] = false,
                     },
                 },
                 ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
                 ["yOffset"] = 268.33349609375,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["names"] = {
-                            },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 30,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["parent"] = "[NHF] Break Images",
                 ["foregroundColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["desaturateForeground"] = false,
+                ["customForegroundRows"] = 12,
+                ["frameRate"] = 30,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 2048,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 2048,
+                ["customForegroundFrames"] = 84,
+                ["adjustedMax"] = "",
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "NYthH1i1",
                         ["type"] = "subbackground",
                     },
                 },
                 ["height"] = 257.50018310547,
                 ["customForegroundFrameHeight"] = 164,
                 ["AMModified"] = true,
-                ["xOffset"] = 0,
+                ["parent"] = "[NHF] Break Images",
                 ["useAdjustededMax"] = false,
                 ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
                 ["customBackgroundColumns"] = 16,
                 ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break11",
                 ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
+                ["AMOriginalUUID"] = "K5Azq6NsH1)",
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "stopmotion",
-                ["desaturateForeground"] = false,
+                ["xOffset"] = 0,
                 ["blendMode"] = "BLEND",
-                ["hideBackground"] = true,
-                ["uid"] = "AM-K5Azq6NsH1)",
+                ["startPercent"] = 0,
+                ["config"] = {
+                    ["number"] = "10",
+                },
                 ["customForegroundColumns"] = 7,
-                ["customForegroundFrameWidth"] = 291,
-                ["customForegroundFrames"] = 84,
-                ["endPercent"] = 1,
+                ["width"] = 416.66760253906,
+                ["anchorPoint"] = "CENTER",
                 ["anchorFrameType"] = "SCREEN",
+                ["endPercent"] = 1,
                 ["customBackgroundFrames"] = 0,
                 ["id"] = "Break Image 10",
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["init"] = {
-                    },
                     ["finish"] = {
+                    },
+                    ["init"] = {
                     },
                 },
                 ["frameStrata"] = 1,
-                ["width"] = 416.66760253906,
+                ["customForegroundFrameWidth"] = 291,
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -2154,19 +2240,63 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["config"] = {
-                    ["number"] = "10",
-                },
+                ["uid"] = "AM-K5Azq6NsH1)",
                 ["inverse"] = false,
-                ["customForegroundRows"] = 12,
-                ["AMOriginalUUID"] = "K5Azq6NsH1)",
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["subeventPrefix"] = "SPELL",
+                            ["customDuration"] = "",
+                            ["names"] = {
+                            },
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["adjustedMax"] = "",
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
             },
             [14] = {
-                ["xOffset"] = 0,
-                ["adjustedMax"] = "",
+                ["parent"] = "[NHF] Break Images",
+                ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
                 ["yOffset"] = 289.58343505859,
                 ["foregroundColor"] = {
@@ -2179,97 +2309,125 @@ wa.data['memes'].data = {
                 ["animationType"] = "loop",
                 ["sameTexture"] = true,
                 ["hideBackground"] = true,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
                 },
-                ["customForegroundRows"] = 7,
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["names"] = {
+                            },
+                            ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
                 ["frameRate"] = 30,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["parent"] = "[NHF] Break Images",
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
+                ["customForegroundFileHeight"] = 2048,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 2048,
+                ["blendMode"] = "BLEND",
+                ["startPercent"] = 0,
+                ["adjustedMax"] = "",
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "24sr1p5Q",
                         ["type"] = "subbackground",
                     },
                 },
                 ["height"] = 300.00006103516,
                 ["customForegroundFrameHeight"] = 259,
                 ["AMModified"] = true,
-                ["anchorPoint"] = "CENTER",
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
+                },
                 ["useAdjustededMax"] = false,
                 ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
                 ["customBackgroundColumns"] = 16,
                 ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break12",
                 ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
+                ["AMOriginalUUID"] = "qv3Du9ZkHnB",
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "stopmotion",
-                ["preferToUpdate"] = false,
+                ["anchorPoint"] = "CENTER",
                 ["customForegroundFrames"] = 95,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
                 },
-                ["uid"] = "AM-qv3Du9ZkHnB",
+                ["config"] = {
+                    ["number"] = "11",
+                },
                 ["customForegroundColumns"] = 14,
-                ["customForegroundFrameWidth"] = 146,
-                ["blendMode"] = "BLEND",
-                ["endPercent"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["xOffset"] = 0,
                 ["width"] = 238.33395385742,
+                ["endPercent"] = 1,
                 ["customBackgroundFrames"] = 0,
                 ["id"] = "Break Image 11",
                 ["desaturateForeground"] = false,
                 ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
+                ["customForegroundFrameWidth"] = 146,
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -2289,174 +2447,104 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["config"] = {
-                    ["number"] = "11",
-                },
+                ["uid"] = "AM-qv3Du9ZkHnB",
                 ["inverse"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
+                ["selfPoint"] = "CENTER",
+                ["conditions"] = {
                 },
-                ["AMOriginalUUID"] = "qv3Du9ZkHnB",
                 ["information"] = {
                 },
-                ["startPercent"] = 0,
+                ["customForegroundRows"] = 7,
             },
             [15] = {
                 ["xOffset"] = 0,
                 ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
                 ["yOffset"] = 323.33361816406,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["names"] = {
-                            },
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 9,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
                 ["foregroundColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
+                },
+                ["customForegroundRows"] = 5,
+                ["frameRate"] = 9,
+                ["internalVersion"] = 85,
+                ["progressSource"] = {
+                    [1] = -1,
+                    [2] = "",
+                },
                 ["selfPoint"] = "CENTER",
+                ["customForegroundFileHeight"] = 2048,
+                ["customBackgroundRows"] = 16,
+                ["customForegroundFileWidth"] = 2048,
+                ["endPercent"] = 1,
+                ["adjustedMax"] = "",
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                    },
+                },
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "WBEJV1qv",
                         ["type"] = "subbackground",
                     },
                 },
                 ["height"] = 335.83380126953,
                 ["customForegroundFrameHeight"] = 408,
                 ["AMModified"] = true,
-                ["parent"] = "[NHF] Break Images",
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
+                },
                 ["useAdjustededMax"] = false,
                 ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
                 ["customBackgroundColumns"] = 16,
                 ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break13",
                 ["backgroundPercent"] = 1,
-                ["conditions"] = {
-                },
+                ["AMOriginalUUID"] = "3HoSHb6cAMj",
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "stopmotion",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
+                ["parent"] = "[NHF] Break Images",
                 ["customForegroundFrames"] = 34,
-                ["hideBackground"] = true,
-                ["uid"] = "AM-3HoSHb6cAMj",
+                ["startPercent"] = 0,
+                ["config"] = {
+                    ["number"] = "12",
+                },
                 ["customForegroundColumns"] = 7,
-                ["anchorFrameType"] = "SCREEN",
-                ["endPercent"] = 1,
-                ["blendMode"] = "BLEND",
+                ["width"] = 238.33395385742,
+                ["anchorPoint"] = "CENTER",
                 ["customForegroundFrameWidth"] = 274,
+                ["blendMode"] = "BLEND",
                 ["customBackgroundFrames"] = 0,
                 ["id"] = "Break Image 12",
                 ["desaturateForeground"] = false,
                 ["frameStrata"] = 1,
-                ["width"] = 238.33395385742,
+                ["anchorFrameType"] = "SCREEN",
                 ["load"] = {
                     ["talent"] = {
                         ["multi"] = {
@@ -2476,26 +2564,77 @@ wa.data['memes'].data = {
                         },
                     },
                 },
-                ["config"] = {
-                    ["number"] = "12",
-                },
+                ["uid"] = "AM-3HoSHb6cAMj",
                 ["inverse"] = false,
-                ["customForegroundRows"] = 5,
-                ["AMOriginalUUID"] = "3HoSHb6cAMj",
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["event"] = "Health",
+                            ["subeventPrefix"] = "SPELL",
+                            ["customDuration"] = "",
+                            ["names"] = {
+                            },
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "NHF_MEME_BREAK",
+                            ["check"] = "event",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                    ["activeTriggerMode"] = -10,
+                },
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["adjustedMax"] = "",
+                ["animation"] = {
+                    ["start"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["easeStrength"] = 3,
+                        ["type"] = "none",
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
             },
             [16] = {
-                ["customForegroundFrameHeight"] = 326,
-                ["config"] = {
-                    ["number"] = "13",
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 1,
+                        ["name"] = "Number",
+                        ["multiline"] = false,
+                        ["default"] = "",
+                        ["length"] = 10,
+                        ["key"] = "number",
+                        ["useLength"] = false,
+                    },
                 },
-                ["xOffset"] = -3.0003662109375,
-                ["parent"] = "[NHF] Break Images",
                 ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
-                ["yOffset"] = 235.50030517578,
+                ["yOffset"] = 297.5004119873,
                 ["foregroundColor"] = {
                     [1] = 1,
                     [2] = 1,
@@ -2504,20 +2643,12 @@ wa.data['memes'].data = {
                 },
                 ["desaturateBackground"] = false,
                 ["animationType"] = "loop",
-                ["width"] = 322.83505249023,
                 ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
+                ["hideBackground"] = true,
+                ["desaturateForeground"] = false,
                 ["customForegroundRows"] = 6,
                 ["frameRate"] = 24,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
@@ -2526,64 +2657,29 @@ wa.data['memes'].data = {
                 ["customForegroundFileHeight"] = 2048,
                 ["customBackgroundRows"] = 16,
                 ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
+                ["blendMode"] = "BLEND",
+                ["startPercent"] = 0,
                 ["adjustedMax"] = "",
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "k6pXxNYo",
                         ["type"] = "subbackground",
                     },
                 },
-                ["height"] = 202.66729736328,
-                ["rotate"] = false,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["anchorPoint"] = "CENTER",
+                ["height"] = 304.66717529297,
+                ["customForegroundFrameHeight"] = 326,
+                ["AMModified"] = true,
+                ["xOffset"] = 0,
                 ["useAdjustededMax"] = false,
                 ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
                 ["customBackgroundColumns"] = 16,
                 ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break14",
                 ["backgroundPercent"] = 1,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
+                ["AMOriginalUUID"] = "29xNLCMxwvu",
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
+                ["regionType"] = "stopmotion",
+                ["parent"] = "[NHF] Break Images",
                 ["customForegroundFrames"] = 62,
                 ["backgroundColor"] = {
                     [1] = 0.5,
@@ -2591,127 +2687,163 @@ wa.data['memes'].data = {
                     [3] = 0.5,
                     [4] = 0.5,
                 },
+                ["uid"] = "AM-29xNLCMxwvu",
+                ["customForegroundColumns"] = 11,
+                ["anchorFrameType"] = "SCREEN",
+                ["anchorPoint"] = "CENTER",
+                ["customForegroundFrameWidth"] = 184,
+                ["endPercent"] = 1,
+                ["customBackgroundFrames"] = 0,
+                ["id"] = "Break Image 13",
+                ["actions"] = {
+                    ["start"] = {
+                    },
+                    ["init"] = {
+                    },
+                    ["finish"] = {
+                    },
+                },
+                ["frameStrata"] = 1,
+                ["width"] = 208.83486938477,
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_combat"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["config"] = {
+                    ["number"] = "13",
+                },
+                ["inverse"] = false,
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
                             ["custom_type"] = "status",
+                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
                             ["event"] = "Health",
                             ["names"] = {
                             },
                             ["customDuration"] = "",
+                            ["subeventPrefix"] = "SPELL",
                             ["spellIds"] = {
                             },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
                             ["events"] = "NHF_MEME_BREAK",
                             ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_hide"] = "timed",
                         },
                         ["untrigger"] = {
                         },
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["customForegroundColumns"] = 11,
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break22.png",
-                ["AMModified"] = true,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["desaturateForeground"] = false,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 13",
-                ["blendMode"] = "BLEND",
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["customForegroundFrameWidth"] = 184,
-                ["uid"] = "AM-29xNLCMxwvu",
-                ["inverse"] = false,
-                ["endPercent"] = 1,
-                ["frameStrata"] = 1,
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["conditions"] = {
-                },
             },
             [17] = {
-                ["rotate"] = false,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_combat"] = false,
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
                 },
-                ["uid"] = "a8aflt5xu14",
+                ["adjustedMax"] = "",
+                ["customForegroundFrameWidth"] = 184,
                 ["parent"] = "[NHF] Break Images",
                 ["preferToUpdate"] = false,
                 ["adjustedMin"] = "",
                 ["yOffset"] = 231.25035095215,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["color"] = {
+                ["foregroundColor"] = {
                     [1] = 1,
                     [2] = 1,
                     [3] = 1,
                     [4] = 1,
                 },
-                ["sameTexture"] = true,
+                ["desaturateBackground"] = false,
+                ["animationType"] = "loop",
                 ["startPercent"] = 0,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
+                ["sameTexture"] = true,
+                ["hideBackground"] = true,
+                ["backgroundColor"] = {
+                    [1] = 0.5,
+                    [2] = 0.5,
+                    [3] = 0.5,
+                    [4] = 0.5,
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
                             ["subeventSuffix"] = "_CAST_START",
-                            ["debuffType"] = "HELPFUL",
-                            ["unit"] = "player",
+                            ["custom_hide"] = "timed",
+                            ["custom_type"] = "status",
                             ["event"] = "Health",
-                            ["names"] = {
-                            },
+                            ["unit"] = "player",
                             ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
+                            ["custom"] = "function(event, number, show)\
+                                return show and number == tonumber(aura_env.config.number)\
+                            end",
                             ["spellIds"] = {
                             },
                             ["events"] = "NHF_MEME_BREAK",
                             ["check"] = "event",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
+                            ["subeventPrefix"] = "SPELL",
+                            ["names"] = {
+                            },
+                            ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
                         },
@@ -2719,7 +2851,7 @@ wa.data['memes'].data = {
                     ["activeTriggerMode"] = -10,
                 },
                 ["frameRate"] = 24,
-                ["internalVersion"] = 83,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
@@ -2730,15 +2862,21 @@ wa.data['memes'].data = {
                 ["customForegroundFileWidth"] = 2048,
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["xOffset"] = 0,
-                ["adjustedMax"] = "",
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["anchorPoint"] = "CENTER",
                 ["subRegions"] = {
                     [1] = {
+                        ["amId"] = "sbgb0vPN",
                         ["type"] = "subbackground",
                     },
                 },
                 ["height"] = 172.16705322266,
-                ["customForegroundFrameHeight"] = 326,
+                ["rotate"] = false,
                 ["AMModified"] = true,
                 ["authorOptions"] = {
                     [1] = {
@@ -2746,10 +2884,10 @@ wa.data['memes'].data = {
                         ["useDesc"] = false,
                         ["width"] = 1,
                         ["name"] = "Number",
-                        ["default"] = "",
                         ["key"] = "number",
-                        ["length"] = 10,
                         ["multiline"] = false,
+                        ["length"] = 10,
+                        ["default"] = "",
                         ["useLength"] = false,
                     },
                 },
@@ -2758,2328 +2896,63 @@ wa.data['memes'].data = {
                 ["customBackgroundColumns"] = 16,
                 ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
                 ["backgroundPercent"] = 1,
-                ["hideBackground"] = true,
+                ["desaturateForeground"] = false,
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "texture",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundFrames"] = 62,
                 ["customForegroundRows"] = 6,
+                ["customForegroundFrames"] = 62,
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
+                ["AMOriginalUUID"] = "29xNLCMxwvu",
                 ["customForegroundColumns"] = 11,
-                ["conditions"] = {
-                },
+                ["customForegroundFrameHeight"] = 326,
                 ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
+                ["actions"] = {
+                    ["start"] = {
                     },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
+                    ["finish"] = {
                     },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
+                    ["init"] = {
                     },
                 },
                 ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["desaturateForeground"] = false,
+                ["blendMode"] = "BLEND",
                 ["customBackgroundFrames"] = 0,
                 ["id"] = "Break Image 14",
-                ["blendMode"] = "BLEND",
-                ["alpha"] = 1,
-                ["customForegroundFrameWidth"] = 184,
-                ["endPercent"] = 1,
+                ["xOffset"] = 0,
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "a8aflt5xu14",
                 ["config"] = {
                     ["number"] = "14",
                 },
                 ["inverse"] = false,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
+                ["endPercent"] = 1,
+                ["alpha"] = 1,
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
                 ["width"] = 367.16961669922,
-            },
-            [18] = {
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["customForegroundFrameWidth"] = 184,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["xOffset"] = 4.4997863769525,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 183.75027084351,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["frameStrata"] = 1,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["desaturateForeground"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["names"] = {
-                            },
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 77.166893005371,
-                ["customForegroundFrameHeight"] = 326,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["hideBackground"] = true,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["blendMode"] = "BLEND",
-                ["customForegroundRows"] = 6,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundColumns"] = 11,
-                ["rotate"] = false,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break23.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 15",
-                ["endPercent"] = 1,
-                ["alpha"] = 1,
-                ["width"] = 772.17016601562,
-                ["config"] = {
-                    ["number"] = "15",
-                },
-                ["uid"] = "TY0gTEy7u8D",
-                ["inverse"] = false,
-                ["customForegroundFrames"] = 62,
-                ["anchorFrameType"] = "SCREEN",
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-            },
-            [19] = {
-                ["rotate"] = false,
-                ["width"] = 394.17065429688,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["xOffset"] = 7.49951171875,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 299.75018310547,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["customForegroundFrameWidth"] = 184,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["desaturateForeground"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "status",
-                            ["debuffType"] = "HELPFUL",
-                            ["names"] = {
-                            },
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["spellIds"] = {
-                            },
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["multiline"] = false,
-                        ["default"] = "",
-                        ["length"] = 10,
-                        ["key"] = "number",
-                        ["useLength"] = false,
-                    },
-                },
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["parent"] = "[NHF] Break Images",
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["customForegroundFrames"] = 62,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break24.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 16",
-                ["blendMode"] = "BLEND",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["endPercent"] = 1,
-                ["config"] = {
-                    ["number"] = "16",
-                },
-                ["inverse"] = false,
-                ["alpha"] = 1,
-                ["uid"] = "IZU3f9v(Qys",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["conditions"] = {
-                },
-            },
-            [20] = {
-                ["xOffset"] = 7.49951171875,
-                ["width"] = 394.17065429688,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["default"] = "",
-                        ["key"] = "number",
-                        ["length"] = 10,
-                        ["multiline"] = false,
-                        ["useLength"] = false,
-                    },
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 299.75018310547,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["conditions"] = {
-                },
-                ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundRows"] = 6,
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["preferToUpdate"] = false,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["anchorPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["startPercent"] = 0,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["endPercent"] = 1,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundColumns"] = 11,
-                ["rotate"] = false,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break25.png",
-                ["AMModified"] = true,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["desaturateForeground"] = false,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 17",
-                ["customForegroundFrames"] = 62,
-                ["alpha"] = 1,
-                ["customForegroundFrameWidth"] = 184,
-                ["blendMode"] = "BLEND",
-                ["config"] = {
-                    ["number"] = "17",
-                },
-                ["inverse"] = false,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["uid"] = "3xZHrKvqKPp",
-            },
-            [21] = {
-                ["rotate"] = false,
-                ["customForegroundFrameWidth"] = 184,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 299.75018310547,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["config"] = {
-                    ["number"] = "18",
-                },
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["desaturateForeground"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["debuffType"] = "HELPFUL",
-                            ["unit"] = "player",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["preferToUpdate"] = false,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["xOffset"] = 7.49951171875,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["customForegroundFrames"] = 62,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["selfPoint"] = "CENTER",
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break26.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 18",
-                ["blendMode"] = "BLEND",
-                ["frameStrata"] = 1,
-                ["width"] = 394.17065429688,
-                ["endPercent"] = 1,
-                ["uid"] = "drvhmm)6z)c",
-                ["inverse"] = false,
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-            },
-            [22] = {
-                ["xOffset"] = 7.49951171875,
-                ["anchorFrameType"] = "SCREEN",
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["multiline"] = false,
-                        ["default"] = "",
-                        ["length"] = 10,
-                        ["key"] = "number",
-                        ["useLength"] = false,
-                    },
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 299.75018310547,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundRows"] = 6,
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["anchorPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["startPercent"] = 0,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["customForegroundFrames"] = 62,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["names"] = {
-                            },
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundColumns"] = 11,
-                ["rotate"] = false,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break27.png",
-                ["AMModified"] = true,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["desaturateForeground"] = false,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 19",
-                ["blendMode"] = "BLEND",
-                ["alpha"] = 1,
-                ["customForegroundFrameWidth"] = 184,
-                ["endPercent"] = 1,
-                ["config"] = {
-                    ["number"] = "19",
-                },
-                ["inverse"] = false,
-                ["frameStrata"] = 1,
-                ["width"] = 394.17065429688,
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["uid"] = "gqu3t2Q4JxT",
-            },
-            [23] = {
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["default"] = "",
-                        ["key"] = "number",
-                        ["length"] = 10,
-                        ["multiline"] = false,
-                        ["useLength"] = false,
-                    },
-                },
-                ["config"] = {
-                    ["number"] = "20",
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["xOffset"] = 7.49951171875,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 299.75018310547,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["anchorFrameType"] = "SCREEN",
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "status",
-                            ["debuffType"] = "HELPFUL",
-                            ["names"] = {
-                            },
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["spellIds"] = {
-                            },
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["rotate"] = false,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["hideBackground"] = true,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["endPercent"] = 1,
-                ["customForegroundRows"] = 6,
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundColumns"] = 11,
-                ["customForegroundFrameHeight"] = 326,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break28.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["desaturateForeground"] = false,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 20",
-                ["customForegroundFrames"] = 62,
-                ["frameStrata"] = 1,
-                ["customForegroundFrameWidth"] = 184,
-                ["blendMode"] = "BLEND",
-                ["uid"] = "cbuHWzYrjfv",
-                ["inverse"] = false,
-                ["alpha"] = 1,
-                ["width"] = 394.17065429688,
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["conditions"] = {
-                },
-            },
-            [24] = {
-                ["xOffset"] = 7.49951171875,
-                ["width"] = 394.17065429688,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 299.75018310547,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["conditions"] = {
-                },
-                ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundRows"] = 6,
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["preferToUpdate"] = false,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["anchorPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["startPercent"] = 0,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["blendMode"] = "BLEND",
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundColumns"] = 11,
-                ["rotate"] = false,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break29.png",
-                ["AMModified"] = true,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["desaturateForeground"] = false,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 21",
-                ["endPercent"] = 1,
-                ["alpha"] = 1,
-                ["customForegroundFrameWidth"] = 184,
-                ["customForegroundFrames"] = 62,
-                ["config"] = {
-                    ["number"] = "21",
-                },
-                ["inverse"] = false,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["uid"] = "Wzi8vVm5qeG",
-            },
-            [25] = {
-                ["rotate"] = false,
-                ["customForegroundFrameWidth"] = 184,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["multiline"] = false,
-                        ["default"] = "",
-                        ["length"] = 10,
-                        ["key"] = "number",
-                        ["useLength"] = false,
-                    },
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 295.75012207031,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["config"] = {
-                    ["number"] = "22",
-                },
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["desaturateForeground"] = false,
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["debuffType"] = "HELPFUL",
-                            ["unit"] = "player",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["preferToUpdate"] = false,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["xOffset"] = -1.5006103515625,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["endPercent"] = 1,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["selfPoint"] = "CENTER",
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break30.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 22",
-                ["customForegroundFrames"] = 62,
-                ["frameStrata"] = 1,
-                ["width"] = 394.17065429688,
-                ["blendMode"] = "BLEND",
-                ["uid"] = "v7RZBM8J(wX",
-                ["inverse"] = false,
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-            },
-            [26] = {
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["customForegroundFrameWidth"] = 184,
-                ["xOffset"] = -1.5006103515625,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["default"] = "",
-                        ["key"] = "number",
-                        ["length"] = 10,
-                        ["multiline"] = false,
-                        ["useLength"] = false,
-                    },
-                },
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 295.75012207031,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["sameTexture"] = true,
-                ["hideBackground"] = true,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["customForegroundRows"] = 6,
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["parent"] = "[NHF] Break Images",
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["anchorPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["startPercent"] = 0,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["blendMode"] = "BLEND",
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["names"] = {
-                            },
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundColumns"] = 11,
-                ["rotate"] = false,
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break31.png",
-                ["AMModified"] = true,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["desaturateForeground"] = false,
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 23",
-                ["endPercent"] = 1,
-                ["alpha"] = 1,
-                ["width"] = 394.17065429688,
-                ["customForegroundFrames"] = 62,
-                ["uid"] = "bNRwU4Axw4X",
-                ["inverse"] = false,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["config"] = {
-                    ["number"] = "23",
-                },
-            },
-            [27] = {
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["customForegroundFrameWidth"] = 184,
-                ["rotate"] = false,
-                ["xOffset"] = -1.5006103515625,
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 295.75012207031,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["width"] = 394.17065429688,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "status",
-                            ["debuffType"] = "HELPFUL",
-                            ["names"] = {
-                            },
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["spellIds"] = {
-                            },
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["selfPoint"] = "CENTER",
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 321.16696166992,
-                ["customForegroundFrameHeight"] = 326,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["parent"] = "[NHF] Break Images",
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["blendMode"] = "BLEND",
-                ["desaturateForeground"] = false,
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break32.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 24",
-                ["endPercent"] = 1,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["customForegroundFrames"] = 62,
-                ["config"] = {
-                    ["number"] = "24",
-                },
-                ["inverse"] = false,
-                ["alpha"] = 1,
-                ["uid"] = "KzEVRp(tbOT",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["conditions"] = {
-                },
-            },
-            [28] = {
-                ["customForegroundFrameHeight"] = 326,
-                ["anchorFrameType"] = "SCREEN",
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["parent"] = "[NHF] Break Images",
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 359.25050354004,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["width"] = 486.17053222656,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["spellIds"] = {
-                            },
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["xOffset"] = -4.5007629394531,
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 466.1676940918,
-                ["rotate"] = false,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["multiline"] = false,
-                        ["default"] = "",
-                        ["length"] = 10,
-                        ["key"] = "number",
-                        ["useLength"] = false,
-                    },
-                },
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["customForegroundFrames"] = 62,
-                ["desaturateForeground"] = false,
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["selfPoint"] = "CENTER",
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break33.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 25",
-                ["blendMode"] = "BLEND",
-                ["alpha"] = 1,
-                ["customForegroundFrameWidth"] = 184,
-                ["frameStrata"] = 1,
-                ["config"] = {
-                    ["number"] = "25",
-                },
-                ["inverse"] = false,
-                ["endPercent"] = 1,
-                ["uid"] = "VjyeF30a3gK",
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-                ["information"] = {
-                },
-                ["conditions"] = {
-                },
-            },
-            [29] = {
-                ["rotate"] = false,
-                ["config"] = {
-                    ["number"] = "26",
-                },
-                ["xOffset"] = -4.5007629394531,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["preferToUpdate"] = false,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 261.25073242188,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["alpha"] = 1,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["init"] = {
-                    },
-                    ["finish"] = {
-                    },
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["debuffType"] = "HELPFUL",
-                            ["unit"] = "player",
-                            ["event"] = "Health",
-                            ["names"] = {
-                            },
-                            ["customDuration"] = "",
-                            ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["custom_type"] = "status",
-                            ["custom_hide"] = "timed",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["default"] = "",
-                        ["key"] = "number",
-                        ["length"] = 10,
-                        ["multiline"] = false,
-                        ["useLength"] = false,
-                    },
-                },
-                ["adjustedMax"] = "",
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 270.16815185547,
-                ["customForegroundFrameHeight"] = 326,
-                ["AMModified"] = true,
-                ["anchorPoint"] = "CENTER",
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["parent"] = "[NHF] Break Images",
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["endPercent"] = 1,
-                ["desaturateForeground"] = false,
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["selfPoint"] = "CENTER",
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break34.png",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 26",
-                ["customForegroundFrames"] = 62,
-                ["frameStrata"] = 1,
-                ["width"] = 486.17053222656,
-                ["customForegroundFrameWidth"] = 184,
-                ["uid"] = "XkwJXiDx71c",
-                ["inverse"] = false,
-                ["blendMode"] = "BLEND",
-                ["anchorFrameType"] = "SCREEN",
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
-            },
-            [30] = {
-                ["authorOptions"] = {
-                    [1] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 1,
-                        ["name"] = "Number",
-                        ["key"] = "number",
-                        ["multiline"] = false,
-                        ["length"] = 10,
-                        ["default"] = "",
-                        ["useLength"] = false,
-                    },
-                },
-                ["customForegroundFrameWidth"] = 184,
-                ["customForegroundFrameHeight"] = 326,
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 303.25077819824,
-                ["anchorPoint"] = "CENTER",
-                ["desaturateBackground"] = false,
-                ["animationType"] = "loop",
-                ["frameStrata"] = 1,
-                ["sameTexture"] = true,
-                ["startPercent"] = 0,
-                ["backgroundColor"] = {
-                    [1] = 0.5,
-                    [2] = 0.5,
-                    [3] = 0.5,
-                    [4] = 0.5,
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "status",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["customDuration"] = "",
-                            ["custom"] = "function(event, number, show)\
-                                          return show and number == tonumber(aura_env.config.number)\
-                                      end",
-                            ["spellIds"] = {
-                            },
-                            ["events"] = "NHF_MEME_BREAK",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["names"] = {
-                            },
-                            ["debuffType"] = "HELPFUL",
-                        },
-                        ["untrigger"] = {
-                        },
-                    },
-                    ["activeTriggerMode"] = -10,
-                },
-                ["frameRate"] = 24,
-                ["internalVersion"] = 83,
-                ["progressSource"] = {
-                    [1] = -1,
-                    [2] = "",
-                },
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none",
-                    },
-                },
-                ["customForegroundFileHeight"] = 2048,
-                ["customBackgroundRows"] = 16,
-                ["customForegroundFileWidth"] = 2048,
-                ["desaturate"] = false,
-                ["rotation"] = 0,
-                ["xOffset"] = -4.0006408691406,
-                ["preferToUpdate"] = false,
-                ["subRegions"] = {
-                    [1] = {
-                        ["type"] = "subbackground",
-                    },
-                },
-                ["height"] = 354.1682434082,
-                ["rotate"] = false,
-                ["AMModified"] = true,
-                ["foregroundColor"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMax"] = false,
-                ["backgroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
-                ["customBackgroundColumns"] = 16,
-                ["foregroundTexture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break18.png",
-                ["backgroundPercent"] = 1,
-                ["parent"] = "[NHF] Break Images",
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["hideBackground"] = true,
-                ["blendMode"] = "BLEND",
-                ["desaturateForeground"] = false,
-                ["customForegroundRows"] = 6,
-                ["customForegroundColumns"] = 11,
-                ["selfPoint"] = "CENTER",
-                ["texture"] = "Interface/Addons/NHFAuraManager/Media/Memes/break35.jpg",
-                ["load"] = {
-                    ["talent"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_combat"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                        },
-                    },
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["actions"] = {
-                    ["start"] = {
-                    },
-                    ["finish"] = {
-                    },
-                    ["init"] = {
-                    },
-                },
-                ["customBackgroundFrames"] = 0,
-                ["id"] = "Break Image 27",
-                ["endPercent"] = 1,
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["width"] = 363.17059326172,
-                ["uid"] = "eI)cnSj2dGz",
-                ["inverse"] = false,
-                ["customForegroundFrames"] = 62,
-                ["config"] = {
-                    ["number"] = "27",
-                },
-                ["conditions"] = {
-                },
-                ["information"] = {
-                },
-                ["AMOriginalUUID"] = "29xNLCMxwvu",
             },
         },
         ["v"] = 2000,

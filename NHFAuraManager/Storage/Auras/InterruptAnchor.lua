@@ -11,115 +11,112 @@ wa.data['interrupt'] = {
 wa.data['interrupt'].data = {
     ["uid"] = "OhDHsn0qc44",
     ["name"] = "Interrupt Anchor",
-    ["semver"] = "1.0.22",
-    ["version"] = 23,
+    ["semver"] = "1.0.26",
+    ["version"] = 27,
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
                 [1] = "Interrupt Nameplate Anchor",
-                [2] = "Interrupt Now Alert (Sound in Custom Options)",
-                [3] = "Next Interrupt Alert - default disabled",
-                [4] = "Interrupt Backup Alert",
+                [2] = "Interrupt Alerts",
+                [3] = "Interrupt Backup Alert",
             },
-            ["limitWeakAuras"] = {
-                ["hash"] = "1b42f567a3ea17df5221371217614d446d38254845969102fd03c24ca5f78850",
-            },
+            ["borderBackdrop"] = "Blizzard Tooltip",
             ["wagoID"] = "J_s7zz7um",
             ["authorOptions"] = {
                 [1] = {
+                    ["useCollapse"] = true,
+                    ["type"] = "group",
+                    ["collapse"] = false,
+                    ["name"] = "Limit WeakAuras",
+                    ["key"] = "limitWeakAuras",
+                    ["groupType"] = "simple",
+                    ["lwaCustomOptionsVersion"] = 2,
                     ["subOptions"] = {
                         [1] = {
-                            ["type"] = "description",
                             ["text"] = "",
+                            ["type"] = "description",
                             ["fontSize"] = "medium",
                             ["width"] = 2,
                         },
                         [2] = {
-                            ["text"] = "Preserve Options",
-                            ["type"] = "header",
-                            ["useName"] = true,
                             ["noMerge"] = false,
+                            ["text"] = "Preserve Options",
+                            ["useName"] = true,
+                            ["type"] = "header",
                         },
                         [3] = {
                             ["type"] = "toggle",
-                            ["default"] = true,
                             ["key"] = "preservePositionAndSize",
-                            ["useDesc"] = false,
+                            ["default"] = true,
                             ["name"] = "Preserve Position/Size",
+                            ["useDesc"] = false,
                             ["width"] = 1,
                         },
                         [4] = {
                             ["type"] = "toggle",
-                            ["default"] = true,
                             ["key"] = "preserveFonts",
-                            ["useDesc"] = false,
+                            ["default"] = true,
                             ["name"] = "Preserve Fonts",
+                            ["useDesc"] = false,
                             ["width"] = 1,
                         },
                         [5] = {
                             ["type"] = "toggle",
-                            ["default"] = false,
                             ["key"] = "preserveSounds",
-                            ["useDesc"] = false,
+                            ["default"] = false,
                             ["name"] = "Preserve Sounds",
+                            ["useDesc"] = false,
                             ["width"] = 1,
                         },
                         [6] = {
                             ["type"] = "toggle",
-                            ["default"] = false,
                             ["key"] = "preserveConditions",
-                            ["useDesc"] = false,
+                            ["default"] = false,
                             ["name"] = "Preserve Conditions",
+                            ["useDesc"] = false,
                             ["width"] = 1,
                         },
                         [7] = {
                             ["type"] = "toggle",
-                            ["default"] = false,
                             ["key"] = "preserveLoad",
-                            ["useDesc"] = false,
+                            ["default"] = false,
                             ["name"] = "Preserve Load",
+                            ["useDesc"] = false,
                             ["width"] = 1,
                         },
                         [8] = {
                             ["type"] = "toggle",
-                            ["default"] = false,
                             ["key"] = "preserveCustomConfig",
-                            ["useDesc"] = false,
+                            ["default"] = false,
                             ["name"] = "Preserve Custom Config",
+                            ["useDesc"] = false,
                             ["width"] = 1,
                         },
                         [9] = {
-                            ["text"] = "Update Options",
-                            ["type"] = "header",
-                            ["useName"] = true,
                             ["noMerge"] = false,
+                            ["text"] = "Update Options",
+                            ["useName"] = true,
+                            ["type"] = "header",
                         },
                         [10] = {
                             ["type"] = "toggle",
                             ["default"] = false,
-                            ["desc"] = "Supersedes all other options.",
-                            ["key"] = "doNotUpdate",
-                            ["useDesc"] = true,
-                            ["name"] = "Do Not Update",
                             ["width"] = 1,
+                            ["name"] = "Do Not Update",
+                            ["useDesc"] = true,
+                            ["key"] = "doNotUpdate",
+                            ["desc"] = "Supersedes all other options.",
                         },
                         [11] = {
                             ["type"] = "toggle",
                             ["default"] = false,
-                            ["desc"] = "Force update on next /reload. This option will clear itself afterwards.",
-                            ["key"] = "forceNextUpdate",
-                            ["useDesc"] = true,
-                            ["name"] = "Force Next Update",
                             ["width"] = 1,
+                            ["name"] = "Force Next Update",
+                            ["useDesc"] = true,
+                            ["key"] = "forceNextUpdate",
+                            ["desc"] = "Force update on next /reload. This option will clear itself afterwards.",
                         },
                     },
-                    ["type"] = "group",
-                    ["collapse"] = false,
-                    ["useCollapse"] = true,
-                    ["key"] = "limitWeakAuras",
-                    ["groupType"] = "simple",
-                    ["lwaCustomOptionsVersion"] = 2,
-                    ["name"] = "Limit WeakAuras",
                 },
             },
             ["preferToUpdate"] = true,
@@ -131,13 +128,13 @@ wa.data['interrupt'].data = {
                 [3] = 0,
                 [4] = 1,
             },
-            ["url"] = "https://wago.io/InterruptAnchor/23",
+            ["url"] = "https://wago.io/InterruptAnchor/27",
             ["actions"] = {
                 ["start"] = {
                 },
-                ["init"] = {
-                },
                 ["finish"] = {
+                },
+                ["init"] = {
                 },
             },
             ["triggers"] = {
@@ -158,13 +155,32 @@ wa.data['interrupt'].data = {
                     },
                 },
             },
-            ["internalVersion"] = 84,
-            ["selfPoint"] = "CENTER",
-            ["version"] = 23,
+            ["internalVersion"] = 85,
+            ["animation"] = {
+                ["start"] = {
+                    ["easeStrength"] = 3,
+                    ["type"] = "none",
+                    ["duration_type"] = "seconds",
+                    ["easeType"] = "none",
+                },
+                ["main"] = {
+                    ["easeStrength"] = 3,
+                    ["type"] = "none",
+                    ["duration_type"] = "seconds",
+                    ["easeType"] = "none",
+                },
+                ["finish"] = {
+                    ["easeStrength"] = 3,
+                    ["type"] = "none",
+                    ["duration_type"] = "seconds",
+                    ["easeType"] = "none",
+                },
+            },
+            ["version"] = 27,
             ["subRegions"] = {
             },
             ["load"] = {
-                ["talent"] = {
+                ["size"] = {
                     ["multi"] = {
                     },
                 },
@@ -176,7 +192,7 @@ wa.data['interrupt'].data = {
                     ["multi"] = {
                     },
                 },
-                ["size"] = {
+                ["talent"] = {
                     ["multi"] = {
                     },
                 },
@@ -196,37 +212,15 @@ wa.data['interrupt'].data = {
             ["borderEdge"] = "Square Full White",
             ["regionType"] = "group",
             ["borderSize"] = 2,
-            ["xOffset"] = 0,
-            ["animation"] = {
-                ["start"] = {
-                    ["type"] = "none",
-                    ["easeStrength"] = 3,
-                    ["duration_type"] = "seconds",
-                    ["easeType"] = "none",
-                },
-                ["main"] = {
-                    ["type"] = "none",
-                    ["easeStrength"] = 3,
-                    ["duration_type"] = "seconds",
-                    ["easeType"] = "none",
-                },
-                ["finish"] = {
-                    ["type"] = "none",
-                    ["easeStrength"] = 3,
-                    ["duration_type"] = "seconds",
-                    ["easeType"] = "none",
-                },
-            },
-            ["yOffset"] = 0,
+            ["scale"] = 1,
+            ["frameStrata"] = 1,
             ["borderOffset"] = 4,
-            ["semver"] = "1.0.22",
+            ["semver"] = "1.0.26",
             ["tocversion"] = 110005,
             ["id"] = "Interrupt Anchor",
-            ["scale"] = 1,
+            ["xOffset"] = 0,
             ["alpha"] = 1,
             ["anchorFrameType"] = "SCREEN",
-            ["frameStrata"] = 1,
-            ["uid"] = "OhDHsn0qc44",
             ["config"] = {
                 ["limitWeakAuras"] = {
                     ["preserveLoad"] = false,
@@ -240,17 +234,18 @@ wa.data['interrupt'].data = {
                 },
             },
             ["borderInset"] = 1,
+            ["yOffset"] = 0,
+            ["uid"] = "OhDHsn0qc44",
             ["conditions"] = {
             },
             ["information"] = {
                 ["forceEvents"] = true,
                 ["debugLog"] = false,
             },
-            ["borderBackdrop"] = "Blizzard Tooltip",
+            ["selfPoint"] = "CENTER",
         },
         ["c"] = {
             [1] = {
-                ["iconSource"] = 0,
                 ["wagoID"] = "J_s7zz7um",
                 ["authorOptions"] = {
                     [1] = {
@@ -258,8 +253,8 @@ wa.data['interrupt'].data = {
                         ["key"] = "showall",
                         ["desc"] = "Shows all Interrupt Anchor's instead of only those you are assigned to",
                         ["default"] = true,
-                        ["useDesc"] = true,
                         ["name"] = "Show All",
+                        ["useDesc"] = true,
                         ["width"] = 1,
                     },
                     [2] = {
@@ -272,89 +267,196 @@ wa.data['interrupt'].data = {
                         ["desc"] = "If turned off it will only alert for backups on npc's you aren't assigned to",
                     },
                 },
-                ["adjustedMax"] = "",
-                ["customText"] = "function()\
-       if aura_env.state then\
-           if aura_env.state.name then\
-               if UnitExists(aura_env.state.name) then\
-                   return NSAPI and NSAPI:Shorten(aura_env.state.name, 8) or WA_ClassColorName(aura_env.state.name)\
-               elseif aura_env.state.name == \"\" then\
-                   return \"\"\
-               else\
-                   return aura_env.state.name\
-               end\
-           end\
-       end\
-   end\
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   ",
+                ["preferToUpdate"] = true,
+                ["adjustedMin"] = "",
                 ["yOffset"] = 35,
                 ["anchorPoint"] = "CENTER",
                 ["cooldownSwipe"] = true,
                 ["customTextUpdate"] = "event",
-                ["url"] = "https://wago.io/InterruptAnchor/23",
-                ["icon"] = true,
+                ["cooldownEdge"] = false,
+                ["actions"] = {
+                    ["start"] = {
+                        ["do_glow"] = false,
+                        ["do_custom"] = false,
+                        ["custom"] = "\
+   \
+   ",
+                        ["do_sound"] = false,
+                    },
+                    ["finish"] = {
+                        ["glow_frame_type"] = "NAMEPLATE",
+                        ["hide_all_glows"] = true,
+                        ["do_glow"] = false,
+                        ["glow_action"] = "hide",
+                    },
+                    ["init"] = {
+                        ["do_custom_load"] = false,
+                        ["do_custom"] = true,
+                        ["custom"] = "--[[\
+   \
+   intstart\
+   spell:364240spell:364241\
+   npc:181549npc:181546\
+   {star} name name name\
+   {circle} name name name\
+   intend\
+   \
+   \
+   cspell:364240cspell:364241     <---- USE THIS INSTEAD FOR CHANNEL SPELLS\
+   ]]\
+   \
+   \
+   \
+   aura_env.icons= { \
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_1:12\\124t\",\
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_2:12\\124t\", \
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_3:12\\124t\", \
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_4:12\\124t\", \
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_5:12\\124t\", \
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_6:12\\124t\",   \
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_7:12\\124t\",\
+       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_8:12\\124t\",\
+   }\
+   \
+   aura_env.blacklist = {\
+       [352141] = true, -- KT Banshee\
+       [375716] = true, -- Diurna Ice Barrage\
+       \
+   }\
+   \
+   aura_env.tempdata = {}\
+   aura_env.counter = aura_env.counter or {}\
+   aura_env.number = {}\
+   aura_env.number[0] = {}\
+   aura_env.int = {}\
+   aura_env.int[0] = {}\
+   aura_env.icon = {}\
+   aura_env.assigned = {}\
+   aura_env.GtoIcon = {}\
+   aura_env.npcid = {}\
+   aura_env.spells = {}\
+   aura_env.cspells = {}\
+   \
+   aura_env.marks = {\
+       [\"star\"] = 1,\
+       [\"circle\"] = 2,\
+       [\"diamond\"] = 3,\
+       [\"triangle\"] = 4,\
+       [\"moon\"] = 5,\
+       [\"square\"] = 6,\
+       [\"cross\"] = 7,\
+       [\"skull\"] = 8,\
+   }\
+   \
+   \
+   \
+   \
+   aura_env.MRT = function(e)\
+       local text = \"\"\
+       if NSAPI then \
+           if e == \"NSAPI_ENCOUNTER_START\" then\
+               text = NSAPI:GetNote()\
+           end\
+       elseif C_AddOns.IsAddOnLoaded(\"MRT\") then\
+           text = _G.VMRT.Note.Text1 or text\
+           text = text:gsub(\"||r\", \"\")\
+           text = text:gsub(\"||c%x%x%x%x%x%x%x%x\", \"\")\
+           text = strtrim(text)\
+       end\
+       aura_env.assign = false\
+       for line in string.gmatch(text,'[^\\r\\n]+') do\
+           line = strtrim(line)\
+           if strlower(line) == \"intend\" then\
+               aura_env.assign = false\
+               \
+               for id, _ in pairs(aura_env.npcid) do\
+                   for i=0, 8 do\
+                       if not aura_env.limit[i..id] then -- if no limit found for a mark, use default as 4\
+                           aura_env.limit[i..id] = 4\
+                       end             \
+                       if not aura_env.number[i..id] then -- nil error prevention\
+                           aura_env.number[i..id] = {}\
+                       end\
+                   end\
+               end\
+               \
+               for i=0, 8 do -- initiating tables\
+                   aura_env.number[i] = {}\
+                   for j=1, 10 do\
+                       aura_env.number[i][j] = false\
+                   end\
+               end\
+               return true\
+               \
+           elseif strlower(line) == \"intstart\" then\
+               aura_env.found = {}\
+               aura_env.int = {}\
+               aura_env.number = {}\
+               aura_env.assign = true\
+               aura_env.limit = {}\
+               aura_env.icon = {}\
+               aura_env.npcid = {}\
+               aura_env.spells = {}\
+               aura_env.cspells = {}\
+           elseif aura_env.assign then\
+               for id in line:gmatch(\"spell:%s*(%d+)\") do\
+                   aura_env.spells[tonumber(id)] = true \
+               end\
+               \
+               for id in line:gmatch(\"cspell:%s*(%d+)\") do\
+                   aura_env.cspells[tonumber(id)] = true \
+               end\
+               \
+               local mark = \"\"\
+               local npc = 0\
+               \
+               for word in line:gmatch(\"([^{]+)}\") do\
+                   mark = word\
+               end\
+               local marknum = aura_env.marks[mark] or 0\
+               for id in line:gmatch(\"npc:%s*(%d+)\") do\
+                   npc = id\
+                   aura_env.npcid[id] = true\
+                   aura_env.number[marknum..npc] = aura_env.number[marknum..npc] or {}                \
+               end\
+               local num = 0\
+               if not aura_env.found[marknum..npc] then\
+                   aura_env.int[marknum..npc] = {}\
+               end\
+               line = line:gsub(\"{.-}\", \"\")\
+               line = line:gsub(\"spell:(%d+)\", \"\")\
+               line = line:gsub(\"cspell:(%d+)\", \"\")\
+               line = line:gsub(\"npc:(%d+)\", \"\")\
+               for name in line:gmatch(\"%S+\") do\
+                   if UnitInRaid(name) or UnitInParty(name) then\
+                       num = num+1\
+                       if not aura_env.found[marknum..npc] then-- only inserting if player isn't assigned to that mark yet\
+                           aura_env.int[marknum..npc][num] = name\
+                       end\
+                       local player = UnitName(\"player\")\
+                       if name == player and aura_env.number[marknum..npc] then \
+                           aura_env.number[marknum..npc][num] = true -- setting interrupt number for that mark if it was the player\
+                       end\
+                   end\
+               end\
+               if not aura_env.icon[marknum..npc] then\
+                   aura_env.limit[marknum..npc] = num -- setting limit for the mark\
+               end\
+               \
+               if num > 0 and not aura_env.found[marknum..npc] then\
+                   aura_env.limit[marknum..npc] = num\
+                   for i=1, aura_env.limit[marknum..npc] do\
+                       if aura_env.number[marknum..npc] and aura_env.number[marknum..npc][i] then -- setting found & icon variable if player was assigned\
+                           aura_env.found[marknum..npc] = true\
+                           aura_env.icon[marknum..npc] = true\
+                       end\
+                   end\
+               end\
+           end\
+       end\
+   end",
+                    },
+                },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
@@ -363,14 +465,10 @@ wa.data['interrupt'].data = {
                             ["unit"] = "player",
                             ["debuffType"] = "HELPFUL",
                             ["type"] = "custom",
-                            ["unevent"] = "auto",
+                            ["custom_type"] = "stateupdate",
                             ["custom_hide"] = "timed",
                             ["event"] = "Chat Message",
-                            ["spellIds"] = {
-                            },
-                            ["subeventPrefix"] = "SPELL",
-                            ["events"] =
-                            "UNIT_SPELLCAST_CHANNEL_START:boss:nameplate UNIT_SPELLCAST_CHANNEL_STOP:boss:nameplate MRT_NOTE_UPDATE CLEU:SPELL_CAST_START:SPELL_CAST_SUCCESS:SPELL_INTERRUPT:UNIT_DIED ENCOUNTER_START ENCOUNTER_END NAME_PLATE_UNIT_ADDED NAME_PLATE_UNIT_REMOVED RAID_TARGET_UPDATE RELOE_INTERRUPT_STATES NSAPI_ENCOUNTER_START UNIT_SPELLCAST_STOP:boss:nameplate",
+                            ["unevent"] = "auto",
                             ["custom"] = "function(s, e, u, ...)\
        local a = aura_env\
        if e == \"OPTIONS\" then        \
@@ -394,7 +492,7 @@ wa.data['interrupt'].data = {
            local npc = select(6, strsplit(\"-\", G))    \
            local st = s[G]\
            if st and npc and a.number[st.icon..npc][st.num] then\
-               WeakAuras.ScanEvents(\"RELOE_INTERRUPT_STOP\", true)\
+               WeakAuras.ScanEvents(\"RELOE_INTERRUPT_STOP\", true, G)\
            end\
            \
            local cast, spellID = ... \
@@ -513,13 +611,13 @@ wa.data['interrupt'].data = {
                    a.counter[G] = a.counter[G] + 1\
                else a.counter[G] = 2 \
                end\
-               if a.GtoIcon[G] and a.limit[a.GtoIcon[G]] and npc and a.limit[a.GtoIcon[G]..npc] and a.counter[G] >= (a.limit[a.GtoIcon[G]..npc]+1) and a.limit[a.GtoIcon[G]..npc] > 0 then\
+               if a.limit[a.GtoIcon[G]..npc] and a.counter[G] and a.GtoIcon[G] and a.limit[a.GtoIcon[G]] and a.counter[G] >= (a.limit[a.GtoIcon[G]..npc]+1) and a.limit[a.GtoIcon[G]..npc] > 0 then\
                    a.counter[G] = a.counter[G] % a.limit[a.GtoIcon[G]]\
                    a.counter[G] = a.counter[G] ~= 0 and a.counter[G] or 1\
                end\
-               if st and a.limit and npc and st.icon and a.limit[st.icon..npc] then\
+               if st and a.limit and a.limit[st.icon..npc] then\
                    if a.number[st.icon..npc][st.num] then\
-                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_STOP\", spellID)\
+                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_STOP\", spellID, G)\
                    end\
                    local name = a.int[st.icon..npc][a.counter[G]]\
                    st.glow = false\
@@ -527,7 +625,7 @@ wa.data['interrupt'].data = {
                    st.num = a.counter[G]\
                    st.name = name\
                    st.dead = name and UnitExists(name) and UnitIsDeadOrGhost(name) and (st.assigned or aura_env.config.showallbackups)\
-                   if a.counter[G] >= (a.limit[st.icon..npc]+1) and a.limit[st.icon..npc] > 0  then\
+                   if a.counter[G] >= (a.limit[st.icon..npc]+1) and a.limit[st.icon..npc] > 0 and a.GtoIcon and a.limit[a.GtoIcon[G]] then\
                        a.counter[G] = a.counter[G] % a.limit[a.GtoIcon[G]]\
                        a.counter[G] = a.counter[G] ~= 0 and a.counter[G] or 1\
                        name = a.int[st.icon..npc][a.counter[G]]\
@@ -537,7 +635,7 @@ wa.data['interrupt'].data = {
                    end\
                    \
                    if a.number[st.icon..npc][st.num] then\
-                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", spellID)\
+                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", spellID, G)\
                        st.glow = true\
                    elseif a.number[st.icon..npc][st.num+1] or (a.number[st.icon..npc][1] and st.num == a.limit[st.icon..npc]) then\
                        st.next = true\
@@ -588,7 +686,7 @@ wa.data['interrupt'].data = {
                    end\
                    \
                    if a.number[st.icon..npc][st.num] then\
-                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", spellID)\
+                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", spellID, G)\
                        st.glow = true\
                    elseif a.number[st.icon..npc][st.num+1] or (a.number[st.icon..npc][1] and st.num == a.limit[st.icon..npc]) then\
                        st.next = true\
@@ -611,7 +709,7 @@ wa.data['interrupt'].data = {
                end\
                if st and a.limit and a.limit[st.icon..npc] then\
                    if a.number[st.icon..npc][st.num] then\
-                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_STOP\", extraspellID)\
+                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_STOP\", extraspellID, G)\
                    end\
                    local name = a.int[st.icon..npc][a.counter[G]]\
                    st.glow = false\
@@ -628,7 +726,7 @@ wa.data['interrupt'].data = {
                    end\
                    \
                    if a.number[st.icon..npc][st.num] then\
-                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", extraspellID)\
+                       WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", extraspellID, G)\
                        st.glow = true\
                    elseif a.number[st.icon..npc][st.num+1] or (a.number[st.icon..npc][1] and st.num == a.limit[st.icon..npc]) then\
                        st.next = true\
@@ -752,7 +850,7 @@ wa.data['interrupt'].data = {
                            st.changed = true\
                        elseif a.number[st.icon..npc] and a.number[st.icon..npc][st.num] then -- check if next when marker was applied\
                            \
-                           WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", \"no\")\
+                           WeakAuras.ScanEvents(\"RELOE_INTERRUPT_SOUND1\", \"no\", G)\
                            st.glow = true\
                            st.next = false\
                            st.changed = true\
@@ -781,11 +879,15 @@ wa.data['interrupt'].data = {
    \
    \
    ",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["events"] =
+                            "UNIT_SPELLCAST_CHANNEL_START:boss:nameplate UNIT_SPELLCAST_CHANNEL_STOP:boss:nameplate MRT_NOTE_UPDATE CLEU:SPELL_CAST_START:SPELL_CAST_SUCCESS:SPELL_INTERRUPT:UNIT_DIED ENCOUNTER_START ENCOUNTER_END NAME_PLATE_UNIT_ADDED NAME_PLATE_UNIT_REMOVED RAID_TARGET_UPDATE RELOE_INTERRUPT_STATES NSAPI_ENCOUNTER_START UNIT_SPELLCAST_STOP:boss:nameplate",
                             ["names"] = {
                             },
                             ["check"] = "event",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_type"] = "stateupdate",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {
+                            },
                             ["customVariables"] = "{\
        \
        glow = \"bool\",\
@@ -802,38 +904,36 @@ wa.data['interrupt'].data = {
                     ["disjunctive"] = "all",
                     ["activeTriggerMode"] = -10,
                 },
-                ["internalVersion"] = 84,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["limitWeakAuras"] = {
-                    ["hash"] = "1b42f567a3ea17df5221371217614d446d38254845969102fd03c24ca5f78850",
-                },
-                ["desaturate"] = false,
+                ["adjustedMax"] = "",
                 ["keepAspectRatio"] = false,
+                ["stickyDuration"] = false,
                 ["parent"] = "Interrupt Anchor",
-                ["version"] = 23,
+                ["version"] = 27,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
@@ -862,8 +962,8 @@ wa.data['interrupt'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["text_anchorYOffset"] = 0,
                         ["text_shadowYOffset"] = 0,
+                        ["text_anchorYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
                         ["text_visible"] = true,
@@ -901,11 +1001,11 @@ wa.data['interrupt'].data = {
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
                         ["text_text_format_icon_format"] = "none",
-                        ["anchorYOffset"] = 0,
+                        ["text_visible"] = true,
                         ["anchor_point"] = "OUTER_LEFT",
                         ["text_fontSize"] = 24,
                         ["anchorXOffset"] = 0,
-                        ["text_visible"] = true,
+                        ["anchorYOffset"] = 0,
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -933,9 +1033,9 @@ wa.data['interrupt'].data = {
                         ["text_font"] = "Expressway",
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
-                        ["text_selfPoint"] = "AUTO",
                         ["text_fontType"] = "OUTLINE",
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_visible"] = true,
                         ["anchor_point"] = "OUTER_RIGHT",
                         ["text_fontSize"] = 24,
                         ["anchorXOffset"] = 0,
@@ -967,12 +1067,12 @@ wa.data['interrupt'].data = {
                         ["text_anchorYOffset"] = -3,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["anchorYOffset"] = 0,
+                        ["text_shadowYOffset"] = 0,
                         ["text_visible"] = true,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["text_shadowYOffset"] = 0,
+                        ["anchorYOffset"] = 0,
                     },
                     [6] = {
                         ["text_shadowXOffset"] = 0,
@@ -1000,12 +1100,12 @@ wa.data['interrupt'].data = {
                         ["text_anchorYOffset"] = 12,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["anchorYOffset"] = 0,
+                        ["text_shadowYOffset"] = 0,
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["text_shadowYOffset"] = 0,
+                        ["anchorYOffset"] = 0,
                     },
                     [7] = {
                         ["glowFrequency"] = 0.25,
@@ -1022,21 +1122,17 @@ wa.data['interrupt'].data = {
                             [4] = 1,
                         },
                         ["glowXOffset"] = 0,
-                        ["type"] = "subglow",
-                        ["glowLength"] = 5.35,
+                        ["glowScale"] = 1,
                         ["text_color"] = {
                         },
-                        ["glowScale"] = 1,
+                        ["glowLength"] = 5.35,
+                        ["type"] = "subglow",
                         ["glowLines"] = 12,
                         ["glowBorder"] = false,
                     },
                 },
                 ["height"] = 40,
-                ["information"] = {
-                    ["ignoreOptionsEventErrors"] = true,
-                    ["forceEvents"] = false,
-                    ["debugLog"] = false,
-                },
+                ["cooldown"] = false,
                 ["load"] = {
                     ["ingroup"] = {
                         ["multi"] = {
@@ -1059,10 +1155,8 @@ wa.data['interrupt'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["role"] = {
+                    ["talent2"] = {
                         ["multi"] = {
-                            ["DAMAGER"] = true,
-                            ["TANK"] = true,
                         },
                     },
                     ["difficulty"] = {
@@ -1070,12 +1164,6 @@ wa.data['interrupt'].data = {
                         ["multi"] = {
                             ["mythic"] = true,
                             ["heroic"] = true,
-                        },
-                    },
-                    ["size"] = {
-                        ["multi"] = {
-                            ["twenty"] = true,
-                            ["flexible"] = true,
                         },
                     },
                     ["talent"] = {
@@ -1086,241 +1174,28 @@ wa.data['interrupt'].data = {
                         ["multi"] = {
                         },
                     },
-                    ["use_never"] = false,
                     ["pvptalent"] = {
                         ["multi"] = {
                         },
                     },
+                    ["use_never"] = false,
                     ["class"] = {
                         ["multi"] = {
                         },
                     },
-                    ["talent2"] = {
+                    ["role"] = {
                         ["multi"] = {
+                            ["DAMAGER"] = true,
+                            ["TANK"] = true,
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                            ["twenty"] = true,
+                            ["flexible"] = true,
                         },
                     },
                 },
-                ["displayIcon"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White_Border",
-                ["useAdjustededMax"] = false,
-                ["selfPoint"] = "CENTER",
-                ["source"] = "import",
-                ["stickyDuration"] = false,
-                ["lastUpdate"] = {
-                    ["when"] = "29/12/2023 03:58",
-                    ["who"] = "Relowindi",
-                },
-                ["config"] = {
-                    ["showall"] = true,
-                    ["showallbackups"] = true,
-                },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "icon",
-                ["width"] = 40,
-                ["alpha"] = 1,
-                ["xOffset"] = 0,
-                ["useCooldownModRate"] = true,
-                ["anchorFrameParent"] = false,
-                ["auto"] = false,
-                ["zoom"] = 0,
-                ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.22",
-                ["tocversion"] = 110005,
-                ["id"] = "Interrupt Nameplate Anchor",
-                ["actions"] = {
-                    ["start"] = {
-                        ["do_glow"] = false,
-                        ["custom"] = "\
-   \
-   ",
-                        ["do_custom"] = false,
-                        ["do_sound"] = false,
-                    },
-                    ["init"] = {
-                        ["custom"] = "--[[\
-   \
-   intstart\
-   spell:364240spell:364241\
-   npc:181549npc:181546\
-   {star} name name name\
-   {circle} name name name\
-   intend\
-   \
-   \
-   cspell:364240cspell:364241     <---- USE THIS INSTEAD FOR CHANNEL SPELLS\
-   ]]\
-   \
-   \
-   \
-   aura_env.icons= { \
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_1:12\\124t\",\
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_2:12\\124t\", \
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_3:12\\124t\", \
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_4:12\\124t\", \
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_5:12\\124t\", \
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_6:12\\124t\",   \
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_7:12\\124t\",\
-       \" \\124TInterface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_8:12\\124t\",\
-   }\
-   \
-   aura_env.blacklist = {\
-       [352141] = true, -- KT Banshee\
-       [375716] = true, -- Diurna Ice Barrage\
-       \
-   }\
-   \
-   aura_env.tempdata = {}\
-   aura_env.counter = aura_env.counter or {}\
-   aura_env.number = {}\
-   aura_env.number[0] = {}\
-   aura_env.int = {}\
-   aura_env.int[0] = {}\
-   aura_env.icon = {}\
-   aura_env.assigned = {}\
-   aura_env.GtoIcon = {}\
-   aura_env.npcid = {}\
-   aura_env.spells = {}\
-   aura_env.cspells = {}\
-   \
-   aura_env.marks = {\
-       [\"star\"] = 1,\
-       [\"circle\"] = 2,\
-       [\"diamond\"] = 3,\
-       [\"triangle\"] = 4,\
-       [\"moon\"] = 5,\
-       [\"square\"] = 6,\
-       [\"cross\"] = 7,\
-       [\"skull\"] = 8,\
-   }\
-   \
-   \
-   \
-   \
-   aura_env.MRT = function(e)\
-       local text = \"\"\
-       if NSAPI then \
-           if e == \"NSAPI_ENCOUNTER_START\" then\
-               text = NSAPI:GetNote()\
-           end\
-       elseif C_AddOns.IsAddOnLoaded(\"MRT\") then\
-           text = _G.VMRT.Note.Text1 or text\
-           text = text:gsub(\"||r\", \"\")\
-           text = text:gsub(\"||c%x%x%x%x%x%x%x%x\", \"\")\
-           text = strtrim(text)\
-       end\
-       aura_env.assign = false\
-       for line in string.gmatch(text,'[^\\r\\n]+') do\
-           if strlower(line) == \"intend\" then\
-               aura_env.assign = false\
-               \
-               for id, _ in pairs(aura_env.npcid) do\
-                   for i=0, 8 do\
-                       if not aura_env.limit[i..id] then -- if no limit found for a mark, use default as 4\
-                           aura_env.limit[i..id] = 4\
-                       end             \
-                       if not aura_env.number[i..id] then -- nil error prevention\
-                           aura_env.number[i..id] = {}\
-                       end\
-                   end\
-               end\
-               \
-               for i=0, 8 do -- initiating tables\
-                   aura_env.number[i] = {}\
-                   for j=1, 10 do\
-                       aura_env.number[i][j] = false\
-                   end\
-               end\
-               return true\
-               \
-           elseif strlower(line) == \"intstart\" then\
-               aura_env.found = {}\
-               aura_env.int = {}\
-               aura_env.number = {}\
-               aura_env.assign = true\
-               aura_env.limit = {}\
-               aura_env.icon = {}\
-               aura_env.npcid = {}\
-               aura_env.spells = {}\
-               aura_env.cspells = {}\
-           elseif aura_env.assign then\
-               for id in line:gmatch(\"spell:(%d+)\") do\
-                   aura_env.spells[tonumber(id)] = true \
-               end\
-               for id in line:gmatch(\"cspell:(%d+)\") do\
-                   aura_env.cspells[tonumber(id)] = true \
-               end\
-               \
-               \
-               local mark = \"\"\
-               local npc = 0\
-               \
-               for word in line:gmatch(\"([^{]+)}\") do\
-                   mark = word\
-               end\
-               local marknum = aura_env.marks[mark] or 0\
-               for id in line:gmatch(\"npc:(%d+)\") do\
-                   npc = id\
-                   aura_env.npcid[id] = true\
-                   aura_env.number[marknum..npc] = aura_env.number[marknum..npc] or {}                \
-               end\
-               \
-               local num = 0\
-               if not aura_env.found[marknum..npc] then\
-                   aura_env.int[marknum..npc] = {}\
-               end\
-               line = line:gsub(\"{.-}\", \"\")\
-               line = line:gsub(\"spell:(%d+)\", \"\")\
-               line = line:gsub(\"cspell:(%d+)\", \"\")\
-               line = line:gsub(\"npc:(%d+)\", \"\")\
-               for name in line:gmatch(\"%S+\") do\
-                   if UnitInRaid(name) or UnitInParty(name) then\
-                       num = num+1\
-                       if not aura_env.found[marknum..npc] then-- only inserting if player isn't assigned to that mark yet\
-                           aura_env.int[marknum..npc][num] = name\
-                       end\
-                   end\
-                   local player = UnitName(\"player\")\
-                   if name == player and aura_env.number[marknum..npc] then \
-                       aura_env.number[marknum..npc][num] = true -- setting interrupt number for that mark if it was the player\
-                   end\
-               end\
-               if not aura_env.icon[marknum..npc] then\
-                   aura_env.limit[marknum..npc] = num -- setting limit for the mark\
-               end\
-               \
-               if num > 0 and not aura_env.found[marknum..npc] then\
-                   aura_env.limit[marknum..npc] = num\
-                   for i=1, aura_env.limit[marknum..npc] do\
-                       if aura_env.number[marknum..npc] and aura_env.number[marknum..npc][i] then -- setting found & icon variable if player was assigned\
-                           aura_env.found[marknum..npc] = true\
-                           aura_env.icon[marknum..npc] = true\
-                       end\
-                   end\
-               end\
-               \
-           end\
-       end\
-   end",
-                        ["do_custom"] = true,
-                    },
-                    ["finish"] = {
-                        ["glow_frame_type"] = "NAMEPLATE",
-                        ["hide_all_glows"] = true,
-                        ["do_glow"] = false,
-                        ["glow_action"] = "hide",
-                    },
-                },
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "NAMEPLATE",
-                ["preferToUpdate"] = true,
-                ["uid"] = "58vl78iJCLZ",
-                ["inverse"] = false,
-                ["adjustedMin"] = "",
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -1349,15 +1224,15 @@ wa.data['interrupt'].data = {
                                     ["glow_action"] = "show",
                                     ["glow_frequency"] = 0.2,
                                     ["glow_border"] = true,
-                                    ["glow_type"] = "Pixel",
-                                    ["use_glow_color"] = true,
-                                    ["glow_lines"] = 10,
                                     ["glow_color"] = {
                                         [1] = 0,
                                         [2] = 1,
                                         [3] = 0,
                                         [4] = 1,
                                     },
+                                    ["glow_type"] = "Pixel",
+                                    ["glow_lines"] = 10,
+                                    ["use_glow_color"] = true,
                                 },
                                 ["property"] = "glowexternal",
                             },
@@ -1419,15 +1294,15 @@ wa.data['interrupt'].data = {
                                     ["glow_action"] = "hide",
                                     ["glow_frequency"] = 0.2,
                                     ["glow_border"] = true,
-                                    ["glow_type"] = "Pixel",
-                                    ["use_glow_color"] = true,
-                                    ["glow_lines"] = 10,
                                     ["glow_color"] = {
                                         [1] = 0,
                                         [2] = 1,
                                         [3] = 0,
                                         [4] = 1,
                                     },
+                                    ["glow_type"] = "Pixel",
+                                    ["glow_lines"] = 10,
+                                    ["use_glow_color"] = true,
                                 },
                                 ["property"] = "glowexternal",
                             },
@@ -1477,8 +1352,8 @@ wa.data['interrupt'].data = {
                         ["check"] = {
                             ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "icon",
                             ["value"] = "0",
+                            ["variable"] = "icon",
                         },
                         ["changes"] = {
                             [1] = {
@@ -1491,63 +1366,297 @@ wa.data['interrupt'].data = {
                         },
                     },
                 },
-                ["cooldown"] = false,
-                ["cooldownEdge"] = false,
+                ["useAdjustededMax"] = false,
+                ["url"] = "https://wago.io/InterruptAnchor/27",
+                ["source"] = "import",
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["lastUpdate"] = {
+                    ["when"] = "29/12/2023 03:58",
+                    ["who"] = "Relowindi",
+                },
+                ["uid"] = "58vl78iJCLZ",
+                ["selfPoint"] = "CENTER",
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "icon",
+                ["anchorFrameType"] = "NAMEPLATE",
+                ["frameStrata"] = 1,
+                ["customText"] = "function()\
+       if aura_env.state then\
+           if aura_env.state.name then\
+               if UnitExists(aura_env.state.name) then\
+                   return NSAPI and NSAPI:Shorten(aura_env.state.name, 8) or WA_ClassColorName(aura_env.state.name)\
+               elseif aura_env.state.name == \"\" then\
+                   return \"\"\
+               else\
+                   return aura_env.state.name\
+               end\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   ",
+                ["useCooldownModRate"] = true,
+                ["anchorFrameParent"] = false,
+                ["semver"] = "1.0.26",
+                ["cooldownTextDisabled"] = false,
+                ["zoom"] = 0,
+                ["auto"] = false,
+                ["tocversion"] = 110005,
+                ["id"] = "Interrupt Nameplate Anchor",
+                ["xOffset"] = 0,
+                ["alpha"] = 1,
+                ["width"] = 40,
+                ["iconSource"] = 0,
+                ["config"] = {
+                    ["showallbackups"] = true,
+                    ["showall"] = true,
+                },
+                ["inverse"] = false,
+                ["icon"] = true,
+                ["displayIcon"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White_Border",
+                ["information"] = {
+                    ["debugLog"] = false,
+                    ["forceEvents"] = false,
+                    ["ignoreOptionsEventErrors"] = true,
+                },
+                ["desaturate"] = false,
             },
             [2] = {
-                ["sparkWidth"] = 10,
-                ["iconSource"] = -1,
+                ["arcLength"] = 360,
+                ["controlledChildren"] = {
+                    [1] = "Interrupt Now Alert (Sound in Custom Options)",
+                    [2] = "Next Interrupt Alert - default disabled",
+                },
+                ["borderBackdrop"] = "Blizzard Tooltip",
                 ["wagoID"] = "J_s7zz7um",
                 ["authorOptions"] = {
-                    [1] = {
-                        ["mediaType"] = "sound",
-                        ["type"] = "media",
-                        ["key"] = "sound",
-                        ["media"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-                        ["useDesc"] = false,
-                        ["default"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-                        ["name"] = "Sound",
-                        ["width"] = 1,
+                },
+                ["preferToUpdate"] = true,
+                ["groupIcon"] = 132938,
+                ["sortHybridTable"] = {
+                    ["Next Interrupt Alert - default disabled"] = false,
+                    ["Interrupt Now Alert (Sound in Custom Options)"] = false,
+                },
+                ["alpha"] = 1,
+                ["fullCircle"] = true,
+                ["space"] = 2,
+                ["url"] = "https://wago.io/InterruptAnchor/27",
+                ["actions"] = {
+                    ["start"] = {
                     },
-                    [2] = {
-                        ["type"] = "select",
-                        ["default"] = 1,
-                        ["values"] = {
-                            [1] = "MASTER",
-                            [2] = "DIALOG",
-                            [3] = "SFX",
-                            [4] = "MUSIC",
-                            [5] = "AMBIENCE",
-                        },
-                        ["key"] = "chan",
-                        ["useDesc"] = false,
-                        ["name"] = "Soundchannel",
-                        ["width"] = 1,
+                    ["init"] = {
+                    },
+                    ["finish"] = {
                     },
                 },
-                ["adjustedMax"] = "",
-                ["adjustedMin"] = "",
-                ["yOffset"] = 250,
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["unit"] = "player",
+                            ["type"] = "aura2",
+                            ["spellIds"] = {
+                            },
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL",
+                            ["event"] = "Health",
+                            ["names"] = {
+                            },
+                        },
+                        ["untrigger"] = {
+                        },
+                    },
+                },
+                ["columnSpace"] = 1,
+                ["radius"] = 200,
+                ["borderColor"] = {
+                    [1] = 0,
+                    [2] = 0,
+                    [3] = 0,
+                    [4] = 1,
+                },
+                ["useLimit"] = false,
+                ["align"] = "CENTER",
+                ["stagger"] = 0,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none",
+                    },
+                },
+                ["rotation"] = 0,
+                ["selfPoint"] = "TOP",
+                ["version"] = 27,
+                ["subRegions"] = {
+                },
+                ["internalVersion"] = 85,
+                ["grow"] = "DOWN",
+                ["load"] = {
+                    ["talent"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["size"] = {
+                        ["multi"] = {
+                        },
+                    },
+                },
+                ["parent"] = "Interrupt Anchor",
+                ["backdropColor"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.5,
+                },
+                ["borderInset"] = 1,
+                ["animate"] = false,
+                ["yOffset"] = 282,
+                ["scale"] = 1,
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["stepAngle"] = 15,
+                ["borderSize"] = 2,
+                ["sort"] = "none",
+                ["limit"] = 5,
+                ["gridWidth"] = 5,
+                ["constantFactor"] = "RADIUS",
+                ["rowSpace"] = 1,
+                ["borderOffset"] = 4,
+                ["semver"] = "1.0.26",
+                ["tocversion"] = 110105,
+                ["id"] = "Interrupt Alerts",
+                ["regionType"] = "dynamicgroup",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "XIexLJG8pnk",
+                ["config"] = {
+                },
+                ["xOffset"] = -351.99987792969,
+                ["gridType"] = "RD",
+                ["conditions"] = {
+                },
+                ["information"] = {
+                },
                 ["anchorPoint"] = "CENTER",
-                ["uid"] = "lHjRz7aiqgN",
+            },
+            [3] = {
+                ["sparkWidth"] = 10,
                 ["sparkOffsetX"] = 0,
+                ["wagoID"] = "J_s7zz7um",
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = true,
+                ["adjustedMin"] = "",
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["anchorFrameType"] = "SCREEN",
                 ["sparkRotation"] = 0,
                 ["sparkRotationMode"] = "AUTO",
-                ["url"] = "https://wago.io/InterruptAnchor/23",
+                ["url"] = "https://wago.io/InterruptAnchor/27",
                 ["actions"] = {
                     ["start"] = {
                         ["do_loop"] = false,
                         ["custom"] = "",
                         ["do_sound"] = false,
-                        ["do_custom"] = false,
                         ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+                        ["do_custom"] = false,
+                    },
+                    ["finish"] = {
                     },
                     ["init"] = {
                         ["custom"] = "aura_env.channel = {\"MASTER\", \"DIALOG\", \"SFX\", \"MUSIC\", \"AMBIENCE\"}\
-   aura_env.chan = aura_env.channel[aura_env.config[\"chan\"]]",
+   aura_env.chan = aura_env.channel[aura_env.config[\"chan\"]]\
+   \
+   -- Do not remove this comment, it is part of this aura: Next Interrupt Alert - default disabled",
                         ["do_custom"] = true,
-                    },
-                    ["finish"] = {
                     },
                 },
                 ["triggers"] = {
@@ -1561,17 +1670,17 @@ wa.data['interrupt'].data = {
    \
    ",
                             ["type"] = "custom",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "stateupdate",
-                            ["subeventPrefix"] = "SPELL",
+                            ["unevent"] = "timed",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["debuffType"] = "HELPFUL",
                             ["duration"] = "1",
                             ["event"] = "Combat Log",
+                            ["subeventPrefix"] = "SPELL",
                             ["names"] = {
                             },
-                            ["unevent"] = "timed",
-                            ["events"] = "RELOE_INTERRUPT_SOUND2 RELOE_INTERRUPT_STOP",
                             ["spellIds"] = {
                             },
+                            ["events"] = "RELOE_INTERRUPT_SOUND2 RELOE_INTERRUPT_STOP",
                             ["custom"] = "function(s, e, spellID, GUID, channel, ...)\
        if e == \"RELOE_INTERRUPT_SOUND2\" and spellID and GUID then\
            local updatestate = false\
@@ -1579,7 +1688,7 @@ wa.data['interrupt'].data = {
                local unit = \"nameplate\"..i\
                if UnitExists(unit) and GUID == UnitGUID(unit) then\
                    local expires = (channel and select(5, UnitChannelInfo(unit))) or select(5, UnitCastingInfo(unit)) \
-                   s[\"\"] = {\
+                   s[GUID] = {\
                        autoHide = true,\
                        progressType = \"timed\",\
                        show = true,\
@@ -1595,7 +1704,7 @@ wa.data['interrupt'].data = {
            if updatestate then\
                return true\
            else -- basically if no nameplate was found we fire a dummy event that lasts 2 seconds as we can't get the correct duration\
-               s[\"\"] = {\
+               s[GUID] = {\
                    autoHide = true,\
                    progressType = \"timed\",\
                    show = true,\
@@ -1606,9 +1715,9 @@ wa.data['interrupt'].data = {
                }\
                return true\
            end\
-       elseif e == \"RELOE_INTERRUPT_STOP\" and spellID and s[\"\"] then\
-           s[\"\"].show = false\
-           s[\"\"].changed = true\
+       elseif e == \"RELOE_INTERRUPT_STOP\" and spellID and s[GUID] then\
+           s[GUID].show = false\
+           s[GUID].changed = true\
            return true\
        end\
    end\
@@ -1654,8 +1763,8 @@ wa.data['interrupt'].data = {
    ",
                             ["check"] = "event",
                             ["unit"] = "player",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["debuffType"] = "HELPFUL",
+                            ["custom_type"] = "stateupdate",
+                            ["custom_hide"] = "timed",
                         },
                         ["untrigger"] = {
                         },
@@ -1668,14 +1777,14 @@ wa.data['interrupt'].data = {
                     [3] = 1,
                     [4] = 1,
                 },
-                ["internalVersion"] = 84,
+                ["internalVersion"] = 85,
                 ["progressSource"] = {
                     [1] = -1,
                     [2] = "",
                 },
                 ["selfPoint"] = "CENTER",
-                ["xOffset"] = -350,
-                ["preferToUpdate"] = true,
+                ["iconSource"] = -1,
+                ["parent"] = "Interrupt Alerts",
                 ["barColor"] = {
                     [1] = 1,
                     [2] = 0,
@@ -1683,11 +1792,14 @@ wa.data['interrupt'].data = {
                     [4] = 1,
                 },
                 ["desaturate"] = false,
-                ["limitWeakAuras"] = {
-                    ["hash"] = "1b42f567a3ea17df5221371217614d446d38254845969102fd03c24ca5f78850",
+                ["adjustedMax"] = "",
+                ["backgroundColor"] = {
+                    [1] = 0.031372549019608,
+                    [2] = 0.031372549019608,
+                    [3] = 0.031372549019608,
+                    [4] = 0.80000001192093,
                 },
-                ["parent"] = "Interrupt Anchor",
-                ["version"] = 23,
+                ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
@@ -1698,12 +1810,7 @@ wa.data['interrupt'].data = {
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "INTERRUPT",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
+                        ["text_text_format_p_format"] = "timed",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
@@ -1718,37 +1825,37 @@ wa.data['interrupt'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_shadowXOffset"] = 0,
                         ["text_shadowYOffset"] = 0,
-                        ["anchorXOffset"] = 0,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
                         ["text_fontType"] = "OUTLINE",
+                        ["text_visible"] = true,
                         ["text_text_format_p_time_format"] = 0,
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 16,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["text_shadowXOffset"] = 0,
+                        ["anchorXOffset"] = 0,
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
                     },
                     [4] = {
-                        ["text_shadowXOffset"] = 0,
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = true,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["text_text_format_p_time_mod_rate"] = true,
-                        ["anchorXOffset"] = 0,
+                        ["anchorYOffset"] = 0,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
+                        ["text_text_format_p_format"] = "timed",
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
@@ -1756,34 +1863,39 @@ wa.data['interrupt'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowXOffset"] = 0,
                         ["text_shadowYOffset"] = 0,
-                        ["text_text_format_n_format"] = "none",
-                        ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 16,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["anchorYOffset"] = 0,
+                        ["anchorXOffset"] = 0,
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
                     },
                     [5] = {
                         ["border_size"] = 1,
-                        ["border_offset"] = 0,
-                        ["anchor_area"] = "bar",
+                        ["type"] = "subborder",
+                        ["border_visible"] = true,
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["border_visible"] = true,
+                        ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder",
+                        ["border_offset"] = 0,
                     },
                 },
-                ["height"] = 40,
+                ["gradientOrientation"] = "HORIZONTAL",
                 ["textureSource"] = "LSM",
                 ["load"] = {
                     ["use_size"] = false,
@@ -1800,78 +1912,116 @@ wa.data['interrupt'].data = {
                             ["mythic"] = true,
                         },
                     },
+                    ["zoneIds"] = "",
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_never"] = false,
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
                     ["size"] = {
                         ["multi"] = {
                             ["twenty"] = true,
                             ["flexible"] = true,
                         },
                     },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_never"] = false,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["zoneIds"] = "",
                 },
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
-                ["backgroundColor"] = {
-                    [1] = 0.031372549019608,
-                    [2] = 0.031372549019608,
-                    [3] = 0.031372549019608,
-                    [4] = 0.80000001192093,
-                },
-                ["source"] = "import",
                 ["enableGradient"] = false,
-                ["lastUpdate"] = {
-                    ["when"] = "29/12/2023 03:58",
-                    ["who"] = "Relowindi",
-                },
+                ["source"] = "import",
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["width"] = 276.00061035156,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "aurabar",
-                ["information"] = {
-                    ["forceEvents"] = false,
+                ["lastUpdate"] = {
+                    ["when"] = "29/12/2023 03:58",
+                    ["who"] = "Relowindi",
+                },
+                ["authorOptions"] = {
+                    [1] = {
+                        ["mediaType"] = "sound",
+                        ["type"] = "media",
+                        ["key"] = "sound",
+                        ["media"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+                        ["useDesc"] = false,
+                        ["name"] = "Initial Sound",
+                        ["default"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Interrupt.ogg",
+                        ["width"] = 1,
+                    },
+                    [2] = {
+                        ["mediaType"] = "sound",
+                        ["type"] = "media",
+                        ["useDesc"] = false,
+                        ["media"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+                        ["name"] = "Sound at low duration",
+                        ["key"] = "sound2",
+                        ["default"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Interrupt.ogg",
+                        ["width"] = 1,
+                    },
+                    [3] = {
+                        ["type"] = "select",
+                        ["values"] = {
+                            [1] = "MASTER",
+                            [2] = "DIALOG",
+                            [3] = "SFX",
+                            [4] = "MUSIC",
+                            [5] = "AMBIENCE",
+                        },
+                        ["default"] = 1,
+                        ["key"] = "chan",
+                        ["useDesc"] = false,
+                        ["name"] = "Soundchannel",
+                        ["width"] = 1,
+                    },
                 },
                 ["icon"] = true,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "aurabar",
+                ["version"] = 27,
+                ["height"] = 50,
                 ["icon_side"] = "LEFT",
-                ["sparkOffsetY"] = 0,
-                ["gradientOrientation"] = "HORIZONTAL",
+                ["alpha"] = 1,
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["sparkHeight"] = 30,
                 ["texture"] = "Atrocity",
-                ["alpha"] = 1,
-                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["spark"] = false,
-                ["tocversion"] = 110005,
-                ["id"] = "Interrupt Now Alert (Sound in Custom Options)",
-                ["semver"] = "1.0.22",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
+                ["config"] = {
+                    ["sound2"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Interrupt.ogg",
+                    ["sound"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Interrupt.ogg",
+                    ["chan"] = 1,
+                },
                 ["zoom"] = 0.3,
+                ["semver"] = "1.0.26",
+                ["tocversion"] = 110005,
+                ["sparkHidden"] = "NEVER",
+                ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+                ["frameStrata"] = 1,
+                ["width"] = 300,
+                ["spark"] = false,
                 ["sparkColor"] = {
                     [1] = 1,
                     [2] = 1,
@@ -1879,7 +2029,7 @@ wa.data['interrupt'].data = {
                     [4] = 1,
                 },
                 ["inverse"] = true,
-                ["sparkHidden"] = "NEVER",
+                ["id"] = "Interrupt Now Alert (Sound in Custom Options)",
                 ["orientation"] = "HORIZONTAL",
                 ["conditions"] = {
                     [1] = {
@@ -1891,21 +2041,21 @@ wa.data['interrupt'].data = {
                                 [1] = {
                                     ["trigger"] = 1,
                                     ["op"] = ">=",
-                                    ["variable"] = "duration",
                                     ["value"] = "4",
+                                    ["variable"] = "duration",
                                 },
                                 [2] = {
                                     ["trigger"] = 1,
                                     ["op"] = "<=",
-                                    ["variable"] = "expirationTime",
                                     ["value"] = "2",
+                                    ["variable"] = "expirationTime",
                                 },
                             },
                         },
                         ["changes"] = {
                             [1] = {
                                 ["value"] = {
-                                    ["custom"] = "PlaySoundFile(aura_env.config.sound, aura_env.chan)",
+                                    ["custom"] = "PlaySoundFile(aura_env.config.sound2, aura_env.chan)",
                                 },
                                 ["property"] = "customcode",
                             },
@@ -1913,24 +2063,23 @@ wa.data['interrupt'].data = {
                     },
                     [2] = {
                         ["check"] = {
-                            ["op"] = "<=",
+                            ["trigger"] = -2,
+                            ["op"] = ">",
+                            ["variable"] = "OR",
                             ["checks"] = {
                                 [1] = {
                                     ["trigger"] = 1,
-                                    ["op"] = ">=",
-                                    ["variable"] = "duration",
+                                    ["op"] = ">",
                                     ["value"] = "4",
+                                    ["variable"] = "duration",
                                 },
                                 [2] = {
                                     ["trigger"] = 1,
                                     ["op"] = "<=",
+                                    ["value"] = "4",
                                     ["variable"] = "expirationTime",
-                                    ["value"] = "2",
                                 },
                             },
-                            ["value"] = 1,
-                            ["variable"] = "show",
-                            ["trigger"] = 1,
                         },
                         ["linked"] = true,
                         ["changes"] = {
@@ -1943,51 +2092,45 @@ wa.data['interrupt'].data = {
                         },
                     },
                 },
-                ["barColor2"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 0,
-                    [4] = 1,
+                ["information"] = {
+                    ["forceEvents"] = false,
                 },
-                ["config"] = {
-                    ["chan"] = 1,
-                    ["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-                },
+                ["uid"] = "lHjRz7aiqgN",
             },
-            [3] = {
+            [4] = {
                 ["sparkWidth"] = 10,
-                ["iconSource"] = -1,
-                ["wagoID"] = "J_s7zz7um",
-                ["authorOptions"] = {
-                },
-                ["preferToUpdate"] = true,
-                ["adjustedMin"] = "",
-                ["yOffset"] = 250,
-                ["anchorPoint"] = "CENTER",
-                ["uid"] = "u3roTfqZSQZ",
                 ["sparkOffsetX"] = 0,
+                ["wagoID"] = "J_s7zz7um",
+                ["xOffset"] = 0,
+                ["adjustedMax"] = "",
+                ["adjustedMin"] = "",
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["width"] = 300,
                 ["sparkRotation"] = 0,
                 ["sparkRotationMode"] = "AUTO",
-                ["url"] = "https://wago.io/InterruptAnchor/23",
-                ["icon"] = true,
+                ["url"] = "https://wago.io/InterruptAnchor/27",
+                ["backgroundColor"] = {
+                    [1] = 0.031372549019608,
+                    [2] = 0.031372549019608,
+                    [3] = 0.031372549019608,
+                    [4] = 0.80000001192093,
+                },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["custom_hide"] = "timed",
+                            ["debuffType"] = "HELPFUL",
                             ["type"] = "custom",
-                            ["customVariables"] = "{\
-       icon = \"string\"\
-   }\
-   \
-   \
-   ",
                             ["subeventSuffix"] = "_CAST_START",
-                            ["names"] = {
-                            },
+                            ["custom_type"] = "stateupdate",
+                            ["subeventPrefix"] = "SPELL",
                             ["duration"] = "1",
                             ["event"] = "Combat Log",
-                            ["unit"] = "player",
+                            ["names"] = {
+                            },
                             ["unevent"] = "timed",
+                            ["spellIds"] = {
+                            },
                             ["events"] = "RELOE_INTERRUPT_SOUND1 RELOE_INTERRUPT_STOP",
                             ["custom"] = "function(s, e, spellID, ...)\
        if e == \"RELOE_INTERRUPT_SOUND1\" and spellID then\
@@ -2009,12 +2152,15 @@ wa.data['interrupt'].data = {
            return true\
        end\
    end",
-                            ["spellIds"] = {
-                            },
                             ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["custom_type"] = "stateupdate",
-                            ["debuffType"] = "HELPFUL",
+                            ["unit"] = "player",
+                            ["customVariables"] = "{\
+       icon = \"string\"\
+   }\
+   \
+   \
+   ",
+                            ["custom_hide"] = "timed",
                         },
                         ["untrigger"] = {
                         },
@@ -2034,26 +2180,26 @@ wa.data['interrupt'].data = {
                 },
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
-                ["xOffset"] = -350,
-                ["adjustedMax"] = "",
+                ["iconSource"] = -1,
+                ["parent"] = "Interrupt Alerts",
                 ["barColor"] = {
                     [1] = 0.12549019607843,
                     [2] = 1,
@@ -2061,11 +2207,20 @@ wa.data['interrupt'].data = {
                     [4] = 1,
                 },
                 ["desaturate"] = false,
-                ["limitWeakAuras"] = {
-                    ["hash"] = "1b42f567a3ea17df5221371217614d446d38254845969102fd03c24ca5f78850",
+                ["preferToUpdate"] = true,
+                ["actions"] = {
+                    ["start"] = {
+                        ["sound"] = "Interface\\Addons\\NorthernSkyMedia\\Media\\Sounds\\Next.ogg",
+                        ["do_sound"] = true,
+                    },
+                    ["finish"] = {
+                    },
+                    ["init"] = {
+                        ["custom"] = "",
+                        ["do_custom"] = false,
+                    },
                 },
-                ["parent"] = "Interrupt Anchor",
-                ["sparkOffsetY"] = 0,
+                ["version"] = 27,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
@@ -2076,12 +2231,7 @@ wa.data['interrupt'].data = {
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Next",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
+                        ["text_text_format_p_format"] = "timed",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
@@ -2096,37 +2246,37 @@ wa.data['interrupt'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_shadowXOffset"] = 0,
                         ["text_shadowYOffset"] = 0,
-                        ["anchorXOffset"] = 0,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
                         ["text_fontType"] = "OUTLINE",
+                        ["text_visible"] = true,
                         ["text_text_format_p_time_format"] = 0,
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 16,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["text_shadowXOffset"] = 0,
+                        ["anchorXOffset"] = 0,
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
                     },
                     [4] = {
-                        ["text_shadowXOffset"] = 0,
+                        ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
-                        ["text_text_format_p_format"] = "timed",
+                        ["text_text_format_p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = true,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["text_text_format_p_time_mod_rate"] = true,
-                        ["anchorXOffset"] = 0,
+                        ["anchorYOffset"] = 0,
+                        ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1,
-                        },
+                        ["text_text_format_p_format"] = "timed",
                         ["text_color"] = {
                             [1] = 1,
                             [2] = 1,
@@ -2134,34 +2284,39 @@ wa.data['interrupt'].data = {
                             [4] = 1,
                         },
                         ["text_font"] = "Expressway",
-                        ["text_text_format_p_time_precision"] = 1,
+                        ["text_shadowXOffset"] = 0,
                         ["text_shadowYOffset"] = 0,
-                        ["text_text_format_n_format"] = "none",
-                        ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["text_text_format_p_time_format"] = 0,
+                        ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
+                        ["text_text_format_p_time_format"] = 0,
+                        ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 16,
-                        ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["anchorYOffset"] = 0,
+                        ["anchorXOffset"] = 0,
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1,
+                        },
                     },
                     [5] = {
                         ["border_size"] = 1,
-                        ["border_offset"] = 0,
-                        ["anchor_area"] = "bar",
+                        ["type"] = "subborder",
+                        ["border_visible"] = true,
                         ["border_color"] = {
                             [1] = 0,
                             [2] = 0,
                             [3] = 0,
                             [4] = 1,
                         },
-                        ["border_visible"] = true,
+                        ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder",
+                        ["border_offset"] = 0,
                     },
                 },
-                ["gradientOrientation"] = "HORIZONTAL",
+                ["height"] = 50,
                 ["textureSource"] = "LSM",
                 ["load"] = {
                     ["use_size"] = false,
@@ -2178,70 +2333,59 @@ wa.data['interrupt'].data = {
                             ["mythic"] = true,
                         },
                     },
+                    ["zoneIds"] = "",
+                    ["class"] = {
+                        ["multi"] = {
+                        },
+                    },
+                    ["use_never"] = true,
+                    ["spec"] = {
+                        ["multi"] = {
+                        },
+                    },
                     ["size"] = {
                         ["multi"] = {
                             ["twenty"] = true,
                             ["flexible"] = true,
                         },
                     },
-                    ["spec"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["use_never"] = true,
-                    ["class"] = {
-                        ["multi"] = {
-                        },
-                    },
-                    ["zoneIds"] = "",
                 },
                 ["sparkBlendMode"] = "ADD",
                 ["useAdjustededMax"] = false,
-                ["backgroundColor"] = {
-                    [1] = 0.031372549019608,
-                    [2] = 0.031372549019608,
-                    [3] = 0.031372549019608,
-                    [4] = 0.80000001192093,
-                },
+                ["internalVersion"] = 85,
                 ["source"] = "import",
-                ["internalVersion"] = 84,
+                ["selfPoint"] = "CENTER",
                 ["lastUpdate"] = {
                     ["when"] = "29/12/2023 03:58",
                     ["who"] = "Relowindi",
                 },
-                ["selfPoint"] = "CENTER",
-                ["width"] = 276.00061035156,
+                ["authorOptions"] = {
+                },
+                ["icon"] = true,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "aurabar",
-                ["information"] = {
-                    ["forceEvents"] = false,
-                },
-                ["actions"] = {
-                    ["start"] = {
-                        ["sound"] = "Interface\\Addons\\SharedMedia_Causese\\sound\\Next.ogg",
-                        ["do_sound"] = false,
-                    },
-                    ["init"] = {
-                        ["custom"] = "",
-                        ["do_custom"] = false,
-                    },
-                    ["finish"] = {
-                    },
-                },
+                ["sparkOffsetY"] = 0,
+                ["gradientOrientation"] = "HORIZONTAL",
                 ["icon_side"] = "LEFT",
-                ["version"] = 23,
-                ["height"] = 40,
+                ["frameStrata"] = 1,
+                ["barColor2"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 0,
+                    [4] = 1,
+                },
                 ["sparkHeight"] = 30,
                 ["texture"] = "Atrocity",
-                ["frameStrata"] = 1,
+                ["config"] = {
+                },
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-                ["spark"] = false,
+                ["semver"] = "1.0.26",
                 ["tocversion"] = 110005,
                 ["sparkHidden"] = "NEVER",
-                ["semver"] = "1.0.22",
+                ["zoom"] = 0.3,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["zoom"] = 0.3,
+                ["spark"] = false,
                 ["sparkColor"] = {
                     [1] = 1,
                     [2] = 1,
@@ -2256,8 +2400,8 @@ wa.data['interrupt'].data = {
                         ["check"] = {
                             ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "icon",
                             ["value"] = "no",
+                            ["variable"] = "icon",
                         },
                         ["changes"] = {
                             [1] = {
@@ -2266,20 +2410,21 @@ wa.data['interrupt'].data = {
                         },
                     },
                 },
-                ["barColor2"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 0,
-                    [4] = 1,
+                ["information"] = {
+                    ["forceEvents"] = false,
                 },
-                ["config"] = {
-                },
+                ["uid"] = "u3roTfqZSQZ",
             },
-            [4] = {
+            [5] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "J_s7zz7um",
-                ["parent"] = "Interrupt Anchor",
-                ["preferToUpdate"] = true,
+                ["color"] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 1,
+                },
+                ["displayText"] = "%icon Backup-Interrupt for %name %icon",
                 ["yOffset"] = 417.29366359114,
                 ["anchorPoint"] = "CENTER",
                 ["displayText_format_p_time_format"] = 0,
@@ -2288,9 +2433,10 @@ wa.data['interrupt'].data = {
                 ["actions"] = {
                     ["start"] = {
                     },
-                    ["init"] = {
-                    },
                     ["finish"] = {
+                    },
+                    ["init"] = {
+                        ["custom"] = "",
                     },
                 },
                 ["triggers"] = {
@@ -2302,6 +2448,12 @@ wa.data['interrupt'].data = {
                             ["unit"] = "player",
                             ["names"] = {
                             },
+                            ["spellIds"] = {
+                            },
+                            ["events"] = "RELOE_INTERRUPT_BACKUP",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
+                            ["subeventPrefix"] = "SPELL",
                             ["custom"] = "function(s, e, icon, unit)\
        if e == \"OPTIONS\" then        \
            s[\"\"] = {\
@@ -2333,12 +2485,6 @@ wa.data['interrupt'].data = {
    \
    \
    ",
-                            ["spellIds"] = {
-                            },
-                            ["subeventPrefix"] = "SPELL",
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
-                            ["events"] = "RELOE_INTERRUPT_BACKUP",
                             ["debuffType"] = "HELPFUL",
                         },
                         ["untrigger"] = {
@@ -2346,31 +2492,31 @@ wa.data['interrupt'].data = {
                     },
                     ["activeTriggerMode"] = -10,
                 },
-                ["displayText_format_p_format"] = "timed",
-                ["internalVersion"] = 84,
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["internalVersion"] = 85,
                 ["animation"] = {
                     ["start"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["main"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                     ["finish"] = {
-                        ["type"] = "none",
                         ["easeStrength"] = 3,
+                        ["type"] = "none",
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none",
                     },
                 },
                 ["displayText_format_name_format"] = "none",
                 ["font"] = "Expressway",
-                ["version"] = 23,
+                ["version"] = 27,
                 ["subRegions"] = {
                     [1] = {
                         ["type"] = "subbackground",
@@ -2399,21 +2545,21 @@ wa.data['interrupt'].data = {
                     },
                 },
                 ["fontSize"] = 30,
-                ["uid"] = "nxsPpZQgLVK",
-                ["shadowXOffset"] = 1,
-                ["wordWrap"] = "WordWrap",
-                ["selfPoint"] = "BOTTOM",
-                ["regionType"] = "text",
-                ["conditions"] = {
+                ["config"] = {
                 },
-                ["displayText_format_p_time_mod_rate"] = true,
-                ["url"] = "https://wago.io/InterruptAnchor/23",
-                ["displayText"] = "%icon Backup-Interrupt for %name %icon",
+                ["shadowXOffset"] = 1,
+                ["selfPoint"] = "BOTTOM",
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["regionType"] = "text",
+                ["fixedWidth"] = 200,
+                ["displayText_format_p_format"] = "timed",
+                ["url"] = "https://wago.io/InterruptAnchor/27",
+                ["parent"] = "Interrupt Anchor",
                 ["displayText_format_p_time_precision"] = 1,
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["displayText_format_icon_format"] = "none",
                 ["shadowYOffset"] = -1,
+                ["semver"] = "1.0.26",
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.22",
                 ["tocversion"] = 110007,
                 ["id"] = "Interrupt Backup Alert",
                 ["authorOptions"] = {
@@ -2421,27 +2567,22 @@ wa.data['interrupt'].data = {
                 ["frameStrata"] = 5,
                 ["anchorFrameType"] = "SCREEN",
                 ["xOffset"] = -15.037592961449,
-                ["config"] = {
-                },
-                ["displayText_format_p_time_legacy_floor"] = false,
-                ["displayText_format_icon_format"] = "none",
+                ["uid"] = "nxsPpZQgLVK",
+                ["preferToUpdate"] = true,
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
                 ["shadowColor"] = {
                     [1] = 0,
                     [2] = 0,
                     [3] = 0,
                     [4] = 1,
                 },
-                ["fixedWidth"] = 200,
+                ["conditions"] = {
+                },
                 ["information"] = {
                 },
-                ["color"] = {
-                    [1] = 1,
-                    [2] = 1,
-                    [3] = 1,
-                    [4] = 1,
-                },
+                ["wordWrap"] = "WordWrap",
             },
         },
-        ["v"] = 1421,
+        ["v"] = 2000,
     },
 }

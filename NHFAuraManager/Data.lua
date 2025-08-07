@@ -5,7 +5,8 @@ local AM = select(2, ...)
 local data = AM:GetModule('data')
 
 data.data = {
-    showMinimap = true
+    showMinimap = true,
+    disableDuplicateCheck = false
 }
 
 data.Init = function(self)

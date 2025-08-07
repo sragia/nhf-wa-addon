@@ -13,6 +13,9 @@ local window = AM:GetModule('window-frame')
 ---@class AMButton
 local button = AM:GetModule('button')
 
+---@class Data
+local data = AM:GetModule('data')
+
 --[[
 Purpose of this is to check if there are auras that we have placed in our groups
 
@@ -39,7 +42,7 @@ duplicatesChecker.Init = function(self)
     local WAImportOriginal = WeakAuras.Import
     WeakAuras.Import = function(inData, target, callbackFunc, ...)
         if (callbackFunc and type(callbackFunc) ~= 'function') then
-            print('NHF Aura Manager: Something has changed in args, report to Exality')
+            AM.utils.printOut('NHF Aura Manager: Something has changed in args, report to Exality')
             WAImportOriginal(inData, target, callbackFunc, ...)
             return
         end
@@ -97,7 +100,10 @@ duplicatesChecker.UpdateList = function(self, list)
 end
 
 duplicatesChecker.Check = function(self)
-    -- TODO
+    if (data:GetDataByKey('disableDuplicateCheck')) then
+        return
+    end
+
     local addonAuras = waStorage:GetFullData()
 
     local disabledAuras = {}

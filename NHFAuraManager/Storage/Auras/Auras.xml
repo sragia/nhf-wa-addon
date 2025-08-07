@@ -2,9 +2,10 @@
 ..\FrameXML\UI.xsd">
 
   <Script file="Assignments.lua"/>
-  <Script file="AssignmentsAnchors.lua"/>
   <Script file="InterruptAnchor.lua"/>
-  <Script file="GeneralAnchors.lua"/>
-  <Script file="GeneralLoU.lua"/>
+  <Script file="Anchors1440.lua"/>
+  <Script file="Anchors1080.lua"/>
+  <Script file="ManaforgeOmega.lua"/>
+  <Script file="ExternalAlert.lua"/>
   <Script file="Memes.lua"/>
 </Ui>

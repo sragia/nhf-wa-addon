@@ -61,7 +61,7 @@ waDisplayHeader.Create = function(self, options)
     f:ClearAllPoints()
     f:SetParent(nil)
     f.Destroy = function(self)
-        waDisplay.pool:Release(self)
+        waDisplayHeader.pool:Release(self)
     end
 
     if (options.tooltipText) then

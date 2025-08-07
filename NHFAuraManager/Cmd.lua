@@ -16,6 +16,9 @@ local cmd = AM:GetModule('cmd')
 ---@class SoundLoader
 local soundLoader = AM:GetModule('sound-loader')
 
+---@class CmdMenu
+local cmdMenu = AM:GetModule('cmd-menu')
+
 local libDB = LibStub("LibDBIcon-1.0")
 local libDataBroker = LibStub("LibDataBroker-1.1")
 
@@ -29,6 +32,12 @@ function SlashCmdList.NHFAURAMANAGER(msg)
         cmd:RefreshMinimap()
     elseif (msg == 'load-sounds') then
         soundLoader:PlayAllSounds()
+    elseif (msg == 'disable-duplicate-check') then
+        data:SetDataByKey('disableDuplicateCheck', true)
+        AM.utils.printOut('Duplicate check disabled')
+    elseif (msg == 'enable-duplicate-check') then
+        data:SetDataByKey('disableDuplicateCheck', false)
+        AM.utils.printOut('Duplicate check enabled')
     else
         manager:Show()
     end
@@ -38,8 +47,12 @@ local dataBroker = libDataBroker:NewDataObject('NHF Aura Manager', {
     type = "data source",
     text = 'NHF Aura Manager',
     icon = [[Interface\AddOns\NHFAuraManager\Textures\logo.png]],
-    OnClick = function()
-        manager:Show()
+    OnClick = function(self, button)
+        if (button == 'LeftButton') then
+            manager:Show()
+        elseif (button == 'RightButton') then
+            cmdMenu:ShowMenu(self)
+        end
     end
 })
 

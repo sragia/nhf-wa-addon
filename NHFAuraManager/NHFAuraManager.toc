@@ -1,10 +1,14 @@
-## Interface: 110000
+## Interface: 110200
 ## Title: NHF Aura Manager
 ## Notes: Manages Auras
 ## Author: Exality
 ## SavedVariables: AuraManagerData
 ## Version: @project-version@
-## Dependencies: WeakAuras
+## Dependencies: WeakAuras, NorthernSkyRaidTools
+## IconTexture: Interface\AddOns\NHFAuraManager\Textures\logo.png
+
+# Libs
+Libs/!BugGrabber/load.xml
 
 # Core Functionality
 Util.lua 
@@ -22,6 +26,7 @@ Frames/Inputs/EditBox.lua
 Frames/Inputs/Toggle.lua
 Frames/Inputs/Button.lua
 Frames/Inputs/ToggleButton.lua
+Frames/Inputs/LuaEditor.lua
 Frames/Inputs/Keybind.lua
 Frames/Inputs/Dropdown.lua
 Frames/CheckerRow.lua
@@ -30,7 +35,9 @@ Frames/Window.lua
 Frames/ScrollFrame.lua
 Frames/WADisplayHeader.lua
 Frames/WADisplay.lua
+Frames/BugReportDisplay.lua
 Frames/InputGroup.lua
+Frames/Assignment.lua
 
 UserConfigManager.lua
 
@@ -44,9 +51,17 @@ SoundsLoader.lua
 
 RaidManagement/RaidManagement.xml
 
+CmdMenu.lua
+
+BugReports.lua
+
+MyAssignments.lua
+
 Cmd.lua
 BossModDisable.lua
 AnnoyancePopup.lua
 KeyBindings.lua
+
+API.lua
 
 Storage/Auras/Auras.xml

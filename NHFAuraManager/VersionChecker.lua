@@ -33,7 +33,7 @@ end
 
 local function isAvailableForAction()
     if (not IsInGroup() or (not UnitIsGroupLeader('player') and not UnitIsGroupAssistant('player'))) then
-        print('Not a leader/assist or not in group')
+        AM.utils.printOut('Not a leader/assist or not in group')
         return false
     end
 
@@ -69,7 +69,7 @@ end
 
 versionChecker.Init = function(self)
     self.window = windowConstruct:Create({
-        size = { (waStorage:GetCount(true) + 2) * AM.const.colWidth + 100, 600 },
+        size = { (waStorage:GetCount(true) + 3) * AM.const.colWidth + 100, 600 },
         title = 'Version Check'
     })
     self:Setup()
@@ -204,12 +204,12 @@ versionChecker.HandleVersionCheckResponse = function(self, data, sender)
     local _, char = FindInTableIf(self.data.characters, function(d) return d.name == Ambiguate(sender, 'short') end)
 
     if (not char) then
-        print('Response from ', sender, ' could not be parsed')
+        AM.utils.printOut('Response from ', sender, ' could not be parsed')
         return;
     end
 
     for _, d in ipairs(data) do
-        if (d.name == 'Addon') then
+        if (d.name == 'Addon' or d.name == 'NS Raid Tools') then
             char.cols[self.data.headerMap[d.name]] = d.semver
             char.colStatuses[self.data.headerMap[d.name]] = 1
         elseif (self.data.headerMap[d.name]) then

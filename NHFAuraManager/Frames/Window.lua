@@ -11,6 +11,9 @@ local window = AM:GetModule('window-frame')
 local windowManager = AM:GetModule('window-manager')
 
 local addonVersion = C_AddOns.GetAddOnMetadata(addonName, "version")
+if addonVersion == '@project-version@' then
+    addonVersion = '1.0.0-dev'
+end
 
 window.Init = function(self)
     window.pool = CreateFramePool('Frame', UIParent)
@@ -34,14 +37,26 @@ local configure = function(frame)
     AM.utils.animation.diveIn(frame, 0.2, 0, 20, 'IN', frame.fadeIn)
     AM.utils.animation.diveIn(frame, 0.2, 0, -20, 'OUT', frame.fadeOut)
 
-    frame.ShowWindow = function(self)
+    frame.ShowWindow = function(self, hideAfter)
         self:Show()
         windowManager:SetValidCenterPosition(self)
         self.fadeIn:Play()
+        if (hideAfter) then
+            self.timerContainer:Show();
+            self.timer:SetMinMaxValues(0, hideAfter)
+            self.timer:SetValue(hideAfter)
+            self:SetScript('OnUpdate', function(self, elapsed)
+                self.timer:SetValue(self.timer:GetValue() - elapsed)
+                if (self.timer:GetValue() <= 0) then
+                    self:HideWindow()
+                end
+            end)
+        end
     end
 
     frame.HideWindow = function(self)
         self.fadeOut:Play()
+        self:SetScript('OnUpdate', nil)
     end
 
     if (not frame.Texture) then
@@ -95,14 +110,21 @@ local configure = function(frame)
 
     if (not frame.close) then
         local closeContainer = CreateFrame("Button", nil, frame)
-        closeContainer:SetSize(43, 28)
-        closeContainer:SetPoint("TOPRIGHT")
+        closeContainer:SetSize(38, 28)
+        closeContainer:SetPoint("TOPRIGHT", -8, -5)
 
         local texture = closeContainer:CreateTexture(nil, "BACKGROUND")
-        texture:SetTexture(AM.const.textures.frame.closeBtn)
-        texture:SetVertexColor(0.8, 0.8, 0.8, 0.8)
-        texture:SetTexCoord(10.5 / 64, 53 / 64, 18 / 64, 45.5 / 64)
+        texture:SetTexture(AM.const.textures.frame.inputs.buttonBg)
+        texture:SetTextureSliceMargins(20, 20, 20, 20)
+        texture:SetTextureSliceMode(Enum.UITextureSliceMode.Stretched)
+        texture:SetVertexColor(110 / 255, 4 / 255, 0, 1)
         texture:SetAllPoints()
+
+        local closeIcon = closeContainer:CreateTexture(nil, "OVERLAY")
+        closeIcon:SetTexture(AM.const.textures.frame.closeIcon)
+        closeIcon:SetVertexColor(1, 1, 1, 1)
+        closeIcon:SetPoint("CENTER")
+        closeIcon:SetSize(10, 10)
 
         closeContainer:EnableMouse(true)
         closeContainer:SetMouseClickEnabled()
@@ -112,13 +134,32 @@ local configure = function(frame)
             end
         end)
         closeContainer:SetScript("OnEnter", function(_)
-            texture:SetVertexColor(1, 1, 1, 1)
+            texture:SetVertexColor(186 / 255, 6 / 255, 0, 1)
         end)
         closeContainer:SetScript("OnLeave", function(_)
-            texture:SetVertexColor(0.8, 0.8, 0.8, 0.8)
+            texture:SetVertexColor(110 / 255, 4 / 255, 0, 1)
         end)
 
         frame.close = closeContainer
+    end
+
+    if (not frame.timer) then
+        frame.timerContainer = CreateFrame("Frame", nil, frame)
+        frame.timerContainer:SetHeight(12)
+        frame.timerContainer:SetPoint('BOTTOMLEFT', frame, 'BOTTOMLEFT', 20, 15)
+        frame.timerContainer:SetPoint('BOTTOMRIGHT', frame, 'BOTTOMRIGHT', -20, 15)
+        local timerBg = frame.timerContainer:CreateTexture(nil, "BACKGROUND")
+        timerBg:SetTexture(AM.const.textures.frame.statusBar)
+        timerBg:SetVertexColor(0, 0, 0, 1)
+        timerBg:SetAllPoints()
+
+        frame.timer = CreateFrame("StatusBar", nil, frame.timerContainer)
+        frame.timer:SetAllPoints()
+        frame.timer:SetStatusBarTexture(AM.const.textures.frame.statusBar)
+        frame.timer:SetStatusBarColor(194 / 255, 2 / 255, 37 / 255, 1)
+        frame.timer:SetMinMaxValues(0, 1)
+        frame.timer:SetValue(0)
+        frame.timerContainer:Hide();
     end
 
     local title = frame:CreateFontString(nil, "OVERLAY")

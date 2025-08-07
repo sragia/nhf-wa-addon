@@ -3,6 +3,81 @@ local AM = select(2, ...)
 
 local randCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
+-- Proper base64 decoder for Lua
+local function decodeBase64(encodedString)
+    -- Base64 character set
+    local b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+    local b64dec = {}
+    for i = 1, #b64chars do
+        b64dec[string.sub(b64chars, i, i)] = i - 1
+    end
+
+    -- Remove any whitespace and padding
+    encodedString = encodedString:gsub("%s+", "")
+
+    -- Add padding if needed
+    local padding = 4 - (#encodedString % 4)
+    if padding < 4 then
+        encodedString = encodedString .. string.rep("=", padding)
+    end
+
+    -- Decode base64
+    local result = {}
+    local i = 1
+    while i <= #encodedString do
+        local a = b64dec[encodedString:sub(i, i)] or 0
+        local b = b64dec[encodedString:sub(i + 1, i + 1)] or 0
+        local c = b64dec[encodedString:sub(i + 2, i + 2)] or 0
+        local d = b64dec[encodedString:sub(i + 3, i + 3)] or 0
+
+        table.insert(result, string.char(bit.lshift(a, 2) + bit.rshift(b, 4)))
+        if encodedString:sub(i + 2, i + 2) ~= "=" then
+            table.insert(result, string.char(bit.lshift(bit.band(b, 15), 4) + bit.rshift(c, 2)))
+        end
+        if encodedString:sub(i + 3, i + 3) ~= "=" then
+            table.insert(result, string.char(bit.lshift(bit.band(c, 3), 6) + d))
+        end
+
+        i = i + 4
+    end
+
+    return table.concat(result)
+end
+
+-- Simple JSON to Lua table converter
+local function jsonToLuaTable(jsonString)
+    -- Convert JSON to Lua table format manually
+    local luaString = jsonString
+
+    -- Convert arrays
+    luaString = luaString:gsub('%[', '{'):gsub('%]', '}')
+
+    -- Convert objects
+    luaString = luaString:gsub('"([^"]+)"%s*:%s*"([^"]*)"', '["%1"] = "%2"')
+    luaString = luaString:gsub('"([^"]+)"%s*:%s*{', '["%1"] = {')
+    luaString = luaString:gsub('"([^"]+)"%s*:%s*([^,}]+)', '["%1"] = %2')
+
+    -- Convert boolean values
+    luaString = luaString:gsub('true', 'true'):gsub('false', 'false')
+    luaString = luaString:gsub('null', 'nil')
+
+    -- Convert empty strings in arrays
+    luaString = luaString:gsub('""', '""')
+
+    -- Try to load and execute
+    local success, result = pcall(function()
+        return loadstring('return ' .. luaString)()
+    end)
+
+    if success then
+        return result
+    else
+        print("Failed to parse as Lua:", result)
+        return nil
+    end
+end
+
+
 AM.utils = {
     isEmpty = function(t)
         for _ in pairs(t) do
@@ -285,5 +360,34 @@ AM.utils = {
             i = i + (reversed and -1 or 1)
             return ret
         end
+    end,
+    decodeFromGoogleSheets = function(encodedString)
+        -- Decode base64
+        local decoded = decodeBase64(encodedString)
+        if not decoded or #decoded == 0 then
+            print("Failed to decode base64")
+            return nil
+        end
+
+        -- Convert JSON to Lua table
+        local success, data = pcall(function()
+            return jsonToLuaTable(decoded)
+        end)
+
+        if not success or not data then
+            print("JSON parsing failed")
+            print("Error:", data)
+            return nil
+        end
+
+        return data
+    end,
+    arrayIndexForvalue = function(arr, value)
+        for index, val in ipairs(arr) do
+            if val == value then
+                return index + 1
+            end
+        end
+        return nil
     end
 }
