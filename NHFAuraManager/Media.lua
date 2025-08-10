@@ -45,7 +45,8 @@ AM.Media = {
         ["Spawning Add"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\SpawningAdd.mp3]],
         ["Face Spirit"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\FaceSpirit.mp3]],
         ["Knock"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Knock.mp3]],
-        ["Pull In"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\PullIn.mp3]]
+        ["Pull In"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\PullIn.mp3]],
+        ["Watch Frontal"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\WatchFrontal.mp3]],
     }
 }
 
