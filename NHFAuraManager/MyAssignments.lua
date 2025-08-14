@@ -63,11 +63,11 @@ end
 
 myAssignments.ReadNote = function(self)
     if not C_AddOns.IsAddOnLoaded("MRT") then
-        error("Addon MRT is disabled, can't read the note")
+        AM.utils.printOut("Addon MRT is disabled, can't read the note")
         return ""
     end
     if not VMRT.Note.Text1 then
-        error("No MRT Note found")
+        AM.utils.printOut("No MRT Note found")
         return ""
     end
 

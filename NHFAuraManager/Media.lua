@@ -47,6 +47,12 @@ AM.Media = {
         ["Knock"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Knock.mp3]],
         ["Pull In"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\PullIn.mp3]],
         ["Watch Frontal"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\WatchFrontal.mp3]],
+        ["New Pillar"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\NewPillar.mp3]],
+        ["Fracture"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Fracture.mp3]],
+        ["Hide"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Hide.mp3]],
+        ["Pushback In"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\PushbackIn.mp3]],
+        ["Stack"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Stack.mp3]],
+        ["Help"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Help.mp3]],
     }
 }
 

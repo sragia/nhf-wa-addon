@@ -86,7 +86,7 @@ wa.GetOutOfDateAuras = function(self)
             if (not localData) then
                 hasOutOfDate = true
                 table.insert(missing, d.name)
-            elseif (tonumber(d.version) > tonumber(localData.version)) then
+            elseif (d.version and localData.version and tonumber(d.version) > tonumber(localData.version)) then
                 hasOutOfDate = true
                 table.insert(lowerVersion, d.name)
             end

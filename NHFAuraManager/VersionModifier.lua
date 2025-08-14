@@ -253,6 +253,8 @@ versionModifier.ModifyUUID = function(self, data)
         data.url = ''
     end
 
+    data.preferToUpdate = true
+
     if (data.controlledChildren) then
         for _, child in pairs(data.controlledChildren) do
             local childData = WeakAuras.GetData(child)
