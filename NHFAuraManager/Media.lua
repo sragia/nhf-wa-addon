@@ -53,6 +53,8 @@ AM.Media = {
         ["Pushback In"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\PushbackIn.mp3]],
         ["Stack"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Stack.mp3]],
         ["Help"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Help.mp3]],
+        ["Spawn Wall"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\SpawnWall.mp3]],
+        ["Break Wall"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\BreakWall.mp3]],
     }
 }
 

@@ -389,5 +389,13 @@ AM.utils = {
             end
         end
         return nil
+    end,
+    findGroupForPlayer = function(playerName)
+        for i = 1, GetNumGroupMembers() do
+            local name, _, group = GetRaidRosterInfo(i)
+            if (Ambiguate(name, 'short') == playerName) then
+                return group
+            end
+        end
     end
 }

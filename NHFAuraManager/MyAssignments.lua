@@ -94,8 +94,37 @@ myAssignments.ReadNote = function(self)
 end
 
 myAssignments.OnNoteUpdate = function(self)
+    myAssignments:AdjustNote()
     if (myAssignments:GetAssignments()) then
         myAssignments:Show(true);
+    end
+end
+
+myAssignments.AdjustNote = function(self)
+    if C_AddOns.IsAddOnLoaded("MRT") then
+        local note = VMRT.Note.Text1
+        -- Replace [NHFGROUP:x,y] patterns with group assignments
+        note = string.gsub(note, "%[NHFGROUP:[%d,]+%]", function(match)
+            -- Extract the numbers from the pattern
+            local numbers = {}
+            for num in string.gmatch(match, "%d+") do
+                table.insert(numbers, tonumber(num))
+            end
+            local names = {}
+            for i = 1, GetNumGroupMembers() do
+                local unit, _, group = GetRaidRosterInfo(i)
+                if (tContains(numbers, group)) then
+                    local name, server = UnitName(unit)
+                    local _, CLASS = UnitClass(unit)
+                    local formattedName = string.format('|c%s%s|r', RAID_CLASS_COLORS[CLASS].colorStr, name)
+                    table.insert(names, formattedName)
+                end
+            end
+            return table.concat(names, ' ')
+        end)
+        
+        -- Update the MRT note with the modified text
+        VMRT.Note.Text1 = note
     end
 end
 
@@ -119,7 +148,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = assignment.subText,
+                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText),
                         icon = assignment.iconID,
                     })
                 end
@@ -129,7 +158,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = assignment.subText,
+                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText),
                         icon = assignment.iconID,
                     })
                 end
@@ -139,7 +168,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('%sPosition: |cffffffff%d|r', assignment.subText or '', index),
+                        subText = string.format('%sPosition: |cffffffff%d|r', C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText) or '', index),
                         icon = assignment.iconID,
                     })
                 end
@@ -149,7 +178,7 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('%sPosition: |cffffffff%d|r', assignment.subText or '', index),
+                        subText = string.format('%sPosition: |cffffffff%d|r', C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText) or '', index),
                         icon = assignment.iconID,
                     })
                 end
@@ -159,14 +188,24 @@ myAssignments.ParseAssignments = function(self)
                 if (index) then
                     table.insert(assignments, {
                         name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('%sPosition: |cffffffff%d|r', assignment.subText or '', index),
+                        subText = string.format('%sPosition: |cffffffff%d|r', C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText) or '', index),
+                        icon = assignment.iconID,
+                    })
+                end
+            end,
+            ['raid_group'] = function()
+                local myGroup = AM.utils.findGroupForPlayer(UnitName('player'))
+                if (tContains(assignment.groups, string.format('%d', myGroup))) then
+                    table.insert(assignments, {
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
+                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText),
                         icon = assignment.iconID,
                     })
                 end
             end,
             default = function()
                 AM.utils.printOut('Unknown assignment type: ' .. assignment.type)
-            end
+            end 
         })
     end
     return assignments;
