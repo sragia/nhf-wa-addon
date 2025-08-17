@@ -109,6 +109,12 @@ popup.CheckOutOfDate = function(self)
 end
 
 popup.CheckOutOfDateVersion = function(self)
+    --@debug@
+    if (true) then
+        -- Prevent sending out version check
+        return
+    end
+    --@end-debug@
     comm:SendMessage('VERSION_CHECK', { version = self.addonVersion })
 end
 
