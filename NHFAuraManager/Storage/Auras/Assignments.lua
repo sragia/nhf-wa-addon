@@ -11,13 +11,13 @@ wa.data['assignments'].data = {
     ["name"] = "[NHF] Assignments",
     ["isOptional"] = "0",
     ["isAnchor"] = "0",
-    ["semver"] = "1.1.6",
-    ["version"] = "46",
+    ["semver"] = "1.1.7",
+    ["version"] = "47",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
-                [1] = "Manaforge Omega Assignment Auras",
-                [2] = "Assignments on Note Push -  check custom options",
+                [1] = "Assignments on Note Push -  check custom options",
+                [2] = "Manaforge Omega Assignment Auras",
                 [3] = "[NHF] Manaforge Omega Custom Assignments"
             },
             ["borderBackdrop"] = "Blizzard Tooltip",
@@ -45,7 +45,7 @@ wa.data['assignments'].data = {
             ["internalVersion"] = 85,
             ["selfPoint"] = "CENTER",
             ["desc"] = "Up to date with NS 1.0.20",
-            ["version"] = "46",
+            ["version"] = "47",
             ["subRegions"] = {},
             ["load"] = {
                 ["size"] = {["multi"] = {}},
@@ -83,15 +83,15 @@ wa.data['assignments'].data = {
             ["AMisOptional"] = "0",
             ["conditions"] = {},
             ["borderOffset"] = 4,
-            ["semver"] = "1.1.6",
+            ["semver"] = "1.1.7",
             ["xOffset"] = 0,
             ["id"] = "[NHF] Assignments",
-            ["borderInset"] = 1,
+            ["config"] = {},
             ["alpha"] = 1,
             ["anchorFrameType"] = "SCREEN",
             ["AMisAnchor"] = "0",
-            ["config"] = {},
             ["uid"] = "AM-sAklUAnWyJ9",
+            ["borderInset"] = 1,
             ["frameStrata"] = 1,
             ["AMOriginalUUID"] = "sAklUAnWyJ9",
             ["information"] = {},
@@ -99,6 +99,609 @@ wa.data['assignments'].data = {
         },
         ["c"] = {
             [1] = {
+                ["grow"] = "DOWN",
+                ["controlledChildren"] = {[1] = "Assignment on Note Push"},
+                ["borderBackdrop"] = "Blizzard Tooltip",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["parent"] = "[NHF] Assignments",
+                ["preferToUpdate"] = true,
+                ["groupIcon"] = 1505953,
+                ["sortHybridTable"] = {["Assignment on Note Push"] = false},
+                ["AMModified"] = true,
+                ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["rowSpace"] = 1,
+                ["url"] = "",
+                ["actions"] = {["start"] = {}, ["init"] = {}, ["finish"] = {}},
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["unit"] = "player",
+                            ["type"] = "aura2",
+                            ["spellIds"] = {},
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL",
+                            ["event"] = "Health",
+                            ["names"] = {}
+                        },
+                        ["untrigger"] = {}
+                    }
+                },
+                ["columnSpace"] = 1,
+                ["radius"] = 200,
+                ["AMOriginalUUID"] = "gnTBDejrTTp",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["align"] = "CENTER",
+                ["arcLength"] = 360,
+                ["xOffset"] = 0,
+                ["yOffset"] = 0,
+                ["rotation"] = 0,
+                ["gridType"] = "RD",
+                ["version"] = 55,
+                ["subRegions"] = {},
+                ["stagger"] = 0,
+                ["regionType"] = "dynamicgroup",
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["fullCircle"] = true,
+                ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
+                ["space"] = 2,
+                ["animate"] = false,
+                ["internalVersion"] = 85,
+                ["scale"] = 1,
+                ["centerType"] = "LR",
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["stepAngle"] = 15,
+                ["borderSize"] = 2,
+                ["limit"] = 5,
+                ["useLimit"] = false,
+                ["authorOptions"] = {},
+                ["anchorPoint"] = "TOP",
+                ["anchorFrameParent"] = false,
+                ["constantFactor"] = "RADIUS",
+                ["sort"] = "none",
+                ["borderOffset"] = 4,
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Assignments on Note Push -  check custom options",
+                ["selfPoint"] = "TOP",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["anchorFrameFrame"] = "WeakAuras:NS Big Bar Anchor",
+                ["config"] = {},
+                ["borderInset"] = 1,
+                ["uid"] = "AM-gnTBDejrTTp",
+                ["alpha"] = 1,
+                ["conditions"] = {},
+                ["information"] = {},
+                ["gridWidth"] = 5
+            },
+            [2] = {
+                ["outline"] = "OUTLINE",
+                ["displayText_format_text_format"] = "none",
+                ["displayText_format_url_format"] = "none",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["parent"] = "Assignments on Note Push -  check custom options",
+                ["displayText"] = "%text%url",
+                ["shadowYOffset"] = -1,
+                ["anchorPoint"] = "CENTER",
+                ["displayText_format_p_time_format"] = 0,
+                ["customTextUpdate"] = "event",
+                ["url"] = "",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "if aura_env.config.TTSSound ~= \"\" then\
+       NSAPI:TTS(aura_env.config.TTSSound)\
+   end",
+                        ["do_custom"] = true
+                    },
+                    ["init"] = {
+                        ["do_custom_load"] = false,
+                        ["custom"] = "aura_env.color = \"\"\
+   for i=1, 4 do\
+       local toadd = string.format(\"%02X\", aura_env.config.color[i]*255)\
+       if i == 4 then\
+           aura_env.color = toadd..aura_env.color\
+       else\
+           aura_env.color = aura_env.color..toadd\
+       end\
+   end\
+   aura_env.color = \"|c\"..aura_env.color\
+   aura_env.customcount = 0\
+   aura_env.spells = {}\
+   \
+   aura_env.assigns = {\
+       [\"nswavestart\"] = \"soak Writhing Wave\",\
+       [\"nspylonstart\"] = \"soak the Infusion Pylons\", \
+       [\"nsoblitstart\"] = \"soak Arcane Obliteration\", \
+       [\"nsconquerstart\"] = \"soak Conquer\", \
+       [\"nscollectorstart\"] = \"kill the Arcane Collector\",\
+       [\"nshuntstart\"] = \"soak The Hunt\",\
+       [\"nsrallystart\"] = \"transition\",\
+       [\"nsantimatterstart\"] = \"soak Antimatter\",\
+       [\"nsccstart\"] = \"CC Adds\",\
+       [\"nsgravitystart\"] = \"spread with Inverse Gravity\",\
+       [\"nsdevourstart\"] = \"Hide for P3 Devour\",\
+       [\"nsnovastart\"] = \"Soak Starshard Nova Orbs\",\
+       \
+   }\
+   \
+   aura_env.groups = {\
+       [\"nswavestart\"] = {\"1st\", \"2nd\"},    \
+       [\"nspylonstart\"] = {\"|cFFFFFF00Star\", \"|cFFFFA500Orange\", \"|cFFA020F0Purple\", \"|cFF00FF00Green\", \"|cFF909090Moon\", \"|cFF0000FFBlue\", \"|cFFFF0000Red\", \"|cFFBBBBBBSkull\"},\
+       [\"nsoblitstart\"] = {\"1st\", \"2nd\", \"3rd\"},\
+       [\"nsconquerstart\"] = {\"1st\", \"2nd\"},   \
+       [\"nscollectorstart\"] = {\"|cFFFFFF00Star\", \"|cFFFFA500Orange\", \"|cFFA020F0Purple\", \"|cFF00FF00Green\", \"|cFF909090Moon\", \"|cFF0000FFBlue\", \"|cFFFF0000Red\", \"|cFFBBBBBBSkull\"},\
+       [\"nshuntstart\"] = {\"1st\", \"2nd\", \"3rd\"},  \
+       [\"nsrallystart\"] = {\"LEFT\", \"RIGHT\"},\
+       [\"nsantimatterstart\"] = {\"LEFT\", \"RIGHT\"},    \
+       [\"nsccstart\"] = {\"1st\", \"2nd\", \"3rd\", \"4th\", \"5th\", \"6th\", \"7th\", \"8th\", \"9th\", \"10th\", \"11th\"},\
+       [\"nsgravitystart\"] = {\"|cFFFF0000Melee|r\", \"|cFF00FF00Healer|r\", \"|cFF409FFFRanged|r\"},\
+       [\"nsdevourstart\"] = {\"|cFFFFFF00Star\", \"|cFFFFA500Orange\", \"|cFFA020F0Purple\", \"|cFF00FF00Green\", \"|cFF909090Moon\", \"|cFF0000FFBlue\", \"|cFFFF0000Red\", \"|cFFBBBBBBSkull\"},  \
+       [\"nsnovastart\"] = {\"1st\", \"2nd\"}\
+   }\
+   \
+   aura_env.pos = {\
+       [\"nsnovastart\"] = {\"Left\", \"Middle\", \"Right\"}\
+   }\
+   \
+   aura_env.marklist = {\
+       [\"star\"] = 1,\
+       [\"circle\"] = 2,\
+       [\"diamond\"] = 3,\
+       [\"triangle\"] = 4,\
+       [\"moon\"] = 5,\
+       [\"square\"] = 6,\
+       [\"cross\"] = 7,\
+       [\"skull\"] = 8,\
+   }\
+   \
+   aura_env.nametoID = {\
+       [\"frostwyrm's fury\"] = 279302,\
+       [\"metamorphosis\"] = 200166,\
+       [\"chaos nova\"] = 179057,\
+       [\"ursol's vortex\"] = 102793,\
+       [\"typhoon\"] = 132469,\
+       [\"oppressing roar\"] = 406971,\
+       [\"wing buffet\"] = 357214,\
+       [\"binding shot\"] = 109248,\
+       [\"ring of peace\"] = 116844,\
+       [\"leg sweep\"] = 119381,\
+       [\"capacitor totem\"] = 192058,\
+       [\"shadowfury\"] = 30283,\
+   }\
+   \
+   aura_env.insert = function(lastfound, assigntable, line, num, marknum) -- lets me easier make edits for special cases down the road\
+       num = num or aura_env.count\
+       local assigned = false\
+       if lastfound == \"nsccstart\" then\
+           local setnum = line:match(\"^set%s+(%d+)\")\
+           if setnum then\
+               setnum = tonumber(setnum)\
+               aura_env.spells[setnum] = {}\
+               aura_env.customcount = setnum\
+           elseif aura_env.customcount ~= 0 then\
+               local name, value = line:match(\"^(%w+)%s*:%s*(.+)$\")\
+               if name and value then\
+                   local spellID = tonumber(value)\
+                   local i = UnitInRaid(name)\
+                   local unit = i and \"raid\"..i\
+                   if not spellID then\
+                       spellID = aura_env.nametoID[strlower(value)]   \
+                   end\
+                   if spellID and unit then\
+                       local spelltable = C_Spell.GetSpellInfo(spellID)\
+                       local id = spelltable and spelltable.iconID\
+                       if id then\
+                           local icon = CreateTextureMarkup(id, 64, 64, 0, 0, 0, 1, 0, 1)\
+                           table.insert(aura_env.spells[aura_env.customcount], {key = unit..spellID, spellID = spellID, unit = unit})\
+                           if UnitIsUnit(\"player\", unit) then\
+                               table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r with \"..icon..\" in the \"..aura_env.color..aura_env.groups[lastfound][aura_env.customcount]..\"|r Set at the \"..aura_env.color..aura_env.groups[lastfound][#aura_env.spells[aura_env.customcount]]..\"|r Position\")\
+                               assigned = true\
+                           end\
+                       end\
+                   end\
+               end\
+           end       \
+       elseif lastfound == \"nsgravitystart\" then\
+           local pos = 0\
+           if line == \"\" then\
+               pos = num\
+           else\
+               pos = line:match(\"^(%a+)%s+(.+)$\")\
+               pos = pos and strlower(pos)\
+               if pos == \"melee\" then pos = 1\
+               elseif pos == \"healer\" then pos = 2\
+               elseif pos == \"ranged\" then pos = 3\
+               else return\
+               end            \
+           end        \
+           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r in the \"..aura_env.groups[lastfound][pos]..\"|r Group\") \
+       elseif lastfound == \"nsdevourstart\" then        \
+           marknum = marknum or 0\
+           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r in the \"..aura_env.groups[lastfound][marknum]..\"|r Group\") \
+       elseif lastfound == \"nsnovastart\" then  \
+           print(\"nova start found\")  \
+           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r on the \"..aura_env.color..aura_env.pos[lastfound][aura_env.unitcount]..\"|r during the \"..aura_env.color..aura_env.groups[lastfound][num]..\"|r Set\") \
+       elseif lastfound == \"nscollectorstart\" then\
+           \
+           marknum = marknum or 0\
+           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r at \"..aura_env.groups[lastfound][marknum]..\"|r\")\
+       elseif lastfound == \"nspylonstart\" then\
+           if marknum and marknum ~= 0 then\
+               local group = aura_env.marktable[marknum]\
+               table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r at \"..aura_env.groups[lastfound][marknum]..\"|r in group \"..group)             \
+           end\
+       elseif lastfound == \"nsrallystart\" then\
+           table.insert(assigntable, \"You are assigned to go to the \"..aura_env.color..aura_env.groups[lastfound][num]..\" platform|r during the \"..aura_env.color..aura_env.assigns[lastfound])\
+           \
+       else\
+           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r in the \"..aura_env.color..aura_env.groups[lastfound][num]..\"|r group\") \
+       end\
+       return assigntable, assigned\
+   end                             \
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "stateupdate",
+                            ["custom_hide"] = "timed",
+                            ["duration"] = "10",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
+                            ["events"] = "MRT_NOTE_UPDATE NS_ASSIGN_CHECK NS_ASSIGN_CHECK_DISPLAY READY_CHECK ENCOUNTER_START",
+                            ["check"] = "event",
+                            ["custom"] = "function(s, e, ...)\
+       if e == \"OPTIONS\" then\
+           s[\"\"] = {\
+               show = true,\
+               changed = true,\
+               progressType = \"timed\",\
+               text = \"Text that alerts you of your\"..aura_env.color..\" assignments|r when the note gets updated\",\
+               duration = 5,\
+               expirationTime = 5+GetTime(),\
+               autoHide = true,\
+           }\
+           return true\
+       elseif e == \"ENCOUNTER_START\" then\
+           aura_env.assigntable = {}\
+       elseif e == \"MRT_NOTE_UPDATE\" then\
+           local aura_env = aura_env\
+           C_Timer.After(1, function() WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK\", aura_env.id) end)\
+       elseif e == \"READY_CHECK\" and aura_env.config.onreadycheck then\
+           WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK\", aura_env.id)        \
+       elseif e == \"NS_ASSIGN_CHECK\" and ... == aura_env.id then    \
+           if WeakAuras.CurrentEncounter then return end -- do not show popup if note was shared during encounter, bypassed by automated assigns\
+           if not aura_env.last or aura_env.last < GetTime() - 1 then\
+               aura_env.last = GetTime()            \
+               local note = NSAPI:GetNote()\
+               if not NSAPI.disable then\
+                   local assignments = {}\
+                   local assigned = false\
+                   local lastfound = \"\"\
+                   local list = false\
+                   for line in note:gmatch('[^\\r\\n]+') do\
+                       if string.match(line, \"ns.*end\") then\
+                           list = false\
+                           aura_env.marktable = {}\
+                       elseif list then \
+                           aura_env.count = aura_env.count+1\
+                           local mark = \"\"\
+                           for word in line:gmatch(\"([^{]+)}\") do\
+                               mark = word\
+                           end\
+                           local marknum = aura_env.marklist[mark] or 0                        \
+                           aura_env.marktable[marknum] = aura_env.marktable[marknum] and aura_env.marktable[marknum]+1 or 1\
+                           if lastfound == \"nsccstart\" then -- need special case for this aura\
+                               local me = false\
+                               assignments, me = aura_env.insert(lastfound, assignments, line, aura_env.count, marknum)\
+                               if me then assigned = true end\
+                           else\
+                               aura_env.unitcount = 0\
+                               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                                   if UnitInRaid(name) then\
+                                       aura_env.unitcount = aura_env.unitcount+1\
+                                       local u = \"raid\"..UnitInRaid(name) \
+                                       if UnitIsUnit(\"player\", u) then \
+                                           if aura_env.assigns[lastfound] and aura_env.groups[lastfound] and aura_env.groups[lastfound][aura_env.count] then\
+                                               assignments = aura_env.insert(lastfound, assignments, line, aura_env.count, marknum)\
+                                               assigned = true\
+                                           end\
+                                       end\
+                                   end                                \
+                               end     \
+                               \
+                           end\
+                       elseif string.match(line, \"ns.*start\") then\
+                           aura_env.marktable = {}\
+                           list = true\
+                           lastfound = line\
+                           aura_env.count = 0\
+                           aura_env.customcount = 0\
+                       end      \
+                   end  \
+                   if assigned then\
+                       WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", assignments, false)\
+                   end\
+               end\
+           end\
+       elseif e == \"NS_ASSIGN_CHECK_DISPLAY\" then -- lets me access this from other auras, like showing automated assignments from Loom'ithar for exapmle\
+           local id, assigntable, automated, lastfound, line, num, marknum = ...\
+           if id == \"NS_MANAFORGE\" and (aura_env.config.Automatedassign or not automated) and not NSAPI.disable then -- NS_MANAFORGE to prevent issues with future auras    \
+               if automated then\
+                   aura_env.assigntable = aura_env.insert(lastfound, aura_env.assigntable, line, num, marknum)\
+                   local duration = math.min(#aura_env.assigntable*6, 12)\
+                   for i=1, #aura_env.assigntable do\
+                       local state = {\
+                           progressType = \"timed\",\
+                           duration = duration,\
+                           expirationTime = duration+GetTime(),\
+                           text = aura_env.assigntable[i],\
+                           autoHide = true,\
+                       }\
+                       if aura_env.config.printinchat then\
+                           print(aura_env.assigntable[i])\
+                       end\
+                       s:Update(i, state)                \
+                   end\
+               else\
+                   local duration = math.min(#assigntable*6, 12)\
+                   for i=1, #assigntable do\
+                       local state = {\
+                           progressType = \"timed\",\
+                           duration = duration,\
+                           expirationTime = duration+GetTime(),\
+                           text = assigntable[i],\
+                           autoHide = true,\
+                       }\
+                       if aura_env.config.printinchat then\
+                           print(assigntable[i])\
+                       end\
+                       s:Update(i, state)                \
+                   end\
+               end\
+           end\
+       end    \
+   end\
+   \
+   \
+   ",
+                            ["names"] = {},
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["internalVersion"] = 85,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["AMModified"] = true,
+                ["font"] = "Expressway",
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "DOAnCLLc", ["type"] = "subbackground"}
+                },
+                ["AMOriginalUUID"] = "7xLBQfxNbY8",
+                ["load"] = {
+                    ["use_namerealm"] = false,
+                    ["spec_position"] = {},
+                    ["use_zoneIds"] = true,
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}},
+                    ["use_encounterid"] = false,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["use_not_spellknown"] = false,
+                    ["ignoreNameRealm"] = "",
+                    ["use_zone"] = false,
+                    ["class"] = {["multi"] = {}},
+                    ["use_never"] = false,
+                    ["use_ignoreNameRealm"] = false,
+                    ["zoneIds"] = "g463"
+                },
+                ["selfPoint"] = "BOTTOM",
+                ["fontSize"] = 26,
+                ["source"] = "import",
+                ["shadowXOffset"] = 1,
+                ["preferToUpdate"] = true,
+                ["regionType"] = "text",
+                ["wordWrap"] = "WordWrap",
+                ["automaticWidth"] = "Auto",
+                ["conditions"] = {},
+                ["yOffset"] = 0,
+                ["displayText_format_p_time_precision"] = 1,
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["config"] = {
+                    ["printinchat"] = true,
+                    ["onreadycheck"] = false,
+                    ["Automatedassign"] = true,
+                    ["color"] = {
+                        [1] = 0.24705883860588,
+                        [2] = 0.98823535442352,
+                        [3] = 0.24705883860588,
+                        [4] = 1
+                    },
+                    ["TTSSound"] = ""
+                },
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Assignment on Note Push",
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "description",
+                        ["text"] = "By default the assignments will only pop up when a note is being pushed to you. Enable this if you want to see it every ready check",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [2] = {
+                        ["type"] = "toggle",
+                        ["default"] = false,
+                        ["desc"] = "",
+                        ["key"] = "onreadycheck",
+                        ["useDesc"] = true,
+                        ["name"] = "Show Assignments on Ready Check",
+                        ["width"] = 2
+                    },
+                    [3] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [4] = {
+                        ["type"] = "description",
+                        ["text"] = "The Aura, by default, also prints your assignments into your chat window so that if you miss the popup you can still look it up. If you do not want it to do that you can disable it here.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [5] = {
+                        ["type"] = "toggle",
+                        ["default"] = true,
+                        ["desc"] = "",
+                        ["key"] = "printinchat",
+                        ["useDesc"] = true,
+                        ["name"] = "Print Assignments in Chat",
+                        ["width"] = 2
+                    },
+                    [6] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [7] = {
+                        ["type"] = "description",
+                        ["text"] = "Here you can choose which color the actual assignments should be shown in to highlight the important parts of the text quickly to you.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [8] = {
+                        ["type"] = "color",
+                        ["default"] = {
+                            [1] = 0.24705883860588,
+                            [2] = 0.98823535442352,
+                            [3] = 0.24705883860588,
+                            [4] = 1
+                        },
+                        ["key"] = "color",
+                        ["useDesc"] = false,
+                        ["name"] = "Highlight Color",
+                        ["width"] = 1
+                    },
+                    [9] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [10] = {
+                        ["type"] = "description",
+                        ["text"] = "Here you can choose if you want Assignments that were automatically generated to show at the start of a pull from that Boss. This is often used for bosses early in the tier where an automated assignment is good enough and, especially in farm, raid leaders will not care about making a note every week.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [11] = {
+                        ["type"] = "toggle",
+                        ["default"] = true,
+                        ["key"] = "Automatedassign",
+                        ["useDesc"] = false,
+                        ["name"] = "Show a popup for automated Assigns",
+                        ["width"] = 2
+                    },
+                    [12] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [13] = {
+                        ["type"] = "description",
+                        ["text"] = "You may add a TTS sound when receiving an assignment if you want an extra reminder to check it. This can be useful if, for example, you tend to tab out before pulls. Leaving it empty will simply not play any sound.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [14] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 2,
+                        ["key"] = "TTSSound",
+                        ["name"] = "TTS sound to be played",
+                        ["multiline"] = false,
+                        ["length"] = 10,
+                        ["default"] = "",
+                        ["useLength"] = false
+                    }
+                },
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["justify"] = "LEFT",
+                ["uid"] = "AM-7xLBQfxNbY8",
+                ["xOffset"] = 0,
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["fixedWidth"] = 200,
+                ["information"] = {},
+                ["displayText_format_p_format"] = "timed"
+            },
+            [3] = {
                 ["controlledChildren"] = {
                     [1] = "Plexus Sentinel Assign",
                     [2] = "Loom'ithar Assign",
@@ -135,7 +738,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -154,7 +757,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = "6997112",
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Manaforge Omega Assignment Auras",
                 ["frameStrata"] = 1,
@@ -187,7 +790,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [2] = {
+            [4] = {
                 ["controlledChildren"] = {
                     [1] = "Plexus Sentinel - Assign Texts",
                     [2] = "Plexus Sentinel - Lists"
@@ -218,7 +821,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -237,7 +840,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922080,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Plexus Sentinel Assign",
                 ["frameStrata"] = 1,
@@ -270,7 +873,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [3] = {
+            [5] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {},
                 ["authorOptions"] = {},
@@ -330,7 +933,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -367,7 +970,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Plexus Sentinel - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -381,7 +984,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [4] = {
+            [6] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {},
                 ["authorOptions"] = {},
@@ -441,7 +1044,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -478,7 +1081,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Plexus Sentinel - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -492,7 +1095,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [5] = {
+            [7] = {
                 ["controlledChildren"] = {
                     [1] = "Hyper Infusion Stack Saychat",
                     [2] = "Loom'ithar - Assign Texts",
@@ -524,7 +1127,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -543,7 +1146,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922087,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Loom'ithar Assign",
                 ["frameStrata"] = 1,
@@ -576,7 +1179,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [6] = {
+            [8] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
@@ -632,9 +1235,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "5Hi9DLeq", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "4TPfZXHk", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["load"] = {
@@ -680,7 +1283,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Hyper Infusion Stack Saychat",
                 ["shadowYOffset"] = -1,
@@ -695,7 +1298,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["internalVersion"] = 85
             },
-            [7] = {
+            [9] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Writhing Wave Assign",
@@ -761,7 +1364,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -798,7 +1401,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Loom'ithar - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -812,7 +1415,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [8] = {
+            [10] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Loom'ithar - Assign Texts",
@@ -1099,9 +1702,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_decimal_precision"] = 1,
                 ["internalVersion"] = 85,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "kDXTrS5t", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "z5rHNe6B", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["load"] = {
@@ -1211,7 +1814,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Writhing Wave Assign",
                 ["displayText"] = "SOAK (%p)",
@@ -1229,7 +1832,7 @@ wa.data['assignments'].data = {
                 },
                 ["wordWrap"] = "WordWrap"
             },
-            [9] = {
+            [11] = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
                 ["xOffset"] = 0,
                 ["displayText"] = "Pylon Soak @ %marker (%p)",
@@ -1465,7 +2068,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "8eQUJDgJ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "dKFtioy0", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["AMModified"] = true,
@@ -1483,8 +2086,8 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_precision"] = 1,
                 ["displayText_format_2.p_time_dynamic_threshold"] = 60,
                 ["parent"] = "Loom'ithar - Assign Texts",
-                ["version"] = 48,
-                ["semver"] = "1.0.47",
+                ["version"] = 55,
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "New Pylon Alert",
                 ["displayText_format_c_format"] = "none",
@@ -1902,7 +2505,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["uid"] = "AM-BuNzW33kjsB"
             },
-            [10] = {
+            [12] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Infusion Pylon Soak List"},
                 ["authorOptions"] = {},
@@ -1962,7 +2565,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -1999,7 +2602,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Loom'ithar - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -2013,7 +2616,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [11] = {
+            [13] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["authorOptions"] = {},
@@ -2220,12 +2823,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "DojZHeiGaUk",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "TDS57iSC", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "IhkYRZFJ", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "tMGzU90J", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "LCzfwsE5", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "7eCbJ4PV",
+                        ["amId"] = "y270PXGE",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -2240,7 +2843,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "k7UZ35YT",
+                        ["amId"] = "pnvQoFSA",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -2274,7 +2877,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "2CvQecHb",
+                        ["amId"] = "INeQ2d6J",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
@@ -2322,7 +2925,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "fXqi8dWM",
+                        ["amId"] = "KKlWz9k8",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
@@ -2357,7 +2960,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "834UwqiI",
+                        ["amId"] = "G3O2KkJ0",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
@@ -2397,7 +3000,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "96gvQiH4",
+                        ["amId"] = "ZvRSJfLS",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
@@ -2530,7 +3133,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -2676,7 +3279,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [12] = {
+            [14] = {
                 ["controlledChildren"] = {
                     [1] = "Naazindhri - Assign Texts",
                     [2] = "Naazindhri - Lists"
@@ -2707,7 +3310,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -2726,7 +3329,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922081,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Naazindhri Assign",
                 ["frameStrata"] = 1,
@@ -2759,7 +3362,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [13] = {
+            [15] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Soulfire Convergence \"Assign\""
@@ -2823,7 +3426,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -2860,7 +3463,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Naazindhri - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -2874,7 +3477,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [14] = {
+            [16] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_position_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -2996,9 +3599,9 @@ wa.data['assignments'].data = {
                 ["url"] = "",
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NLMLTfnT", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "U38P6QQP", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -3051,7 +3654,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["yOffset"] = 0,
                 ["selfPoint"] = "BOTTOM",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["justify"] = "LEFT",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Soulfire Convergence \"Assign\"",
@@ -3070,7 +3673,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85
             },
-            [15] = {
+            [17] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {},
                 ["authorOptions"] = {},
@@ -3130,7 +3733,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -3167,7 +3770,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Naazindhri - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -3181,7 +3784,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [16] = {
+            [18] = {
                 ["controlledChildren"] = {
                     [1] = "CC Assign Handler (Custom Option)",
                     [2] = "Forgeweaver CC List",
@@ -3214,7 +3817,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -3233,7 +3836,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922084,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Forgeweaver Araz Assign",
                 ["frameStrata"] = 1,
@@ -3266,7 +3869,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [17] = {
+            [19] = {
                 ["iconSource"] = -1,
                 ["displayText_format_icon_format"] = "none",
                 ["adjustedMax"] = "",
@@ -3403,7 +4006,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "cS0jpb97jiS",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -3413,7 +4016,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "dCRYTzAj", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "KMGIQBlB", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {
@@ -3460,7 +4063,7 @@ wa.data['assignments'].data = {
        [\"chaos nova\"] = 179057,\
        [\"ursol's vortex\"] = 102793,\
        [\"typhoon\"] = 132469,\
-       [\"oppressing roar\"] = 406971,\
+       [\"oppressing roar\"] = 372048,\
        [\"wing buffet\"] = 357214,\
        [\"binding shot\"] = 109248,\
        [\"ring of peace\"] = 116844,\
@@ -3535,7 +4138,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["inverse"] = false,
                 ["parent"] = "Forgeweaver Araz Assign",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -3543,7 +4146,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = false,
                 ["displayText_format_p_time_dynamic_threshold"] = 0
             },
-            [18] = {
+            [20] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Arcane Obliteration healabsorb",
@@ -3566,10 +4169,10 @@ wa.data['assignments'].data = {
                     ["size"] = {["multi"] = {}}
                 },
                 ["animate"] = false,
-                ["customGrow"] = "function(pos, reg)\
-       NSAPI:AuraResize(\"Icons\", pos, reg)    \
-       pos = NSAPI:AuraPosition(\"Icons\", pos, reg)    \
-   end",
+                ["customGrow"] = "function(newPositions, regions)\
+                   NHFAPI:DisplayUpdate('bigicon', regions)\
+                   newPositions = NHFAPI:SortPositionsUp('bigicon', newPositions, regions)\
+               end",
                 ["scale"] = 1,
                 ["stepAngle"] = 15,
                 ["constantFactor"] = "RADIUS",
@@ -3578,7 +4181,7 @@ wa.data['assignments'].data = {
                 ["alpha"] = 1,
                 ["config"] = {},
                 ["AMOriginalUUID"] = "swC(1P1Ltpf",
-                ["grow"] = "UP",
+                ["grow"] = "CUSTOM",
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Forgeweaver Araz Assign",
@@ -3609,7 +4212,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -3646,10 +4249,10 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Forgeweaver CC List",
-                ["anchorPoint"] = "CENTER",
+                ["anchorPoint"] = "BOTTOM",
                 ["gridWidth"] = 5,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["regionType"] = "dynamicgroup",
@@ -3660,7 +4263,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [19] = {
+            [21] = {
                 ["iconSource"] = -1,
                 ["wagoID"] = "Y7yEWhBqV",
                 ["xOffset"] = 0,
@@ -3700,12 +4303,12 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "ZFIg0p8Yn)d",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Ioly5srX", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "NEy6au88", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
-                        ["amId"] = "9zBglhls",
+                        ["amId"] = "TpOpEjvm",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -3725,7 +4328,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "QP6DSTVu",
+                        ["amId"] = "BUVKpJpU",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -3758,7 +4361,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "XX01ZeDQ",
+                        ["amId"] = "Zv8bqgHm",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -3780,7 +4383,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "f9LjrosB",
+                        ["amId"] = "op0oHjBk",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -3819,7 +4422,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "3onhwJGh",
+                        ["amId"] = "rEkbSwx4",
                         ["text_visible"] = true,
                         ["type"] = "subtext",
                         ["text_text_format_tooltip1_format"] = "BigNumber",
@@ -3860,7 +4463,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "6TFn9d3v",
+                        ["amId"] = "NKjR8R0L",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -3909,7 +4512,7 @@ wa.data['assignments'].data = {
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["width"] = 70,
                 ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Arcane Obliteration healabsorb",
                 ["useCooldownModRate"] = true,
@@ -3942,7 +4545,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [20] = {
+            [22] = {
                 ["iconSource"] = 1,
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Forgeweaver CC List",
@@ -4065,12 +4668,12 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "7PETl(1s58R",
                 ["desaturate"] = false,
                 ["width"] = 70,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "MBwHiJ2w", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "2I03oyQL", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
-                        ["amId"] = "1ZhyNia5",
+                        ["amId"] = "c5IY2qq3",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -4079,7 +4682,7 @@ wa.data['assignments'].data = {
                     },
                     [3] = {
                         ["border_size"] = 2,
-                        ["amId"] = "BLZpr3PV",
+                        ["amId"] = "skp3rnIh",
                         ["border_offset"] = 0,
                         ["border_color"] = {
                             [1] = 0.24705883860588,
@@ -4104,7 +4707,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "ftyt00vr",
+                        ["amId"] = "1s914OgX",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -4137,7 +4740,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "dvd7D9Pd",
+                        ["amId"] = "OPHPJnc8",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -4159,7 +4762,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "yLcOlGTY",
+                        ["amId"] = "2GUp5pbm",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -4198,7 +4801,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "AZrPznLw",
+                        ["amId"] = "O6wMI3zz",
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["type"] = "subtext",
@@ -4240,7 +4843,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "FLlmvRI9",
+                        ["amId"] = "pnt6rLhj",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -4309,7 +4912,7 @@ wa.data['assignments'].data = {
                 ["useCooldownModRate"] = true,
                 ["url"] = "",
                 ["zoom"] = 0.25,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Forgeweaver CC List ",
                 ["cooldownTextDisabled"] = false,
@@ -4368,7 +4971,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [21] = {
+            [23] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Arcane Obliteration Assign",
@@ -4436,7 +5039,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -4473,7 +5076,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Forgeweaver Araz - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -4487,7 +5090,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [22] = {
+            [24] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Forgeweaver Araz - Assign Texts",
@@ -4796,9 +5399,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_decimal_precision"] = 1,
                 ["internalVersion"] = 85,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "iIZY8m8B", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "qMTAATWS", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["load"] = {
@@ -4916,7 +5519,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Arcane Obliteration Assign",
                 ["displayText"] = "SOAK (%p)",
@@ -4931,7 +5534,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["wordWrap"] = "WordWrap"
             },
-            [23] = {
+            [25] = {
                 ["iconSource"] = -1,
                 ["displayText_format_icon_format"] = "none",
                 ["adjustedMax"] = "",
@@ -5057,7 +5660,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "z9KCbmpBUQr",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -5067,7 +5670,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "vLMRbfK2", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Sr9m5Woi", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {},
@@ -5105,7 +5708,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["inverse"] = false,
                 ["parent"] = "Forgeweaver Araz - Assign Texts",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -5113,7 +5716,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = false,
                 ["displayText_format_p_time_dynamic_threshold"] = 0
             },
-            [24] = {
+            [26] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -5260,9 +5863,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "cGeoUbR8", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Rue9bNO9", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["use_zoneIds"] = false,
@@ -5315,7 +5918,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Arcane Collector Assign",
                 ["displayText"] = "%text",
@@ -5330,7 +5933,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["wordWrap"] = "WordWrap"
             },
-            [25] = {
+            [27] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Arcane Collector HP + Marker"},
                 ["authorOptions"] = {},
@@ -5390,7 +5993,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -5427,7 +6030,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Forgeweaver Araz - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -5441,7 +6044,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [26] = {
+            [28] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -5649,12 +6252,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "MqhzxlnVv3t",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ppFzVJcC", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "b9WhwYGy", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "1JmwsegK", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "Riye3vXB", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "4RZNJua3",
+                        ["amId"] = "kRqsCpwH",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -5669,7 +6272,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "jtD7FV7W",
+                        ["amId"] = "kGgTMFrR",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -5717,7 +6320,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_percenthealth_format"] = "Number",
-                        ["amId"] = "PX1kNBMk",
+                        ["amId"] = "McqvNh4u",
                         ["text_text_format_3.power_format"] = "none",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_fontType"] = "OUTLINE",
@@ -5776,7 +6379,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "t8Pux9Mg",
+                        ["amId"] = "xmSNCGVk",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_font"] = "Expressway",
@@ -5814,7 +6417,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
-                        ["amId"] = "xy0QlXgh",
+                        ["amId"] = "91AzzeCv",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
                         ["text_selfPoint"] = "LEFT",
@@ -5844,7 +6447,7 @@ wa.data['assignments'].data = {
                         ["text_wordWrap"] = "WordWrap"
                     },
                     [8] = {
-                        ["amId"] = "HDT5WQ38",
+                        ["amId"] = "s6dOOO4n",
                         ["border_offset"] = 0,
                         ["border_size"] = 2,
                         ["border_visible"] = false,
@@ -5889,7 +6492,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -6083,7 +6686,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [27] = {
+            [29] = {
                 ["controlledChildren"] = {
                     [1] = "Dark Residue Saychat",
                     [2] = "Devourer's Ire Dispel Assign",
@@ -6117,7 +6720,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -6136,7 +6739,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922082,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "The Soul Hunters Assign",
                 ["frameStrata"] = 1,
@@ -6169,7 +6772,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [28] = {
+            [30] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
@@ -6224,9 +6827,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "9ChpWzow", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Ed9paOES", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["load"] = {
@@ -6272,7 +6875,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Dark Residue Saychat",
                 ["shadowYOffset"] = -1,
@@ -6287,7 +6890,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["internalVersion"] = 85
             },
-            [29] = {
+            [31] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -6341,7 +6944,6 @@ wa.data['assignments'].data = {
                    if UnitInRaid(name) then\
                        name = \"raid\"..UnitInRaid(name)\
                        table.insert(aura_env.list, name)\
-                       aura_env.dispels[UnitGUID(name)] = 0\
                    end\
                end\
            end\
@@ -6351,7 +6953,6 @@ wa.data['assignments'].data = {
                if UnitGroupRolesAssigned(unit) == \"HEALER\" then\
                    unit = \"raid\"..UnitInRaid(unit)\
                    table.insert(aura_env.list, unit)\
-                   aura_env.dispels[UnitGUID(unit)] = 0\
                end\
            end\
        end  \
@@ -6413,30 +7014,27 @@ wa.data['assignments'].data = {
        elseif not NSAPI.disable then\
            \
            if e == \"NS_ASSIGN_EVENT\" then        \
-               local id, unit, G = ...\
+               local id, unit, G, glow = ...\
                if id == aura_env.id then\
                    local now = GetTime()\
                    if UnitGroupRolesAssigned(unit) == \"HEALER\" and not aura_env.assigned[unit] then\
-                       if (not aura_env.dispels[G]) or (now >= aura_env.dispels[G] + 8) then -- self assign healer if possible\
-                           aura_env.assigned[unit] = true         \
-                           s[G] = {\
-                               show = true,\
-                               progressType = \"timed\",\
-                               duration = 30,\
-                               expirationTime = now+30,\
-                               unit = unit,\
-                               assigned = UnitIsUnit(unit, \"player\"),\
-                               healer = unit,\
-                               glow = true,\
-                               autoHide = true,\
-                               changed = true,\
-                           }\
-                           return true\
-                       end\
+                       aura_env.assigned[unit] = true         \
+                       s[G] = {\
+                           show = true,\
+                           progressType = \"timed\",\
+                           duration = 30,\
+                           expirationTime = now+30,\
+                           unit = unit,\
+                           assigned = UnitIsUnit(unit, \"player\"),\
+                           healer = unit,\
+                           glow = glow,\
+                           autoHide = true,\
+                           changed = true,\
+                       }\
+                       return true\
                    end\
-                   \
                    for i, v in ipairs(aura_env.list) do\
-                       if not (UnitIsDead(v)) and not (WA_GetUnitBuff(v, 27827)) and (now >= aura_env.dispels[UnitGUID(v)] + 8) and (not aura_env.assigned[v]) then -- healer is not dead/in angel form and has dispel ready\
+                       if not (UnitIsDead(v)) and not (WA_GetUnitBuff(v, 27827)) and (not aura_env.assigned[v]) then -- healer is not dead/in angel form and has dispel ready\
                            aura_env.assigned[v] = true                        \
                            s[G] = {\
                                show = true,\
@@ -6446,7 +7044,7 @@ wa.data['assignments'].data = {
                                unit = unit,\
                                assigned = UnitIsUnit(v, \"player\"),\
                                healer = v,\
-                               glow = true,\
+                               glow = glow,\
                                autoHide = true,\
                                changed = true,\
                            }\
@@ -6455,65 +7053,38 @@ wa.data['assignments'].data = {
                    end     \
                    \
                    -- this means we still haven't found a healer, either all are dead/assigned already or don't have dispel ready. Next best thing we can try is check who's dispel has the lowest CD\
-                   local healerCD = 0\
-                   local healerunit = \"\"\
-                   for k, v in pairs(aura_env.dispels) do\
-                       local u = UnitTokenFromGUID(k)\
-                       if UnitExists(u) then\
-                           u = \"raid\"..UnitInRaid(u) -- make sure this is a raid unitid and not \"player\" for example\
-                           if not (UnitIsDead(u)) and not (WA_GetUnitBuff(u, 27827)) and (not aura_env.assigned[u]) then\
-                               if v <= healerCD or healerCD == 0 then\
-                                   healerCD = v\
-                                   healerunit = u\
-                               end\
-                           end\
-                       end\
-                   end\
-                   if healerunit ~= \"\" then\
-                       aura_env.assigned[healerunit] = true\
-                       s[G] = {\
-                           show = true,\
-                           progressType = \"timed\",\
-                           duration = 30,\
-                           expirationTime = now+30,\
-                           unit = unit,\
-                           assigned = UnitIsUnit(healerunit, \"player\"),\
-                           healer = healerunit,\
-                           glow = true,\
-                           autoHide = true,\
-                           changed = true,\
-                       }\
-                       return true\
-                   end\
                end\
            elseif e == \"NS_PAMACRO\" and ... then\
                local unit = ...\
                local G = UnitGUID(unit)\
                if WA_GetUnitAura(unit, aura_env.debuff, aura_env.filter) then\
-                   WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, unit, G)\
                    if UnitIsUnit(\"player\", unit) then\
                        WeakAuras.ScanEvents(\"NSAPI_MACRO_PRESSED\", true)\
                    end\
-                   if s[G] then\
+                   if s[G] and not NSAPI:DeathCheck(s[G].healer) then\
                        s[G].glow = true\
                        s[G].changed = true\
                        return true \
+                   else                    \
+                       WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, unit, G, true)\
                    end\
                end            \
                \
            elseif e == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
                local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellID,_ ,_ , extraSpellID = ... -- full CLEU\
-               if subevent == \"SPELL_DISPEL\" then\
-                   if aura_env.dispelspells[spellID] and UnitGroupRolesAssigned(sourceName) == \"HEALER\" then \
-                       aura_env.dispels[sourceGUID] = GetTime()\
+               if subevent == \"UNIT_DIED\" then\
+                   for k, v in pairs(s) do\
+                       if UnitIsUnit(v.healer, destName) and not UnitIsUnit(v.unit, destName) then\
+                           WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, v.unit, k, v.glow) -- reassign if assigned healer died\
+                       end\
                    end\
-                   \
-               else            \
+               else\
                    if spellID == aura_env.debuff then\
                        if subevent == \"SPELL_AURA_APPLIED\" then\
                            local i = UnitInRaid(destName)\
                            local unit = i and \"raid\"..i               \
                            if unit and UnitExists(unit)then \
+                               WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, unit, destGUID, false)\
                                if UnitIsUnit(unit, \"player\") then\
                                    NSAPI.LastPAMacro = 0\
                                end\
@@ -6528,17 +7099,13 @@ wa.data['assignments'].data = {
                            return true\
                        end\
                    end\
-               end     \
-           end  \
+               end\
+           end     \
        end\
    end     \
    \
-   \
-   \
-   \
-   \
    ",
-                            ["events"] = "NS_PAMACRO CLEU:SPELL_AURA_REMOVED:SPELL_AURA_APPLIED:SPELL_DISPEL NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
+                            ["events"] = "NS_PAMACRO CLEU:SPELL_AURA_REMOVED:SPELL_AURA_APPLIED:UNIT_DIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -6553,9 +7120,9 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "YnSPTgpe6o6",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "b8Qh7Yrc", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "uiIP0MNO", ["type"] = "subbackground"}
                 },
                 ["authorOptions"] = {},
                 ["load"] = {
@@ -6569,11 +7136,7 @@ wa.data['assignments'].data = {
                     ["use_encounterid"] = true,
                     ["difficulty"] = {
                         ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
+                        ["multi"] = {["mythic"] = true}
                     },
                     ["role"] = {
                         ["single"] = "HEALER",
@@ -6582,7 +7145,7 @@ wa.data['assignments'].data = {
                     ["ignoreNameRealm"] = "",
                     ["use_never"] = false,
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = false,
+                    ["use_difficulty"] = true,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -6718,7 +7281,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["displayText_format_p_decimal_precision"] = 0,
                 ["parent"] = "The Soul Hunters Assign",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Devourer's Ire Dispel Assign",
                 ["justify"] = "LEFT",
@@ -6733,7 +7296,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["debugLog"] = false},
                 ["font"] = "Expressway"
             },
-            [30] = {
+            [32] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -6862,9 +7425,9 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "2ABVuEdDuv2",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Thr1Jlrk", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "9NGoQISw", ["type"] = "subbackground"}
                 },
                 ["authorOptions"] = {},
                 ["load"] = {
@@ -6926,7 +7489,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["displayText_format_p_decimal_precision"] = 0,
                 ["parent"] = "The Soul Hunters Assign",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "The Hunt Position Saychat",
                 ["justify"] = "LEFT",
@@ -6941,7 +7504,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["debugLog"] = false},
                 ["font"] = "Expressway"
             },
-            [31] = {
+            [33] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Transition Orbs Soaked",
@@ -7011,7 +7574,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -7048,7 +7611,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "The Soul Hunters - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -7062,7 +7625,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [32] = {
+            [34] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
@@ -7132,6 +7695,9 @@ wa.data['assignments'].data = {
            elseif spellID == 1233105 and (subevent == \"SPELL_AURA_APPLIED\" or subevent == \"SPELL_AURA_APPLIED_DOSE\" or subevent == \"SPELL_MISSED\") then -- debuff applied or immuned\
                if s[\"\"] then\
                    s[\"\"].value = s[\"\"].value-1\
+                   if s[\"\"].value <= 0 then\
+                       s[\"\"].show = false\
+                   end\
                    s[\"\"].changed = true\
                    return true\
                end            \
@@ -7163,10 +7729,10 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["shadowYOffset"] = -1,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["displayText_format_c_format"] = "none",
                 ["anchorPoint"] = "CENTER",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["spec_position"] = {
@@ -7246,7 +7812,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_round_type"] = "ceil",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "pNQblCrT", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "xSWfYzC3", ["type"] = "subbackground"}
                 },
                 ["anchorFrameParent"] = false,
                 ["fixedWidth"] = 200,
@@ -7267,7 +7833,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["parent"] = "The Soul Hunters - Assign Texts"
             },
-            [33] = {
+            [35] = {
                 ["displayText_format_text_format"] = "none",
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
@@ -7628,7 +8194,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_3.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LEIEXys2", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "R9AyibRS", ["type"] = "subbackground"}
                 },
                 ["displayText_format_3.p_format"] = "timed",
                 ["AMOriginalUUID"] = "bbtFXRB2cz2",
@@ -7651,9 +8217,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_target_format"] = "none",
                 ["displayText_format_p_time_precision"] = 1,
                 ["displayText_format_3.p_time_dynamic_threshold"] = 60,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["displayText_format_3.p_time_legacy_floor"] = false,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "The Hunt Assign",
                 ["displayText_format_c_format"] = "none",
@@ -7764,7 +8330,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["frameStrata"] = 1
             },
-            [34] = {
+            [36] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_position_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -7789,12 +8355,14 @@ wa.data['assignments'].data = {
                         ["custom"] = "aura_env.debug = false\
    aura_env.debuff = aura_env.debug and 774 or 1242883\
    aura_env.delay = aura_env.debug and 5 or 0.1\
-   aura_env.prefix = {\"Soak at\", \"Go to\", \"\", \"Go to\"}\
+   aura_env.prefix = {\"Soak at\", \"Go to\", \"\", \"Go to\", \"Soak at\", \"Soak at\"}\
    aura_env.texts = {\
        [1] = {\"{rt1}\", \"{rt2}\", \"{rt3}\", \"{rt4}\", \"{rt5}\", \"{rt6}\", \"{rt7}\"},\
        [2] = {\"{rt1}\", \"{rt2}\", \"{rt3}\", \"{rt4}\", \"{rt5}\", \"{rt6}\", \"{rt7}\"},\
        [3] = {\"\", \"\", \"\", \"\", \"\", \"\", \"\"},\
-       [4] = {\"{rt1}\", \"{rt2}\", \"{rt3}\", \"{rt4}\", \"{rt5}\", \"{rt6}\", \"{rt7}\"},        \
+       [4] = {\"{rt1}\", \"{rt2}\", \"{rt3}\", \"{rt4}\", \"{rt5}\", \"{rt6}\", \"{rt7}\"},   \
+       [5] = {\"{rt1}\", \"{rt2}\", \"{rt3}\", \"{rt4}\", \"{rt5}\", \"{rt6}\", \"{rt7}\"},   \
+       [6] = {\"{rt1}\", \"{rt2}\", \"{rt3}\", \"{rt4}\", \"{rt5}\", \"{rt6}\", \"{rt7}\"},        \
    }\
    \
    \
@@ -7845,50 +8413,51 @@ wa.data['assignments'].data = {
        \
    }\
    \
-   aura_env.spec2 = {    \
+   \
+   aura_env.spec2 = {    -- higher number = higher prio on star\
        \
-       [267]  = 1, -- Warlock: Destruction \
-       [265]  = 1, -- Warlock: Affliction  \
-       [258]  = 1, -- Priest: Shadow    \
+       [267]  = 4, -- Warlock: Destruction \
+       [265]  = 4, -- Warlock: Affliction  \
+       [258]  = 4, -- Priest: Shadow    \
        \
-       [1468] = 3, -- Evoker: Preservation     \
-       [105]  = 3, -- Druid: Restoration\
-       [264]  = 3, -- Shaman: Restoration      \
-       [1473] = 3, -- Evoker: Augmentation\
-       [1467] = 3, -- Evoker: Devastation\
-       [253]  = 3, -- Hunter: Beast Mastery\
-       [254]  = 3, -- Hunter: Marksmanship\
-       [262]  = 3, -- Shaman: Elemental \
-       [64]   = 3, -- Mage: Frost\
-       [62]   = 3, -- Mage: Arcane\
-       [63]   = 3, -- Mage: Fire\
-       [102]  = 3, -- Druid: Balance  \
-       [266]  = 3, -- Warlock: Demonology  \
-       [256]  = 3, -- Priest: Discipline \
-       [257]  = 3, -- Priest: Holy\
+       [1468] = 2, -- Evoker: Preservation     \
+       [105]  = 2, -- Druid: Restoration\
+       [264]  = 2, -- Shaman: Restoration      \
+       [1473] = 2, -- Evoker: Augmentation\
+       [1467] = 2, -- Evoker: Devastation\
+       [253]  = 2, -- Hunter: Beast Mastery\
+       [254]  = 2, -- Hunter: Marksmanship\
+       [262]  = 2, -- Shaman: Elemental \
+       [64]   = 2, -- Mage: Frost\
+       [62]   = 2, -- Mage: Arcane\
+       [63]   = 2, -- Mage: Fire\
+       [102]  = 2, -- Druid: Balance  \
+       [266]  = 2, -- Warlock: Demonology  \
+       [256]  = 2, -- Priest: Discipline \
+       [257]  = 2, -- Priest: Holy\
        \
-       [251]  = 3, -- Death Knight: Frost\
-       [252]  = 3, -- Death Knight: Unholy\
-       [577]  = 3, -- Demon Hunter: Havoc\
-       [263]  = 3, -- Shaman: Enhancement\
-       [71]   = 3, -- Warrior: Arms  \
-       [72]   = 3, -- Warrior: Fury \
-       [269]  = 3, -- Monk: Windwalker\
-       [103]  = 3, -- Druid: Feral \
-       [259]  = 3, -- Rogue: Assassination  \
-       [260]  = 3, -- Rogue: Outlaw  \
-       [261]  = 3, -- Rogue: Subtlety\
-       [255]  = 3, -- Hunter: Survival\
-       [70]   = 3, -- Paladin: Retribution   \
-       [270]  = 3, -- Monk: Mistweaver\
-       [65]   = 3, -- Paladin: Holy \
+       [251]  = 1, -- Death Knight: Frost\
+       [252]  = 1, -- Death Knight: Unholy\
+       [577]  = 1, -- Demon Hunter: Havoc\
+       [263]  = 1, -- Shaman: Enhancement\
+       [71]   = 1, -- Warrior: Arms  \
+       [72]   = 1, -- Warrior: Fury \
+       [269]  = 1, -- Monk: Windwalker\
+       [103]  = 1, -- Druid: Feral \
+       [259]  = 1, -- Rogue: Assassination  \
+       [260]  = 1, -- Rogue: Outlaw  \
+       [261]  = 1, -- Rogue: Subtlety\
+       [255]  = 1, -- Hunter: Survival\
+       [70]   = 1, -- Paladin: Retribution   \
+       [270]  = 1, -- Monk: Mistweaver\
+       [65]   = 1, -- Paladin: Holy \
        \
-       [581]  = 3, -- Veng DH\
-       [268]  = 3, -- Brewmaster\
-       [66]   = 3, -- Prot Pally\
-       [73]   = 3, -- Prot Warrior\
-       [104]  = 3, -- Guardian Druid\
-       [250]  = 3, -- Blood DK\
+       [581]  = 1, -- Veng DH\
+       [268]  = 1, -- Brewmaster\
+       [66]   = 1, -- Prot Pally\
+       [73]   = 1, -- Prot Warrior\
+       [104]  = 1, -- Guardian Druid\
+       [250]  = 1, -- Blood DK\
        \
        \
    }",
@@ -7969,7 +8538,7 @@ wa.data['assignments'].data = {
                table.sort(centers, \
                    function(a, b)\
                        if a[4] ~= b[4] then -- this is the \"average\" prio\
-                           return a[4] < b[4] \
+                           return a[4] > b[4] \
                        else\
                            if a[3] == b[3] then -- sort by GUID if same spec\
                                return a[2] < b[2]\
@@ -8056,9 +8625,9 @@ wa.data['assignments'].data = {
                 ["url"] = "",
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "CMXhmGIL", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "vjUKnFf0", ["type"] = "subbackground"}
                 },
                 ["displayText_format_prefix_format"] = "none",
                 ["load"] = {
@@ -8282,7 +8851,7 @@ wa.data['assignments'].data = {
                             [1] = {
                                 ["value"] = {
                                     ["sound_type"] = "Play",
-                                    ["sound"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Moon.ogg",
+                                    ["sound"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Red.ogg",
                                     ["sound_channel"] = "Master"
                                 },
                                 ["property"] = "sound"
@@ -8347,7 +8916,7 @@ wa.data['assignments'].data = {
                 ["parent"] = "The Soul Hunters - Assign Texts",
                 ["anchorFrameParent"] = false,
                 ["xOffset"] = 0,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["justify"] = "LEFT",
                 ["displayText_format_p_pad_max"] = 8,
@@ -8364,7 +8933,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["displayText_format_p_time_legacy_floor"] = true
             },
-            [35] = {
+            [37] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -8437,9 +9006,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "pzZdXnlx", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "sju9hzeh", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -8494,7 +9063,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Devourer's Ire Dispel Macro Press Confirmation",
                 ["displayText"] = "Macro Pressed",
@@ -8509,7 +9078,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["wordWrap"] = "WordWrap"
             },
-            [36] = {
+            [38] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Devourer's Ire / Unending Hunger Stacks",
@@ -8575,7 +9144,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -8612,7 +9181,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "The Soul Hunters - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -8626,7 +9195,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [37] = {
+            [39] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -8751,12 +9320,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "pnHwgB(4Esn",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "xxCLBgVZ", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "SRB8VhJ7", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "awqPHZAo", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "hwB5cnlW", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "ZnC8x6h6",
+                        ["amId"] = "Je9O7etX",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -8771,7 +9340,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "Sh1tODXh",
+                        ["amId"] = "8y3gy72O",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -8813,7 +9382,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "5SAJupc0",
+                        ["amId"] = "upinkruz",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -8861,7 +9430,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "d1LwqiDV",
+                        ["amId"] = "qCf6TlOw",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -8929,7 +9498,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -8963,7 +9532,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [38] = {
+            [40] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -9063,12 +9632,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "(fLJW4MZ2ma",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "olCjBr7u", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "WmGCKtn3", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "RGlU1nUJ", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "N1ZMeWVZ", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "qilVXVBE",
+                        ["amId"] = "xlADwkVh",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -9083,7 +9652,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "0TfPKy2m",
+                        ["amId"] = "DBNvAzIn",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -9125,7 +9694,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "InJExxch",
+                        ["amId"] = "DcKTSQe3",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -9173,7 +9742,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "nkK7Pb8v",
+                        ["amId"] = "vTekmwm3",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -9241,7 +9810,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -9257,11 +9826,30 @@ wa.data['assignments'].data = {
                 ["inverse"] = false,
                 ["cooldownTextDisabled"] = false,
                 ["orientation"] = "HORIZONTAL",
-                ["conditions"] = {},
+                ["conditions"] = {
+                    [1] = {
+                        ["check"] = {
+                            ["trigger"] = -1,
+                            ["op"] = "",
+                            ["variable"] = "customcheck",
+                            ["value"] = "function()\
+       if NSAPI.SpellReadyCheck and NSAPI:SpellReadyCheck(aura_env.state.destName, true, \"Dispersion\", 5) then\
+           return true\
+       end\
+   end"
+                        },
+                        ["changes"] = {
+                            [1] = {
+                                ["value"] = "|cFF00FF00CAN IMMUNE",
+                                ["property"] = "sub.5.text_text"
+                            }
+                        }
+                    }
+                },
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [39] = {
+            [41] = {
                 ["controlledChildren"] = {
                     [1] = "Fractillus Disable Targeting Circle",
                     [2] = "Fractillus Wall Display",
@@ -9298,7 +9886,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -9317,7 +9905,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922085,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Assign",
                 ["frameStrata"] = 1,
@@ -9350,7 +9938,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [40] = {
+            [42] = {
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
                 ["adjustedMax"] = "",
@@ -9427,9 +10015,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0V8Bk5Bp", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "2uisAAxF", ["type"] = "subbackground"}
                 },
                 ["height"] = 64,
                 ["AMModified"] = true,
@@ -9460,7 +10048,7 @@ wa.data['assignments'].data = {
                 ["justify"] = "LEFT",
                 ["information"] = {},
                 ["id"] = "Fractillus Disable Targeting Circle",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["frameStrata"] = 1,
                 ["width"] = 64,
                 ["uid"] = "AM-KmvNSNkzQOO",
@@ -9472,7 +10060,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["useCooldownModRate"] = true
             },
-            [41] = {
+            [43] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Fractillus Walls"},
                 ["borderBackdrop"] = "Blizzard Tooltip",
@@ -9530,7 +10118,7 @@ wa.data['assignments'].data = {
                 ["parent"] = "Fractillus Assign",
                 ["rotation"] = 0,
                 ["frameStrata"] = 1,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["groupIcon"] = 4226156,
                 ["sortHybridTable"] = {["Fractillus Walls"] = false},
@@ -9570,7 +10158,7 @@ wa.data['assignments'].data = {
                 ["constantFactor"] = "RADIUS",
                 ["stagger"] = 0,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Wall Display",
                 ["authorOptions"] = {},
@@ -9585,7 +10173,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["gridWidth"] = 5
             },
-            [42] = {
+            [44] = {
                 ["iconSource"] = -1,
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
@@ -9844,9 +10432,9 @@ wa.data['assignments'].data = {
                     },
                     ["finish"] = {}
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "l3BBB0eF", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "HvdM9iNg", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text_format_s_format"] = "none",
@@ -9869,7 +10457,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "eNJ3X8Vm",
+                        ["amId"] = "VGf2Rj6j",
                         ["text_text_format_marker_format"] = "none",
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 18,
@@ -9889,13 +10477,13 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 10,
                         ["glow"] = false,
-                        ["amId"] = "FyfxpK74",
+                        ["amId"] = "42iwshi1",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
                     [4] = {
                         ["border_size"] = 1,
-                        ["amId"] = "spW9RqXy",
+                        ["amId"] = "NKbgpwO8",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -9938,7 +10526,7 @@ wa.data['assignments'].data = {
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                 ["width"] = 80,
                 ["zoom"] = 0,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Walls",
                 ["useCooldownModRate"] = true,
@@ -10075,7 +10663,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["xOffset"] = 0
             },
-            [43] = {
+            [45] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {
@@ -10181,7 +10769,7 @@ wa.data['assignments'].data = {
        local listsafe = false\
        if NSAPI.disable then return end              \
        aura_env.usemarkers = true\
-       if aura_env.difficulty == 14 then  \
+       if aura_env.difficulty == 14 then -- Normal\
            aura_env.walls = {\
                -- 4 is safespot\
                {2, 3 ,5},\
@@ -10218,7 +10806,7 @@ wa.data['assignments'].data = {
            \
            aura_env.safespot = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,     3, 3, 3, 3, 3, 3, 3, 3, 3}\
            aura_env.tankhits = {1, 1, 1, 1, 3, 6, 6, 6, 6}        \
-       elseif aura_env.difficulty == 15 then\
+       elseif aura_env.difficulty == 15 then -- Heroic\
            aura_env.walls = {\
                -- 4 is safespot\
                {2, 3, 5, 6},\
@@ -10258,7 +10846,7 @@ wa.data['assignments'].data = {
            \
            aura_env.safespot = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,     3, 3, 3, 3, 3, 3, 3, 3, 3}\
            aura_env.tankhits = {1, 1, 1, 1, 1, 6, 6, 6, 6}\
-       elseif aura_env.difficulty == 16 then\
+       elseif aura_env.difficulty == 16 then -- Mythic\
            aura_env.walls = {\
                -- 3 is safespot\
                {1, 2, 4, 5},\
@@ -10473,7 +11061,7 @@ wa.data['assignments'].data = {
                end) -- a < b low first, a > b high first  \
                local now = GetTime()\
                for i, v in ipairs(aura_env.affected1) do\
-                   local duration = 9\
+                   local duration = aura_env.difficulty == 16 and 7 or 9\
                    if UnitIsUnit(v[1], \"player\") then\
                        local num = aura_env.walls[aura_env.casts1][i]\
                        local direction = 0\
@@ -10612,9 +11200,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Ot3k2xDs", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "GodftLle", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "X3VtvxYE4qd",
@@ -10672,7 +11260,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Assign Handler (No Display) + Saychat(can disable in custom options)",
                 ["shadowYOffset"] = -1,
@@ -10687,7 +11275,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["internalVersion"] = 85
             },
-            [44] = {
+            [46] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["xOffset"] = -0.0001220703125,
@@ -10741,7 +11329,8 @@ wa.data['assignments'].data = {
            return true\
            \
        elseif e == \"NS_WALL_SAFESPOT\" then\
-           local num, hidetext = ...\
+           local num, hidetext = ...        \
+           if not num then return end\
            if hidetext and s[\"\"] then\
                \
                s[\"\"].extratext = false\
@@ -10800,9 +11389,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_name_format"] = "none",
                 ["AMOriginalUUID"] = "5Ib3tfd7PWO",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "pJxPdX3z", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "fAxHK4CS", ["type"] = "subbackground"}
                 },
                 ["parent"] = "Fractillus Assign",
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -10874,7 +11463,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-5Ib3tfd7PWO",
                 ["config"] = {},
                 ["anchorFrameParent"] = false,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["conditions"] = {
                     [1] = {
@@ -10902,7 +11491,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["tocversion"] = 110200
             },
-            [45] = {
+            [47] = {
                 ["controlledChildren"] = {
                     [1] = "Fractillus Background",
                     [2] = "Fractillus Slice 1",
@@ -10938,7 +11527,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -10957,7 +11546,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = -582.00054931641,
                 ["groupIcon"] = 134269,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus \"Map\"",
                 ["frameStrata"] = 1,
@@ -10990,7 +11579,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [46] = {
+            [48] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -11058,9 +11647,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YKi6WuG4", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "FHOS7QaG", ["type"] = "subbackground"}
                 },
                 ["height"] = 200,
                 ["rotate"] = false,
@@ -11090,7 +11679,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-DOvV6zFDhRA",
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White",
                 ["color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.84666687250137},
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Background",
                 ["xOffset"] = 3.9998779296875,
@@ -11123,7 +11712,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [47] = {
+            [49] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.60000002384186,
@@ -11224,9 +11813,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 342,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "hszWnDeu", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "iE5uHk4j", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -11258,7 +11847,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 1",
                 ["parent"] = "Fractillus \"Map\"",
@@ -11291,7 +11880,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [48] = {
+            [50] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.60000002384186,
@@ -11392,9 +11981,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 358,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Y6kXFgFX", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "PMVFTUbB", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -11426,7 +12015,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 2",
                 ["parent"] = "Fractillus \"Map\"",
@@ -11459,7 +12048,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [49] = {
+            [51] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.60000002384186,
@@ -11560,9 +12149,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 14,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "8sQHfEZ2", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Zb4gZSGC", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -11594,7 +12183,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 3",
                 ["parent"] = "Fractillus \"Map\"",
@@ -11627,7 +12216,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [50] = {
+            [52] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.60000002384186,
@@ -11728,9 +12317,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 31,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "K8fq04WZ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "bzpmiJFl", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -11762,7 +12351,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 4",
                 ["parent"] = "Fractillus \"Map\"",
@@ -11795,7 +12384,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [51] = {
+            [53] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.60000002384186,
@@ -11896,9 +12485,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 47,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ppf2JpPO", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "8vFiG1zu", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -11930,7 +12519,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 5",
                 ["parent"] = "Fractillus \"Map\"",
@@ -11963,7 +12552,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [52] = {
+            [54] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.60000002384186,
@@ -12064,9 +12653,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 63,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "sURURLcm", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "YgqbfKDK", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12098,7 +12687,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 6",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12131,7 +12720,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [53] = {
+            [55] = {
                 ["controlledChildren"] = {
                     [1] = "(custom option sound) Wall Direction Arrow",
                     [2] = "Fractillus 2nd Arrow Left",
@@ -12165,7 +12754,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -12184,7 +12773,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 450907,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Arrow Group - mostly disabled by default",
                 ["frameStrata"] = 1,
@@ -12217,7 +12806,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [54] = {
+            [56] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {
                     [1] = {
@@ -12329,9 +12918,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 180,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "zouZsyWB", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "ZM3IEK7i", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "%direction",
@@ -12350,7 +12939,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "Ci4fYAVh",
+                        ["amId"] = "7VwReIRn",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -12402,7 +12991,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 1
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "(custom option sound) Wall Direction Arrow",
                 ["xOffset"] = 0,
@@ -12478,7 +13067,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [55] = {
+            [57] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.24705883860588,
@@ -12593,9 +13182,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 270,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "bMCg0Ews", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "HgcAJ0gU", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -12614,7 +13203,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "4vbR3j8u",
+                        ["amId"] = "ICjCpj5r",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -12659,7 +13248,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 2nd Arrow Left",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -12673,7 +13262,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [56] = {
+            [58] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.24705883860588,
@@ -12788,9 +13377,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 270,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "eLzcxRSS", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "s81t2hC6", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -12809,7 +13398,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "8bSm5uEc",
+                        ["amId"] = "hyy6fvtd",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -12854,7 +13443,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 3rd Arrow Left",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -12868,7 +13457,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [57] = {
+            [59] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.24705883860588,
@@ -12983,9 +13572,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 90,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VPgQReCH", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "JNGUJhnR", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13004,7 +13593,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "GnDH49y2",
+                        ["amId"] = "FgQLJhTn",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13049,7 +13638,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 2nd Arrow Right",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -13063,7 +13652,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [58] = {
+            [60] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {
                     [1] = 0.24705883860588,
@@ -13178,9 +13767,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 90,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "re3JVVAV", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "anopEhI5", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13199,7 +13788,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "8XsmpO2u",
+                        ["amId"] = "jYsSTURn",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13244,7 +13833,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 3rd Arrow Right",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -13258,7 +13847,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["selfPoint"] = "CENTER"
             },
-            [59] = {
+            [61] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "(custom option sound) Entropic Conjuction Text (Wall Spawn)",
@@ -13284,7 +13873,7 @@ wa.data['assignments'].data = {
                 ["animate"] = false,
                 ["customGrow"] = "function(pos, reg)\
        NSAPI:AuraResize(\"Assignment\", pos, reg)    \
-       pos = NSAPI:AuraPosition(\"Assignment\", pos, reg)    \
+       pos = NSAPI:AuraPosition(\"Assignment\", pos, reg)  \
    end",
                 ["scale"] = 1,
                 ["stepAngle"] = 15,
@@ -13326,7 +13915,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -13363,7 +13952,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Fractillus - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -13377,7 +13966,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [60] = {
+            [62] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Fractillus - Assign Texts",
@@ -13500,9 +14089,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_name_format"] = "none",
                 ["shadowYOffset"] = -1,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "llVXeMZ5", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "ncmg5COG", ["type"] = "subbackground"}
                 },
                 ["authorOptions"] = {
                     [1] = {
@@ -13566,7 +14155,7 @@ wa.data['assignments'].data = {
                 ["config"] = {["TTS"] = 1},
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "(custom option sound) Entropic Conjuction Text (Wall Spawn)",
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -14079,7 +14668,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_markerr_format"] = "none",
                 ["selfPoint"] = "CENTER"
             },
-            [61] = {
+            [63] = {
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -14180,9 +14769,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_name_format"] = "none",
                 ["AMModified"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "u0aQnKsW", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "KHdEwmTi", ["type"] = "subbackground"}
                 },
                 ["AMOriginalUUID"] = "CWtbj(Lf3LZ",
                 ["authorOptions"] = {
@@ -14763,7 +15352,7 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["xOffset"] = 0,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "(custom option sound) Nether Crystallization Text (Wall Break)",
                 ["uid"] = "AM-CWtbj(Lf3LZ",
@@ -14778,12 +15367,13 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["tocversion"] = 110200
             },
-            [62] = {
-                ["authorOptions"] = {},
-                ["displayText"] = "Next Frontal: %num%marker (%3.p)",
+            [64] = {
+                ["displayText_format_2.p_time_legacy_floor"] = false,
+                ["xOffset"] = 0,
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
-                ["displayText_format_3.p_time_mod_rate"] = true,
+                ["displayText_format_marker_decimal_precision"] = 0,
                 ["displayText_format_p_time_format"] = 0,
                 ["url"] = "",
                 ["actions"] = {
@@ -14831,16 +15421,99 @@ wa.data['assignments'].data = {
                 ["displayText_format_3.p_time_format"] = 0,
                 ["regionType"] = "text",
                 ["tocversion"] = 110200,
-                ["config"] = {},
+                ["uid"] = "AM-CEkL8)XDlC)",
                 ["fixedWidth"] = 200,
                 ["outline"] = "OUTLINE",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["displayText_format_3.p_format"] = "timed",
                 ["shadowYOffset"] = -1,
-                ["displayText_format_p_pad_mode"] = "left",
+                ["AMOriginalUUID"] = "CEkL8)XDlC)",
+                ["displayText_format_2.p_time_mod_rate"] = true,
+                ["customTextUpdate"] = "event",
                 ["automaticWidth"] = "Auto",
                 ["triggers"] = {
                     [1] = {
+                        ["trigger"] = {
+                            ["use_remaining"] = true,
+                            ["spellId"] = "1231871",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["names"] = {},
+                            ["remaining_operator"] = "<=",
+                            ["event"] = "Boss Mod Timer",
+                            ["unit"] = "player",
+                            ["use_spellId"] = true,
+                            ["remaining"] = "12",
+                            ["spellIds"] = {},
+                            ["type"] = "addons",
+                            ["extend"] = "4",
+                            ["subeventPrefix"] = "SPELL",
+                            ["use_extend"] = true,
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [2] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["use_absorbHealMode"] = true,
+                            ["custom_type"] = "stateupdate",
+                            ["use_absorbMode"] = true,
+                            ["event"] = "Cast",
+                            ["unit"] = "player",
+                            ["events"] = "UNIT_SPELLCAST_START:boss UNIT_SPELLCAST_STOP:boss",
+                            ["use_unit"] = true,
+                            ["custom"] = "function(s, e, ...)\
+       local u, cast, spellID = ... -- Unit ev0ent\
+       if e == \"UNIT_SPELLCAST_START\" and spellID == 1231871 and UnitDetailedThreatSituation(\"player\", u) then\
+           local expires = select(5, UnitCastingInfo(u))\
+           s[UnitGUID(u)] = {\
+               show = true,\
+               changed = true,\
+               progressType = \"timed\",\
+               icon = C_Spell.GetSpellInfo(spellID).iconID,\
+               duration = (expires/1000)-GetTime(),\
+               expirationTime = expires/1000,\
+               autoHide = true,\
+           }\
+           return true         \
+       end\
+       if e == \"UNIT_SPELLCAST_STOP\" then\
+           local u, cast, spellID = ... -- Unit event\
+           local G = UnitGUID(u)\
+           if s[G] then\
+               s[G].show = false\
+               s[G].changed = true\
+               return true\
+           end\
+       end\
+   end    \
+   \
+   \
+   \
+   \
+   \
+   ",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [3] = {
+                        ["trigger"] = {
+                            ["type"] = "unit",
+                            ["use_absorbHealMode"] = true,
+                            ["use_absorbMode"] = true,
+                            ["event"] = "Threat Situation",
+                            ["unit"] = "boss1",
+                            ["use_specific_unit"] = true,
+                            ["use_unit"] = true,
+                            ["use_aggro"] = true,
+                            ["use_status"] = false,
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [4] = {
                         ["trigger"] = {
                             ["type"] = "custom",
                             ["custom_hide"] = "timed",
@@ -14868,6 +15541,7 @@ wa.data['assignments'].data = {
            \
        elseif e == \"NS_WALL_TANK\" then\
            local num = ...\
+           if not num then return end\
            s[\"\"] = {\
                show = true,\
                changed = true,\
@@ -14891,39 +15565,10 @@ wa.data['assignments'].data = {
                         },
                         ["untrigger"] = {}
                     },
-                    [2] = {
-                        ["trigger"] = {
-                            ["type"] = "unit",
-                            ["use_absorbHealMode"] = true,
-                            ["use_absorbMode"] = true,
-                            ["event"] = "Threat Situation",
-                            ["unit"] = "boss1",
-                            ["use_specific_unit"] = true,
-                            ["use_unit"] = true,
-                            ["use_aggro"] = true,
-                            ["use_status"] = false,
-                            ["debuffType"] = "HELPFUL"
-                        },
-                        ["untrigger"] = {}
-                    },
-                    [3] = {
-                        ["trigger"] = {
-                            ["use_remaining"] = true,
-                            ["spellId"] = "1231871",
-                            ["remaining_operator"] = "<=",
-                            ["event"] = "Boss Mod Timer",
-                            ["unit"] = "player",
-                            ["use_spellId"] = true,
-                            ["remaining"] = "12",
-                            ["extend"] = "4",
-                            ["type"] = "addons",
-                            ["use_extend"] = true,
-                            ["debuffType"] = "HELPFUL"
-                        },
-                        ["untrigger"] = {}
-                    },
-                    ["disjunctive"] = "all",
-                    ["customTriggerLogic"] = "",
+                    ["disjunctive"] = "custom",
+                    ["customTriggerLogic"] = "function(t)    \
+       return t[4] and ((t[1] and t[3]) or t[2])\
+   end",
                     ["activeTriggerMode"] = -10
                 },
                 ["displayText_format_p_format"] = "Number",
@@ -14949,42 +15594,52 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
+                ["displayText_format_4.p_time_mod_rate"] = true,
+                ["config"] = {},
+                ["preferToUpdate"] = true,
+                ["wordWrap"] = "WordWrap",
+                ["displayText_format_2.p_time_precision"] = 1,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["displayText_format_3.p_time_precision"] = 1,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "HH7OBpiP", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "fj7Hf5dr", ["type"] = "subbackground"}
                 },
-                ["displayText_format_3.p_format"] = "timed",
+                ["displayText_format_2.p_time_format"] = 0,
+                ["displayText"] = "Next Frontal: %4.num%4.marker (%p)",
                 ["AMModified"] = true,
+                ["displayText_format_4.num_format"] = "none",
                 ["fontSize"] = 100,
                 ["source"] = "import",
-                ["AMOriginalUUID"] = "CEkL8)XDlC)",
-                ["wordWrap"] = "WordWrap",
-                ["parent"] = "Fractillus - Assign Texts",
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = true,
-                ["displayText_format_marker_round_type"] = "floor",
-                ["displayText_format_marker_decimal_precision"] = 0,
+                ["displayText_format_4.p_time_format"] = 0,
                 ["displayText_format_p_time_precision"] = 1,
+                ["authorOptions"] = {},
+                ["displayText_format_3.p_time_mod_rate"] = true,
+                ["displayText_format_p_decimal_precision"] = 1,
                 ["displayText_format_3.p_time_dynamic_threshold"] = 60,
-                ["customTextUpdate"] = "event",
-                ["displayText_format_3.p_time_legacy_floor"] = false,
-                ["semver"] = "1.0.47",
-                ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Tank Hit Text",
-                ["displayText_format_p_time_legacy_floor"] = false,
+                ["displayText_format_4.marker_format"] = "none",
+                ["semver"] = "1.0.54",
+                ["displayText_format_marker_round_type"] = "floor",
+                ["parent"] = "Fractillus - Assign Texts",
+                ["anchorFrameParent"] = false,
+                ["displayText_format_2.p_time_dynamic_threshold"] = 3,
+                ["displayText_format_4.p_format"] = "timed",
+                ["displayText_format_3.p_time_legacy_floor"] = false,
+                ["justify"] = "LEFT",
+                ["displayText_format_p_pad_max"] = 8,
+                ["displayText_format_4.p_time_legacy_floor"] = false,
+                ["displayText_format_3.p_time_precision"] = 1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["version"] = 48,
-                ["anchorFrameParent"] = false,
-                ["justify"] = "LEFT",
-                ["displayText_format_p_decimal_precision"] = 1,
+                ["displayText_format_p_pad_mode"] = "left",
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["displayText_format_4.p_time_dynamic_threshold"] = 3,
+                ["displayText_format_4.p_time_precision"] = 1,
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
-                            ["trigger"] = 1,
+                            ["trigger"] = 4,
                             ["op"] = "==",
                             ["variable"] = "num",
                             ["value"] = "1"
@@ -15003,7 +15658,7 @@ wa.data['assignments'].data = {
                     },
                     [2] = {
                         ["check"] = {
-                            ["trigger"] = 1,
+                            ["trigger"] = 4,
                             ["op"] = "==",
                             ["variable"] = "num",
                             ["value"] = "2"
@@ -15022,7 +15677,7 @@ wa.data['assignments'].data = {
                     },
                     [3] = {
                         ["check"] = {
-                            ["trigger"] = 1,
+                            ["trigger"] = 4,
                             ["op"] = "==",
                             ["variable"] = "num",
                             ["value"] = "3"
@@ -15041,7 +15696,7 @@ wa.data['assignments'].data = {
                     },
                     [4] = {
                         ["check"] = {
-                            ["trigger"] = 1,
+                            ["trigger"] = 4,
                             ["op"] = "==",
                             ["variable"] = "num",
                             ["value"] = "4"
@@ -15060,7 +15715,7 @@ wa.data['assignments'].data = {
                     },
                     [5] = {
                         ["check"] = {
-                            ["trigger"] = 1,
+                            ["trigger"] = 4,
                             ["op"] = "==",
                             ["variable"] = "num",
                             ["value"] = "5"
@@ -15079,7 +15734,7 @@ wa.data['assignments'].data = {
                     },
                     [6] = {
                         ["check"] = {
-                            ["trigger"] = 1,
+                            ["trigger"] = 4,
                             ["op"] = "==",
                             ["variable"] = "num",
                             ["value"] = "6"
@@ -15098,9 +15753,9 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["information"] = {},
-                ["uid"] = "AM-CEkL8)XDlC)"
+                ["displayText_format_2.p_format"] = "timed"
             },
-            [63] = {
+            [65] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Wall Spawn/Break List"},
                 ["authorOptions"] = {},
@@ -15160,7 +15815,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -15197,7 +15852,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Fractillus - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -15211,7 +15866,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [64] = {
+            [66] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -15379,12 +16034,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "tcdeV(qIu84",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "IeDxf254", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "8Rbo8WAF", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "mBuDQSVx", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "LWb4DroS", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "ntpzz9LJ",
+                        ["amId"] = "h24KXZew",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -15399,7 +16054,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "GuoNT97T",
+                        ["amId"] = "MiERFqAx",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -15443,7 +16098,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_p_pad"] = false,
                         ["text_text_format_p_pad_mode"] = "left",
-                        ["amId"] = "GXKPsd1K",
+                        ["amId"] = "7TqYrDwK",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_fontType"] = "OUTLINE",
@@ -15489,7 +16144,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "Y4opmpxS",
+                        ["amId"] = "JFmhJ59k",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -15529,7 +16184,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
-                        ["amId"] = "ThU4GoK6",
+                        ["amId"] = "yO618d2g",
                         ["text_fontType"] = "OUTLINE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -15611,7 +16266,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -15631,11 +16286,12 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [65] = {
+            [67] = {
                 ["controlledChildren"] = {
-                    [1] = "Galactic Smash Map",
-                    [2] = "Salhadaar - Assign Texts",
-                    [3] = "Salhadaar - Lists"
+                    [1] = "Starkiller Swing Assign",
+                    [2] = "Galactic Smash Map",
+                    [3] = "Salhadaar - Assign Texts",
+                    [4] = "Salhadaar - Lists"
                 },
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -15663,7 +16319,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -15682,7 +16338,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922086,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Salhadaar Assign",
                 ["frameStrata"] = 1,
@@ -15715,7 +16371,859 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [66] = {
+            [68] = {
+                ["controlledChildren"] = {
+                    [1] = "Starkiller Swing Left Anchor",
+                    [2] = "Starkiller Swing Player Anchor",
+                    [3] = "Starkiller Swing Right Anchor"
+                },
+                ["borderBackdrop"] = "Blizzard Tooltip",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["parent"] = "Salhadaar Assign",
+                ["preferToUpdate"] = true,
+                ["yOffset"] = 100,
+                ["anchorPoint"] = "CENTER",
+                ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["url"] = "",
+                ["actions"] = {["start"] = {}, ["init"] = {}, ["finish"] = {}},
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["unit"] = "player",
+                            ["type"] = "aura2",
+                            ["spellIds"] = {},
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL",
+                            ["event"] = "Health",
+                            ["names"] = {}
+                        },
+                        ["untrigger"] = {}
+                    }
+                },
+                ["internalVersion"] = 85,
+                ["selfPoint"] = "CENTER",
+                ["version"] = 55,
+                ["subRegions"] = {},
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
+                ["scale"] = 1,
+                ["border"] = false,
+                ["borderEdge"] = "Square Full White",
+                ["regionType"] = "group",
+                ["borderSize"] = 2,
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "(MocjodsJBC",
+                ["xOffset"] = 0,
+                ["groupIcon"] = 1033912,
+                ["borderOffset"] = 4,
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Starkiller Swing Assign",
+                ["frameStrata"] = 1,
+                ["alpha"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-(MocjodsJBC",
+                ["config"] = {},
+                ["borderInset"] = 1,
+                ["authorOptions"] = {},
+                ["conditions"] = {},
+                ["information"] = {},
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                }
+            },
+            [69] = {
+                ["wagoID"] = "Y7yEWhBqV",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["preferToUpdate"] = true,
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["url"] = "",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "\
+   \
+   ",
+                        ["do_custom"] = false
+                    },
+                    ["init"] = {
+                        ["custom"] = "aura_env.spec = {\
+       [0]    =  0, -- no info\
+       -- Tanks\
+       [250]  =  1, -- Blood DK\
+       [581]  =  2, -- Veng DH\
+       [268]  =  3, -- Brewmaster\
+       [66]   =  4, -- Prot Pally\
+       [73]   =  5, -- Prot Warrior\
+       [104]  =  6, -- Guardian Druid\
+       \
+       -- Melee\
+       [577]  =  7, -- Demon Hunter: Havoc\
+       [103]  =  8, -- Druid: Feral \
+       [259]  =  9, -- Rogue: Assassination  \
+       [260]  = 10, -- Rogue: Outlaw  \
+       [261]  = 11, -- Rogue: Subtlety\
+       [269]  = 12, -- Monk: Windwalker\
+       [255]  = 13, -- Hunter: Survival\
+       [70]   = 14, -- Paladin: Retribution\
+       [71]   = 15, -- Warrior: Arms  \
+       [72]   = 16, -- Warrior: Fury \
+       [251]  = 17, -- Death Knight: Frost\
+       [252]  = 18, -- Death Knight: Unholy\
+       [263]  = 19, -- Shaman: Enhancement\
+       \
+       -- Ranged\
+       [1467] = 20, -- Evoker: Devastation\
+       [1473] = 21, -- Evoker: Augmentation\
+       [253]  = 22, -- Hunter: Beast Mastery\
+       [254]  = 23, -- Hunter: Marksmanship\
+       [64]   = 24, -- Mage: Frost\
+       [62]   = 25, -- Mage: Arcane\
+       [63]   = 26, -- Mage: Fire\
+       [102]  = 27, -- Druid: Balance\
+       [262]  = 28, -- Shaman: Elemental \
+       [258]  = 29, -- Priest: Shadow\
+       [265]  = 30, -- Warlock: Affliction \
+       [266]  = 31, -- Warlock: Demonology  \
+       [267]  = 32, -- Warlock: Destruction\
+       \
+       -- Healers\
+       [65]   = 33, -- Paladin: Holy\
+       [270]  = 34, -- Monk: Mistweaver\
+       [1468] = 35, -- Evoker: Preservation\
+       [105]  = 36, -- Druid: Restoration\
+       [264]  = 37, -- Shaman: Restoration\
+       [256]  = 38, -- Priest: Discipline \
+       [257]  = 39, -- Priest: Holy\
+   }\
+   \
+   \
+   \
+   aura_env.MRT = function()\
+       aura_env.list = {}\
+       local note = NSAPI:GetNote()\
+       local list = false\
+       aura_env.found = false\
+       if NSAPI.disable then return \"\" end\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           --check for start/end of the name list\
+           if strlower(line) == \"nsstarend\" then\
+               aura_env.found = true\
+               list = false\
+           elseif list then \
+               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                   if UnitInRaid(name) and not (UnitGroupRolesAssigned(name) == \"TANK\") then\
+                       local u = \"raid\"..UnitInRaid(name)\
+                       local G = UnitGUID(u)\
+                       table.insert(aura_env.list, {u, G})\
+                   end\
+               end\
+           elseif strlower(line) == \"nsstarstart\" then\
+               list = true\
+           end        \
+       end\
+       if not aura_env.found then\
+           aura_env.list = {}\
+           for unit in WA_IterateGroupMembers() do\
+               local spec = (aura_env.specs and aura_env.specs[unit]) or NSAPI:GetSpecs(unit) or WeakAuras.SpecForUnit(unit)\
+               unit = \"raid\"..UnitInRaid(unit)\
+               local G = UnitGUID(unit)\
+               local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
+               if prio > 6 then\
+                   table.insert(aura_env.list, {unit,  G, prio})  \
+               end\
+           end\
+           table.sort(aura_env.list, \
+               function(a, b)\
+                   if a[3] == b[3] then -- sort by GUID if same spec\
+                       return a[2] < b[2]\
+                   else\
+                       return a[3] < b[3]\
+                   end\
+                   \
+           end) -- a < b low first, a > b high first\
+       end\
+       -- create anchor\
+   end\
+   \
+   aura_env.Anchors = function()\
+       local addanchor = true    \
+       aura_env.region.anchors = aura_env.region.anchors or {}      \
+       for _, anchor in pairs(aura_env.region.anchors) do\
+           if anchor then C_UnitAuras.RemovePrivateAuraAnchor(anchor)  end\
+       end\
+       aura_env.region.anchors = {}\
+       for i, v in ipairs(aura_env.list) do\
+           if UnitIsUnit(\"player\", v[1]) then\
+               addanchor = false\
+           end        \
+           if addanchor then     \
+               local self = aura_env.region\
+               local privateAnchorArgs = {\
+                   unitToken = v[1],\
+                   auraIndex = 1,\
+                   parent = self,\
+                   showCountdownFrame = false,\
+                   showCountdownNumbers = false,\
+                   iconInfo = {\
+                       iconAnchor = {\
+                           point = \"CENTER\",\
+                           relativeTo = self,\
+                           relativePoint = \"CENTER\",\
+                           offsetX = 0,\
+                           offsetY = 0\
+                       },\
+                       iconWidth = self:GetWidth(),\
+                       iconHeight = self:GetHeight()\
+                   }\
+               }\
+               aura_env.region.anchors[v[2]] = C_UnitAuras.AddPrivateAuraAnchor(privateAnchorArgs)\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "event",
+                            ["spellId"] = {[1] = 1226442},
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["duration"] = "6",
+                            ["event"] = "Spell Cast Succeeded",
+                            ["use_unit"] = true,
+                            ["use_spellId"] = true,
+                            ["spellIds"] = {},
+                            ["use_specific_unit"] = true,
+                            ["names"] = {},
+                            ["unit"] = "boss1",
+                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [2] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["events"] = "NSAPI_ENCOUNTER_START",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
+                            ["unit"] = "player",
+                            ["custom"] = "function(s, e)\
+       if e == \"NSAPI_ENCOUNTER_START\" then\
+           aura_env.MRT()    \
+           if not NSAPI.disable then\
+               local state = {\
+                   progressType = \"static\",\
+               }\
+               s:Update(\"\", state)\
+               aura_env.Anchors()\
+           end\
+       end\
+   end",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "all",
+                    ["activeTriggerMode"] = -10
+                },
+                ["internalVersion"] = 85,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["desaturate"] = false,
+                ["rotation"] = 90,
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "FgFoSEZ6", ["type"] = "subbackground"}
+                },
+                ["height"] = 64,
+                ["rotate"] = false,
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["use_role"] = false,
+                    ["encounterid"] = "3134",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {
+                        ["multi"] = {["HEALER"] = true, ["DAMAGER"] = true}
+                    },
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                ["AMModified"] = true,
+                ["mirror"] = false,
+                ["anchorFrameFrame"] = "WeakAuras:Starkiller Swing Player Anchor",
+                ["regionType"] = "texture",
+                ["AMOriginalUUID"] = "xdi6DCziYLG",
+                ["blendMode"] = "BLEND",
+                ["uid"] = "AM-xdi6DCziYLG",
+                ["anchorFrameParent"] = false,
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\triangle.tga",
+                ["width"] = 64,
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Starkiller Swing Left Anchor",
+                ["parent"] = "Starkiller Swing Assign",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["authorOptions"] = {},
+                ["config"] = {},
+                ["alpha"] = 1,
+                ["xOffset"] = -80,
+                ["conditions"] = {},
+                ["information"] = {},
+                ["selfPoint"] = "CENTER"
+            },
+            [70] = {
+                ["wagoID"] = "Y7yEWhBqV",
+                ["authorOptions"] = {},
+                ["preferToUpdate"] = true,
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["url"] = "",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "\
+   \
+   ",
+                        ["do_custom"] = false
+                    },
+                    ["init"] = {
+                        ["custom"] = "aura_env.Anchors = function()\
+       local anchorID = aura_env.region.anchorID\
+       if anchorID then\
+           C_UnitAuras.RemovePrivateAuraAnchor(anchorID)\
+       end\
+       \
+       local self = aura_env.region.subRegions[3]\
+       local privateAnchorArgs = {\
+           unitToken = \"player\",\
+           auraIndex = 1,\
+           parent = self,\
+           showCountdownFrame = false,\
+           showCountdownNumbers = false,\
+           iconInfo = {\
+               iconAnchor = {\
+                   point = \"CENTER\",\
+                   relativeTo = self,\
+                   relativePoint = \"CENTER\",\
+                   offsetX = 0,\
+                   offsetY = 0\
+               },\
+               iconWidth = self:GetWidth(),\
+               iconHeight = self:GetHeight()\
+           }\
+       }\
+       \
+       aura_env.region.anchorID = C_UnitAuras.AddPrivateAuraAnchor(privateAnchorArgs)\
+   end",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "event",
+                            ["spellId"] = {[1] = 1226442},
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["duration"] = "6",
+                            ["event"] = "Spell Cast Succeeded",
+                            ["use_unit"] = true,
+                            ["use_spellId"] = true,
+                            ["spellIds"] = {},
+                            ["use_specific_unit"] = true,
+                            ["names"] = {},
+                            ["unit"] = "boss1",
+                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [2] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["events"] = "NSAPI_ENCOUNTER_START",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
+                            ["unit"] = "player",
+                            ["custom"] = "function(s, e)\
+       if e == \"NSAPI_ENCOUNTER_START\" then\
+           NSAPI:GetNote(true)    \
+           if not NSAPI.disable then\
+               local state = {\
+                   progressType = \"static\",\
+               }\
+               s:Update(\"\", state)\
+               aura_env.Anchors()\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   ",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["activeTriggerMode"] = -10
+                },
+                ["internalVersion"] = 85,
+                ["selfPoint"] = "CENTER",
+                ["desaturate"] = false,
+                ["rotation"] = 0,
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "rRkB1mTc", ["type"] = "subbackground"},
+                    [2] = {
+                        ["text_shadowXOffset"] = 0,
+                        ["text_text"] = "NOT|nON YOU",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1
+                        },
+                        ["text_selfPoint"] = "CENTER",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["type"] = "subtext",
+                        ["text_color"] = {
+                            [1] = 1,
+                            [2] = 0.25098040699959,
+                            [3] = 0.25098040699959,
+                            [4] = 1
+                        },
+                        ["text_font"] = "Expressway",
+                        ["text_shadowYOffset"] = 0,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["amId"] = "LTUOFFbn",
+                        ["text_visible"] = true,
+                        ["anchor_point"] = "CENTER",
+                        ["text_fontSize"] = 18,
+                        ["anchorXOffset"] = 0,
+                        ["text_text_format_n_format"] = "none"
+                    },
+                    [3] = {
+                        ["textureMirror"] = false,
+                        ["scale"] = 1,
+                        ["mirror"] = false,
+                        ["self_point"] = "CENTER",
+                        ["textureRotation"] = 0,
+                        ["textureVisible"] = true,
+                        ["anchor_mode"] = "area",
+                        ["anchor_area"] = "ALL",
+                        ["type"] = "subtexture",
+                        ["textureDesaturate"] = false,
+                        ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White",
+                        ["width"] = 32,
+                        ["textureColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0},
+                        ["amId"] = "a0t7A7zN",
+                        ["textureBlendMode"] = "BLEND",
+                        ["height"] = 32,
+                        ["rotate"] = false,
+                        ["textureRotate"] = false,
+                        ["anchor_point"] = "CENTER"
+                    }
+                },
+                ["height"] = 64,
+                ["rotate"] = false,
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["use_role"] = false,
+                    ["encounterid"] = "3134",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {
+                        ["multi"] = {["HEALER"] = true, ["DAMAGER"] = true}
+                    },
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                ["mirror"] = false,
+                ["regionType"] = "texture",
+                ["AMModified"] = true,
+                ["blendMode"] = "BLEND",
+                ["AMOriginalUUID"] = "Yg3fr1k93UM",
+                ["uid"] = "AM-Yg3fr1k93UM",
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Starkiller Swing Player Anchor",
+                ["xOffset"] = 0,
+                ["alpha"] = 1,
+                ["width"] = 64,
+                ["parent"] = "Starkiller Swing Assign",
+                ["config"] = {},
+                ["anchorFrameType"] = "SCREEN",
+                ["frameStrata"] = 1,
+                ["conditions"] = {},
+                ["information"] = {},
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                }
+            },
+            [71] = {
+                ["wagoID"] = "Y7yEWhBqV",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["preferToUpdate"] = true,
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["url"] = "",
+                ["actions"] = {
+                    ["start"] = {["custom"] = "", ["do_custom"] = false},
+                    ["init"] = {
+                        ["custom"] = "aura_env.spec = {\
+       [0]    =  0, -- no info\
+       -- Tanks\
+       [250]  =  1, -- Blood DK\
+       [581]  =  2, -- Veng DH\
+       [268]  =  3, -- Brewmaster\
+       [66]   =  4, -- Prot Pally\
+       [73]   =  5, -- Prot Warrior\
+       [104]  =  6, -- Guardian Druid\
+       \
+       -- Melee\
+       [577]  =  7, -- Demon Hunter: Havoc\
+       [103]  =  8, -- Druid: Feral \
+       [259]  =  9, -- Rogue: Assassination  \
+       [260]  = 10, -- Rogue: Outlaw  \
+       [261]  = 11, -- Rogue: Subtlety\
+       [269]  = 12, -- Monk: Windwalker\
+       [255]  = 13, -- Hunter: Survival\
+       [70]   = 14, -- Paladin: Retribution\
+       [71]   = 15, -- Warrior: Arms  \
+       [72]   = 16, -- Warrior: Fury \
+       [251]  = 17, -- Death Knight: Frost\
+       [252]  = 18, -- Death Knight: Unholy\
+       [263]  = 19, -- Shaman: Enhancement\
+       \
+       -- Ranged\
+       [1467] = 20, -- Evoker: Devastation\
+       [1473] = 21, -- Evoker: Augmentation\
+       [253]  = 22, -- Hunter: Beast Mastery\
+       [254]  = 23, -- Hunter: Marksmanship\
+       [64]   = 24, -- Mage: Frost\
+       [62]   = 25, -- Mage: Arcane\
+       [63]   = 26, -- Mage: Fire\
+       [102]  = 27, -- Druid: Balance\
+       [262]  = 28, -- Shaman: Elemental \
+       [258]  = 29, -- Priest: Shadow\
+       [265]  = 30, -- Warlock: Affliction \
+       [266]  = 31, -- Warlock: Demonology  \
+       [267]  = 32, -- Warlock: Destruction\
+       \
+       -- Healers\
+       [65]   = 33, -- Paladin: Holy\
+       [270]  = 34, -- Monk: Mistweaver\
+       [1468] = 35, -- Evoker: Preservation\
+       [105]  = 36, -- Druid: Restoration\
+       [264]  = 37, -- Shaman: Restoration\
+       [256]  = 38, -- Priest: Discipline \
+       [257]  = 39, -- Priest: Holy\
+   }\
+   \
+   \
+   \
+   aura_env.MRT = function()\
+       aura_env.list = {}\
+       local note = NSAPI:GetNote()\
+       local list = false\
+       aura_env.found = false\
+       if NSAPI.disable then return \"\" end\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           --check for start/end of the name list\
+           if strlower(line) == \"nsstarend\" then\
+               aura_env.found = true\
+               list = false\
+           elseif list then \
+               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                   if UnitInRaid(name) and not (UnitGroupRolesAssigned(name) == \"TANK\") then\
+                       local u = \"raid\"..UnitInRaid(name)\
+                       local G = UnitGUID(u)\
+                       table.insert(aura_env.list, {u, G})\
+                   end\
+               end\
+           elseif strlower(line) == \"nsstarstart\" then\
+               list = true\
+           end        \
+       end\
+       if not aura_env.found then\
+           aura_env.list = {}\
+           for unit in WA_IterateGroupMembers() do\
+               local spec = (aura_env.specs and aura_env.specs[unit]) or NSAPI:GetSpecs(unit) or WeakAuras.SpecForUnit(unit)\
+               unit = \"raid\"..UnitInRaid(unit)\
+               local G = UnitGUID(unit)\
+               local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
+               if prio > 6 then\
+                   table.insert(aura_env.list, {unit, G, prio})  \
+               end\
+           end\
+           table.sort(aura_env.list, \
+               function(a, b)\
+                   if a[3] == b[3] then -- sort by GUID if same spec\
+                       return a[2] < b[2]\
+                   else\
+                       return a[3] < b[3]\
+                   end\
+                   \
+           end) -- a < b low first, a > b high first\
+       end\
+   end\
+   \
+   \
+   aura_env.Anchors = function()\
+       local addanchor = false\
+       aura_env.region.anchors = aura_env.region.anchors or {}      \
+       for _, anchor in pairs(aura_env.region.anchors) do\
+           if anchor then C_UnitAuras.RemovePrivateAuraAnchor(anchor)  end\
+       end\
+       aura_env.region.anchors = {}\
+       for i, v in ipairs(aura_env.list) do\
+           if addanchor then         \
+               local self = aura_env.region\
+               local privateAnchorArgs = {\
+                   unitToken = v[1],\
+                   auraIndex = 1,\
+                   parent = self,\
+                   showCountdownFrame = false,\
+                   showCountdownNumbers = false,\
+                   iconInfo = {\
+                       iconAnchor = {\
+                           point = \"CENTER\",\
+                           relativeTo = self,\
+                           relativePoint = \"CENTER\",\
+                           offsetX = 0,\
+                           offsetY = 0\
+                       },\
+                       iconWidth = self:GetWidth(),\
+                       iconHeight = self:GetHeight()\
+                   }\
+               }\
+               aura_env.region.anchors[v[2]] = C_UnitAuras.AddPrivateAuraAnchor(privateAnchorArgs)\
+           end\
+           if UnitIsUnit(\"player\", v[1]) then\
+               addanchor = true\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "event",
+                            ["spellId"] = {[1] = 1226442},
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["duration"] = "6",
+                            ["event"] = "Spell Cast Succeeded",
+                            ["use_unit"] = true,
+                            ["use_spellId"] = true,
+                            ["spellIds"] = {},
+                            ["use_specific_unit"] = true,
+                            ["names"] = {},
+                            ["unit"] = "boss1",
+                            ["subeventPrefix"] = "SPELL",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [2] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["events"] = "NSAPI_ENCOUNTER_START",
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
+                            ["unit"] = "player",
+                            ["custom"] = "function(s, e)\
+       if e == \"NSAPI_ENCOUNTER_START\" then\
+           aura_env.MRT()    \
+           if not NSAPI.disable then\
+               local state = {\
+                   progressType = \"static\",\
+               }\
+               s:Update(\"\", state)\
+               aura_env.Anchors()\
+           end\
+       end\
+   end",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "all",
+                    ["activeTriggerMode"] = -10
+                },
+                ["internalVersion"] = 85,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["desaturate"] = false,
+                ["rotation"] = 270,
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "9KyafFfY", ["type"] = "subbackground"}
+                },
+                ["height"] = 64,
+                ["rotate"] = false,
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["use_role"] = false,
+                    ["encounterid"] = "3134",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {
+                        ["multi"] = {["HEALER"] = true, ["DAMAGER"] = true}
+                    },
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                ["AMModified"] = true,
+                ["mirror"] = false,
+                ["anchorFrameFrame"] = "WeakAuras:Starkiller Swing Player Anchor",
+                ["regionType"] = "texture",
+                ["AMOriginalUUID"] = "7MpgGV4TIM3",
+                ["blendMode"] = "BLEND",
+                ["uid"] = "AM-7MpgGV4TIM3",
+                ["anchorFrameParent"] = false,
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\triangle.tga",
+                ["width"] = 64,
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Starkiller Swing Right Anchor",
+                ["parent"] = "Starkiller Swing Assign",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["authorOptions"] = {},
+                ["config"] = {},
+                ["alpha"] = 1,
+                ["xOffset"] = 80,
+                ["conditions"] = {},
+                ["information"] = {},
+                ["selfPoint"] = "CENTER"
+            },
+            [72] = {
                 ["controlledChildren"] = {
                     [1] = "Galactic Smash Background",
                     [2] = "Smash Position #1",
@@ -15773,7 +17281,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -15793,7 +17301,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-ItCJ4Ec6OET",
                 ["groupIcon"] = 134269,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash Map",
                 ["selfPoint"] = "CENTER",
@@ -15807,7 +17315,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["frameStrata"] = 1
             },
-            [67] = {
+            [73] = {
                 ["iconSource"] = 0,
                 ["wagoID"] = "Y7yEWhBqV",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -15893,9 +17401,9 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["preferToUpdate"] = true,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "lxcXdTmp", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "oJWXTo3V", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = false,
@@ -15910,7 +17418,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -15930,7 +17438,7 @@ wa.data['assignments'].data = {
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\NexusKingMap.blp",
                 ["useCooldownModRate"] = false,
                 ["zoom"] = 0,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash Background",
                 ["url"] = "",
@@ -15944,7 +17452,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = false,
                 ["alpha"] = 1
             },
-            [68] = {
+            [74] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = 1.5003051757813,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -15970,7 +17478,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -16066,9 +17574,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "UX4JM9Qq", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "TYvreuOE", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "7)YxApyBgYs",
@@ -16098,7 +17606,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #1",
                 ["width"] = 24,
@@ -16113,7 +17621,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [69] = {
+            [75] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = 88.000183105469,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -16139,7 +17647,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -16235,9 +17743,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NF3aEvKk", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "8gJbJz2l", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "wQOuHqQt(v2",
@@ -16267,7 +17775,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #2",
                 ["width"] = 24,
@@ -16282,7 +17790,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [70] = {
+            [76] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = 1,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -16308,7 +17816,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -16404,9 +17912,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "yzb0zG54", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "LynyVhNE", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "EdQyV6l)cbQ",
@@ -16436,7 +17944,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #3",
                 ["width"] = 24,
@@ -16451,7 +17959,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [71] = {
+            [77] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = -63.999755859375,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -16477,7 +17985,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -16573,9 +18081,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "4AvOfEkG", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "krloIMxF", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "(tzYjOYXCX5",
@@ -16605,7 +18113,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #4",
                 ["width"] = 24,
@@ -16620,7 +18128,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [72] = {
+            [78] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = 80.000061035156,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -16646,7 +18154,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -16742,9 +18250,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "h9JvWpHi", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "NUYqh3kD", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "aNq7hAOEpOr",
@@ -16774,7 +18282,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #5",
                 ["width"] = 24,
@@ -16789,7 +18297,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [73] = {
+            [79] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = -89,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -16815,7 +18323,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -16911,9 +18419,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "qHiwCU6j", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "wzQm864m", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "VXEzL)srrWB",
@@ -16943,7 +18451,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #6",
                 ["width"] = 24,
@@ -16958,7 +18466,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [74] = {
+            [80] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = 47.000061035156,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -16984,7 +18492,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -17080,9 +18588,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0qEafQ7P", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "ZizxjW5Q", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "QECBGYvM6Sx",
@@ -17112,7 +18620,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #7",
                 ["width"] = 24,
@@ -17127,7 +18635,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [75] = {
+            [81] = {
                 ["iconSource"] = -1,
                 ["xOffset"] = 122.00018310547,
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -17153,7 +18661,7 @@ wa.data['assignments'].data = {
                     },
                     ["spec"] = {["multi"] = {}},
                     ["use_ignoreNameRealm"] = false,
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -17249,9 +18757,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "QQ47CiST", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "e4SQ8qZG", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "iG4kDq4(tNj",
@@ -17281,7 +18789,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #8",
                 ["width"] = 24,
@@ -17296,7 +18804,7 @@ wa.data['assignments'].data = {
                 ["information"] = {},
                 ["cooldownEdge"] = false
             },
-            [76] = {
+            [82] = {
                 ["controlledChildren"] = {
                     [1] = "1-Tank",
                     [2] = "1-Melee1",
@@ -17340,7 +18848,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -17359,7 +18867,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 1392544,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Star Positions",
                 ["frameStrata"] = 1,
@@ -17392,7 +18900,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [77] = {
+            [83] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -17462,9 +18970,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ADeQUs33", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "X7hotyCb", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -17473,10 +18981,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -17494,7 +19005,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "1-Tank",
                 ["xOffset"] = -75.999938964844,
@@ -17546,7 +19057,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [78] = {
+            [84] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -17616,9 +19127,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "5iDF6N4g", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Soohf7zr", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -17627,10 +19138,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -17648,7 +19162,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "1-Melee1",
                 ["xOffset"] = -103.99987792969,
@@ -17700,7 +19214,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [79] = {
+            [85] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -17770,9 +19284,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "enhkRjcK", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Byvz9EoO", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -17781,10 +19295,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -17802,7 +19319,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "1-Melee2",
                 ["xOffset"] = -67.999877929688,
@@ -17854,7 +19371,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [80] = {
+            [86] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -17924,9 +19441,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Q0m18jD8", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "NkoUfBk2", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -17935,10 +19452,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -17956,7 +19476,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "2-Tank",
                 ["xOffset"] = -42.000061035156,
@@ -18008,7 +19528,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [81] = {
+            [87] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18078,9 +19598,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "fCzyoDNd", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "hCZlMdj8", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18089,10 +19609,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -18110,7 +19633,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "2-Melee1",
                 ["xOffset"] = -35,
@@ -18162,7 +19685,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [82] = {
+            [88] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18232,9 +19755,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "gQBZYjSZ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "DV70nZWR", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18243,10 +19766,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -18264,7 +19790,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "2-Melee2",
                 ["xOffset"] = -43.999877929688,
@@ -18316,7 +19842,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [83] = {
+            [89] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18386,9 +19912,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LPn9OQuJ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "d8nxXUcg", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18397,10 +19923,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -18418,7 +19947,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Tank",
                 ["xOffset"] = -189.00012207031,
@@ -18470,7 +19999,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [84] = {
+            [90] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18540,9 +20069,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ys0wVYt6", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "1FKIdjWw", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18551,10 +20080,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -18572,7 +20104,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Melee1",
                 ["xOffset"] = -213,
@@ -18624,7 +20156,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [85] = {
+            [91] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18694,9 +20226,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "gQIjLNX0", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "BwdiW0lx", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18705,10 +20237,13 @@ wa.data['assignments'].data = {
                     ["use_spec_position"] = true,
                     ["encounterid"] = "3134",
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -18726,7 +20261,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Melee2",
                 ["xOffset"] = -155.99987792969,
@@ -18778,7 +20313,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [86] = {
+            [92] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18844,9 +20379,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "T8coOYni", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "yNkZK85a", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18855,11 +20390,14 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["role"] = {},
                     ["encounterid"] = "3134",
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["use_spec_position"] = true,
                     ["size"] = {["multi"] = {}}
                 },
@@ -18877,7 +20415,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "1+2-Ranged1",
                 ["xOffset"] = -121.99993896484,
@@ -18910,7 +20448,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [87] = {
+            [93] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -18976,9 +20514,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "tnvNsaWv", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "UOPMhLq6", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -18987,11 +20525,14 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["role"] = {},
                     ["encounterid"] = "3134",
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["use_spec_position"] = true,
                     ["size"] = {["multi"] = {}}
                 },
@@ -19009,7 +20550,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "1+2-Ranged2",
                 ["xOffset"] = -162.00006103516,
@@ -19042,7 +20583,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [88] = {
+            [94] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -19108,9 +20649,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "al5GEJTW", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Ro0FMF6p", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19119,11 +20660,14 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["role"] = {},
                     ["encounterid"] = "3134",
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["use_spec_position"] = true,
                     ["size"] = {["multi"] = {}}
                 },
@@ -19141,7 +20685,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "1+2-Ranged3",
                 ["xOffset"] = -83.999877929688,
@@ -19174,7 +20718,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [89] = {
+            [95] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -19240,9 +20784,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "nLjvbZ0d", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "VH65D4xs", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19251,11 +20795,14 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["role"] = {},
                     ["encounterid"] = "3134",
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["use_spec_position"] = true,
                     ["size"] = {["multi"] = {}}
                 },
@@ -19273,7 +20820,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Ranged1",
                 ["xOffset"] = -3.0000610351563,
@@ -19306,7 +20853,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [90] = {
+            [96] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -19372,9 +20919,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "EpZ9Rqoy", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "oYVOqQPx", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19383,11 +20930,14 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["role"] = {},
                     ["encounterid"] = "3134",
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["use_spec_position"] = true,
                     ["size"] = {["multi"] = {}}
                 },
@@ -19405,7 +20955,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Ranged2",
                 ["xOffset"] = -8.0003051757813,
@@ -19438,7 +20988,7 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [91] = {
+            [97] = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -19504,9 +21054,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "CUTVbKkX", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "BfaxHSa6", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19515,11 +21065,14 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic"},
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
                     ["role"] = {},
                     ["encounterid"] = "3134",
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
+                    ["use_difficulty"] = false,
                     ["use_spec_position"] = true,
                     ["size"] = {["multi"] = {}}
                 },
@@ -19537,7 +21090,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Ranged3",
                 ["xOffset"] = -7.9998779296875,
@@ -19570,16 +21123,15 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [92] = {
+            [98] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Galactic Smash Assign (do not disable)",
                     [2] = "Galactic Smash where to go Text - Tank",
                     [3] = "Galactic Smash where to go Text - Melee",
                     [4] = "Galactic Smash where to go Text - Ranged",
-                    [5] = "Conquer Assign",
-                    [6] = "Nexus King Rally the Shadowguard (Transition) Assign",
-                    [7] = "Galactic Smash Macro Confirm"
+                    [5] = "Nexus King Rally the Shadowguard (Transition) Assign",
+                    [6] = "Galactic Smash Macro Confirm"
                 },
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
@@ -19616,10 +21168,9 @@ wa.data['assignments'].data = {
                 ["parent"] = "Salhadaar Assign",
                 ["sortHybridTable"] = {
                     ["Galactic Smash Assign (do not disable)"] = false,
-                    ["Galactic Smash Macro Confirm"] = false,
                     ["Galactic Smash where to go Text - Tank"] = false,
                     ["Galactic Smash where to go Text - Ranged"] = false,
-                    ["Conquer Assign"] = false,
+                    ["Galactic Smash Macro Confirm"] = false,
                     ["Galactic Smash where to go Text - Melee"] = false,
                     ["Nexus King Rally the Shadowguard (Transition) Assign"] = false
                 },
@@ -19646,7 +21197,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -19683,7 +21234,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Salhadaar - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -19697,7 +21248,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [93] = {
+            [99] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -20161,9 +21712,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Keidd1jS", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "0NOeEm14", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -20515,7 +22066,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Galactic Smash Assign (do not disable)",
                 ["displayText"] = "%text%text%text (%p)",
@@ -20530,7 +22081,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["wordWrap"] = "WordWrap"
             },
-            [94] = {
+            [100] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -20563,10 +22114,17 @@ wa.data['assignments'].data = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_type"] = "stateupdate",
+                            ["customVariables"] = "{\
+       num = \"number\",\
+   }",
                             ["event"] = "Health",
                             ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
                             ["names"] = {},
+                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -20581,6 +22139,7 @@ wa.data['assignments'].data = {
                local state = {\
                    progressType = \"static\",\
                    text = \"Stars @\"..aura_env.texts[num],\
+                   num = num,\
                    autoHide = true,\
                }\
                s:Update(\"\", state)\
@@ -20591,10 +22150,6 @@ wa.data['assignments'].data = {
    \
    ",
                             ["events"] = "NS_SMASH",
-                            ["subeventPrefix"] = "SPELL",
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20635,7 +22190,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "il4yvjbs", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "WkPOX4pd", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
@@ -20650,13 +22205,12 @@ wa.data['assignments'].data = {
                     ["use_encounterid"] = true,
                     ["difficulty"] = {
                         ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
+                        ["multi"] = {["mythic"] = true}
                     },
-                    ["role"] = {["single"] = "TANK"},
+                    ["role"] = {
+                        ["single"] = "TANK",
+                        ["multi"] = {["TANK"] = true}
+                    },
                     ["encounterid"] = "3134",
                     ["use_difficulty"] = false,
                     ["spec"] = {["multi"] = {}},
@@ -20675,7 +22229,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -20700,7 +22254,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash where to go Text - Tank",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -20714,9 +22268,10 @@ wa.data['assignments'].data = {
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
-                            ["value"] = "1",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "1"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20750,9 +22305,10 @@ wa.data['assignments'].data = {
                     },
                     [2] = {
                         ["check"] = {
-                            ["value"] = "2",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "2"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20786,9 +22342,10 @@ wa.data['assignments'].data = {
                     },
                     [3] = {
                         ["check"] = {
-                            ["value"] = "3",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "3"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20822,9 +22379,10 @@ wa.data['assignments'].data = {
                     },
                     [4] = {
                         ["check"] = {
-                            ["value"] = "4",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "4"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20858,9 +22416,10 @@ wa.data['assignments'].data = {
                     },
                     [5] = {
                         ["check"] = {
-                            ["value"] = "5",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "5"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20894,9 +22453,10 @@ wa.data['assignments'].data = {
                     },
                     [6] = {
                         ["check"] = {
-                            ["value"] = "6",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "6"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20930,9 +22490,10 @@ wa.data['assignments'].data = {
                     },
                     [7] = {
                         ["check"] = {
-                            ["value"] = "7",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "7"
                         },
                         ["changes"] = {
                             [1] = {
@@ -20966,9 +22527,10 @@ wa.data['assignments'].data = {
                     },
                     [8] = {
                         ["check"] = {
-                            ["value"] = "8",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "8"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21004,7 +22566,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["parent"] = "Salhadaar - Assign Texts"
             },
-            [95] = {
+            [101] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -21037,10 +22599,17 @@ wa.data['assignments'].data = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_type"] = "stateupdate",
+                            ["customVariables"] = "{\
+       num = \"number\",\
+   }",
                             ["event"] = "Health",
                             ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
                             ["names"] = {},
+                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -21055,6 +22624,7 @@ wa.data['assignments'].data = {
                local state = {\
                    progressType = \"static\",\
                    text = \"Stars @\"..aura_env.texts[num],\
+                   num = num,\
                    autoHide = true,\
                }\
                s:Update(\"\", state)\
@@ -21065,10 +22635,6 @@ wa.data['assignments'].data = {
    \
    ",
                             ["events"] = "NS_SMASH",
-                            ["subeventPrefix"] = "SPELL",
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21109,23 +22675,22 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "7AnVcoRl", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "sZHMT3vK", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
                 ["load"] = {
-                    ["spec_position"] = {["single"] = "MELEE"},
+                    ["spec_position"] = {
+                        ["single"] = "MELEE",
+                        ["multi"] = {["MELEE"] = true}
+                    },
                     ["talent"] = {["multi"] = {}},
                     ["use_role"] = false,
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
                     ["difficulty"] = {
                         ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
+                        ["multi"] = {["mythic"] = true}
                     },
                     ["role"] = {
                         ["multi"] = {["HEALER"] = true, ["DAMAGER"] = true}
@@ -21149,7 +22714,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -21174,7 +22739,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash where to go Text - Melee",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -21188,9 +22753,10 @@ wa.data['assignments'].data = {
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
-                            ["value"] = "1",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "1"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21224,9 +22790,10 @@ wa.data['assignments'].data = {
                     },
                     [2] = {
                         ["check"] = {
-                            ["value"] = "2",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "2"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21260,9 +22827,10 @@ wa.data['assignments'].data = {
                     },
                     [3] = {
                         ["check"] = {
-                            ["value"] = "3",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "3"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21296,9 +22864,10 @@ wa.data['assignments'].data = {
                     },
                     [4] = {
                         ["check"] = {
-                            ["value"] = "4",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "4"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21332,9 +22901,10 @@ wa.data['assignments'].data = {
                     },
                     [5] = {
                         ["check"] = {
-                            ["value"] = "5",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "5"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21368,9 +22938,10 @@ wa.data['assignments'].data = {
                     },
                     [6] = {
                         ["check"] = {
-                            ["value"] = "6",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "6"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21404,9 +22975,10 @@ wa.data['assignments'].data = {
                     },
                     [7] = {
                         ["check"] = {
-                            ["value"] = "7",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "7"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21440,9 +23012,10 @@ wa.data['assignments'].data = {
                     },
                     [8] = {
                         ["check"] = {
-                            ["value"] = "8",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "8"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21478,7 +23051,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["parent"] = "Salhadaar - Assign Texts"
             },
-            [96] = {
+            [102] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -21511,10 +23084,17 @@ wa.data['assignments'].data = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
-                            ["subeventSuffix"] = "_CAST_START",
+                            ["custom_type"] = "stateupdate",
+                            ["customVariables"] = "{\
+       num = \"number\",\
+   }",
                             ["event"] = "Health",
                             ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
                             ["names"] = {},
+                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -21529,6 +23109,7 @@ wa.data['assignments'].data = {
                local state = {\
                    progressType = \"static\",\
                    text = \"Stars @\"..aura_env.texts[num],\
+                   num = num,\
                    autoHide = true,\
                }\
                s:Update(\"\", state)\
@@ -21539,10 +23120,6 @@ wa.data['assignments'].data = {
    \
    ",
                             ["events"] = "NS_SMASH",
-                            ["subeventPrefix"] = "SPELL",
-                            ["check"] = "event",
-                            ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21583,23 +23160,21 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LWnDHKoP", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "4IA0oRWb", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
                 ["load"] = {
-                    ["spec_position"] = {["single"] = "RANGED"},
+                    ["spec_position"] = {
+                        ["single"] = "RANGED",
+                        ["multi"] = {["RANGED"] = true}
+                    },
                     ["talent"] = {["multi"] = {}},
-                    ["use_role"] = false,
                     ["class"] = {["multi"] = {}},
                     ["use_encounterid"] = true,
                     ["difficulty"] = {
                         ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
+                        ["multi"] = {["mythic"] = true}
                     },
                     ["role"] = {
                         ["multi"] = {["HEALER"] = true, ["DAMAGER"] = true}
@@ -21623,7 +23198,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -21648,7 +23223,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash where to go Text - Ranged",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -21662,9 +23237,10 @@ wa.data['assignments'].data = {
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
-                            ["value"] = "1",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "1"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21698,9 +23274,10 @@ wa.data['assignments'].data = {
                     },
                     [2] = {
                         ["check"] = {
-                            ["value"] = "2",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "2"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21734,9 +23311,10 @@ wa.data['assignments'].data = {
                     },
                     [3] = {
                         ["check"] = {
-                            ["value"] = "3",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "3"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21770,9 +23348,10 @@ wa.data['assignments'].data = {
                     },
                     [4] = {
                         ["check"] = {
-                            ["value"] = "4",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "4"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21806,9 +23385,10 @@ wa.data['assignments'].data = {
                     },
                     [5] = {
                         ["check"] = {
-                            ["value"] = "5",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "5"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21842,9 +23422,10 @@ wa.data['assignments'].data = {
                     },
                     [6] = {
                         ["check"] = {
-                            ["value"] = "6",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "6"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21878,9 +23459,10 @@ wa.data['assignments'].data = {
                     },
                     [7] = {
                         ["check"] = {
-                            ["value"] = "7",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "7"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21914,9 +23496,10 @@ wa.data['assignments'].data = {
                     },
                     [8] = {
                         ["check"] = {
-                            ["value"] = "8",
+                            ["trigger"] = 1,
                             ["op"] = "==",
-                            ["variable"] = "marker"
+                            ["variable"] = "num",
+                            ["value"] = "8"
                         },
                         ["changes"] = {
                             [1] = {
@@ -21952,335 +23535,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["parent"] = "Salhadaar - Assign Texts"
             },
-            [97] = {
-                ["outline"] = "OUTLINE",
-                ["wagoID"] = "Y7yEWhBqV",
-                ["parent"] = "Salhadaar - Assign Texts",
-                ["displayText_format_p_time_dynamic_threshold"] = 0,
-                ["yOffset"] = 0,
-                ["anchorPoint"] = "CENTER",
-                ["AMModified"] = true,
-                ["displayText_format_p_time_format"] = 0,
-                ["displayText_format_p_pad_mode"] = "left",
-                ["automaticWidth"] = "Auto",
-                ["actions"] = {
-                    ["start"] = {
-                        ["custom"] = "\
-   \
-   ",
-                        ["do_custom"] = false
-                    },
-                    ["init"] = {
-                        ["custom"] = "aura_env.debug = false\
-   aura_env.filter = aura_env.debug and \"HELPFUL\" or \"HARMFUL\"\
-   aura_env.vuln = aura_env.debug and 774 or 1224795\
-   aura_env.cast = aura_env.debug and 8936 or 1224787\
-   \
-   \
-   aura_env.MRT = function()\
-       aura_env.list = {}\
-       local note = NSAPI:GetNote()\
-       local list = false\
-       aura_env.found = false\
-       aura_env.me = false\
-       if note == \"\" then return end\
-       for line in note:gmatch('[^\\r\\n]+') do\
-           --check for start/end of the name list\
-           if strlower(line) == \"nsconquerend\" then\
-               aura_env.found = true\
-               list = false            \
-           elseif list then \
-               aura_env.count = aura_env.count+1\
-               aura_env.list[aura_env.count] = {}\
-               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
-                   if UnitInRaid(name) then\
-                       local u = \"raid\"..UnitInRaid(name)\
-                       if UnitIsUnit(\"player\", u) then aura_env.me = true end\
-                       table.insert(aura_env.list[aura_env.count], u)\
-                   end\
-               end            \
-           elseif strlower(line) == \"nsconquerstart\" then\
-               list = true\
-               aura_env.count = 0\
-           end\
-       end\
-       if not aura_env.found then\
-           -- no note found, auto assign after i've seen the mechanic\
-       end\
-   end\
-   \
-   \
-   \
-   \
-   ",
-                        ["do_custom"] = true
-                    },
-                    ["finish"] = {}
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "stateupdate",
-                            ["customVariables"] = "{\
-       soak = \"bool\",\
-   }",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
-                            ["custom"] = "function(s, e, ...)\
-       if e == \"OPTIONS\" then\
-           s[\"\"] = {\
-               show = true,\
-               changed = true,\
-               duration = 10,\
-               expirationTime = GetTime()+10,\
-               progressType = \"timed\",\
-               autoHide = true,\
-               soak = math.random(0, 2) > 1,\
-           }\
-           return true    \
-           \
-       elseif e == \"NSAPI_ENCOUNTER_START\" then\
-           aura_env.casts = 0\
-           aura_env.MRT()        \
-       elseif aura_env.found and aura_env.me and not NSAPI.disable then\
-           if e == \"NS_ASSIGN_EVENT\" and ... then\
-               local id, expires, next = ...\
-               if id == aura_env.id then       \
-                   local count = aura_env.casts\
-                   if next then count = count+1 end -- event is sent from bossmod so the counter hasn't increased yet, we manually increase it by 1\
-                   if count > aura_env.count then count = 1 end -- reset to 1 after the limit from note has been reached, assuming the user wants to repeat it from there\
-                   if aura_env.list[count] then\
-                       local state= {\
-                           progressType = \"timed\",\
-                           soak = false,\
-                           duration = expires-GetTime(),\
-                           expirationTime = expires,\
-                           autoHide = true,\
-                       }\
-                       for i, v in ipairs(aura_env.list[count]) do\
-                           if UnitIsUnit(v, \"player\") then   \
-                               local vulnexpires = select(6, WA_GetUnitAura(\"player\", aura_env.vuln, aura_env.filter))\
-                               if (not vulnexpires) or (vulnexpires < expires) then -- if debuff expires before soak happens, player can still soak    \
-                                   state.soak = true\
-                                   break\
-                               end\
-                           end\
-                       end\
-                       s:Update(\"\", state)\
-                   end\
-               end            \
-               \
-           elseif e == \"TRIGGER\" then -- start alert from bossmod trigger as 3seconds is a bit low, will likely only work for the first group though?\
-               local trigger, table = ...\
-               if table[\"\"] and table[\"\"].expirationTime then\
-                   WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, table[\"\"].expirationTime, true)\
-               end\
-           else\
-               local u, cast, spellID = ... -- Unit event\
-               if spellID == aura_env.cast then\
-                   aura_env.casts = aura_env.casts+1\
-                   if aura_env.casts > aura_env.count then aura_env.casts = 1 end -- reset to 1 after the limit from note has been reached, assuming the user wants to repeat it from there (count is always 1 higher than the amount of lines)    \
-                   if aura_env.list[aura_env.casts] then\
-                       local expires = select(5, UnitCastingInfo(u))               \
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, expires/1000, false)            \
-                   end\
-               end\
-           end\
-       end    \
-   end\
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   ",
-                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START TRIGGER:2 NS_ASSIGN_EVENT",
-                            ["debuffType"] = "HELPFUL"
-                        },
-                        ["untrigger"] = {}
-                    },
-                    [2] = {
-                        ["trigger"] = {
-                            ["use_remaining"] = true,
-                            ["spellId"] = "1224787",
-                            ["remaining_operator"] = "<=",
-                            ["event"] = "Boss Mod Timer",
-                            ["unit"] = "player",
-                            ["use_spellId"] = true,
-                            ["remaining"] = "10",
-                            ["extend"] = "4",
-                            ["type"] = "addons",
-                            ["use_extend"] = true,
-                            ["debuffType"] = "HELPFUL"
-                        },
-                        ["untrigger"] = {}
-                    },
-                    ["disjunctive"] = "custom",
-                    ["customTriggerLogic"] = "function(t)\
-       return t[1]\
-   end\
-   \
-   \
-   ",
-                    ["activeTriggerMode"] = -10
-                },
-                ["displayText_format_p_format"] = "Number",
-                ["displayText_format_p_time_legacy_floor"] = true,
-                ["displayText_format_p_pad"] = false,
-                ["selfPoint"] = "BOTTOM",
-                ["AMOriginalUUID"] = "J4uhUwKuDjE",
-                ["displayText_format_p_decimal_precision"] = 1,
-                ["internalVersion"] = 85,
-                ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
-                ["subRegions"] = {
-                    [1] = {["amId"] = "rwf0mgpg", ["type"] = "subbackground"}
-                },
-                ["preferToUpdate"] = true,
-                ["load"] = {
-                    ["use_never"] = false,
-                    ["talent"] = {["multi"] = {}},
-                    ["encounterid"] = "3134",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
-                    },
-                    ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = false,
-                    ["class"] = {["multi"] = {}},
-                    ["size"] = {["multi"] = {}}
-                },
-                ["displayText_format_p_round_type"] = "ceil",
-                ["fontSize"] = 50,
-                ["source"] = "import",
-                ["conditions"] = {
-                    [1] = {
-                        ["check"] = {
-                            ["trigger"] = 1,
-                            ["variable"] = "soak",
-                            ["value"] = 0
-                        },
-                        ["changes"] = {
-                            [1] = {
-                                ["value"] = {
-                                    [1] = 1,
-                                    [2] = 0.25098040699959,
-                                    [3] = 0.25098040699959,
-                                    [4] = 1
-                                },
-                                ["property"] = "color"
-                            },
-                            [2] = {
-                                ["value"] = "DON'T SOAK",
-                                ["property"] = "displayText"
-                            }
-                        }
-                    },
-                    [2] = {
-                        ["check"] = {
-                            ["trigger"] = 1,
-                            ["variable"] = "soak",
-                            ["value"] = 1,
-                            ["checks"] = {
-                                [1] = {
-                                    ["trigger"] = 1,
-                                    ["variable"] = "soak",
-                                    ["value"] = 1
-                                },
-                                [2] = {
-                                    ["trigger"] = 1,
-                                    ["variable"] = "targeted",
-                                    ["value"] = 0
-                                }
-                            }
-                        },
-                        ["changes"] = {
-                            [1] = {
-                                ["value"] = {
-                                    ["sound_type"] = "Play",
-                                    ["sound"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Soak.ogg",
-                                    ["sound_channel"] = "Master"
-                                },
-                                ["property"] = "sound"
-                            }
-                        }
-                    }
-                },
-                ["shadowXOffset"] = 1,
-                ["url"] = "",
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
-                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
-                ["regionType"] = "text",
-                ["color"] = {
-                    [1] = 0.24705883860588,
-                    [2] = 0.98823535442352,
-                    [3] = 0.24705883860588,
-                    [4] = 1
-                },
-                ["uid"] = "AM-J4uhUwKuDjE",
-                ["authorOptions"] = {},
-                ["displayText_format_p_time_precision"] = 1,
-                ["anchorFrameParent"] = false,
-                ["shadowYOffset"] = -1,
-                ["justify"] = "LEFT",
-                ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
-                ["displayText_format_p_pad_max"] = 8,
-                ["id"] = "Conquer Assign",
-                ["displayText"] = "SOAK (%p)",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SELECTFRAME",
-                ["xOffset"] = 0,
-                ["config"] = {},
-                ["customTextUpdate"] = "event",
-                ["displayText_format_p_time_mod_rate"] = true,
-                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                ["fixedWidth"] = 200,
-                ["information"] = {["forceEvents"] = false},
-                ["wordWrap"] = "WordWrap"
-            },
-            [98] = {
+            [103] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -22428,7 +23683,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YixIb6yc", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "T54ck9pL", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
@@ -22463,7 +23718,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -22488,7 +23743,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Nexus King Rally the Shadowguard (Transition) Assign",
                 ["color"] = {
@@ -22508,7 +23763,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["parent"] = "Salhadaar - Assign Texts"
             },
-            [99] = {
+            [104] = {
                 ["outline"] = "OUTLINE",
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -22573,9 +23828,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "k1W1Xpwj", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "cKWLzpYB", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -22635,7 +23890,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Galactic Smash Macro Confirm",
                 ["displayText"] = "Macro Pressed",
@@ -22650,7 +23905,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = false},
                 ["wordWrap"] = "WordWrap"
             },
-            [100] = {
+            [105] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Dark Star Assign List"},
                 ["authorOptions"] = {},
@@ -22710,7 +23965,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -22747,7 +24002,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Salhadaar - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -22761,7 +24016,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [101] = {
+            [106] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -22902,12 +24157,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "NEBdKHVyfRa",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "p6JqoAFe", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "klQK4xFp", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "vSAqLmYx", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "KZ6tqtzo", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "Wghi1gvO",
+                        ["amId"] = "JWLFnlCy",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -22922,7 +24177,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "npRtubxd",
+                        ["amId"] = "WHXjDz1l",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -22965,7 +24220,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "kIvpUh4G",
+                        ["amId"] = "aSOxFrWj",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_precision"] = 1,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
@@ -23013,7 +24268,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "WD0jwVDV",
+                        ["amId"] = "7Yckg43D",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -23046,7 +24301,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "v4bKzoNM",
+                        ["amId"] = "3cepCdIT",
                         ["text_fontType"] = "OUTLINE",
                         ["anchorYOffset"] = 0,
                         ["type"] = "subtext",
@@ -23119,7 +24374,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -23139,11 +24394,12 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [102] = {
+            [107] = {
                 ["controlledChildren"] = {
-                    [1] = "Dimensius - Assign Texts",
-                    [2] = "Dimensius - Lists",
-                    [3] = "Antimatter Soak Direction Arrow"
+                    [1] = "CC Assign Handler Dimensius (Custom Option)",
+                    [2] = "P2 Hide inner-most Void Warden Plates (Plater Only)",
+                    [3] = "Dimensius - Assign Texts",
+                    [4] = "Dimensius - Lists"
                 },
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["wagoID"] = "Y7yEWhBqV",
@@ -23171,7 +24427,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -23190,7 +24446,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922083,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
                 ["id"] = "Dimensius Assign",
                 ["frameStrata"] = 1,
@@ -23223,9 +24479,453 @@ wa.data['assignments'].data = {
                     }
                 }
             },
-            [103] = {
+            [108] = {
+                ["iconSource"] = -1,
+                ["displayText_format_icon_format"] = "none",
+                ["adjustedMax"] = "",
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["displayText_format_p_time_format"] = 0,
+                ["url"] = "",
+                ["icon"] = true,
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["keepAspectRatio"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["desaturate"] = false,
+                ["font"] = "PT Sans Narrow Bold",
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3135",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["shadowXOffset"] = 1,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "text",
+                ["cooldownTextDisabled"] = false,
+                ["tocversion"] = 110200,
+                ["alpha"] = 1,
+                ["uid"] = "AM-tuQUuWSlUBQ",
+                ["fixedWidth"] = 200,
+                ["outline"] = "OUTLINE",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["adjustedMin"] = "",
+                ["shadowYOffset"] = -1,
+                ["cooldownSwipe"] = true,
+                ["customTextUpdate"] = "event",
+                ["automaticWidth"] = "Auto",
+                ["information"] = {
+                    ["forceEvents"] = false,
+                    ["debugLog"] = false
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["names"] = {},
+                            ["custom"] = "function(s, e, ...)\
+       if e == \"NSAPI_ENCOUNTER_START\" then\
+           aura_env.last = 0\
+           aura_env.MRT()\
+       elseif aura_env.found and not NSAPI.disable then            \
+           if e == \"UNIT_SPELLCAST_SUCCEEDED\" then\
+               local u, cast, spellID = ... -- Unit event\
+               if spellID == aura_env.cast then\
+                   local now = GetTime()\
+                   aura_env.casts = aura_env.casts+1\
+                   local duration = 15\
+                   if aura_env.spells[aura_env.casts] then    \
+                       local list = aura_env.spells[aura_env.casts]         \
+                       for k, v in ipairs(list) do          \
+                           aura_env.currentList = list\
+                           if aura_env.config.showall or UnitIsUnit(\"player\", v.unit) then\
+                               WeakAuras.ScanEvents(\"NS_DIMENSIUS_CCTABLE_HIDE\", true)                                \
+                               WeakAuras.ScanEvents(\"NS_DIMENSIUS_CCTABLE\", aura_env.currentList, duration+now)   \
+                               break\
+                           end\
+                       end\
+                   end\
+               else\
+                   local key = u..spellID            \
+                   for i, v in ipairs(aura_env.currentList) do\
+                       if v.key == key then          \
+                           if UnitIsUnit(\"player\", u) then                    \
+                               WeakAuras.ScanEvents(\"NS_DIMENSIUS_YOURCC_HIDE\", true)\
+                           end      \
+                           WeakAuras.ScanEvents(\"NS_DIMENSIUS_CCTABLE_USED\", key)\
+                       end\
+                   end     \
+               end\
+           else\
+               local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellID = ... -- full CLEU\
+               if spellID == 1235114 and aura_env.casts >= 1 then aura_env.casts = 2 end -- skip to cast 3 after 1st platform, ensures this works in farm when people might skip a wall\
+           end\
+       end\
+   end",
+                            ["events"] = "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_SUCCEEDED:raid:boss CLEU:SPELL_AURA_APPLIED",
+                            ["subeventPrefix"] = "SPELL",
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
+                            ["spellIds"] = {},
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "any",
+                    ["customTriggerLogic"] = "",
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["internalVersion"] = 85,
+                ["displayText_format_p_pad"] = false,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["AMOriginalUUID"] = "tuQUuWSlUBQ",
+                ["preferToUpdate"] = true,
+                ["displayText_format_p_round_type"] = "ceil",
+                ["version"] = 55,
+                ["displayText_format_c_format"] = "none",
+                ["height"] = 70,
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["AMModified"] = true,
+                ["zoom"] = 0,
+                ["useAdjustededMax"] = false,
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["subRegions"] = {
+                    [1] = {["amId"] = "HTb3wAQf", ["type"] = "subbackground"}
+                },
+                ["width"] = 70,
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "toggle",
+                        ["default"] = false,
+                        ["desc"] = "Show all CC Lists instead of just the ones you are part of the rotation",
+                        ["key"] = "showall",
+                        ["useDesc"] = true,
+                        ["name"] = "Show all Lists",
+                        ["width"] = 1
+                    }
+                },
+                ["progressSource"] = {[1] = -1, [2] = ""},
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["config"] = {["showall"] = false},
+                ["displayText_format_p_time_legacy_floor"] = true,
+                ["useCooldownModRate"] = true,
+                ["displayText_format_p_time_precision"] = 1,
+                ["xOffset"] = 0,
+                ["displayText"] = "",
+                ["anchorFrameParent"] = false,
+                ["customText"] = "\
+   \
+   ",
+                ["cooldownEdge"] = false,
+                ["displayText_format_p_pad_mode"] = "left",
+                ["justify"] = "LEFT",
+                ["displayText_format_p_pad_max"] = 8,
+                ["id"] = "CC Assign Handler Dimensius (Custom Option)",
+                ["actions"] = {
+                    ["start"] = {["custom"] = "", ["do_custom"] = false},
+                    ["init"] = {
+                        ["do_custom_load"] = false,
+                        ["custom"] = "aura_env.debug = false\
+   aura_env.cast = aura_env.debug and 8936 or 1239262\
+   \
+   aura_env.nametoID = {\
+       [\"frostwyrm's fury\"] = 279302,\
+       [\"metamorphosis\"] = 200166,\
+       [\"chaos nova\"] = 179057,\
+       [\"ursol's vortex\"] = 102793,\
+       [\"typhoon\"] = 132469,\
+       [\"oppressing roar\"] = 372048,\
+       [\"wing buffet\"] = 357214,\
+       [\"binding shot\"] = 109248,\
+       [\"ring of peace\"] = 116844,\
+       [\"leg sweep\"] = 119381,\
+       [\"capacitor totem\"] = 192058,\
+       [\"shadowfury\"] = 30283,\
+       [\"champion's spear\"] = 376079,\
+       [\"landslide\"] = 358385,\
+       [\"mass entanglement\"] = 102359,\
+       [\"shockwave\"] = 46968,\
+       [\"supernova\"] = 157980,\
+       [\"gravity lapse\"] = 449700,\
+       [\"blast wave\"] = 157981,\
+       [\"frost nova\"] = 122,\
+       [\"ring of frost\"] = 113724,   \
+       [\"earthgrab totem\"] = 51485,\
+       [\"tail swip\"] = 368970,\
+       [\"sigil of chains\"] = 202138,\
+       [\"gorefiend's grasp\"] = 108199,\
+   }\
+   \
+   aura_env.MRT = function()\
+       local note = NSAPI:GetNote()\
+       local list = false\
+       aura_env.found = false\
+       if NSAPI.disable then return \"\" end\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           --check for start/end of the name list\
+           if strlower(line) == \"nsccend\" then\
+               aura_env.found = true\
+               list = false\
+           elseif list then \
+               local setnum = line:match(\"^set%s+(%d+)\")\
+               if setnum then\
+                   setnum = tonumber(setnum)\
+                   aura_env.spells[setnum] = {}\
+                   aura_env.set = setnum\
+                   aura_env.highest = math.max(aura_env.highest, aura_env.set)\
+               elseif aura_env.set ~= 0 then\
+                   local name, value = line:match(\"(%S+):%s*(.+)$\")\
+                   if name and value then\
+                       local spellID = tonumber(value)\
+                       local i = UnitInRaid(name)\
+                       local unit = i and \"raid\"..i\
+                       if not spellID then\
+                           spellID = aura_env.nametoID[strlower(value)]   \
+                       end\
+                       if spellID and unit then\
+                           table.insert(aura_env.spells[aura_env.set], {key = unit..spellID, spellID = spellID, unit = unit})\
+                       end\
+                   end\
+               end\
+           elseif strlower(line) == \"nsccstart\" then\
+               list = true\
+               aura_env.casts = 0\
+               aura_env.highest = 0\
+               aura_env.currentList = {}\
+               aura_env.spells = {}\
+               aura_env.set = 0\
+           end        \
+       end\
+   end\
+   \
+   \
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["wordWrap"] = "WordWrap",
+                ["semver"] = "1.0.54",
+                ["inverse"] = false,
+                ["parent"] = "Dimensius Assign",
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["conditions"] = {},
+                ["cooldown"] = false,
+                ["displayText_format_p_time_dynamic_threshold"] = 0
+            },
+            [109] = {
+                ["outline"] = "OUTLINE",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["authorOptions"] = {},
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["displayText_format_p_time_format"] = 0,
+                ["customTextUpdate"] = "event",
+                ["automaticWidth"] = "Auto",
+                ["actions"] = {
+                    ["start"] = {},
+                    ["init"] = {
+                        ["custom"] = "aura_env.SetVisibility = function(plate, show)    \
+       if C_AddOns.IsAddOnLoaded(\"Plater\") then\
+           local frame = plate.unitFramePlater\
+           if frame then\
+               if show then\
+                   plate:Show()\
+                   frame:Show()\
+               else                \
+                   plate:Hide()\
+                   frame:Hide()\
+               end\
+           end\
+       end\
+   end",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "event",
+                            ["custom_hide"] = "timed",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
+                            ["names"] = {},
+                            ["check"] = "event",
+                            ["custom"] = "function(e, triggerNum, triggerStates)\
+       if triggerStates then\
+           for k, v in pairs(triggerStates) do\
+               local spawnID = select(7, strsplit(\"-\", UnitGUID(k)))\
+               local spawnIndex = bit.rshift(bit.band(tonumber(string.sub(spawnID, 1, 5), 16), 0xffff8), 3)\
+               local plate = C_NamePlate.GetNamePlateForUnit(k)\
+               if not plate then return end\
+               if spawnIndex <= 3 then         \
+                   aura_env.SetVisibility(plate, false)\
+               else\
+                   aura_env.SetVisibility(plate, true)\
+               end\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   ",
+                            ["events"] = "TRIGGER:2",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    [2] = {
+                        ["trigger"] = {
+                            ["npcId"] = "245705, 225982",
+                            ["type"] = "unit",
+                            ["use_absorbHealMode"] = true,
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["use_absorbMode"] = true,
+                            ["event"] = "Unit Characteristics",
+                            ["unit"] = "nameplate",
+                            ["use_npcId"] = true,
+                            ["spellIds"] = {},
+                            ["subeventPrefix"] = "SPELL",
+                            ["names"] = {},
+                            ["use_unit"] = true,
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["displayText_format_p_time_legacy_floor"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["font"] = "Friz Quadrata TT",
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "T3Jd2BRN", ["type"] = "subbackground"}
+                },
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "7(QIB1jTQ2y",
+                ["load"] = {
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["heroic"] = true,
+                            ["mythic"] = true,
+                            ["normal"] = true
+                        }
+                    },
+                    ["use_encounterid"] = true,
+                    ["encounterid"] = "3135",
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = false,
+                    ["size"] = {["multi"] = {}}
+                },
+                ["fontSize"] = 12,
+                ["justify"] = "LEFT",
+                ["shadowXOffset"] = 1,
+                ["preferToUpdate"] = true,
+                ["parent"] = "Dimensius Assign",
+                ["regionType"] = "text",
+                ["displayText_format_p_format"] = "timed",
+                ["conditions"] = {},
+                ["url"] = "",
+                ["uid"] = "AM-7(QIB1jTQ2y",
+                ["displayText_format_p_time_precision"] = 1,
+                ["wordWrap"] = "WordWrap",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["xOffset"] = 0,
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "P2 Hide inner-most Void Warden Plates (Plater Only)",
+                ["shadowYOffset"] = -1,
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["displayText"] = "",
+                ["config"] = {},
+                ["displayText_format_c_format"] = "none",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["fixedWidth"] = 200,
+                ["information"] = {},
+                ["internalVersion"] = 85
+            },
+            [110] = {
                 ["arcLength"] = 360,
-                ["controlledChildren"] = {[1] = "Antimatter Soak Assign"},
+                ["controlledChildren"] = {
+                    [1] = "Your CC Next Dimensius",
+                    [2] = "P3 Devour Assign",
+                    [3] = "Starshard Nova Assign",
+                    [4] = "Reverse Gravity Assign",
+                    [5] = "Inverse Gravity Assign"
+                },
                 ["authorOptions"] = {},
                 ["preferToUpdate"] = true,
                 ["yOffset"] = 0,
@@ -23259,7 +24959,13 @@ wa.data['assignments'].data = {
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Dimensius Assign",
-                ["sortHybridTable"] = {["Antimatter Soak Assign"] = false},
+                ["sortHybridTable"] = {
+                    ["Your CC Next Dimensius"] = false,
+                    ["Inverse Gravity Assign"] = false,
+                    ["P3 Devour Assign"] = false,
+                    ["Reverse Gravity Assign"] = false,
+                    ["Starshard Nova Assign"] = false
+                },
                 ["fullCircle"] = true,
                 ["useAnchorPerUnit"] = false,
                 ["customAnchorPerUnit"] = "",
@@ -23283,7 +24989,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -23320,7 +25026,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Dimensius - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -23334,14 +25040,644 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [104] = {
+            [111] = {
+                ["iconSource"] = -1,
+                ["displayText_format_icon_format"] = "none",
+                ["adjustedMax"] = "",
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["displayText_format_p_time_format"] = 0,
+                ["url"] = "",
+                ["icon"] = true,
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["keepAspectRatio"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["desaturate"] = false,
+                ["font"] = "PT Sans Narrow Bold",
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3135",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["shadowXOffset"] = 1,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "text",
+                ["cooldownTextDisabled"] = false,
+                ["tocversion"] = 110200,
+                ["alpha"] = 1,
+                ["uid"] = "AM-9Ic065hgq)W",
+                ["fixedWidth"] = 200,
+                ["outline"] = "OUTLINE",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["adjustedMin"] = "",
+                ["shadowYOffset"] = -1,
+                ["cooldownSwipe"] = true,
+                ["customTextUpdate"] = "event",
+                ["automaticWidth"] = "Auto",
+                ["information"] = {["forceEvents"] = false},
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["names"] = {},
+                            ["custom"] = "function(s, e, ...)\
+       if e == \"OPTIONS\" then\
+           local spellID = 119381\
+           local expires = GetTime()+10\
+           local spelltable = C_Spell.GetSpellInfo(spellID)\
+           local id = spelltable and spelltable.iconID\
+           if id then\
+               local icon = CreateTextureMarkup(id, 64, 64, 0, 0, 0, 1, 0, 1)\
+               local state = {\
+                   progressType = \"timed\",\
+                   duration = expires-GetTime(),\
+                   icon = icon,\
+                   expirationTime = expires,\
+                   autoHide = true,\
+               }\
+               s:Update(\"\", state)  \
+           end      \
+           \
+       elseif e == \"NS_DIMENSIUS_YOURCC\" and ... then\
+           local spellID, expires = ...\
+           local spelltable = C_Spell.GetSpellInfo(spellID)\
+           local id = spelltable and spelltable.iconID\
+           if id then\
+               local icon = CreateTextureMarkup(id, 64, 64, 0, 0, 0, 1, 0, 1)\
+               local state = {\
+                   progressType = \"timed\",\
+                   duration = expires-GetTime(),\
+                   icon = icon,\
+                   expirationTime = expires,\
+                   autoHide = true,\
+               }\
+               s:Update(\"\", state)   \
+           end     \
+       elseif (e == \"NS_DIMENSIUS_YOURCC_HIDE\" or e == \"NS_DIMENSIUS_CCTABLE_HIDE\") and ... then\
+           s:RemoveAll() \
+       end\
+   end",
+                            ["events"] = "NS_DIMENSIUS_YOURCC NS_DIMENSIUS_YOURCC_HIDE NS_DIMENSIUS_CCTABLE_HIDE",
+                            ["subeventPrefix"] = "SPELL",
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
+                            ["spellIds"] = {},
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "any",
+                    ["customTriggerLogic"] = "",
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["internalVersion"] = 85,
+                ["displayText_format_p_pad"] = false,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["AMOriginalUUID"] = "9Ic065hgq)W",
+                ["preferToUpdate"] = true,
+                ["displayText_format_p_round_type"] = "ceil",
+                ["version"] = 55,
+                ["displayText_format_c_format"] = "none",
+                ["height"] = 70,
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["AMModified"] = true,
+                ["zoom"] = 0,
+                ["useAdjustededMax"] = false,
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["subRegions"] = {
+                    [1] = {["amId"] = "GpISNxBH", ["type"] = "subbackground"}
+                },
+                ["width"] = 70,
+                ["authorOptions"] = {},
+                ["progressSource"] = {[1] = -1, [2] = ""},
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["config"] = {},
+                ["displayText_format_p_time_legacy_floor"] = true,
+                ["useCooldownModRate"] = true,
+                ["displayText_format_p_time_precision"] = 1,
+                ["xOffset"] = 0,
+                ["displayText"] = "YOUR %icon NEXT",
+                ["anchorFrameParent"] = false,
+                ["customText"] = "\
+   \
+   ",
+                ["cooldownEdge"] = false,
+                ["displayText_format_p_pad_mode"] = "left",
+                ["justify"] = "LEFT",
+                ["displayText_format_p_pad_max"] = 8,
+                ["id"] = "Your CC Next Dimensius",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "NSAPI:TTS(\"CC\")",
+                        ["do_custom"] = true
+                    },
+                    ["init"] = {
+                        ["do_custom_load"] = false,
+                        ["custom"] = "\
+   \
+   ",
+                        ["do_custom"] = false
+                    },
+                    ["finish"] = {}
+                },
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["wordWrap"] = "WordWrap",
+                ["semver"] = "1.0.54",
+                ["inverse"] = false,
+                ["parent"] = "Dimensius - Assign Texts",
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["conditions"] = {},
+                ["cooldown"] = false,
+                ["displayText_format_p_time_dynamic_threshold"] = 0
+            },
+            [112] = {
+                ["outline"] = "OUTLINE",
+                ["displayText_format_text_format"] = "none",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["parent"] = "Dimensius - Assign Texts",
+                ["displayText_format_p_time_dynamic_threshold"] = 0,
+                ["shadowYOffset"] = -1,
+                ["anchorPoint"] = "CENTER",
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "gZuB)Swn9cX",
+                ["displayText_format_p_time_format"] = 0,
+                ["displayText_format_p_pad_mode"] = "left",
+                ["automaticWidth"] = "Auto",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "if aura_env.state.marker then\
+       local text = \"{rt\"..aura_env.state.marker..\"}\"..aura_env.state.marker\
+       SendChatMessage(text, \"SAY\")\
+       C_Timer.After(2, function()\
+               SendChatMessage(text, \"SAY\")        \
+       end)\
+       C_Timer.After(4, function()\
+               SendChatMessage(text, \"SAY\")        \
+       end)\
+       C_Timer.After(6, function()\
+               SendChatMessage(text, \"SAY\")        \
+       end)    \
+   end\
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["init"] = {
+                        ["do_custom_load"] = false,
+                        ["custom"] = "aura_env.debug = false\
+   aura_env.cast = aura_env.debug and 8936 or 1233539\
+   aura_env.marklist = {\
+       [\"star\"] = 1,\
+       [\"circle\"] = 2,\
+       [\"diamond\"] = 3,\
+       [\"triangle\"] = 4,\
+       [\"moon\"] = 5,\
+       [\"square\"] = 6,\
+       [\"cross\"] = 7,\
+       [\"skull\"] = 8,\
+   }\
+   \
+   aura_env.list = {}\
+   aura_env.marks = {}\
+   \
+   aura_env.MRT = function(e)\
+       aura_env.list = {}\
+       aura_env.marks = {}\
+       aura_env.units = {}\
+       aura_env.me = \"\"\
+       local note = NSAPI:GetNote()\
+       local list = false\
+       if note == \"\" then return end\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           if strlower(line) == \"nsdevourstart\" then\
+               list = true            \
+           elseif strlower(line) == \"nsdevourend\" then\
+               list = false          \
+               if aura_env_me ~= \"\" and aura_env.list[aura_env.me] then\
+                   for k, v in ipairs(aura_env.list[aura_env.me]) do\
+                       aura_env.units[UnitGUID(v)] = true\
+                   end\
+               end\
+           end        \
+           if list and line and line ~= \"\" then \
+               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                   if UnitExists(name) then\
+                       if UnitInRaid(name) then\
+                           local unit = \"raid\"..UnitInRaid(name)\
+                           local mark = \"\"\
+                           for word in line:gmatch(\"([^{]+)}\") do\
+                               mark = word\
+                           end\
+                           local marknum = aura_env.marklist[mark] or 0\
+                           aura_env.list[marknum] = aura_env.list[marknum] or {}\
+                           table.insert(aura_env.list[marknum], unit)\
+                           if UnitIsUnit(\"player\", name) then\
+                               aura_env.marks[marknum] = true \
+                               aura_env.me = marknum\
+                           end\
+                       end\
+                   end\
+               end\
+           end\
+       end\
+   end\
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["names"] = {},
+                            ["custom"] = "function(s, e, ...)\
+       if e == \"OPTIONS\" then        \
+           local state = {\
+               progressType = \"timed\",\
+               duration = 7,\
+               expirationTime = 7+GetTime(),\
+               text = \"Devour {rt\"..math.random(1, 8)..\"}\",\
+               autoHide = true,\
+           }\
+           s:Update(\"\", state)\
+       elseif e == \"NSAPI_ENCOUNTER_START\" then\
+           aura_env.MRT()\
+       else\
+           if e == \"UNIT_SPELLCAST_START\" and not NSAPI.disable then\
+               local u, cast, spellID = ... -- Unit event\
+               if spellID == aura_env.cast and aura_env.me ~= \"\" then\
+                   local state = {\
+                       progressType = \"timed\",\
+                       duration = 7,\
+                       expirationTime = 7+GetTime(),\
+                       text = \"Devour {rt\"..aura_env.me..\"}\",\
+                       marker = aura_env.me,\
+                       autoHide = true,\
+                   }\
+                   s:Update(\"\", state)\
+               end\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   ",
+                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
+                            ["spellIds"] = {},
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "custom",
+                    ["customTriggerLogic"] = "function(t)\
+       return t[1]\
+   end",
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["displayText_format_p_time_legacy_floor"] = true,
+                ["displayText_format_p_pad"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["internalVersion"] = 85,
+                ["preferToUpdate"] = true,
+                ["font"] = "PT Sans Narrow Bold",
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "gTz1Cx9t", ["type"] = "subbackground"}
+                },
+                ["load"] = {
+                    ["use_zoneIds"] = false,
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3135",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["instance_type"] = {},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["displayText_format_p_round_type"] = "ceil",
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["conditions"] = {},
+                ["shadowXOffset"] = 1,
+                ["url"] = "",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["regionType"] = "text",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["uid"] = "AM-gZuB)Swn9cX",
+                ["yOffset"] = 0,
+                ["displayText_format_p_time_precision"] = 1,
+                ["anchorFrameParent"] = false,
+                ["authorOptions"] = {},
+                ["justify"] = "LEFT",
+                ["tocversion"] = 110200,
+                ["semver"] = "1.0.54",
+                ["displayText_format_p_pad_max"] = 8,
+                ["id"] = "P3 Devour Assign",
+                ["displayText"] = "%text",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["customTextUpdate"] = "event",
+                ["config"] = {},
+                ["xOffset"] = 0,
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["fixedWidth"] = 200,
+                ["information"] = {["forceEvents"] = false},
+                ["wordWrap"] = "WordWrap"
+            },
+            [113] = {
+                ["outline"] = "OUTLINE",
+                ["displayText_format_text_format"] = "none",
+                ["wagoID"] = "Y7yEWhBqV",
+                ["parent"] = "Dimensius - Assign Texts",
+                ["displayText_format_p_time_dynamic_threshold"] = 0,
+                ["shadowYOffset"] = -1,
+                ["anchorPoint"] = "CENTER",
+                ["AMModified"] = true,
+                ["AMOriginalUUID"] = "QedOjj96GVT",
+                ["displayText_format_p_time_format"] = 0,
+                ["displayText_format_p_pad_mode"] = "left",
+                ["automaticWidth"] = "Auto",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "if aura_env.state.marker then\
+       local text = \"{rt\"..aura_env.state.text..\"}\"..aura_env.state.text\
+       SendChatMessage(text, \"SAY\")\
+       C_Timer.After(2, function()\
+               SendChatMessage(text, \"SAY\")        \
+       end)\
+   end\
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["init"] = {
+                        ["do_custom_load"] = false,
+                        ["custom"] = "aura_env.debug = false\
+   aura_env.cast = aura_env.debug and 8936 or 1251619\
+   aura_env.text = {\"Left\", \"Middle\", \"Right\"}\
+   \
+   aura_env.MRT = function(e)\
+       local note = NSAPI:GetNote()\
+       if note == \"\" then return end\
+       local list = false\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           if strlower(line) == \"nsnovastart\" then\
+               list = true        \
+               aura_env.count = 0    \
+               aura_env.list = {}\
+               aura_env.units = {}\
+               aura_env.myspot = {}\
+               aura_env.me = {}\
+           elseif strlower(line) == \"nsnovend\" then\
+               list = false          \
+           end        \
+           if list and line and line ~= \"\" then         \
+               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                   if UnitExists(name) then\
+                       if UnitInRaid(name) then\
+                           local unit = \"raid\"..UnitInRaid(name)\
+                           aura_env.list[aura_env.count] = aura_env.list[aura_env.count] or {}\
+                           table.insert(aura_env.list[aura_env.count], unit)\
+                           if UnitIsUnit(\"player\", name) then\
+                               aura_env.me[aura_env.count] = true\
+                               aura_env.myspot[aura_env.count] = #aura_env.list[aura_env.count]\
+                           end\
+                       end\
+                   end\
+               end    \
+               aura_env.count = aura_env.count+1\
+           end\
+       end\
+   end\
+   \
+   \
+   ",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["names"] = {},
+                            ["custom"] = "function(s, e, ...)\
+       if e == \"OPTIONS\" then        \
+           local state = {\
+               progressType = \"timed\",\
+               duration = 7,\
+               expirationTime = 7+GetTime(),\
+               text = aura_env.text[math.random(1, 3)],\
+               autoHide = true,\
+           }\
+           s:Update(\"\", state)\
+       elseif e == \"NSAPI_ENCOUNTER_START\" then\
+           aura_env.MRT()\
+           aura_env.casts = 0\
+       else\
+           if e == \"UNIT_SPELLCAST_START\" and not NSAPI.disable then\
+               local u, cast, spellID = ... -- Unit event\
+               if spellID == aura_env.cast then\
+                   aura_env.casts = aura_env.casts+1\
+                   if aura_env.me[aura_env.casts] then\
+                       local state = {\
+                           progressType = \"timed\",\
+                           duration = 5,\
+                           expirationTime = 5+GetTime(),\
+                           text = aura_env.text[aura_env.myspot[aura_env.casts]],\
+                           autoHide = true,\
+                       }\
+                       s:Update(\"\", state)\
+                   end\
+               end\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   ",
+                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["check"] = "event",
+                            ["custom_type"] = "stateupdate",
+                            ["spellIds"] = {},
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "custom",
+                    ["customTriggerLogic"] = "function(t)\
+       return t[1]\
+   end",
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["displayText_format_p_time_legacy_floor"] = true,
+                ["displayText_format_p_pad"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["internalVersion"] = 85,
+                ["preferToUpdate"] = true,
+                ["font"] = "PT Sans Narrow Bold",
+                ["version"] = 55,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "WktI7kuv", ["type"] = "subbackground"}
+                },
+                ["load"] = {
+                    ["use_zoneIds"] = false,
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3135",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["role"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["spec"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["displayText_format_p_round_type"] = "ceil",
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["conditions"] = {},
+                ["shadowXOffset"] = 1,
+                ["url"] = "",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["regionType"] = "text",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["uid"] = "AM-QedOjj96GVT",
+                ["yOffset"] = 0,
+                ["displayText_format_p_time_precision"] = 1,
+                ["anchorFrameParent"] = false,
+                ["authorOptions"] = {},
+                ["justify"] = "LEFT",
+                ["tocversion"] = 110200,
+                ["semver"] = "1.0.54",
+                ["displayText_format_p_pad_max"] = 8,
+                ["id"] = "Starshard Nova Assign",
+                ["displayText"] = "Soak %text",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["customTextUpdate"] = "event",
+                ["config"] = {},
+                ["xOffset"] = 0,
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["fixedWidth"] = 200,
+                ["information"] = {["forceEvents"] = false},
+                ["wordWrap"] = "WordWrap"
+            },
+            [114] = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
                 ["displayText_format_text_format"] = "none",
                 ["AMModified"] = true,
                 ["wagoID"] = "Y7yEWhBqV",
                 ["xOffset"] = 0,
                 ["preferToUpdate"] = true,
-                ["AMOriginalUUID"] = "Zf4NiO8xz83",
+                ["AMOriginalUUID"] = "duNwNEQ6GKr",
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["outline"] = "OUTLINE",
@@ -23350,132 +25686,22 @@ wa.data['assignments'].data = {
                 ["automaticWidth"] = "Auto",
                 ["actions"] = {
                     ["start"] = {
-                        ["custom"] = "if aura_env.state.soak and aura_env.state.presoak then\
-       NSAPI:TTS(aura_env.state.soak)\
+                        ["custom"] = "if aura_env.state.text then\
+       NSAPI:TTS(aura_env.state.text)\
+       local text = aura_env.state.text\
+       SendChatMessage(text, \"SAY\")\
+       C_Timer.After(2, function()\
+               SendChatMessage(text, \"SAY\")        \
+       end)\
    end",
                         ["do_custom"] = true
                     },
                     ["init"] = {
                         ["custom"] = "aura_env.debug = false\
-   aura_env.cast = aura_env.debug and 8936 or 1243690\
-   \
-   \
-   aura_env.MRT = function()\
-       aura_env.list = {}\
-       local note = NSAPI:GetNote()\
-       local list = false\
-       aura_env.found = false\
-       aura_env.me = false\
-       if NSAPI.disable then return \"\" end\
-       for line in note:gmatch('[^\\r\\n]+') do\
-           --check for start/end of the name list\
-           if strlower(line) == \"nsantimatterend\" then\
-               aura_env.found = true\
-               list = false\
-           elseif list then \
-               aura_env.count = aura_env.count+1\
-               aura_env.list[aura_env.count] = {}\
-               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
-                   if UnitInRaid(name) then\
-                       local u = \"raid\"..UnitInRaid(name)\
-                       if UnitIsUnit(\"player\", u) then aura_env.me = true end\
-                       table.insert(aura_env.list[aura_env.count], u)\
-                   end\
-               end\
-           elseif strlower(line) == \"nsantimatterstart\" then\
-               list = true\
-               aura_env.count = 0\
-           end        \
-       end\
-       if not aura_env.found then return end -- disable auto assign for now\
-       -- not using this for now but maybe auto assigning people later, think 5 per is good?\
-       if not aura_env.found then\
-           \
-           -- no note found, so we auto assign      \
-           local units = {}  \
-           local healers = {}\
-           for unit in WA_IterateGroupMembers() do\
-               if UnitIsVisible(unit) then\
-                   unit = \"raid\"..UnitInRaid(unit)\
-                   if NSAPI.HasNSRT[unit] then -- exclude people that didn't send their spec data, meaning they don't have the addon, meaning they are very likely a buyer\
-                       local G = destGUID or UnitGUID(unit)\
-                       local spec = (aura_env.specs and aura_env.specs[unit]) or (NSAPI and NSAPI:GetSpecs(unit)) or WeakAuras.SpecForUnit(unit)\
-                       local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
-                       if prio > 6 then -- do not add tanks\
-                           if prio >= 33 then\
-                               table.insert(healers, {unit, G, prio})\
-                           else                                                               \
-                               table.insert(units, {unit, G, prio})\
-                           end\
-                       end \
-                   end\
-               end\
-           end\
-           if #units+#healers < 2 then return end\
-           aura_env.count = 2\
-           aura_env.found = true\
-           table.sort(healers, \
-               function(a, b)\
-                   if a[3] == b[3] then -- sort by GUID if same spec\
-                       return a[2] < b[2]\
-                   else\
-                       return a[3] < b[3]\
-                   end\
-           end) -- a < b low first, a > b high first  \
-           table.sort(units, \
-               function(a, b)\
-                   if a[3] == b[3] then -- sort by GUID if same spec\
-                       return a[2] < b[2]\
-                   else\
-                       return a[3] < b[3]\
-                   end\
-           end) -- a < b low first, a > b high first  \
-           aura_env.list = {\
-               [1] = {},\
-               [2] = {},\
-           }       \
-           \
-           \
-           for i=1, #healers, 2 do\
-               if units[i] then                \
-                   table.insert(aura_env.list[1], healers[i][1])\
-                   if UnitIsUnit(healers[i][1], \"player\") then\
-                       aura_env.me = true\
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsantimatterstart\", \"\", 1)\
-                   end\
-               end \
-           end\
-           for i=2, #healers, 2 do\
-               if units[i] then                \
-                   table.insert(aura_env.list[2], healers[i][1])\
-                   if UnitIsUnit(healers[i][1], \"player\") then\
-                       aura_env.me = true\
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsantimatterstart\", \"\", 2)\
-                   end\
-               end \
-           end\
-           \
-           \
-           for i=1, #units, 2 do\
-               if units[i] then                \
-                   table.insert(aura_env.list[1], units[i][1])\
-                   if UnitIsUnit(units[i][1], \"player\") then\
-                       aura_env.me = true\
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsantimatterstart\", \"\", 1)\
-                   end\
-               end \
-           end\
-           for i=2, #units, 2 do\
-               if units[i] then                \
-                   table.insert(aura_env.list[2], units[i][1])\
-                   if UnitIsUnit(units[i][1], \"player\") then\
-                       aura_env.me = true\
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsantimatterstart\", \"\", 2)\
-                   end\
-               end \
-           end\
-       end\
-   end\
+   aura_env.debuff = aura_env.debug and 774 or 1243577\
+   aura_env.filter = aura_env.debug and \"HELPFUL\" or \"HARMFUL\"\
+   aura_env.delay = aura_env.debug and 5 or 0.1\
+   aura_env.text = {\"FRONT\", \"BACK\", \"MARKER\"}\
    \
    \
    aura_env.spec = {\
@@ -23487,6 +25713,261 @@ wa.data['assignments'].data = {
        [66]   =  4, -- Prot Pally\
        [73]   =  5, -- Prot Warrior\
        [104]  =  6, -- Guardian Druid    \
+       \
+       [256]  = 7, -- Priest: Discipline \
+       [257]  = 8, -- Priest: Holy\
+       [65]   = 9, -- Paladin: Holy\
+       [270]  = 10, -- Monk: Mistweaver\
+       [1468] = 11, -- Evoker: Preservation    \
+       [105]  = 12, -- Druid: Restoration\
+       [264]  = 13, -- Shaman: Restoration\
+       \
+       -- Melee\
+       [251]  = 14, -- Death Knight: Frost\
+       [252]  = 15, -- Death Knight: Unholy\
+       [263]  = 16, -- Shaman: Enhancement\
+       [103]  = 17, -- Druid: Feral \
+       [259]  = 18, -- Rogue: Assassination  \
+       [260]  = 19, -- Rogue: Outlaw  \
+       [261]  = 20, -- Rogue: Subtlety\
+       [255]  = 21, -- Hunter: Survival\
+       [70]   = 22, -- Paladin: Retribution\
+       [71]   = 23, -- Warrior: Arms  \
+       [72]   = 24, -- Warrior: Fury \
+       [269]  = 25, -- Monk: Windwalker\
+       [577]  = 26, -- Demon Hunter: Havoc\
+       \
+       -- Ranged\
+       [258]  = 27, -- Priest: Shadow\
+       [1467] = 28, -- Evoker: Devastation\
+       [1473] = 29, -- Evoker: Augmentation\
+       [102]  = 30, -- Druid: Balance\
+       [262]  = 31, -- Shaman: Elemental \
+       [265]  = 32, -- Warlock: Affliction \
+       [266]  = 33, -- Warlock: Demonology  \
+       [267]  = 34, -- Warlock: Destruction\
+       [64]   = 35, -- Mage: Frost\
+       [62]   = 36, -- Mage: Arcane\
+       [63]   = 37, -- Mage: Fire\
+       [253]  = 38, -- Hunter: Beast Mastery\
+       [254]  = 39, -- Hunter: Marksmanship\
+       \
+   }",
+                        ["do_custom"] = true
+                    },
+                    ["finish"] = {}
+                },
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "stateupdate",
+                            ["custom_hide"] = "timed",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
+                            ["names"] = {},
+                            ["check"] = "event",
+                            ["custom"] = "function(s, e, ...)    \
+       if e == \"OPTIONS\" then        \
+           local expires = GetTime()+5\
+           local state = {\
+               progressType = \"timed\",\
+               duration = expires-GetTime(),\
+               expirationTime = expires,\
+               text = aura_env.text[math.random(1, 3)],                        \
+               autoHide = true,\
+           }\
+           s:Update(\"\", state)\
+       elseif e == \"NSAPI_ENCOUNTER_START\" then\
+           NSAPI:GetNote(true)        \
+       elseif not NSAPI.disable then        \
+           if e == \"NS_ASSIGN_EVENT\" and ... and aura_env.id == ... then\
+               table.sort(aura_env.affected, \
+                   function(a, b)\
+                       if a[3] == b[3] then -- sort by GUID if same spec\
+                           return a[2] < b[2]\
+                       else\
+                           return a[3] < b[3]\
+                       end    \
+               end) -- a < b low first, a > b high first  \
+               local now = GetTime()\
+               for i, v in ipairs(aura_env.affected) do\
+                   if UnitIsUnit(v[1], \"player\") then\
+                       local expires = select(6, WA_GetUnitAura(\"player\", aura_env.debuff, aura_env.filter)) or GetTime()+5\
+                       local state = {\
+                           progressType = \"timed\",\
+                           duration = expires-GetTime(),\
+                           expirationTime = expires,\
+                           text = aura_env.text[i],                        \
+                           autoHide = true,\
+                       }\
+                       s:Update(\"\", state)\
+                   end             \
+               end                 \
+           elseif e == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
+               local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellID = ... -- full CLEU\
+               if spellID == aura_env.debuff then                \
+                   local now = GetTime()\
+                   if not aura_env.last or aura_env.last < now - 5 then\
+                       aura_env.last = now\
+                       aura_env.affected = {}\
+                       local aura_env = aura_env\
+                       C_Timer.After(aura_env.delay, function()\
+                               WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id)\
+                       end)\
+                   end\
+                   local i = UnitInRaid(destName)\
+                   local unit = i and \"raid\"..i\
+                   if unit and UnitExists(unit) and UnitInRange(unit) then\
+                       local G = destGUID or UnitGUID(unit)\
+                       local spec = (aura_env.specs and aura_env.specs[unit]) or (NSAPI and NSAPI:GetSpecs(unit)) or WeakAuras.SpecForUnit(unit)\
+                       local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
+                       table.insert(aura_env.affected, {unit, G, prio})\
+                   end\
+               end\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   ",
+                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_ASSIGN_EVENT",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["activeTriggerMode"] = -10
+                },
+                ["displayText_format_p_format"] = "Number",
+                ["displayText_format_p_time_legacy_floor"] = true,
+                ["displayText_format_p_pad"] = false,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["authorOptions"] = {},
+                ["displayText"] = "%text (%p)",
+                ["parent"] = "Dimensius - Assign Texts",
+                ["shadowYOffset"] = -1,
+                ["displayText_format_2.p_time_mod_rate"] = true,
+                ["displayText_format_p_round_type"] = "ceil",
+                ["displayText_format_2.p_time_precision"] = 1,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "7sg9eogu", ["type"] = "subbackground"}
+                },
+                ["displayText_format_2.p_time_format"] = 0,
+                ["customTextUpdate"] = "event",
+                ["load"] = {
+                    ["use_never"] = false,
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3135",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {["mythic"] = true}
+                    },
+                    ["spec"] = {["multi"] = {}},
+                    ["use_difficulty"] = false,
+                    ["class"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
+                ["url"] = "",
+                ["displayText_format_p_time_mod_rate"] = true,
+                ["fontSize"] = 50,
+                ["source"] = "import",
+                ["internalVersion"] = 85,
+                ["shadowXOffset"] = 1,
+                ["wordWrap"] = "WordWrap",
+                ["displayText_format_2.p_format"] = "timed",
+                ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
+                ["regionType"] = "text",
+                ["displayText_format_p_time_dynamic_threshold"] = 0,
+                ["font"] = "PT Sans Narrow Bold",
+                ["version"] = 55,
+                ["displayText_format_p_pad_mode"] = "left",
+                ["selfPoint"] = "BOTTOM",
+                ["anchorFrameParent"] = false,
+                ["displayText_format_2.p_time_dynamic_threshold"] = 3,
+                ["conditions"] = {},
+                ["config"] = {},
+                ["semver"] = "1.0.54",
+                ["tocversion"] = 110200,
+                ["id"] = "Reverse Gravity Assign",
+                ["displayText_format_p_time_precision"] = 1,
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["uid"] = "AM-duNwNEQ6GKr",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["justify"] = "LEFT",
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["fixedWidth"] = 200,
+                ["information"] = {["forceEvents"] = false},
+                ["displayText_format_p_pad_max"] = 8
+            },
+            [115] = {
+                ["displayText_format_2.p_time_legacy_floor"] = false,
+                ["displayText_format_text_format"] = "none",
+                ["AMModified"] = true,
+                ["wagoID"] = "Y7yEWhBqV",
+                ["xOffset"] = 0,
+                ["preferToUpdate"] = true,
+                ["AMOriginalUUID"] = "4w0wNr2)Z9s",
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["outline"] = "OUTLINE",
+                ["displayText_format_p_time_format"] = 0,
+                ["displayText_format_soak_format"] = "none",
+                ["automaticWidth"] = "Auto",
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "\
+   \
+   ",
+                        ["do_custom"] = false
+                    },
+                    ["init"] = {
+                        ["custom"] = "aura_env.debug = false\
+   aura_env.inverse = aura_env.debug and 774 or 1234244\
+   aura_env.crushing = aura_env.debug and 8936 or 1234243\
+   aura_env.filter = aura_env.debug and \"HELPFUL\" or \"HARMFUL\"\
+   aura_env.delay = aura_env.debug and 5 or 0.2\
+   aura_env.text = {\"|cFFFF0000Melee|r\", \"|cFF00FF00Healer|r\", \"|cFF409FFFRanged|r\"}\
+   \
+   \
+   aura_env.spec = {\
+       [0]    =  0, -- no info\
+       -- Tanks\
+       [250]  =  1, -- Blood DK\
+       [581]  =  2, -- Veng DH\
+       [268]  =  3, -- Brewmaster\
+       [66]   =  4, -- Prot Pally\
+       [73]   =  5, -- Prot Warrior\
+       [104]  =  6, -- Guardian Druid\
        \
        -- Melee\
        [577]  =  7, -- Demon Hunter: Havoc\
@@ -23518,16 +25999,91 @@ wa.data['assignments'].data = {
        [266]  = 31, -- Warlock: Demonology  \
        [267]  = 32, -- Warlock: Destruction\
        \
+       -- Healers\
        [65]   = 33, -- Paladin: Holy\
        [270]  = 34, -- Monk: Mistweaver\
        [1468] = 35, -- Evoker: Preservation\
-       \
-       -- Healers\
        [105]  = 36, -- Druid: Restoration\
        [264]  = 37, -- Shaman: Restoration\
        [256]  = 38, -- Priest: Discipline \
        [257]  = 39, -- Priest: Holy\
-   }",
+   }\
+   \
+   aura_env.MRT = function()\
+       aura_env.list = {}\
+       local note = NSAPI:GetNote()\
+       local list = false\
+       aura_env.found = false\
+       if NSAPI.disable then return \"\" end\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           --check for start/end of the name list\
+           if strlower(line) == \"nsgravityend\" then\
+               aura_env.found = true\
+               list = false\
+           elseif list then \
+               for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                   if strlower(name) == \"melee\" then\
+                       aura_env.count = 1\
+                   elseif strlower(name) == \"healer\" then\
+                       aura_env.count = 2\
+                   elseif strlower(name) == \"ranged\" then\
+                       aura_env.count = 3\
+                   end\
+                   if UnitInRaid(name) then\
+                       local u = \"raid\"..UnitInRaid(name)\
+                       if UnitIsUnit(\"player\", u) then aura_env.me = aura_env.count end\
+                   end\
+               end\
+           elseif strlower(line) == \"nsgravitystart\" then\
+               list = true\
+               aura_env.count = 0\
+           end        \
+       end\
+       if not aura_env.found then\
+           -- no note found, so we auto assign      \
+           local units = {}  \
+           for unit in WA_IterateGroupMembers() do\
+               if UnitIsVisible(unit) then\
+                   unit = \"raid\"..UnitInRaid(unit)\
+                   if NSAPI.HasNSRT[unit] then -- exclude people that didn't send their spec data, meaning they don't have the addon, meaning they are very likely a buyer\
+                       local G = destGUID or UnitGUID(unit)\
+                       local spec = (aura_env.specs and aura_env.specs[unit]) or (NSAPI and NSAPI:GetSpecs(unit)) or WeakAuras.SpecForUnit(unit)\
+                       local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
+                       table.insert(units, {unit, G, prio})         \
+                   end                    \
+               end\
+           end\
+           if #units < 2 then return end\
+           aura_env.found = true\
+           table.sort(units, \
+               function(a, b)\
+                   if a[3] == b[3] then -- sort by GUID if same spec\
+                       return a[2] < b[2]\
+                   else\
+                       return a[3] < b[3]\
+                   end\
+           end) -- a < b low first, a > b high first  \
+           local third = Round(#units/3)\
+           for i=1, third do\
+               if UnitIsUnit(units[i][1], \"player\") then\
+                   aura_env.me = 2\
+                   WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsgravitystart\", \"\", 2)\
+               end\
+           end    \
+           for i=third+1, third*2 do\
+               if UnitIsUnit(units[i][1], \"player\") then\
+                   aura_env.me = 1\
+                   WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsgravitystart\", \"\", 1)\
+               end\
+           end    \
+           for i=third*2+1, #units do\
+               if UnitIsUnit(units[i][1], \"player\") then\
+                   aura_env.me = 3\
+                   WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", {}, true, \"nsgravitystart\", \"\", 3)\
+               end\
+           end        \
+       end\
+   end",
                         ["do_custom"] = true
                     },
                     ["finish"] = {}
@@ -23537,10 +26093,7 @@ wa.data['assignments'].data = {
                         ["trigger"] = {
                             ["type"] = "custom",
                             ["custom_type"] = "stateupdate",
-                            ["customVariables"] = "{\
-       soak = \"string\",\
-       presoak = \"bool\",\
-   }",
+                            ["custom_hide"] = "timed",
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
@@ -23548,90 +26101,73 @@ wa.data['assignments'].data = {
                             ["spellIds"] = {},
                             ["names"] = {},
                             ["check"] = "event",
-                            ["custom"] = "function(s, e, ...)\
-       if e == \"OPTIONS\" then\
-           local duration = 10\
-           local state= {\
+                            ["custom"] = "function(s, e, ...)    \
+       if e == \"OPTIONS\" then        \
+           local expires = GetTime()+5\
+           local state = {\
                progressType = \"timed\",\
-               soak = math.random(1, 2) == 1 and \"Soak Left\" or \"Soak Right\",\
-               duration = duration,\
-               expirationTime = duration+GetTime(),\
-               presoak = math.random(1, 2) == 1,\
+               duration = expires-GetTime(),\
+               expirationTime = expires,        \
+               text = \"Spread in: \"..aura_env.text[math.random(1, 3)],                  \
                autoHide = true,\
-           }       \
+           }\
            s:Update(\"\", state)\
-           return                 \
-           \
        elseif e == \"NSAPI_ENCOUNTER_START\" then\
-           aura_env.casts = -1\
-           aura_env.specs = NSAPI:GetSpecs()\
-           aura_env.MRT()        \
-       elseif aura_env.found and aura_env.me and not NSAPI.disable then\
-           if e == \"NS_ASSIGN_EVENT\" and ... then\
-               local id, expires, next = ...\
-               if id == aura_env.id then       \
-                   local count = aura_env.casts\
-                   local now = GetTime()\
-                   local duration = 10\
-                   if next then -- event is sent from bossmod so the counter hasn't increased yet, we manually increase it by 2\
-                       duration = expires-now\
-                       count = count+2 \
-                   end \
-                   if count > aura_env.count then count = 1 end -- reset to 1 after the limit from note has been reached, assuming the user wants to repeat it from there  \
-                   if aura_env.list[count] and aura_env.list[count+1] then\
-                       for i, v in ipairs(aura_env.list[count]) do\
-                           if UnitIsUnit(v, \"player\") then  \
-                               local state= {\
-                                   progressType = \"timed\",\
-                                   soak = \"Soak Left\",\
-                                   presoak = next,\
-                                   duration = duration,\
-                                   expirationTime = duration+now,\
-                                   autoHide = true,\
-                               }       \
-                               s:Update(\"\", state)\
-                               if next then\
-                                   WeakAuras.ScanEvents(\"NS_ANTIMATTER_SOAK\", \"LEFT\", duration)\
-                               end\
-                               return                 \
-                           end\
-                       end\
-                       for i, v in ipairs(aura_env.list[count+1]) do\
-                           if UnitIsUnit(v, \"player\") then                              \
-                               local state= {\
-                                   progressType = \"timed\",\
-                                   soak = \"Soak Right\",\
-                                   presoak = next,\
-                                   duration = duration,\
-                                   expirationTime = duration+now,\
-                                   autoHide = true,\
-                               }       \
-                               s:Update(\"\", state)\
-                               if next then\
-                                   WeakAuras.ScanEvents(\"NS_ANTIMATTER_SOAK\", \"RIGHT\", duration)\
-                               end\
-                               return                 \
-                           end\
-                       end\
-                   end\
-               end\
+           aura_env.MRT()\
+       elseif not NSAPI.disable then        \
+           if e == \"NS_ASSIGN_EVENT\" and ... and aura_env.id == ... then\
+               table.sort(aura_env.affected, \
+                   function(a, b)\
+                       if a[3] == b[3] then -- sort by GUID if same spec\
+                           return a[2] < b[2]\
+                       else\
+                           return a[3] < b[3]\
+                       end    \
+               end) -- a < b low first, a > b high first  \
+               local now = GetTime()\
+               for i, v in ipairs(aura_env.affected) do\
+                   if UnitIsUnit(v[1], \"player\") then\
+                       local pos = (UnitGroupRolesAssigned(\"player\") == \"HEALER\" and \"Healer\") or (v[3] <= 19 and \"Melee\") or \"Ranged\"\
+                       SendChatMessage(pos, \"SAY\")\
+                       C_Timer.After(2, function()\
+                               SendChatMessage(pos, \"SAY\")        \
+                       end)\
+                       return -- end early if player has inverse\
+                   end             \
+               end             \
                \
-           elseif e == \"TRIGGER\" then -- start alert from bossmod trigger as 3seconds is a bit low, will likely only work for the first group though?\
-               local trigger, table = ...\
-               if table[\"\"] and table[\"\"].expirationTime then\
-                   WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, table[\"\"].expirationTime, true)\
-               end\
-           else\
-               local u, cast, spellID = ... -- Unit event\
-               if spellID == aura_env.cast then\
-                   aura_env.casts = aura_env.casts+2\
-                   if aura_env.casts > aura_env.count then aura_env.casts = 1 end -- reset to 1 after the limit from note has been reached, assuming the user wants to repeat it from there \
-                   if aura_env.list[aura_env.casts] then\
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, 0, false)            \
+               local expires = select(6, WA_GetUnitAura(\"player\", aura_env.crushing, aura_env.filter)) or GetTime()+5            \
+               local state = {\
+                   progressType = \"timed\",\
+                   duration = expires-GetTime(),\
+                   expirationTime = expires,\
+                   text = \"Spread in: \"..aura_env.text[aura_env.me],                        \
+                   autoHide = true,\
+               }\
+               s:Update(\"\", state)    \
+           elseif e == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
+               local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellID = ... -- full CLEU\
+               if spellID == aura_env.inverse then                \
+                   local now = GetTime()\
+                   if not aura_env.last or aura_env.last < now - 5 then\
+                       aura_env.last = now\
+                       aura_env.affected = {}\
+                       local aura_env = aura_env\
+                       C_Timer.After(aura_env.delay, function()\
+                               WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id)\
+                       end)\
+                   end\
+                   local i = UnitInRaid(destName)\
+                   local unit = i and \"raid\"..i\
+                   if unit and UnitExists(unit) then\
+                       local G = destGUID or UnitGUID(unit)\
+                       local spec = (aura_env.specs and aura_env.specs[unit]) or (NSAPI and NSAPI:GetSpecs(unit)) or WeakAuras.SpecForUnit(unit)\
+                       local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
+                       table.insert(aura_env.affected, {unit, G, prio})\
                    end\
                end\
            end\
-       end    \
+       end\
    end\
    \
    \
@@ -23640,44 +26176,33 @@ wa.data['assignments'].data = {
    \
    \
    \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
    ",
-                            ["events"] = "UNIT_SPELLCAST_SUCCEEDED:boss NSAPI_ENCOUNTER_START TRIGGER:2 NS_ASSIGN_EVENT",
+                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_ASSIGN_EVENT",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
                     },
                     [2] = {
                         ["trigger"] = {
-                            ["use_remaining"] = true,
-                            ["spellId"] = "1243690",
-                            ["remaining_operator"] = "<=",
-                            ["event"] = "Boss Mod Timer",
+                            ["type"] = "aura2",
+                            ["auraspellids"] = {[1] = "1234243"},
                             ["unit"] = "player",
-                            ["use_spellId"] = true,
-                            ["remaining"] = "10",
-                            ["extend"] = "3.25",
-                            ["type"] = "addons",
-                            ["use_extend"] = true,
-                            ["debuffType"] = "HELPFUL"
+                            ["useExactSpellId"] = true,
+                            ["debuffType"] = "HARMFUL"
                         },
                         ["untrigger"] = {}
                     },
-                    ["disjunctive"] = "custom",
-                    ["customTriggerLogic"] = "function(t)\
-       return t[1]\
-   end\
-   \
-   \
-   ",
+                    [3] = {
+                        ["trigger"] = {
+                            ["type"] = "aura2",
+                            ["auraspellids"] = {[1] = "1234244"},
+                            ["debuffType"] = "HARMFUL",
+                            ["matchesShowOn"] = "showOnMissing",
+                            ["useExactSpellId"] = true,
+                            ["unit"] = "player"
+                        },
+                        ["untrigger"] = {}
+                    },
                     ["activeTriggerMode"] = -10
                 },
                 ["displayText_format_p_format"] = "Number",
@@ -23704,14 +26229,14 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["authorOptions"] = {},
-                ["displayText"] = "%soak (%p)",
+                ["displayText"] = "%text (%p)",
                 ["parent"] = "Dimensius - Assign Texts",
                 ["shadowYOffset"] = -1,
                 ["displayText_format_2.p_time_mod_rate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0hiGrmjQ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "eD7hvjdr", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
@@ -23722,14 +26247,10 @@ wa.data['assignments'].data = {
                     ["use_encounterid"] = true,
                     ["difficulty"] = {
                         ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
+                        ["multi"] = {["mythic"] = true, ["normal"] = true}
                     },
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = false,
+                    ["use_difficulty"] = true,
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -23745,60 +26266,32 @@ wa.data['assignments'].data = {
                 ["regionType"] = "text",
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["displayText_format_p_pad_mode"] = "left",
                 ["selfPoint"] = "BOTTOM",
                 ["anchorFrameParent"] = false,
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
-                ["conditions"] = {
-                    [1] = {
-                        ["check"] = {
-                            ["trigger"] = 1,
-                            ["variable"] = "presoak",
-                            ["value"] = 1
-                        },
-                        ["changes"] = {
-                            [1] = {
-                                ["value"] = "%soak in (%p)",
-                                ["property"] = "displayText"
-                            },
-                            [2] = {
-                                ["value"] = {
-                                    [1] = 1,
-                                    [2] = 0.25098040699959,
-                                    [3] = 0.25098040699959,
-                                    [4] = 1
-                                },
-                                ["property"] = "color"
-                            }
-                        }
-                    }
-                },
+                ["conditions"] = {},
                 ["config"] = {},
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["tocversion"] = 110200,
-                ["id"] = "Antimatter Soak Assign",
+                ["id"] = "Inverse Gravity Assign",
                 ["displayText_format_p_time_precision"] = 1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["displayText_format_p_decimal_precision"] = 1,
-                ["uid"] = "AM-Zf4NiO8xz83",
-                ["color"] = {
-                    [1] = 0.24705883860588,
-                    [2] = 0.98823535442352,
-                    [3] = 0.24705883860588,
-                    [4] = 1
-                },
+                ["uid"] = "AM-4w0wNr2)Z9s",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["justify"] = "LEFT",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
                 ["information"] = {["forceEvents"] = false},
                 ["displayText_format_p_pad_max"] = 8
             },
-            [105] = {
+            [116] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
-                    [1] = "Living Mass HP Tracker (assuming they have bossid's)",
+                    [1] = "Living Mass HP Tracker",
                     [2] = "Excess Mass List",
                     [3] = "Airborne List",
                     [4] = "Stellar Core List"
@@ -23839,7 +26332,7 @@ wa.data['assignments'].data = {
                 ["sortHybridTable"] = {
                     ["Airborne List"] = false,
                     ["Excess Mass List"] = false,
-                    ["Living Mass HP Tracker (assuming they have bossid's)"] = false,
+                    ["Living Mass HP Tracker"] = false,
                     ["Stellar Core List"] = false
                 },
                 ["fullCircle"] = true,
@@ -23865,7 +26358,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -23902,7 +26395,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["radius"] = 200,
                 ["id"] = "Dimensius - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -23916,7 +26409,7 @@ wa.data['assignments'].data = {
                 ["information"] = {["forceEvents"] = true},
                 ["limit"] = 6
             },
-            [106] = {
+            [117] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -23946,16 +26439,12 @@ wa.data['assignments'].data = {
                     ["use_encounterid"] = true,
                     ["difficulty"] = {
                         ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
+                        ["multi"] = {["mythic"] = true}
                     },
                     ["role"] = {},
                     ["class"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = false,
+                    ["use_difficulty"] = true,
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
@@ -24082,12 +26571,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "zp)swKM)GMy",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "GM4HIvFJ", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "BzhMHsOa", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "Y84rSmRz", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "sYhtuFzJ", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "xdyMbWdj",
+                        ["amId"] = "CgROCJOC",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -24102,7 +26591,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "dRMpIcvj",
+                        ["amId"] = "AIg69cfu",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -24150,7 +26639,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_percenthealth_format"] = "Number",
-                        ["amId"] = "TaPkRIRe",
+                        ["amId"] = "ZAwn6q0L",
                         ["text_text_format_3.power_format"] = "none",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_fontType"] = "OUTLINE",
@@ -24209,7 +26698,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "GxWLk1Rf",
+                        ["amId"] = "kPX218ln",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_font"] = "Expressway",
@@ -24247,7 +26736,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
-                        ["amId"] = "C1mXzemt",
+                        ["amId"] = "Oa8lPm0o",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
                         ["text_selfPoint"] = "LEFT",
@@ -24277,7 +26766,7 @@ wa.data['assignments'].data = {
                         ["text_wordWrap"] = "WordWrap"
                     },
                     [8] = {
-                        ["amId"] = "AzU4ETYr",
+                        ["amId"] = "XIEmGyuJ",
                         ["border_offset"] = 0,
                         ["border_size"] = 2,
                         ["border_visible"] = false,
@@ -24322,13 +26811,13 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
                 ["frameStrata"] = 1,
                 ["width"] = 200,
-                ["id"] = "Living Mass HP Tracker (assuming they have bossid's)",
+                ["id"] = "Living Mass HP Tracker",
                 ["backgroundColor"] = {
                     [1] = 0.031372550874949,
                     [2] = 0.031372550874949,
@@ -24503,7 +26992,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [107] = {
+            [118] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -24606,12 +27095,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "5zPl(81AU22",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "JhL8cRHf", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "uK87PM6d", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "O2Syx8y1", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "80HPV01N", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "xZqM1IEf",
+                        ["amId"] = "tRQGuZBJ",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -24626,7 +27115,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "dXFATSTH",
+                        ["amId"] = "fujWhR4I",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -24668,7 +27157,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "9zILK3gq",
+                        ["amId"] = "tB6cakqd",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -24716,7 +27205,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "4MtNw0pG",
+                        ["amId"] = "VfoU9gX7",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -24784,7 +27273,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -24804,7 +27293,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [108] = {
+            [119] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -24823,7 +27312,7 @@ wa.data['assignments'].data = {
                 ["sparkOffsetY"] = 0,
                 ["gradientOrientation"] = "HORIZONTAL",
                 ["load"] = {
-                    ["use_never"] = false,
+                    ["use_never"] = true,
                     ["use_ignoreNameRealm"] = false,
                     ["encounterid"] = "3135",
                     ["use_encounterid"] = true,
@@ -24902,12 +27391,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "pBizMHPqdTp",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "TRBmvQHw", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "n17YIXth", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "1RahxhKW", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "8MRNM5TO", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "clE12YFY",
+                        ["amId"] = "WewyQJgp",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -24922,7 +27411,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "IFYC8frk",
+                        ["amId"] = "Dsv74OPB",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -24964,7 +27453,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "cHvkia2r",
+                        ["amId"] = "pHzYAwu6",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -25012,7 +27501,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "v5APFPvh",
+                        ["amId"] = "yLCvgfIo",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -25080,7 +27569,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -25095,7 +27584,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [109] = {
+            [120] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -25198,12 +27687,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "lFouMaGWf6r",
-                ["version"] = 48,
+                ["version"] = 55,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "WKVds8QG", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "sH9eSbpU", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "RFcReAPk", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "oldfjTD3", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "Q0iT1Nyc",
+                        ["amId"] = "ORCpZhci",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -25218,7 +27707,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "JsYtyZnI",
+                        ["amId"] = "vHaqhX7y",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -25260,7 +27749,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "UJZqvivc",
+                        ["amId"] = "angyWes1",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -25308,7 +27797,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "0LAVrjh3",
+                        ["amId"] = "uX6tg6ZV",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -25376,7 +27865,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.47",
+                ["semver"] = "1.0.54",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -25396,720 +27885,7 @@ wa.data['assignments'].data = {
                 ["cooldown"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [110] = {
-                ["wagoID"] = "Y7yEWhBqV",
-                ["authorOptions"] = {},
-                ["preferToUpdate"] = true,
-                ["yOffset"] = 0,
-                ["anchorPoint"] = "CENTER",
-                ["url"] = "",
-                ["actions"] = {
-                    ["start"] = {},
-                    ["init"] = {
-                        ["custom"] = "\
-   \
-   ",
-                        ["do_custom"] = false
-                    },
-                    ["finish"] = {}
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_hide"] = "timed",
-                            ["custom_type"] = "stateupdate",
-                            ["customVariables"] = "{\
-       direction = \"string\",\
-   }",
-                            ["duration"] = "8",
-                            ["event"] = "Health",
-                            ["subeventPrefix"] = "SPELL",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom"] = "function(s, e, ...)\
-       if e == \"OPTIONS\" then\
-           local direction = math.random(1, 2) == 1 and \"LEFT\" or \"RIGHT\"\
-           local duration = 4        \
-           local state = {\
-               progressType = \"timed\",\
-               duration = duration,\
-               expirationTime = duration+GetTime(),\
-               direction = direction,\
-               autoHide = true,\
-           }\
-           s:Update(\"\", state)\
-           return true\
-           \
-       elseif e == \"NS_ANTIMATTER_SOAK\" and ... then\
-           local direction, duration = ...\
-           local state = {\
-               progressType = \"timed\",\
-               duration = duration,\
-               expirationTime = duration+GetTime(),\
-               direction = direction,\
-               autoHide = true,\
-           }\
-           s:Update(\"\", state)\
-           return true\
-       end\
-       \
-   end\
-   \
-   \
-   ",
-                            ["events"] = "NS_ANTIMATTER_SOAK",
-                            ["spellIds"] = {},
-                            ["check"] = "event",
-                            ["names"] = {},
-                            ["unit"] = "player",
-                            ["debuffType"] = "HELPFUL"
-                        },
-                        ["untrigger"] = {}
-                    },
-                    ["activeTriggerMode"] = -10
-                },
-                ["internalVersion"] = 85,
-                ["selfPoint"] = "CENTER",
-                ["desaturate"] = false,
-                ["rotation"] = 180,
-                ["version"] = 48,
-                ["subRegions"] = {
-                    [1] = {["amId"] = "6q1QJIqu", ["type"] = "subbackground"},
-                    [2] = {
-                        ["text_shadowXOffset"] = 1,
-                        ["text_text"] = "",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1
-                        },
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
-                        ["text_justify"] = "CENTER",
-                        ["rotateText"] = "NONE",
-                        ["type"] = "subtext",
-                        ["text_text_format_direction_format"] = "none",
-                        ["text_font"] = "Expressway",
-                        ["amId"] = "yW4PXAuk",
-                        ["text_shadowYOffset"] = -1,
-                        ["text_visible"] = true,
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_fontType"] = "None",
-                        ["text_anchorYOffset"] = -30,
-                        ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                        ["anchor_point"] = "TOP",
-                        ["text_fontSize"] = 40,
-                        ["anchorXOffset"] = 0,
-                        ["text_text_format_n_format"] = "none"
-                    }
-                },
-                ["height"] = 180,
-                ["rotate"] = false,
-                ["load"] = {
-                    ["affixes"] = {},
-                    ["talent"] = {["multi"] = {}},
-                    ["encounterid"] = "3135",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {["normal"] = true, ["heroic"] = true}
-                    },
-                    ["role"] = {
-                        ["multi"] = {["HEALER"] = true, ["DAMAGER"] = true}
-                    },
-                    ["spec"] = {["multi"] = {}},
-                    ["class"] = {["multi"] = {}},
-                    ["use_never"] = false,
-                    ["size"] = {["multi"] = {}}
-                },
-                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-                ["mirror"] = false,
-                ["regionType"] = "texture",
-                ["AMModified"] = true,
-                ["blendMode"] = "BLEND",
-                ["AMOriginalUUID"] = "qMvlia1IbzH",
-                ["uid"] = "AM-qMvlia1IbzH",
-                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
-                ["color"] = {
-                    [1] = 0.24705883860588,
-                    [2] = 0.98823535442352,
-                    [3] = 0.24705883860588,
-                    [4] = 1
-                },
-                ["semver"] = "1.0.47",
-                ["tocversion"] = 110200,
-                ["id"] = "Antimatter Soak Direction Arrow",
-                ["xOffset"] = 0,
-                ["alpha"] = 0.5,
-                ["width"] = 180,
-                ["parent"] = "Dimensius Assign",
-                ["config"] = {},
-                ["anchorFrameType"] = "SCREEN",
-                ["frameStrata"] = 1,
-                ["conditions"] = {
-                    [1] = {
-                        ["check"] = {
-                            ["trigger"] = 1,
-                            ["op"] = "==",
-                            ["variable"] = "direction",
-                            ["value"] = "LEFT"
-                        },
-                        ["changes"] = {
-                            [1] = {["value"] = 270, ["property"] = "rotation"}
-                        }
-                    },
-                    [2] = {
-                        ["check"] = {
-                            ["trigger"] = 1,
-                            ["op"] = "==",
-                            ["variable"] = "direction",
-                            ["value"] = "RIGHT"
-                        },
-                        ["changes"] = {
-                            [1] = {["value"] = 90, ["property"] = "rotation"}
-                        }
-                    }
-                },
-                ["information"] = {},
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                }
-            },
-            [111] = {
-                ["arcLength"] = 360,
-                ["controlledChildren"] = {[1] = "Assignment on Note Push 2"},
-                ["borderBackdrop"] = "Blizzard Tooltip",
-                ["wagoID"] = "Y7yEWhBqV",
-                ["xOffset"] = 0,
-                ["preferToUpdate"] = true,
-                ["yOffset"] = 0,
-                ["sortHybridTable"] = {["Assignment on Note Push 2"] = false},
-                ["load"] = {
-                    ["size"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
-                    ["class"] = {["multi"] = {}},
-                    ["talent"] = {["multi"] = {}}
-                },
-                ["grow"] = "DOWN",
-                ["fullCircle"] = true,
-                ["space"] = 2,
-                ["url"] = "",
-                ["actions"] = {["start"] = {}, ["finish"] = {}, ["init"] = {}},
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["names"] = {},
-                            ["type"] = "aura2",
-                            ["spellIds"] = {},
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["subeventPrefix"] = "SPELL",
-                            ["debuffType"] = "HELPFUL",
-                            ["event"] = "Health",
-                            ["unit"] = "player"
-                        },
-                        ["untrigger"] = {}
-                    }
-                },
-                ["columnSpace"] = 1,
-                ["internalVersion"] = 85,
-                ["authorOptions"] = {},
-                ["selfPoint"] = "TOP",
-                ["align"] = "CENTER",
-                ["regionType"] = "dynamicgroup",
-                ["groupIcon"] = 1505953,
-                ["anchorPoint"] = "TOP",
-                ["stagger"] = 0,
-                ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                ["version"] = 42,
-                ["subRegions"] = {},
-                ["rowSpace"] = 1,
-                ["radius"] = 200,
-                ["AMModified"] = true,
-                ["parent"] = "[NHF] Assignments",
-                ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
-                ["animate"] = false,
-                ["rotation"] = 0,
-                ["scale"] = 1,
-                ["centerType"] = "LR",
-                ["border"] = false,
-                ["anchorFrameFrame"] = "WeakAuras:NS Big Bar Anchor",
-                ["stepAngle"] = 15,
-                ["borderSize"] = 2,
-                ["limit"] = 5,
-                ["gridType"] = "RD",
-                ["frameStrata"] = 1,
-                ["anchorFrameParent"] = false,
-                ["constantFactor"] = "RADIUS",
-                ["borderEdge"] = "Square Full White",
-                ["borderOffset"] = 4,
-                ["semver"] = "1.0.41",
-                ["tocversion"] = 110200,
-                ["id"] = "Assignments on Note Push -  check custom options",
-                ["sort"] = "none",
-                ["alpha"] = 1,
-                ["anchorFrameType"] = "SELECTFRAME",
-                ["useLimit"] = false,
-                ["config"] = {},
-                ["conditions"] = {},
-                ["borderInset"] = 1,
-                ["uid"] = "AM-gnTBDejrTTp",
-                ["AMOriginalUUID"] = "gnTBDejrTTp",
-                ["information"] = {},
-                ["gridWidth"] = 5
-            },
-            [112] = {
-                ["outline"] = "OUTLINE",
-                ["displayText_format_text_format"] = "none",
-                ["displayText_format_url_format"] = "none",
-                ["wagoID"] = "Y7yEWhBqV",
-                ["xOffset"] = 0,
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["shadowYOffset"] = -1,
-                ["anchorPoint"] = "CENTER",
-                ["displayText_format_p_time_format"] = 0,
-                ["customTextUpdate"] = "event",
-                ["url"] = "",
-                ["actions"] = {
-                    ["start"] = {
-                        ["custom"] = "if aura_env.config.TTSSound ~= \"\" then\
-       NSAPI:TTS(aura_env.config.TTSSound)\
-   end",
-                        ["do_custom"] = true
-                    },
-                    ["finish"] = {},
-                    ["init"] = {
-                        ["do_custom_load"] = false,
-                        ["do_custom"] = true,
-                        ["custom"] = "aura_env.color = \"\"\
-   for i=1, 4 do\
-       local toadd = string.format(\"%02X\", aura_env.config.color[i]*255)\
-       if i == 4 then\
-           aura_env.color = toadd..aura_env.color\
-       else\
-           aura_env.color = aura_env.color..toadd\
-       end\
-   end\
-   aura_env.color = \"|c\"..aura_env.color\
-   \
-   \
-   aura_env.assigns = {\
-       [\"nswavestart\"] = \"soak Writhing Wave\",\
-       [\"nspylonstart\"] = \"soak the Infusion Pylons\", \
-       [\"nsoblitstart\"] = \"soak Arcane Obliteration\", \
-       [\"nsconquerstart\"] = \"soak Conquer\", \
-       [\"nscollectorstart\"] = \"kill the Arcane Collector\",\
-       [\"nshuntstart\"] = \"soak The Hunt\",\
-       [\"nsrallystart\"] = \"transition\",\
-       [\"nsantimatterstart\"] = \"soak Antimatter\"\
-   }\
-   \
-   aura_env.groups = {\
-       [\"nswavestart\"] = {\"1st\", \"2nd\"},    \
-       [\"nspylonstart\"] = {\"|cFFFFFF00Star\", \"|cFFFFA500Orange\", \"|cFFA020F0Purple\", \"|cFF00FF00Green\", \"|cFF909090Moon\", \"|cFF0000FFBlue\", \"|cFFFF0000Red\", \"|cFFBBBBBBSkull\"},\
-       [\"nsoblitstart\"] = {\"1st\", \"2nd\", \"3rd\"},\
-       [\"nsconquerstart\"] = {\"1st\", \"2nd\"},   \
-       [\"nscollectorstart\"] = {\"|cFFFFFF00Star\", \"|cFFFFA500Orange\", \"|cFFA020F0Purple\", \"|cFF00FF00Green\", \"|cFF909090Moon\", \"|cFF0000FFBlue\", \"|cFFFF0000Red\", \"|cFFBBBBBBSkull\"},\
-       [\"nshuntstart\"] = {\"1st\", \"2nd\", \"3rd\"},  \
-       [\"nsrallystart\"] = {\"LEFT\", \"RIGHT\"},\
-       [\"nsantimatterstart\"] = {\"LEFT\", \"RIGHT\"},    \
-   }\
-   \
-   \
-   aura_env.marklist = {\
-       [\"star\"] = 1,\
-       [\"circle\"] = 2,\
-       [\"diamond\"] = 3,\
-       [\"triangle\"] = 4,\
-       [\"moon\"] = 5,\
-       [\"square\"] = 6,\
-       [\"cross\"] = 7,\
-       [\"skull\"] = 8,\
-   }\
-   aura_env.insert = function(lastfound, assigntable, line, num, marknum) -- lets me easier make edits for special cases down the road\
-       num = num or aura_env.count\
-       if lastfound == \"nscollectorstart\" then\
-           marknum = marknum or 0\
-           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r at \"..aura_env.groups[lastfound][marknum]..\"|r\")\
-       elseif lastfound == \"nspylonstart\" then\
-           if marknum and marknum ~= 0 then\
-               local group = aura_env.marktable[marknum]\
-               table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r at \"..aura_env.groups[lastfound][marknum]..\"|r in group \"..group)             \
-           end\
-       elseif lastfound == \"nsrallystart\" then\
-           table.insert(assigntable, \"You are assigned to go to the \"..aura_env.color..aura_env.groups[lastfound][num]..\" platform|r during the \"..aura_env.color..aura_env.assigns[lastfound])\
-           \
-       else\
-           table.insert(assigntable, \"You are assigned to \"..aura_env.color..aura_env.assigns[lastfound]..\"|r in the \"..aura_env.color..aura_env.groups[lastfound][num]..\"|r group\") \
-       end\
-       return assigntable\
-   end                             \
-   \
-   \
-   "
-                    }
-                },
-                ["triggers"] = {
-                    [1] = {
-                        ["trigger"] = {
-                            ["type"] = "custom",
-                            ["custom_type"] = "stateupdate",
-                            ["debuffType"] = "HELPFUL",
-                            ["duration"] = "10",
-                            ["event"] = "Health",
-                            ["unit"] = "player",
-                            ["names"] = {},
-                            ["spellIds"] = {},
-                            ["custom"] = "function(s, e, ...)\
-       if e == \"OPTIONS\" then\
-           s[\"\"] = {\
-               show = true,\
-               changed = true,\
-               progressType = \"timed\",\
-               text = \"Text that alerts you of your\"..aura_env.color..\" assignments|r when the note gets updated\",\
-               duration = 5,\
-               expirationTime = 5+GetTime(),\
-               autoHide = true,\
-           }\
-           return true\
-       elseif e == \"ENCOUNTER_START\" then\
-           aura_env.assigntable = {}\
-       elseif e == \"MRT_NOTE_UPDATE\" then\
-           local aura_env = aura_env\
-           C_Timer.After(1, function() WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK\", aura_env.id) end)\
-       elseif e == \"READY_CHECK\" and aura_env.config.onreadycheck then\
-           WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK\", aura_env.id)        \
-       elseif e == \"NS_ASSIGN_CHECK\" and ... == aura_env.id then    \
-           if WeakAuras.CurrentEncounter then return end -- do not show popup if note was shared during encounter, bypassed by automated assigns\
-           if not aura_env.last or aura_env.last < GetTime() - 1 then\
-               aura_env.last = GetTime()            \
-               local note = NSAPI:GetNote()\
-               if not NSAPI.disable then\
-                   local assignments = {}\
-                   local assigned = false\
-                   local lastfound = \"\"\
-                   local list = false\
-                   for line in note:gmatch('[^\\r\\n]+') do\
-                       if string.match(line, \"ns.*end\") then\
-                           list = false\
-                           aura_env.marktable = {}\
-                       elseif list then \
-                           aura_env.count = aura_env.count+1\
-                           local mark = \"\"\
-                           for word in line:gmatch(\"([^{]+)}\") do\
-                               mark = word\
-                           end\
-                           local marknum = aura_env.marklist[mark] or 0                        \
-                           aura_env.marktable[marknum] = aura_env.marktable[marknum] and aura_env.marktable[marknum]+1 or 1\
-                           for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
-                               if UnitInRaid(name) then\
-                                   local u = \"raid\"..UnitInRaid(name) \
-                                   if UnitIsUnit(\"player\", u) then \
-                                       if aura_env.assigns[lastfound] and aura_env.groups[lastfound] and aura_env.groups[lastfound][aura_env.count] then\
-                                           assignments = aura_env.insert(lastfound, assignments, line, aura_env.count, marknum)\
-                                           assigned = true\
-                                       end\
-                                   end\
-                               end     \
-                               \
-                           end\
-                       elseif string.match(line, \"ns.*start\") then\
-                           aura_env.marktable = {}\
-                           list = true\
-                           lastfound = line\
-                           aura_env.count = 0\
-                       end      \
-                   end  \
-                   if assigned then\
-                       WeakAuras.ScanEvents(\"NS_ASSIGN_CHECK_DISPLAY\", \"NS_MANAFORGE\", assignments, false)\
-                   end\
-               end\
-           end\
-       elseif e == \"NS_ASSIGN_CHECK_DISPLAY\" then -- lets me access this from other auras, like showing automated assignments from Loom'ithar for exapmle\
-           local id, assigntable, automated, lastfound, line, num, marknum = ...\
-           if id == \"NS_MANAFORGE\" and (aura_env.config.Automatedassign or not automated) and not NSAPI.disable then -- NS_MANAFORGE to prevent issues with future auras    \
-               if automated then\
-                   aura_env.assigntable = aura_env.insert(lastfound, aura_env.assigntable, line, num, marknum)\
-                   local duration = math.min(#aura_env.assigntable*6, 12)\
-                   for i=1, #aura_env.assigntable do\
-                       local state = {\
-                           progressType = \"timed\",\
-                           duration = duration,\
-                           expirationTime = duration+GetTime(),\
-                           text = aura_env.assigntable[i],\
-                           autoHide = true,\
-                       }\
-                       if aura_env.config.printinchat then\
-                           print(aura_env.assigntable[i])\
-                       end\
-                       s:Update(i, state)                \
-                   end\
-               else\
-                   local duration = math.min(#assigntable*6, 12)\
-                   for i=1, #assigntable do\
-                       local state = {\
-                           progressType = \"timed\",\
-                           duration = duration,\
-                           expirationTime = duration+GetTime(),\
-                           text = assigntable[i],\
-                           autoHide = true,\
-                       }\
-                       if aura_env.config.printinchat then\
-                           print(assigntable[i])\
-                       end\
-                       s:Update(i, state)                \
-                   end\
-               end\
-           end\
-       end    \
-   end\
-   \
-   \
-   ",
-                            ["events"] = "MRT_NOTE_UPDATE NS_ASSIGN_CHECK NS_ASSIGN_CHECK_DISPLAY READY_CHECK ENCOUNTER_START",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed"
-                        },
-                        ["untrigger"] = {}
-                    },
-                    ["activeTriggerMode"] = -10
-                },
-                ["displayText_format_p_format"] = "timed",
-                ["internalVersion"] = 85,
-                ["selfPoint"] = "BOTTOM",
-                ["font"] = "Expressway",
-                ["version"] = 42,
-                ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "eZtfJoio"}
-                },
-                ["AMModified"] = true,
-                ["AMOriginalUUID"] = "7xLBQfxNbY8",
-                ["fontSize"] = 26,
-                ["source"] = "import",
-                ["shadowXOffset"] = 1,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
-                ["load"] = {
-                    ["use_namerealm"] = false,
-                    ["spec_position"] = {},
-                    ["use_zoneIds"] = true,
-                    ["talent"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
-                    ["zoneIds"] = "g463",
-                    ["use_encounterid"] = false,
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {["mythic"] = true}
-                    },
-                    ["use_not_spellknown"] = false,
-                    ["ignoreNameRealm"] = "",
-                    ["use_ignoreNameRealm"] = false,
-                    ["use_never"] = false,
-                    ["class"] = {["multi"] = {}},
-                    ["use_zone"] = false,
-                    ["size"] = {["multi"] = {}}
-                },
-                ["fixedWidth"] = 200,
-                ["regionType"] = "text",
-                ["yOffset"] = 0,
-                ["displayText"] = "%text%url",
-                ["parent"] = "Assignments on Note Push -  check custom options",
-                ["uid"] = "AM-7xLBQfxNbY8",
-                ["displayText_format_p_time_precision"] = 1,
-                ["automaticWidth"] = "Auto",
-                ["displayText_format_p_time_legacy_floor"] = false,
-                ["authorOptions"] = {
-                    [1] = {
-                        ["text"] = "By default the assignments will only pop up when a note is being pushed to you. Enable this if you want to see it every ready check",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [2] = {
-                        ["type"] = "toggle",
-                        ["default"] = false,
-                        ["width"] = 2,
-                        ["name"] = "Show Assignments on Ready Check",
-                        ["useDesc"] = true,
-                        ["key"] = "onreadycheck",
-                        ["desc"] = ""
-                    },
-                    [3] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [4] = {
-                        ["text"] = "The Aura, by default, also prints your assignments into your chat window so that if you miss the popup you can still look it up. If you do not want it to do that you can disable it here.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [5] = {
-                        ["type"] = "toggle",
-                        ["default"] = true,
-                        ["width"] = 2,
-                        ["name"] = "Print Assignments in Chat",
-                        ["useDesc"] = true,
-                        ["key"] = "printinchat",
-                        ["desc"] = ""
-                    },
-                    [6] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [7] = {
-                        ["text"] = "Here you can choose which color the actual assignments should be shown in to highlight the important parts of the text quickly to you.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [8] = {
-                        ["type"] = "color",
-                        ["key"] = "color",
-                        ["default"] = {
-                            [1] = 0.24705883860588,
-                            [2] = 0.98823535442352,
-                            [3] = 0.24705883860588,
-                            [4] = 1
-                        },
-                        ["name"] = "Highlight Color",
-                        ["useDesc"] = false,
-                        ["width"] = 1
-                    },
-                    [9] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [10] = {
-                        ["text"] = "Here you can choose if you want Assignments that were automatically generated to show at the start of a pull from that Boss. This is often used for bosses early in the tier where an automated assignment is good enough and, especially in farm, raid leaders will not care about making a note every week.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [11] = {
-                        ["type"] = "toggle",
-                        ["key"] = "Automatedassign",
-                        ["default"] = true,
-                        ["name"] = "Show a popup for automated Assigns",
-                        ["useDesc"] = false,
-                        ["width"] = 2
-                    },
-                    [12] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [13] = {
-                        ["text"] = "You may add a TTS sound when receiving an assignment if you want an extra reminder to check it. This can be useful if, for example, you tend to tab out before pulls. Leaving it empty will simply not play any sound.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [14] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 2,
-                        ["key"] = "TTSSound",
-                        ["default"] = "",
-                        ["name"] = "TTS sound to be played",
-                        ["length"] = 10,
-                        ["multiline"] = false,
-                        ["useLength"] = false
-                    }
-                },
-                ["justify"] = "LEFT",
-                ["tocversion"] = 110200,
-                ["id"] = "Assignment on Note Push 2",
-                ["semver"] = "1.0.41",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                ["config"] = {
-                    ["printinchat"] = true,
-                    ["onreadycheck"] = false,
-                    ["Automatedassign"] = true,
-                    ["color"] = {
-                        [1] = 0.24705883860588,
-                        [2] = 0.98823535442352,
-                        [3] = 0.24705883860588,
-                        [4] = 1
-                    },
-                    ["TTSSound"] = ""
-                },
-                ["preferToUpdate"] = true,
-                ["displayText_format_p_time_mod_rate"] = true,
-                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                ["conditions"] = {},
-                ["information"] = {},
-                ["wordWrap"] = "WordWrap"
-            },
-            [113] = {
+            [121] = {
                 ["controlledChildren"] = {},
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["parent"] = "[NHF] Assignments",
@@ -26157,9 +27933,9 @@ wa.data['assignments'].data = {
                 ["alpha"] = 1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["uid"] = "AM-s8sp9fWgJXW",
                 ["config"] = {},
                 ["borderInset"] = 1,
+                ["uid"] = "AM-s8sp9fWgJXW",
                 ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-mo.png",
                 ["conditions"] = {},
                 ["information"] = {},
