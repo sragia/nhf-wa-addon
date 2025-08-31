@@ -9,7 +9,7 @@ AM.Media = {
         ["Poppins SemiBold"] = [[Interface\Addons\NHFAuraManager\Media\Fonts\Poppins-SemiBold.ttf]],
         ["JetBrainsMono - ExtraBold"] = [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-ExtraBold.ttf]],
         ["JetBrainsMono - Bold"] = [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-Bold.ttf]],
-        ["JetBrainsMono - Medium"] = [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-Medium.ttf]],
+        ["JetBrainsMono - Medium"] = [[Interface\Addons\NHFAuraManager\Media\Fonts\JetBrainsMono-Medium.ttf]]
     },
     sounds = {
         ["Taunt"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Taunt.mp3]],
@@ -55,15 +55,14 @@ AM.Media = {
         ["Help"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Help.mp3]],
         ["Spawn Wall"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\SpawnWall.mp3]],
         ["Break Wall"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\BreakWall.mp3]],
+        ["Spirit"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Spirit.mp3]]
     }
 }
 
 local LSM = LibStub("LibSharedMedia-3.0");
 
 -- Fonts
-for font, path in pairs(AM.Media.fonts) do
-    LSM:Register("font", font, path);
-end
+for font, path in pairs(AM.Media.fonts) do LSM:Register("font", font, path); end
 
 -- Sounds
 for sound, path in pairs(AM.Media.sounds) do
