@@ -11,8 +11,8 @@ wa.data['assignments'].data = {
     ["name"] = "[NHF] Assignments",
     ["isOptional"] = "0",
     ["isAnchor"] = "0",
-    ["semver"] = "1.1.12",
-    ["version"] = "52",
+    ["semver"] = "1.1.13",
+    ["version"] = "53",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -26,18 +26,18 @@ wa.data['assignments'].data = {
             ["yOffset"] = 0,
             ["anchorPoint"] = "CENTER",
             ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-            ["actions"] = {["start"] = {}, ["finish"] = {}, ["init"] = {}},
+            ["actions"] = {["start"] = {}, ["init"] = {}, ["finish"] = {}},
             ["triggers"] = {
                 [1] = {
                     ["trigger"] = {
-                        ["debuffType"] = "HELPFUL",
+                        ["subeventPrefix"] = "SPELL",
                         ["type"] = "aura2",
                         ["spellIds"] = {},
                         ["subeventSuffix"] = "_CAST_START",
                         ["unit"] = "player",
                         ["names"] = {},
                         ["event"] = "Health",
-                        ["subeventPrefix"] = "SPELL"
+                        ["debuffType"] = "HELPFUL"
                     },
                     ["untrigger"] = {}
                 }
@@ -45,13 +45,13 @@ wa.data['assignments'].data = {
             ["internalVersion"] = 85,
             ["selfPoint"] = "CENTER",
             ["desc"] = "Up to date with NS 1.0.20",
-            ["version"] = "52",
+            ["version"] = "53",
             ["subRegions"] = {},
             ["load"] = {
-                ["talent"] = {["multi"] = {}},
+                ["size"] = {["multi"] = {}},
                 ["spec"] = {["multi"] = {}},
                 ["class"] = {["multi"] = {}},
-                ["size"] = {["multi"] = {}}
+                ["talent"] = {["multi"] = {}}
             },
             ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
             ["scale"] = 1,
@@ -59,13 +59,32 @@ wa.data['assignments'].data = {
             ["borderEdge"] = "Square Full White",
             ["regionType"] = "group",
             ["borderSize"] = 2,
-            ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-base.png",
-            ["AMisOptional"] = "0",
+            ["animation"] = {
+                ["start"] = {
+                    ["type"] = "none",
+                    ["easeStrength"] = 3,
+                    ["duration_type"] = "seconds",
+                    ["easeType"] = "none"
+                },
+                ["main"] = {
+                    ["type"] = "none",
+                    ["easeStrength"] = 3,
+                    ["duration_type"] = "seconds",
+                    ["easeType"] = "none"
+                },
+                ["finish"] = {
+                    ["type"] = "none",
+                    ["easeStrength"] = 3,
+                    ["duration_type"] = "seconds",
+                    ["easeType"] = "none"
+                }
+            },
             ["AMModified"] = true,
-            ["AMOriginalUUID"] = "sAklUAnWyJ9",
+            ["AMisOptional"] = "0",
+            ["conditions"] = {},
             ["borderOffset"] = 4,
-            ["semver"] = "1.1.12",
-            ["alpha"] = 1,
+            ["semver"] = "1.1.13",
+            ["xOffset"] = 0,
             ["id"] = "[NHF] Assignments",
             ["config"] = {},
             ["frameStrata"] = 1,
@@ -73,29 +92,10 @@ wa.data['assignments'].data = {
             ["AMisAnchor"] = "0",
             ["uid"] = "AM-sAklUAnWyJ9",
             ["borderInset"] = 1,
-            ["xOffset"] = 0,
-            ["conditions"] = {},
+            ["alpha"] = 1,
+            ["AMOriginalUUID"] = "sAklUAnWyJ9",
             ["information"] = {},
-            ["animation"] = {
-                ["start"] = {
-                    ["easeStrength"] = 3,
-                    ["type"] = "none",
-                    ["duration_type"] = "seconds",
-                    ["easeType"] = "none"
-                },
-                ["main"] = {
-                    ["easeStrength"] = 3,
-                    ["type"] = "none",
-                    ["duration_type"] = "seconds",
-                    ["easeType"] = "none"
-                },
-                ["finish"] = {
-                    ["easeStrength"] = 3,
-                    ["type"] = "none",
-                    ["duration_type"] = "seconds",
-                    ["easeType"] = "none"
-                }
-            }
+            ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-base.png"
         },
         ["c"] = {
             [1] = {
@@ -135,7 +135,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -154,7 +154,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = "6997112",
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Manaforge Omega Assignment Auras",
                 ["frameStrata"] = 1,
@@ -218,7 +218,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -237,7 +237,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922080,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Plexus Sentinel Assign",
                 ["frameStrata"] = 1,
@@ -330,7 +330,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -367,7 +367,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Plexus Sentinel - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -441,7 +441,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -478,7 +478,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Plexus Sentinel - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -524,7 +524,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -543,7 +543,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922087,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Loom'ithar Assign",
                 ["frameStrata"] = 1,
@@ -632,9 +632,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "mm6Hh0rh", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "SY3dMNxm", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["load"] = {
@@ -680,7 +680,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Hyper Infusion Stack Saychat",
                 ["shadowYOffset"] = -1,
@@ -761,7 +761,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -798,7 +798,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Loom'ithar - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -1099,9 +1099,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_decimal_precision"] = 1,
                 ["internalVersion"] = 85,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "XPhDTYJI", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "vM0x5Cuz", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["load"] = {
@@ -1211,7 +1211,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Writhing Wave Assign",
                 ["displayText"] = "SOAK (%p)",
@@ -1465,7 +1465,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "2LcinPl3", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "cJhVdfnH", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["AMModified"] = true,
@@ -1483,8 +1483,8 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_precision"] = 1,
                 ["displayText_format_2.p_time_dynamic_threshold"] = 60,
                 ["parent"] = "Loom'ithar - Assign Texts",
-                ["version"] = 71,
-                ["semver"] = "1.0.70",
+                ["version"] = 72,
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "New Pylon Alert",
                 ["displayText_format_c_format"] = "none",
@@ -1962,7 +1962,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -1999,7 +1999,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Loom'ithar - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -2220,12 +2220,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "DojZHeiGaUk",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "u20i0Uzt", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "ZIeKviXe", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "8snBWc2w", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "pvGhsObO", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "NfNbstbZ",
+                        ["amId"] = "xuYSJ5tm",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -2240,7 +2240,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "bsTbiiuZ",
+                        ["amId"] = "WukgnU95",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -2274,7 +2274,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "oqVoPmyK",
+                        ["amId"] = "YhcqGfED",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
@@ -2322,7 +2322,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "oy4bD3tp",
+                        ["amId"] = "dpw7kRkk",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
@@ -2357,7 +2357,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "O5PjSG6b",
+                        ["amId"] = "tgg8Lae0",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
@@ -2397,7 +2397,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "7N9MpNcq",
+                        ["amId"] = "PfZ5iXBF",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
@@ -2530,7 +2530,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -2707,7 +2707,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -2726,7 +2726,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922081,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Naazindhri Assign",
                 ["frameStrata"] = 1,
@@ -2823,7 +2823,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -2860,7 +2860,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Naazindhri - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -2996,9 +2996,9 @@ wa.data['assignments'].data = {
                 ["url"] = "",
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NIfFbgsd", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "CyGXbkQf", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -3051,7 +3051,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["yOffset"] = 0,
                 ["selfPoint"] = "BOTTOM",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["justify"] = "LEFT",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Soulfire Convergence \"Assign\"",
@@ -3130,7 +3130,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -3167,7 +3167,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Naazindhri - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -3215,7 +3215,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -3234,7 +3234,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922084,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Forgeweaver Araz Assign",
                 ["frameStrata"] = 1,
@@ -3370,7 +3370,7 @@ wa.data['assignments'].data = {
                                    local mark = GetRaidTargetIndex(u)\
                                    local tomark = aura_env.marks[spawnIndex+1]\
                                    if tomark and tomark ~= mark and tomark ~= 0 then\
-                                       SetRaidTarget(u, tomark-1)  \
+                                       SetRaidTarget(u, tomark)  \
                                    end\
                                end\
                            end\
@@ -3393,12 +3393,13 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["font"] = "Friz Quadrata TT",
-                ["version"] = 71,
-                ["subRegions"] = {
-                    [1] = {["amId"] = "EjtFw6aV", ["type"] = "subbackground"}
-                },
                 ["AMModified"] = true,
+                ["font"] = "Friz Quadrata TT",
+                ["version"] = 72,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "ASxkQxSP", ["type"] = "subbackground"}
+                },
+                ["AMOriginalUUID"] = "o5qGdxJvKHS",
                 ["load"] = {
                     ["difficulty"] = {
                         ["single"] = "mythic",
@@ -3412,7 +3413,6 @@ wa.data['assignments'].data = {
                     ["use_difficulty"] = false,
                     ["size"] = {["multi"] = {}}
                 },
-                ["AMOriginalUUID"] = "o5qGdxJvKHS",
                 ["fontSize"] = 12,
                 ["uid"] = "AM-o5qGdxJvKHS",
                 ["shadowXOffset"] = 1,
@@ -3445,14 +3445,14 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Arcane Collector Auto-Marker",
                 ["shadowYOffset"] = -1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
                 ["xOffset"] = 0,
-                ["config"] = {["mark1"] = 1, ["mark3"] = 1, ["mark2"] = 1},
+                ["config"] = {["mark1"] = 3, ["mark3"] = 4, ["mark2"] = 2},
                 ["automaticWidth"] = "Auto",
                 ["wordWrap"] = "WordWrap",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -3598,7 +3598,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "cS0jpb97jiS",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -3608,7 +3608,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "msbUyvyV", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "YgpLYMMu", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {
@@ -3740,7 +3740,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["inverse"] = false,
                 ["parent"] = "Forgeweaver Araz Assign",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -3771,10 +3771,10 @@ wa.data['assignments'].data = {
                     ["size"] = {["multi"] = {}}
                 },
                 ["animate"] = false,
-                ["customGrow"] = "function(pos, reg)\
-       NSAPI:AuraResize(\"Icons\", pos, reg)    \
-       pos = NSAPI:AuraPosition(\"Icons\", pos, reg)    \
-   end",
+                ["customGrow"] = "function(newPositions, regions)\
+                   NHFAPI:DisplayUpdate('bigicon', regions)\
+                   newPositions = NHFAPI:SortPositionsUp('bigicon', newPositions, regions)\
+               end",
                 ["scale"] = 1,
                 ["stepAngle"] = 15,
                 ["constantFactor"] = "RADIUS",
@@ -3814,7 +3814,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -3841,7 +3841,7 @@ wa.data['assignments'].data = {
                 },
                 ["centerType"] = "LR",
                 ["border"] = false,
-                ["anchorFrameFrame"] = "WeakAuras:NS Icon Anchor",
+                ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
                 ["borderSize"] = 2,
                 ["anchorPerUnit"] = "CUSTOM",
                 ["borderInset"] = 1,
@@ -3851,7 +3851,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Forgeweaver CC List",
                 ["anchorPoint"] = "CENTER",
@@ -3905,12 +3905,12 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "ZFIg0p8Yn)d",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "tVbwVwDl", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "7HTdjWqx", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
-                        ["amId"] = "ISUPCN38",
+                        ["amId"] = "o9hWBQ0C",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -3930,7 +3930,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "qzsGP00I",
+                        ["amId"] = "nSJiMgTr",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -3963,7 +3963,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "YsFbH1oR",
+                        ["amId"] = "W2lPMNYJ",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -3985,7 +3985,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "DxEWDfzj",
+                        ["amId"] = "hFOMZ20T",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -4024,7 +4024,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "3DkJQsL4",
+                        ["amId"] = "zFZZfOVx",
                         ["text_visible"] = true,
                         ["type"] = "subtext",
                         ["text_text_format_tooltip1_format"] = "BigNumber",
@@ -4065,7 +4065,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "g1JkbtT4",
+                        ["amId"] = "fPPlKYsS",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -4114,7 +4114,7 @@ wa.data['assignments'].data = {
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["width"] = 70,
                 ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Arcane Obliteration healabsorb",
                 ["useCooldownModRate"] = true,
@@ -4263,19 +4263,19 @@ wa.data['assignments'].data = {
                     },
                     ["activeTriggerMode"] = -10
                 },
+                ["AMModified"] = true,
                 ["internalVersion"] = 85,
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["selfPoint"] = "CENTER",
-                ["AMModified"] = true,
                 ["AMOriginalUUID"] = "7PETl(1s58R",
                 ["desaturate"] = false,
                 ["width"] = 70,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "2DoEZsAt", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "e29VmFQy", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
-                        ["amId"] = "pZ9nmxjB",
+                        ["amId"] = "PPmITy6k",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -4295,11 +4295,76 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "xQBwWZyz",
+                        ["amId"] = "9PS7ZCSv",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
                     [4] = {
+                        ["text_shadowXOffset"] = 0,
+                        ["text_text_format_s_format"] = "none",
+                        ["text_text"] = "",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1
+                        },
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["type"] = "subtext",
+                        ["text_text_format_tooltip1_format"] = "none",
+                        ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                        ["text_font"] = "Expressway",
+                        ["text_shadowYOffset"] = 0,
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_fontType"] = "OUTLINE",
+                        ["amId"] = "scp6oscY",
+                        ["text_visible"] = false,
+                        ["anchor_point"] = "OUTER_TOP",
+                        ["text_fontSize"] = 15,
+                        ["anchorXOffset"] = 0,
+                        ["text_anchorYOffset"] = 0
+                    },
+                    [5] = {
+                        ["text_shadowXOffset"] = 0,
+                        ["text_text_format_s_format"] = "none",
+                        ["text_text"] = "%c",
+                        ["text_shadowColor"] = {
+                            [1] = 0,
+                            [2] = 0,
+                            [3] = 0,
+                            [4] = 1
+                        },
+                        ["text_selfPoint"] = "AUTO",
+                        ["text_automaticWidth"] = "Auto",
+                        ["text_text_format_tooltip1_pad"] = false,
+                        ["text_text_format_c_format"] = "none",
+                        ["text_justify"] = "CENTER",
+                        ["rotateText"] = "NONE",
+                        ["amId"] = "zTkOt4md",
+                        ["text_fixedWidth"] = 64,
+                        ["anchorYOffset"] = 0,
+                        ["type"] = "subtext",
+                        ["text_text_format_tooltip1_format"] = "BigNumber",
+                        ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                        ["text_font"] = "Expressway",
+                        ["text_fontType"] = "OUTLINE",
+                        ["text_anchorYOffset"] = 2,
+                        ["anchor_point"] = "INNER_BOTTOM",
+                        ["text_wordWrap"] = "WordWrap",
+                        ["text_visible"] = true,
+                        ["text_text_format_tooltip1_big_number_format"] = "AbbreviateNumbers",
+                        ["text_text_format_tooltip1_pad_mode"] = "left",
+                        ["text_text_format_tooltip1_pad_max"] = 8,
+                        ["text_fontSize"] = 16,
+                        ["anchorXOffset"] = 0,
+                        ["text_shadowYOffset"] = 0
+                    },
+                    [6] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text_format_s_format"] = "none",
                         ["text_text"] = "",
@@ -4328,7 +4393,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "LMjyUSIH",
+                        ["amId"] = "HzVw6I2U",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -4339,7 +4404,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_visible"] = false
                     },
-                    [5] = {
+                    [7] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text_format_s_format"] = "none",
                         ["text_text"] = "%s",
@@ -4350,7 +4415,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "stmkiTBM",
+                        ["amId"] = "L6JvfSmm",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -4373,74 +4438,9 @@ wa.data['assignments'].data = {
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowXOffset"] = 0
                     },
-                    [6] = {
-                        ["text_shadowXOffset"] = 0,
-                        ["text_text_format_s_format"] = "none",
-                        ["text_text"] = "%c",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1
-                        },
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_text_format_tooltip1_pad"] = false,
-                        ["text_text_format_c_format"] = "none",
-                        ["text_justify"] = "CENTER",
-                        ["rotateText"] = "NONE",
-                        ["amId"] = "q5iggkZg",
-                        ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
-                        ["type"] = "subtext",
-                        ["text_text_format_tooltip1_format"] = "BigNumber",
-                        ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                        ["text_font"] = "Expressway",
-                        ["text_fontType"] = "OUTLINE",
-                        ["text_anchorYOffset"] = 2,
-                        ["anchor_point"] = "OUTER_BOTTOM",
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_visible"] = true,
-                        ["text_text_format_tooltip1_big_number_format"] = "AbbreviateNumbers",
-                        ["text_text_format_tooltip1_pad_mode"] = "left",
-                        ["text_text_format_tooltip1_pad_max"] = 8,
-                        ["text_fontSize"] = 16,
-                        ["anchorXOffset"] = 0,
-                        ["text_shadowYOffset"] = 0
-                    },
-                    [7] = {
-                        ["text_shadowXOffset"] = 0,
-                        ["text_text_format_s_format"] = "none",
-                        ["text_text"] = "",
-                        ["text_shadowColor"] = {
-                            [1] = 0,
-                            [2] = 0,
-                            [3] = 0,
-                            [4] = 1
-                        },
-                        ["text_selfPoint"] = "AUTO",
-                        ["text_automaticWidth"] = "Auto",
-                        ["text_fixedWidth"] = 64,
-                        ["anchorYOffset"] = 0,
-                        ["text_justify"] = "CENTER",
-                        ["rotateText"] = "NONE",
-                        ["type"] = "subtext",
-                        ["text_text_format_tooltip1_format"] = "none",
-                        ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                        ["text_font"] = "Expressway",
-                        ["text_shadowYOffset"] = 0,
-                        ["text_wordWrap"] = "WordWrap",
-                        ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "w2OFBKyk",
-                        ["text_visible"] = false,
-                        ["anchor_point"] = "OUTER_TOP",
-                        ["text_fontSize"] = 15,
-                        ["anchorXOffset"] = 0,
-                        ["text_anchorYOffset"] = 0
-                    },
                     [8] = {
                         ["border_size"] = 2,
-                        ["amId"] = "Lmr2Mh6k",
+                        ["amId"] = "Vq4k5KaG",
                         ["border_offset"] = 0,
                         ["border_color"] = {
                             [1] = 0.24705883860588,
@@ -4514,7 +4514,7 @@ wa.data['assignments'].data = {
                 ["useCooldownModRate"] = true,
                 ["url"] = "",
                 ["zoom"] = 0.25,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Forgeweaver CC List ",
                 ["cooldownTextDisabled"] = false,
@@ -4641,7 +4641,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -4678,7 +4678,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Forgeweaver Araz - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -5001,9 +5001,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_decimal_precision"] = 1,
                 ["internalVersion"] = 85,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "BBE4AtjY", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "a7nTW6AV", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["load"] = {
@@ -5154,7 +5154,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Arcane Obliteration Assign",
                 ["displayText"] = "SOAK (%p)",
@@ -5295,7 +5295,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "z9KCbmpBUQr",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -5305,7 +5305,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "eRPdEz2R", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "PmFu8jps", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {},
@@ -5343,7 +5343,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["inverse"] = false,
                 ["parent"] = "Forgeweaver Araz - Assign Texts",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -5498,9 +5498,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "25REKlHv", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "vV7tbfzt", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["use_zoneIds"] = false,
@@ -5553,7 +5553,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Arcane Collector Assign",
                 ["displayText"] = "%text",
@@ -5628,7 +5628,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -5665,7 +5665,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Forgeweaver Araz - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -5887,12 +5887,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "MqhzxlnVv3t",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ovaPbWrr", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "7biITXK7", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "b2ZiKMoe", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "JmYuZU3k", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "M5RMDcYS",
+                        ["amId"] = "er6VCdez",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -5907,7 +5907,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "wNG4RvKU",
+                        ["amId"] = "daLP4R4z",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -5955,7 +5955,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_percenthealth_format"] = "Number",
-                        ["amId"] = "FI2bdKD9",
+                        ["amId"] = "NSKX5ghT",
                         ["text_text_format_3.power_format"] = "none",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_fontType"] = "OUTLINE",
@@ -6014,7 +6014,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "uxqXGUuV",
+                        ["amId"] = "U3JaldLl",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_font"] = "Expressway",
@@ -6052,7 +6052,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
-                        ["amId"] = "DvUQ4FaB",
+                        ["amId"] = "bhOKkWjA",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
                         ["text_selfPoint"] = "LEFT",
@@ -6082,7 +6082,7 @@ wa.data['assignments'].data = {
                         ["text_wordWrap"] = "WordWrap"
                     },
                     [8] = {
-                        ["amId"] = "RqHcH6xv",
+                        ["amId"] = "vSz0w6ns",
                         ["border_offset"] = 0,
                         ["border_size"] = 2,
                         ["border_visible"] = false,
@@ -6127,7 +6127,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -6354,7 +6354,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -6373,7 +6373,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922082,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "The Soul Hunters Assign",
                 ["frameStrata"] = 1,
@@ -6461,9 +6461,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VprVEZxK", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "x9lRMsNu", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["load"] = {
@@ -6509,7 +6509,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Dark Residue Saychat",
                 ["shadowYOffset"] = -1,
@@ -6653,9 +6653,9 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "2ABVuEdDuv2",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3GVQhx7q", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "P4wWguQW", ["type"] = "subbackground"}
                 },
                 ["authorOptions"] = {},
                 ["load"] = {
@@ -6717,7 +6717,7 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["displayText_format_p_decimal_precision"] = 0,
                 ["parent"] = "The Soul Hunters Assign",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "The Hunt Position Saychat",
                 ["justify"] = "LEFT",
@@ -6804,7 +6804,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -6841,7 +6841,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "The Soul Hunters - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -7112,7 +7112,7 @@ wa.data['assignments'].data = {
                            backupassigned = true,\
                            autoHide = true,\
                        }\
-                       s:Update(\"\", state) \
+                       s:Update(group, state) \
                    end\
                end\
                if aura_env.mygroup == group then\
@@ -7188,9 +7188,13 @@ wa.data['assignments'].data = {
                    if subevent == \"SPELL_AURA_APPLIED\" then\
                        local i = UnitInRaid(destName)\
                        local unit = i and \"raid\"..i          \
-                       if UnitIsUnit(\"player\", destName) and s[\"\"] then\
-                           s[\"\"].show = false\
-                           s[\"\"].changed = true\
+                       if UnitIsUnit(\"player\", destName) then\
+                           for k, v in pairs(s) do\
+                               if not v.assigned then\
+                                   v.show = false\
+                                   v.changed = true\
+                               end\
+                           end\
                        end     \
                        if unit and UnitExists(unit)then \
                            if not aura_env.groups[unit] then\
@@ -7200,15 +7204,20 @@ wa.data['assignments'].data = {
                                WeakAuras.ScanEvents(\"NS_ASSIGN_EVENT\", aura_env.id, unit, destGUID, false)\
                            end\
                        end\
+                       return true\
                    elseif subevent == \"SPELL_AURA_REMOVED\" and s[destGUID] then \
                        if aura_env.assigned[s[destGUID].healer] then\
                            aura_env.assigned[s[destGUID].healer] = false\
                        end          \
                        s[destGUID].show = false\
                        s[destGUID].changed = true          \
-                       if UnitIsUnit(\"player\", destName) and s[\"\"] then\
-                           s[\"\"].show = false\
-                           s[\"\"].changed = true\
+                       if UnitIsUnit(\"player\", destName) then\
+                           for k, v in pairs(s) do\
+                               if not v.assigned then\
+                                   v.show = false\
+                                   v.changed = true\
+                               end\
+                           end\
                        end\
                        return true\
                    end\
@@ -7234,14 +7243,14 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["displayText_format_p_pad"] = false,
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_marker_format"] = "none",
                 ["automaticWidth"] = "Auto",
                 ["preferToUpdate"] = true,
                 ["font"] = "Expressway",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "rkSu9dVU", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "3pmKGFrO", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["use_namerealm"] = false,
@@ -7581,27 +7590,8 @@ wa.data['assignments'].data = {
                         },
                         ["changes"] = {
                             [1] = {
-                                ["value"] = "Receive from a backup at %marker (%p)",
+                                ["value"] = "Backup is holding at %marker (%p)",
                                 ["property"] = "displayText"
-                            },
-                            [2] = {
-                                ["value"] = {
-                                    ["custom"] = "local text = aura_env.state.marker\
-   C_Timer.After(4, function()\
-           SendChatMessage(text, \"SAY\")        \
-   end)\
-   C_Timer.After(6, function()\
-           SendChatMessage(text, \"SAY\")        \
-   end)\
-   C_Timer.After(8, function()\
-           SendChatMessage(text, \"SAY\")        \
-   end)\
-   \
-   \
-   \
-   "
-                                },
-                                ["property"] = "customcode"
                             }
                         }
                     },
@@ -7786,10 +7776,10 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["shadowYOffset"] = -1,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["anchorPoint"] = "CENTER",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["spec_position"] = {
@@ -7869,7 +7859,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_round_type"] = "ceil",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "diep88En", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "u8QH3UGH", ["type"] = "subbackground"}
                 },
                 ["anchorFrameParent"] = false,
                 ["fixedWidth"] = 200,
@@ -8274,7 +8264,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "bbtFXRB2cz2",
                 ["yOffset"] = 0,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["displayText_format_3.p_format"] = "timed",
                 ["preferToUpdate"] = true,
@@ -8297,7 +8287,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_3.p_time_dynamic_threshold"] = 60,
                 ["wordWrap"] = "WordWrap",
                 ["displayText_format_3.p_time_legacy_floor"] = false,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["displayText_format_4.p_time_legacy_floor"] = false,
                 ["displayText"] = "SOAK %c %text (%4.p)",
@@ -8305,7 +8295,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["displayText_format_4.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "OvxfABnE", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "6aSPK9xf", ["type"] = "subbackground"}
                 },
                 ["displayText_format_3.p_time_precision"] = 1,
                 ["id"] = "The Hunt Assign",
@@ -8705,9 +8695,9 @@ wa.data['assignments'].data = {
                 ["url"] = "",
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "p7IpiIRd", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "5Fbugtkv", ["type"] = "subbackground"}
                 },
                 ["displayText_format_prefix_format"] = "none",
                 ["load"] = {
@@ -8996,7 +8986,7 @@ wa.data['assignments'].data = {
                 ["parent"] = "The Soul Hunters - Assign Texts",
                 ["anchorFrameParent"] = false,
                 ["xOffset"] = 0,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["justify"] = "LEFT",
                 ["displayText_format_p_pad_max"] = 8,
@@ -9086,9 +9076,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "12bpE2Te", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "0sEKzLr8", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -9143,7 +9133,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Devourer's Ire Dispel Macro Press Confirmation",
                 ["displayText"] = "Macro Pressed",
@@ -9224,7 +9214,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -9261,7 +9251,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "The Soul Hunters - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -9400,12 +9390,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "pnHwgB(4Esn",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "hxTsX5DV", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "tRAvPMFe", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "BWmBMC2Y", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "9Hfeyv1P", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "DvNMdoOX",
+                        ["amId"] = "OequPuGe",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -9420,7 +9410,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "xyaHoA6G",
+                        ["amId"] = "vEtSVs8Q",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -9462,7 +9452,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "bvOOqldg",
+                        ["amId"] = "eI9rlnO2",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -9510,7 +9500,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "oQVPcEaA",
+                        ["amId"] = "q3mOQqVZ",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -9578,7 +9568,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -9712,12 +9702,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "(fLJW4MZ2ma",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VfY6IhqP", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "swe8xAns", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "HlxSM4aX", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "O5e5sZKr", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "DmfvDKJY",
+                        ["amId"] = "8strmeL6",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -9732,7 +9722,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "owIrq744",
+                        ["amId"] = "NVedrL1E",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -9774,7 +9764,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "SBFxIb1e",
+                        ["amId"] = "46nUS0OU",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -9822,7 +9812,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "SVmyYghS",
+                        ["amId"] = "Rz9rQAEU",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -9890,7 +9880,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -9966,7 +9956,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -9985,7 +9975,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922085,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Assign",
                 ["frameStrata"] = 1,
@@ -10095,9 +10085,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "aEUxoDUd", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "5OOjfzVM", ["type"] = "subbackground"}
                 },
                 ["height"] = 64,
                 ["AMModified"] = true,
@@ -10128,7 +10118,7 @@ wa.data['assignments'].data = {
                 ["justify"] = "LEFT",
                 ["information"] = {},
                 ["id"] = "Fractillus Disable Targeting Circle",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["frameStrata"] = 1,
                 ["width"] = 64,
                 ["uid"] = "AM-KmvNSNkzQOO",
@@ -10198,7 +10188,7 @@ wa.data['assignments'].data = {
                 ["parent"] = "Fractillus Assign",
                 ["rotation"] = 0,
                 ["frameStrata"] = 1,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["groupIcon"] = 4226156,
                 ["sortHybridTable"] = {["Fractillus Walls"] = false},
@@ -10238,7 +10228,7 @@ wa.data['assignments'].data = {
                 ["constantFactor"] = "RADIUS",
                 ["stagger"] = 0,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Wall Display",
                 ["authorOptions"] = {},
@@ -10512,9 +10502,9 @@ wa.data['assignments'].data = {
                     },
                     ["finish"] = {}
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "TSlJvs8y", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "K7YvgDQS", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text_format_s_format"] = "none",
@@ -10537,7 +10527,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "OOeihnLT",
+                        ["amId"] = "vZTWINIb",
                         ["text_text_format_marker_format"] = "none",
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 18,
@@ -10557,13 +10547,13 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 10,
                         ["glow"] = false,
-                        ["amId"] = "dfLJA3yD",
+                        ["amId"] = "8JHuWiQe",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
                     [4] = {
                         ["border_size"] = 1,
-                        ["amId"] = "9YCMK5jV",
+                        ["amId"] = "SxKq3cv3",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -10606,7 +10596,7 @@ wa.data['assignments'].data = {
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
                 ["width"] = 80,
                 ["zoom"] = 0,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Walls",
                 ["useCooldownModRate"] = true,
@@ -11280,9 +11270,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Friz Quadrata TT",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "zexZj5Ha", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "rnq3SlGP", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "X3VtvxYE4qd",
@@ -11340,7 +11330,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Assign Handler (No Display) + Saychat(can disable in custom options)",
                 ["shadowYOffset"] = -1,
@@ -11469,9 +11459,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_name_format"] = "none",
                 ["AMOriginalUUID"] = "5Ib3tfd7PWO",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "PVqGkjwx", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "KpCGDbd0", ["type"] = "subbackground"}
                 },
                 ["parent"] = "Fractillus Assign",
                 ["displayText_format_p_time_dynamic_threshold"] = 60,
@@ -11543,7 +11533,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-5Ib3tfd7PWO",
                 ["config"] = {},
                 ["anchorFrameParent"] = false,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["conditions"] = {
                     [1] = {
@@ -11607,7 +11597,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -11626,7 +11616,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = -582.00054931641,
                 ["groupIcon"] = 134269,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus \"Map\"",
                 ["frameStrata"] = 1,
@@ -11727,9 +11717,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "RoIk1IYm", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "AlrW10ON", ["type"] = "subbackground"}
                 },
                 ["height"] = 200,
                 ["rotate"] = false,
@@ -11759,7 +11749,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-DOvV6zFDhRA",
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White",
                 ["color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.84666687250137},
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Background",
                 ["xOffset"] = 3.9998779296875,
@@ -11893,9 +11883,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 342,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "vbmKg3Y7", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "38dAFzxW", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -11927,7 +11917,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 1",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12061,9 +12051,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 358,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "efXeGwGB", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "q0JEb2x5", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12095,7 +12085,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 2",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12229,9 +12219,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 14,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ZZBahem7", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "xWmcXZ7h", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12263,7 +12253,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 3",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12397,9 +12387,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 31,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "bh98qyZb", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "TuvxZ44t", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12431,7 +12421,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 4",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12565,9 +12555,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 47,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "p4LcsELU", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "ReVYfRAT", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12599,7 +12589,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 5",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12733,9 +12723,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 63,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Uw0E8TlC", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "0ESFRgKv", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12767,7 +12757,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\FractillusSlice.blp",
                 ["width"] = 300,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Slice 6",
                 ["parent"] = "Fractillus \"Map\"",
@@ -12834,7 +12824,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -12853,7 +12843,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 450907,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus Arrow Group - mostly disabled by default",
                 ["frameStrata"] = 1,
@@ -12998,9 +12988,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 180,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LGlcWzqI", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "ewqdcyjH", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "%direction",
@@ -13019,7 +13009,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "taOvW3za",
+                        ["amId"] = "Ogi0OGpS",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13071,7 +13061,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 1
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "(custom option sound) Wall Direction Arrow",
                 ["xOffset"] = 0,
@@ -13262,9 +13252,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 270,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "wcg3ibNb", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "0PW0jt5i", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13283,7 +13273,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "0vDxHL2W",
+                        ["amId"] = "vuhoQHfg",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13328,7 +13318,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 2nd Arrow Left",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -13457,9 +13447,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 270,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VCerDUy9", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "ZiQpjZ2V", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13478,7 +13468,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "6W6iL6DQ",
+                        ["amId"] = "R2YlkQHn",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13523,7 +13513,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 3rd Arrow Left",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -13652,9 +13642,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 90,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "dQqsUL6y", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "hzHS3ggv", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13673,7 +13663,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "X81Vx1tA",
+                        ["amId"] = "tehq7Jsy",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13718,7 +13708,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 2nd Arrow Right",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -13847,9 +13837,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 90,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VAqKIo3c", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "iTBX7wP2", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13868,7 +13858,7 @@ wa.data['assignments'].data = {
                         ["type"] = "subtext",
                         ["text_text_format_direction_format"] = "none",
                         ["text_font"] = "Expressway",
-                        ["amId"] = "NDmC8dE9",
+                        ["amId"] = "lwUwzMWq",
                         ["text_shadowYOffset"] = -1,
                         ["text_visible"] = true,
                         ["text_wordWrap"] = "WordWrap",
@@ -13913,7 +13903,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\target_indicator.tga",
                 ["width"] = 180,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Fractillus 3rd Arrow Right",
                 ["parent"] = "Fractillus Arrow Group - mostly disabled by default",
@@ -13995,7 +13985,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -14032,7 +14022,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Fractillus - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -14169,9 +14159,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_name_format"] = "none",
                 ["shadowYOffset"] = -1,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "hhdLCrIQ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "LstDxupM", ["type"] = "subbackground"}
                 },
                 ["authorOptions"] = {
                     [1] = {
@@ -14235,7 +14225,7 @@ wa.data['assignments'].data = {
                 ["config"] = {["TTS"] = 1},
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "(custom option sound) Entropic Conjuction Text (Wall Spawn)",
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -14849,9 +14839,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_name_format"] = "none",
                 ["AMModified"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "8QksQTT6", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "5SaRyPD5", ["type"] = "subbackground"}
                 },
                 ["AMOriginalUUID"] = "CWtbj(Lf3LZ",
                 ["authorOptions"] = {
@@ -15432,7 +15422,7 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["xOffset"] = 0,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "(custom option sound) Nether Crystallization Text (Wall Break)",
                 ["uid"] = "AM-CWtbj(Lf3LZ",
@@ -15725,9 +15715,9 @@ wa.data['assignments'].data = {
                 ["wordWrap"] = "WordWrap",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "JrXdBULm", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "0XveJjiL", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText"] = "Next Frontal: %4.num%4.marker (%p)",
@@ -15743,7 +15733,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_3.p_time_dynamic_threshold"] = 60,
                 ["id"] = "Tank Hit Text",
                 ["displayText_format_4.marker_format"] = "none",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_marker_round_type"] = "floor",
                 ["parent"] = "Fractillus - Assign Texts",
                 ["anchorFrameParent"] = false,
@@ -15975,7 +15965,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -16012,7 +16002,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Fractillus - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -16194,12 +16184,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "tcdeV(qIu84",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "vPwpwn6l", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "o5SdbqC6", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "WkX6roul", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "4IOkDTQy", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "dOkyQgHR",
+                        ["amId"] = "iN4nEX6C",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -16214,7 +16204,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "ILMO4SsZ",
+                        ["amId"] = "46aW410t",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -16258,7 +16248,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_p_pad"] = false,
                         ["text_text_format_p_pad_mode"] = "left",
-                        ["amId"] = "kuLcTXW1",
+                        ["amId"] = "TU4ciXLK",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_fontType"] = "OUTLINE",
@@ -16304,7 +16294,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "tO6d2FHu",
+                        ["amId"] = "ISQpMGeg",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -16344,7 +16334,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
-                        ["amId"] = "o9vAA4pD",
+                        ["amId"] = "trlWFbhz",
                         ["text_fontType"] = "OUTLINE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -16426,7 +16416,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -16479,7 +16469,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -16498,7 +16488,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922086,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Salhadaar Assign",
                 ["frameStrata"] = 1,
@@ -16563,7 +16553,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -16582,7 +16572,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 1033912,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Starkiller Swing Assign",
                 ["frameStrata"] = 1,
@@ -16841,9 +16831,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 90,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "cXDX7AV1", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "keixgRAv", ["type"] = "subbackground"}
                 },
                 ["height"] = 64,
                 ["rotate"] = false,
@@ -16875,7 +16865,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\triangle.tga",
                 ["width"] = 64,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Starkiller Swing Left Anchor",
                 ["parent"] = "Starkiller Swing Assign",
@@ -16988,9 +16978,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NWAc8rPB", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "FeFdtu7g", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text"] = "NOT|nON YOU",
@@ -17017,7 +17007,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "KLsB4z8i",
+                        ["amId"] = "lGyMiHyc",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 18,
@@ -17038,7 +17028,7 @@ wa.data['assignments'].data = {
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White",
                         ["width"] = 32,
                         ["textureColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0},
-                        ["amId"] = "vkLYxSyx",
+                        ["amId"] = "7DiK1nyk",
                         ["textureBlendMode"] = "BLEND",
                         ["height"] = 32,
                         ["rotate"] = false,
@@ -17074,7 +17064,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-Yg3fr1k93UM",
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Starkiller Swing Player Anchor",
                 ["xOffset"] = 0,
@@ -17335,9 +17325,9 @@ wa.data['assignments'].data = {
                 },
                 ["desaturate"] = false,
                 ["rotation"] = 270,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3v3K7x6g", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "a0YWYsyq", ["type"] = "subbackground"}
                 },
                 ["height"] = 64,
                 ["rotate"] = false,
@@ -17369,7 +17359,7 @@ wa.data['assignments'].data = {
                 ["anchorFrameParent"] = false,
                 ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\triangle.tga",
                 ["width"] = 64,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Starkiller Swing Right Anchor",
                 ["parent"] = "Starkiller Swing Assign",
@@ -17441,7 +17431,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -17461,7 +17451,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-ItCJ4Ec6OET",
                 ["groupIcon"] = 134269,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash Map",
                 ["selfPoint"] = "CENTER",
@@ -17561,9 +17551,9 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["preferToUpdate"] = true,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Jqt6SXYD", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "5x3oDhwe", ["type"] = "subbackground"}
                 },
                 ["height"] = 300,
                 ["rotate"] = false,
@@ -17598,7 +17588,7 @@ wa.data['assignments'].data = {
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\NexusKingMap.blp",
                 ["useCooldownModRate"] = false,
                 ["zoom"] = 0,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash Background",
                 ["url"] = "",
@@ -17734,9 +17724,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "u36cEvzo", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "FLgtL4gJ", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "7)YxApyBgYs",
@@ -17766,7 +17756,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #1",
                 ["width"] = 24,
@@ -17903,9 +17893,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "U4OeKTk1", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "NldpawRt", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "wQOuHqQt(v2",
@@ -17935,7 +17925,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #2",
                 ["width"] = 24,
@@ -18072,9 +18062,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "FXyJaUIs", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "kg1PFT84", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "EdQyV6l)cbQ",
@@ -18104,7 +18094,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #3",
                 ["width"] = 24,
@@ -18241,9 +18231,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "EsAX8w71", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "F6HYzhx2", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "(tzYjOYXCX5",
@@ -18273,7 +18263,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #4",
                 ["width"] = 24,
@@ -18410,9 +18400,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Qml6DCto", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "cYFonE3u", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "aNq7hAOEpOr",
@@ -18442,7 +18432,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #5",
                 ["width"] = 24,
@@ -18579,9 +18569,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "MjVrrQzr", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "P2i6LKkU", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "VXEzL)srrWB",
@@ -18611,7 +18601,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #6",
                 ["width"] = 24,
@@ -18748,9 +18738,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0bT5DcIq", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "KtY9QqaO", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "QECBGYvM6Sx",
@@ -18780,7 +18770,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #7",
                 ["width"] = 24,
@@ -18917,9 +18907,9 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3U6xpoKF", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "kltYDiZO", ["type"] = "subbackground"}
                 },
                 ["height"] = 24,
                 ["AMOriginalUUID"] = "iG4kDq4(tNj",
@@ -18949,7 +18939,7 @@ wa.data['assignments'].data = {
                 },
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["justify"] = "LEFT",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["zoom"] = 0.3,
                 ["id"] = "Smash Position #8",
                 ["width"] = 24,
@@ -19008,7 +18998,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -19027,7 +19017,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 1392544,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Star Positions",
                 ["frameStrata"] = 1,
@@ -19130,9 +19120,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "wBtgHaEE", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "AfiHS1mU", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19165,7 +19155,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "1-Tank",
                 ["xOffset"] = -75.999938964844,
@@ -19287,9 +19277,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "9grZugiN", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "PbJ3DtqH", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19322,7 +19312,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "1-Melee1",
                 ["xOffset"] = -103.99987792969,
@@ -19444,9 +19434,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Ce985HCY", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "nqNygMie", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19479,7 +19469,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "1-Melee2",
                 ["xOffset"] = -67.999877929688,
@@ -19601,9 +19591,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YEDnseWE", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "NYV4wTrw", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19636,7 +19626,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "2-Tank",
                 ["xOffset"] = -42.000061035156,
@@ -19758,9 +19748,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Ne5znGqu", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "w9Ny1AXH", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19793,7 +19783,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "2-Melee1",
                 ["xOffset"] = -35,
@@ -19915,9 +19905,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "HY48TtBD", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "LenET1M2", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19950,7 +19940,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "2-Melee2",
                 ["xOffset"] = -43.999877929688,
@@ -20072,9 +20062,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "cbRoetxX", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "tnPwg3dX", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20107,7 +20097,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Tank",
                 ["xOffset"] = -189.00012207031,
@@ -20229,9 +20219,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LU7si4hV", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "ahph2iSl", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20264,7 +20254,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Melee1",
                 ["xOffset"] = -213,
@@ -20386,9 +20376,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "biQC3CRO", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "6BImeOZy", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20421,7 +20411,7 @@ wa.data['assignments'].data = {
                     [3] = 0.25098040699959,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Melee2",
                 ["xOffset"] = -155.99987792969,
@@ -20539,9 +20529,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "fX8YIhv0", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "O0QP260D", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20575,7 +20565,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "1+2-Ranged1",
                 ["xOffset"] = -121.99993896484,
@@ -20674,9 +20664,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "O179GwT5", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "RbciLLv6", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20710,7 +20700,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "1+2-Ranged2",
                 ["xOffset"] = -162.00006103516,
@@ -20809,9 +20799,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "MGjh3GWk", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "ZhBkUaWD", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20845,7 +20835,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "1+2-Ranged3",
                 ["xOffset"] = -83.999877929688,
@@ -20944,9 +20934,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "MuS0o8sR", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "RPS2Mfch", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20980,7 +20970,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Ranged1",
                 ["xOffset"] = -3.0000610351563,
@@ -21079,9 +21069,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ADfqLXuQ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "CWyvd4O2", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21115,7 +21105,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Ranged2",
                 ["xOffset"] = -8.0003051757813,
@@ -21214,9 +21204,9 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "l6QoauZX", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "FxxMKjaL", ["type"] = "subbackground"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21250,7 +21240,7 @@ wa.data['assignments'].data = {
                     [3] = 0.24705883860588,
                     [4] = 0.75
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "3-Ranged3",
                 ["xOffset"] = -7.9998779296875,
@@ -21357,7 +21347,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -21394,7 +21384,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Salhadaar - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -21875,9 +21865,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3Xm5f4SF", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "0qjIV6wZ", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -22229,7 +22219,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Galactic Smash Assign (do not disable)",
                 ["displayText"] = "%text%text%text (%p)",
@@ -22358,7 +22348,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "n8NnBz1Z", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "yptqP3N0", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
@@ -22397,7 +22387,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -22422,7 +22412,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash where to go Text - Tank",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -22849,7 +22839,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "J3rsqhbd", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "EVuXlcq8", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
@@ -22888,7 +22878,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -22913,7 +22903,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash where to go Text - Melee",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -23340,7 +23330,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "xVZYXOMZ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "qYuY2YtY", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
@@ -23378,7 +23368,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -23403,7 +23393,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash where to go Text - Ranged",
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -23863,7 +23853,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "EoeGiMbP", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "tIqsO8rU", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_2.p_time_mod_rate"] = true,
@@ -23898,7 +23888,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -23923,7 +23913,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_time_precision"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Nexus King Rally the Shadowguard (Transition) Assign",
                 ["color"] = {
@@ -24008,9 +23998,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "JjxK2Mg4", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "TwVlYw5Z", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -24070,7 +24060,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Galactic Smash Macro Confirm",
                 ["displayText"] = "Macro Pressed",
@@ -24145,7 +24135,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -24182,7 +24172,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Salhadaar - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -24337,12 +24327,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "NEBdKHVyfRa",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VmgZkZBX", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "LUlE72qm", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "E4avz5PF", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "HXAtItHo", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "Yz9KkVPv",
+                        ["amId"] = "FNnpYeBS",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -24357,7 +24347,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "9VaEbyA6",
+                        ["amId"] = "ZrYyFrlB",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -24400,7 +24390,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "GFm4ODqr",
+                        ["amId"] = "mtzoyTSY",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_precision"] = 1,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
@@ -24448,7 +24438,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "fKD6FMXW",
+                        ["amId"] = "Bkan6Urg",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -24481,7 +24471,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "DaKBflaO",
+                        ["amId"] = "2Rom7wPn",
                         ["text_fontType"] = "OUTLINE",
                         ["anchorYOffset"] = 0,
                         ["type"] = "subtext",
@@ -24554,7 +24544,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -24609,7 +24599,7 @@ wa.data['assignments'].data = {
                 },
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "CENTER",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["load"] = {
                     ["talent"] = {["multi"] = {}},
@@ -24628,7 +24618,7 @@ wa.data['assignments'].data = {
                 ["xOffset"] = 0,
                 ["groupIcon"] = 6922083,
                 ["borderOffset"] = 4,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Dimensius Assign",
                 ["frameStrata"] = 1,
@@ -24796,7 +24786,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "tuQUuWSlUBQ",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -24806,7 +24796,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "AQamNJBK", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "QG7f1NWc", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {
@@ -24934,7 +24924,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["inverse"] = false,
                 ["parent"] = "Dimensius Assign",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -25041,7 +25031,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "eGrtTA7Yz4O",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -25051,7 +25041,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "T9Y9w8Vz", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "QvkPSJwb", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {
@@ -25114,7 +25104,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["inverse"] = false,
                 ["parent"] = "Dimensius Assign",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -25231,9 +25221,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["selfPoint"] = "BOTTOM",
                 ["font"] = "Expressway",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VqN4jUGK", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "YR3D8X0P", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "01rihzrRyrs",
@@ -25287,7 +25277,7 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["xOffset"] = 0,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "P2 Hide all but inner-most Void Warden Plates (Plater Only)",
                 ["shadowYOffset"] = -1,
@@ -25368,7 +25358,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -25405,7 +25395,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Dimensius CC List",
                 ["anchorPoint"] = "CENTER",
@@ -25461,12 +25451,12 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["AMModified"] = true,
                 ["AMOriginalUUID"] = "7anhu33t5YW",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "lznYvSSQ", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "wRD3HvBs", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
-                        ["amId"] = "gSuRWAAj",
+                        ["amId"] = "ewN2K2at",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -25486,7 +25476,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "ivz2CKBw",
+                        ["amId"] = "DfsjR3TR",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -25519,7 +25509,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "jldg5Sot",
+                        ["amId"] = "HLKItr3c",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -25541,7 +25531,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "omcsW24M",
+                        ["amId"] = "MaNtLxlq",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -25580,7 +25570,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "kzKohjLt",
+                        ["amId"] = "jhAdYQuR",
                         ["text_visible"] = false,
                         ["type"] = "subtext",
                         ["text_text_format_tooltip1_format"] = "BigNumber",
@@ -25621,7 +25611,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "mGV90JDV",
+                        ["amId"] = "N1mM0fB6",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -25670,7 +25660,7 @@ wa.data['assignments'].data = {
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["width"] = 70,
                 ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Starshard",
                 ["useCooldownModRate"] = true,
@@ -25826,12 +25816,12 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "8TWlm380Mcu",
                 ["desaturate"] = false,
                 ["width"] = 70,
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YM6ovJGT", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "GZtr9nYU", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
-                        ["amId"] = "BQch7TMc",
+                        ["amId"] = "91El4C5y",
                         ["border_offset"] = 0,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -25851,7 +25841,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "7tmaPxkv",
+                        ["amId"] = "gSfAvHJy",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -25884,7 +25874,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "Lt49K8mz",
+                        ["amId"] = "txDjoQ8q",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -25906,7 +25896,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "AlVxCz0l",
+                        ["amId"] = "E0uUIR0w",
                         ["text_fontType"] = "OUTLINE",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -25945,7 +25935,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "JzjkiViO",
+                        ["amId"] = "xiq0jPxX",
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["type"] = "subtext",
@@ -25987,7 +25977,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "tZEajkbs",
+                        ["amId"] = "ZjmV3hpm",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -25996,7 +25986,7 @@ wa.data['assignments'].data = {
                     },
                     [8] = {
                         ["border_size"] = 2,
-                        ["amId"] = "oT3Yqtki",
+                        ["amId"] = "pvjxjkqf",
                         ["border_offset"] = 0,
                         ["border_color"] = {
                             [1] = 0.24705883860588,
@@ -26070,7 +26060,7 @@ wa.data['assignments'].data = {
                 ["useCooldownModRate"] = true,
                 ["url"] = "",
                 ["zoom"] = 0.25,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Dimensius CC List ",
                 ["cooldownTextDisabled"] = false,
@@ -26203,7 +26193,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = true,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -26240,7 +26230,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Dimensius - Assign Texts",
                 ["anchorPoint"] = "CENTER",
@@ -26383,7 +26373,7 @@ wa.data['assignments'].data = {
                 ["AMOriginalUUID"] = "9Ic065hgq)W",
                 ["preferToUpdate"] = true,
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_c_format"] = "none",
                 ["height"] = 70,
                 ["displayText_format_p_decimal_precision"] = 1,
@@ -26393,7 +26383,7 @@ wa.data['assignments'].data = {
                 ["fontSize"] = 50,
                 ["source"] = "import",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "27McMNbp", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "lLLmuPQA", ["type"] = "subbackground"}
                 },
                 ["width"] = 70,
                 ["authorOptions"] = {},
@@ -26431,7 +26421,7 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SELECTFRAME",
                 ["wordWrap"] = "WordWrap",
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["inverse"] = false,
                 ["parent"] = "Dimensius - Assign Texts",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -26630,9 +26620,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "nm9ZrRiF", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "7534OU5r", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["use_zoneIds"] = false,
@@ -26686,7 +26676,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "P3 Devour Assign",
                 ["displayText"] = "%text",
@@ -26842,9 +26832,9 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["preferToUpdate"] = true,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YfM97KIC", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "tKt4ET6b", ["type"] = "subbackground"}
                 },
                 ["load"] = {
                     ["use_zoneIds"] = false,
@@ -26897,7 +26887,7 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "Starshard Nova Assign",
                 ["displayText"] = "Soak %text",
@@ -26994,7 +26984,46 @@ wa.data['assignments'].data = {
        [253]  = 38, -- Hunter: Beast Mastery\
        [254]  = 39, -- Hunter: Marksmanship\
        \
-   }",
+   }\
+   \
+   \
+   \
+   aura_env.MRT = function()\
+       aura_env.list = {}\
+       local note = NSAPI:GetNote()\
+       local list = false\
+       aura_env.me = false\
+       aura_env.left = {}\
+       if NSAPI.disable then return \"\" end\
+       for line in note:gmatch('[^\\r\\n]+') do\
+           --check for start/end of the name list\
+           if strlower(line) == \"nsleftend\" then\
+               list = false\
+               WeakAuras.ScanEvents(\"NS_ANTIMATTER_LIST\", aura_env.left)\
+               elseif list then \
+                   for name in line:gmatch(\"%S+\") do -- finding all remaining strings\
+                       if UnitInRaid(name) then\
+                           local unit = \"raid\"..UnitInRaid(name)\
+                           if UnitIsUnit(unit, \"player\") then\
+                               aura_env.text = {\"FRONT\", \"BACK LEFT\", \"MARKER\"}\
+                               aura_env.me = true  \
+                           end      \
+                           aura_env.left[unit] = true            \
+                       end\
+                   end\
+               elseif strlower(line) == \"nsleftstart\" then\
+                   list = true\
+                   aura_env.found = true\
+                   for unit in WA_IterateGroupMembers() do\
+                       aura_env.left[unit] = false\
+                   end\
+               end        \
+           end\
+       end\
+       \
+       \
+       \
+       ",
                         ["do_custom"] = true
                     },
                     ["finish"] = {}
@@ -27024,7 +27053,7 @@ wa.data['assignments'].data = {
            }\
            s:Update(\"\", state)\
        elseif e == \"NSAPI_ENCOUNTER_START\" then\
-           NSAPI:GetNote(true)        \
+           aura_env.MRT()     \
        elseif not NSAPI.disable then        \
            if e == \"NS_ASSIGN_EVENT\" and ... and aura_env.id == ... then\
                table.sort(aura_env.affected, \
@@ -27063,7 +27092,7 @@ wa.data['assignments'].data = {
                    end\
                    local i = UnitInRaid(destName)\
                    local unit = i and \"raid\"..i\
-                   if unit and UnitExists(unit) and (UnitInRange(unit) or WeakAuras.CheckRange(unit, 50, \"<=\")) then\
+                   if unit and UnitExists(unit) and (UnitInRange(unit) or WeakAuras.CheckRange(unit, 50, \"<=\") or (aura_env.found and aura_env.me == aura_env.left[unit])) then\
                        local G = destGUID or UnitGUID(unit)\
                        local spec = (aura_env.specs and aura_env.specs[unit]) or (NSAPI and NSAPI:GetSpecs(unit)) or WeakAuras.SpecForUnit(unit)\
                        local prio = spec and aura_env.spec and aura_env.spec[spec] or 0\
@@ -27118,7 +27147,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ofKYWq3X", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "ipzgZfh4", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
@@ -27148,14 +27177,14 @@ wa.data['assignments'].data = {
                 ["regionType"] = "text",
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_p_pad_mode"] = "left",
                 ["selfPoint"] = "BOTTOM",
                 ["anchorFrameParent"] = false,
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["conditions"] = {},
                 ["config"] = {},
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Reverse Gravity Assign",
                 ["displayText_format_p_time_precision"] = 1,
@@ -27231,10 +27260,7 @@ wa.data['assignments'].data = {
                aura_env.count = aura_env.count+1\
            end\
        end\
-   end\
-   \
-   \
-   ",
+   end",
                         ["do_custom"] = true
                     },
                     ["finish"] = {}
@@ -27330,7 +27356,6 @@ wa.data['assignments'].data = {
                                        autoHide = true,\
                                    }\
                                    s:Update(i, state)\
-                                   return\
                                end\
                            end\
                        end\
@@ -27346,11 +27371,9 @@ wa.data['assignments'].data = {
                                        autoHide = true,\
                                    }\
                                    s:Update(i, state)\
-                                   return\
                                end\
                            end\
                        end\
-                       \
                    end  \
                elseif e == \"COMBAT_LOG_EVENT_UNFILTERED\" then\
                    local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellID = ... -- full CLEU\
@@ -27451,9 +27474,9 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_mod_rate"] = true,
                 ["displayText_format_soak_format"] = "none",
                 ["displayText_format_p_round_type"] = "ceil",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "DFqCmCdp", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "7adJhr2m", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["url"] = "",
@@ -27511,7 +27534,10 @@ wa.data['assignments'].data = {
                             },
                             [2] = {
                                 ["value"] = {
-                                    ["custom"] = "NSAPI:TTS(\"Backup\")"
+                                    ["custom"] = "if not aura_env.last or aura_env.last < GetTime() - 1 then\
+       aura_env.last = GetTime()\
+       NSAPI:TTS(\"Backup\")\
+   end"
                                 },
                                 ["property"] = "customcode"
                             }
@@ -27529,7 +27555,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["selfPoint"] = "BOTTOM",
                 ["anchorFrameParent"] = false,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Excess Mass Assign",
                 ["displayText_format_2.p_format"] = "timed",
@@ -27852,7 +27878,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0mqebhiG", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Ko3gLP4t", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
@@ -27882,14 +27908,14 @@ wa.data['assignments'].data = {
                 ["regionType"] = "text",
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["displayText_format_p_pad_mode"] = "left",
                 ["selfPoint"] = "BOTTOM",
                 ["anchorFrameParent"] = false,
                 ["displayText_format_2.p_time_dynamic_threshold"] = 3,
                 ["conditions"] = {},
                 ["config"] = {},
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["tocversion"] = 110200,
                 ["id"] = "Inverse Gravity Assign",
                 ["displayText_format_p_time_precision"] = 1,
@@ -27974,7 +28000,7 @@ wa.data['assignments'].data = {
                 ["useLimit"] = false,
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {},
                 ["AMModified"] = true,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
@@ -28011,7 +28037,7 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
                 ["rowSpace"] = 1,
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["radius"] = 200,
                 ["id"] = "Dimensius - Lists",
                 ["anchorPoint"] = "CENTER",
@@ -28187,12 +28213,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "zp)swKM)GMy",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NKd7QKHM", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "738ozqHJ", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "MEA5OrGN", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "NoZtp6in", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "5Rn6azfp",
+                        ["amId"] = "Wz22LYd5",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -28207,7 +28233,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "CzAGntWd",
+                        ["amId"] = "9KYRe694",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -28255,7 +28281,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_percenthealth_format"] = "Number",
-                        ["amId"] = "VU8Bjjdx",
+                        ["amId"] = "vsuAvwLr",
                         ["text_text_format_3.power_format"] = "none",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_fontType"] = "OUTLINE",
@@ -28314,7 +28340,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "6y5Itvs9",
+                        ["amId"] = "cb2ZljTG",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_font"] = "Expressway",
@@ -28352,7 +28378,7 @@ wa.data['assignments'].data = {
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
-                        ["amId"] = "T87p9Xni",
+                        ["amId"] = "jKJssSui",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
                         ["text_selfPoint"] = "LEFT",
@@ -28382,7 +28408,7 @@ wa.data['assignments'].data = {
                         ["text_wordWrap"] = "WordWrap"
                     },
                     [8] = {
-                        ["amId"] = "bAOyVUUj",
+                        ["amId"] = "9Zp9aZ2X",
                         ["border_offset"] = 0,
                         ["border_size"] = 2,
                         ["border_visible"] = false,
@@ -28427,7 +28453,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -28712,12 +28738,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "5zPl(81AU22",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "p8lkFAVt", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "rY5mCjnC", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "q9uW90Ff", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "BgaHdWzN", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "lHcpw7E3",
+                        ["amId"] = "pWk0EDIg",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -28732,7 +28758,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "YUbiW3PA",
+                        ["amId"] = "WrOXCh0A",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -28774,7 +28800,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "khurnNGs",
+                        ["amId"] = "m8Y3CB1f",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -28822,7 +28848,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "HNgtyqii",
+                        ["amId"] = "6sIUIUPb",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -28890,7 +28916,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -29010,12 +29036,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "pBizMHPqdTp",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YuRLqrZI", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "9n9Gc4Fo", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "8cKpv8tG", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "PPtZzOCB", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "JhrNVblK",
+                        ["amId"] = "afzxpS8d",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -29030,7 +29056,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "jdpbldAg",
+                        ["amId"] = "QCxYmNUI",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -29072,7 +29098,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "OzZ6sSGz",
+                        ["amId"] = "TFyQIu1N",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -29120,7 +29146,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "KXg9cEvn",
+                        ["amId"] = "KYfKVGpi",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -29188,7 +29214,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -29306,12 +29332,12 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["AMOriginalUUID"] = "lFouMaGWf6r",
-                ["version"] = 71,
+                ["version"] = 72,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ZqUGkkSj", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "p98kmxEW", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "NXtoN1mc", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "miznKQ6A", ["type"] = "subforeground"},
                     [3] = {
-                        ["amId"] = "AOjzWE8Q",
+                        ["amId"] = "fJjREoOx",
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
@@ -29326,7 +29352,7 @@ wa.data['assignments'].data = {
                         ["useGlowColor"] = true,
                         ["glowScale"] = 2,
                         ["glowThickness"] = 3,
-                        ["amId"] = "bNCas0ey",
+                        ["amId"] = "JTjqc2jh",
                         ["glowType"] = "Pixel",
                         ["glowYOffset"] = 0,
                         ["glowColor"] = {
@@ -29368,7 +29394,7 @@ wa.data['assignments'].data = {
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_t_decimal_precision"] = 0,
-                        ["amId"] = "cGbEEPb2",
+                        ["amId"] = "O8QB2BUi",
                         ["text_text_format_p_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_dynamic_threshold"] = 10,
                         ["text_text_format_t_time_format"] = 0,
@@ -29416,7 +29442,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "OqmmtP6m",
+                        ["amId"] = "TKnfXIfR",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -29484,7 +29510,7 @@ wa.data['assignments'].data = {
                     [1] = {[1] = 0, [2] = 0.50196081399918, [3] = 1, [4] = 1},
                     [2] = {[1] = 1, [2] = 0, [3] = 0, [4] = 1}
                 },
-                ["semver"] = "1.0.70",
+                ["semver"] = "1.0.71",
                 ["useCooldownModRate"] = true,
                 ["sparkHidden"] = "NEVER",
                 ["xOffset"] = 0,
@@ -29513,98 +29539,98 @@ wa.data['assignments'].data = {
                 ["preferToUpdate"] = true,
                 ["groupIcon"] = 1505953,
                 ["anchorPoint"] = "TOP",
-                ["AMModified"] = true,
+                ["config"] = {},
+                ["arcLength"] = 360,
                 ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["rowSpace"] = 1,
                 ["url"] = "",
-                ["actions"] = {["start"] = {}, ["finish"] = {}, ["init"] = {}},
+                ["actions"] = {["start"] = {}, ["init"] = {}, ["finish"] = {}},
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["names"] = {},
+                            ["unit"] = "player",
                             ["type"] = "aura2",
                             ["spellIds"] = {},
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
-                            ["unit"] = "player"
+                            ["names"] = {}
                         },
                         ["untrigger"] = {}
                     }
                 },
                 ["columnSpace"] = 1,
-                ["radius"] = 200,
-                ["arcLength"] = 360,
-                ["animation"] = {
-                    ["start"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["easeStrength"] = 3,
-                        ["type"] = "none",
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
+                ["internalVersion"] = 85,
+                ["authorOptions"] = {},
+                ["selfPoint"] = "TOP",
                 ["align"] = "CENTER",
-                ["xOffset"] = 0,
-                ["AMOriginalUUID"] = "gnTBDejrTTp",
+                ["borderEdge"] = "Square Full White",
                 ["yOffset"] = 0,
+                ["sortHybridTable"] = {["Assignment on Note Push"] = false},
                 ["stagger"] = 0,
-                ["gridType"] = "RD",
+                ["fullCircle"] = true,
                 ["version"] = 70,
                 ["subRegions"] = {},
-                ["sortHybridTable"] = {["Assignment on Note Push"] = false},
-                ["fullCircle"] = true,
-                ["load"] = {
-                    ["size"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
-                    ["class"] = {["multi"] = {}},
-                    ["talent"] = {["multi"] = {}}
-                },
                 ["space"] = 2,
+                ["radius"] = 200,
+                ["AMModified"] = true,
+                ["xOffset"] = 0,
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
-                ["internalVersion"] = 85,
+                ["useLimit"] = false,
                 ["animate"] = false,
-                ["rotation"] = 0,
+                ["frameStrata"] = 1,
                 ["scale"] = 1,
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Big Bar Anchor",
-                ["regionType"] = "dynamicgroup",
+                ["stepAngle"] = 15,
                 ["borderSize"] = 2,
-                ["limit"] = 5,
-                ["useLimit"] = false,
-                ["frameStrata"] = 1,
-                ["authorOptions"] = {},
+                ["sort"] = "none",
+                ["gridType"] = "RD",
+                ["rotation"] = 0,
                 ["anchorFrameParent"] = false,
                 ["constantFactor"] = "RADIUS",
-                ["gridWidth"] = 5,
+                ["load"] = {
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}}
+                },
                 ["borderOffset"] = 4,
                 ["semver"] = "1.0.69",
                 ["tocversion"] = 110200,
                 ["id"] = "Assignments on Note Push -  check custom options",
-                ["borderEdge"] = "Square Full White",
-                ["alpha"] = 1,
+                ["regionType"] = "dynamicgroup",
+                ["gridWidth"] = 5,
                 ["anchorFrameType"] = "SELECTFRAME",
-                ["config"] = {},
-                ["borderInset"] = 1,
-                ["selfPoint"] = "TOP",
-                ["stepAngle"] = 15,
-                ["sort"] = "none",
+                ["limit"] = 5,
+                ["uid"] = "AM-gnTBDejrTTp",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
                 ["conditions"] = {},
+                ["borderInset"] = 1,
+                ["AMOriginalUUID"] = "gnTBDejrTTp",
                 ["information"] = {},
-                ["uid"] = "AM-gnTBDejrTTp"
+                ["alpha"] = 1
             },
             [126] = {
                 ["outline"] = "OUTLINE",
@@ -29625,7 +29651,6 @@ wa.data['assignments'].data = {
    end",
                         ["do_custom"] = true
                     },
-                    ["finish"] = {},
                     ["init"] = {
                         ["do_custom_load"] = false,
                         ["custom"] = "aura_env.color = \"\"\
@@ -29820,18 +29845,23 @@ wa.data['assignments'].data = {
    \
    ",
                         ["do_custom"] = true
-                    }
+                    },
+                    ["finish"] = {}
                 },
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
                             ["type"] = "custom",
                             ["custom_type"] = "stateupdate",
-                            ["debuffType"] = "HELPFUL",
+                            ["custom_hide"] = "timed",
                             ["duration"] = "10",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["names"] = {},
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
+                            ["events"] = "MRT_NOTE_UPDATE NS_ASSIGN_CHECK NS_ASSIGN_CHECK_DISPLAY READY_CHECK ENCOUNTER_START",
+                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -29947,12 +29977,8 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["spellIds"] = {},
-                            ["events"] = "MRT_NOTE_UPDATE NS_ASSIGN_CHECK NS_ASSIGN_CHECK_DISPLAY READY_CHECK ENCOUNTER_START",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["subeventSuffix"] = "_CAST_START",
-                            ["custom_hide"] = "timed"
+                            ["names"] = {},
+                            ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
                     },
@@ -29962,20 +29988,20 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 85,
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none"
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none"
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none"
                     }
@@ -29983,16 +30009,21 @@ wa.data['assignments'].data = {
                 ["font"] = "Expressway",
                 ["version"] = 70,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "67x4pP1o", ["type"] = "subbackground"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "6jQd4UGK"}
                 },
                 ["AMModified"] = true,
+                ["yOffset"] = 0,
+                ["fontSize"] = 26,
+                ["source"] = "import",
+                ["shadowXOffset"] = 1,
+                ["displayText_format_p_time_legacy_floor"] = false,
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["spec_position"] = {},
                     ["use_zoneIds"] = true,
                     ["talent"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
-                    ["zoneIds"] = "g463",
+                    ["size"] = {["multi"] = {}},
                     ["use_encounterid"] = false,
                     ["difficulty"] = {
                         ["single"] = "mythic",
@@ -30000,139 +30031,17 @@ wa.data['assignments'].data = {
                     },
                     ["use_not_spellknown"] = false,
                     ["ignoreNameRealm"] = "",
-                    ["use_ignoreNameRealm"] = false,
-                    ["use_never"] = false,
-                    ["class"] = {["multi"] = {}},
                     ["use_zone"] = false,
-                    ["size"] = {["multi"] = {}}
+                    ["class"] = {["multi"] = {}},
+                    ["use_never"] = false,
+                    ["use_ignoreNameRealm"] = false,
+                    ["zoneIds"] = "g463"
                 },
-                ["AMOriginalUUID"] = "7xLBQfxNbY8",
-                ["fontSize"] = 26,
-                ["source"] = "import",
-                ["shadowXOffset"] = 1,
-                ["xOffset"] = 0,
-                ["displayText_format_p_format"] = "timed",
+                ["conditions"] = {},
                 ["regionType"] = "text",
-                ["preferToUpdate"] = true,
-                ["fixedWidth"] = 200,
-                ["automaticWidth"] = "Auto",
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["displayText_format_p_time_precision"] = 1,
-                ["uid"] = "AM-7xLBQfxNbY8",
-                ["justify"] = "LEFT",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                ["semver"] = "1.0.69",
-                ["tocversion"] = 110200,
-                ["id"] = "Assignment on Note Push",
-                ["authorOptions"] = {
-                    [1] = {
-                        ["text"] = "By default the assignments will only pop up when a note is being pushed to you. Enable this if you want to see it every ready check",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [2] = {
-                        ["type"] = "toggle",
-                        ["default"] = false,
-                        ["width"] = 2,
-                        ["name"] = "Show Assignments on Ready Check",
-                        ["useDesc"] = true,
-                        ["key"] = "onreadycheck",
-                        ["desc"] = ""
-                    },
-                    [3] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [4] = {
-                        ["text"] = "The Aura, by default, also prints your assignments into your chat window so that if you miss the popup you can still look it up. If you do not want it to do that you can disable it here.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [5] = {
-                        ["type"] = "toggle",
-                        ["default"] = true,
-                        ["width"] = 2,
-                        ["name"] = "Print Assignments in Chat",
-                        ["useDesc"] = true,
-                        ["key"] = "printinchat",
-                        ["desc"] = ""
-                    },
-                    [6] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [7] = {
-                        ["text"] = "Here you can choose which color the actual assignments should be shown in to highlight the important parts of the text quickly to you.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [8] = {
-                        ["type"] = "color",
-                        ["default"] = {
-                            [1] = 0.24705883860588,
-                            [2] = 0.98823535442352,
-                            [3] = 0.24705883860588,
-                            [4] = 1
-                        },
-                        ["key"] = "color",
-                        ["name"] = "Highlight Color",
-                        ["useDesc"] = false,
-                        ["width"] = 1
-                    },
-                    [9] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [10] = {
-                        ["text"] = "Here you can choose if you want Assignments that were automatically generated to show at the start of a pull from that Boss. This is often used for bosses early in the tier where an automated assignment is good enough and, especially in farm, raid leaders will not care about making a note every week.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [11] = {
-                        ["type"] = "toggle",
-                        ["default"] = true,
-                        ["key"] = "Automatedassign",
-                        ["name"] = "Show a popup for automated Assigns",
-                        ["useDesc"] = false,
-                        ["width"] = 2
-                    },
-                    [12] = {
-                        ["text"] = "",
-                        ["type"] = "header",
-                        ["useName"] = false,
-                        ["width"] = 2
-                    },
-                    [13] = {
-                        ["text"] = "You may add a TTS sound when receiving an assignment if you want an extra reminder to check it. This can be useful if, for example, you tend to tab out before pulls. Leaving it empty will simply not play any sound.",
-                        ["type"] = "description",
-                        ["fontSize"] = "medium",
-                        ["width"] = 2
-                    },
-                    [14] = {
-                        ["type"] = "input",
-                        ["useDesc"] = false,
-                        ["width"] = 2,
-                        ["key"] = "TTSSound",
-                        ["name"] = "TTS sound to be played",
-                        ["default"] = "",
-                        ["length"] = 10,
-                        ["multiline"] = false,
-                        ["useLength"] = false
-                    }
-                },
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["displayText_format_p_time_legacy_floor"] = false,
+                ["selfPoint"] = "BOTTOM",
+                ["displayText_format_p_format"] = "timed",
+                ["wordWrap"] = "WordWrap",
                 ["config"] = {
                     ["printinchat"] = true,
                     ["onreadycheck"] = false,
@@ -30145,12 +30054,129 @@ wa.data['assignments'].data = {
                     },
                     ["TTSSound"] = ""
                 },
-                ["yOffset"] = 0,
-                ["wordWrap"] = "WordWrap",
+                ["displayText_format_p_time_precision"] = 1,
+                ["automaticWidth"] = "Auto",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["authorOptions"] = {
+                    [1] = {
+                        ["type"] = "description",
+                        ["text"] = "By default the assignments will only pop up when a note is being pushed to you. Enable this if you want to see it every ready check",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [2] = {
+                        ["type"] = "toggle",
+                        ["default"] = false,
+                        ["desc"] = "",
+                        ["key"] = "onreadycheck",
+                        ["useDesc"] = true,
+                        ["name"] = "Show Assignments on Ready Check",
+                        ["width"] = 2
+                    },
+                    [3] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [4] = {
+                        ["type"] = "description",
+                        ["text"] = "The Aura, by default, also prints your assignments into your chat window so that if you miss the popup you can still look it up. If you do not want it to do that you can disable it here.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [5] = {
+                        ["type"] = "toggle",
+                        ["default"] = true,
+                        ["desc"] = "",
+                        ["key"] = "printinchat",
+                        ["useDesc"] = true,
+                        ["name"] = "Print Assignments in Chat",
+                        ["width"] = 2
+                    },
+                    [6] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [7] = {
+                        ["type"] = "description",
+                        ["text"] = "Here you can choose which color the actual assignments should be shown in to highlight the important parts of the text quickly to you.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [8] = {
+                        ["type"] = "color",
+                        ["default"] = {
+                            [1] = 0.24705883860588,
+                            [2] = 0.98823535442352,
+                            [3] = 0.24705883860588,
+                            [4] = 1
+                        },
+                        ["key"] = "color",
+                        ["useDesc"] = false,
+                        ["name"] = "Highlight Color",
+                        ["width"] = 1
+                    },
+                    [9] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [10] = {
+                        ["type"] = "description",
+                        ["text"] = "Here you can choose if you want Assignments that were automatically generated to show at the start of a pull from that Boss. This is often used for bosses early in the tier where an automated assignment is good enough and, especially in farm, raid leaders will not care about making a note every week.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [11] = {
+                        ["type"] = "toggle",
+                        ["default"] = true,
+                        ["key"] = "Automatedassign",
+                        ["useDesc"] = false,
+                        ["name"] = "Show a popup for automated Assigns",
+                        ["width"] = 2
+                    },
+                    [12] = {
+                        ["type"] = "header",
+                        ["text"] = "",
+                        ["useName"] = false,
+                        ["width"] = 2
+                    },
+                    [13] = {
+                        ["type"] = "description",
+                        ["text"] = "You may add a TTS sound when receiving an assignment if you want an extra reminder to check it. This can be useful if, for example, you tend to tab out before pulls. Leaving it empty will simply not play any sound.",
+                        ["fontSize"] = "medium",
+                        ["width"] = 2
+                    },
+                    [14] = {
+                        ["type"] = "input",
+                        ["useDesc"] = false,
+                        ["width"] = 2,
+                        ["key"] = "TTSSound",
+                        ["name"] = "TTS sound to be played",
+                        ["multiline"] = false,
+                        ["length"] = 10,
+                        ["default"] = "",
+                        ["useLength"] = false
+                    }
+                },
+                ["semver"] = "1.0.69",
+                ["tocversion"] = 110200,
+                ["id"] = "Assignment on Note Push",
+                ["justify"] = "LEFT",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["fixedWidth"] = 200,
+                ["uid"] = "AM-7xLBQfxNbY8",
+                ["preferToUpdate"] = true,
+                ["xOffset"] = 0,
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                ["conditions"] = {},
+                ["AMOriginalUUID"] = "7xLBQfxNbY8",
                 ["information"] = {},
-                ["selfPoint"] = "BOTTOM"
+                ["displayText_format_p_time_dynamic_threshold"] = 60
             },
             [127] = {
                 ["controlledChildren"] = {},
@@ -30160,18 +30186,18 @@ wa.data['assignments'].data = {
                 ["yOffset"] = 0,
                 ["anchorPoint"] = "CENTER",
                 ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                ["actions"] = {["start"] = {}, ["finish"] = {}, ["init"] = {}},
+                ["actions"] = {["start"] = {}, ["init"] = {}, ["finish"] = {}},
                 ["triggers"] = {
                     [1] = {
                         ["trigger"] = {
-                            ["debuffType"] = "HELPFUL",
+                            ["names"] = {},
                             ["type"] = "aura2",
                             ["spellIds"] = {},
                             ["subeventSuffix"] = "_CAST_START",
                             ["unit"] = "player",
                             ["subeventPrefix"] = "SPELL",
                             ["event"] = "Health",
-                            ["names"] = {}
+                            ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
                     }
@@ -30180,10 +30206,10 @@ wa.data['assignments'].data = {
                 ["selfPoint"] = "CENTER",
                 ["subRegions"] = {},
                 ["load"] = {
-                    ["talent"] = {["multi"] = {}},
+                    ["size"] = {["multi"] = {}},
                     ["spec"] = {["multi"] = {}},
                     ["class"] = {["multi"] = {}},
-                    ["size"] = {["multi"] = {}}
+                    ["talent"] = {["multi"] = {}}
                 },
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
                 ["scale"] = 1,
@@ -30191,41 +30217,41 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["regionType"] = "group",
                 ["borderSize"] = 2,
+                ["xOffset"] = 0,
+                ["AMModified"] = true,
+                ["borderOffset"] = 4,
                 ["animation"] = {
                     ["start"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none"
                     },
                     ["main"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none"
                     },
                     ["finish"] = {
-                        ["easeStrength"] = 3,
                         ["type"] = "none",
+                        ["easeStrength"] = 3,
                         ["duration_type"] = "seconds",
                         ["easeType"] = "none"
                     }
                 },
-                ["authorOptions"] = {},
-                ["borderOffset"] = 4,
-                ["AMModified"] = true,
-                ["conditions"] = {},
+                ["AMOriginalUUID"] = "s8sp9fWgJXW",
                 ["id"] = "[NHF] Manaforge Omega Custom Assignments",
-                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-mo.png",
                 ["frameStrata"] = 1,
+                ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
                 ["config"] = {},
                 ["borderInset"] = 1,
                 ["uid"] = "AM-s8sp9fWgJXW",
-                ["alpha"] = 1,
-                ["AMOriginalUUID"] = "s8sp9fWgJXW",
+                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-mo.png",
+                ["conditions"] = {},
                 ["information"] = {},
-                ["xOffset"] = 0
+                ["authorOptions"] = {}
             }
         },
         ["v"] = 2000
