@@ -11,8 +11,8 @@ wa.data['generalMO'].data = {
     ["name"] = "[NHF] Manaforge Omega",
     ["isOptional"] = "0",
     ["isAnchor"] = "0",
-    ["semver"] = "1.0.18",
-    ["version"] = "29",
+    ["semver"] = "1.0.19",
+    ["version"] = "30",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -50,7 +50,7 @@ wa.data['generalMO'].data = {
             },
             ["internalVersion"] = 85,
             ["selfPoint"] = "CENTER",
-            ["version"] = "29",
+            ["version"] = "30",
             ["subRegions"] = {},
             ["load"] = {
                 ["talent"] = {["multi"] = {}},
@@ -69,7 +69,7 @@ wa.data['generalMO'].data = {
             ["authorOptions"] = {},
             ["AMOriginalUUID"] = "2ExoHkYpbvf",
             ["borderOffset"] = 4,
-            ["semver"] = "1.0.18",
+            ["semver"] = "1.0.19",
             ["yOffset"] = 0,
             ["id"] = "[NHF] Manaforge Omega",
             ["uid"] = "AM-2ExoHkYpbvf",
@@ -228,7 +228,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["version"] = 2,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ckq22VCv", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "Hk1qmYdW", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text"] = "%index",
@@ -238,7 +238,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "0i9MpP7J",
+                        ["amId"] = "1k1IBoFQ",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_precision"] = 1,
@@ -541,7 +541,7 @@ wa.data['generalMO'].data = {
                 ["config"] = {},
                 ["displayText_format_p_format"] = "timed",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "dG7whGtL", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "3YMyEGRt", ["type"] = "subbackground"}
                 },
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
@@ -707,7 +707,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["version"] = 2,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "kfTaknaJ", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "0RytzWWG", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text"] = "%index",
@@ -724,7 +724,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "6IRLPqzO",
+                        ["amId"] = "0DFJhOZc",
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_index_format"] = "none",
@@ -1270,11 +1270,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "kGniFFhZ", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "Ns4zDhm7", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "ajixkt9P",
+                        ["amId"] = "eYFNKjMu",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -1294,7 +1294,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowDuration"] = 1,
                         ["glowScale"] = 1,
-                        ["amId"] = "bzbVAyLR",
+                        ["amId"] = "RHdO9XB5",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -1308,7 +1308,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "zD62Rkze",
+                        ["amId"] = "jWw49p3i",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -1352,7 +1352,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "Z7HXcmOo",
+                        ["amId"] = "7vQqCszu",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -1370,7 +1370,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "dk7NrGTg",
+                        ["amId"] = "SMaShjfw",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -1670,14 +1670,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NMjUdak4", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "1iCHm8fe", ["type"] = "subbackground"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "Xhjv32gB",
+                        ["amId"] = "nRofJCOL",
                         ["border_edge"] = "Square Full White",
                         ["border_size"] = 1
                     },
@@ -1690,7 +1690,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "PMcaCsCO",
+                        ["amId"] = "HTmmcsNH",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -1725,7 +1725,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "f1Xv1Toy",
+                        ["amId"] = "6FLECTK4",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_precision"] = 1,
@@ -1771,7 +1771,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "xHgH6BD2",
+                        ["amId"] = "XaUxr7nq",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -1900,12 +1900,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "soBIvDLI"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "vyL0BW3L"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
-                        ["amId"] = "R9xkkhOV",
+                        ["amId"] = "xIeCr505",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -1920,7 +1920,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "RQ6JPFux",
+                        ["amId"] = "L8N9Y8r0",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -1978,7 +1978,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "7hdZwpop"
+                        ["amId"] = "r9sXj1TK"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -2006,7 +2006,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "4Kd4kmXb"
+                        ["amId"] = "VtzZ78qr"
                     }
                 },
                 ["height"] = 50,
@@ -2131,12 +2131,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "3f1B7KEe"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "cPtPJQgS"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
-                        ["amId"] = "ktorJs7h",
+                        ["amId"] = "jFjrHZP2",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -2151,7 +2151,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "l43Y8vD9",
+                        ["amId"] = "DKWmNqAC",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -2209,7 +2209,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "G7gSLWVo"
+                        ["amId"] = "q1I4mmeu"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -2242,7 +2242,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "diE8CSrP"
+                        ["amId"] = "4NzX2Grm"
                     }
                 },
                 ["height"] = 50,
@@ -2525,8 +2525,8 @@ wa.data['generalMO'].data = {
                 ["preferToUpdate"] = true,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LFy50omO", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "SdNflOEn", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "MQOLVVuK", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "yOmtsLWj", ["type"] = "subforeground"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -2536,7 +2536,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "7FX8ylYn",
+                        ["amId"] = "PkiZD4fE",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
@@ -2584,7 +2584,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_cname_format"] = "none",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "Z4bFKUWN",
+                        ["amId"] = "C2GibKXy",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 12,
@@ -2597,7 +2597,7 @@ wa.data['generalMO'].data = {
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "5W2Wyy8R",
+                        ["amId"] = "t7xOHVxN",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     }
@@ -2835,8 +2835,8 @@ wa.data['generalMO'].data = {
                 ["backgroundColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.5},
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "7wtRVkO0", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "4jnSkOC9", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "ZJn7a9KP", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "1t3PA68Q", ["type"] = "subforeground"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%c",
@@ -2869,7 +2869,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_pad"] = false,
                         ["text_visible"] = true,
                         ["text_text_format_p_format"] = "timed",
-                        ["amId"] = "joSI8JB4",
+                        ["amId"] = "a0a45T7Q",
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 18,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
@@ -2896,7 +2896,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "YoKcBzr9",
+                        ["amId"] = "Px3wguzS",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
@@ -2909,7 +2909,7 @@ wa.data['generalMO'].data = {
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "wczzxqCk",
+                        ["amId"] = "3LNtVP7m",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     }
@@ -3029,8 +3029,8 @@ wa.data['generalMO'].data = {
                 ["icon"] = false,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ej6w5V9Z"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "RrL3Ycfq"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "CqkbICAR"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "E5lBTrx1"},
                     [3] = {
                         ["text_text_format_p_time_format"] = 0,
                         ["text_text"] = "%p / 7.0",
@@ -3043,7 +3043,7 @@ wa.data['generalMO'].data = {
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "d2xvT9oZ",
+                        ["amId"] = "KJWGdk5H",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_precision"] = 1,
@@ -3092,13 +3092,13 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "kUujAUWz"
+                        ["amId"] = "5zvXpMQC"
                     },
                     [5] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "kCKTu7w0",
+                        ["amId"] = "cesw7FPH",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -3123,7 +3123,7 @@ wa.data['generalMO'].data = {
                             [3] = 0.098039224743843,
                             [4] = 1
                         },
-                        ["amId"] = "JPxE5gih",
+                        ["amId"] = "kbbJYHtE",
                         ["tick_visible"] = true,
                         ["tick_yOffset"] = 0,
                         ["tick_mirror"] = false,
@@ -3148,7 +3148,7 @@ wa.data['generalMO'].data = {
                             [3] = 0.023529414087534,
                             [4] = 1
                         },
-                        ["amId"] = "SWo1mGBZ",
+                        ["amId"] = "TiPiM6up",
                         ["tick_visible"] = true,
                         ["tick_blend_mode"] = "ADD",
                         ["tick_mirror"] = false,
@@ -3168,7 +3168,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "PiU46pue",
+                        ["amId"] = "mRVEGHqY",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -3198,7 +3198,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "h4k5k4zY",
+                        ["amId"] = "gBzuBVnn",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -3558,7 +3558,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "IBc08zJl", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "oNSoQtqV", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Matrix",
@@ -3581,7 +3581,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "qvPVS1YS",
+                        ["amId"] = "epS1YRUD",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -3603,7 +3603,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "ry4KIH4m",
+                        ["amId"] = "TdaDZGCP",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -3802,7 +3802,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "LmTR2dJP"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "RlWzigtv"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Pushback",
@@ -3835,7 +3835,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "glnAQC7d"
+                        ["amId"] = "eav4F808"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -3870,7 +3870,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "6VELKfbF"
+                        ["amId"] = "j4qPWJbd"
                     }
                 },
                 ["height"] = 30,
@@ -4122,7 +4122,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "eEgOF5GN"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "72v0DrVi"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -4155,7 +4155,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "n6BKPUcq"
+                        ["amId"] = "661a4tGo"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -4190,7 +4190,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "pyHbR87x"
+                        ["amId"] = "CFlI0mLB"
                     }
                 },
                 ["height"] = 30,
@@ -4474,7 +4474,7 @@ wa.data['generalMO'].data = {
                 ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "4jdpxFTW", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "3PwWjkhO", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Spawning Matrix",
@@ -4485,7 +4485,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "ObiQ6PHX",
+                        ["amId"] = "bru1v2RH",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -4524,7 +4524,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "u3HxoVQA",
+                        ["amId"] = "xyJo1zhV",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_n_format"] = "none",
@@ -4949,12 +4949,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "CE9vXnST"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "KuOI2im9"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "bxmXeeiI",
+                        ["amId"] = "76PQvDy1",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -4969,7 +4969,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "VSbvOTkC",
+                        ["amId"] = "TmujpJSN",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -5019,7 +5019,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "fIMPa45c"
+                        ["amId"] = "CsqddOuG"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -5055,7 +5055,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "PxPCYjYf"
+                        ["amId"] = "fPuCWaBh"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -5071,7 +5071,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "bs5BU0io",
+                        ["amId"] = "W3tKObTe",
                         ["text_text_format_c_format"] = "none",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
@@ -5478,11 +5478,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "CPiLJNrQ", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "WssH0NUV", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "FZoA9H7M",
+                        ["amId"] = "pR6Tjiip",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -5502,7 +5502,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowDuration"] = 1,
                         ["glowScale"] = 1,
-                        ["amId"] = "TUCry68X",
+                        ["amId"] = "0HPFujq9",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -5516,7 +5516,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "Y0FkpUFm",
+                        ["amId"] = "hCD7Cqa7",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -5560,7 +5560,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "PpuFGPsV",
+                        ["amId"] = "TMkDSJAA",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -5578,7 +5578,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "tyGCK5e6",
+                        ["amId"] = "qB7SRODg",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -5848,14 +5848,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "plI2Ryex", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "Xs2xFUVf", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "2inJdtzU",
+                        ["amId"] = "gos4DRZ1",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -5868,7 +5868,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "A0AhHoYd",
+                        ["amId"] = "0b0c2kQR",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -5908,7 +5908,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "I1q0p1uG",
+                        ["amId"] = "qolHr43I",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
@@ -5949,7 +5949,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "WoMMlklU",
+                        ["amId"] = "VV4zDW9N",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -6081,12 +6081,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "nRZyJHlC"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "qa2l3ZAe"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "qs2wvTzd",
+                        ["amId"] = "EFpIbYCs",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -6101,7 +6101,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "luLcLGw8",
+                        ["amId"] = "b3ZwE9et",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -6159,7 +6159,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "8RJ0Y1Fk"
+                        ["amId"] = "HreUlxNj"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 1,
@@ -6187,7 +6187,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "tivjj3uE"
+                        ["amId"] = "6BgaDH2O"
                     }
                 },
                 ["height"] = 50,
@@ -6315,11 +6315,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "nkBkm2Yi", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "S7zsqVT0", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
-                        ["amId"] = "PmvSuSRU",
+                        ["amId"] = "lvil7XrY",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -6336,7 +6336,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "ILcFi39U",
+                        ["amId"] = "GPS4oVs6",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -6370,7 +6370,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "FDmoFyIC",
+                        ["amId"] = "453rJ8ZV",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
@@ -6416,7 +6416,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "6Vtbmizo",
+                        ["amId"] = "g2oxk5hE",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -6738,8 +6738,8 @@ wa.data['generalMO'].data = {
                 ["displayIcon"] = 2065603,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "XuUCyet3", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "k6fpBP9L", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "Jy5fmhz9", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "2P0A5Xvf", ["type"] = "subforeground"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -6754,7 +6754,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Wz7khtjs",
+                        ["amId"] = "NKLdSXj4",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -6794,7 +6794,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "zsg7hV19",
+                        ["amId"] = "49xZ8HKh",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
@@ -6807,7 +6807,7 @@ wa.data['generalMO'].data = {
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "G36Cgd3u",
+                        ["amId"] = "RI69g7Pb",
                         ["border_edge"] = "Square Full White",
                         ["border_size"] = 1
                     }
@@ -7136,7 +7136,7 @@ wa.data['generalMO'].data = {
                 },
                 ["cooldownEdge"] = false,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "JkmdpoNo", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "ZPQo0whU", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "Spread Inc",
@@ -7165,7 +7165,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "nbVWnGop",
+                        ["amId"] = "OjCxYUw6",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -7185,7 +7185,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "UBp5hpUM",
+                        ["amId"] = "OtJYETgv",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -7389,7 +7389,7 @@ wa.data['generalMO'].data = {
                 ["zoom"] = 0,
                 ["internalVersion"] = 85,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "2bTnc8Hn"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "Zb6J2V8i"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Tether Soon",
@@ -7418,7 +7418,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowXOffset"] = 1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "frcdyFZC",
+                        ["amId"] = "fLafxXxQ",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -7436,7 +7436,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "lQNOUw0B",
+                        ["amId"] = "MvoSZkhy",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -7656,7 +7656,7 @@ wa.data['generalMO'].data = {
                 ["backgroundColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.5},
                 ["automaticWidth"] = "Auto",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "9vwXtUmJ", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "EHXNmgA2", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Dmg Amp Inc",
@@ -7685,7 +7685,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "j2mAGxbQ",
+                        ["amId"] = "TmWW5Ys9",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -7705,7 +7705,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "5MEDWs8O",
+                        ["amId"] = "sIXUeBos",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -7912,7 +7912,7 @@ wa.data['generalMO'].data = {
                 ["backgroundColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.5},
                 ["automaticWidth"] = "Auto",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "JCEgMRJ8", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "uB8viuRM", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Phasing",
@@ -7941,7 +7941,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "uBVg42xp",
+                        ["amId"] = "nmH5Xdq7",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -7975,7 +7975,7 @@ wa.data['generalMO'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "fKZF0k5w",
+                        ["amId"] = "uxnEz5gj",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 3,
                         ["text_font"] = "JetBrainsMono - ExtraBold",
@@ -8156,7 +8156,7 @@ wa.data['generalMO'].data = {
                 ["zoom"] = 0,
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "L30E89Np"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "tAYtm3Ib"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Pillar Not Soaked",
@@ -8189,7 +8189,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "TXYaL0TN"
+                        ["amId"] = "4i7rg3WO"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -8202,7 +8202,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "KORfAJty",
+                        ["amId"] = "4WP96y1q",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -8448,7 +8448,7 @@ wa.data['generalMO'].data = {
                 },
                 ["cooldownEdge"] = false,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "KuB5U7tG", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "CfYhjJ2z", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "New Pillar",
@@ -8476,7 +8476,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "rJ5tPzLS",
+                        ["amId"] = "jKLfSD9s",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -8496,7 +8496,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "YJT1ka0o",
+                        ["amId"] = "Jq2rDqU6",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -8738,7 +8738,7 @@ wa.data['generalMO'].data = {
                 ["backgroundColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.5},
                 ["automaticWidth"] = "Auto",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "7uM2dIc2", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "DEL9p9WQ", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -8766,7 +8766,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "LGTNYAof",
+                        ["amId"] = "3J6edO5b",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -8786,7 +8786,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "6fikTTzd",
+                        ["amId"] = "C7SWCpAz",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -8992,7 +8992,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "A16kdCfh"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "0IT6Hjey"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -9025,7 +9025,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "yJG9XHuu"
+                        ["amId"] = "LanMekup"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -9038,7 +9038,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "GZIYdfdH",
+                        ["amId"] = "ooyE7nih",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -9265,7 +9265,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "rgVqYHYB", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "75vet74m", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "Soak %c in",
@@ -9294,7 +9294,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "s2DrDle0",
+                        ["amId"] = "0ETPSDwW",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -9314,7 +9314,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "HJmmrOn3",
+                        ["amId"] = "2co3qDSd",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -9621,7 +9621,7 @@ wa.data['generalMO'].data = {
                 ["fontSize"] = 22,
                 ["sparkHeight"] = 30,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Mwvok71F", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "HxXI4kHJ", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Spread",
@@ -9636,7 +9636,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "raD67fsx",
+                        ["amId"] = "Woyd5g2Z",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -9666,7 +9666,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "NoJTKZDZ",
+                        ["amId"] = "F3zkbDTi",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -9878,7 +9878,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "rGW61GQs"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "jH97bjFD"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -9898,7 +9898,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "iOh8ddPT"
+                        ["amId"] = "MDSOqpjS"
                     },
                     [3] = {
                         ["text_shadowXOffset"] = 1,
@@ -9926,7 +9926,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 8,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "DZ2DF6G0"
+                        ["amId"] = "CPDnkl0p"
                     }
                 },
                 ["height"] = 45,
@@ -10247,14 +10247,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Cll8X9Y1", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "3XDOolVr", ["type"] = "subbackground"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "VBEVn7M3",
+                        ["amId"] = "5c9MJQ0B",
                         ["border_edge"] = "Square Full White",
                         ["border_size"] = 1
                     },
@@ -10272,7 +10272,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "rM67Ujqb",
+                        ["amId"] = "qIF7Q3Zz",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -10312,7 +10312,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "KQdRrnep",
+                        ["amId"] = "jkX85g1w",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -10330,7 +10330,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "JZyC19kL",
+                        ["amId"] = "Pn3sO75U",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -10364,7 +10364,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "rlYIVKxK",
+                        ["amId"] = "YV3k9LRV",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
@@ -10545,12 +10545,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "F2ES3idU"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "8yGLkkLR"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "ez3vKiv9",
+                        ["amId"] = "s8Z2F20R",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -10565,7 +10565,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "SONLX9mT",
+                        ["amId"] = "whVg42yR",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -10615,7 +10615,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "PlvfUNhB"
+                        ["amId"] = "HQRWX5Ep"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -10651,7 +10651,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "gbhplgXJ"
+                        ["amId"] = "N8JiVVSz"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -10667,7 +10667,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "UiuLpOc2",
+                        ["amId"] = "VhprKyUO",
                         ["text_text_format_c_format"] = "none",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
@@ -11085,11 +11085,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3izR72JL", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "2Ro9FnmG", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "jHiuMm3s",
+                        ["amId"] = "TiEDmpkX",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -11109,7 +11109,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowDuration"] = 1,
                         ["glowScale"] = 1,
-                        ["amId"] = "CKT1n1vs",
+                        ["amId"] = "UK9LQjeN",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -11123,7 +11123,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "26gdC4I7",
+                        ["amId"] = "IHdF6HXt",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -11167,7 +11167,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "IP1jjIDK",
+                        ["amId"] = "eUyVnE1E",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -11185,7 +11185,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "gj1C5J4E",
+                        ["amId"] = "y3ho13IV",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -11451,14 +11451,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ZQaW2njt", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "dBwqjezF", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "GhITdmmE",
+                        ["amId"] = "6vnbszR2",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -11471,7 +11471,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "5OCJRBvC",
+                        ["amId"] = "EBCBDN0E",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -11506,7 +11506,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "a4jYJPZ7",
+                        ["amId"] = "zuWdrgRg",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -11552,7 +11552,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "9d8I8yps",
+                        ["amId"] = "hyH7GULH",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -11702,12 +11702,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "iVRhP6AL"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "9AiuFIpi"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
                         ["anchor_area"] = "bar",
-                        ["amId"] = "S2j1eGVc",
+                        ["amId"] = "NF46ZzUg",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -11722,7 +11722,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "LSo7UeiG",
+                        ["amId"] = "XvF5i37P",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -11780,7 +11780,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "cGKIQnie"
+                        ["amId"] = "320pR2U2"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -11796,7 +11796,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "7mhCvxLa",
+                        ["amId"] = "9D744IPm",
                         ["text_text_format_tooltip1_pad"] = false,
                         ["text_shadowXOffset"] = 1,
                         ["type"] = "subtext",
@@ -11938,11 +11938,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "fcP1cQ73", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "AOEvALQp", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "nnRBLgw4",
+                        ["amId"] = "jpnRawpJ",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -11959,7 +11959,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "IpJUmKnT",
+                        ["amId"] = "tVjlamSk",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -11993,7 +11993,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "hWy2eqM7",
+                        ["amId"] = "XAVrETAW",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -12032,7 +12032,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "i8Qg4vmz",
+                        ["amId"] = "KZC6LbaC",
                         ["text_text_format_tooltip1_pad"] = false,
                         ["text_text_format_n_format"] = "none",
                         ["type"] = "subtext",
@@ -12178,11 +12178,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "s5gOtBmf", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "bjj9G5yv", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "kdQafgM4",
+                        ["amId"] = "GlAgHFEa",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -12199,7 +12199,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "zApijfZj",
+                        ["amId"] = "qa8bjjco",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -12238,7 +12238,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "9qDO57J9",
+                        ["amId"] = "5fdPaFiy",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_precision"] = 1,
@@ -12279,7 +12279,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "i5MY6cHH",
+                        ["amId"] = "fr2Q8fc0",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -12591,8 +12591,8 @@ wa.data['generalMO'].data = {
                 ["AMOriginalUUID"] = "(5u9H)LU0Pj",
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "EB2h88FO", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "YLjhUzUi", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "rCF62fsx", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "UTxQRICy", ["type"] = "subforeground"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -12607,7 +12607,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "arhSr5yz",
+                        ["amId"] = "0fo22Y76",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -12647,7 +12647,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "tkNGMF1f",
+                        ["amId"] = "foQogNMK",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
@@ -12660,7 +12660,7 @@ wa.data['generalMO'].data = {
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "ELgMmbNB",
+                        ["amId"] = "tu48dzeV",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     }
@@ -12968,7 +12968,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "pSB3sorM", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "h4ve2OvF", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Knock Inc",
@@ -12996,7 +12996,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "a1Dgbd8W",
+                        ["amId"] = "ZM6Ah7TL",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -13013,7 +13013,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "oI6eloQ9",
+                        ["amId"] = "xuk0FvuZ",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -13200,7 +13200,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "UU0zyldg"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "uC10Z8Lr"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Beams Soon",
@@ -13233,7 +13233,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "JAZGm9ar"
+                        ["amId"] = "L8Y5K8Os"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -13268,7 +13268,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "QgWEezPF"
+                        ["amId"] = "p48I5e31"
                     }
                 },
                 ["height"] = 30,
@@ -13454,7 +13454,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "X6rrP2TX", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "rlQNxZ4Q", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Adds Inc",
@@ -13482,7 +13482,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "JM07rO2F",
+                        ["amId"] = "z0yBSz9c",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -13496,7 +13496,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "zClizZwT",
+                        ["amId"] = "Z4DINkzj",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -13746,7 +13746,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["amId"] = "gQELIpsx", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "jnrJVgE0", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -13774,7 +13774,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "Jz8s670M",
+                        ["amId"] = "iySADNrw",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -13794,7 +13794,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "IzKpGjZu",
+                        ["amId"] = "HJsctdcU",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -14129,7 +14129,7 @@ wa.data['generalMO'].data = {
                 ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "JLbJGwlG"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "WwnvmssH"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Spread",
@@ -14162,7 +14162,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "PitEWbq6"
+                        ["amId"] = "6nzaYOAk"
                     },
                     [3] = {
                         ["text_shadowXOffset"] = 1,
@@ -14179,7 +14179,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Kklj4f5c",
+                        ["amId"] = "PLXCZtCm",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -14382,7 +14382,7 @@ wa.data['generalMO'].data = {
                 ["backgroundTexture"] = "PowerAurasMedia\\Auras\\Aura3",
                 ["sparkHeight"] = 30,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "wnUwBO4z", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "xwv2gKlw", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Orbs",
@@ -14397,7 +14397,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "WrvwI3I1",
+                        ["amId"] = "T04meuwX",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -14424,7 +14424,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "CENTER",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "hr0HvldF",
+                        ["amId"] = "qLqs76AM",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -14649,7 +14649,7 @@ wa.data['generalMO'].data = {
                 ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "DsZyroa9"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "g2QeA5Ys"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Orbs",
@@ -14659,7 +14659,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Y3OUNoQX",
+                        ["amId"] = "LXVJkno8",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
@@ -14694,7 +14694,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "0vt8YaME",
+                        ["amId"] = "8yl0SBMs",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -15118,14 +15118,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "D3xfW6vH", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "lM2PgU6S", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "foVhk7qN",
+                        ["amId"] = "SfEzpWmB",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -15138,7 +15138,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "BiLz8XNS",
+                        ["amId"] = "iE4AcPmS",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -15183,7 +15183,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "QzY6QsFC",
+                        ["amId"] = "cQA2eHTQ",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -15201,7 +15201,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "B0fV8C22",
+                        ["amId"] = "nQpyJNgx",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_precision"] = 1,
@@ -15240,7 +15240,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "h2RfqnGB",
+                        ["amId"] = "zOGAtnsT",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
@@ -15756,14 +15756,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "tQl2moJL", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "IVEDpEKd", ["type"] = "subbackground"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "Gi02FEc5",
+                        ["amId"] = "YVVO1A1I",
                         ["border_edge"] = "Square Full White",
                         ["border_size"] = 1
                     },
@@ -15776,7 +15776,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "iVlVvgse",
+                        ["amId"] = "63olwAU1",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -15811,7 +15811,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "sVKLADq2",
+                        ["amId"] = "8314pAAm",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -15857,7 +15857,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "sXSOFOpl",
+                        ["amId"] = "si05tHI3",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -15987,12 +15987,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "6ti3ybbu"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "t1fBGc7V"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "HdiXQD45",
+                        ["amId"] = "NSwgiLTk",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -16007,7 +16007,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "dgs6VEga",
+                        ["amId"] = "pk4ruTPW",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -16065,7 +16065,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "XtBC0SaH"
+                        ["amId"] = "SsYUc7Zm"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -16081,7 +16081,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_tooltip1_pad"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "KtuwePg2",
+                        ["amId"] = "LDuVh0b5",
                         ["text_fixedWidth"] = 64,
                         ["text_shadowXOffset"] = 1,
                         ["type"] = "subtext",
@@ -16223,12 +16223,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ObTU9udV"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "V3Yglqwr"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "E9aGekBs",
+                        ["amId"] = "OHnnC9kW",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -16243,7 +16243,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "3nVllXFG",
+                        ["amId"] = "sAPGujqb",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -16301,7 +16301,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "uM0ZImLC"
+                        ["amId"] = "27KJkR18"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -16329,7 +16329,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "nDkSkhhw"
+                        ["amId"] = "nu2ik7HP"
                     }
                 },
                 ["height"] = 50,
@@ -16640,8 +16640,8 @@ wa.data['generalMO'].data = {
                 ["authorOptions"] = {},
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "YB1sbDIK"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "UDk46IPS"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "SBF2hF16"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "Q8TXOB00"},
                     [3] = {
                         ["text_text_format_p_time_format"] = 0,
                         ["text_text"] = "%1.p",
@@ -16668,7 +16668,7 @@ wa.data['generalMO'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "38yvhBoL",
+                        ["amId"] = "Zc5Odm6r",
                         ["type"] = "subtext",
                         ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
@@ -16709,13 +16709,13 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "vbE7ohB1"
+                        ["amId"] = "jXpQ3Wie"
                     },
                     [5] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
-                        ["amId"] = "De200PnW",
+                        ["amId"] = "2M3E018Z",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -17043,7 +17043,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "JZezdWIv"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "EMIX0uUb"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Knock Inc",
@@ -17076,7 +17076,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "AOW6f7ok"
+                        ["amId"] = "WXUCEKri"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -17088,7 +17088,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "5EMgtiqo",
+                        ["amId"] = "4dfPlLwh",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -17288,7 +17288,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "uruRhBFh", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "GtoVNGqQ", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Knock Inc",
@@ -17316,7 +17316,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "7MrNuGOh",
+                        ["amId"] = "7qcAAJaJ",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -17338,7 +17338,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "WksxQCXa",
+                        ["amId"] = "VVvivCJX",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -17634,7 +17634,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "MpjvwJTi"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "8eWftCD2"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Next Beams",
@@ -17662,7 +17662,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "DCdtcDqZ"
+                        ["amId"] = "Ru8R4Qah"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -17697,7 +17697,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "RSr8XzaK"
+                        ["amId"] = "zGOj5KRx"
                     }
                 },
                 ["height"] = 30,
@@ -17912,7 +17912,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "s6rNyddb", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "YdB8Wl9F", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Adds",
@@ -17935,7 +17935,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "M42XEfNI",
+                        ["amId"] = "B7iPKmgc",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -17957,7 +17957,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "mvZOEmVC",
+                        ["amId"] = "05XRj37b",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -18150,7 +18150,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "bOufmKrd"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "AM6WXoF2"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Dmg Amp Inc",
@@ -18183,7 +18183,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "tQhJyOtK"
+                        ["amId"] = "vMbEfb0y"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -18195,7 +18195,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "an0vnSHd",
+                        ["amId"] = "TpXyJKfF",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -18389,7 +18389,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "lXQWc5Cr"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "1QguNYe1"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "%c%",
@@ -18418,7 +18418,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowXOffset"] = 1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "9yG9H2A3",
+                        ["amId"] = "qR83SFSL",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -18435,7 +18435,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "T78KdsZw",
+                        ["amId"] = "SeXr51UF",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -18692,7 +18692,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "N3hkbthZ"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "W5TKIM39"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Danger (Harvest + Knock)",
@@ -18725,7 +18725,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "aHuKKJ4y"
+                        ["amId"] = "zKbxeTOO"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -18737,7 +18737,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "KsGWqorj",
+                        ["amId"] = "xgxzbPvN",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -18958,7 +18958,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "tQARV5X5", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "5BphfFdK", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -18986,7 +18986,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "LrZfzoPq",
+                        ["amId"] = "WGFw1PvF",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -19008,7 +19008,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "N1TVPl9n",
+                        ["amId"] = "nGfTECzo",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -19257,7 +19257,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "QRX1yltY"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "v8TDvfE4"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -19290,7 +19290,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "6ZMWlJqz"
+                        ["amId"] = "g6w4gmCg"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -19325,7 +19325,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "tTG77oRK"
+                        ["amId"] = "N6qkUgBD"
                     }
                 },
                 ["height"] = 30,
@@ -19504,7 +19504,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Lc79cu1H", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "SxGHK3Ln", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Boss Buffed",
@@ -19527,7 +19527,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "z0xxTuwW",
+                        ["amId"] = "WEbBz3q2",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -19549,7 +19549,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "cwJu4blw",
+                        ["amId"] = "k7zkAtPd",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -19861,7 +19861,7 @@ wa.data['generalMO'].data = {
                 ["fontSize"] = 22,
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Pz8IVC4T", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "XZehaeFl", ["type"] = "subbackground"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "Move",
@@ -19872,7 +19872,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "FEQlZSrI",
+                        ["amId"] = "wrhOyric",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -19908,7 +19908,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "CENTER",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "FGICtV9S",
+                        ["amId"] = "YX7OKqtU",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -20119,7 +20119,7 @@ wa.data['generalMO'].data = {
                 ["anchorPoint"] = "CENTER",
                 ["sparkHeight"] = 30,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "542lxGVF"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "OvYjEXiF"},
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Add Spawn",
@@ -20134,7 +20134,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "WcbXc08g",
+                        ["amId"] = "WIMb3dtN",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -20187,7 +20187,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 19,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "QXhUuqNX"
+                        ["amId"] = "RCazWfYJ"
                     }
                 },
                 ["height"] = 180,
@@ -20356,7 +20356,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "mh2LSO1Q"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "SuSkJjhv"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -20365,7 +20365,7 @@ wa.data['generalMO'].data = {
                         ["textureRotation"] = 0,
                         ["textureVisible"] = true,
                         ["anchor_mode"] = "area",
-                        ["amId"] = "0GE0GB20",
+                        ["amId"] = "SQGSUO92",
                         ["type"] = "subtexture",
                         ["textureDesaturate"] = false,
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
@@ -20392,7 +20392,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "6rhrNOvK",
+                        ["amId"] = "blibtDG4",
                         ["type"] = "subtext",
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                         ["text_font"] = "Poppins Bold",
@@ -20524,7 +20524,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "XVfvoTDI", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "rOAS4yVb", ["type"] = "subbackground"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -20539,7 +20539,7 @@ wa.data['generalMO'].data = {
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
                         ["width"] = 32,
                         ["textureColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                        ["amId"] = "rRW0mUOB",
+                        ["amId"] = "xAsuBmTU",
                         ["anchor_point"] = "CENTER",
                         ["height"] = 32,
                         ["rotate"] = false,
@@ -20566,7 +20566,7 @@ wa.data['generalMO'].data = {
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                         ["text_font"] = "Poppins Bold",
                         ["text_shadowYOffset"] = -1,
-                        ["amId"] = "ybdMpOnZ",
+                        ["amId"] = "N6BFZpRB",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
                         ["text_visible"] = true,
@@ -20890,14 +20890,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Tvf3WEto", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "2ZsJtT98", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "lMSLQzP5",
+                        ["amId"] = "nqNuKRS8",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -20910,7 +20910,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "9v4SEV7L",
+                        ["amId"] = "cUqo40CS",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -20955,7 +20955,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "c5ggFr1x",
+                        ["amId"] = "X1hj9X0a",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -20973,7 +20973,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Lxjmot4y",
+                        ["amId"] = "ikQltUXY",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowXOffset"] = 0,
@@ -21012,7 +21012,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "dpGuK26j",
+                        ["amId"] = "OKbG87rY",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -21457,14 +21457,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "xpBcnE4y"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "BuizJaD1"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "bhnldNu8",
+                        ["amId"] = "mge63Nl3",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -21481,7 +21481,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowScale"] = 1,
                         ["glowDuration"] = 1,
-                        ["amId"] = "K2Ghnsbs",
+                        ["amId"] = "GLyx4UFF",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -21516,7 +21516,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "6b2JtkyL"
+                        ["amId"] = "W1SlAI91"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -21541,7 +21541,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowXOffset"] = 1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "1m7ObN6E",
+                        ["amId"] = "5XUMvGxo",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -21582,7 +21582,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "RB2q6JAA"
+                        ["amId"] = "S8vQOrjY"
                     }
                 },
                 ["height"] = 60,
@@ -21708,12 +21708,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Qa2KHHHi", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "QJaTTykt", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
-                        ["amId"] = "LyUk9hXf",
+                        ["amId"] = "3mkoTgHl",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -21732,7 +21732,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowDuration"] = 1,
                         ["glowScale"] = 1,
-                        ["amId"] = "cFWQqxaS",
+                        ["amId"] = "Yd26WgLP",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -21745,7 +21745,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "VR4b4r7T",
+                        ["amId"] = "NXNkoAuQ",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -21792,7 +21792,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_tooltip1_format"] = "none",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "5JBcBuL2",
+                        ["amId"] = "8zKeP04d",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -21810,7 +21810,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "yKZ2D3ER",
+                        ["amId"] = "gG7Qe4V6",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -21982,14 +21982,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "5H1LaCVS", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "BzTQ5LJz", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "AVkbkbbe",
+                        ["amId"] = "HCVS5Auq",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -22011,7 +22011,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowDuration"] = 1,
                         ["glowScale"] = 1,
-                        ["amId"] = "MO5nhPYi",
+                        ["amId"] = "JhXdpezm",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -22025,7 +22025,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "s8AMVQqE",
+                        ["amId"] = "O5SNxL2p",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -22064,7 +22064,7 @@ wa.data['generalMO'].data = {
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
                         ["text_text_format_tooltip1_pad"] = false,
-                        ["amId"] = "ci42dC3X",
+                        ["amId"] = "8cV64jij",
                         ["text_text_format_tooltip2_format"] = "none",
                         ["type"] = "subtext",
                         ["text_text_format_tooltip1_format"] = "BigNumber",
@@ -22093,7 +22093,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "qCy0lcbb",
+                        ["amId"] = "d6e00IvR",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -22379,11 +22379,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "qfNNBdjP"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "fehGlLj4"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
-                        ["amId"] = "yZ6P8CjT",
+                        ["amId"] = "TerfbPvG",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -22403,7 +22403,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowScale"] = 1,
                         ["glowDuration"] = 1,
-                        ["amId"] = "1WoHpPQR",
+                        ["amId"] = "K2ZxfnHC",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -22416,7 +22416,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "c8jR2Ot0",
+                        ["amId"] = "KHZGizgs",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -22463,7 +22463,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_tooltip1_format"] = "none",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "6fRY7tU8",
+                        ["amId"] = "21CeTN7y",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -22504,7 +22504,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "Se2eIeEt"
+                        ["amId"] = "pHb3gM57"
                     },
                     [7] = {
                         ["text_shadowXOffset"] = 1,
@@ -22521,7 +22521,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "alw14pBQ",
+                        ["amId"] = "6tyjNx29",
                         ["type"] = "subtext",
                         ["text_text_format_tooltip2_format"] = "none",
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -22795,12 +22795,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "1aqWL569"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "8I8G0dEx"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
-                        ["amId"] = "DtXFqJjz",
+                        ["amId"] = "nGdEvkbh",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -22815,7 +22815,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "tK2Y9iuP",
+                        ["amId"] = "efzMZxYk",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -22873,7 +22873,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "Swbvvpgh"
+                        ["amId"] = "g47P4Lls"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -22901,7 +22901,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "yEuDBeH4"
+                        ["amId"] = "j2vdK4gJ"
                     }
                 },
                 ["height"] = 50,
@@ -23028,11 +23028,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "jj6wCjJG", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "rBxjVS6v", ["type"] = "subbackground"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["amId"] = "WcKhSq0r",
+                        ["amId"] = "NGRzMX35",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -23049,7 +23049,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "uGfG0Bj4",
+                        ["amId"] = "qLnroDxS",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -23088,7 +23088,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "6CqItkKz",
+                        ["amId"] = "5PoZp8zc",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -23129,7 +23129,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "noXNVHM1",
+                        ["amId"] = "QWwnRfYF",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -23259,11 +23259,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "OFcPKQDc", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "9fEz3Wmr", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "g9IUcZzK",
+                        ["amId"] = "y5cA96T0",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -23280,7 +23280,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "u2iUslYb",
+                        ["amId"] = "7bX0JYtZ",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -23319,7 +23319,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "b5J1wLTA",
+                        ["amId"] = "WBabkJCV",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -23360,7 +23360,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "i75EiUVC",
+                        ["amId"] = "LTbT5LAF",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -23490,14 +23490,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "rxY6QPe4"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "vwq6a1Ee"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "UyofPObV",
+                        ["amId"] = "BZTRK5Qv",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -23532,7 +23532,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "511JFSpy"
+                        ["amId"] = "PhqZUBWf"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -23568,7 +23568,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "ZUUE35Ap"
+                        ["amId"] = "Naiu5dfo"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -23596,7 +23596,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "WV6EkwMZ"
+                        ["amId"] = "g3B9SsVW"
                     }
                 },
                 ["height"] = 50,
@@ -23721,12 +23721,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "BqcSrRXK", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "RUc0ZsL7", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "5HyVSkOn",
+                        ["amId"] = "V42xI5zq",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -23741,7 +23741,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "IkpOXmGs",
+                        ["amId"] = "0q80gHJC",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -23776,7 +23776,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "eMXtBbZT",
+                        ["amId"] = "p5n68bJz",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -23822,7 +23822,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "IELFTgJu",
+                        ["amId"] = "hlRHoyOq",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -23952,11 +23952,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "xormiyWv"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "gwj3A6bT"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
-                        ["amId"] = "kJtSUjN2",
+                        ["amId"] = "QRmqoERP",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -23972,7 +23972,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "aHj7Ljd6",
+                        ["amId"] = "2857kzSh",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -24030,7 +24030,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "XwiwNBCH"
+                        ["amId"] = "xA9Vousx"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -24058,7 +24058,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "7OnNKuvD"
+                        ["amId"] = "iaY2ouEt"
                     }
                 },
                 ["height"] = 50,
@@ -24351,8 +24351,8 @@ wa.data['generalMO'].data = {
                 ["conditions"] = {},
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "9tw78rPk"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "n9LBgS0W"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "XZwJWqbg"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "3La7ljKX"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -24384,7 +24384,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "yERjCozK"
+                        ["amId"] = "L778IgFl"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 1,
@@ -24412,13 +24412,13 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "BaztnxSm"
+                        ["amId"] = "HkzDfreD"
                     },
                     [5] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "VxGyl8wj",
+                        ["amId"] = "3aLVWqTy",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -24716,7 +24716,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "nvpGxgUw", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "fFWfPohg", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Eye Beam Inc",
@@ -24744,7 +24744,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "VCQBH9y4",
+                        ["amId"] = "GRRdfl47",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -24764,7 +24764,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "riYitxCw",
+                        ["amId"] = "hIjIBsbK",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -24985,7 +24985,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "KfPXSv6m"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "cDz3n5It"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Grip Inc",
@@ -25018,7 +25018,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "73vxAUH8"
+                        ["amId"] = "BILPDf7s"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -25031,7 +25031,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "RfB2VeNO",
+                        ["amId"] = "kn5pGicR",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -25243,7 +25243,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "WbFL6Yja", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "778fXi0Z", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Bait Grip",
@@ -25271,7 +25271,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "7Y4i9Sga",
+                        ["amId"] = "bp4EnOwD",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -25294,7 +25294,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "9UdBEN4T",
+                        ["amId"] = "iibmcrip",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -25502,7 +25502,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "6FfpzPUt"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "y966ZYJY"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Remaining Souls:",
@@ -25535,7 +25535,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "53ccodRv"
+                        ["amId"] = "JirFbcyt"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -25571,7 +25571,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "wihIj4FE"
+                        ["amId"] = "VS6vmzcf"
                     }
                 },
                 ["height"] = 30,
@@ -25778,7 +25778,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "XMdI1Ht3"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "fTUdnq8Y"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Fracture Soon",
@@ -25811,7 +25811,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "QmHqYbxD"
+                        ["amId"] = "99bCxCt7"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -25847,7 +25847,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "nUqJHZbM"
+                        ["amId"] = "Pcbl7HTU"
                     }
                 },
                 ["height"] = 30,
@@ -26014,7 +26014,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0LJFliIT", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "qhap3D3g", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Heal Absorb Inc",
@@ -26042,7 +26042,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "5FZFIZgK",
+                        ["amId"] = "v1hzJFeD",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -26062,7 +26062,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "BWOlePvu",
+                        ["amId"] = "xMvAE22e",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -26420,7 +26420,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3N81aTOF", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "iAcMbHgI", ["type"] = "subbackground"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -26429,7 +26429,7 @@ wa.data['generalMO'].data = {
                         ["textureRotation"] = 0,
                         ["textureVisible"] = true,
                         ["anchor_mode"] = "area",
-                        ["amId"] = "aFUPUJkF",
+                        ["amId"] = "DnjmQfXj",
                         ["type"] = "subtexture",
                         ["textureDesaturate"] = false,
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
@@ -26463,7 +26463,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "sil9gw9C",
+                        ["amId"] = "EKv3Q5mC",
                         ["text_text_format_n_format"] = "none",
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 10,
@@ -26665,7 +26665,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "4ElLlpKx", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "LualvHfh", ["type"] = "subbackground"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -26674,7 +26674,7 @@ wa.data['generalMO'].data = {
                         ["textureRotation"] = 0,
                         ["textureVisible"] = true,
                         ["anchor_mode"] = "area",
-                        ["amId"] = "Prgq3033",
+                        ["amId"] = "3r2pVxT5",
                         ["type"] = "subtexture",
                         ["textureDesaturate"] = false,
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
@@ -26708,7 +26708,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "S1mjZ4ql",
+                        ["amId"] = "1XO0oauW",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 10,
@@ -27118,7 +27118,7 @@ wa.data['generalMO'].data = {
                 ["stickyDuration"] = false,
                 ["version"] = 70,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "rLY2iJ8J"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "rSjlnSPv"}
                 },
                 ["height"] = 1,
                 ["rotate"] = false,
@@ -27351,7 +27351,7 @@ wa.data['generalMO'].data = {
                 ["stickyDuration"] = false,
                 ["version"] = 70,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "2FEh0QNT"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "zpOicKFM"}
                 },
                 ["height"] = 1,
                 ["rotate"] = false,
@@ -27594,7 +27594,7 @@ wa.data['generalMO'].data = {
                 ["stickyDuration"] = false,
                 ["version"] = 70,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ELrxpmOd"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "0SzTtw01"}
                 },
                 ["height"] = 1,
                 ["rotate"] = false,
@@ -27859,12 +27859,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "q8MEia29"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "gMtcRc45"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "fjDoMpq5",
+                        ["amId"] = "XtMbxXMp",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -27884,7 +27884,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "pSzofFir",
+                        ["amId"] = "2aZZA8x3",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -27929,7 +27929,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "GfxijIJA"
+                        ["amId"] = "URpztUm5"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -27965,7 +27965,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "FZNCym7D"
+                        ["amId"] = "Ye2dS7Y6"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -27976,7 +27976,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "pQkS1EKU",
+                        ["amId"] = "YZcPLLIc",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
@@ -28129,11 +28129,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "xhGy4dX8", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "BqbSKN6g", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "6sTqYuFp",
+                        ["amId"] = "x0mEc0aQ",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -28150,7 +28150,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "fuIG7Lqq",
+                        ["amId"] = "eMRJslYp",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -28194,7 +28194,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "aEi7ZaNB",
+                        ["amId"] = "3XDkDfig",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -28212,7 +28212,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "b9FcQfEX",
+                        ["amId"] = "E6cVU8LP",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -28247,7 +28247,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "pfjPBA7n",
+                        ["amId"] = "cklVoRDp",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -28427,14 +28427,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "yduO2nLV"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "xbUV5WDS"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "MZDh312J",
+                        ["amId"] = "uQceLzzX",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -28469,7 +28469,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "YP5bCy0s"
+                        ["amId"] = "iLZcHyLL"
                     },
                     [4] = {
                         ["text_text_format_n_format"] = "none",
@@ -28497,7 +28497,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "dYsvk9ND"
+                        ["amId"] = "k521SKBQ"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -28533,7 +28533,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "Vw6ejgLh"
+                        ["amId"] = "743ixceI"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -28567,7 +28567,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "OUTER_LEFT",
                         ["text_fontSize"] = 10,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "Hf6KZfJB"
+                        ["amId"] = "VYTRRMEK"
                     }
                 },
                 ["height"] = 30,
@@ -28697,12 +28697,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "N6b4iLZg", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "3j1h57uV", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "6vdXvehZ",
+                        ["amId"] = "k9wUUKSC",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -28722,7 +28722,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "tieX2Toa",
+                        ["amId"] = "9bgxhr8z",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -28762,7 +28762,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "iOukIFNz",
+                        ["amId"] = "5cuW3TgI",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -28780,7 +28780,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "xA4sRQng",
+                        ["amId"] = "DkO6w6Pd",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -28814,7 +28814,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "vDIurvq0",
+                        ["amId"] = "FlLvLffm",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
@@ -29274,12 +29274,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "fqjQmTKp"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "094cuYhl"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["anchor_area"] = "bar",
-                        ["amId"] = "lQuMUG94",
+                        ["amId"] = "TH27qDba",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -29298,7 +29298,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowScale"] = 1,
                         ["glowDuration"] = 1,
-                        ["amId"] = "ae8TTkQS",
+                        ["amId"] = "eHNdHfVs",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -29333,7 +29333,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "fQEVHqKB"
+                        ["amId"] = "v8Dhyr43"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 1,
@@ -29361,7 +29361,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "4ihAivJ2"
+                        ["amId"] = "l1KNv4Ff"
                     },
                     [6] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -29397,7 +29397,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "ggKYNZ4H"
+                        ["amId"] = "YemqZNT0"
                     }
                 },
                 ["height"] = 60,
@@ -29646,11 +29646,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Uh5RXRkP", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "501Eng87", ["type"] = "subbackground"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["amId"] = "wde8SqyJ",
+                        ["amId"] = "f5X1ZsTG",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -29667,7 +29667,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "W02BSHHz",
+                        ["amId"] = "l3oVv4CW",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -29706,7 +29706,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "YuAzjAbU",
+                        ["amId"] = "ElbfW5J0",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -29747,7 +29747,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "wg44HR9Q",
+                        ["amId"] = "UyInQVDw",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -29879,14 +29879,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "yEvi5OpQ"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "9tube57z"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "kC4PSBQa",
+                        ["amId"] = "m46W9oHx",
                         ["border_edge"] = "Square Full White",
                         ["border_size"] = 1
                     },
@@ -29921,7 +29921,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "8rr1AnLT"
+                        ["amId"] = "trIDVnpl"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -29957,7 +29957,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "TKpWygUP"
+                        ["amId"] = "K29nNNZ4"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -29985,7 +29985,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "k2mUzDjH"
+                        ["amId"] = "GXpO5K5g"
                     }
                 },
                 ["height"] = 50,
@@ -30114,12 +30114,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Gb0cphDf", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "Gfgb4Hcy", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "YVZ0zUct",
+                        ["amId"] = "d9Hj1hOr",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -30135,7 +30135,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "7HN3Xl7T",
+                        ["amId"] = "V7yqv0cI",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -30171,7 +30171,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "wFUBxe6o",
+                        ["amId"] = "kUKboLVj",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -30215,7 +30215,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "ivKj0nCL",
+                        ["amId"] = "MuHZCHzD",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -30450,8 +30450,8 @@ wa.data['generalMO'].data = {
                 },
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "QVniG4IA"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "8a0oRtGL"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "GFkXrVaZ"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "kPYd4Gbm"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -30484,7 +30484,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "sA1RHmi6"
+                        ["amId"] = "EcZx1CsR"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 1,
@@ -30513,13 +30513,13 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "q6ibHGz5"
+                        ["amId"] = "7qQp6pz4"
                     },
                     [5] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
-                        ["amId"] = "awzyVRxH",
+                        ["amId"] = "rvX1zLss",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -31023,7 +31023,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "K1okpCrm", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "GstAv8Gc", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -31051,7 +31051,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "UMhmpN7I",
+                        ["amId"] = "Tg5Vffj5",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -31071,7 +31071,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "o03SjeET",
+                        ["amId"] = "SwvOu3EW",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -31272,7 +31272,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "c36NF3cG"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "5tfBmDvI"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Spawn Wall",
@@ -31305,7 +31305,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "Q2UzPzEt"
+                        ["amId"] = "WfR6d8o2"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -31318,7 +31318,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "JAPFRcFb",
+                        ["amId"] = "77sx4StC",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -31563,7 +31563,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "9XlEA8a7", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "rKiKOWOJ", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Pre-Spread",
@@ -31586,7 +31586,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "3Nw9tzij",
+                        ["amId"] = "HVsC1ifs",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -31610,7 +31610,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Kn0zcO36",
+                        ["amId"] = "YzXKyQ8d",
                         ["text_text_format_p0_format"] = "none",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -31819,7 +31819,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "mq2xYYHD", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "pD1xxc1P", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Break Wall",
@@ -31847,7 +31847,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "xG4i4FXM",
+                        ["amId"] = "KQjvhlZK",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -31867,7 +31867,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "mb8T281n",
+                        ["amId"] = "M1b7ET1h",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -32178,7 +32178,7 @@ wa.data['generalMO'].data = {
                 ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "uoKBZOH9"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "vUGBEE4A"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Spread",
@@ -32188,7 +32188,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "TM7NWWBb",
+                        ["amId"] = "CCH0leb3",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
@@ -32223,7 +32223,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "FfeKHDsp",
+                        ["amId"] = "huIo2Zf3",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -32644,11 +32644,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ZyjlE8Y7", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "nC4fN0ap", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "Zrgi5YmR",
+                        ["amId"] = "KyNJSjhP",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -32665,7 +32665,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "osRuvGAR",
+                        ["amId"] = "BQVKaTRs",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -32709,7 +32709,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "AiFnbFgT",
+                        ["amId"] = "AETRrWG1",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -32727,7 +32727,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "6DtLNO7z",
+                        ["amId"] = "Jmn79skU",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -32762,7 +32762,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "GTx4bqhO",
+                        ["amId"] = "G9BXj8Qm",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -33194,14 +33194,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ch4hVB6x"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "hiHdR2dl"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "zAFPPn66",
+                        ["amId"] = "UGWLaXed",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -33218,7 +33218,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowScale"] = 1,
                         ["glowDuration"] = 1,
-                        ["amId"] = "1cx0ZgcF",
+                        ["amId"] = "BzEVwws6",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -33231,7 +33231,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "vOrOOlw3",
+                        ["amId"] = "YZALGlWx",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -33281,7 +33281,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "mCp7QjqX"
+                        ["amId"] = "kfaF1KDV"
                     },
                     [6] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -33317,7 +33317,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "2AX5WdK0"
+                        ["amId"] = "dq0xXWJ2"
                     }
                 },
                 ["height"] = 60,
@@ -33467,12 +33467,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "53Ew31nT", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "nSl6B3D5", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
                         ["anchor_area"] = "bar",
-                        ["amId"] = "vIlx1MrC",
+                        ["amId"] = "kOQ269FA",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -33491,7 +33491,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowDuration"] = 1,
                         ["glowScale"] = 1,
-                        ["amId"] = "VMYTdwKd",
+                        ["amId"] = "kIeGZFi8",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -33504,7 +33504,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "4ZnoJ9sx",
+                        ["amId"] = "4biCSxAQ",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -33549,7 +33549,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "qIhJ20VF",
+                        ["amId"] = "PNQXi5kI",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -33564,7 +33564,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "DJxHtIYL",
+                        ["amId"] = "kEqkeUu1",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -33871,14 +33871,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "xRnAdGc8"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "huogEZys"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "taroCldp",
+                        ["amId"] = "bHWGrHyf",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -33913,7 +33913,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "p0JIG0GK"
+                        ["amId"] = "9cpVUYlb"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -33949,7 +33949,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "dQuuVrkA"
+                        ["amId"] = "HgAcNpXF"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -33977,7 +33977,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "IgrhcSnz"
+                        ["amId"] = "XLlfhI3K"
                     }
                 },
                 ["height"] = 50,
@@ -34104,11 +34104,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "iD6ixWNN"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "TweMm108"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["amId"] = "AYpf6vx2",
+                        ["amId"] = "4Eb4XJqI",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -34124,7 +34124,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "OEaDIWmJ",
+                        ["amId"] = "3N0Ki6hc",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -34182,7 +34182,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "cn9UuHMG"
+                        ["amId"] = "m1c9ZfFK"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -34210,7 +34210,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "zC5yGmYp"
+                        ["amId"] = "g1lleUcg"
                     }
                 },
                 ["height"] = 50,
@@ -34339,11 +34339,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "6yVAoC6W"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "A7X4HI1c"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
-                        ["amId"] = "hICNGw3f",
+                        ["amId"] = "408mSQp8",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -34381,7 +34381,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "zvm19uzC"
+                        ["amId"] = "n1EaaBFa"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -34399,7 +34399,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Vk3jPesc",
+                        ["amId"] = "jyA6WkUa",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_precision"] = 1,
@@ -34445,7 +34445,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "7ehYlebI"
+                        ["amId"] = "PW8GLOxj"
                     }
                 },
                 ["height"] = 50,
@@ -34574,14 +34574,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "lGkZNkte", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "cmMSzTsZ", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "xUmCUxmu",
+                        ["amId"] = "DzI1WiJP",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -34594,7 +34594,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "BAt2IXjK",
+                        ["amId"] = "pHe7wTFs",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -34626,7 +34626,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "ttOLfCDx",
+                        ["amId"] = "eNA2tn7E",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -34675,7 +34675,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "l86lVcD3",
+                        ["amId"] = "kbZzP7mX",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -34809,12 +34809,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "pIEPOblI"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "dYop8sOQ"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "INjdRgiT",
+                        ["amId"] = "U0xT8PET",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -34829,7 +34829,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "vFFYjtlW",
+                        ["amId"] = "3dX1Ue18",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -34869,7 +34869,7 @@ wa.data['generalMO'].data = {
                         },
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "vhgn1gnp",
+                        ["amId"] = "fcxNPdFc",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_precision"] = 1,
@@ -34915,7 +34915,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "Rf5l842i"
+                        ["amId"] = "hfFLNzpI"
                     }
                 },
                 ["height"] = 50,
@@ -35044,11 +35044,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "3zKgPl0Y", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "KGHXISgT", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "RRCF6KxT",
+                        ["amId"] = "mdrJP7s6",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -35065,7 +35065,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "taNU0TQz",
+                        ["amId"] = "TGUiSMMk",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -35101,7 +35101,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "6X2Azcqt",
+                        ["amId"] = "UEfNi96Q",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -35145,7 +35145,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "yf2hyQQa",
+                        ["amId"] = "5WuNwd4R",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -35279,14 +35279,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "zgMXgKJL"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "TkP3jsM3"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "Js9YUILV",
+                        ["amId"] = "ztSBSQEY",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -35321,7 +35321,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "XYuZtZnm"
+                        ["amId"] = "ZfJDS1la"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -35339,7 +35339,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "h5scLzH6",
+                        ["amId"] = "TVX8WrGq",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_text_format_p_time_precision"] = 1,
@@ -35385,7 +35385,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "ZI5Z7yeY"
+                        ["amId"] = "kcXcOvV0"
                     }
                 },
                 ["height"] = 50,
@@ -35700,8 +35700,8 @@ wa.data['generalMO'].data = {
                 ["sparkOffsetX"] = 0,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "kLif0INg", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "VOVpLAzS", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "iJPmIZYN", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "pnGkT25M", ["type"] = "subforeground"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -35711,7 +35711,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "1zbRm5N0",
+                        ["amId"] = "KJp9ixPL",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -35756,7 +35756,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "VnnvQHFg",
+                        ["amId"] = "Cem9PWHY",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
@@ -35766,7 +35766,7 @@ wa.data['generalMO'].data = {
                     [5] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
-                        ["amId"] = "6XbdLYqj",
+                        ["amId"] = "nnRwYfj2",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -35978,8 +35978,8 @@ wa.data['generalMO'].data = {
                 ["parent"] = "Salhadaar Special Bars",
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "y6zAo9xo"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "nIVAeEPd"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "4fVO6IkK"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "oqxtur0h"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%value",
@@ -35998,7 +35998,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "YBjr1XIx",
+                        ["amId"] = "Nscj93ds",
                         ["text_text_format_value_big_number_format"] = "AbbreviateNumbers",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_value_format"] = "BigNumber",
@@ -36044,7 +36044,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "N407zY4G"
+                        ["amId"] = "MxhO1fIk"
                     },
                     [5] = {
                         ["border_size"] = 1,
@@ -36052,7 +36052,7 @@ wa.data['generalMO'].data = {
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "C2aBANvz",
+                        ["amId"] = "Ebq52bwH",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     }
@@ -36370,7 +36370,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "kGKRNiva", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "ln6onyBq", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Dark Stars Soon",
@@ -36398,7 +36398,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "WyYsrPX6",
+                        ["amId"] = "e39UPjyk",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -36418,7 +36418,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "8rovJGmw",
+                        ["amId"] = "28HDyeYI",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -36608,7 +36608,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "vuIvTBtm"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "o9FDyREK"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Pre-Spread",
@@ -36641,7 +36641,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "UQwyimAe"
+                        ["amId"] = "37qV2ubm"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -36654,7 +36654,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "bGUVbJGw",
+                        ["amId"] = "R4SRVRbY",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -36886,7 +36886,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "zt8XquUF", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "YcxdBSkr", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "%text",
@@ -36912,7 +36912,7 @@ wa.data['generalMO'].data = {
                         },
                         ["text_text_format_text_format"] = "none",
                         ["text_shadowYOffset"] = -1,
-                        ["amId"] = "NcJXQK9l",
+                        ["amId"] = "XH1679Lb",
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
                         ["text_shadowXOffset"] = 1,
@@ -36949,7 +36949,7 @@ wa.data['generalMO'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "vyX6PSLT",
+                        ["amId"] = "ohlhxupV",
                         ["text_text_format_2.p_format"] = "timed",
                         ["text_text_format_2"] = {},
                         ["type"] = "subtext",
@@ -37136,7 +37136,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "yCL1Uqbz", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "rUnlHh2s", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Spirits Inc",
@@ -37159,7 +37159,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "P6BeblMs",
+                        ["amId"] = "wTWiLOJX",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -37182,7 +37182,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "fyOMMjDb",
+                        ["amId"] = "5D12Z6qU",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -37377,7 +37377,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "RTJkJyOg"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "QmrRIGyP"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Bait Swings",
@@ -37405,7 +37405,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "SWxKx80X"
+                        ["amId"] = "CJD6GHNH"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -37418,7 +37418,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "lD4Or2zC",
+                        ["amId"] = "weyc2Zyu",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -37682,7 +37682,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "xaYcRcCo"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "00BvK5Lc"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -37715,7 +37715,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "iamrzqqv"
+                        ["amId"] = "5vE1JVDT"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -37728,7 +37728,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "g4Z28lbK",
+                        ["amId"] = "awUYUl4f",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -37933,7 +37933,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "GhDAKz5H", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "MVfuDZ6G", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Target Titan",
@@ -37956,7 +37956,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "OvN024mH",
+                        ["amId"] = "jE85H5fz",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -37979,7 +37979,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "8fbrVNHt",
+                        ["amId"] = "opwhy8uy",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -38221,7 +38221,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ixLdwR71"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "JgxLZ4kD"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -38254,7 +38254,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "M93ihbRp"
+                        ["amId"] = "vUDosuO6"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -38267,7 +38267,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "8egQXvkQ",
+                        ["amId"] = "stQy1Vyw",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -38586,7 +38586,7 @@ wa.data['generalMO'].data = {
                 ["fontSize"] = 22,
                 ["sparkHeight"] = 30,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "TYbD4lEB", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "7x8p2fv0", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Run Out",
@@ -38602,7 +38602,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "dZ4Njobp",
+                        ["amId"] = "UtfKk7uS",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["type"] = "subtext",
@@ -38633,7 +38633,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "CENTER",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "UTxibe4K",
+                        ["amId"] = "NW40MRev",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -38848,7 +38848,7 @@ wa.data['generalMO'].data = {
                 ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "yWnl2JFA"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "SPNSJtBR"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Spread",
@@ -38881,7 +38881,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "nqib70ke"
+                        ["amId"] = "kgewfjda"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -38893,7 +38893,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "NhuNAzzM",
+                        ["amId"] = "ePKZ9DhS",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_shadowColor"] = {
@@ -39143,9 +39143,9 @@ wa.data['generalMO'].data = {
                         ["height"] = 32,
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "f5tj9tHT"
+                        ["amId"] = "H7aK30Fq"
                     },
-                    [2] = {["type"] = "subbackground", ["amId"] = "tFgnjU9C"},
+                    [2] = {["type"] = "subbackground", ["amId"] = "D2mgQ8a6"},
                     [3] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Dmg Amp",
@@ -39172,7 +39172,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "LOQNDUUE"
+                        ["amId"] = "oljtnc7J"
                     },
                     [4] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -39203,7 +39203,7 @@ wa.data['generalMO'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "f5kWUsFo",
+                        ["amId"] = "wIyNxsCo",
                         ["type"] = "subtext",
                         ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_anchorYOffset"] = -25,
@@ -39358,7 +39358,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YrlVOSFD", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "kwBF9FWg", ["type"] = "subbackground"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -39367,7 +39367,7 @@ wa.data['generalMO'].data = {
                         ["textureRotation"] = 0,
                         ["textureVisible"] = true,
                         ["anchor_mode"] = "area",
-                        ["amId"] = "hONk6ABb",
+                        ["amId"] = "TuhXa0Sk",
                         ["type"] = "subtexture",
                         ["textureDesaturate"] = false,
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
@@ -39401,7 +39401,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "Q0ntqmmn",
+                        ["amId"] = "UfmVNoOo",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 10,
@@ -39508,7 +39508,7 @@ wa.data['generalMO'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Jw5vSM4u", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "42PoFzg0", ["type"] = "subbackground"},
                     [2] = {
                         ["textureMirror"] = false,
                         ["scale"] = 1,
@@ -39517,7 +39517,7 @@ wa.data['generalMO'].data = {
                         ["textureRotation"] = 0,
                         ["textureVisible"] = true,
                         ["anchor_mode"] = "area",
-                        ["amId"] = "wgvsFw9Z",
+                        ["amId"] = "WkufhEj7",
                         ["type"] = "subtexture",
                         ["textureDesaturate"] = false,
                         ["textureTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Ring_10px.tga",
@@ -39544,7 +39544,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "tmlZYPNO",
+                        ["amId"] = "2OfyqdIC",
                         ["rotateText"] = "NONE",
                         ["text_text_format_n_format"] = "none",
                         ["type"] = "subtext",
@@ -39924,14 +39924,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "v8FUEvWZ"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "YTHKDKvf"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "c9Som8HP",
+                        ["amId"] = "HC0TwEuq",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -39966,7 +39966,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "MoVxClvx"
+                        ["amId"] = "YZuI6pDN"
                     },
                     [4] = {
                         ["text_text_format_n_format"] = "none",
@@ -39994,7 +39994,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "gEfgkdB2"
+                        ["amId"] = "Tkr1qBF0"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -40030,7 +40030,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "Bf25g5pZ"
+                        ["amId"] = "4gjezwnS"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -40064,7 +40064,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "OUTER_LEFT",
                         ["text_fontSize"] = 10,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "aET8j0Qa"
+                        ["amId"] = "xTQD3JFT"
                     }
                 },
                 ["height"] = 30,
@@ -40194,12 +40194,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "VeqrfqSU", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "OAB1qo6l", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "AIBav53T",
+                        ["amId"] = "EMQqJDa9",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -40219,7 +40219,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "ynS4Xeuu",
+                        ["amId"] = "mPgy7i6L",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -40259,7 +40259,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "q1eZFNiy",
+                        ["amId"] = "w5ifVLAE",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -40277,7 +40277,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "PdDx8ZCK",
+                        ["amId"] = "GDmNp1a9",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -40311,7 +40311,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "I6oNk42T",
+                        ["amId"] = "0BJmPivz",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
@@ -40492,11 +40492,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "HpNVKezl"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "8Apd8hrK"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
-                        ["amId"] = "6dYX6flC",
+                        ["amId"] = "MxwNYe5i",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -40512,7 +40512,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "ESQdVNLO",
+                        ["amId"] = "7ugVru2A",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -40562,7 +40562,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "aausfUSQ"
+                        ["amId"] = "hVpA6I3l"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -40598,7 +40598,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "STYBlmT3"
+                        ["amId"] = "Cty5PBm6"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -40609,7 +40609,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "WtI7Mtq5",
+                        ["amId"] = "mi5YftD5",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
@@ -40762,14 +40762,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "socxPqQF", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "peb3h1FL", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "zizRwt8E",
+                        ["amId"] = "HuXmHjkd",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -40783,7 +40783,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "7FVVQmhm",
+                        ["amId"] = "wZDxeSn0",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_shadowColor"] = {
@@ -40827,7 +40827,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "MNohEjPb",
+                        ["amId"] = "cNgpVRID",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -40845,7 +40845,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "eO6IdelP",
+                        ["amId"] = "UuuWIxqK",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -40885,7 +40885,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "lmSB82F4",
+                        ["amId"] = "NdDIxJtG",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["type"] = "subtext",
@@ -41060,12 +41060,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "pp2E4Y8R"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "NP03lSJn"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "vWnBW71t",
+                        ["amId"] = "t1YMkPiO",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -41102,7 +41102,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "hvJ3zmmQ"
+                        ["amId"] = "D2Xhdt8C"
                     },
                     [4] = {
                         ["text_text_format_n_format"] = "none",
@@ -41130,7 +41130,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "3mL19sOR"
+                        ["amId"] = "ug4Tjqov"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -41166,7 +41166,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 17,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "gZF0klqf"
+                        ["amId"] = "9wzTlOgu"
                     },
                     [6] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -41200,7 +41200,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "OUTER_LEFT",
                         ["text_fontSize"] = 10,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "KjpFzp5d"
+                        ["amId"] = "a0BeoAO2"
                     }
                 },
                 ["height"] = 30,
@@ -41236,7 +41236,10 @@ wa.data['generalMO'].data = {
                 ["uid"] = "Z1m85ha7mq3"
             },
             [211] = {
-                ["controlledChildren"] = {[1] = "Conquer/Vanquish Combo Bar"},
+                ["controlledChildren"] = {
+                    [1] = "Nexus King Ghost Aim",
+                    [2] = "Conquer/Vanquish Combo Bar"
+                },
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["xOffset"] = 0,
                 ["preferToUpdate"] = true,
@@ -41311,6 +41314,157 @@ wa.data['generalMO'].data = {
                 ["AMModified"] = true
             },
             [212] = {
+                ["wagoID"] = "Y7yEWhBqV",
+                ["authorOptions"] = {},
+                ["preferToUpdate"] = true,
+                ["yOffset"] = 0,
+                ["anchorPoint"] = "CENTER",
+                ["url"] = "",
+                ["actions"] = {["start"] = {}, ["init"] = {}, ["finish"] = {}},
+                ["triggers"] = {
+                    [1] = {
+                        ["trigger"] = {
+                            ["type"] = "custom",
+                            ["custom_type"] = "stateupdate",
+                            ["customVariables"] = "{\
+       tick1 = \"bool\",\
+       tick2 = \"bool\",\
+       tick3 = \"bool\",\
+       expirationTime = true,\
+   }\
+   \
+   \
+   ",
+                            ["event"] = "Health",
+                            ["unit"] = "player",
+                            ["subeventSuffix"] = "_CAST_START",
+                            ["subeventPrefix"] = "SPELL",
+                            ["spellIds"] = {},
+                            ["names"] = {},
+                            ["check"] = "event",
+                            ["custom"] = "function(s, e, ...)\
+       if e == \"OPTIONS\" then\
+           local stacks = math.random(1, 3)\
+           if stacks == 3 then stacks =  nil end\
+           local diff = 1.2 -- change this if blizz changes time between each ghost\
+           local casttime = 2\
+           local timeaftercombo = 1.4\
+           local duration = (not stacks and casttime+(diff*2)) or (stacks == 2 and casttime) or (stacks == 1 and casttime+diff) or casttime\
+           duration = duration+timeaftercombo\
+           local state = {\
+               progressType = \"timed\",\
+               duration = duration,\
+               expirationTime = duration+GetTime(),\
+               autoHide = true,\
+           }\
+           s:Update(\"\", state)\
+       elseif e == \"NS_GHOST_SPAWN\" and ... == aura_env.id  then        \
+           local now = GetTime()\
+           if not aura_env.last or aura_env.last < now - 10 then\
+               aura_env.last = now\
+               local stacks = select(3, WA_GetUnitAura(\"player\", aura_env.debuff, aura_env.filter))\
+               if (not stacks) or stacks < 3 then\
+                   local diff = 1.2 -- change this if blizz changes time between each ghost\
+                   local casttime = 2\
+                   local timeaftercombo = 0\
+                   local duration = (not stacks and casttime+(diff*2)) or (stacks == 2 and casttime) or (stacks == 1 and casttime+diff) or casttime\
+                   duration = duration+timeaftercombo\
+                   local state = {\
+                       progressType = \"timed\",\
+                       duration = duration,\
+                       expirationTime = duration+GetTime(),\
+                       autoHide = true,\
+                   }\
+                   s:Update(\"\", state)\
+               end    \
+           end\
+       else\
+           local _, subevent, _, _, _, _, _, _, _, _, _, spellID = ... -- important CLEU\
+           if spellID == 1238980 then\
+               WeakAuras.ScanEvents(\"NS_GHOST_SPAWN\", aura_env.id) \
+           end\
+       end\
+   end\
+   \
+   \
+   ",
+                            ["events"] = "CLEU:SPELL_CAST_START NS_GHOST_SPAWN",
+                            ["debuffType"] = "HELPFUL"
+                        },
+                        ["untrigger"] = {}
+                    },
+                    ["disjunctive"] = "any",
+                    ["customTriggerLogic"] = "",
+                    ["activeTriggerMode"] = -10
+                },
+                ["internalVersion"] = 85,
+                ["selfPoint"] = "BOTTOM",
+                ["desaturate"] = false,
+                ["rotation"] = 0,
+                ["version"] = 73,
+                ["subRegions"] = {
+                    [1] = {["amId"] = "6rxarc24", ["type"] = "subbackground"}
+                },
+                ["height"] = 2000,
+                ["rotate"] = false,
+                ["load"] = {
+                    ["difficulty"] = {["single"] = "mythic"},
+                    ["use_encounterid"] = true,
+                    ["encounterid"] = "3134",
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["size"] = {["multi"] = {}}
+                },
+                ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+                ["mirror"] = false,
+                ["regionType"] = "texture",
+                ["AMModified"] = true,
+                ["blendMode"] = "BLEND",
+                ["AMOriginalUUID"] = "LEmnM0eXFhj",
+                ["uid"] = "AM-LEmnM0eXFhj",
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                ["color"] = {
+                    [1] = 0.24705883860588,
+                    [2] = 0.98823535442352,
+                    [3] = 0.24705883860588,
+                    [4] = 1
+                },
+                ["semver"] = "1.0.72",
+                ["tocversion"] = 110200,
+                ["id"] = "Nexus King Ghost Aim",
+                ["xOffset"] = 0,
+                ["alpha"] = 1,
+                ["width"] = 2,
+                ["parent"] = "Salhadaar Misc",
+                ["config"] = {},
+                ["anchorFrameType"] = "SCREEN",
+                ["frameStrata"] = 1,
+                ["conditions"] = {},
+                ["information"] = {},
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                }
+            },
+            [213] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -41639,12 +41793,12 @@ wa.data['generalMO'].data = {
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["version"] = 22,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "L3qn29Ga"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "AszTtW1W"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "xgPgyj1Y"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "PMiuqJkm"},
                     [3] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
-                        ["amId"] = "lSy3scVg",
+                        ["amId"] = "CqhbSo7X",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -41670,7 +41824,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
                         ["type"] = "subglow",
-                        ["amId"] = "H8Uvjam6",
+                        ["amId"] = "9ZlfPiS9",
                         ["glowLines"] = 10,
                         ["glowBorder"] = true
                     },
@@ -41726,7 +41880,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_1.p_time_precision"] = 1,
                         ["text_anchorYOffset"] = 0,
                         ["text_text_format_1.p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "Uf4WqCd9",
+                        ["amId"] = "4pQnn6pH",
                         ["text_text_format_t_time_mod_rate"] = true,
                         ["text_text_format_1.p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -41773,7 +41927,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_1.p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "YvqyvBMf",
+                        ["amId"] = "pNs9wvQU",
                         ["text_text_format_t_time_format"] = 0,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
@@ -41835,7 +41989,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_1.p_time_mod_rate"] = true,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "dVtwGa0X",
+                        ["amId"] = "IuhXFQAe",
                         ["text_text_format_t_time_format"] = 0,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
@@ -41901,7 +42055,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_t_time_format"] = 0,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "Gj0BIbdF",
+                        ["amId"] = "ZnkZdWzM",
                         ["text_text_format_t_format"] = "timed",
                         ["text_text_format_text4_format"] = "none",
                         ["text_text_format_2"] = {},
@@ -41939,7 +42093,7 @@ wa.data['generalMO'].data = {
                         ["tick_yOffset"] = 0,
                         ["progressSources"] = {[1] = {[1] = -2, [2] = ""}},
                         ["tick_mirror"] = false,
-                        ["amId"] = "L560DF7u"
+                        ["amId"] = "yCbqNG7p"
                     },
                     [10] = {
                         ["tick_rotation"] = 0,
@@ -41959,7 +42113,7 @@ wa.data['generalMO'].data = {
                         ["tick_yOffset"] = 0,
                         ["progressSources"] = {[1] = {[1] = -2, [2] = ""}},
                         ["tick_mirror"] = false,
-                        ["amId"] = "T7awnm0Y"
+                        ["amId"] = "uNOWDgJA"
                     },
                     [11] = {
                         ["tick_rotation"] = 0,
@@ -41979,7 +42133,7 @@ wa.data['generalMO'].data = {
                         ["tick_yOffset"] = 0,
                         ["progressSources"] = {[1] = {[1] = -2, [2] = ""}},
                         ["tick_mirror"] = false,
-                        ["amId"] = "g9dwq2NT"
+                        ["amId"] = "9i61w1FH"
                     }
                 },
                 ["height"] = 40,
@@ -42374,7 +42528,7 @@ wa.data['generalMO'].data = {
                 ["cooldown"] = true,
                 ["AMOriginalUUID"] = "SQzilt80pIu"
             },
-            [213] = {
+            [214] = {
                 ["controlledChildren"] = {
                     [1] = "Dimensius Big Icon",
                     [2] = "Dimensius Small Icon",
@@ -42460,7 +42614,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["xOffset"] = 0
             },
-            [214] = {
+            [215] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Crushing Gravity "},
                 ["borderBackdrop"] = "Blizzard Tooltip",
@@ -42564,7 +42718,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["limit"] = 5
             },
-            [215] = {
+            [216] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -42660,11 +42814,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "mtLgxksK"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "iiCuz51Q"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["amId"] = "lJvvcyVN",
+                        ["amId"] = "Jx7GrQvj",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -42684,7 +42838,7 @@ wa.data['generalMO'].data = {
                         ["glowXOffset"] = 0,
                         ["glowScale"] = 1,
                         ["glowDuration"] = 1,
-                        ["amId"] = "dzljr5NI",
+                        ["amId"] = "sJxAGuBa",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -42719,7 +42873,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "owsjabHz"
+                        ["amId"] = "Jt846CWn"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -42747,7 +42901,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "15gVvsNf"
+                        ["amId"] = "0Zw7BdMj"
                     },
                     [6] = {
                         ["text_shadowXOffset"] = 0,
@@ -42783,7 +42937,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "mEQggo5z"
+                        ["amId"] = "NYZF2ldt"
                     }
                 },
                 ["height"] = 60,
@@ -42818,7 +42972,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "RxJud(E2oIK"
             },
-            [216] = {
+            [217] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Excess Mass ",
@@ -42944,7 +43098,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["sort"] = "none"
             },
-            [217] = {
+            [218] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -43079,12 +43233,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YEvZy0AD", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "fptHd47x", ["type"] = "subbackground"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "PLoJtt6i",
+                        ["amId"] = "ME81JjFu",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -43100,7 +43254,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "pMuQK7eU",
+                        ["amId"] = "YTFrFSjP",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -43136,7 +43290,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "BVYFPUor",
+                        ["amId"] = "y2Boj8rK",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -43180,7 +43334,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "X17MSQLa",
+                        ["amId"] = "mQ74xoV6",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -43273,7 +43427,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["sparkColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [218] = {
+            [219] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -43366,11 +43520,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "QMAgvA3y"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "1rhaDTA7"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["amId"] = "UesRKqDf",
+                        ["amId"] = "iHDJ7m20",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -43408,7 +43562,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "T2VlMM1b"
+                        ["amId"] = "P7MsHSi1"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -43426,7 +43580,7 @@ wa.data['generalMO'].data = {
                         },
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "bcMslcXv",
+                        ["amId"] = "FfjHugHW",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -43477,7 +43631,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "jNSw2nAU"
+                        ["amId"] = "ecfyNtc3"
                     }
                 },
                 ["height"] = 50,
@@ -43511,7 +43665,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "Ux8xvYWRB1)"
             },
-            [219] = {
+            [220] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -43604,14 +43758,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "7h3czQxb", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "fAvEX9s8", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "6vWxOwLO",
+                        ["amId"] = "JLnQzGZk",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -43624,7 +43778,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "CJQWcJ7Q",
+                        ["amId"] = "RxT11IeR",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -43656,7 +43810,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "xVHzE6pw",
+                        ["amId"] = "06TvOlp2",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -43705,7 +43859,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "pv7i1hZh",
+                        ["amId"] = "gwMQKul9",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -43744,7 +43898,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["sparkColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [220] = {
+            [221] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -43837,12 +43991,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ugmoTmYI"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "xGzoBDCL"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["border_visible"] = true,
-                        ["amId"] = "JhhKJFUx",
+                        ["amId"] = "LTJo7Khj",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -43857,7 +44011,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "QAkOyjm8",
+                        ["amId"] = "H0X3WUhk",
                         ["anchorYOffset"] = 0,
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -43892,7 +44046,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "7agUrxJw",
+                        ["amId"] = "Y2Ns7l6i",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -43943,7 +44097,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "adOomDC9"
+                        ["amId"] = "NvyZrPa7"
                     }
                 },
                 ["height"] = 50,
@@ -43977,7 +44131,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "vletURkTr7f"
             },
-            [221] = {
+            [222] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -44088,11 +44242,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "LLm2xF1b", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "7DyfMCD5", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
-                        ["amId"] = "sMWI1pfx",
+                        ["amId"] = "Tz2drrJA",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -44109,7 +44263,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "mFr3wL7D",
+                        ["amId"] = "60jXfIek",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -44145,7 +44299,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "BWttTg6i",
+                        ["amId"] = "gzQcvUYc",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -44189,7 +44343,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "i4YY5hZq",
+                        ["amId"] = "MRBj0cMf",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -44228,7 +44382,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["sparkColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [222] = {
+            [223] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -44321,14 +44475,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "zlbJY4fW"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "XmIRnYe9"},
                     [2] = {
                         ["border_size"] = 1,
                         ["type"] = "subborder",
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "gZBRNtO5",
+                        ["amId"] = "y5voBM8N",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -44363,7 +44517,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "zsvfREDs"
+                        ["amId"] = "dB6cZDDv"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -44381,7 +44535,7 @@ wa.data['generalMO'].data = {
                         },
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "jIehNNOB",
+                        ["amId"] = "olJzz56i",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -44427,7 +44581,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "z3UwouqQ"
+                        ["amId"] = "PVHkeax0"
                     }
                 },
                 ["height"] = 50,
@@ -44461,7 +44615,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "))wwwu2jHmr"
             },
-            [223] = {
+            [224] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -44554,12 +44708,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "R1u9a4Mi", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "vNgpCu3Q", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
-                        ["amId"] = "f85ZPav0",
+                        ["amId"] = "vXWXjH4t",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -44575,7 +44729,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "sOWEORSZ",
+                        ["amId"] = "yQIqYevB",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -44609,7 +44763,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "FORpRqBt",
+                        ["amId"] = "upAu2B3D",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -44655,7 +44809,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "AgMaTPfo",
+                        ["amId"] = "PPYYyivc",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -44694,7 +44848,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["sparkColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [224] = {
+            [225] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -44789,14 +44943,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NVAHZw3f", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "Gf0s3YNS", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "3PiiTQHj",
+                        ["amId"] = "vsUUivfd",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -44810,7 +44964,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "QKqGh0lY",
+                        ["amId"] = "AHvqZYnX",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -44849,7 +45003,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "DeKw5LCr",
+                        ["amId"] = "yspYlh10",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -44890,7 +45044,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "2YVAnx9Z",
+                        ["amId"] = "bgeIrou0",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -44929,7 +45083,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["sparkColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [225] = {
+            [226] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -45024,12 +45178,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "oCC0FqIB"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "bdnXqdZz"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "g3MnGqM3",
+                        ["amId"] = "LsioBXmG",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -45066,7 +45220,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "LBqhYnDN"
+                        ["amId"] = "Ow0jlUTV"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 0,
@@ -45102,7 +45256,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOPRIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "GuZtPHZl"
+                        ["amId"] = "nWX64J24"
                     },
                     [5] = {
                         ["text_text_format_n_format"] = "none",
@@ -45130,7 +45284,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "xfZEuOSs"
+                        ["amId"] = "2hFhUQbn"
                     }
                 },
                 ["height"] = 50,
@@ -45164,7 +45318,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "2Ab9d5VjNw4"
             },
-            [226] = {
+            [227] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -45259,11 +45413,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "HvJ7LNWB", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "EY4XF3bc", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
-                        ["amId"] = "s3fZc5kc",
+                        ["amId"] = "wimjLURJ",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -45279,7 +45433,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "k6ByYyGA",
+                        ["amId"] = "nFQxaPQe",
                         ["rotateText"] = "NONE",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
@@ -45314,7 +45468,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "roTXgM5M",
+                        ["amId"] = "dpC7dhQA",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["text_shadowXOffset"] = 0,
@@ -45360,7 +45514,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = true,
-                        ["amId"] = "UhcFhPiL",
+                        ["amId"] = "aPUEFL9N",
                         ["text_shadowXOffset"] = 1,
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -45399,7 +45553,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["sparkColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1}
             },
-            [227] = {
+            [228] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Antimatter Soak Timer"},
                 ["borderBackdrop"] = "Blizzard Tooltip",
@@ -45503,7 +45657,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["useLimit"] = false
             },
-            [228] = {
+            [229] = {
                 ["sparkWidth"] = 2,
                 ["sparkOffsetX"] = 0,
                 ["xOffset"] = 0,
@@ -45553,8 +45707,8 @@ wa.data['generalMO'].data = {
                 ["preferToUpdate"] = true,
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "pFx3tOvY"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "Xv6Rv7ec"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "AL4ofHCx"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "tHVKkBhB"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -45587,7 +45741,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "aDnbSwqr"
+                        ["amId"] = "gHILi5JE"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 1,
@@ -45616,12 +45770,12 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "aTd5u26k"
+                        ["amId"] = "vFAaDSqS"
                     },
                     [5] = {
                         ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["amId"] = "Tx9L4hQP",
+                        ["amId"] = "S5HUIKBI",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
@@ -45696,7 +45850,7 @@ wa.data['generalMO'].data = {
                 },
                 ["backgroundColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.5}
             },
-            [229] = {
+            [230] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {[1] = "Destabilized "},
                 ["borderBackdrop"] = "Blizzard Tooltip",
@@ -45800,7 +45954,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["sort"] = "none"
             },
-            [230] = {
+            [231] = {
                 ["sparkWidth"] = 2,
                 ["iconSource"] = -1,
                 ["parent"] = "Dimensius Special Bars",
@@ -45873,8 +46027,8 @@ wa.data['generalMO'].data = {
                 ["backgroundColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 0.5},
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ZBz2Nv9u"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "hbh2xlAW"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "uXv9HzfB"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "11TsyZo8"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%p",
@@ -45906,7 +46060,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_RIGHT",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "DnQLGBzP"
+                        ["amId"] = "cic4fWr6"
                     },
                     [4] = {
                         ["text_shadowXOffset"] = 1,
@@ -45934,7 +46088,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "izUF4A97"
+                        ["amId"] = "BM0Cr0ik"
                     },
                     [5] = {
                         ["border_offset"] = 0,
@@ -45942,7 +46096,7 @@ wa.data['generalMO'].data = {
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "fqCokod2",
+                        ["amId"] = "RwGSaY97",
                         ["border_edge"] = "Square Full White",
                         ["border_size"] = 1
                     }
@@ -45996,7 +46150,7 @@ wa.data['generalMO'].data = {
                 },
                 ["authorOptions"] = {}
             },
-            [231] = {
+            [232] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Devour Inc",
@@ -46120,7 +46274,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["sort"] = "none"
             },
-            [232] = {
+            [233] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -46386,7 +46540,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "nXoN21Na"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "ab8N7o9N"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Devour Inc",
@@ -46419,7 +46573,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "ylgpAJbz"
+                        ["amId"] = "Ucrt9ukz"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -46455,7 +46609,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "QRTYAmmz"
+                        ["amId"] = "J5vSO2y7"
                     }
                 },
                 ["height"] = 30,
@@ -46558,7 +46712,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "HnHLXunzzBM"
             },
-            [233] = {
+            [234] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -46728,7 +46882,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ajmvKwZM", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "YpoZfBbL", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Knock + Adds",
@@ -46756,7 +46910,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "plapq7Fd",
+                        ["amId"] = "sRnsBq0W",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -46779,7 +46933,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "ZxOVgJy5",
+                        ["amId"] = "m3cDdMP6",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -46842,7 +46996,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["config"] = {}
             },
-            [234] = {
+            [235] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -46950,7 +47104,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "9ow6Ulfm", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "qgfnWYBi", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Pushback Inc",
@@ -46965,7 +47119,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "heGJDr2j",
+                        ["amId"] = "xLj4hdQA",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
                         ["text_color"] = {
@@ -47020,7 +47174,7 @@ wa.data['generalMO'].data = {
                         ["text_anchorXOffset"] = 3,
                         ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "yPgdSjDR",
+                        ["amId"] = "du8zt5hL",
                         ["text_text_format_2.p_time_dynamic_threshold"] = 60,
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -47163,7 +47317,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "99pRbe)UlWK"
             },
-            [235] = {
+            [236] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -47271,7 +47425,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "hDtW811b", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "Ui85vy4T", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Pre-Position",
@@ -47286,7 +47440,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "SwbNGCrf",
+                        ["amId"] = "u4WbxHKV",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 0,
                         ["text_color"] = {
@@ -47350,7 +47504,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_.2p_format"] = "none",
-                        ["amId"] = "xk11dS7e"
+                        ["amId"] = "A90AKpbX"
                     }
                 },
                 ["height"] = 30,
@@ -47411,7 +47565,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "PBayVAMWEKZ"
             },
-            [236] = {
+            [237] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -47548,7 +47702,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "mJ0dsUKV"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "RVXwH6YV"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Tank Pull In",
@@ -47582,7 +47736,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "Z9Ymg0aM"
+                        ["amId"] = "82fO6sQc"
                     },
                     [3] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -47618,7 +47772,7 @@ wa.data['generalMO'].data = {
                         ["text_anchorXOffset"] = 3,
                         ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "xifiXj1Q",
+                        ["amId"] = "ri8Q6nzT",
                         ["text_text_format_2.p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["anchorXOffset"] = 0,
@@ -47667,7 +47821,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "HnHLXunzzBM"
             },
-            [237] = {
+            [238] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -47798,7 +47952,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "gnEc3wIg"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "eiVdEOow"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text_format_s_format"] = "none",
@@ -47828,7 +47982,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "hApWljdX"
+                        ["amId"] = "cnxP9Csz"
                     },
                     [3] = {
                         ["text_text_format_p_time_format"] = 0,
@@ -47864,7 +48018,7 @@ wa.data['generalMO'].data = {
                         ["text_anchorXOffset"] = 3,
                         ["text_font"] = "JetBrainsMono - ExtraBold",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "0dDUMGZC",
+                        ["amId"] = "9Nwym84C",
                         ["text_text_format_2.p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["anchorXOffset"] = 0,
@@ -47913,7 +48067,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "HnHLXunzzBM"
             },
-            [238] = {
+            [239] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -48076,7 +48230,7 @@ wa.data['generalMO'].data = {
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["wordWrap"] = "WordWrap",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "wQSXt9ji"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "AxkvzpYz"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -48109,7 +48263,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "qxOBHwWu"
+                        ["amId"] = "SDI7LpGc"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -48145,7 +48299,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "D7idrVti"
+                        ["amId"] = "ddwtrrKa"
                     }
                 },
                 ["height"] = 30,
@@ -48201,7 +48355,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "HnHLXunzzBM"
             },
-            [239] = {
+            [240] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -48343,7 +48497,7 @@ wa.data['generalMO'].data = {
                 ["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
                 ["icon_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["subRegions"] = {
-                    [1] = {["amId"] = "OJLIxPe9", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "OwGMJt9P", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -48371,7 +48525,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "hQ7Q6H2V",
+                        ["amId"] = "a805Tel6",
                         ["text_visible"] = true,
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
@@ -48394,7 +48548,7 @@ wa.data['generalMO'].data = {
                         ["rotateText"] = "NONE",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "nJBANFXd",
+                        ["amId"] = "BXHNa0iC",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -48473,7 +48627,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "pMesNEqc(zP"
             },
-            [240] = {
+            [241] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = 0,
                 ["xOffset"] = 0,
@@ -48636,7 +48790,7 @@ wa.data['generalMO'].data = {
                 ["internalVersion"] = 85,
                 ["selfPoint"] = "BOTTOM",
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "VkHKyWs8"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "ZiDe9jdE"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Taunt",
@@ -48669,7 +48823,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "6VXvLW9N"
+                        ["amId"] = "eIsYmrd4"
                     },
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -48682,7 +48836,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "8oKmMlJM",
+                        ["amId"] = "ukhkMvC6",
                         ["anchorXOffset"] = 0,
                         ["text_shadowColor"] = {
                             [1] = 0,
@@ -48745,7 +48899,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "HnHLXunzzBM"
             },
-            [241] = {
+            [242] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "Reverse or Inverse Gravity",
@@ -48853,7 +49007,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["radius"] = 200
             },
-            [242] = {
+            [243] = {
                 ["user_y"] = 0,
                 ["iconSource"] = 0,
                 ["user_x"] = 0,
@@ -48999,7 +49153,7 @@ wa.data['generalMO'].data = {
                 ["automaticWidth"] = "Auto",
                 ["displayText_format_p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "FdTNHHze"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "M3tvS284"},
                     [2] = {
                         ["text_text_format_n_format"] = "none",
                         ["text_text"] = "Spread",
@@ -49009,7 +49163,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "5ShlO9s2",
+                        ["amId"] = "ObM8ZwBc",
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_shadowColor"] = {
@@ -49067,7 +49221,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 19,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "MHwTfpUS"
+                        ["amId"] = "uO27cZyB"
                     }
                 },
                 ["height"] = 180,
@@ -49116,7 +49270,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["auraRotation"] = 0
             },
-            [243] = {
+            [244] = {
                 ["overlays"] = {
                     [1] = {[1] = 1, [2] = 0, [3] = 0.054901964962482, [4] = 1}
                 },
@@ -49329,7 +49483,7 @@ wa.data['generalMO'].data = {
                 ["backgroundTexture"] = "PowerAurasMedia\\Auras\\Aura3",
                 ["sparkHeight"] = 30,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "D2OXldfF", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "lBaTcWs9", ["type"] = "subbackground"},
                     [2] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "Pre-Spread",
@@ -49344,7 +49498,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "xbR4N6oL",
+                        ["amId"] = "pbQ17MLe",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -49371,7 +49525,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "CENTER",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "OyoxrqBp",
+                        ["amId"] = "ewhN9POu",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -49446,7 +49600,7 @@ wa.data['generalMO'].data = {
                 ["cooldown"] = true,
                 ["auraRotation"] = 0
             },
-            [244] = {
+            [245] = {
                 ["controlledChildren"] = {},
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["xOffset"] = 0,
@@ -49521,7 +49675,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["AMModified"] = true
             },
-            [245] = {
+            [246] = {
                 ["controlledChildren"] = {},
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["authorOptions"] = {},
@@ -49596,7 +49750,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["parent"] = "[8] Dimensius"
             },
-            [246] = {
+            [247] = {
                 ["arcLength"] = 360,
                 ["controlledChildren"] = {
                     [1] = "[Co-Tank] Mortal Fragility",
@@ -49708,7 +49862,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["sort"] = "none"
             },
-            [247] = {
+            [248] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -49803,12 +49957,12 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "y2xHEbMm", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "GH8fRdzt", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["border_visible"] = true,
-                        ["amId"] = "amIlKv3V",
+                        ["amId"] = "nv0loUMI",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
                         ["border_edge"] = "Square Full White",
@@ -49829,7 +49983,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "6t7aFSJU",
+                        ["amId"] = "lHcBPxya",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_p_format"] = "timed",
@@ -49868,7 +50022,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "UjaGyO8a",
+                        ["amId"] = "NvtFjdv9",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -49883,7 +50037,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "zjrkrJIj",
+                        ["amId"] = "EwMDBvem",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -49921,7 +50075,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "qrm4zOip",
+                        ["amId"] = "r8vlLG78",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_format"] = "timed",
                         ["type"] = "subtext",
@@ -49992,7 +50146,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["authorOptions"] = {}
             },
-            [248] = {
+            [249] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -50101,11 +50255,11 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "plQdn075"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "TjtGlgGu"},
                     [2] = {
                         ["border_offset"] = 0,
                         ["border_size"] = 1,
-                        ["amId"] = "wSMbO1i1",
+                        ["amId"] = "dxo6HXg3",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -50143,7 +50297,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_TOPLEFT",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "oaU0XOCx"
+                        ["amId"] = "CTCLf3HZ"
                     },
                     [4] = {
                         ["text_text_format_n_format"] = "none",
@@ -50171,7 +50325,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "UrKKRUmD"
+                        ["amId"] = "QCRqaZWK"
                     },
                     [5] = {
                         ["text_shadowXOffset"] = 0,
@@ -50184,7 +50338,7 @@ wa.data['generalMO'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "mvetZsDo",
+                        ["amId"] = "WYet8Mud",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
                         ["text_text_format_p_time_precision"] = 1,
@@ -50241,7 +50395,7 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "OUTER_LEFT",
                         ["text_fontSize"] = 10,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "Edn0aORD"
+                        ["amId"] = "yBrrpHEN"
                     }
                 },
                 ["height"] = 30,
@@ -50276,7 +50430,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["uid"] = "f(qWqWFZWMN"
             },
-            [249] = {
+            [250] = {
                 ["sparkWidth"] = 10,
                 ["iconSource"] = -1,
                 ["xOffset"] = 0,
@@ -50371,14 +50525,14 @@ wa.data['generalMO'].data = {
                     }
                 },
                 ["subRegions"] = {
-                    [1] = {["amId"] = "IWILlpUU", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "WjbWPNOO", ["type"] = "subbackground"},
                     [2] = {
                         ["type"] = "subborder",
                         ["border_size"] = 1,
                         ["anchor_area"] = "bar",
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "WDE2YswP",
+                        ["amId"] = "SYVesvM9",
                         ["border_edge"] = "Square Full White",
                         ["border_offset"] = 0
                     },
@@ -50391,7 +50545,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["text_text_format_p_time_legacy_floor"] = false,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "oX21h38E",
+                        ["amId"] = "mh50caTS",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
@@ -50436,7 +50590,7 @@ wa.data['generalMO'].data = {
                         ["text_shadowYOffset"] = -1,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_visible"] = false,
-                        ["amId"] = "HF8Zb0SW",
+                        ["amId"] = "Oq6TIwbT",
                         ["text_fontType"] = "OUTLINE",
                         ["anchor_point"] = "BOTTOM",
                         ["text_fontSize"] = 12,
@@ -50451,7 +50605,7 @@ wa.data['generalMO'].data = {
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "uBX2Fc0I",
+                        ["amId"] = "jeHRW7tT",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -50493,7 +50647,7 @@ wa.data['generalMO'].data = {
                         ["text_fixedWidth"] = 64,
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "wMhNq9wg",
+                        ["amId"] = "TQHf6eiL",
                         ["rotateText"] = "NONE",
                         ["anchorXOffset"] = 0,
                         ["text_text_format_p_time_mod_rate"] = true,
@@ -50560,7 +50714,7 @@ wa.data['generalMO'].data = {
                 ["barColor2"] = {[1] = 1, [2] = 1, [3] = 0, [4] = 1},
                 ["authorOptions"] = {}
             },
-            [250] = {
+            [251] = {
                 ["controlledChildren"] = {[1] = "Eclipse "},
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["xOffset"] = 0,
@@ -50635,7 +50789,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["authorOptions"] = {}
             },
-            [251] = {
+            [252] = {
                 ["controlledChildren"] = {
                     [1] = "Eclipse Kill Timer",
                     [2] = "Eclipse Kill Cast Tick"
@@ -50715,7 +50869,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["AMModified"] = true
             },
-            [252] = {
+            [253] = {
                 ["sparkWidth"] = 2,
                 ["sparkOffsetX"] = 0,
                 ["load"] = {
@@ -50807,8 +50961,8 @@ wa.data['generalMO'].data = {
                 ["customTextUpdate"] = "update",
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "4u3ixBMD"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "1YM4xG5I"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "WlprO9kS"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "KNEzZy2f"},
                     [3] = {
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text"] = "%c",
@@ -50819,7 +50973,7 @@ wa.data['generalMO'].data = {
                         ["text_text_format_c_pad_mode"] = "left",
                         ["text_automaticWidth"] = "Auto",
                         ["text_fixedWidth"] = 64,
-                        ["amId"] = "w2cc1I9Y",
+                        ["amId"] = "Vpv9HdRT",
                         ["text_text_format_c_format"] = "BigNumber",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
@@ -50873,12 +51027,12 @@ wa.data['generalMO'].data = {
                         ["anchor_point"] = "INNER_LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "s2SB9OCn"
+                        ["amId"] = "3IBjopo2"
                     },
                     [5] = {
                         ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["amId"] = "Mx40hRiI",
+                        ["amId"] = "SuQi4j8o",
                         ["anchor_area"] = "bar",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
@@ -50928,7 +51082,7 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["displayIcon"] = 2065603
             },
-            [253] = {
+            [254] = {
                 ["sparkWidth"] = 2,
                 ["iconSource"] = -1,
                 ["authorOptions"] = {},
@@ -51009,8 +51163,8 @@ wa.data['generalMO'].data = {
                 ["information"] = {},
                 ["sparkOffsetY"] = 0,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "uxLtxAkl", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "JZ0rVmZ0", ["type"] = "subforeground"}
+                    [1] = {["amId"] = "UdmjjpFX", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "gfbXSvHD", ["type"] = "subforeground"}
                 },
                 ["height"] = 35.833381652832,
                 ["textureSource"] = "LSM",
