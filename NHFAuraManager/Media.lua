@@ -56,7 +56,8 @@ AM.Media = {
         ["Spawn Wall"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\SpawnWall.mp3]],
         ["Break Wall"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\BreakWall.mp3]],
         ["Spirit"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Spirit.mp3]],
-        ["Absorb"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Absorb.mp3]]
+        ["Absorb"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Absorb.mp3]],
+        ["Danger"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Danger.mp3]]
     }
 }
 
