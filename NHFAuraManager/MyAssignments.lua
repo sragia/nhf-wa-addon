@@ -23,12 +23,14 @@ myAssignments.Init = function(self)
         GMRT.F:RegisterCallback('Note_ReceivedText', self.OnNoteUpdate)
     end
 
-    self.window = window:Create({ title = 'My Assignments', hideVersion = true })
+    self.window = window:Create({title = 'My Assignments', hideVersion = true})
     self.scrollFrame = scrollFrameConstruct:Create()
     self.scrollFrame:SetParent(self.window.container)
-    self.scrollFrame:SetPoint('TOPLEFT', self.window.container, 'TOPLEFT', 0, -10)
+    self.scrollFrame:SetPoint('TOPLEFT', self.window.container, 'TOPLEFT', 0,
+                              -10)
     self.scrollFrame:SetPoint('BOTTOMRIGHT', -10, 40)
-    self.scrollFrame:UpdateScrollChild(self.window.container:GetWidth() - 20, self.window.container:GetHeight() - 100)
+    self.scrollFrame:UpdateScrollChild(self.window.container:GetWidth() - 20,
+                                       self.window.container:GetHeight() - 100)
 
     local notUpdatedFrame = CreateFrame('Frame', nil, self.window.container)
     notUpdatedFrame:SetPoint('TOP', self.window.container, 'TOP', 0, 10)
@@ -52,7 +54,8 @@ myAssignments.Init = function(self)
     noteUpdatedTxt:SetText('Note Updated!')
     self.noteUpdatedTxt = noteUpdatedTxt
 
-    local noAssignmentsTxt = self.window.container:CreateFontString(nil, 'OVERLAY')
+    local noAssignmentsTxt = self.window.container:CreateFontString(nil,
+                                                                    'OVERLAY')
     noAssignmentsTxt:SetFont(AM.const.fonts.DEFAULT, 16, 'OUTLINE')
     noAssignmentsTxt:SetPoint('CENTER', self.window.container)
     noAssignmentsTxt:SetWidth(0)
@@ -87,17 +90,14 @@ myAssignments.ReadNote = function(self)
     end
 
     -- Only return if it's complete
-    if (isNHFAssignmentsEnd) then
-        return encodedString
-    end
+    if (isNHFAssignmentsEnd) then return encodedString end
     return nil
 end
 
 myAssignments.OnNoteUpdate = function(self)
+    if (InCombatLockdown()) then return; end
     myAssignments:AdjustNote()
-    if (myAssignments:GetAssignments()) then
-        myAssignments:Show(true);
-    end
+    if (myAssignments:GetAssignments()) then myAssignments:Show(true); end
 end
 
 myAssignments.AdjustNote = function(self)
@@ -116,13 +116,15 @@ myAssignments.AdjustNote = function(self)
                 if (tContains(numbers, group)) then
                     local name, server = UnitName(unit)
                     local _, CLASS = UnitClass(unit)
-                    local formattedName = string.format('|c%s%s|r', RAID_CLASS_COLORS[CLASS].colorStr, name)
+                    local formattedName =
+                        string.format('|c%s%s|r',
+                                      RAID_CLASS_COLORS[CLASS].colorStr, name)
                     table.insert(names, formattedName)
                 end
             end
             return table.concat(names, ' ')
         end)
-        
+
         -- Update the MRT note with the modified text
         VMRT.Note.Text1 = note
     end
@@ -147,9 +149,11 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText),
-                        icon = assignment.iconID,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.name),
+                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.subText),
+                        icon = assignment.iconID
                     })
                 end
             end,
@@ -157,9 +161,11 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText),
-                        icon = assignment.iconID,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.name),
+                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.subText),
+                        icon = assignment.iconID
                     })
                 end
             end,
@@ -167,9 +173,13 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('%sPosition: |cffffffff%d|r', C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText) or '', index),
-                        icon = assignment.iconID,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.name),
+                        subText = string.format('%sPosition: |cffffffff%d|r',
+                                                C_ChatInfo.ReplaceIconAndGroupExpressions(
+                                                    assignment.subText) or '',
+                                                index),
+                        icon = assignment.iconID
                     })
                 end
             end,
@@ -177,9 +187,13 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('%sPosition: |cffffffff%d|r', C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText) or '', index),
-                        icon = assignment.iconID,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.name),
+                        subText = string.format('%sPosition: |cffffffff%d|r',
+                                                C_ChatInfo.ReplaceIconAndGroupExpressions(
+                                                    assignment.subText) or '',
+                                                index),
+                        icon = assignment.iconID
                     })
                 end
             end,
@@ -187,9 +201,13 @@ myAssignments.ParseAssignments = function(self)
                 local index = FindInTable(assignment.players, playerName)
                 if (index) then
                     table.insert(assignments, {
-                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = string.format('%sPosition: |cffffffff%d|r', C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText) or '', index),
-                        icon = assignment.iconID,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.name),
+                        subText = string.format('%sPosition: |cffffffff%d|r',
+                                                C_ChatInfo.ReplaceIconAndGroupExpressions(
+                                                    assignment.subText) or '',
+                                                index),
+                        icon = assignment.iconID
                     })
                 end
             end,
@@ -197,15 +215,18 @@ myAssignments.ParseAssignments = function(self)
                 local myGroup = AM.utils.findGroupForPlayer(UnitName('player'))
                 if (tContains(assignment.groups, string.format('%d', myGroup))) then
                     table.insert(assignments, {
-                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.name),
-                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(assignment.subText),
-                        icon = assignment.iconID,
+                        name = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.name),
+                        subText = C_ChatInfo.ReplaceIconAndGroupExpressions(
+                            assignment.subText),
+                        icon = assignment.iconID
                     })
                 end
             end,
             default = function()
-                AM.utils.printOut('Unknown assignment type: ' .. assignment.type)
-            end 
+                AM.utils
+                    .printOut('Unknown assignment type: ' .. assignment.type)
+            end
         })
     end
     return assignments;
@@ -213,13 +234,9 @@ end
 
 myAssignments.PopulateWindow = function(self)
     local assignments = myAssignments:ParseAssignments()
-    if (#assignments <= 0) then
-        return false;
-    end
+    if (#assignments <= 0) then return false; end
     local prev = nil;
-    for _, frame in pairs(self.frames) do
-        frame:Destroy()
-    end
+    for _, frame in pairs(self.frames) do frame:Destroy() end
     self.frames = {}
     for _, assignment in pairs(assignments) do
         local frame = assignmentFrame:Create(self.scrollFrame.child)
@@ -230,7 +247,8 @@ myAssignments.PopulateWindow = function(self)
             frame:SetPoint('TOPRIGHT', prev, 'BOTTOMRIGHT', 0, -5)
         else
             frame:SetPoint('TOPLEFT', self.scrollFrame.child, 'TOPLEFT', 0, -30)
-            frame:SetPoint('TOPRIGHT', self.scrollFrame.child, 'TOPRIGHT', 0, -30)
+            frame:SetPoint('TOPRIGHT', self.scrollFrame.child, 'TOPRIGHT', 0,
+                           -30)
         end
         prev = frame;
     end
@@ -241,13 +259,9 @@ myAssignments.Show = function(self, isNoteUpdated)
     if (#self.assignments <= 0) then
         -- Check if there are any assignments that are not parsed yet
         self:GetAssignments();
-        if (#self.assignments <= 0) then
-            return;
-        end
+        if (#self.assignments <= 0) then return; end
     end
-    if (isNoteUpdated and not IsInRaid()) then
-        return;
-    end
+    if (isNoteUpdated and not IsInRaid()) then return; end
     local hasAssignments = self:PopulateWindow();
     if (not hasAssignments) then
         self.noAssignmentsTxt:Show();
