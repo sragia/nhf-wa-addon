@@ -59,7 +59,8 @@ AM.Media = {
         ["Absorb"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Absorb.mp3]],
         ["Danger"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Danger.mp3]],
         ["Done"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Done.mp3]],
-        ["Catch"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Catch.mp3]]
+        ["Catch"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\Catch.mp3]],
+        ["Kill Adds"] = [[Interface\Addons\NHFAuraManager\Media\Sounds\KillAdds.mp3]]
     }
 }
 
