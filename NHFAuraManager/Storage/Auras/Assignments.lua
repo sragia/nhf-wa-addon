@@ -11,8 +11,8 @@ wa.data['assignments'].data = {
     ["name"] = "[NHF] Assignments",
     ["isOptional"] = "0",
     ["isAnchor"] = "0",
-    ["semver"] = "1.1.22",
-    ["version"] = "62",
+    ["semver"] = "1.1.23",
+    ["version"] = "63",
     ["import"] = {
         ["d"] = {
             ["controlledChildren"] = {
@@ -45,7 +45,7 @@ wa.data['assignments'].data = {
             ["internalVersion"] = 86,
             ["selfPoint"] = "CENTER",
             ["desc"] = "Up to date with NS 1.0.20",
-            ["version"] = "62",
+            ["version"] = "63",
             ["subRegions"] = {},
             ["load"] = {
                 ["talent"] = {["multi"] = {}},
@@ -64,15 +64,15 @@ wa.data['assignments'].data = {
             ["AMModified"] = true,
             ["AMOriginalUUID"] = "sAklUAnWyJ9",
             ["borderOffset"] = 4,
-            ["semver"] = "1.1.22",
+            ["semver"] = "1.1.23",
             ["alpha"] = 1,
             ["id"] = "[NHF] Assignments",
-            ["config"] = {},
+            ["borderInset"] = 1,
             ["frameStrata"] = 1,
             ["anchorFrameType"] = "SCREEN",
             ["AMisAnchor"] = "0",
+            ["config"] = {},
             ["uid"] = "AM-sAklUAnWyJ9",
-            ["borderInset"] = 1,
             ["xOffset"] = 0,
             ["conditions"] = {},
             ["information"] = {},
@@ -103,10 +103,10 @@ wa.data['assignments'].data = {
                 ["controlledChildren"] = {[1] = "Assignment on Note Push"},
                 ["borderBackdrop"] = "Blizzard Tooltip",
                 ["wagoID"] = "Y7yEWhBqV",
-                ["parent"] = "[NHF] Assignments",
+                ["xOffset"] = 0,
                 ["preferToUpdate"] = true,
                 ["groupIcon"] = 1505953,
-                ["anchorPoint"] = "TOP",
+                ["sortHybridTable"] = {["Assignment on Note Push 2"] = false},
                 ["config"] = {},
                 ["arcLength"] = 360,
                 ["borderColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -130,7 +130,7 @@ wa.data['assignments'].data = {
                 },
                 ["columnSpace"] = 1,
                 ["radius"] = 200,
-                ["xOffset"] = 0,
+                ["authorOptions"] = {},
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -154,7 +154,7 @@ wa.data['assignments'].data = {
                 ["align"] = "CENTER",
                 ["borderEdge"] = "Square Full White",
                 ["yOffset"] = 0,
-                ["sortHybridTable"] = {["Assignment on Note Push 2"] = false},
+                ["gridType"] = "RD",
                 ["rotation"] = 0,
                 ["fullCircle"] = true,
                 ["version"] = 79,
@@ -167,7 +167,7 @@ wa.data['assignments'].data = {
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
-                ["authorOptions"] = {},
+                ["parent"] = "[NHF] Assignments",
                 ["backdropColor"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 0.5},
                 ["selfPoint"] = "TOP",
                 ["animate"] = false,
@@ -179,7 +179,7 @@ wa.data['assignments'].data = {
                 ["stepAngle"] = 15,
                 ["borderSize"] = 2,
                 ["sort"] = "none",
-                ["gridType"] = "RD",
+                ["anchorPoint"] = "TOP",
                 ["stagger"] = 0,
                 ["anchorFrameParent"] = false,
                 ["constantFactor"] = "RADIUS",
@@ -577,9 +577,17 @@ wa.data['assignments'].data = {
                 ["font"] = "Expressway",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "OjRVfWNt", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "3JNbZaEr", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
+                ["automaticWidth"] = "Auto",
+                ["fontSize"] = 26,
+                ["source"] = "import",
+                ["shadowXOffset"] = 1,
+                ["yOffset"] = 0,
+                ["displayText_format_p_format"] = "timed",
+                ["AMOriginalUUID"] = "7xLBQfxNbY8",
+                ["regionType"] = "text",
                 ["load"] = {
                     ["use_namerealm"] = false,
                     ["spec_position"] = {},
@@ -600,16 +608,8 @@ wa.data['assignments'].data = {
                     ["use_ignoreNameRealm"] = false,
                     ["zoneIds"] = "g463"
                 },
-                ["fontSize"] = 26,
-                ["source"] = "import",
-                ["shadowXOffset"] = 1,
                 ["preferToUpdate"] = true,
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
-                ["AMOriginalUUID"] = "7xLBQfxNbY8",
-                ["regionType"] = "text",
                 ["wordWrap"] = "WordWrap",
-                ["automaticWidth"] = "Auto",
-                ["yOffset"] = 0,
                 ["config"] = {
                     ["printinchat"] = true,
                     ["onreadycheck"] = false,
@@ -737,14 +737,14 @@ wa.data['assignments'].data = {
                 ["justify"] = "LEFT",
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["displayText_format_p_format"] = "timed",
-                ["uid"] = "AM-7xLBQfxNbY8",
-                ["displayText_format_p_time_legacy_floor"] = false,
                 ["xOffset"] = 0,
+                ["uid"] = "AM-7xLBQfxNbY8",
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["selfPoint"] = "BOTTOM",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
                 ["information"] = {},
-                ["selfPoint"] = "BOTTOM"
+                ["displayText_format_p_time_legacy_floor"] = false
             },
             [3] = {
                 ["controlledChildren"] = {
@@ -827,9 +827,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-qDkd8)IyRgU",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "qDkd8)IyRgU",
                 ["information"] = {},
@@ -910,9 +910,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-btrMVd)IDA7",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "btrMVd)IDA7",
                 ["information"] = {},
@@ -986,10 +986,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = "134938",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -1010,7 +1009,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -1027,7 +1027,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-2tx1hmjGJEb",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = "134938"
             },
             [6] = {
                 ["arcLength"] = 360,
@@ -1097,10 +1097,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = 134938,
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -1121,7 +1120,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -1138,7 +1138,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-kbJi4Vp0Fy2",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = 134938
             },
             [7] = {
                 ["controlledChildren"] = {
@@ -1216,9 +1216,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-MYG3Rov7zEB",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "MYG3Rov7zEB",
                 ["information"] = {},
@@ -1247,6 +1247,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
            NSAPI:GetNote(true)\
@@ -1265,11 +1266,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE NSAPI_ENCOUNTER_START",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE NSAPI_ENCOUNTER_START",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -1282,7 +1282,7 @@ wa.data['assignments'].data = {
                 ["font"] = "Friz Quadrata TT",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "eW6EvwXD"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "6wANfLZh"}
                 },
                 ["load"] = {
                     ["difficulty"] = {["single"] = "mythic"},
@@ -1295,26 +1295,9 @@ wa.data['assignments'].data = {
                     ["size"] = {["multi"] = {}}
                 },
                 ["fontSize"] = 12,
-                ["AMOriginalUUID"] = "jqGxQ6g1O1v",
-                ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = true,
-                ["automaticWidth"] = "Auto",
-                ["conditions"] = {},
-                ["regionType"] = "text",
-                ["internalVersion"] = 86,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["shadowXOffset"] = 1,
                 ["displayText"] = "",
-                ["uid"] = "AM-jqGxQ6g1O1v",
-                ["displayText_format_p_time_precision"] = 1,
-                ["displayText_format_p_format"] = "timed",
-                ["xOffset"] = 0,
-                ["shadowYOffset"] = -1,
-                ["semver"] = "1.0.72",
-                ["tocversion"] = 110200,
-                ["id"] = "Hyper Infusion Stack Saychat",
-                ["justify"] = "LEFT",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -1335,13 +1318,30 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["config"] = {},
-                ["wordWrap"] = "WordWrap",
+                ["AMOriginalUUID"] = "jqGxQ6g1O1v",
+                ["regionType"] = "text",
+                ["preferToUpdate"] = true,
+                ["automaticWidth"] = "Auto",
+                ["internalVersion"] = 86,
+                ["uid"] = "AM-jqGxQ6g1O1v",
+                ["displayText_format_p_time_precision"] = 1,
+                ["displayText_format_p_format"] = "timed",
+                ["xOffset"] = 0,
+                ["shadowYOffset"] = -1,
+                ["semver"] = "1.0.72",
+                ["tocversion"] = 110200,
+                ["id"] = "Hyper Infusion Stack Saychat",
+                ["justify"] = "LEFT",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
                 ["parent"] = "Loom'ithar Assign",
+                ["config"] = {},
+                ["conditions"] = {},
+                ["AMModified"] = true,
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
                 ["information"] = {},
-                ["AMModified"] = true
+                ["wordWrap"] = "WordWrap"
             },
             [9] = {
                 ["arcLength"] = 360,
@@ -1417,10 +1417,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = "134938",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -1441,7 +1440,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -1458,7 +1458,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-zF)FVCi488m",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = "134938"
             },
             [10] = {
                 ["outline"] = "OUTLINE",
@@ -1625,9 +1625,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -1708,7 +1705,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START TRIGGER:2 NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -1747,7 +1747,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "uncyiU1z"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "AJwdmyv3"}
                 },
                 ["wordWrap"] = "WordWrap",
                 ["conditions"] = {
@@ -1887,15 +1887,12 @@ wa.data['assignments'].data = {
                 ["displayText_format_count_format"] = "none",
                 ["actions"] = {
                     ["start"] = {
-                        ["do_custom"] = false,
                         ["sound"] = "Interface\\Addons\\NorthernSkyRaidTools\\Media\\Sounds\\Spread.ogg",
                         ["custom"] = "",
+                        ["do_custom"] = false,
                         ["do_sound"] = false
                     },
                     ["init"] = {
-                        ["do_custom"] = true,
-                        ["do_custom_load"] = false,
-                        ["customOnLoad"] = "",
                         ["custom"] = "aura_env.marklist = {\
        [\"star\"] = 1,\
        [\"circle\"] = 2,\
@@ -1958,7 +1955,10 @@ wa.data['assignments'].data = {
    \
    \
    \
-   "
+   ",
+                        ["do_custom_load"] = false,
+                        ["do_custom"] = true,
+                        ["customOnLoad"] = ""
                     },
                     ["finish"] = {}
                 },
@@ -2029,9 +2029,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then        \
            local duration = 10             \
@@ -2078,7 +2075,10 @@ wa.data['assignments'].data = {
            s:Update(\"\", state)\
        end\
    end",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_PYLON_ALERT_NUM NSAPI_ENCOUNTER_START CHAT_MSG_RAID_BOSS_WHISPER",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -2113,7 +2113,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "owwZRfjf"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "vjTbs106"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["AMModified"] = true,
@@ -2618,10 +2618,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = 134938,
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -2642,7 +2641,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -2659,7 +2659,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-ejh1Bia8Fqx",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = 134938
             },
             [13] = {
                 ["sparkWidth"] = 10,
@@ -2724,6 +2724,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -2767,11 +2768,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "TRIGGER:2 NSAPI_ENCOUNTER_START",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "TRIGGER:2 NSAPI_ENCOUNTER_START",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -2869,17 +2869,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "lX7BRSu9"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "CkiAx3ir"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "begieayP"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "t20HEnmz"},
                     [3] = {
+                        ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["border_size"] = 1,
-                        ["border_visible"] = true,
-                        ["amId"] = "axRa7kX2",
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "uv8PcDRw",
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
-                        ["border_offset"] = 0
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -2900,7 +2900,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
                         ["type"] = "subglow",
-                        ["amId"] = "BB4jQVES",
+                        ["amId"] = "w21DBx2l",
                         ["glowLines"] = 10,
                         ["glowBorder"] = true
                     },
@@ -2937,7 +2937,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "RIGHT",
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "OezP4DP1"
+                        ["amId"] = "fzAsJ4UP"
                     },
                     [6] = {
                         ["text_shadowXOffset"] = 0,
@@ -2969,7 +2969,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "JEI271Ze",
+                        ["amId"] = "nnyv8CFO",
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
@@ -3025,7 +3025,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "2xOlZSAh"
+                        ["amId"] = "gXWKi49Y"
                     },
                     [8] = {
                         ["text_text_format_raidMark_format"] = "none",
@@ -3065,7 +3065,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 20,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "s8S7gKh9"
+                        ["amId"] = "36yEPn83"
                     }
                 },
                 ["height"] = 24,
@@ -3399,9 +3399,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-(xqFH6YVgMh",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "(xqFH6YVgMh",
                 ["information"] = {},
@@ -3479,10 +3479,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = "134938",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -3503,7 +3502,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -3520,7 +3520,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-VY1AwR2uXsi",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = "134938"
             },
             [16] = {
                 ["outline"] = "OUTLINE",
@@ -3643,7 +3643,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "wKkf5NEc"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "EKs4FO7x"}
                 },
                 ["internalVersion"] = 86,
                 ["conditions"] = {},
@@ -3786,10 +3786,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = 134938,
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -3810,7 +3809,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -3827,7 +3827,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-IjF2AaekNvk",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = 134938
             },
             [18] = {
                 ["controlledChildren"] = {
@@ -3907,9 +3907,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-Jq1O7a6agYN",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "Jq1O7a6agYN",
                 ["information"] = {},
@@ -4000,6 +4000,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Combat Log",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"INSTANCE_ENCOUNTER_ENGAGE_UNIT\" then\
            local aura_env = aura_env\
@@ -4027,11 +4028,10 @@ wa.data['assignments'].data = {
            end)\
        end \
    end",
-                            ["events"] = "INSTANCE_ENCOUNTER_ENGAGE_UNIT",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "INSTANCE_ENCOUNTER_ENGAGE_UNIT",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -4044,7 +4044,7 @@ wa.data['assignments'].data = {
                 ["font"] = "Friz Quadrata TT",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "JV139DeJ"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "Lhq4BFEy"}
                 },
                 ["load"] = {
                     ["difficulty"] = {
@@ -4060,26 +4060,9 @@ wa.data['assignments'].data = {
                     ["size"] = {["multi"] = {}}
                 },
                 ["fontSize"] = 12,
-                ["AMOriginalUUID"] = "o5qGdxJvKHS",
-                ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = true,
-                ["automaticWidth"] = "Auto",
-                ["conditions"] = {},
-                ["regionType"] = "text",
-                ["internalVersion"] = 86,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["shadowXOffset"] = 1,
                 ["displayText"] = "",
-                ["uid"] = "AM-o5qGdxJvKHS",
-                ["displayText_format_p_time_precision"] = 1,
-                ["displayText_format_p_format"] = "timed",
-                ["xOffset"] = 0,
-                ["shadowYOffset"] = -1,
-                ["semver"] = "1.0.72",
-                ["tocversion"] = 110200,
-                ["id"] = "Arcane Collector Auto-Marker",
-                ["justify"] = "LEFT",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -4100,13 +4083,30 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["config"] = {["mark1"] = 3, ["mark3"] = 4, ["mark2"] = 2},
-                ["wordWrap"] = "WordWrap",
+                ["AMOriginalUUID"] = "o5qGdxJvKHS",
+                ["regionType"] = "text",
+                ["preferToUpdate"] = true,
+                ["automaticWidth"] = "Auto",
+                ["internalVersion"] = 86,
+                ["uid"] = "AM-o5qGdxJvKHS",
+                ["displayText_format_p_time_precision"] = 1,
+                ["displayText_format_p_format"] = "timed",
+                ["xOffset"] = 0,
+                ["shadowYOffset"] = -1,
+                ["semver"] = "1.0.72",
+                ["tocversion"] = 110200,
+                ["id"] = "Arcane Collector Auto-Marker",
+                ["justify"] = "LEFT",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
                 ["parent"] = "Forgeweaver Araz Assign",
+                ["config"] = {["mark1"] = 3, ["mark3"] = 4, ["mark2"] = 2},
+                ["conditions"] = {},
+                ["AMModified"] = true,
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
                 ["information"] = {["debugLog"] = false},
-                ["AMModified"] = true
+                ["wordWrap"] = "WordWrap"
             },
             [20] = {
                 ["iconSource"] = -1,
@@ -4160,6 +4160,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
            aura_env.last = 0\
@@ -4203,11 +4204,10 @@ wa.data['assignments'].data = {
            end\
        end\
    end",
-                            ["events"] = "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_SUCCEEDED:raid CLEU:SPELL_AURA_APPLIED",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_SUCCEEDED:raid CLEU:SPELL_AURA_APPLIED",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -4389,7 +4389,7 @@ wa.data['assignments'].data = {
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["inverse"] = false,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "97W8RViz"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "OB9ELZVi"}
                 },
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["conditions"] = {},
@@ -4467,10 +4467,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 5,
-                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -4491,7 +4490,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 5,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -4508,7 +4508,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "swC(1P1Ltpf",
                 ["conditions"] = {},
                 ["information"] = {},
-                ["xOffset"] = 0
+                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png"
             },
             [22] = {
                 ["iconSource"] = -1,
@@ -4550,13 +4550,13 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "srlwsegw"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "qEBvsLSu"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "EPeEpDeE",
+                        ["amId"] = "RLZqe05J",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -4573,7 +4573,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glow"] = false,
                         ["glowScale"] = 1,
-                        ["amId"] = "1FDdsu2n",
+                        ["amId"] = "Tv1c9kGk",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -4606,7 +4606,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "nVReG9ga",
+                        ["amId"] = "tk4gAYdJ",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -4649,7 +4649,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "INNER_BOTTOMRIGHT",
                         ["text_fontSize"] = 26,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "bareoaZZ"
+                        ["amId"] = "PGc9liYB"
                     },
                     [6] = {
                         ["text_shadowXOffset"] = 0,
@@ -4683,7 +4683,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_tooltip1_pad_max"] = 8,
                         ["text_fontSize"] = 15,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "kkF2bblj"
+                        ["amId"] = "fkbnkhZK"
                     },
                     [7] = {
                         ["text_shadowXOffset"] = 0,
@@ -4713,15 +4713,13 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "KSaAwhYJ"
+                        ["amId"] = "W4pHTTuY"
                     }
                 },
                 ["height"] = 70,
                 ["AMModified"] = true,
                 ["frameStrata"] = 1,
                 ["useAdjustededMax"] = false,
-                ["parent"] = "Forgeweaver CC List",
-                ["source"] = "import",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {["multi"] = {}},
@@ -4736,15 +4734,36 @@ wa.data['assignments'].data = {
                     ["use_never"] = false,
                     ["zoneIds"] = ""
                 },
+                ["source"] = "import",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
                 ["cooldown"] = true,
                 ["conditions"] = {},
                 ["actions"] = {
                     ["start"] = {
                         ["custom"] = "",
                         ["do_sound"] = false,
+                        ["do_message"] = false,
                         ["do_custom"] = false,
-                        ["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\BITE.ogg",
-                        ["do_message"] = false
+                        ["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\BITE.ogg"
                     },
                     ["init"] = {["custom"] = "", ["do_custom"] = false},
                     ["finish"] = {["custom"] = "", ["do_custom"] = false}
@@ -4771,26 +4790,7 @@ wa.data['assignments'].data = {
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["AMOriginalUUID"] = "ZFIg0p8Yn)d",
                 ["information"] = {["forceEvents"] = false},
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                }
+                ["parent"] = "Forgeweaver CC List"
             },
             [23] = {
                 ["iconSource"] = 1,
@@ -4816,9 +4816,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(1, 4)\
@@ -4901,7 +4898,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_FORGEWEAVER_CCTABLE NS_FORGEWEAVER_CCTABLE_USED NS_FORGEWEAVER_CCTABLE_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -4912,16 +4912,16 @@ wa.data['assignments'].data = {
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
-                ["useCooldownModRate"] = true,
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "WS9esy12"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "vB1Zyy9Z"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "yrHvuBiO",
+                        ["amId"] = "01ocU0Xn",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     },
@@ -4938,7 +4938,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glow"] = false,
                         ["glowScale"] = 1,
-                        ["amId"] = "nP2brGMf",
+                        ["amId"] = "tIM7U42d",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -4971,7 +4971,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "Kvn0gdbk",
+                        ["amId"] = "goSnN9Qt",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -5015,7 +5015,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_tooltip1_pad_max"] = 8,
                         ["text_fontSize"] = 16,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "bXdvZn5D"
+                        ["amId"] = "xKddfaaA"
                     },
                     [6] = {
                         ["text_text_format_p_time_precision"] = 1,
@@ -5049,7 +5049,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "INNER_BOTTOMRIGHT",
                         ["text_fontSize"] = 26,
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
-                        ["amId"] = "uQ5Yy9yo"
+                        ["amId"] = "b3NUtLQD"
                     },
                     [7] = {
                         ["text_shadowXOffset"] = 0,
@@ -5079,7 +5079,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "tIfI1oCe"
+                        ["amId"] = "7HEFwqh6"
                     },
                     [8] = {
                         ["border_size"] = 2,
@@ -5091,28 +5091,15 @@ wa.data['assignments'].data = {
                             [3] = 0.24705883860588,
                             [4] = 1
                         },
-                        ["amId"] = "DW56SJwr",
+                        ["amId"] = "jxJtNHbD",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     }
                 },
                 ["height"] = 70,
+                ["preferToUpdate"] = true,
                 ["AMModified"] = true,
-                ["load"] = {
-                    ["use_never"] = false,
-                    ["talent"] = {["multi"] = {}},
-                    ["encounterid"] = "3132",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {["single"] = "mythic", ["multi"] = {}},
-                    ["role"] = {},
-                    ["size"] = {["multi"] = {}},
-                    ["class"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
-                    ["use_zoneIds"] = false,
-                    ["zoneIds"] = ""
-                },
-                ["xOffset"] = 0,
+                ["useTooltip"] = false,
                 ["useAdjustededMax"] = false,
                 ["cooldown"] = false,
                 ["source"] = "import",
@@ -5143,57 +5130,34 @@ wa.data['assignments'].data = {
                         }
                     }
                 },
+                ["load"] = {
+                    ["use_never"] = false,
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3132",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {["single"] = "mythic", ["multi"] = {}},
+                    ["role"] = {},
+                    ["size"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["use_zoneIds"] = false,
+                    ["zoneIds"] = ""
+                },
                 ["actions"] = {
                     ["start"] = {
                         ["custom"] = "",
                         ["do_sound"] = false,
+                        ["do_message"] = false,
                         ["do_custom"] = false,
-                        ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_whip1.ogg",
-                        ["do_message"] = false
+                        ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_whip1.ogg"
                     },
                     ["init"] = {["custom"] = "", ["do_custom"] = false},
                     ["finish"] = {["custom"] = "", ["do_custom"] = false}
                 },
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
                 ["config"] = {},
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "icon",
-                ["authorOptions"] = {},
-                ["width"] = 70,
-                ["alpha"] = 1,
-                ["preferToUpdate"] = true,
-                ["anchorFrameParent"] = false,
-                ["url"] = "",
-                ["zoom"] = 0.25,
-                ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.72",
-                ["tocversion"] = 110200,
-                ["id"] = "Forgeweaver CC List ",
-                ["useTooltip"] = false,
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                ["uid"] = "AM-7PETl(1s58R",
-                ["inverse"] = false,
                 ["customText"] = "function()\
        if WeakAuras.IsOptionsOpen() then   \
            return NSAPI:Shorten(\"player\", 8, true, \"WA\", true)\
@@ -5214,9 +5178,45 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                ["width"] = 70,
+                ["useCooldownModRate"] = true,
+                ["authorOptions"] = {},
+                ["anchorFrameParent"] = false,
+                ["url"] = "",
+                ["zoom"] = 0.25,
+                ["cooldownTextDisabled"] = false,
+                ["semver"] = "1.0.72",
+                ["tocversion"] = 110200,
+                ["id"] = "Forgeweaver CC List ",
+                ["frameStrata"] = 1,
+                ["alpha"] = 1,
+                ["anchorFrameType"] = "SCREEN",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
+                ["uid"] = "AM-7PETl(1s58R",
+                ["inverse"] = false,
+                ["keepAspectRatio"] = false,
                 ["AMOriginalUUID"] = "7PETl(1s58R",
                 ["information"] = {["forceEvents"] = false},
-                ["keepAspectRatio"] = false
+                ["xOffset"] = 0
             },
             [24] = {
                 ["arcLength"] = 360,
@@ -5294,10 +5294,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = "134938",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -5318,7 +5317,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -5335,7 +5335,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-)2r6hxBLlug",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = "134938"
             },
             [25] = {
                 ["outline"] = "OUTLINE",
@@ -5519,9 +5519,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -5607,7 +5604,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START TRIGGER:2 NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -5646,7 +5646,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "s3uQZG3d"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "KwS2tP14"}
                 },
                 ["wordWrap"] = "WordWrap",
                 ["conditions"] = {
@@ -5863,6 +5863,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local spellID = 119381\
@@ -5900,11 +5901,10 @@ wa.data['assignments'].data = {
            s:RemoveAll() \
        end\
    end",
-                            ["events"] = "NS_FORGEWEAVER_YOURCC NS_FORGEWEAVER_YOURCC_HIDE NS_FORGEWEAVER_CCTABLE_HIDE",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NS_FORGEWEAVER_YOURCC NS_FORGEWEAVER_YOURCC_HIDE NS_FORGEWEAVER_CCTABLE_HIDE",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -5989,7 +5989,7 @@ wa.data['assignments'].data = {
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["inverse"] = false,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "Ml2Pw42r"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "oB1a7ofZ"}
                 },
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["conditions"] = {},
@@ -6089,6 +6089,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then        \
            local state = {\
@@ -6120,11 +6121,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -6142,7 +6142,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "pcmlRQtG"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "HLjCjPCD"}
                 },
                 ["wordWrap"] = "WordWrap",
                 ["conditions"] = {},
@@ -6281,10 +6281,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = 134938,
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -6305,7 +6304,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -6322,7 +6322,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-hL5gnHF2rKX",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = 134938
             },
             [29] = {
                 ["sparkWidth"] = 10,
@@ -6387,6 +6387,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            for i=1, 3 do\
@@ -6407,11 +6408,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "OPTIONS",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "OPTIONS",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -6533,17 +6533,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "IzkIcyQn"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "RFyqyWv7"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "hsER8e92"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "EEy7VdVY"},
                     [3] = {
+                        ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["border_size"] = 1,
-                        ["border_visible"] = true,
-                        ["amId"] = "OPlFZbkf",
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "gYE1wlud",
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
-                        ["border_offset"] = 0
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -6564,7 +6564,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
                         ["type"] = "subglow",
-                        ["amId"] = "ixSe7IZF",
+                        ["amId"] = "xZXJIo2X",
                         ["glowLines"] = 10,
                         ["glowBorder"] = true
                     },
@@ -6609,7 +6609,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "eSUBZoY9",
+                        ["amId"] = "vQfqXyfX",
                         ["text_text_format_p_round_type"] = "ceil",
                         ["text_text_format_2.p_format"] = "timed",
                         ["text_text_format_percenthealth_pad"] = false,
@@ -6658,7 +6658,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "7P1Ii5X1",
+                        ["amId"] = "WDHOiIJ6",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_font"] = "Expressway",
@@ -6705,7 +6705,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "Ih1hFLql",
+                        ["amId"] = "ww1EEJg5",
                         ["text_text_format_mark_format"] = "none",
                         ["text_text_format_2.p_format"] = "timed",
                         ["text_fontType"] = "OUTLINE",
@@ -6726,14 +6726,14 @@ wa.data['assignments'].data = {
                         ["text_wordWrap"] = "WordWrap"
                     },
                     [8] = {
+                        ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["border_size"] = 2,
-                        ["border_visible"] = false,
-                        ["amId"] = "tDn4Woy1",
-                        ["border_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                        ["amId"] = "vgRPXBKD",
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                        ["border_visible"] = false,
                         ["border_edge"] = "Square Full White",
-                        ["border_offset"] = 0
+                        ["border_size"] = 2
                     }
                 },
                 ["height"] = 24,
@@ -7024,9 +7024,9 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["uid"] = "AM-LWQxo4yDKta",
                 ["config"] = {},
-                ["borderInset"] = 1,
                 ["authorOptions"] = {},
                 ["conditions"] = {},
                 ["information"] = {},
@@ -7074,6 +7074,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
            NSAPI:GetNote(true)\
@@ -7091,11 +7092,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE NSAPI_ENCOUNTER_START",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE NSAPI_ENCOUNTER_START",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -7108,18 +7108,12 @@ wa.data['assignments'].data = {
                 ["font"] = "Friz Quadrata TT",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "dljXweVu", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "sm9e7dd4", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
                 ["fontSize"] = 12,
-                ["fixedWidth"] = 200,
-                ["shadowXOffset"] = 1,
-                ["displayText_format_p_format"] = "timed",
-                ["wordWrap"] = "WordWrap",
-                ["conditions"] = {},
-                ["regionType"] = "text",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["xOffset"] = 0,
+                ["shadowXOffset"] = 1,
                 ["load"] = {
                     ["difficulty"] = {["single"] = "mythic"},
                     ["use_encounterid"] = true,
@@ -7130,6 +7124,12 @@ wa.data['assignments'].data = {
                     ["use_difficulty"] = true,
                     ["size"] = {["multi"] = {}}
                 },
+                ["preferToUpdate"] = true,
+                ["fixedWidth"] = 200,
+                ["regionType"] = "text",
+                ["displayText_format_p_format"] = "timed",
+                ["wordWrap"] = "WordWrap",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["uid"] = "AM-UYz3ar0jvv5",
                 ["displayText_format_p_time_precision"] = 1,
                 ["displayText"] = "",
@@ -7160,14 +7160,14 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["preferToUpdate"] = true,
-                ["config"] = {},
-                ["internalVersion"] = 86,
                 ["automaticWidth"] = "Auto",
+                ["config"] = {},
+                ["conditions"] = {},
+                ["parent"] = "The Soul Hunters Assign",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "UYz3ar0jvv5",
                 ["information"] = {},
-                ["parent"] = "The Soul Hunters Assign"
+                ["internalVersion"] = 86
             },
             [32] = {
                 ["outline"] = "OUTLINE",
@@ -7219,9 +7219,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -7283,7 +7280,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_HUNT_ONME",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -7298,7 +7298,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "T28s6BCm", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "CZZIBGOg", ["type"] = "subbackground"}
                 },
                 ["displayText_format_p_time_precision"] = 1,
                 ["load"] = {
@@ -7326,18 +7326,18 @@ wa.data['assignments'].data = {
                     ["size"] = {["multi"] = {}}
                 },
                 ["authorOptions"] = {},
-                ["displayText_format_p_time_legacy_floor"] = false,
+                ["displayText"] = "",
                 ["fontSize"] = 30,
                 ["source"] = "import",
                 ["conditions"] = {},
                 ["shadowXOffset"] = 1,
-                ["automaticWidth"] = "Auto",
+                ["displayText_format_p_time_legacy_floor"] = false,
                 ["preferToUpdate"] = true,
                 ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["regionType"] = "text",
                 ["config"] = {},
                 ["displayText_format_p_format"] = "Number",
-                ["selfPoint"] = "CENTER",
+                ["font"] = "Expressway",
                 ["displayText_format_p_decimal_precision"] = 0,
                 ["anchorFrameParent"] = false,
                 ["animation"] = {
@@ -7365,17 +7365,17 @@ wa.data['assignments'].data = {
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
                 ["id"] = "The Hunt Position Saychat",
-                ["AMOriginalUUID"] = "2ABVuEdDuv2",
+                ["AMModified"] = true,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "UNITFRAME",
-                ["AMModified"] = true,
-                ["uid"] = "AM-2ABVuEdDuv2",
-                ["font"] = "Expressway",
                 ["shadowYOffset"] = -1,
-                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["uid"] = "AM-2ABVuEdDuv2",
+                ["automaticWidth"] = "Auto",
                 ["fixedWidth"] = 200,
+                ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                ["AMOriginalUUID"] = "2ABVuEdDuv2",
                 ["information"] = {["debugLog"] = false},
-                ["displayText"] = ""
+                ["selfPoint"] = "CENTER"
             },
             [33] = {
                 ["arcLength"] = 360,
@@ -7457,6 +7457,11 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
+                ["limit"] = 6,
+                ["borderSize"] = 2,
+                ["anchorPerUnit"] = "CUSTOM",
+                ["xOffset"] = 0,
+                ["groupIcon"] = "134938",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -7477,11 +7482,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["borderSize"] = 2,
-                ["anchorPerUnit"] = "CUSTOM",
-                ["borderInset"] = 1,
-                ["xOffset"] = 0,
-                ["groupIcon"] = "134938",
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -7498,7 +7498,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-5o8PkwdXYuu",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["limit"] = 6
+                ["borderInset"] = 1
             },
             [34] = {
                 ["outline"] = "OUTLINE",
@@ -7674,9 +7674,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)     \
        \
        if e == \"OPTIONS\" then\
@@ -7899,7 +7896,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_REMOVED:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT NS_DISPEL_EVENT NS_DISPEL_GLOW NS_DISPEL_BACKUP NS_BACKUP_GLOW NS_PAMACRO",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -7918,7 +7918,7 @@ wa.data['assignments'].data = {
                 ["font"] = "Expressway",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "aFH2r63X", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "wVdLGocK", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["AMOriginalUUID"] = "IyK)W2CuC6k",
@@ -8368,22 +8368,22 @@ wa.data['assignments'].data = {
                 ["customText"] = "",
                 ["yOffset"] = 0,
                 ["displayText_format_value_format"] = "none",
-                ["displayText_format_total_format"] = "none",
+                ["preferToUpdate"] = true,
                 ["displayText_format_p_time_format"] = 0,
                 ["customTextUpdate"] = "event",
                 ["automaticWidth"] = "Auto",
                 ["actions"] = {
                     ["start"] = {
-                        ["do_custom"] = false,
                         ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_jedi1.ogg",
                         ["custom"] = "",
+                        ["do_custom"] = false,
                         ["do_sound"] = false
                     },
                     ["init"] = {
-                        ["do_custom"] = false,
+                        ["custom"] = "",
                         ["do_custom_load"] = false,
-                        ["customOnLoad"] = "",
-                        ["custom"] = ""
+                        ["do_custom"] = false,
+                        ["customOnLoad"] = ""
                     },
                     ["finish"] = {}
                 },
@@ -8395,6 +8395,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -8442,11 +8443,10 @@ wa.data['assignments'].data = {
            end\
        end\
    end",
-                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE:SPELL_MISSED:SPELL_AURA_REMOVED",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE:SPELL_MISSED:SPELL_AURA_REMOVED",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -8458,6 +8458,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_format"] = "Number",
                 ["internalVersion"] = 86,
                 ["displayText_format_p_pad"] = false,
+                ["wordWrap"] = "WordWrap",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -8478,15 +8479,14 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
+                ["displayText_format_total_format"] = "none",
+                ["AMOriginalUUID"] = "MZMXxX1EeL8",
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["anchorPoint"] = "CENTER",
-                ["AMOriginalUUID"] = "MZMXxX1EeL8",
-                ["displayText_format_count_format"] = "none",
-                ["displayText_format_p_time_legacy_floor"] = true,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 79,
                 ["displayText_format_c_format"] = "none",
-                ["selfPoint"] = "BOTTOM",
+                ["displayText_format_count_format"] = "none",
                 ["config"] = {},
                 ["load"] = {
                     ["use_namerealm"] = false,
@@ -8528,22 +8528,22 @@ wa.data['assignments'].data = {
                     },
                     ["size"] = {["multi"] = {}}
                 },
-                ["AMModified"] = true,
-                ["conditions"] = {},
+                ["displayText_format_p_time_legacy_floor"] = true,
+                ["selfPoint"] = "BOTTOM",
                 ["fontSize"] = 40,
                 ["source"] = "import",
                 ["displayText_format_p_decimal_precision"] = 1,
                 ["shadowXOffset"] = 1,
-                ["displayText_format_p_round_type"] = "ceil",
-                ["subRegions"] = {
-                    [1] = {["amId"] = "mauAqmmX", ["type"] = "subbackground"}
-                },
+                ["AMModified"] = true,
+                ["conditions"] = {},
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
                 ["displayText_format_p_pad_max"] = 8,
                 ["semver"] = "1.0.78",
-                ["preferToUpdate"] = true,
-                ["wordWrap"] = "WordWrap",
+                ["displayText_format_p_round_type"] = "ceil",
+                ["subRegions"] = {
+                    [1] = {["amId"] = "gDGicPOm", ["type"] = "subbackground"}
+                },
                 ["anchorFrameParent"] = false,
                 ["displayText_format_p_time_precision"] = 1,
                 ["url"] = "",
@@ -8800,9 +8800,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -8874,7 +8871,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "CLEU:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -8984,7 +8984,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_legacy_floor"] = true,
                 ["displayText_format_4.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "YTc9x3J7", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "wG5rwq7s", ["type"] = "subbackground"}
                 },
                 ["displayText_format_3.p_time_precision"] = 1,
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
@@ -9229,8 +9229,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["events"] = "CLEU:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
-                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then        \
            local state = {\
@@ -9339,6 +9337,8 @@ wa.data['assignments'].data = {
            end\
        end    \
    end",
+                            ["events"] = "CLEU:SPELL_AURA_APPLIED NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["names"] = {},
                             ["check"] = "event",
                             ["subeventPrefix"] = "SPELL",
@@ -9383,7 +9383,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "boiorW1f", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "JmUWAw2k", ["type"] = "subbackground"}
                 },
                 ["displayText_format_prefix_format"] = "none",
                 ["AMOriginalUUID"] = "LVI5Pc(9l6a",
@@ -9720,6 +9720,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e,  ...)\
        if e == \"NSAPI_MACRO_PRESSED\" then\
            local state = {\
@@ -9731,11 +9732,10 @@ wa.data['assignments'].data = {
            s:Update(\"\", state)\
        end\
    end",
-                            ["events"] = "NSAPI_MACRO_PRESSED",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NSAPI_MACRO_PRESSED",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -9763,7 +9763,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "5bkhH9Mf", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "yA665CvU", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["AMOriginalUUID"] = "c1bQhOrAlBr",
@@ -9775,9 +9775,9 @@ wa.data['assignments'].data = {
                     },
                     ["size"] = {["multi"] = {}},
                     ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
                     ["encounterid"] = "3122",
                     ["class"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
                     ["use_encounterid"] = true
                 },
                 ["displayText_format_p_round_type"] = "ceil",
@@ -9910,6 +9910,11 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
+                ["limit"] = 6,
+                ["borderSize"] = 2,
+                ["anchorPerUnit"] = "CUSTOM",
+                ["xOffset"] = 0,
+                ["groupIcon"] = 134938,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -9930,11 +9935,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["borderSize"] = 2,
-                ["anchorPerUnit"] = "CUSTOM",
-                ["borderInset"] = 1,
-                ["xOffset"] = 0,
-                ["groupIcon"] = 134938,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -9951,7 +9951,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-7MDYcmasZHV",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["limit"] = 6
+                ["borderInset"] = 1
             },
             [40] = {
                 ["sparkWidth"] = 10,
@@ -10079,17 +10079,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "XVUu7jNT", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "N64QREfu", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "2hA151iG", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "cXnXupeB", ["type"] = "subforeground"},
                     [3] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 1,
-                        ["amId"] = "cOfjcaIP",
                         ["border_visible"] = true,
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "9PcPSf73",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -10106,7 +10106,7 @@ wa.data['assignments'].data = {
                             [3] = 0.9215686917305,
                             [4] = 1
                         },
-                        ["amId"] = "Rl1RovXR",
+                        ["amId"] = "0GorhcmC",
                         ["type"] = "subglow",
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
@@ -10147,7 +10147,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_t_time_format"] = 0,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "pvJBEvOJ",
+                        ["amId"] = "v4JrxOWH",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -10187,7 +10187,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "lbivA0Fy",
+                        ["amId"] = "UDFmKtu2",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -10391,17 +10391,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ENW6VbXG", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "m9swDVNQ", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "M2MnmHu0", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "KCq1hxqN", ["type"] = "subforeground"},
                     [3] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 1,
-                        ["amId"] = "j3TCUkoV",
                         ["border_visible"] = true,
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "4ujw0DNn",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -10418,7 +10418,7 @@ wa.data['assignments'].data = {
                             [3] = 0.9215686917305,
                             [4] = 1
                         },
-                        ["amId"] = "BbTTgsx7",
+                        ["amId"] = "cV5zGiGV",
                         ["type"] = "subglow",
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
@@ -10459,7 +10459,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_t_time_format"] = 0,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "Vf5BSv98",
+                        ["amId"] = "VILpJ2QM",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -10499,7 +10499,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "3RY2BhRq",
+                        ["amId"] = "fztWDqDA",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -10688,9 +10688,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-6orut6CttRq",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "6orut6CttRq",
                 ["information"] = {},
@@ -10724,9 +10724,9 @@ wa.data['assignments'].data = {
                 ["load"] = {
                     ["size"] = {["multi"] = {}},
                     ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
                     ["encounterid"] = "3133",
                     ["class"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
                     ["use_encounterid"] = true
                 },
                 ["shadowXOffset"] = 1,
@@ -10786,7 +10786,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "jmv74FtJ"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "8ZjRGv6G"}
                 },
                 ["height"] = 64,
                 ["AMModified"] = true,
@@ -10962,9 +10962,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        -- status: 1=No Wall, 2=Normal Wall, 3=Heroic Wall, 4=Mythic Wall, 5=Extra Wall Spawn, 6=Missing Wall Spawn\
        if e == \"OPTIONS\" then\
@@ -11138,7 +11135,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_DATA NSAPI_ENCOUNTER_START UNIT_SPELLCAST_START:boss UNIT_SPELLCAST_SUCCEEDED:raid CLEU:SPELL_AURA_APPLIED:SPELL_CAST_SUCCESS NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -11148,7 +11148,7 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 86,
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["selfPoint"] = "CENTER",
-                ["authorOptions"] = {},
+                ["preferToUpdate"] = true,
                 ["alpha"] = 1,
                 ["desaturate"] = false,
                 ["rotation"] = 0,
@@ -11174,7 +11174,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "t7rQYARV"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "ytlPJlDT"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text_format_s_format"] = "none",
@@ -11202,7 +11202,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "7xXiANrl"
+                        ["amId"] = "g82Xg4bi"
                     },
                     [3] = {
                         ["glowFrequency"] = 0.25,
@@ -11217,7 +11217,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glow"] = false,
                         ["glowScale"] = 1,
-                        ["amId"] = "J8yNJB0Q",
+                        ["amId"] = "aASZUE4j",
                         ["glowLines"] = 8,
                         ["glowBorder"] = false
                     },
@@ -11226,7 +11226,7 @@ wa.data['assignments'].data = {
                         ["border_offset"] = 0,
                         ["border_visible"] = true,
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                        ["amId"] = "UcXFHSSV",
+                        ["amId"] = "lP5Vgeez",
                         ["border_edge"] = "Square Full White",
                         ["type"] = "subborder"
                     }
@@ -11234,26 +11234,7 @@ wa.data['assignments'].data = {
                 ["height"] = 26,
                 ["rotate"] = false,
                 ["AMModified"] = true,
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
+                ["parent"] = "Fractillus Wall Display",
                 ["useAdjustededMax"] = false,
                 ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
                 ["information"] = {["debugLog"] = false},
@@ -11381,6 +11362,21 @@ wa.data['assignments'].data = {
                         }
                     }
                 },
+                ["authorOptions"] = {},
+                ["xOffset"] = 0,
+                ["mirror"] = false,
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "texture",
+                ["config"] = {},
+                ["blendMode"] = "BLEND",
+                ["cooldownEdge"] = false,
+                ["width"] = 80,
+                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
+                ["zoom"] = 0,
+                ["cooldownTextDisabled"] = false,
+                ["semver"] = "1.0.72",
+                ["tocversion"] = 110200,
+                ["id"] = "Fractillus Walls",
                 ["actions"] = {
                     ["start"] = {},
                     ["init"] = {
@@ -11398,30 +11394,34 @@ wa.data['assignments'].data = {
                     },
                     ["finish"] = {}
                 },
-                ["preferToUpdate"] = true,
-                ["mirror"] = false,
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "texture",
-                ["config"] = {},
-                ["blendMode"] = "BLEND",
-                ["parent"] = "Fractillus Wall Display",
-                ["width"] = 80,
-                ["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_FullWhite",
-                ["zoom"] = 0,
-                ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.72",
-                ["tocversion"] = 110200,
-                ["id"] = "Fractillus Walls",
                 ["frameStrata"] = 1,
-                ["useCooldownModRate"] = true,
                 ["anchorFrameType"] = "SCREEN",
-                ["keepAspectRatio"] = false,
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
                 ["uid"] = "AM-fvOcF2qZUov",
                 ["inverse"] = false,
-                ["cooldownEdge"] = false,
+                ["useCooldownModRate"] = true,
                 ["AMOriginalUUID"] = "fvOcF2qZUov",
                 ["cooldown"] = true,
-                ["xOffset"] = 0
+                ["keepAspectRatio"] = false
             },
             [46] = {
                 ["outline"] = "OUTLINE",
@@ -11744,9 +11744,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(e, ...)\
        \
        if e == \"NSAPI_ENCOUNTER_START\" then\
@@ -11949,7 +11946,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT1 NS_ASSIGN_EVENT2 CLEU:SPELL_AURA_APPLIED UNIT_SPELLCAST_SUCCEEDED:boss NS_WALL_BREAK NS_WALL_SPAWN UNIT_AURA:raid",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -11962,7 +11962,7 @@ wa.data['assignments'].data = {
                 ["font"] = "Friz Quadrata TT",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "YvcJuUIf"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "XarzYDnI"}
                 },
                 ["load"] = {
                     ["use_zoneIds"] = false,
@@ -11985,28 +11985,11 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
-                ["AMOriginalUUID"] = "X3VtvxYE4qd",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["fontSize"] = 12,
                 ["source"] = "import",
                 ["shadowXOffset"] = 1,
-                ["preferToUpdate"] = true,
-                ["automaticWidth"] = "Auto",
-                ["conditions"] = {},
-                ["regionType"] = "text",
-                ["internalVersion"] = 86,
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["displayText"] = "",
-                ["uid"] = "AM-X3VtvxYE4qd",
-                ["displayText_format_p_time_precision"] = 1,
-                ["displayText_format_p_format"] = "timed",
-                ["xOffset"] = 0,
-                ["shadowYOffset"] = -1,
-                ["semver"] = "1.0.72",
-                ["tocversion"] = 110200,
-                ["id"] = "Fractillus Assign Handler (No Display) + Saychat(can disable in custom options)",
-                ["justify"] = "LEFT",
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SCREEN",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -12027,13 +12010,30 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["config"] = {["saychat"] = true, ["raidchat"] = false},
-                ["wordWrap"] = "WordWrap",
+                ["AMOriginalUUID"] = "X3VtvxYE4qd",
+                ["regionType"] = "text",
+                ["preferToUpdate"] = true,
+                ["automaticWidth"] = "Auto",
+                ["internalVersion"] = 86,
+                ["uid"] = "AM-X3VtvxYE4qd",
+                ["displayText_format_p_time_precision"] = 1,
+                ["displayText_format_p_format"] = "timed",
+                ["xOffset"] = 0,
+                ["shadowYOffset"] = -1,
+                ["semver"] = "1.0.72",
+                ["tocversion"] = 110200,
+                ["id"] = "Fractillus Assign Handler (No Display) + Saychat(can disable in custom options)",
+                ["justify"] = "LEFT",
+                ["frameStrata"] = 1,
+                ["anchorFrameType"] = "SCREEN",
                 ["parent"] = "Fractillus Assign",
+                ["config"] = {["saychat"] = true, ["raidchat"] = false},
+                ["conditions"] = {},
+                ["AMModified"] = true,
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
                 ["information"] = {},
-                ["AMModified"] = true
+                ["wordWrap"] = "WordWrap"
             },
             [47] = {
                 ["outline"] = "OUTLINE",
@@ -12152,7 +12152,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "4XkJgQoF"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "rnrmUy5X"}
                 },
                 ["fixedWidth"] = 200,
                 ["displayText_format_p_round_type"] = "ceil",
@@ -12331,9 +12331,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-Xi8VDtBmjbI",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "Xi8VDtBmjbI",
                 ["information"] = {},
@@ -12362,9 +12362,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12396,7 +12393,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -12409,7 +12409,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "MMn9UuHE"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "hg1VD1Od"}
                 },
                 ["height"] = 200,
                 ["rotate"] = false,
@@ -12507,9 +12507,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12543,7 +12540,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -12575,7 +12575,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 342,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "rSZdmrEe"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "aYTNmXIw"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12675,9 +12675,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12711,7 +12708,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -12743,7 +12743,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 358,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "a3Fx4BNy"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "K4rXHfFW"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -12843,9 +12843,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -12879,7 +12876,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -12911,7 +12911,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 14,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "QN10Vvho"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "aWkIZHn5"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -13011,9 +13011,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -13047,7 +13044,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -13079,7 +13079,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 31,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "BI3P6R3N"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "2ZM9AurO"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -13179,9 +13179,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -13215,7 +13212,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -13247,7 +13247,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 47,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "AiXhVZuW"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "RuQCGBsY"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -13347,9 +13347,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -13383,7 +13380,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN NS_WALL_BREAK",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -13415,7 +13415,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 63,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "X33xQIzm"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "bPAp9D1W"}
                 },
                 ["height"] = 300,
                 ["rotate"] = true,
@@ -13558,9 +13558,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-Y93wINFBgdQ",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "Y93wINFBgdQ",
                 ["information"] = {},
@@ -13680,7 +13680,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 180,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "4HbP1k5N"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "c71Ty5G4"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "%direction",
@@ -13709,7 +13709,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 40,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "5jfB6G1D"
+                        ["amId"] = "TzHXz7im"
                     }
                 },
                 ["height"] = 180,
@@ -13944,7 +13944,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 270,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "LAyhsScx"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "4WoxbGko"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -13973,7 +13973,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 40,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "cymFj9pq"
+                        ["amId"] = "NuCmo2kr"
                     }
                 },
                 ["height"] = 180,
@@ -14139,7 +14139,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 270,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "Y5voHbiP"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "OLiZQnAR"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -14168,7 +14168,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 40,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "kNsrjrR0"
+                        ["amId"] = "OYelvfjb"
                     }
                 },
                 ["height"] = 180,
@@ -14334,7 +14334,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 90,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "6zPTzXAW"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "7euP4xih"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -14363,7 +14363,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 40,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "hGBxEttn"
+                        ["amId"] = "R3WXoedw"
                     }
                 },
                 ["height"] = 180,
@@ -14529,7 +14529,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 90,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "TNlOnwfg"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "YTyxZT6R"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "",
@@ -14558,7 +14558,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "TOP",
                         ["text_fontSize"] = 40,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "po2ykEZc"
+                        ["amId"] = "lNODDL5w"
                     }
                 },
                 ["height"] = 180,
@@ -14683,10 +14683,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = "134938",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -14707,7 +14706,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -14724,7 +14724,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-wWXIMlUBolK",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = "134938"
             },
             [63] = {
                 ["outline"] = "OUTLINE",
@@ -14824,18 +14824,37 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_time_mod_rate"] = true,
                 ["displayText_format_p_time_legacy_floor"] = false,
                 ["displayText_format_p_pad"] = false,
-                ["wordWrap"] = "WordWrap",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
                 ["information"] = {},
                 ["displayText_format_marker_format"] = "none",
-                ["displayText_format_num_format"] = "none",
+                ["displayText_format_marke_format"] = "none",
                 ["displayText_format_name_format"] = "none",
                 ["fixedWidth"] = 200,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "gReiu6W9"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "rsyIMZkL"}
                 },
-                ["parent"] = "Fractillus - Assign Texts",
+                ["wordWrap"] = "WordWrap",
                 ["authorOptions"] = {
                     [1] = {
                         ["type"] = "description",
@@ -14864,30 +14883,11 @@ wa.data['assignments'].data = {
                 ["source"] = "import",
                 ["displayText_format_p_format"] = "Number",
                 ["shadowXOffset"] = 1,
-                ["url"] = "",
+                ["displayText_format_p_time_dynamic_threshold"] = 60,
                 ["frameStrata"] = 1,
                 ["customTextUpdate"] = "event",
                 ["regionType"] = "text",
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
-                },
+                ["url"] = "",
                 ["displayText_format_p_pad_max"] = 8,
                 ["semver"] = "1.0.72",
                 ["displayText_format_marker_round_type"] = "floor",
@@ -15392,13 +15392,10 @@ wa.data['assignments'].data = {
                         }
                     }
                 },
-                ["displayText_format_marke_format"] = "none",
+                ["internalVersion"] = 86,
                 ["justify"] = "LEFT",
                 ["tocversion"] = 110200,
                 ["id"] = "(custom option sound) Entropic Conjuction Text (Wall Spawn)",
-                ["internalVersion"] = 86,
-                ["displayText_format_p_decimal_precision"] = 1,
-                ["anchorFrameType"] = "SCREEN",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["use_ignoreNameRealm"] = false,
@@ -15420,9 +15417,12 @@ wa.data['assignments'].data = {
                     ["talent"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
-                ["uid"] = "AM-k8f6i)ei7kQ",
-                ["displayText_format_p_time_dynamic_threshold"] = 60,
+                ["displayText_format_p_decimal_precision"] = 1,
+                ["anchorFrameType"] = "SCREEN",
                 ["yOffset"] = 0,
+                ["uid"] = "AM-k8f6i)ei7kQ",
+                ["parent"] = "Fractillus - Assign Texts",
+                ["displayText_format_num_format"] = "none",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "k8f6i)ei7kQ",
                 ["displayText_format_markerr_format"] = "none",
@@ -15552,7 +15552,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "TeZkUoCH"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "MAvD8DDv"}
                 },
                 ["internalVersion"] = 86,
                 ["conditions"] = {
@@ -16406,7 +16406,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["displayText_format_4.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "RQmg8Z7f"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "H9GoJAPD"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_3.p_format"] = "timed",
@@ -16663,10 +16663,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = 134938,
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -16687,7 +16686,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -16704,7 +16704,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-HU3JUCszrmx",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = 134938
             },
             [67] = {
                 ["sparkWidth"] = 10,
@@ -16776,9 +16776,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, num, dur, unit)\
        if e == \"OPTIONS\" then        \
            for i=1, 4 do\
@@ -16819,7 +16816,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_WALL_SPAWN_LIST NS_WALL_BREAK_LIST",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -16875,17 +16875,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "UqScdjfP"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "yyDKvxuE"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "ftPcg9Bi"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "qMLYIhKJ"},
                     [3] = {
+                        ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["border_size"] = 1,
-                        ["border_visible"] = true,
-                        ["amId"] = "6tjQyamy",
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "zlufCqs3",
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
-                        ["border_offset"] = 0
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -16906,7 +16906,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
                         ["type"] = "subglow",
-                        ["amId"] = "OrvIaxwd",
+                        ["amId"] = "IMFwZONL",
                         ["glowLines"] = 10,
                         ["glowBorder"] = true
                     },
@@ -16947,7 +16947,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_text_format_1.p_time_mod_rate"] = true,
-                        ["amId"] = "XtSmysnw",
+                        ["amId"] = "GwlWNVR2",
                         ["text_text_format_p_time_format"] = 0,
                         ["text_text_format_2.p_format"] = "timed",
                         ["text_text_format_c1_format"] = "none",
@@ -16998,7 +16998,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "1J55jz3h"
+                        ["amId"] = "aXEMTB9w"
                     },
                     [7] = {
                         ["text_shadowXOffset"] = 0,
@@ -17034,7 +17034,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_mark_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "o2LBktHj",
+                        ["amId"] = "k7NJ8DE1",
                         ["text_text_format_p_time_precision"] = 1,
                         ["text_text_format_2.p_format"] = "timed",
                         ["text_anchorYOffset"] = 0,
@@ -17203,9 +17203,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-HkjI3R3NeUI",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "HkjI3R3NeUI",
                 ["information"] = {},
@@ -17287,9 +17287,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-(MocjodsJBC",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "(MocjodsJBC",
                 ["information"] = {},
@@ -17523,7 +17523,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 90,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "nvIfv1Qo"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "giR9SvZ6"}
                 },
                 ["height"] = 64,
                 ["rotate"] = false,
@@ -17670,7 +17670,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "2CMC0ic6"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "PNpkkrYY"},
                     [2] = {
                         ["text_shadowXOffset"] = 0,
                         ["text_text"] = "NOT|nON YOU",
@@ -17702,7 +17702,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 18,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "6ToQAJ6X"
+                        ["amId"] = "E8rk0Cwl"
                     },
                     [3] = {
                         ["textureMirror"] = false,
@@ -17723,7 +17723,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "PKlIWRQD"
+                        ["amId"] = "3MYRNtXc"
                     }
                 },
                 ["height"] = 64,
@@ -18017,7 +18017,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 270,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "f2m4YRvO"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "zc9dUoJL"}
                 },
                 ["height"] = 64,
                 ["rotate"] = false,
@@ -18147,9 +18147,9 @@ wa.data['assignments'].data = {
                 ["parent"] = "Salhadaar Assign",
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-ItCJ4Ec6OET",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["frameStrata"] = 1,
                 ["AMOriginalUUID"] = "ItCJ4Ec6OET",
                 ["information"] = {},
@@ -18176,9 +18176,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        local _, duration = ...\
        if e == \"NS_SMASH\" and duration then\
@@ -18200,14 +18197,17 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
                     },
                     ["activeTriggerMode"] = -10
                 },
-                ["useCooldownModRate"] = false,
+                ["frameStrata"] = 2,
                 ["internalVersion"] = 86,
                 ["keepAspectRatio"] = false,
                 ["animation"] = {
@@ -18230,7 +18230,7 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["authorOptions"] = {},
+                ["parent"] = "Galactic Smash Map",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {["multi"] = {}},
@@ -18246,13 +18246,13 @@ wa.data['assignments'].data = {
                     ["class"] = {["multi"] = {}},
                     ["size"] = {["multi"] = {}}
                 },
-                ["progressSource"] = {[1] = -1, [2] = ""},
+                ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["information"] = {["forceEvents"] = true},
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "bqccTMWx"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "bFaWarvj"}
                 },
                 ["height"] = 300,
                 ["rotate"] = false,
@@ -18261,36 +18261,36 @@ wa.data['assignments'].data = {
                 ["useAdjustededMax"] = false,
                 ["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
                 ["source"] = "import",
-                ["url"] = "",
-                ["parent"] = "Galactic Smash Map",
+                ["authorOptions"] = {},
+                ["AMOriginalUUID"] = "IiropYcSDtm",
                 ["config"] = {},
                 ["mirror"] = false,
                 ["useAdjustededMin"] = false,
                 ["regionType"] = "texture",
-                ["selfPoint"] = "CENTER",
+                ["preferToUpdate"] = true,
                 ["blendMode"] = "BLEND",
                 ["width"] = 300,
-                ["frameStrata"] = 2,
+                ["alpha"] = 1,
                 ["texture"] = "Interface\\AddOns\\NorthernSkyRaidTools\\Media\\EncounterPics\\NexusKingMap.blp",
                 ["zoom"] = 0,
                 ["cooldownTextDisabled"] = false,
                 ["semver"] = "1.0.72",
                 ["tocversion"] = 110200,
                 ["id"] = "Galactic Smash Background",
-                ["displayIcon"] = "",
-                ["alpha"] = 1,
+                ["url"] = "",
+                ["useCooldownModRate"] = false,
                 ["anchorFrameType"] = "SCREEN",
-                ["xOffset"] = -122.00012207031,
+                ["progressSource"] = {[1] = -1, [2] = ""},
                 ["uid"] = "AM-IiropYcSDtm",
                 ["inverse"] = false,
-                ["preferToUpdate"] = true,
-                ["AMOriginalUUID"] = "IiropYcSDtm",
-                ["cooldown"] = false,
                 ["actions"] = {
                     ["start"] = {},
                     ["init"] = {["do_custom"] = false},
                     ["finish"] = {}
-                }
+                },
+                ["displayIcon"] = "",
+                ["cooldown"] = false,
+                ["xOffset"] = -122.00012207031
             },
             [75] = {
                 ["iconSource"] = -1,
@@ -18350,9 +18350,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -18384,7 +18381,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -18416,7 +18416,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "F5JlZ7IR"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "drMaMSF2"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -18519,9 +18519,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -18553,7 +18550,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -18585,7 +18585,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "9E6Xi7Yb"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "AqHesLcG"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -18688,9 +18688,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -18722,7 +18719,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -18754,7 +18754,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "U1wfTZJc"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "pDTJTdNQ"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -18857,9 +18857,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -18891,7 +18888,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -18923,7 +18923,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "7OyZwoU1"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "iPqyWAxq"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -19026,9 +19026,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -19060,7 +19057,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -19092,7 +19092,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "X5T5x6Ko"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "HFqDh87n"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -19195,9 +19195,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -19229,7 +19226,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -19261,7 +19261,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "9RGdcnIw"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "xv9aXvII"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -19364,9 +19364,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -19398,7 +19395,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -19430,7 +19430,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "mFRwcwDv"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "3NuYWjUc"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -19533,9 +19533,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -19567,7 +19564,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -19599,7 +19599,7 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "HglxVwK1"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "rDafyAN1"}
                 },
                 ["height"] = 24,
                 ["AMModified"] = true,
@@ -19732,9 +19732,9 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["config"] = {},
                 ["uid"] = "AM-F5KVVud7EXB",
                 ["borderInset"] = 1,
-                ["config"] = {},
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "F5KVVud7EXB",
                 ["information"] = {},
@@ -19760,9 +19760,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -19799,7 +19796,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -19812,7 +19812,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ZIeZJwm3"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "TRc9C3ge"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -19917,9 +19917,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -19956,7 +19953,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -19969,7 +19969,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "GdDQkjun"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "6ciU5GQt"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20074,9 +20074,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20113,7 +20110,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20126,7 +20126,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "4WFBgySm"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "22MPGz6p"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20231,9 +20231,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20270,7 +20267,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20283,7 +20283,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "qfmSEWfz"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "fgMAOZSv"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20388,9 +20388,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20427,7 +20424,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20440,7 +20440,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "IRvD26oG"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "rTAQzpi5"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20545,9 +20545,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20584,7 +20581,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20597,7 +20597,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "Fh9joTab"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "Q14uaJZy"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20702,9 +20702,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20741,7 +20738,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20754,7 +20754,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "Ska9ojVh"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "neD8aNwR"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -20859,9 +20859,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -20898,7 +20895,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -20911,7 +20911,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "13oRT4mG"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "OlTPRnzD"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21016,9 +21016,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21055,7 +21052,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21068,7 +21068,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "9islgoXD"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "vVcE4U3w"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21171,9 +21171,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21208,7 +21205,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21221,7 +21221,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "JYrLyDVY"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "XxbCPjgi"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21306,9 +21306,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21343,7 +21340,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21356,7 +21356,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "XQoLR2Hr"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "SqEQIwnb"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21441,9 +21441,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21478,7 +21475,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21491,7 +21491,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "WoVQ9pbb"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "FLhjm4Ow"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21576,9 +21576,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21613,7 +21610,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21626,7 +21626,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "ADVnmaXE"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "5fgbVwYe"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21711,9 +21711,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21748,7 +21745,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21761,7 +21761,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "hqu9Q2wZ"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "8uuAaI9u"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -21846,9 +21846,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            s[\"\"] = {\
@@ -21883,7 +21880,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -21896,7 +21896,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "iK2qoTEX"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "svRD2YEA"}
                 },
                 ["height"] = 30,
                 ["rotate"] = false,
@@ -22045,10 +22045,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = "134938",
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -22069,7 +22068,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -22086,7 +22086,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-lKvtk4BDP0j",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = "134938"
             },
             [100] = {
                 ["outline"] = "OUTLINE",
@@ -22251,9 +22251,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local i = math.random(1, 3)\
@@ -22536,7 +22533,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_PAMACRO NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT UNIT_SPELLCAST_START:boss UNIT_SPELLCAST_SUCCEEDED:boss ENCOUNTER_END",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -22554,7 +22554,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "i8zKbz6i"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "kiXUhEYI"}
                 },
                 ["wordWrap"] = "WordWrap",
                 ["conditions"] = {
@@ -22928,7 +22928,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["parent"] = "Salhadaar - Assign Texts",
                 ["displayText"] = "%text (%2.p)",
                 ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "CENTER",
@@ -22966,9 +22966,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -22997,7 +22994,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -23011,12 +23011,12 @@ wa.data['assignments'].data = {
                             ["use_genericShowOn"] = true,
                             ["message_operator"] = "find('%s')",
                             ["unit"] = "player",
+                            ["use_spellName"] = true,
                             ["use_spellId"] = true,
-                            ["remaining"] = "8",
                             ["type"] = "addons",
                             ["event"] = "Boss Mod Timer",
                             ["use_message"] = false,
-                            ["use_spellName"] = true,
+                            ["remaining"] = "8",
                             ["use_track"] = true,
                             ["debuffType"] = "HELPFUL"
                         },
@@ -23030,15 +23030,15 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 86,
                 ["displayText_format_p_pad"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["parent"] = "Salhadaar - Assign Texts",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["yOffset"] = 0,
                 ["preferToUpdate"] = true,
-                ["displayText_format_2.p_format"] = "timed",
+                ["xOffset"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "YdpZ01SR"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "74LYLLxQ"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_p_time_format"] = 0,
@@ -23412,13 +23412,13 @@ wa.data['assignments'].data = {
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "DlEVnYAN1(n",
                 ["information"] = {["forceEvents"] = false},
-                ["xOffset"] = 0
+                ["displayText_format_2.p_format"] = "timed"
             },
             [102] = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["parent"] = "Salhadaar - Assign Texts",
                 ["displayText"] = "%text (%2.p)",
                 ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "CENTER",
@@ -23457,9 +23457,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -23488,7 +23485,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -23502,12 +23502,12 @@ wa.data['assignments'].data = {
                             ["use_genericShowOn"] = true,
                             ["message_operator"] = "find('%s')",
                             ["unit"] = "player",
+                            ["use_spellName"] = true,
                             ["use_spellId"] = true,
-                            ["remaining"] = "8",
                             ["type"] = "addons",
                             ["event"] = "Boss Mod Timer",
                             ["use_message"] = false,
-                            ["use_spellName"] = true,
+                            ["remaining"] = "8",
                             ["use_track"] = true,
                             ["debuffType"] = "HELPFUL"
                         },
@@ -23521,15 +23521,15 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 86,
                 ["displayText_format_p_pad"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["parent"] = "Salhadaar - Assign Texts",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["yOffset"] = 0,
                 ["preferToUpdate"] = true,
-                ["displayText_format_2.p_format"] = "timed",
+                ["xOffset"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "6eEfvKaT"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "FulSPSSn"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_p_time_format"] = 0,
@@ -23903,13 +23903,13 @@ wa.data['assignments'].data = {
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "1lfFJOLzvc(",
                 ["information"] = {["forceEvents"] = false},
-                ["xOffset"] = 0
+                ["displayText_format_2.p_format"] = "timed"
             },
             [103] = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                ["parent"] = "Salhadaar - Assign Texts",
                 ["displayText"] = "%text (%2.p)",
                 ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "CENTER",
@@ -23948,9 +23948,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local state = {\
@@ -23979,7 +23976,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_SMASH NS_SMASH_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -23993,12 +23993,12 @@ wa.data['assignments'].data = {
                             ["use_genericShowOn"] = true,
                             ["message_operator"] = "find('%s')",
                             ["unit"] = "player",
+                            ["use_spellName"] = true,
                             ["use_spellId"] = true,
-                            ["remaining"] = "8",
                             ["type"] = "addons",
                             ["event"] = "Boss Mod Timer",
                             ["use_message"] = false,
-                            ["use_spellName"] = true,
+                            ["remaining"] = "8",
                             ["use_track"] = true,
                             ["debuffType"] = "HELPFUL"
                         },
@@ -24012,15 +24012,15 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 86,
                 ["displayText_format_p_pad"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["parent"] = "Salhadaar - Assign Texts",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["yOffset"] = 0,
                 ["preferToUpdate"] = true,
-                ["displayText_format_2.p_format"] = "timed",
+                ["xOffset"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "1LjT5tr5"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "5Ntx4HxR"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_p_time_format"] = 0,
@@ -24393,18 +24393,13 @@ wa.data['assignments'].data = {
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "VySqjwI4Utb",
                 ["information"] = {["forceEvents"] = false},
-                ["xOffset"] = 0
+                ["displayText_format_2.p_format"] = "timed"
             },
             [104] = {
                 ["displayText_format_2.p_time_legacy_floor"] = false,
                 ["displayText_format_text_format"] = "none",
                 ["wagoID"] = "Y7yEWhBqV",
-                ["color"] = {
-                    [1] = 0.24705883860588,
-                    [2] = 0.98823535442352,
-                    [3] = 0.24705883860588,
-                    [4] = 1
-                },
+                ["parent"] = "Salhadaar - Assign Texts",
                 ["displayText"] = "%text",
                 ["shadowYOffset"] = -1,
                 ["anchorPoint"] = "CENTER",
@@ -24469,9 +24464,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(1, 2)\
@@ -24511,7 +24503,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NSAPI_ENCOUNTER_START NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -24540,15 +24535,20 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 86,
                 ["displayText_format_p_pad"] = false,
                 ["selfPoint"] = "BOTTOM",
-                ["parent"] = "Salhadaar - Assign Texts",
+                ["color"] = {
+                    [1] = 0.24705883860588,
+                    [2] = 0.98823535442352,
+                    [3] = 0.24705883860588,
+                    [4] = 1
+                },
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
                 ["yOffset"] = 0,
                 ["preferToUpdate"] = true,
-                ["displayText_format_2.p_format"] = "timed",
+                ["xOffset"] = 0,
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "8KXwroMQ"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "KlsIP6UO"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["displayText_format_p_time_format"] = 0,
@@ -24621,7 +24621,7 @@ wa.data['assignments'].data = {
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["AMOriginalUUID"] = "28eqJyFtjVv",
                 ["information"] = {["forceEvents"] = false},
-                ["xOffset"] = 0
+                ["displayText_format_2.p_format"] = "timed"
             },
             [105] = {
                 ["outline"] = "OUTLINE",
@@ -24652,6 +24652,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e,  ...)\
        if e == \"NSAPI_MACRO_PRESSED\" then\
            local state = {\
@@ -24665,11 +24666,10 @@ wa.data['assignments'].data = {
            s:RemoveAll()\
        end\
    end",
-                            ["events"] = "NSAPI_MACRO_PRESSED NSAPI_MACRO_PRESSED_HIDE",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NSAPI_MACRO_PRESSED NSAPI_MACRO_PRESSED_HIDE",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -24687,7 +24687,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "l3VwIFsX"}
+                    [1] = {["type"] = "subbackground", ["amId"] = "JeXJhM1Q"}
                 },
                 ["wordWrap"] = "WordWrap",
                 ["conditions"] = {},
@@ -24833,10 +24833,9 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
-                ["borderInset"] = 1,
+                ["xOffset"] = 0,
                 ["borderSize"] = 2,
-                ["limit"] = 6,
-                ["groupIcon"] = 134938,
+                ["anchorPerUnit"] = "CUSTOM",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -24857,7 +24856,8 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["anchorPerUnit"] = "CUSTOM",
+                ["limit"] = 6,
+                ["borderInset"] = 1,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -24874,7 +24874,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-Mgbe6gE0Ldb",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["xOffset"] = 0
+                ["groupIcon"] = 134938
             },
             [107] = {
                 ["sparkWidth"] = 10,
@@ -24951,9 +24951,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            for i=1, 3 do\
@@ -24985,7 +24982,10 @@ wa.data['assignments'].data = {
            s:Update(UnitGUID(unit), state)\
        end\
    end",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_DARKSTAR_LIST",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -25018,17 +25018,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 73,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "SJNosz0F"},
-                    [2] = {["type"] = "subforeground", ["amId"] = "c2FgwBia"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "sJejKqUN"},
+                    [2] = {["type"] = "subforeground", ["amId"] = "FesE9m3c"},
                     [3] = {
+                        ["border_offset"] = 0,
                         ["type"] = "subborder",
-                        ["border_size"] = 1,
-                        ["border_visible"] = true,
-                        ["amId"] = "lXpeLEfT",
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "Q7fFW5Rz",
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
-                        ["border_offset"] = 0
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -25049,7 +25049,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
                         ["type"] = "subglow",
-                        ["amId"] = "1DBaKT9C",
+                        ["amId"] = "4UNwxsW8",
                         ["glowLines"] = 10,
                         ["glowBorder"] = true
                     },
@@ -25091,7 +25091,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "EixgDo6M",
+                        ["amId"] = "RamU02a7",
                         ["text_text_format_t_format"] = "timed",
                         ["text_text_format_2.p_format"] = "timed",
                         ["text_text_format_t_time_mod_rate"] = true,
@@ -25142,7 +25142,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "LEFT",
                         ["text_fontSize"] = 14,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "9JKTewCW"
+                        ["amId"] = "KS5fAY89"
                     },
                     [7] = {
                         ["text_shadowXOffset"] = 0,
@@ -25177,7 +25177,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "RIGHT",
                         ["text_fontSize"] = 30,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "RAsnUYCE"
+                        ["amId"] = "lMIzpVWV"
                     }
                 },
                 ["height"] = 24,
@@ -25314,9 +25314,9 @@ wa.data['assignments'].data = {
                 ["frameStrata"] = 1,
                 ["alpha"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["uid"] = "AM-cB3IOuTmLQK",
                 ["config"] = {},
-                ["borderInset"] = 1,
                 ["authorOptions"] = {},
                 ["conditions"] = {},
                 ["information"] = {},
@@ -25393,6 +25393,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"NSAPI_ENCOUNTER_START\" then\
            aura_env.last = 0\
@@ -25433,11 +25434,10 @@ wa.data['assignments'].data = {
            end\
        end\
    end",
-                            ["events"] = "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_SUCCEEDED:raid:boss CLEU:SPELL_AURA_APPLIED",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NSAPI_ENCOUNTER_START UNIT_SPELLCAST_SUCCEEDED:raid:boss CLEU:SPELL_AURA_APPLIED",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -25482,7 +25482,7 @@ wa.data['assignments'].data = {
                 ["zoom"] = 0,
                 ["AMModified"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "dawrL4t3", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "qbaBwvKr", ["type"] = "subbackground"}
                 },
                 ["useAdjustededMax"] = false,
                 ["fontSize"] = 50,
@@ -25727,7 +25727,7 @@ wa.data['assignments'].data = {
                 ["zoom"] = 0,
                 ["AMModified"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "j805f7WS", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "BUiGHSQv", ["type"] = "subbackground"}
                 },
                 ["useAdjustededMax"] = false,
                 ["fontSize"] = 50,
@@ -25854,9 +25854,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if not C_AddOns.IsAddOnLoaded(\"Plater\") then return end\
        if e == \"NAME_PLATE_UNIT_ADDED\" then\
@@ -25900,7 +25897,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NAME_PLATE_UNIT_ADDED UNIT_SPELLCAST_SUCCEEDED:boss CLEU:SPELL_CAST_SUCCESS",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -25913,21 +25913,37 @@ wa.data['assignments'].data = {
                 ["font"] = "Expressway",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "wXjobfud", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "lxUHyKNA", ["type"] = "subbackground"}
                 },
                 ["AMModified"] = true,
-                ["displayText_format_c_format"] = "none",
+                ["url"] = "",
                 ["fontSize"] = 12,
-                ["displayText"] = "",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["shadowXOffset"] = 1,
-                ["wordWrap"] = "WordWrap",
+                ["load"] = {
+                    ["difficulty"] = {
+                        ["single"] = "mythic",
+                        ["multi"] = {
+                            ["heroic"] = true,
+                            ["mythic"] = true,
+                            ["normal"] = true
+                        }
+                    },
+                    ["use_encounterid"] = true,
+                    ["encounterid"] = "3135",
+                    ["talent"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["class"] = {["multi"] = {}},
+                    ["use_difficulty"] = true,
+                    ["size"] = {["multi"] = {}}
+                },
                 ["AMOriginalUUID"] = "01rihzrRyrs",
-                ["parent"] = "Dimensius Assign",
+                ["displayText_format_c_format"] = "none",
                 ["regionType"] = "text",
-                ["preferToUpdate"] = true,
-                ["displayText_format_p_format"] = "timed",
+                ["conditions"] = {},
+                ["parent"] = "Dimensius Assign",
                 ["uid"] = "AM-01rihzrRyrs",
-                ["fixedWidth"] = 200,
+                ["preferToUpdate"] = true,
                 ["displayText_format_p_time_precision"] = 1,
                 ["animation"] = {
                     ["start"] = {
@@ -25957,30 +25973,14 @@ wa.data['assignments'].data = {
                 ["shadowYOffset"] = -1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                ["config"] = {},
-                ["url"] = "",
                 ["internalVersion"] = 86,
+                ["config"] = {},
+                ["wordWrap"] = "WordWrap",
+                ["displayText"] = "",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
-                ["conditions"] = {},
+                ["fixedWidth"] = 200,
                 ["information"] = {},
-                ["load"] = {
-                    ["difficulty"] = {
-                        ["single"] = "mythic",
-                        ["multi"] = {
-                            ["heroic"] = true,
-                            ["mythic"] = true,
-                            ["normal"] = true
-                        }
-                    },
-                    ["use_encounterid"] = true,
-                    ["encounterid"] = "3135",
-                    ["talent"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
-                    ["class"] = {["multi"] = {}},
-                    ["use_difficulty"] = true,
-                    ["size"] = {["multi"] = {}}
-                }
+                ["displayText_format_p_format"] = "timed"
             },
             [112] = {
                 ["arcLength"] = 360,
@@ -26053,6 +26053,11 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:ExalityIconBig",
+                ["limit"] = 5,
+                ["borderSize"] = 2,
+                ["anchorPerUnit"] = "CUSTOM",
+                ["xOffset"] = 0,
+                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -26073,11 +26078,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["borderSize"] = 2,
-                ["anchorPerUnit"] = "CUSTOM",
-                ["borderInset"] = 1,
-                ["xOffset"] = 0,
-                ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/grp-icon.png",
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -26094,7 +26094,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-Ip9SFIiAYhv",
                 ["conditions"] = {},
                 ["information"] = {},
-                ["limit"] = 5
+                ["borderInset"] = 1
             },
             [113] = {
                 ["iconSource"] = -1,
@@ -26138,11 +26138,11 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "NJVMgtEG", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "TG7w9AC7", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
-                        ["amId"] = "HKwh8JNC",
+                        ["amId"] = "UokBoTuU",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -26161,7 +26161,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "AohSsdeF",
+                        ["amId"] = "pmIV5jNa",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -26194,7 +26194,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "MhL7QCZm",
+                        ["amId"] = "1RM25OF5",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -26216,7 +26216,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "r7P3pXLC",
+                        ["amId"] = "WFgs9fy6",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -26255,7 +26255,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "bnAVlrNC",
+                        ["amId"] = "DmWy16hG",
                         ["text_shadowYOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_text_format_tooltip1_format"] = "BigNumber",
@@ -26296,7 +26296,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "HHUqRcUU",
+                        ["amId"] = "l1JuAe0K",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -26308,22 +26308,28 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["frameStrata"] = 1,
                 ["useAdjustededMax"] = false,
-                ["load"] = {
-                    ["use_zoneIds"] = false,
-                    ["talent"] = {["multi"] = {}},
-                    ["encounterid"] = "3135",
-                    ["use_encounterid"] = true,
-                    ["difficulty"] = {["multi"] = {}},
-                    ["role"] = {},
-                    ["size"] = {["multi"] = {}},
-                    ["faction"] = {},
-                    ["class"] = {["multi"] = {}},
-                    ["spec"] = {["multi"] = {}},
-                    ["use_never"] = false,
-                    ["zoneIds"] = ""
-                },
-                ["source"] = "import",
                 ["preferToUpdate"] = true,
+                ["source"] = "import",
+                ["animation"] = {
+                    ["start"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["main"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    },
+                    ["finish"] = {
+                        ["type"] = "none",
+                        ["easeStrength"] = 3,
+                        ["duration_type"] = "seconds",
+                        ["easeType"] = "none"
+                    }
+                },
                 ["cooldown"] = true,
                 ["AMOriginalUUID"] = "7anhu33t5YW",
                 ["parent"] = "Dimensius CC List",
@@ -26335,9 +26341,9 @@ wa.data['assignments'].data = {
                     ["start"] = {
                         ["custom"] = "",
                         ["do_sound"] = false,
+                        ["do_message"] = false,
                         ["do_custom"] = false,
-                        ["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\BITE.ogg",
-                        ["do_message"] = false
+                        ["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\BITE.ogg"
                     },
                     ["init"] = {["custom"] = "", ["do_custom"] = false},
                     ["finish"] = {["custom"] = "", ["do_custom"] = false}
@@ -26359,25 +26365,19 @@ wa.data['assignments'].data = {
                 ["authorOptions"] = {},
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = false},
-                ["animation"] = {
-                    ["start"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["main"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    },
-                    ["finish"] = {
-                        ["type"] = "none",
-                        ["easeStrength"] = 3,
-                        ["duration_type"] = "seconds",
-                        ["easeType"] = "none"
-                    }
+                ["load"] = {
+                    ["use_zoneIds"] = false,
+                    ["talent"] = {["multi"] = {}},
+                    ["encounterid"] = "3135",
+                    ["use_encounterid"] = true,
+                    ["difficulty"] = {["multi"] = {}},
+                    ["role"] = {},
+                    ["size"] = {["multi"] = {}},
+                    ["faction"] = {},
+                    ["class"] = {["multi"] = {}},
+                    ["spec"] = {["multi"] = {}},
+                    ["use_never"] = false,
+                    ["zoneIds"] = ""
                 }
             },
             [114] = {
@@ -26404,9 +26404,6 @@ wa.data['assignments'].data = {
                             ["unit"] = "player",
                             ["subeventSuffix"] = "_CAST_START",
                             ["subeventPrefix"] = "SPELL",
-                            ["spellIds"] = {},
-                            ["names"] = {},
-                            ["check"] = "event",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local me = math.random(1, 4)\
@@ -26489,7 +26486,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["names"] = {},
+                            ["check"] = "event",
                             ["events"] = "NS_DIMENSIUS_CCTABLE NS_DIMENSIUS_CCTABLE_USED NS_DIMENSIUS_CCTABLE_HIDE",
+                            ["spellIds"] = {},
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -26500,14 +26500,33 @@ wa.data['assignments'].data = {
                 ["progressSource"] = {[1] = -1, [2] = ""},
                 ["selfPoint"] = "CENTER",
                 ["desaturate"] = false,
-                ["preferToUpdate"] = true,
+                ["customText"] = "function()\
+       if WeakAuras.IsOptionsOpen() then   \
+           return NSAPI:Shorten(\"player\", 8, true, \"WA\", true)\
+       else\
+           local u = aura_env.state.unit\
+           if aura_env.state and u then\
+               return NSAPI:Shorten(u, 8, true, \"WA\", true)\
+           end\
+       end\
+   end\
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   \
+   ",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "0rkw55KX", ["type"] = "subbackground"},
+                    [1] = {["amId"] = "cISK1kpt", ["type"] = "subbackground"},
                     [2] = {
                         ["border_size"] = 1,
                         ["border_offset"] = 0,
-                        ["amId"] = "Ef5PwgEd",
+                        ["amId"] = "aEmy5R8M",
                         ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["border_visible"] = true,
                         ["border_edge"] = "Square Full White",
@@ -26526,7 +26545,7 @@ wa.data['assignments'].data = {
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 8,
                         ["glow"] = false,
-                        ["amId"] = "PUYu1IS1",
+                        ["amId"] = "1VxmwCo3",
                         ["glowLines"] = 8,
                         ["glowBorder"] = true
                     },
@@ -26559,7 +26578,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "RIGHT",
-                        ["amId"] = "uR2l8t4f",
+                        ["amId"] = "bWhnSwp7",
                         ["type"] = "subtext",
                         ["text_font"] = "Expressway",
                         ["text_anchorYOffset"] = 0,
@@ -26586,7 +26605,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "b39eBAW1",
+                        ["amId"] = "dK1Wmwqh",
                         ["anchorYOffset"] = 0,
                         ["text_anchorYOffset"] = 2,
                         ["type"] = "subtext",
@@ -26616,7 +26635,7 @@ wa.data['assignments'].data = {
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "OUTLuRgc",
+                        ["amId"] = "eJWStB0X",
                         ["anchorXOffset"] = 0,
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 12,
@@ -26662,7 +26681,7 @@ wa.data['assignments'].data = {
                         ["text_shadowYOffset"] = 0,
                         ["text_wordWrap"] = "WordWrap",
                         ["text_fontType"] = "OUTLINE",
-                        ["amId"] = "sVz9ilMi",
+                        ["amId"] = "VipX1d6o",
                         ["text_visible"] = false,
                         ["anchor_point"] = "OUTER_TOP",
                         ["text_fontSize"] = 15,
@@ -26672,7 +26691,7 @@ wa.data['assignments'].data = {
                     [8] = {
                         ["border_size"] = 2,
                         ["border_offset"] = 0,
-                        ["amId"] = "lfILgF6P",
+                        ["amId"] = "KXTbr4KM",
                         ["border_color"] = {
                             [1] = 0.24705883860588,
                             [2] = 0.98823535442352,
@@ -26685,7 +26704,6 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["height"] = 70,
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["load"] = {
                     ["use_never"] = false,
                     ["talent"] = {["multi"] = {}},
@@ -26700,11 +26718,38 @@ wa.data['assignments'].data = {
                     ["use_zoneIds"] = false,
                     ["zoneIds"] = ""
                 },
-                ["xOffset"] = 0,
+                ["AMModified"] = true,
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["useAdjustededMax"] = false,
                 ["cooldown"] = false,
                 ["source"] = "import",
                 ["AMOriginalUUID"] = "8TWlm380Mcu",
+                ["xOffset"] = 0,
+                ["actions"] = {
+                    ["start"] = {
+                        ["custom"] = "",
+                        ["do_sound"] = false,
+                        ["do_message"] = false,
+                        ["do_custom"] = false,
+                        ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_whip1.ogg"
+                    },
+                    ["init"] = {["custom"] = "", ["do_custom"] = false},
+                    ["finish"] = {["custom"] = "", ["do_custom"] = false}
+                },
+                ["config"] = {},
+                ["useAdjustededMin"] = false,
+                ["regionType"] = "icon",
+                ["authorOptions"] = {},
+                ["width"] = 70,
+                ["alpha"] = 1,
+                ["useCooldownModRate"] = true,
+                ["anchorFrameParent"] = false,
+                ["url"] = "",
+                ["zoom"] = 0.25,
+                ["cooldownTextDisabled"] = false,
+                ["semver"] = "1.0.78",
+                ["tocversion"] = 110200,
+                ["id"] = "Dimensius CC List ",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -26725,47 +26770,12 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["authorOptions"] = {},
-                ["config"] = {},
-                ["useAdjustededMin"] = false,
-                ["regionType"] = "icon",
-                ["AMModified"] = true,
-                ["width"] = 70,
-                ["useCooldownModRate"] = true,
-                ["useTooltip"] = false,
-                ["anchorFrameParent"] = false,
-                ["url"] = "",
-                ["zoom"] = 0.25,
-                ["cooldownTextDisabled"] = false,
-                ["semver"] = "1.0.78",
-                ["tocversion"] = 110200,
-                ["id"] = "Dimensius CC List ",
-                ["alpha"] = 1,
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
-                ["customText"] = "function()\
-       if WeakAuras.IsOptionsOpen() then   \
-           return NSAPI:Shorten(\"player\", 8, true, \"WA\", true)\
-       else\
-           local u = aura_env.state.unit\
-           if aura_env.state and u then\
-               return NSAPI:Shorten(u, 8, true, \"WA\", true)\
-           end\
-       end\
-   end\
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   \
-   ",
+                ["keepAspectRatio"] = false,
                 ["uid"] = "AM-8TWlm380Mcu",
                 ["inverse"] = false,
-                ["keepAspectRatio"] = false,
+                ["useTooltip"] = false,
                 ["conditions"] = {
                     [1] = {
                         ["check"] = {
@@ -26794,17 +26804,7 @@ wa.data['assignments'].data = {
                     }
                 },
                 ["information"] = {["forceEvents"] = false},
-                ["actions"] = {
-                    ["start"] = {
-                        ["custom"] = "",
-                        ["do_sound"] = false,
-                        ["do_custom"] = false,
-                        ["sound"] = "Interface\\Addons\\Details\\sounds\\sound_whip1.ogg",
-                        ["do_message"] = false
-                    },
-                    ["init"] = {["custom"] = "", ["do_custom"] = false},
-                    ["finish"] = {["custom"] = "", ["do_custom"] = false}
-                }
+                ["preferToUpdate"] = true
             },
             [115] = {
                 ["arcLength"] = 360,
@@ -26850,12 +26850,12 @@ wa.data['assignments'].data = {
                 ["wagoID"] = "Y7yEWhBqV",
                 ["parent"] = "Dimensius Assign",
                 ["sortHybridTable"] = {
+                    ["Starshard Nova Assign"] = false,
                     ["Inverse Gravity Assign"] = false,
-                    ["Your CC Next Dimensius"] = false,
                     ["Excess Mass Assign"] = false,
                     ["P3 Devour Assign"] = false,
                     ["Reverse Gravity Assign"] = false,
-                    ["Starshard Nova Assign"] = false
+                    ["Your CC Next Dimensius"] = false
                 },
                 ["fullCircle"] = true,
                 ["useAnchorPerUnit"] = false,
@@ -26888,6 +26888,11 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Assignment Anchor",
+                ["limit"] = 6,
+                ["borderSize"] = 2,
+                ["anchorPerUnit"] = "CUSTOM",
+                ["xOffset"] = 0,
+                ["groupIcon"] = "134938",
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -26908,11 +26913,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["borderSize"] = 2,
-                ["anchorPerUnit"] = "CUSTOM",
-                ["borderInset"] = 1,
-                ["xOffset"] = 0,
-                ["groupIcon"] = "134938",
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -26929,7 +26929,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-(T4bp1hfArl",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["limit"] = 6
+                ["borderInset"] = 1
             },
             [116] = {
                 ["iconSource"] = -1,
@@ -26983,6 +26983,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            local spellID = 119381\
@@ -27020,11 +27021,10 @@ wa.data['assignments'].data = {
            s:RemoveAll() \
        end\
    end",
-                            ["events"] = "NS_DIMENSIUS_YOURCC NS_DIMENSIUS_YOURCC_HIDE NS_DIMENSIUS_CCTABLE_HIDE",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "NS_DIMENSIUS_YOURCC NS_DIMENSIUS_YOURCC_HIDE NS_DIMENSIUS_CCTABLE_HIDE",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -27066,7 +27066,7 @@ wa.data['assignments'].data = {
                 ["zoom"] = 0,
                 ["AMModified"] = true,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "vNp11qHp", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "BvAoEmpg", ["type"] = "subbackground"}
                 },
                 ["useAdjustededMax"] = false,
                 ["fontSize"] = 50,
@@ -27453,7 +27453,11 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START TRIGGER:2",
                             ["spellIds"] = {},
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
+                            ["subeventPrefix"] = "SPELL",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then        \
            local marker = math.random(1, 4)\
@@ -27506,10 +27510,6 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["custom_type"] = "stateupdate",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START TRIGGER:2",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -27539,14 +27539,15 @@ wa.data['assignments'].data = {
                 ["internalVersion"] = 86,
                 ["displayText_format_p_pad"] = false,
                 ["wordWrap"] = "WordWrap",
+                ["tocversion"] = 110200,
                 ["parent"] = "Dimensius - Assign Texts",
                 ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "Mptr0Ddp", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "vozDnNoU", ["type"] = "subbackground"}
                 },
                 ["displayText_format_p_time_dynamic_threshold"] = 0,
-                ["shadowYOffset"] = -1,
+                ["AMOriginalUUID"] = "gZuB)Swn9cX",
                 ["load"] = {
                     ["use_zoneIds"] = false,
                     ["talent"] = {["multi"] = {}},
@@ -27569,18 +27570,17 @@ wa.data['assignments'].data = {
                 ["source"] = "import",
                 ["displayText_format_p_format"] = "Number",
                 ["shadowXOffset"] = 1,
-                ["displayText_format_p_time_legacy_floor"] = true,
+                ["uid"] = "AM-gZuB)Swn9cX",
                 ["selfPoint"] = "BOTTOM",
                 ["anchorFrameFrame"] = "WeakAuras:Text Anchor",
                 ["regionType"] = "text",
-                ["tocversion"] = 110200,
-                ["font"] = "PT Sans Narrow Bold",
-                ["preferToUpdate"] = true,
-                ["AMOriginalUUID"] = "gZuB)Swn9cX",
                 ["AMModified"] = true,
+                ["frameStrata"] = 1,
+                ["shadowYOffset"] = -1,
+                ["displayText_format_p_time_precision"] = 1,
                 ["anchorFrameParent"] = false,
-                ["conditions"] = {},
-                ["uid"] = "AM-gZuB)Swn9cX",
+                ["semver"] = "1.0.78",
+                ["displayText_format_p_time_legacy_floor"] = true,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -27601,16 +27601,16 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["semver"] = "1.0.78",
+                ["justify"] = "LEFT",
                 ["displayText_format_p_pad_max"] = 8,
                 ["id"] = "P3 Devour Assign",
-                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
-                ["frameStrata"] = 1,
-                ["anchorFrameType"] = "SELECTFRAME",
+                ["conditions"] = {},
                 ["displayText_format_p_decimal_precision"] = 1,
+                ["anchorFrameType"] = "SELECTFRAME",
+                ["color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                 ["config"] = {},
-                ["displayText_format_p_time_precision"] = 1,
-                ["justify"] = "LEFT",
+                ["preferToUpdate"] = true,
+                ["font"] = "PT Sans Narrow Bold",
                 ["shadowColor"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                 ["fixedWidth"] = 200,
                 ["information"] = {["forceEvents"] = false},
@@ -27696,7 +27696,11 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START",
                             ["spellIds"] = {},
+                            ["custom_type"] = "stateupdate",
+                            ["check"] = "event",
+                            ["subeventPrefix"] = "SPELL",
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then        \
            local state = {\
@@ -27734,10 +27738,6 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["custom_type"] = "stateupdate",
-                            ["check"] = "event",
-                            ["subeventPrefix"] = "SPELL",
-                            ["events"] = "UNIT_SPELLCAST_START:boss NSAPI_ENCOUNTER_START",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -27757,7 +27757,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "dN93LyNB", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "DZkJ7Uer", ["type"] = "subbackground"}
                 },
                 ["preferToUpdate"] = true,
                 ["AMOriginalUUID"] = "QedOjj96GVT",
@@ -27979,8 +27979,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_ASSIGN_EVENT",
-                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)    \
        if e == \"OPTIONS\" then        \
            local expires = GetTime()+5\
@@ -28049,6 +28047,8 @@ wa.data['assignments'].data = {
            end\
        end\
    end",
+                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_ASSIGN_EVENT",
+                            ["spellIds"] = {},
                             ["names"] = {},
                             ["check"] = "event",
                             ["subeventPrefix"] = "SPELL",
@@ -28071,7 +28071,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "k6O35gyJ", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "Sbiu7ME6", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["url"] = "",
@@ -28483,7 +28483,7 @@ wa.data['assignments'].data = {
                 ["displayText_format_p_round_type"] = "ceil",
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "ynqPL1WT", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "yzijc669", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["AMModified"] = true,
@@ -28833,8 +28833,6 @@ wa.data['assignments'].data = {
                             ["debuffType"] = "HELPFUL",
                             ["event"] = "Health",
                             ["unit"] = "player",
-                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_ASSIGN_EVENT UNIT_SPELLCAST_START:boss",
-                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)    \
        if e == \"OPTIONS\" then        \
            local expires = GetTime()+5\
@@ -28918,6 +28916,8 @@ wa.data['assignments'].data = {
    \
    \
    ",
+                            ["events"] = "NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED NS_ASSIGN_EVENT UNIT_SPELLCAST_START:boss",
+                            ["spellIds"] = {},
                             ["names"] = {},
                             ["check"] = "event",
                             ["subeventPrefix"] = "SPELL",
@@ -28961,7 +28961,7 @@ wa.data['assignments'].data = {
                 ["font"] = "PT Sans Narrow Bold",
                 ["displayText_format_2.p_time_precision"] = 1,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "I2E9Kp9e", ["type"] = "subbackground"}
+                    [1] = {["amId"] = "iY4u5duS", ["type"] = "subbackground"}
                 },
                 ["displayText_format_2.p_time_format"] = 0,
                 ["url"] = "",
@@ -29110,6 +29110,11 @@ wa.data['assignments'].data = {
                 ["centerType"] = "LR",
                 ["border"] = false,
                 ["anchorFrameFrame"] = "WeakAuras:NS Overview Anchor",
+                ["limit"] = 6,
+                ["borderSize"] = 2,
+                ["anchorPerUnit"] = "CUSTOM",
+                ["xOffset"] = 0,
+                ["groupIcon"] = 134938,
                 ["animation"] = {
                     ["start"] = {
                         ["type"] = "none",
@@ -29130,11 +29135,6 @@ wa.data['assignments'].data = {
                         ["easeType"] = "none"
                     }
                 },
-                ["borderSize"] = 2,
-                ["anchorPerUnit"] = "CUSTOM",
-                ["borderInset"] = 1,
-                ["xOffset"] = 0,
-                ["groupIcon"] = 134938,
                 ["anchorFrameParent"] = false,
                 ["borderEdge"] = "Square Full White",
                 ["sort"] = "none",
@@ -29151,7 +29151,7 @@ wa.data['assignments'].data = {
                 ["uid"] = "AM-Bl87zL9(LjC",
                 ["conditions"] = {},
                 ["information"] = {["forceEvents"] = true},
-                ["limit"] = 6
+                ["borderInset"] = 1
             },
             [123] = {
                 ["sparkWidth"] = 10,
@@ -29217,6 +29217,7 @@ wa.data['assignments'].data = {
                             ["event"] = "Health",
                             ["unit"] = "player",
                             ["names"] = {},
+                            ["spellIds"] = {},
                             ["custom"] = "function(s, e, ...)\
        if e == \"OPTIONS\" then\
            for i=1, 3 do\
@@ -29237,11 +29238,10 @@ wa.data['assignments'].data = {
    \
    \
    ",
-                            ["events"] = "OPTIONS",
                             ["subeventPrefix"] = "SPELL",
                             ["check"] = "event",
                             ["custom_type"] = "stateupdate",
-                            ["spellIds"] = {},
+                            ["events"] = "OPTIONS",
                             ["debuffType"] = "HELPFUL"
                         },
                         ["untrigger"] = {}
@@ -29316,17 +29316,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "PmG24K7E", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "Mwu717Wh", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "UNzqqNV1", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "NVPhuHq3", ["type"] = "subforeground"},
                     [3] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 1,
-                        ["amId"] = "b51PnY9D",
                         ["border_visible"] = true,
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "1vYqb8pd",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -29343,7 +29343,7 @@ wa.data['assignments'].data = {
                             [3] = 0.9215686917305,
                             [4] = 1
                         },
-                        ["amId"] = "OxF3HIbU",
+                        ["amId"] = "Hu87h8JZ",
                         ["type"] = "subglow",
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
@@ -29388,7 +29388,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_p_format"] = "Number",
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "bXXIKtVA",
+                        ["amId"] = "L70aiV6i",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -29441,7 +29441,7 @@ wa.data['assignments'].data = {
                         ["text_automaticWidth"] = "Auto",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
-                        ["amId"] = "j6GqiUZN",
+                        ["amId"] = "usDUPooA",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_font"] = "Expressway",
@@ -29484,7 +29484,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_p_time_dynamic_threshold"] = 60,
                         ["text_selfPoint"] = "LEFT",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "GNJRom6R",
+                        ["amId"] = "5KvaEqQF",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -29509,14 +29509,14 @@ wa.data['assignments'].data = {
                         ["text_wordWrap"] = "WordWrap"
                     },
                     [8] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 2,
-                        ["amId"] = "w4peUUll",
                         ["border_visible"] = false,
-                        ["border_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
+                        ["amId"] = "xOSa5Oj4",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 2
                     }
                 },
                 ["height"] = 24,
@@ -29841,17 +29841,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "BFM2JylD", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "sdtL27u9", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "9I8S5iKO", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "7k1CIWht", ["type"] = "subforeground"},
                     [3] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 1,
-                        ["amId"] = "s6Ne4Omy",
                         ["border_visible"] = true,
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "ME5sMGGi",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -29868,7 +29868,7 @@ wa.data['assignments'].data = {
                             [3] = 0.9215686917305,
                             [4] = 1
                         },
-                        ["amId"] = "ssIblbgL",
+                        ["amId"] = "kqsCpErp",
                         ["type"] = "subglow",
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
@@ -29909,7 +29909,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_t_time_format"] = 0,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "pwvDuPqm",
+                        ["amId"] = "8et8SPJN",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -29949,7 +29949,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "GAhITdpj",
+                        ["amId"] = "GnIt51DV",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -30139,17 +30139,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "9GvxWQCv", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "cu5CgbEO", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "sLNBhrqc", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "7sG5HGXH", ["type"] = "subforeground"},
                     [3] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 1,
-                        ["amId"] = "ldVd2nxi",
                         ["border_visible"] = true,
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "4RkEwm0h",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -30166,7 +30166,7 @@ wa.data['assignments'].data = {
                             [3] = 0.9215686917305,
                             [4] = 1
                         },
-                        ["amId"] = "MjKC5KNx",
+                        ["amId"] = "lkOoZw4C",
                         ["type"] = "subglow",
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
@@ -30207,7 +30207,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_t_time_format"] = 0,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "UtryzKzl",
+                        ["amId"] = "LX3DN19G",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -30247,7 +30247,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "g7zlYdVl",
+                        ["amId"] = "AMy9282K",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -30435,17 +30435,17 @@ wa.data['assignments'].data = {
                 },
                 ["version"] = 79,
                 ["subRegions"] = {
-                    [1] = {["amId"] = "kTEiv53s", ["type"] = "subbackground"},
-                    [2] = {["amId"] = "ukR4TBYv", ["type"] = "subforeground"},
+                    [1] = {["amId"] = "wFSvW9am", ["type"] = "subbackground"},
+                    [2] = {["amId"] = "iz8JS11p", ["type"] = "subforeground"},
                     [3] = {
+                        ["type"] = "subborder",
                         ["border_offset"] = 0,
-                        ["border_size"] = 1,
-                        ["amId"] = "kh16Rx5b",
                         ["border_visible"] = true,
-                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
                         ["anchor_area"] = "bar",
+                        ["border_color"] = {[1] = 0, [2] = 0, [3] = 0, [4] = 1},
+                        ["amId"] = "a6nyYcyH",
                         ["border_edge"] = "Square Full White",
-                        ["type"] = "subborder"
+                        ["border_size"] = 1
                     },
                     [4] = {
                         ["glowFrequency"] = 0.15,
@@ -30462,7 +30462,7 @@ wa.data['assignments'].data = {
                             [3] = 0.9215686917305,
                             [4] = 1
                         },
-                        ["amId"] = "YxDfLnA6",
+                        ["amId"] = "nDQGusaT",
                         ["type"] = "subglow",
                         ["glowXOffset"] = 0,
                         ["glowLength"] = 20,
@@ -30503,7 +30503,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_t_time_format"] = 0,
                         ["text_selfPoint"] = "AUTO",
                         ["text_automaticWidth"] = "Auto",
-                        ["amId"] = "mi4Tnt6Q",
+                        ["amId"] = "3Z4WbZyx",
                         ["text_text_format_pos_format"] = "none",
                         ["anchorYOffset"] = 0,
                         ["text_justify"] = "CENTER",
@@ -30543,7 +30543,7 @@ wa.data['assignments'].data = {
                         ["text_text_format_c_format"] = "none",
                         ["text_justify"] = "CENTER",
                         ["rotateText"] = "NONE",
-                        ["amId"] = "xyRlZ6xC",
+                        ["amId"] = "Zsz2VYgb",
                         ["type"] = "subtext",
                         ["text_anchorXOffset"] = 2,
                         ["text_color"] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1},
@@ -30701,9 +30701,9 @@ wa.data['assignments'].data = {
                 ["groupIcon"] = "Interface/Addons/NHFAuraManager/Media/Textures/nhf-mo.png",
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["uid"] = "AM-s8sp9fWgJXW",
                 ["config"] = {},
                 ["borderInset"] = 1,
-                ["uid"] = "AM-s8sp9fWgJXW",
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "s8sp9fWgJXW",
                 ["information"] = {},
@@ -30773,11 +30773,11 @@ wa.data['assignments'].data = {
                 ["AMModified"] = true,
                 ["conditions"] = {},
                 ["id"] = "[8] Dimensius Custom Assignments",
-                ["borderInset"] = 1,
+                ["config"] = {},
                 ["frameStrata"] = 1,
                 ["anchorFrameType"] = "SCREEN",
+                ["borderInset"] = 1,
                 ["uid"] = "AM-OxLGyiaj5Xp",
-                ["config"] = {},
                 ["parent"] = "[NHF] Manaforge Omega Custom Assignments",
                 ["alpha"] = 1,
                 ["AMOriginalUUID"] = "OxLGyiaj5Xp",
@@ -30816,7 +30816,7 @@ wa.data['assignments'].data = {
                 ["align"] = "CENTER",
                 ["growOn"] = "changed",
                 ["alpha"] = 1,
-                ["regionType"] = "dynamicgroup",
+                ["sort"] = "none",
                 ["stagger"] = 0,
                 ["animation"] = {
                     ["start"] = {
@@ -30862,9 +30862,9 @@ wa.data['assignments'].data = {
                 ["borderEdge"] = "Square Full White",
                 ["stepAngle"] = 15,
                 ["borderSize"] = 1,
-                ["sort"] = "none",
-                ["uid"] = "AM-HPEsNHUcG)0",
                 ["limit"] = 5,
+                ["borderInset"] = 1,
+                ["uid"] = "AM-HPEsNHUcG)0",
                 ["constantFactor"] = "RADIUS",
                 ["frameStrata"] = 1,
                 ["borderOffset"] = 3,
@@ -30874,7 +30874,7 @@ wa.data['assignments'].data = {
                 ["rotation"] = 0,
                 ["gridWidth"] = 5,
                 ["anchorFrameType"] = "SCREEN",
-                ["borderInset"] = 1,
+                ["regionType"] = "dynamicgroup",
                 ["config"] = {},
                 ["parent"] = "[8] Dimensius Custom Assignments",
                 ["load"] = {
@@ -30901,54 +30901,58 @@ wa.data['assignments'].data = {
    aura_env.last = 0\
    aura_env.spots = {'Melee', 'Healer', 'Ranged'}\
    aura_env.spotCoords = {\
-       { -- Cast 1 (P2.1)\
-           -- {x,y}\
-           {-65, 0},\
-           {65,0},\
-           {0,0},\
+       [2] = { -- P2.1\
+           {\
+               {-65, 0},\
+               {65,0},\
+               {0,0},\
+           },\
+           {\
+               {-32, -65},\
+               {33,0},\
+               {-32,0}\
+           } \
        },\
-       { -- Cast 2 (P2.2)\
-           -- {x,y}\
-           {-32, -65},\
-           {33,0},\
-           {-32,0}\
-       } ,\
-       { -- Cast 3 (P2.2)\
-           -- {x,y}\
-           {-65, 0},\
-           {65,0},\
-           {0,0},\
-       } ,\
-       { -- Cast 4 (P3)\
-           -- {x,y}\
-           {-65,0},\
-           {0,0},\
-           {65, 0},\
-       } ,\
-       { -- Cast 5\
-           -- {x,y}\
-           {-65, 0},\
-           {0,-100},\
-           {0,0}\
-       } ,\
-       { -- Cast 6\
-           -- {x,y}\
-           {-65, 0},\
-           {0,-100},\
-           {0,0}\
-       } ,\
-       { -- Cast 7\
-           -- {x,y}\
-           {100, 10},\
-           {0,0},\
-           {-100,10}\
-       } ,\
-       { -- Cast 8\
-           -- {x,y}\
-           {100, 10},\
-           {0,0},\
-           {-100,10}\
-       } ,\
+       [3] = { -- P2.2\
+           {\
+               {-32, -65},\
+               {33,0},\
+               {-32,0}\
+           } ,\
+           {\
+               {-65, 0},\
+               {65,0},\
+               {0,0},\
+           } ,\
+       },\
+       [4] = { -- P3\
+           {\
+               {-65,0},\
+               {0,0},\
+               {65, 0},\
+           } ,\
+           {\
+               {-65, 0},\
+               {0,-100},\
+               {0,0}\
+           } ,\
+           {\
+               {-65, 0},\
+               {0,-100},\
+               {0,0}\
+           } ,\
+           {\
+               {100, 10},\
+               {0,0},\
+               {-100,10}\
+           } ,\
+           {\
+               {100, 10},\
+               {0,0},\
+               {-100,10}\
+           } ,\
+       }\
+       \
        \
    }"
                     }
@@ -30963,14 +30967,15 @@ wa.data['assignments'].data = {
                             ["subeventPrefix"] = "SPELL",
                             ["unit"] = "player",
                             ["names"] = {},
-                            ["spellIds"] = {},
+                            ["events"] = "NHF_GRAV_SHOW NSAPI_ENCOUNTER_START CLEU:SPELL_AURA_APPLIED UNIT_SPELLCAST_SUCCEEDED",
                             ["custom_type"] = "stateupdate",
                             ["check"] = "event",
-                            ["events"] = "NHF_GRAV_SHOW NSAPI_ENCOUNTER_START",
-                            ["custom"] = "function(s, event, me, expires)\
+                            ["custom"] = "function(s, event, ...)\
        local now = GetTime()\
        if (WeakAuras.IsOptionsOpen()) then\
-           local spot = math.random(1,8)\
+           local phase = math.random(2,4)\
+           local p = aura_env.spotCoords[phase]\
+           local spot = math.random(1,#p)\
            for i=1,3 do\
                local expires = now + 5\
                s:Update('spot'..i,{\
@@ -30979,16 +30984,38 @@ wa.data['assignments'].data = {
                        expirationTime = expires,\
                        text = aura_env.spots[i],\
                        autoHide = true,\
-                       xPos = aura_env.spotCoords[spot][i][1],\
-                       yPos = aura_env.spotCoords[spot][i][2],\
+                       xPos = aura_env.spotCoords[phase][spot][i][1],\
+                       yPos = aura_env.spotCoords[phase][spot][i][2],\
                        spot = i,\
                        isMySpot = i == 2\
                });\
+               \
            end\
        end\
        if (event == \"NSAPI_ENCOUNTER_START\") then\
            aura_env.count = 0    \
+           aura_env.phase = 1\
        end\
+       \
+       if (event == 'COMBAT_LOG_EVENT_UNFILTERED') then\
+           local _, subEvent, _, _, _, _, _, destGUID, _, _, _, spellID = ...\
+           if (subEvent == \"SPELL_AURA_APPLIED\" and spellID == 1246143) then\
+               -- P2 new\
+               aura_env.phase = aura_env.phase + 1\
+               aura_env.count = 0\
+           end\
+       end\
+       if (event == \"UNIT_SPELLCAST_SUCCEEDED\") then\
+           local _, castGUID, spellID = ...\
+           \
+           if not castGUID then return end\
+           if spellID ~= 1231716 then return end -- Extinguish the Stars\
+           \
+           -- P3\
+           aura_env.phase = 4\
+           aura_env.count = 0\
+       end\
+       local me, expires = ...\
        if (event == 'NHF_GRAV_SHOW' and me and expires and aura_env.last < now - 10) then\
            aura_env.count = aura_env.count + 1\
            for i=1,3 do\
@@ -30999,14 +31026,15 @@ wa.data['assignments'].data = {
                        expirationTime = expires,\
                        text = aura_env.spots[i],\
                        autoHide = true,\
-                       xPos = aura_env.spotCoords[aura_env.count][i][1],\
-                       yPos = aura_env.spotCoords[aura_env.count][i][2],\
+                       xPos = aura_env.spotCoords[aura_env.phase][aura_env.count][i][1],\
+                       yPos = aura_env.spotCoords[aura_env.phase][aura_env.count][i][2],\
                        spot = i,\
                        isMySpot = i == me\
                });\
            end\
        end\
    end",
+                            ["spellIds"] = {},
                             ["customVariables"] = "{\
        isMySpot = 'bool',\
        spot = 'number'\
@@ -31040,7 +31068,7 @@ wa.data['assignments'].data = {
                 ["desaturate"] = false,
                 ["rotation"] = 0,
                 ["subRegions"] = {
-                    [1] = {["type"] = "subbackground", ["amId"] = "5IAatNli"},
+                    [1] = {["type"] = "subbackground", ["amId"] = "2tdSzrTs"},
                     [2] = {
                         ["text_shadowXOffset"] = 1,
                         ["text_text"] = "%text",
@@ -31069,7 +31097,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["text_fontSize"] = 12,
                         ["anchorXOffset"] = 0,
-                        ["amId"] = "4X14Q9Ca"
+                        ["amId"] = "0bwF3Or1"
                     },
                     [3] = {
                         ["textureMirror"] = false,
@@ -31090,7 +31118,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "JFpwKuLS"
+                        ["amId"] = "yp7tJhaY"
                     },
                     [4] = {
                         ["textureMirror"] = false,
@@ -31113,7 +31141,7 @@ wa.data['assignments'].data = {
                         ["height"] = 30,
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "qmFkuw7v"
+                        ["amId"] = "nMhPgfkB"
                     },
                     [5] = {
                         ["textureMirror"] = false,
@@ -31136,7 +31164,7 @@ wa.data['assignments'].data = {
                         ["height"] = 30,
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "LOwf9jQl"
+                        ["amId"] = "HGmNM2K5"
                     },
                     [6] = {
                         ["textureMirror"] = false,
@@ -31159,7 +31187,7 @@ wa.data['assignments'].data = {
                         ["anchor_point"] = "CENTER",
                         ["rotate"] = false,
                         ["textureRotate"] = false,
-                        ["amId"] = "Qi0SwfhL"
+                        ["amId"] = "oTNOfhhY"
                     }
                 },
                 ["height"] = 65,
